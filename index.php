@@ -210,7 +210,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Gestão de Mídia Social</h3>
-						<p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+						<p>Impulsione sua marca nas redes sociais com nosso serviço de destaque em mídias sociais! Criamos estratégias e campanhas personalizadas que aumentam seu engajamento e ampliam sua visibilidade.</p>
 					</div>
                 </div>
                 <!-- end service -->
@@ -222,7 +222,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Gestão de Tráfego (Mkt DIgital)</h3>
-						<p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
+						<p>Maximize seus resultados com nossa gestão de tráfego digital! Implementamos campanhas estratégicas que direcionam visitantes qualificados ao seu site, aumentando as conversões e o retorno sobre o investimento. </p>
 					</div>
                 </div>
                 <!-- end service -->
@@ -234,7 +234,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Desenvolvimento de Sites</h3>
-						<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis accumsan.</p>
+						<p>Transforme sua visão em realidade com nosso serviço de desenvolvimento de sites! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
 					</div>
                 </div>
                 <!-- end service -->
@@ -246,7 +246,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Desenvolvimento de Sistemas</h3>
-						<p>Praesent in neque congue sapien lobortis faucibus id eget erat. <br>Pellentesque maximus rutrum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						<p>Desenvolvemos sistemas sob medida para atender às suas necessidades específicas! Nossos serviços abrangem desde a concepção até a implementação, garantindo soluções eficientes e integradas.</p>
 					</div>
                 </div>
                 <!-- end service -->
@@ -258,7 +258,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Consultoria</h3>
-						<p>Praesent in neque congue sapien lobortis faucibus id eget erat. <br>Pellentesque maximus rutrum felis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
 					</div>
                 </div>
                 <!-- end service -->
