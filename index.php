@@ -291,13 +291,39 @@
                 <h3>Hospedagem de sites</h3>
                 <p class="lead">Escolha a Codemaze para uma hospedagem confiável e escalável. Nossos servidores otimizados proporcionam desempenho superior, enquanto nossa equipe está disponível 24/7 para garantir que seu site funcione sem interrupções.</p>
             </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <h3 class="title">Presença<br>WEB</h3>
+                            <span class="sub-title">Hospedagem Linux</span>
+                            <span class="year">Desconto <br>R$60/ano</span>
+                        </div>
+                        <div class="price-value">
+                            <div class="value">
+                                <span class="currency">R$</span>
+                                <span class="amount">5.<span>99</span></span>
+                                <span class="month">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>50GB Disk Space</li>
+                            <li>50 Email Accounts</li>
+                            <li>50GB Monthly Bandwidth</li>
+                            <li class="disable">10 Subdomains</li>
+                            <li class="disable">15 Domains</li>
+                        </ul>
+                        <a href="#" class="pricingTable-signup">Select the plan </a>
+                    </div>
+                </div>
 			
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="pricingTable">
                         <div class="pricingTable-header">
                             <h3 class="title">Standard</h3>
-                            <span class="sub-title">Ideal para pequenas<br> empresas</span>
+                            <span class="sub-title">Hospedagem Linux</span>
                             <span class="year">Desconto <br>R$110/ano</span>
                         </div>
                         <div class="price-value">
@@ -322,7 +348,7 @@
                     <div class="pricingTable purple">
                         <div class="pricingTable-header">
                             <h3 class="title">Business</h3>
-                            <span class="sub-title">Seu negócio em <br> expansão</span>
+                            <span class="sub-title">Hospedagem Linux</span>
                             <span class="year">Desconto <br>R$180/ano</span>
                         </div>
                         <div class="price-value">
@@ -347,7 +373,7 @@
                     <div class="pricingTable blue">
                         <div class="pricingTable-header">
                             <h3 class="title">Premium</h3>
-                            <span class="sub-title">Lorem ipsum</span>
+                            <span class="sub-title">Hospedagem Linux</span>
                             <span class="year">Desconto <br>R$210/ano</span>
                         </div>
                         <div class="price-value">
