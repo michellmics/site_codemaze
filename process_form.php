@@ -19,24 +19,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($responseKeys["success"]) {
 
             // Obter os dados do formulário
-            $name = htmlspecialchars($_POST['name']);
-            $email = htmlspecialchars($_POST['email']);
-            $phone = htmlspecialchars($_POST['phone']);
-            $department = htmlspecialchars($_POST['department']);
-            $message = htmlspecialchars($_POST['message']);
+            $name = htmlspecialchars($_POST['nome']);
+            $emailCli = htmlspecialchars($_POST['email']);
+            $phone = htmlspecialchars($_POST['telefone']);
+            $service = htmlspecialchars($_POST['service']);
+            $message = htmlspecialchars($_POST['mensagem']);
 
             // Configurações do e-mail
-            $to = $email; 
+            $to = "falecosnosco@codemaze.com.br"; 
             $subject = "ATENÇÃO: Contato pelo site da Codemaze";
             $body = "Nome: $name\n";
-            $body .= "E-mail: $email\n";
+            $body .= "E-mail: $emailCli\n";
             $body .= "Telefone: $phone\n";
-            $body .= "Departamento: $department\n";
+            $body .= "Serviço: $service\n";
             $body .= "Mensagem: $message\n";
 
             // Adiciona cabeçalhos para o e-mail
-            $headers = "From: $email\r\n";
-            $headers .= "Reply-To: $email\r\n";
+            $headers = "From: $emailCli\r\n";
+            $headers .= "Reply-To: $emailCli\r\n";
             $headers .= "Content-Type: text/plain; charset=UTF-8\r\n"; // Define a codificação como UTF-8
             $headers .= "MIME-Version: 1.0\r\n";
 

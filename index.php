@@ -440,9 +440,10 @@
                                 </div>
                                
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <textarea class="form-control" name="comentario" id="comentario" rows="6" placeholder="Escreva aqui sua mensagem..."></textarea>
+                                    <textarea class="form-control" name="mensagem" id="mensagem" rows="6" placeholder="Escreva aqui sua mensagem..."></textarea>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                <div id="form-contactform"></div>
                                 <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
                                     <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
                                 </div>
@@ -451,7 +452,7 @@
 
                     <!-- SCRIPT RECAPTCHA -->
                     <!-- Onde a mensagem de sucesso/erro será exibida -->
-						<div id="form-contactform"></div>
+						
 						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
