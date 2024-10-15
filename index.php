@@ -209,7 +209,7 @@
                         <img src="uploads/service_01.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Desenvolvimento de Sites</h3>
+						<h3>Gestão de Mídia Social</h3>
 						<p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
 					</div>
                 </div>
@@ -221,7 +221,7 @@
                         <img src="uploads/service_02.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Mídia Social</h3>
+						<h3>Gestão de Tráfego (Mkt DIgital)</h3>
 						<p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
 					</div>
                 </div>
@@ -233,7 +233,7 @@
                         <img src="uploads/service_03.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Hospedagem de site</h3>
+						<h3>Desenvolvimento de Sites</h3>
 						<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis accumsan.</p>
 					</div>
                 </div>
