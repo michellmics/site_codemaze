@@ -234,7 +234,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Desenvolvimento de Sites</h3>
-						<p>Transforme sua visão em realidade com nosso serviço de desenvolvimento de sites! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
+						<p>Transforme sua visão em realidade! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
 					</div>
                 </div>
                 <!-- end service -->
