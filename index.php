@@ -322,7 +322,7 @@
                     <div class="pricingTable purple">
                         <div class="pricingTable-header">
                             <h3 class="title">Business</h3>
-                            <span class="sub-title">Lorem ipsum</span>
+                            <span class="sub-title">Seu negócio em <br> expansão</span>
                             <span class="year">Desconto <br>R$180/ano</span>
                         </div>
                         <div class="price-value">
