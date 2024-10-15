@@ -464,7 +464,7 @@
 							    // Verifica o reCAPTCHA
 							    var recaptchaResponse = grecaptcha.getResponse();
 							    if (recaptchaResponse.length === 0) {
-							        document.getElementById('form-contactform').innerHTML = "Por favor, complete o reCAPTCHA.";
+							        document.getElementById('form-contactform').innerHTML = "Por favor, completel o reCAPTCHA.";
 							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
 							    }
 							
