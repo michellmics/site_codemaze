@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
+    
+    <!-- reCaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
      <!-- Site Metas -->
     <title>CODEMAZE - Soluções de MKT e Software</title>  
     <meta name="keywords" content="">
@@ -413,7 +416,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                        <form id="contactform" class="row" action="process_form.php" name="contactform" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo">
@@ -444,6 +447,54 @@
                                 </div>
                             </fieldset>
                         </form>
+
+                    <!-- SCRIPT RECAPTCHA -->
+                    <!-- Onde a mensagem de sucesso/erro será exibida -->
+						<div id="form-contactform"></div>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
+						<script>
+							document.getElementById('demo-form').addEventListener('submit', function(e) {
+							    e.preventDefault(); // Impede o envio tradicional do formulário
+							
+							    // Verifica o reCAPTCHA
+							    var recaptchaResponse = grecaptcha.getResponse();
+							    if (recaptchaResponse.length === 0) {
+							        document.getElementById('form-contactform').innerHTML = "Por favor, complete o reCAPTCHA.";
+							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
+							    }
+							
+							    var formData = new FormData(this); // Captura todos os dados do formulário
+							
+							    var xhr = new XMLHttpRequest();
+							    xhr.open('POST', this.action, true); // Configura o envio via POST para o arquivo PHP
+							
+							    xhr.onload = function() {
+							        if (xhr.status === 200) {
+							            // Exibe a resposta do servidor na página
+							            document.getElementById('form-message').innerHTML = xhr.responseText;
+							        } else {
+							            document.getElementById('form-message').innerHTML = "Houve um erro no envio do formulário.";
+							        }
+							    };
+							
+							    xhr.send(formData); // Envia o formulário via AJAX
+							});
+						</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                 </div><!-- end col -->
             </div><!-- end row -->
