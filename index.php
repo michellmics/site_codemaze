@@ -529,7 +529,7 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">                   
-                    <p class="footer-company-name">Todos os direitos reservados. &copy; <?php echo date('Y'); ?> <a href="#">Codemaze</a></p>
+                    <p class="footer-company-name">Todos os direitos reservados. &copy; <?php echo date('Y'); ?> <a href="#slide">Codemaze</a></p>
                 </div>
 
                 
