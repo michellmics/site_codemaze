@@ -492,7 +492,7 @@
 				<div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <h3>Pages</h3>
+                            <h3>Páginas</h3>
                         </div>
 
                         <ul class="footer-links hov">
@@ -509,8 +509,8 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="footer-distributed widget clearfix">
                         <div class="widget-title">
-                            <h3>Subscribe</h3>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which one know this tricks.</p>
+                            <h3>Assine</h3>
+							<p>Assine nossa newsletter e acompanhe novidades, tendências e dicas para fortalecer sua presença digital. Não perca as melhores oportunidades para impulsionar seu negócio!</p>
                         </div>
 						
 						<div class="footer-right">
