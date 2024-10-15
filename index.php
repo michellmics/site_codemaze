@@ -297,7 +297,7 @@
                     <div class="pricingTable">
                         <div class="pricingTable-header">
                             <h3 class="title">Standard</h3>
-                            <span class="sub-title">Lorem ipsum</span>
+                            <span class="sub-title">Ideal para pequenas empresas</span>
                             <span class="year">Desconto <br>R$110/ano</span>
                         </div>
                         <div class="price-value">
