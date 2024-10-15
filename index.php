@@ -416,7 +416,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="row" action="process_form.php" name="contactform" method="post">
+                        <form id="demo-form" class="row" action="process_form.php" name="contactform" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo">
@@ -443,28 +443,27 @@
                                     <textarea class="form-control" name="mensagem" id="mensagem" rows="6" placeholder="Escreva aqui sua mensagem..."></textarea>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                                <div id="form-contactform"></div>
                                 <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
                                 
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
+                                    <button onclick="onSubmit(event)" type="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
                                 </div>
                             </fieldset>
                         </form>
 
                     <!-- SCRIPT RECAPTCHA -->
                     <!-- Onde a mensagem de sucesso/erro será exibida -->
-						
+						<div id="form-message"></div>
 						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
 						<script>
-							document.getElementById('contact_form').addEventListener('submit', function(e) {
+							document.getElementById('demo-form').addEventListener('submit', function(e) {
 							    e.preventDefault(); // Impede o envio tradicional do formulário
 							
 							    // Verifica o reCAPTCHA
 							    var recaptchaResponse = grecaptcha.getResponse();
 							    if (recaptchaResponse.length === 0) {
-							        document.getElementById('form-contactform').innerHTML = "Por favor, complete o reCAPTCHA.";
+							        document.getElementById('form-message').innerHTML = "Por favor, complete o reCAPTCHA.";
 							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
 							    }
 							
