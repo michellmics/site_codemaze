@@ -198,7 +198,7 @@
     <div id="services" class="parallax section lb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Our Service</h3>
+                <h3>Soluções & Consultoria</h3>
                 <p class="lead">Our Service unlimited solutions to all your business needs. in the installation package we prepare search engine optimization, social media support, we provide corporate identity and graphic design services.</p>
             </div><!-- end title -->
 
@@ -389,8 +389,9 @@
     <div id="contact" class="section wb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Get in touch</h3>
-                <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
+                <h3>Agenda uma conversa</h3>
+                <p class="lead">Preencha o formulário abaixo para agendar uma conversa e descobrir como nossos serviços podem atender às suas necessidades. Estamos prontos para ajudar você a alcançar seus objetivos!<br>                    
+                    Estamos prontos para ajudar você a alcançar seus objetivos!!</p>
             </div><!-- end title -->
 
             <div class="row">
@@ -400,40 +401,31 @@
                         <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo">
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                    <input type="text" name="telefone" id="telefone" class="form-control" placeholder="DDD + Telefone">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <label class="sr-only">Select Service</label>
-                                    <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
-                                        <option value="12">Installation Service</option>
-                                        <option value="Web Design">Web Design</option>
-                                        <option value="Web Development">Web Development</option>
-                                        <option value="Graphic Design">Graphic Design</option>
-                                        <option value="Others">Others</option>
+                                    <label class="sr-only">Área de interesse</label>
+                                    <select name="service" id="service" class="selectpicker form-control" data-style="btn-white">
+                                        <option value="12">Tráfego Pago</option>
+                                        <option value="Web Design">Desenvolvimento de Site / Software</option>
+                                        <option value="Web Development">Gerenciamento de Midias Sociais</option>
+                                        <option value="Graphic Design">Consultoria</option>
+                                        <option value="Others">Outros</option>
                                     </select>
                                 </div>
+                               
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <label class="sr-only">What is max price?</label>
-                                    <select name="select_price" id="select_price" class="selectpicker form-control" data-style="btn-white">
-                                        <option value="$100 - $2000">$100 - $2000</option>
-                                        <option value="$2000 - $4000">$2000 - $4000</option>
-                                        <option value="$4000 - $10000">$4000 - $10000</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                    <textarea class="form-control" name="comentario" id="comentario" rows="6" placeholder="Escreva aqui sua mensagem"></textarea>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Envia</button>
                                 </div>
                             </fieldset>
                         </form>
