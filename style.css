@@ -3353,6 +3353,18 @@ select.mobile-device {
     flex: 0 0 auto; /* Impede que os planos sejam redimensionados */
 }
 
+.plans-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden; /* Esconde a barra de rolagem */
+    padding: 10px 0;
+}
+
+.plan {
+    min-width: 300px;
+    flex: 0 0 auto;
+}
+
 
 
 
