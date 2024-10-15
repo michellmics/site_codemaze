@@ -446,7 +446,7 @@
                                 <div id="form-contactform"></div>
                                 <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
                                 
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
+                                    <button type="submit" value="SEND" id="submit" onclick="onSubmit(event) class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
                                 </div>
                             </fieldset>
                         </form>
