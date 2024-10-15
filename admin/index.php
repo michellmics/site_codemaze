@@ -1,4 +1,6 @@
 <?php
+echo "teste";
+/*
   include_once 'objetos.php'; 
 
   $siteAdmin = new SITE_ADMIN();
@@ -8,6 +10,6 @@
   die();
 
   session_start(); 
-
+*/
 ?>
 
