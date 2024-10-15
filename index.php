@@ -529,8 +529,7 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">                   
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">GoodWEB</a> Design By : 
-					<a href="https://html.design/">html design</a></p>
+                    <p class="footer-company-name">Todos os direitos reservados. &copy; <?php echo date('Y'); ?> <a href="#">Codemaze</a></p>
                 </div>
 
                 
