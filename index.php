@@ -205,8 +205,8 @@
             <div class="owl-services owl-carousel owl-theme">
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/service_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/service_01.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
 						<h3>Gestão de Mídia Social</h3>
@@ -217,8 +217,8 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/service_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/service_02.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
 						<h3>Gestão de Tráfego (Mkt DIgital)</h3>
@@ -229,8 +229,8 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/service_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/service_03.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/desenvolvimentoSItes.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/desenvolvimentoSItes.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
 						<h3>Desenvolvimento de Sites</h3>
@@ -241,8 +241,8 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/service_04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/service_04.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/desenvolvimentoSistemas.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/desenvolvimentoSistemas.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
 						<h3>Desenvolvimento de Sistemas</h3>
@@ -253,8 +253,8 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/service_04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/service_04.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
 						<h3>Consultoria</h3>
