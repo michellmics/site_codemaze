@@ -558,9 +558,9 @@
                         </div>
 
                         <ul class="footer-links hov">
-                            <li><a href="#slide">Intranet <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#about">Webmail <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#hosting">Portal do Cliente <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#slide" target="_blank">Intranet <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="https://www.codemaze.com.br/webmail" target="_blank">Webmail <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="https://dashboard.agency/codemaze" target="_blank">Portal do Cliente <span class="icon icon-arrow-right2"></span></a></li>
 
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
