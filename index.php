@@ -303,16 +303,17 @@
                         <div class="price-value">
                             <div class="value">
                                 <span class="currency">R$</span>
-                                <span class="amount">9.<span>99</span></span>
+                                <span class="amount">14.<span>99</span></span>
                                 <span class="month">/mês</span>
                             </div>
                         </div>
                         <ul class="pricing-content">
-                            <li>50GB Disk Space</li>
-                            <li>50 Email Accounts</li>
-                            <li>50GB Monthly Bandwidth</li>
-                            <li class="disable">10 Subdomains</li>
-                            <li class="disable">15 Domains</li>
+                            <li>500MB Disco</li>
+                            <li>2 Contas FTP</li>
+                            <li>2 Contas de e-mail</li>
+                            <li>1GB Bandwidth</li>
+                            <li>3 Subdominios</li>
+                            <li>2 Banco de dados</li>
                         </ul>
                         <a href="#" class="pricingTable-signup">Select the plan </a>
                     </div>
@@ -328,16 +329,17 @@
                         <div class="price-value">
                             <div class="value">
                                 <span class="currency">R$</span>
-                                <span class="amount">14.<span>99</span></span>
+                                <span class="amount">18.<span>99</span></span>
                                 <span class="month">/mês</span>
                             </div>
                         </div>
                         <ul class="pricing-content">
-                            <li>60GB Disk Space</li>
-                            <li>60 Email Accounts</li>
-                            <li>60GB Monthly Bandwidth</li>
-                            <li>15 Subdomains</li>
-                            <li class="disable">20 Domains</li>
+                            <li>1GB Disco</li>
+                            <li>5 Contas FTP</li>
+                            <li>10 Contas de e-mail</li>
+                            <li>3GB Bandwidth</li>
+                            <li>5 Subdominios</li>
+                            <li>5 Banco de dados</li>
                         </ul>
                         <a href="#" class="pricingTable-signup">Select the plan </a>
                     </div>
@@ -353,16 +355,17 @@
                         <div class="price-value">
                             <div class="value">
                                 <span class="currency">R$</span>
-                                <span class="amount">19.<span>99</span></span>
+                                <span class="amount">24.<span>99</span></span>
                                 <span class="month">/mês</span>
                             </div>
                         </div>
                         <ul class="pricing-content">
-                            <li>70GB Disk Space</li>
-                            <li>70 Email Accounts</li>
-                            <li>70GB Monthly Bandwidth</li>
-                            <li>20 Subdomains</li>
-                            <li>25 Domains</li>
+                            <li>2GB Disco</li>
+                            <li>10 Contas FTP</li>
+                            <li>20 Contas de e-mail</li>
+                            <li>10GB Bandwidth</li>
+                            <li>8 Subdominios</li>
+                            <li>10 Banco de dados</li>
                         </ul>
                         <a href="#" class="pricingTable-signup">Select the plan </a>
                     </div>
