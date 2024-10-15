@@ -298,7 +298,7 @@
                         <div class="pricingTable-header">
                             <h3 class="title">Standard</h3>
                             <span class="sub-title">Hospedagem Linux</span>
-                            <span class="year">Pagamento <br>anual</span>
+                            <span class="year">Plano <br>anual</span>
                         </div>
                         <div class="price-value">
                             <div class="value">
@@ -323,7 +323,7 @@
                         <div class="pricingTable-header">
                             <h3 class="title">Business</h3>
                             <span class="sub-title">Hospedagem Linux</span>
-                            <span class="year">Pagamento <br>anual</span>
+                            <span class="year">Plano <br>anual</span>
                         </div>
                         <div class="price-value">
                             <div class="value">
@@ -348,7 +348,7 @@
                         <div class="pricingTable-header">
                             <h3 class="title">Premium</h3>
                             <span class="sub-title">Hospedagem Linux</span>
-                            <span class="year">Pagamento <br>anual</span>
+                            <span class="year">Plano <br>anual</span>
                         </div>
                         <div class="price-value">
                             <div class="value">
