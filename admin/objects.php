@@ -16,9 +16,9 @@
         function conexao()
         {
             $host = 'localhost';
-            $dbname = 'serconeo_dbprod';
-            $user = 'serconeo_dbprod';
-            $pass = 'dbprodserconeo';
+            $dbname = 'codemaze_dbprod';
+            $user = 'codemaze_dbprod';
+            $pass = 'dbprodcodemaze';
 
             try {
                 $this->pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
