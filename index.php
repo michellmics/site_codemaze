@@ -432,10 +432,10 @@
                                     <label class="sr-only">Área de interesse</label>
                                     <select name="service" id="service" class="selectpicker form-control" data-style="btn-white">
                                         <option value="Tráfego Pago">Tráfego Pago</option>
-                                        <option value="Desenvolvimento de sites">Desenvolvimento de Site / Software</option>
-                                        <option value="Social Media">Gerenciamento de Midias Sociais</option>
+                                        <option value="Desenvolvimento de Site / Software">Desenvolvimento de Site / Software</option>
+                                        <option value="Gerenciamento de Midias Sociais">Gerenciamento de Midias Sociais</option>
                                         <option value="Consultoria">Consultoria</option>
-                                        <option value="OOutros">Outros</option>
+                                        <option value="Outros Assuntos">Outros Assuntos</option>
                                     </select>
                                 </div>
                                
