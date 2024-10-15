@@ -275,10 +275,10 @@
                 <div class="col-md-6">
                     <div class="customwidget text-left">
                         <h1>Gestão de Mídia Social</h1>
-                        <p>Maximize sua presença online com nosso serviço de Gestão de Mídia Social! <br>Oferecemos relatórios personalizados e estratégias inovadoras que aumentam o engajamento e potencializam sua marca</p>
+                        <p>Maximize sua presença online com nosso serviço de Gestão de Mídia Social! <br>Oferecemos relatórios personalizados e estratégias inovadoras que aumentam o engajamento e potencializam sua marca.</p>
                         <ul class="list-inline">
                             <li><i class="fa fa-check"></i> Portal do Cliente</li>
-                            <li><i class="fa fa-check"></i> Criação de conteúdo</li>
+                            <li><i class="fa fa-check"></i> Conteúdo programado</li>
                             <li><i class="fa fa-check"></i> Posts Animados</li>
                             <li><i class="fa fa-check"></i> Relatórios de engajamento</li>
                         </ul><!-- end list -->
@@ -287,7 +287,7 @@
                 </div><!-- end col -->
 				<div class="col-md-6">
                     <div class="text-center image-center hidden-sm hidden-xs">
-                        <img src="uploads/device_03.png" alt="" class="img-responsive wow fadeInUp">
+                        <img src="uploads/deviceCodemaze.png" alt="" class="img-responsive wow fadeInUp">
                     </div>
                 </div>
             </div><!-- end row -->
