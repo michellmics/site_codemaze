@@ -484,8 +484,8 @@
                         <div class="widget-title">
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                        <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                        <p>Obrigado por nos visitar! Estamos sempre prontos para ajudar seu negócio a crescer. Volte em breve e descubra novidades e soluções sob medida para você.</p>
+                        
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 
