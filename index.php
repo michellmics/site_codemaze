@@ -389,7 +389,7 @@
     <div id="contact" class="section wb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Agenda uma conversa</h3>
+                <h3>Agende uma conversa</h3>
                 <p class="lead">Preencha o formulário abaixo para agendar uma conversa e descobrir como nossos serviços podem atender às suas necessidades. <br>                    
                     Estamos prontos para ajudar você a alcançar seus objetivos!!</p>
             </div><!-- end title -->
