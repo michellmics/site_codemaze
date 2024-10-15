@@ -439,25 +439,25 @@
 						<div class="address-icon">
 							<i class="icon icon-location2"></i>
 						</div>
-						<h3>Headquarters</h3>
-						<p>PO Box 16122 Collins Street West 
-							<br> Victoria 8007 Australia</p>
+						<h3>Endereço</h3>
+						<p>Rua dos Estudantes, 505
+							<br> Hortolândia-SP</p>
 					</div>
 					<div class="address-item">
 						<div class="address-icon">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</div>
-						<h3>Email Us</h3>
-						<p>info@yoursite.com
-							<br>info@yoursite.com</p>
+						<h3>E-mail</h3>
+						<p>faleconosco@codemaze.com.br
+							<br>suporte@codemaze.com.br</p>
 					</div>
 					<div class="address-item">
 						<div class="address-icon">
 							<i class="icon icon-headphones"></i>
 						</div>
-						<h3>Call Us</h3>
-						<p>+61 3 8376 6284
-							<br>+61 3 8376 6185</p>
+						<h3>Telefones</h3>
+						<p>+55 11 998273-4350
+							<br>+55 19 99211-6838</p>
 					</div>
 				</div>
 			</div><!-- end row -->
