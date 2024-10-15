@@ -3333,43 +3333,7 @@ select.mobile-device {
 
 
 
-.plans-container {
-    display: flex;
-    gap: 20px; /* Espaço entre os planos */
-    overflow-x: auto; /* Rolagem horizontal */
-    padding: 10px 0;
-    scroll-behavior: smooth; /* Rolagem suave */
-}
 
-.plans-container::-webkit-scrollbar {
-    height: 8px; /* Altura da barra de rolagem */
-}
-
-.plans-container::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-}
-
-.pricingTable {
-    min-width: 300px; /* Largura mínima de cada plano */
-    flex: 0 0 auto; /
-    * Impede que os planos sejam redimensionados */
-}
-
-
-.plans-wrapper {
-    display: flex;
-    gap: 20px;
-    overflow: hidden; /* Esconde a barra de rolagem */
-    white-space: nowrap;
-    position: relative;
-}
-
-.plan {
-    min-width: 300px;
-    flex: 0 0 auto;
-    transition: transform 0.5s linear;
-}
 
 
 
