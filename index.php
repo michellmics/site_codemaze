@@ -499,7 +499,11 @@
                         <div class="widget-title">
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
-                        <p>Obrigado por nos visitar! Estamos sempre prontos para ajudar seu negócio a crescer. Volte em breve e descubra novidades e soluções sob medida para você.</p>
+                        <p>Telefone: +55 11 998273-4350<br>
+                        Endereço: Rua dos Estudantes, 505 - Hortolândia-SP<br>
+                        Suporte Técnico: suporte@codemaze.com.br<br>
+                        Setor de relacionamento: faleconosco@codemaze.com.br<br>
+                        </p>
                         
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
