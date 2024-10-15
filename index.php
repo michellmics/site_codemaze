@@ -416,7 +416,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="contactform" class="row" action="process_form.php" name="contactform" method="post">
+                        <form id="contactform" class="row" action="process_form.php" name="contactform" method="POST">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo">
@@ -464,7 +464,7 @@
 							    // Verifica o reCAPTCHA
 							    var recaptchaResponse = grecaptcha.getResponse();
 							    if (recaptchaResponse.length === 0) {
-							        document.getElementById('form-contactform').innerHTML = "Por favor, completel o reCAPTCHA.";
+							        document.getElementById('form-contactform').innerHTML = "Por favor, complete o reCAPTCHA.";
 							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
 							    }
 							
