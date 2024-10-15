@@ -500,9 +500,9 @@
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
                         <p>Telefone: +55 11 998273-4350<br>
-                        Endereço: Rua dos Estudantes, 505 - Hortolândia-SP<br>
+                        local: Rua dos Estudantes, 505 - Hortolândia/SP<br>
                         Suporte Técnico: suporte@codemaze.com.br<br>
-                        Setor de relacionamento: faleconosco@codemaze.com.br<br>
+                        E-mail: faleconosco@codemaze.com.br<br>
                         </p>
                         
                     </div><!-- end clearfix -->
