@@ -537,7 +537,7 @@
 				<div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <h3>Páginas</h3>
+                            <h3></h3>
                         </div>
 
                         <ul class="footer-links hov">
@@ -554,15 +554,13 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="widget clearfix">
                         <div class="widget-title">
-                            <h3>Páginas</h3>
+                            <h3></h3>
                         </div>
 
                         <ul class="footer-links hov">
-                            <li><a href="#slide">Home <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#about">Sobre nós <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#services">Soluções & Consultoria <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#hosting">Hosting <span class="icon icon-arrow-right2"></span></a></li>
-							<li><a href="#contact">Contato <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="#slide">Intranet <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#about">Webmail <span class="icon icon-arrow-right2"></span></a></li>
+							<li><a href="#hosting">Portal do Cliente <span class="icon icon-arrow-right2"></span></a></li>
 
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
