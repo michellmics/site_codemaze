@@ -444,8 +444,8 @@
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
                                 
-                                <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
-                                <div id="form-contactform"></div>
+                                <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"><div id="form-contactform"></div></div>
+                                
                                     <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Enviar</button>
                                 </div>
                             </fieldset>
