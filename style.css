@@ -3331,16 +3331,21 @@ select.mobile-device {
     bottom: 20px;
 }
 
-.plans-container {
+
+
+
+.plans-wrapper {
     display: flex;
     gap: 20px;
     overflow: hidden; /* Esconde a barra de rolagem */
-    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
 }
 
 .plan {
     min-width: 300px;
     flex: 0 0 auto;
+    transition: transform 0.5s linear;
 }
 
 
