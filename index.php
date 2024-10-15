@@ -448,11 +448,7 @@
                 </div><!-- end col -->
             </div><!-- end row -->
 			
-			<div class="row">
-				<div class="col-md-offset-1 col-sm-10 col-md-10 col-sm-offset-1 pd-add">
-					
-				</div>
-			</div><!-- end row -->
+			
 			
         </div><!-- end container -->
     </div><!-- end section -->
