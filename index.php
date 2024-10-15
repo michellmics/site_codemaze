@@ -455,7 +455,7 @@
 
 						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
 						<script>
-							document.getElementById('demo-form').addEventListener('submit', function(e) {
+							document.getElementById('contact_form').addEventListener('submit', function(e) {
 							    e.preventDefault(); // Impede o envio tradicional do formulário
 							
 							    // Verifica o reCAPTCHA
