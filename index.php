@@ -431,11 +431,11 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <label class="sr-only">Área de interesse</label>
                                     <select name="service" id="service" class="selectpicker form-control" data-style="btn-white">
-                                        <option value="12">Tráfego Pago</option>
-                                        <option value="Web Design">Desenvolvimento de Site / Software</option>
-                                        <option value="Web Development">Gerenciamento de Midias Sociais</option>
-                                        <option value="Graphic Design">Consultoria</option>
-                                        <option value="Others">Outros</option>
+                                        <option value="Tráfego Pago">Tráfego Pago</option>
+                                        <option value="Desenvolvimento de sites">Desenvolvimento de Site / Software</option>
+                                        <option value="Social Media">Gerenciamento de Midias Sociais</option>
+                                        <option value="Consultoria">Consultoria</option>
+                                        <option value="OOutros">Outros</option>
                                     </select>
                                 </div>
                                
