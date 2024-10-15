@@ -35,6 +35,16 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        section {
+            height: 600px; /* Altura das seções para simulação */
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -93,10 +103,10 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="active" href="index.html">Homes</a></li>
-                        <li><a href="#about">Sobre nós</a></li>
-                        <li><a href="services.html">Soluções & Consultoria</a></li>
-                        <li><a href="testimonials.html">Avaliações</a></li>
-						<li><a href="contact.html">Contato</a></li>
+                        <li><a href="#about" class="scroll-link">Sobre nós</a></li>
+                        <li><a href="services.html" class="scroll-link">Soluções & Consultoria</a></li>
+                        <li><a href="testimonials.html" class="scroll-link">Avaliações</a></li>
+						<li><a href="contact.html" class="scroll-link">Contato</a></li>
                     </ul>
                 </div>
             </div>
@@ -544,6 +554,19 @@
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
+
+    <script>
+        // Se você quiser usar JavaScript puro para rolagem suave
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' }); // Rolagem suave
+            });
+        });
+    </script>
+
 
 </body>
 </html>
