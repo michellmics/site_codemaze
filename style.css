@@ -576,7 +576,7 @@ li.social-links a {
     height: 60px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.4s ease-in-out 0s;
+    transition: all 0.7s ease-in-out 0s;
     width: 60px;
 	border-radius: 25px 0px 25px 0px;
 }
