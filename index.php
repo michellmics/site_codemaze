@@ -274,15 +274,15 @@
             <div class="row text-center">
                 <div class="col-md-6">
                     <div class="customwidget text-left">
-                        <h1>Beautiful Websites</h1>
-                        <p>Full access control of the background parallax effects, <br>change your awesome background elements and edit colors from style.css or colors.css</p>
+                        <h1>Gestão de Mídia Social</h1>
+                        <p>Maximize sua presença online com nosso serviço de Gestão de Mídia Social! <br>Oferecemos relatórios personalizados e estratégias inovadoras que aumentam o engajamento e potencializam sua marca</p>
                         <ul class="list-inline">
-                            <li><i class="fa fa-check"></i> Custom Sections</li>
-                            <li><i class="fa fa-check"></i> Parallax's</li>
-                            <li><i class="fa fa-check"></i> Icons & PSD</li>
-                            <li><i class="fa fa-check"></i> Limitless Colors</li>
+                            <li><i class="fa fa-check"></i> Portal do Cliente</li>
+                            <li><i class="fa fa-check"></i> Criação de conteúdo</li>
+                            <li><i class="fa fa-check"></i> Posts Animados</li>
+                            <li><i class="fa fa-check"></i> Relatórios de engajamento</li>
                         </ul><!-- end list -->
-                        <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd">Learn More</a>
+                        <a href="#contact" data-scroll class="btn btn-light btn-radius btn-brd">Contate-nos</a>
                     </div>
                 </div><!-- end col -->
 				<div class="col-md-6">
