@@ -4,7 +4,7 @@
   $siteAdmin = new SITE_ADMIN();
   $result = $siteAdmin->getSiteInfo();
 
-  var_dump($result);
+  var_dump($siteAdmin->ARRAY_SITEINFO);
   die();
 
   session_start(); 
