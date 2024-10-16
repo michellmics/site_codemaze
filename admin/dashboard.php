@@ -325,11 +325,11 @@
             <li class="header"><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Descrições</span>
+                <i class="fa fa-edit"></i> <span>Formulários</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('descricoes.php')"><i class="fa fa-circle-o"></i> General Elements</a></li>
+                <li><a href="#" onclick="loadInIframe('descricoes.php')"><i class="fa fa-circle-o"></i> Cadastro de clientes</a></li>
                 <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
                 <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
               </ul> 
@@ -378,7 +378,7 @@
         </section>
       
       <!--##############################################################-->
-      <!-- Main content INI-->
+      <!-- Main content FRAME INI-->
       <!--##############################################################-->
         
 
@@ -401,19 +401,8 @@
         </div>
       </section>
 
-
-   
-
-        
-
-
-
-
-
-
-
       <!--##############################################################-->
-      <!-- Main content END-->
+      <!-- Main content FRAME END-->
       <!--##############################################################-->
 
 
