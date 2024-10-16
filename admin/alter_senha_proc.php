@@ -53,8 +53,8 @@ class LoginSystem extends SITE_ADMIN
 }
 
 // Processa a requisição POST
-//if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-//{
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
             $senha = $_POST['senha'];
             $novasenha = $_POST['novasenha'];
             $novasenha_repeat = $_POST['novasenha_repeat'];
@@ -62,7 +62,7 @@ class LoginSystem extends SITE_ADMIN
             echo "aqui1";
             $loginSystem = new LoginSystem();
             $result=$loginSystem->validaAlterPass($senha, $novasenha, $novasenha_repeat, $id);
-//}
+}
  
 ?>
 
