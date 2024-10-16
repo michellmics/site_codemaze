@@ -50,7 +50,7 @@
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" name="senha" class="form-control" placeholder="Digite a senha novamente"/>
+            <input type="password" name="senha" class="form-control" placeholder="Digite a senha"/>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
           <div class="row">
