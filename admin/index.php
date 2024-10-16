@@ -23,9 +23,6 @@
     <!-- iCheck -->
     <link href="plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
 
-    <!-- reCaptcha -->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
   </head>
   <body class="login-page">
     <div class="login-box">
