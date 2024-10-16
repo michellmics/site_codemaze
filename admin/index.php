@@ -50,6 +50,7 @@
               <button onclick="onSubmit(event)" type="submit" class="btn btn-primary btn-block btn-flat">login</button>
             </div><!-- /.col -->
           </div>
+          <br>
           <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
         </form>
 
