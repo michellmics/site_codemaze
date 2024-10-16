@@ -14,9 +14,6 @@
   $siteAdmin->getSiteInfo(); 
   $siteAdmin->getUserInfo();
 
-  var_dump($_SESSION);
-  die();
-
   //defin usuario
   if($_SESSION['user_sexo'] == "MASCULINO")
   {
