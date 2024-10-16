@@ -12,13 +12,13 @@
 <html>
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDC4S2CM61"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VK4QL1B8G"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
-      gtag('config', 'G-RDC4S2CM61');
+        
+      gtag('config', 'G-4VK4QL1B8G');
     </script>
 
     <meta charset="UTF-8">
