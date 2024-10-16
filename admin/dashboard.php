@@ -18,7 +18,7 @@
   die();
 
   //defin usuario
-  if($siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] == "MASCULINO")
+  if($_SESSION['user_sexo'] == "MASCULINO")
   {
     $imgProfile = "dist/img/avatar5.png";
   }
@@ -267,15 +267,15 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src=<? echo $imgProfile ?> class="user-image" alt="User Image"/>
-                  <span class="hidden-xs"><?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?></span>
+                  <span class="hidden-xs"><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src=<? echo $imgProfile ?> class="img-circle" alt="User Image" />
                     <p>
-                    <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?> - ADM
-                      <small><?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCEMAIL"]); ?></small>
+                    <?php echo htmlspecialchars($_SESSION['user_name']); ?> - ADM
+                      <small><?php echo htmlspecialchars($_SESSION['user_email']); ?></small>
                     </p>
                   </li>
                   <!-- Menu Body -->
