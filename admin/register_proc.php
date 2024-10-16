@@ -29,9 +29,9 @@ class registerUser extends SITE_ADMIN
             } else 
                 {
                     $passHash = password_hash($senha, PASSWORD_DEFAULT);
-                    $result = $this->insertUserInfo($email, $passHash, $nome, $sexo);
+                    $result = $this->insertUserInfo($email, $nome, $sexo, $passHash);
                     echo "Usuário cadastrado com sucesso."; 
-                    var_dump($result);
+                    
                 }
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
