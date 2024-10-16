@@ -79,5 +79,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             echo "Por favor, complete o reCAPTCHA.";
         }
 }
-ob_end_flush();
+ 
 ?>
