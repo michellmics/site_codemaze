@@ -46,7 +46,7 @@
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" name="sexo" class="form-control" placeholder="Sexo"/>
+            <input type="text" name="sexo" class="form-control" placeholder="Sexo"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
