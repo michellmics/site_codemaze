@@ -15,7 +15,7 @@
   $siteAdmin->getUserInfo();
 
   //defin usuario
-  if($siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] == "masculino")
+  if($siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] == "MASCULINO")
   {
     $imgProfile = "dist/img/avatar5.png";
   }
@@ -30,7 +30,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Administração</title>
+    <title>Intranet Codemaze</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -264,14 +264,14 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src=<? echo $imgProfile ?> class="user-image" alt="User Image"/>
-                  <span class="hidden-xs"><?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_NMNOME"]); ?></span>
+                  <span class="hidden-xs"><?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src=<? echo $imgProfile ?> class="img-circle" alt="User Image" />
                     <p>
-                    <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_NMNOME"]); ?> - ADM
+                    <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?> - ADM
                       <small><?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCEMAIL"]); ?></small>
                     </p>
                   </li>
