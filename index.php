@@ -23,7 +23,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
      <!-- Site Metas -->
-    <title>CODEMAZE - iSoluções de MKT e Software</title>  
+    <title>CODEMAZE - Soluções de MKT e Software</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -116,7 +116,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#slide" class="scroll-link">Home</a></li>
+                        <li><a href="#slide" class="scroll-link">Hopme</a></li>
                         <li><a href="#about" class="scroll-link">Sobre nós</a></li>
                         <li><a href="#services" class="scroll-link">Soluções & Consultoria</a></li>
                         <li><a href="#hosting" class="scroll-link">Hosting</a></li>
