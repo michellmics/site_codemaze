@@ -14,7 +14,7 @@ class LoginSystem extends SITE_ADMIN
                 $this->conexao();
             }
 
-            $this->getUserInfoById(1);
+            $this->getUserInfoById(4);
             var_dump($this->ARRAY_USERINFOBYID);
             echo "teste 2";
             die();
