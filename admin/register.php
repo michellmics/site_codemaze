@@ -63,6 +63,13 @@
                         return false;
                     }
 
+                    // Validação do e-mail
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular básica para e-mail
+                    if (!emailRegex.test(email)) {
+                        alert("Por favor, insira um endereço de e-mail válido.");
+                        return false;
+                    }
+
                     // Expressão regular para validar a senha
                     const senhaRegex = /^(?=.*[A-Z])(?=.*[\W_])(?=.{8,})/;
 
