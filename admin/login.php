@@ -28,6 +28,7 @@ class LoginSystem extends SITE_ADMIN
                 session_start(); 
                 $_SESSION['user_id'] = $user['USA_IDUSERADMIN']; // Armazena o ID na sessão
                 header("Location: dashboard.php"); // Redireciona após login bem-sucedido
+                exit();
             } else 
                 {
                     $_SESSION = [];
