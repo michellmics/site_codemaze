@@ -31,7 +31,7 @@
   <body class="register-page">
     <div class="register-box">
       <div class="register-logo">
-        <a href="#"><b><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></b></a>
+      <img src="../images/logos/logocodemaze_preto.png"></img>
       </div>
 
       <div class="register-box-body">
