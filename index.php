@@ -23,7 +23,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
      <!-- Site Metas -->
-    <title>CODEMAZE - Soluções de MKT e Software</title>  
+    <title>CODEMAZE - iSoluções de MKT e Software</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
