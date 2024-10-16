@@ -28,7 +28,8 @@ class registerUser extends SITE_ADMIN
                 exit();
             } else 
                 {
-                    $result = $this->insertUserInfo($email, $senha, $nome, $sexo);
+                    $passHash = password_hash($senha, PASSWORD_DEFAULT);
+                    $result = $this->insertUserInfo($email, $passHash, $nome, $sexo);
                     echo "Usuário cadastrado com sucesso."; 
                     var_dump($result);
                 }
