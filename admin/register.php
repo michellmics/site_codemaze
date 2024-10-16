@@ -36,37 +36,54 @@
 
       <div class="register-box-body">
         <p class="login-box-msg">Cadastro de novo usuário(a)</p>
-        <form action="register_proc.php" method="post">
+        <form action="register_proc.php" method="post" onsubmit="return validarFormulario()">
           <div class="form-group has-feedback">
-            <input type="text" name="nome" class="form-control" placeholder="Nome Completo"/>
+            <input type="text" name="nome" class="form-control" placeholder="Nome Completo" required/>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
+
           <div class="form-group has-feedback">
-            <input type="text" name="email" class="form-control" placeholder="E-mail"/>
+            <input type="email" name="email" class="form-control" placeholder="E-mail" required/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
+
           <div class="form-group has-feedback">
-          <select name="sexo" class="form-control">
+            <select name="sexo" class="form-control" required>
               <option value="" disabled selected>Selecione o sexo</option>
               <option value="M">MASCULINO</option>
               <option value="F">FEMININO</option>
-          </select>
+            </select>
           </div>
+
           <div class="form-group has-feedback">
-            <input type="password" name="senha" class="form-control" placeholder="Digite a senha "/>
+            <input type="password" name="senha" class="form-control" placeholder="Digite a senha" required/>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
+
           <div class="row">
-            <div class="col-xs-8">    
-              <div class="checkbox icheck">
-                
-              </div>                        
+            <div class="col-xs-8">
+              <div class="checkbox icheck"></div>                        
             </div><!-- /.col -->
             <div class="col-xs-4">
               <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
             </div><!-- /.col -->
           </div>
-        </form>        
+        </form>
+
+      <script>
+        function validarFormulario() {
+          const nome = document.querySelector('input[name="nome"]').value.trim();
+          const email = document.querySelector('input[name="email"]').value.trim();
+          const sexo = document.querySelector('select[name="sexo"]').value;
+          const senha = document.querySelector('input[name="senha"]').value.trim();
+        
+          if (!nome || !email || !sexo || !senha) {
+            alert("Todos os campos devem ser preenchidos.");
+            return false; // Impede o envio do formulário
+          }
+          return true; // Permite o envio do formulário
+        }
+      </script>      
 
        
 
