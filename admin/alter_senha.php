@@ -10,14 +10,6 @@ if (!isset($_SESSION['user_id']))
   exit();
 }
 
-$ID = $_SESSION['user_id'];
-
-$siteAdmin = new SITE_ADMIN();
-$siteAdmin->getSiteInfo(); 
-$siteAdmin->getUserInfoById($ID);
-
-
-
 ?>
 
 <!DOCTYPE html>

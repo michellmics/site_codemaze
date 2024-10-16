@@ -6,13 +6,21 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class LoginSystem extends SITE_ADMIN
 {
-    public function validateUser($email, $password)
+    public function validaAlterPass($senha, $novasenha, $novasenha_repeat, $id)
     {
         try {
             // Cria conexão com o banco de dados
             if (!$this->pdo) {
                 $this->conexao();
             }
+
+            getUserInfoById($ID);
+            var_dump($this->ARRAY_USERINFOBYID);
+            die();
+
+
+
+            /*
 
             // Prepara a consulta SQL para verificar o usuário
             $sql = "SELECT USA_IDUSERADMIN, USA_DCSENHA, USA_DCEMAIL, USA_DCNOME, USA_DCSEXO FROM USA_USERADMIN WHERE USA_DCEMAIL = :email";
@@ -28,7 +36,7 @@ class LoginSystem extends SITE_ADMIN
                 $_SESSION['user_name'] = $user['USA_DCNOME'];
                 $_SESSION['user_email'] = $user['USA_DCEMAIL'];
                 $_SESSION['user_sexo'] = $user['USA_DCSEXO'];
-                echo '<meta http-equiv="refresh" content="0;url=dashboard.php">'; // Redireciona após login bem-sucedido
+                echo '<meta http-equiv="refresh" content="0;url=alter_senha.php">'; // Redireciona após login bem-sucedido
                 exit();
             } else 
                 {
@@ -36,6 +44,7 @@ class LoginSystem extends SITE_ADMIN
                     session_destroy();
                     echo "Usuário ou senha incorretos."; 
                 }
+                    */
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
         } 
@@ -45,41 +54,14 @@ class LoginSystem extends SITE_ADMIN
 // Processa a requisição POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
-    // Sua chave secreta
-    $secretKey = "6LcZHF4qAAAAAB8x_VRiQoivWpb5kzz_SOy8EwIT"; // Substitua pela sua chave secreta
-
-    // O token enviado pelo reCAPTCHA v2
-    $recaptchaResponse = $_POST['g-recaptcha-response'];
-
-    // Verifique se o token foi recebido
-    if (!empty($recaptchaResponse)) 
-    {
-        
-        // Verifique o reCAPTCHA fazendo uma solicitação à API do Google
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}");
-        $responseKeys = json_decode($response, true);
-
-        // Verifique o sucesso da validação
-        if ($responseKeys["success"]) 
-        {
-
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $senha = $_POST['senha'];
+            $novasenha = $_POST['novasenha'];
+            $novasenha_repeat = $_POST['novasenha_repeat'];
+            $id = $_SESSION['user_id'];
 
             $loginSystem = new LoginSystem();
-            $result=$loginSystem->validateUser($email, $password);
-        }
-        else 
-            {
-                // Validação falhou
-                echo "Falha na verificação do reCAPTCHA. Por favor, tente novamente.";
-            }
-    }
-    else 
-        {
-            // reCAPTCHA não foi resolvido
-            echo "Por favor, complete o reCAPTCHA.";
-        }
+            $result=$loginSystem->validaAlterPass($senha, $novasenha, $novasenha_repeat, $id);
 }
  
 ?>
+
