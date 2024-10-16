@@ -10,7 +10,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Administração - Registro de Usuário</title>
+    <title>Administração - Site <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -31,26 +31,26 @@
   <body class="register-page">
     <div class="register-box">
       <div class="register-logo">
-        <a href="index2.html"><b><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></b></a>
+        <a href="#"><b><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></b></a>
       </div>
 
       <div class="register-box-body">
         <p class="login-box-msg">Cadastro de novo usuário(a)</p>
-        <form action="index.html" method="post">
+        <form action="register_proc.php" method="post">
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" placeholder="Nome Completo"/>
+            <input type="text" name="nome" class="form-control" placeholder="Nome Completo"/>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" placeholder="E-mail"/>
+            <input type="text" name="email" class="form-control" placeholder="E-mail"/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Senha"/>
+            <input type="password" name="sexo" class="form-control" placeholder="Sexo"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Digite a senha novamente"/>
+            <input type="password" name="senha" class="form-control" placeholder="Digite a senha novamente"/>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
           </div>
           <div class="row">
@@ -67,7 +67,7 @@
 
        
 
-        <a href="login.html" class="text-center">Já sou um usuário</a>
+        
       </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 

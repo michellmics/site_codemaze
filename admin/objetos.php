@@ -144,6 +144,36 @@
             }
         }
 
+        public function insertUserInfo($USA_DCEMAIL, $USA_NMNOME, $USA_DCSEXO, $USA_DCSENHA)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+        
+            try {
+                $sql = "INSERT INTO USA_USERADMIN 
+                        (USA_DCEMAIL, USA_NMNOME, USA_DCSEXO, USA_DCSENHA) 
+                        VALUES (:USA_DCEMAIL, :USA_NMNOME, :USA_DCSEXO, :USA_DCSENHA)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':PUSA_DCEMAIL', $USA_DCEMAIL, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_NMNOME', $USA_NMNOME, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_DCSEXO', $USA_DCSEXO, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_DCSENHA', $USA_DCSENHA, PDO::PARAM_STR);
+            
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return ["success" => "Usuário adm inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
 
 
 
