@@ -14,6 +14,9 @@
   $siteAdmin->getSiteInfo(); 
   $siteAdmin->getUserInfo();
 
+  var_dump($siteAdmin->ARRAY_USERINFO);
+  die();
+
   //defin usuario
   if($siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] == "MASCULINO")
   {
