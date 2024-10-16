@@ -15,7 +15,7 @@ class LoginSystem extends SITE_ADMIN
             }
 
             // Prepara a consulta SQL para verificar o usuário
-            $sql = "SELECT USA_IDUSERADMIN, USA_DCSENHA, USA_DCEMAIL FROM USA_USERADMIN WHERE USA_DCEMAIL = :email";
+            $sql = "SELECT USA_IDUSERADMIN, USA_DCSENHA, USA_DCEMAIL, USA_DCNOME FROM USA_USERADMIN WHERE USA_DCEMAIL = :email";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();
@@ -25,6 +25,8 @@ class LoginSystem extends SITE_ADMIN
             // Se o usuário for encontrado e a senha for válida
             if ($user && password_verify($password, $user['USA_DCSENHA'])) {
                 $_SESSION['user_id'] = $user['USA_IDUSERADMIN']; // Armazena o ID na sessão
+                $_SESSION['user_name'] = $user['USA_DCNOME'];
+                $_SESSION['user_email'] = $user['USA_DCEMAIL'];
                 echo '<meta http-equiv="refresh" content="0;url=dashboard.php">'; // Redireciona após login bem-sucedido
                 exit();
             } else 

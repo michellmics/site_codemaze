@@ -14,7 +14,7 @@
   $siteAdmin->getSiteInfo(); 
   $siteAdmin->getUserInfo();
 
-  var_dump($siteAdmin->ARRAY_USERINFO);
+  var_dump($_SESSION);
   die();
 
   //defin usuario
