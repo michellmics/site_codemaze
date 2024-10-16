@@ -22,6 +22,10 @@
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
     <link href="plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
+
+    <!-- reCaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   </head>
   <body class="login-page">
     <div class="login-box">
@@ -30,7 +34,7 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Acesso a área administrativa</p>
-        <form action="login.php" method="post">
+        <form id="demo-form" action="login.php" method="post">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" id="email" placeholder="E-mail" name="email"/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -43,10 +47,46 @@
             <div class="col-xs-8">                 
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">login</button>
+              <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
+              <button onclick="onSubmit(event)" type="submit" class="btn btn-primary btn-block btn-flat">login</button>
             </div><!-- /.col -->
           </div>
         </form>
+
+        <!-- SCRIPT RECAPTCHA -->
+                    <!-- Onde a mensagem de sucesso/erro será exibida -->
+						<div id="form-message"></div>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
+						<script>
+							document.getElementById('demo-form').addEventListener('submit', function(e) {
+							    e.preventDefault(); // Impede o envio tradicional do formulário
+							
+							    // Verifica o reCAPTCHA
+							    var recaptchaResponse = grecaptcha.getResponse();
+							    if (recaptchaResponse.length === 0) {
+							        document.getElementById('form-message').innerHTML = "Por favor, complete o reCAPTCHA.";
+							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
+							    }
+							
+							    var formData = new FormData(this); // Captura todos os dados do formulário
+							
+							    var xhr = new XMLHttpRequest();
+							    xhr.open('POST', this.action, true); // Configura o envio via POST para o arquivo PHP
+							
+							    xhr.onload = function() {
+							        if (xhr.status === 200) {
+							            // Exibe a resposta do servidor na página
+							            document.getElementById('form-message').innerHTML = xhr.responseText;
+							        } else {
+							            document.getElementById('form-message').innerHTML = "Houve um erro no envio do formulário.";
+							        }
+							    };
+							
+							    xhr.send(formData); // Envia o formulário via AJAX
+							});
+						</script>
 
        
 
