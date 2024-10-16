@@ -24,9 +24,10 @@ class LoginSystem extends SITE_ADMIN
             
             // Se o usuário for encontrado e a senha for válida
             if ($user && password_verify($password, $user['USA_DCSENHA'])) {
-                //session_start(); 
-                $_SESSION['user_id'] = $user['USA_IDUSERADMIN']; // Armazena o ID na sessão                
-                return "success";
+                session_start(); 
+                $_SESSION['user_id'] = $user['USA_IDUSERADMIN']; // Armazena o ID na sessão
+                header("Location: dashboard.php"); // Redireciona após login bem-sucedido
+                return "OK";
             } else 
                 {
                     $_SESSION = [];
@@ -65,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
             $loginSystem = new LoginSystem();
             $result=$loginSystem->validateUser($email, $password);
-            if($result == "success"){header("Location: dashboard.php");}
         }
         else 
             {
