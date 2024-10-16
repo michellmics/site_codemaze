@@ -51,7 +51,7 @@
             </div><!-- /.col -->
           </div>
           <br>
-          <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
+          <center><div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div></center>
         </form>
 
         <!-- SCRIPT RECAPTCHA -->
