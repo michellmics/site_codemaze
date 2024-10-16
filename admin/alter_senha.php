@@ -64,41 +64,12 @@ if (!isset($_SESSION['user_id']))
                         <div class="checkbox icheck"></div>                        
                     </div><!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                        <button type="button"  class="btn btn-primary btn-block btn-flat">Registrar</button>
                     </div><!-- /.col -->
                 </div>
             </form>
 
-            <script>
-                function validarFormulario() {
-                    const nome = document.querySelector('input[name="nome"]').value.trim();
-                    const email = document.querySelector('input[name="email"]').value.trim();
-                    const sexo = document.querySelector('select[name="sexo"]').value;
-                    const senha = document.querySelector('input[name="senha"]').value.trim();
-
-                    if (!novasenha || !novasenha_repeat || !senha) {
-                        alert("Todos os campos devem ser preenchidos.");
-                        return false;
-                    }
-
-                    // Expressão regular para validar a senha
-                    const senhaRegex = /^(?=.*[A-Z])(?=.*[\W_])(?=.{8,})/; // Pelo menos 8 caracteres, uma letra maiúscula, um caractere especial
-                    if (!senhaRegex.test(senha)) {
-                        alert("A senha deve ter pelo menos 8 caracteres, incluir pelo menos uma letra maiúscula e um caractere especial.");
-                        return false;
-                    }
-
-                    // Expressão regular para validar a senha
-                    const senhaRegex = /^(?=.*[A-Z])(?=.*[\W_])(?=.{8,})/; // Pelo menos 8 caracteres, uma letra maiúscula, um caractere especial
-                    if (!senhaRegex.test(novasenha)) {
-                        alert("A senha deve ter pelo menos 8 caracteres, incluir pelo menos uma letra maiúscula e um caractere especial.");
-                        return false;
-                    }
-
-                    // Envia o formulário manualmente após a validação
-                    document.getElementById('formRegistro').submit();
-                }
-            </script>
+            
         </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 
