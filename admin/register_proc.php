@@ -30,7 +30,7 @@ class registerUser extends SITE_ADMIN
                 {
                     $result = $this->insertUserInfo($email, $senha, $nome, $sexo);
                     echo "Usuário cadastrado com sucesso."; 
-                    echo $result;
+                    var_dump($result);
                 }
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
