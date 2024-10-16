@@ -38,12 +38,12 @@
         <p class="login-box-msg">Cadastro de novo usuário(a)</p>
         <form action="register_proc.php" method="post" id="formRegistro">
   <div class="form-group has-feedback">
-    <input type="text" name="nome" class="form-control" placeholder="Nome Completo" required/>
+    <input type="text" name="nome" class="form-control" placeholder="Nome Completo" maxlength="45" required/>
     <span class="glyphicon glyphicon-user form-control-feedback"></span>
   </div>
 
   <div class="form-group has-feedback">
-    <input type="email" name="email" class="form-control" placeholder="E-mail" required/>
+    <input type="email" name="email" class="form-control" placeholder="E-mail" maxlength="45" required/>
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
   </div>
 
@@ -56,7 +56,7 @@
   </div>
 
   <div class="form-group has-feedback">
-    <input type="password" name="senha" class="form-control" placeholder="Digite a senha" required/>
+    <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="8" required/>
     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
   </div>
 
