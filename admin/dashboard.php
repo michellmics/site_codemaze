@@ -390,7 +390,16 @@
       </script>
 
 
-
+      <section class="content">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe 
+            id="contentFrame" 
+            class="embed-responsive-item" 
+            style="border:0; width:100%; height:80%;" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
 
 
    
