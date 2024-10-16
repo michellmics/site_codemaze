@@ -16,6 +16,7 @@ class LoginSystem extends SITE_ADMIN
 
             getUserInfoById($ID);
             var_dump($this->ARRAY_USERINFOBYID);
+            echo "teste 2";
             die();
 
 
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $novasenha = $_POST['novasenha'];
             $novasenha_repeat = $_POST['novasenha_repeat'];
             $id = $_SESSION['user_id'];
-
+            echo "aqui1";
             $loginSystem = new LoginSystem();
             $result=$loginSystem->validaAlterPass($senha, $novasenha, $novasenha_repeat, $id);
 }

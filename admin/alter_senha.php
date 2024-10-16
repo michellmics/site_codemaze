@@ -42,7 +42,7 @@ if (!isset($_SESSION['user_id']))
 
         <div class="register-box-body">
             <p class="login-box-msg">Alteração de senha</p>
-            <form action="alter_senha_proc.php" method="post" id="formRegistro">
+            <form action="alter_senha_proc.php" method="POST" id="formRegistro">
               
 
                 <div class="form-group has-feedback">
