@@ -159,7 +159,7 @@
                 $stmt = $this->pdo->prepare($sql);
             
                 // Liga os parâmetros aos valores
-                $stmt->bindParam(':PUSA_DCEMAIL', $USA_DCEMAIL, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_DCEMAIL', $USA_DCEMAIL, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_NMNOME', $USA_NMNOME, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCSEXO', $USA_DCSEXO, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCSENHA', $USA_DCSENHA, PDO::PARAM_STR);
