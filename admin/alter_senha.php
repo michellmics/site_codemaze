@@ -10,9 +10,11 @@ if (!isset($_SESSION['user_id']))
   exit();
 }
 
+$ID = $_SESSION['user_id'];
+
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getSiteInfo(); 
-$siteAdmin->getUserInfo();
+$siteAdmin->getUserInfoById($ID);
 
 
 
@@ -49,7 +51,7 @@ $siteAdmin->getUserInfo();
         <div class="register-box-body">
             <p class="login-box-msg">Alteração de senha</p>
             <form action="alter_senha_proc.php" method="post" id="formRegistro">
-              >
+              
 
                 <div class="form-group has-feedback">
                     <input type="password" name="senha" class="form-control" placeholder="Digite a senha atual" maxlength="20" required/>

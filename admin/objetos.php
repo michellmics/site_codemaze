@@ -9,6 +9,7 @@
         public $pdo;
         public $ARRAY_SITEINFO;
         public $ARRAY_USERINFO;
+        public $ARRAY_USERINFOBYID;
         public $ARRAY_DESCEMPRESAINFO;
         
 
@@ -80,13 +81,34 @@
             try{           
                 $sql = "SELECT USA_IDUSERADMIN,                                  
                                 USA_DCEMAIL, 
-                                USA_NMNOME,
+                                USA_DCNOME,
                                 USA_DCSEXO
                                 FROM USA_USERADMIN";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_USERINFO = $stmt->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getUserInfoById($ID)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT USA_IDUSERADMIN,                                  
+                                USA_DCEMAIL, 
+                                USA_DCNOME,
+                                USA_DCSEXO,
+                                USA_DCSENHA
+                                FROM USA_USERADMIN WHERE USA_IDUSERADMIN = $ID";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_USERINFOBYID = $stmt->fetch(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
