@@ -27,7 +27,6 @@
     <div class="login-box">
       <div class="login-logo">
         <img src="../images/logos/logocodemaze_preto.png"></img>
-        <a href="index.html"><b><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Acesso a área administrativa</p>
