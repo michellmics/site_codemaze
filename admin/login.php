@@ -1,4 +1,5 @@
 <?php
+ob_end_flush();
 include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 session_start(); // Inicia a sessão para armazenar dados do usuário
@@ -78,4 +79,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             echo "Por favor, complete o reCAPTCHA.";
         }
 }
+ob_end_flush();
 ?>
