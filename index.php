@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDC4S2CM61"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-RDC4S2CM61');
-    </script>
-
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >   
@@ -60,6 +50,15 @@
     </style>
 
 </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDC4S2CM61"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RDC4S2CM61');
+    </script>
 <body>
 
     <!-- LOADER -->
@@ -116,7 +115,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#slide" class="scroll-link">Hopme</a></li>
+                        <li><a href="#slide" class="scroll-link">Home</a></li>
                         <li><a href="#about" class="scroll-link">Sobre nós</a></li>
                         <li><a href="#services" class="scroll-link">Soluções & Consultoria</a></li>
                         <li><a href="#hosting" class="scroll-link">Hosting</a></li>
