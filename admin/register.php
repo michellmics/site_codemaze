@@ -47,7 +47,7 @@
           </div>
           <div class="form-group has-feedback">
             <input type="text" name="sexo" class="form-control" placeholder="Sexo"/>
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
             <input type="password" name="senha" class="form-control" placeholder="Digite a senha novamente"/>
