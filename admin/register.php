@@ -46,8 +46,11 @@
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="text" name="sexo" class="form-control" placeholder="Sexo"/>
-            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          <select name="sexo" class="form-control">
+              <option value="" disabled selected>Selecione o sexo</option>
+              <option value="M">MASCULINO</option>
+              <option value="F">FEMININO</option>
+          </select>
           </div>
           <div class="form-group has-feedback">
             <input type="password" name="senha" class="form-control" placeholder="Digite a senha "/>
