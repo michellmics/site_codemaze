@@ -23,6 +23,8 @@
     <!-- iCheck -->
     <link href="plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
 
+    
+
   </head>
   <body class="login-page">
     <div class="login-box">
@@ -44,10 +46,11 @@
             <div class="col-xs-8">                 
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
+              
               <button onclick="onSubmit(event)" type="submit" class="btn btn-primary btn-block btn-flat">login</button>
             </div><!-- /.col -->
           </div>
+          <div class="g-recaptcha" data-sitekey="6LcZHF4qAAAAAPFlFjuVLHrKOvpQ9BzC6U_4uqoa"></div>
         </form>
 
         <!-- SCRIPT RECAPTCHA -->
