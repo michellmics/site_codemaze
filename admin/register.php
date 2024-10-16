@@ -50,8 +50,8 @@
   <div class="form-group has-feedback">
     <select name="sexo" class="form-control" required>
       <option value="" disabled selected>Selecione o sexo</option>
-      <option value="M">MASCULINO</option>
-      <option value="F">FEMININO</option>
+      <option value="MASCULINO">MASCULINO</option>
+      <option value="FEMININO">FEMININO</option>
     </select>
   </div>
 

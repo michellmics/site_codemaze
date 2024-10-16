@@ -30,6 +30,11 @@ class registerUser extends SITE_ADMIN
                 {
                     $passHash = password_hash($senha, PASSWORD_DEFAULT);
                     $result = $this->insertUserInfo($email, $nome, $sexo, $passHash);
+                    
+                    $SUBJECT = "Cadastro de novo usuário administrador";
+                    $MSG = "O usuário(a) $nome com e-mail $email foi cadastrado como administrador da intranet da Codemaze.";
+                    
+                    $this->notifyEmail($SUBJECT, $MSG); //notificação por email
                     echo "Usuário cadastrado com sucesso."; 
                     
                 }
