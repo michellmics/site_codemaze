@@ -194,10 +194,10 @@ if (!isset($_POST['id'])) {
 
       <div style="flex: 2; min-width: 100px;">
 			<label>STATUS</label>
-			<select class="form-control" name="status" style="width: 100%;">
+			<select class="form-control" name="status" style="width: 20%;">
                 	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?>"><? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?></option>
-                  <option value="AC">ATIVO</option>
-                	<option value="AL">INATIVO</option>
+                  <option value="ATIVO">ATIVO</option>
+                	<option value="INATIVO">INATIVO</option>
       </select>
 			</div>
 
