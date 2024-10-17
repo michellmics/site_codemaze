@@ -6,7 +6,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerClient extends SITE_ADMIN
 {
-    public function updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes)
+    public function updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id)
     {
         try {
             // Cria conexão com o banco de dados
@@ -14,7 +14,7 @@ class registerClient extends SITE_ADMIN
                 $this->conexao();
             }
                 
-            $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status);
+            $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id);
             echo "Cliente editado com sucesso.";                  
                      
         } catch (PDOException $e) {  
@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $cidade = $_POST['cidade'];
     $observacoes = $_POST['observacoes'];
     $status = $_POST['status'];
+    $id = $_POST['id'];
     $registerClient = new registerClient();
-    $result = $registerClient->updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status);
+    $result = $registerClient->updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id);
 }
 ?>
