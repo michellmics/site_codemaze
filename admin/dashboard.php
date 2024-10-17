@@ -335,7 +335,6 @@
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista Produtos</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de OS</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista de OS</a></li>
-                <li><a href="#" onclick="loadInIframe('register.php')"><i class="fa fa-circle-o"></i> Cadastro de Usuários ADM</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
               </ul> 
@@ -348,6 +347,7 @@
               <ul class="treeview-menu">
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Configurações</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li>
+                <li><a href="#" onclick="loadInIframe('register.php')"><i class="fa fa-circle-o"></i> Cadastro de Usuários ADM</a></li>
                 <li><a href="https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank"><i class="fa fa-circle-o"></i> Google Analytics</a></li>
                 <li><a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1" target="_blank"><i class="fa fa-circle-o"></i> Google Ads</a></li>
               </ul> 
