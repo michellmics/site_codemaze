@@ -21,8 +21,6 @@ if (!isset($_POST['id'])) {
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient); 
 
-  var_dump($siteAdmin->ARRAY_CLIENTINFO);
-  //die();
 
   /*
     //salvar formularios
