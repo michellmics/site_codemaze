@@ -23,18 +23,10 @@ $user = "inartcom";
 
     $result = curl_exec($curl);
 
-    $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-    if ($http_status != 200) {
-        echo "[!] Error: " . $http_status . " returned\n";
-    } else {
-        $json = json_decode($result);
-        echo "[+] Current cPanel users on the system:\n";
-        foreach ($json->{'data'}->{'acct'} as $userdetails) {
-            echo "\t" . $userdetails->{'user'} . "\n";
-        }
-    }
-
+    
     curl_close($curl);
+
+    var_dump($result);
 
 
 ?>
