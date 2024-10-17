@@ -127,7 +127,7 @@
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" pattern="[0-9\-]*" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
