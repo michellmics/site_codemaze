@@ -104,15 +104,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>NOME</label>
-			<input type="text" style="width: 80%;" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="cpfcnpj" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="18" class="form-control" placeholder="Enter ..." name="cpfcnpj" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="razaosocial" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
@@ -122,15 +122,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>E-MAIL</label>
-			<input type="text" class="form-control" placeholder="Enter ..."  name="email" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..."  name="email" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="telefone1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="12" class="form-control" placeholder="Enter ..." name="telefone1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="telefone2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="12" class="form-control" placeholder="Enter ..." name="telefone2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
@@ -140,15 +140,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>ENDEREÇO</label>
-			<input type="text" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 170%;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>ESTADO</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 30%;" maxlength="2" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>CIDADE</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
