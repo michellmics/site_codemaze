@@ -86,27 +86,22 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools">
                     
                   <div class="input-group">
-    <form method="GET" action="" style="display: flex;">
-        <input 
-            type="text" 
-            name="table_search" 
-            class="form-control input-sm pull-right" 
-            style="width: 150px;" 
-            placeholder="Search" 
-            value="<?php echo isset($_GET['table_search']) ? htmlspecialchars($_GET['table_search']) : ''; ?>" 
-        />
-        <div class="input-group-btn">
-            <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-        </div>
-    </form>
-</div>
+                    <form method="GET" action="" style="display: flex;">
+                        <input 
+                            type="text" 
+                            name="table_search" 
+                            class="form-control input-sm pull-right" 
+                            style="width: 150px;" 
+                            placeholder="Search" 
+                            value="<?php echo isset($_GET['table_search']) ? htmlspecialchars($_GET['table_search']) : ''; ?>" 
+                        />
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                  </div>
                   
-                  <div class="input-group">
-                      <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                      </div>
-                    </div>
+
                   </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
