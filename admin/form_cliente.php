@@ -1,5 +1,5 @@
 <?php
-  include_once 'objetos.php';
+  include_once 'objetos.php'; 
   /*
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
