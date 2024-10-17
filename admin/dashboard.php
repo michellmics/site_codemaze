@@ -358,9 +358,9 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('https://accounts.mlabs.io/accounts/sign_in')"><i class="fa fa-circle-o"></i> mLabs Codemaze</a></li>
-                <li><a href="#" onclick="loadInIframe('https://www.codemaze.com.br/cpanel')"><i class="fa fa-circle-o"></i> CPanel</a></li>
-                <li><a href="#" onclick="loadInIframe('https://conta.hostmidia.com.br/hospedagem/acessar-cpanel/55618/whm/')"><i class="fa fa-circle-o"></i> WHM</a></li>
+                <li><a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank"><i class="fa fa-circle-o"></i> mLabs Codemaze</a></li>
+                <li><a href="https://www.codemaze.com.br/cpanel" target="_blank"><i class="fa fa-circle-o"></i> CPanel</a></li>
+                <li><a href="https://conta.hostmidia.com.br/hospedagem/acessar-cpanel/55618/whm/" target="_blank"><i class="fa fa-circle-o"></i> WHM</a></li>
               </ul> 
             </li>            
             
