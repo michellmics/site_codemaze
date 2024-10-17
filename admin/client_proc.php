@@ -4,9 +4,9 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 session_start(); // Inicia a sessão para armazenar dados do usuário
 
 
-class registerUser extends SITE_ADMIN
+class registerClient extends SITE_ADMIN
 {
-    public function insertUser($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes)
+    public function insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes)
     {
         try {
             // Cria conexão com o banco de dados
@@ -30,6 +30,9 @@ class registerUser extends SITE_ADMIN
                 {
                     $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
                     
+                    echo $result;
+                    die();
+
                     $SUBJECT = "Cadastro de novo cliente";
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
@@ -55,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
     $observacoes = $_POST['observacoes'];
-    $registerUser = new registerUser();
-    $registerUser->insertUser($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
+    $registerClient = new rregisterClient();
+    $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
 }
 ?>
