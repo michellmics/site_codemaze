@@ -101,7 +101,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                             name="table_search" 
                             class="form-control input-sm pull-right" 
                             style="width: 150px;" 
-                            placeholder="Search" 
+                            placeholder="Buscar" 
                             value="<?php echo isset($_GET['table_search']) ? htmlspecialchars($_GET['table_search']) : ''; ?>" 
                         />
                         <div class="input-group-btn">
