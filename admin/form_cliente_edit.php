@@ -104,8 +104,8 @@ if (!isset($_POST['id'])) {
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 2;">
-			<label>IDs</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>" />
+			<label style="display: none;">IDs</label>
+			<input type="text" style="width: 100%; text-transform: uppercase; display: none;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>" />
 			</div>			
       <div style="flex: 1;">
 			<label>NOME</label>
