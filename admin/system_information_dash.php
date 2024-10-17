@@ -24,7 +24,8 @@ $user = "inartcom";
     curl_setopt($curl,CURLOPT_HTTPHEADER,$header);
     curl_setopt($curl, CURLOPT_URL, $query);
 
-    $result = json_encode(curl_exec($curl));
+    $result = json_decode(curl_exec($curl));
+    $result = json_encode($result);
 
 
     
