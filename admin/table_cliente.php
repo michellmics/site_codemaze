@@ -105,12 +105,13 @@
                     <tr>
                       <td>183</td>
                       <td><span class="label label-success">Sem Pendencias</span></td>
-                      <td>John Doe</td>
-                      <td>TESTE@TESTE.COM.BR</td>
+                      <td>SERCONEO CONTABILIDADE</td>
+                      <td>CONTATO@SERCONEO.COM.BR</td>
                       <td>04996791993</td>
-                      <td>razaosozial</td>
+                      <td>SERCONEO CONTABILIDADE</td>
                       <td>HORTOLANDIA</td>
-                      <td>SP</td>       
+                      <td>SP</td>   
+                      <td><a href="#"><span class="label label-warning">EDITAR</span></a></td>   
                     </tr>
                   </table>
                 </div><!-- /.box-body -->
