@@ -105,11 +105,11 @@
 			</div>					
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"]; ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCRSOCIAL"]; ?>" />
 			</div>
 			</div>
 		</div>
@@ -119,15 +119,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 1;">
 			<label>E-MAIL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="email"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="email"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCEMAIL"]; ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCTEL1"]; ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" name="telefone2"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" name="telefone2"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCTEL2"]; ?>" />
 			</div>
 			</div>
 		</div>
@@ -137,12 +137,12 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 6; min-width: 150px;">
 			<label>ENDEREÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCADDRESS"]; ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
 			<select class="form-control" name="estado" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>
+                	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCSTATE"]; ?>" disabled selected>Selecione...</option>
                 	<option value="AC">AC</option>
                 	<option value="AL">AL</option>
                 	<option value="AP">AP</option>
@@ -174,7 +174,7 @@
 			</div>
 			<div style="flex: 4; min-width: 150px;">
 			<label>CIDADE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="cidade"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="cidade"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCITY"]; ?>" />
 			</div>
 			</div>
 		</div>
@@ -184,7 +184,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
+                      	<textarea class="form-control"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]; ?>" name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
                     	</div>
 			</div>
 		</div>
