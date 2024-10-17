@@ -11,8 +11,18 @@
   }
 */
   $siteAdmin = new SITE_ADMIN();
-  $siteAdmin->getClientInfo();
-  
+
+if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
+{
+  $search = $_GET['table_search'];
+  $siteAdmin->getClientInfoBySearch($search);
+}
+else
+  {
+    $siteAdmin->getClientInfo();
+  }
+
+
 // Configurações de Paginação
 $registrosPorPagina = 50;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
@@ -24,7 +34,6 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorPagina);
-
 
 ?>
 

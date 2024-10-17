@@ -100,6 +100,39 @@
             }          
         }
 
+        public function getClientInfoBySearch($search)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT CLI_IDCLIENT,                                  
+                                CLI_NMNAME, 
+                                CLI_DCEMAIL,
+                                CLI_DCCPFCNPJ,
+                                CLI_DCRSOCIAL,
+                                CLI_DCCITY,
+                                CLI_DCSTATE,
+                                CLI_STSTATUSPENDING,
+                                CLI_STSTATUS
+                                FROM CLI_CLIENT
+                                WHERE CLI_NMNAME LIKE :search
+                                OR CLI_DCEMAIL LIKE :search
+                                OR CLI_DCCPFCNPJ LIKE :search
+                                OR CLI_DCCITY LIKE :search
+                                OR CLI_DCSTATE LIKE :search
+                                OR CLI_STSTATUSPENDING LIKE :search
+                                OR CLI_STSTATUS LIKE :search";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_CLIENTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getClientInfoById($ID)
         {          
                 // Verifica se a conexão já foi estabelecida
