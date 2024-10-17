@@ -14,7 +14,7 @@ $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getClientInfo();
 
 // Configurações de Paginação
-$registrosPorPagina = 2;
+$registrosPorPagina = 50;
 $paginaAtual = isset($_GET["pagina"]) ? (int) $_GET["pagina"] : 1;
 $totalRegistros = count($siteAdmin->ARRAY_CLIENTINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);

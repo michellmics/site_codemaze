@@ -90,7 +90,7 @@
                                 CLI_STSTATUSPENDING,
                                 CLI_STSTATUS
                                 FROM CLI_CLIENT
-                                ORDER BY CLI_NMNAME ASC";
+                                ORDER BY CLI_STSTATUSPENDING ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
