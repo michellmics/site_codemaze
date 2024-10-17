@@ -15,7 +15,7 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient);
 
-  var_dump($siteAdmin->ARRAY_CLIENTINFO["CLI_NMNAME"]);
+  var_dump($siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"]);
   die();
   
 
