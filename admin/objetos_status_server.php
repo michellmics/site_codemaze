@@ -27,7 +27,7 @@
 	        curl_setopt($curl, CURLOPT_URL, $query);
                         
 	        $result = json_decode(curl_exec($curl));
-	        $result = json_encode($result)  
+	        $result = json_encode($result);  
 	        curl_close($curl);
                     
                 return $result;
