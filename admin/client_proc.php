@@ -34,8 +34,7 @@ class registerClient extends SITE_ADMIN
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
-                   // echo "Cliente cadastrado com sucesso."; 
-                    echo $result;
+                    echo "Cliente cadastrado com sucesso."; 
                      
                 }
         } catch (PDOException $e) {  
