@@ -146,7 +146,7 @@
 			<label>ESTADO</label>
 			<input type="text" style="width: 40%;" maxlength="2" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
-			<div style="flex: 3; min-width: 150px;">
+			<div style="flex: 5; min-width: 150px;">
 			<label>CIDADE</label>
 			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
