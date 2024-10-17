@@ -60,6 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $observacoes = $_POST['observacoes'];
     $cep = $_POST['cep'];
     $registerClient = new registerClient();
-    $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
+    $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$cep);
 }
 ?>
