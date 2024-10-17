@@ -70,18 +70,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
+  
+  
+<!-- ######################################################## --> 
+<!-- Main MENU content  INI --> 
+<!-- ######################################################## -->  
   <body class="skin-blue">
     <div class="wrapper">
-      
-     
-
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-left: 100px; background-color: white;">
+      <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
         <!-- Content Header (Page header) -->
-      
-        <!-- ######################################################## --> 
-        <!-- Main MENU content  INI --> 
-        <!-- ######################################################## --> 
         <section class="content">
           <div class="row">
             <!-- left column -->
@@ -118,20 +116,15 @@
               </div>
               <!-- FIM BLOCO 1 -->
 
-              
+            </div><!-- /.box-body -->
+          </div><!-- /.box -->
+        </div><!--/.col (right) -->
+      </div>   <!-- /.row -->
+    </section><!-- /.content -->
 
-                    
-
-
-
-                 
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!--/.col (right) -->
-          </div>   <!-- /.row -->
-        </section><!-- /.content -->
-
-
+<!-- ######################################################## --> 
+<!-- Main MENU content  INI --> 
+<!-- ######################################################## -->
 
 
 
