@@ -88,7 +88,7 @@ if (!isset($_POST['id'])) {
               <!-- general form elements -->
 
               <!-- INI BLOCO 1 -->
-              <div class="box box-primary">
+              <div class="box box-primary"> 
                 <div class="box-header">
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
