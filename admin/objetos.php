@@ -80,15 +80,7 @@
                 if(!$this->pdo){$this->conexao();}
             
             try{           
-                $sql = "SELECT CLI_IDCLIENT,                                  
-                                CLI_NMNAME, 
-                                CLI_DCEMAIL,
-                                CLI_DCCPFCNPJ,
-                                CLI_DCRSOCIAL,
-                                CLI_DCCITY,
-                                CLI_DCSTATE,
-                                CLI_STSTATUSPENDING,
-                                CLI_STSTATUS
+                $sql = "SELECT *
                                 FROM CLI_CLIENT
                                 ORDER BY CLI_STSTATUSPENDING ASC";
 
