@@ -109,7 +109,7 @@
 			</div>					
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="18" class="form-control" placeholder="Enter ..." name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
@@ -123,7 +123,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 1;">
 			<label>E-MAIL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  pattern="[0-9\-]+" placeholder="Enter ..."  name="email"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="email"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
@@ -131,7 +131,7 @@
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..." name="telefone2"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" name="telefone2"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
