@@ -90,7 +90,7 @@
               <!-- INI BLOCO 1 -->
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title">Cadastro de Clientes</h3>
+                  <h3 class="box-title">Cadastro de Produtos e Serviços</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form role="form" method="POST" action="descricoes.php">
