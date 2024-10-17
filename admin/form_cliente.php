@@ -138,15 +138,15 @@
         	<!-- ENDEREÇO  ESTADO  CIDADE -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div style="flex: 1;">
+			<div style="flex: 2;">
 			<label>ENDEREÇO</label>
 			<input type="text" style="width: 170%;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
-			<div style="flex: 2;">
+			<div style="flex: 1; min-width: 80px;">
 			<label>ESTADO</label>
 			<input type="text" style="width: 30%;" maxlength="2" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
-			<div style="flex: 1;">
+			<div style="flex: 2; min-width: 150px;">
 			<label>CIDADE</label>
 			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
