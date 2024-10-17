@@ -190,7 +190,7 @@ if (!isset($_POST['id'])) {
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>OBSERVAÇÕES</label>
                       	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="250" rows="5" >
-                        <? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]; ?>
+                        <? echo trim($siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]); ?>
                         </textarea>
                     	</div>
 			</div>
