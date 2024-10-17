@@ -9,7 +9,7 @@ var_dump($result);
 $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4"; // Substituir pelo token gerado
 $username = "inartcom"; // Usuário da conta cPanel
 
-$url = "http://r210us.hmservers.net:2087/G3T065AP3A15QZ22FKYSF7NO30Y5ROT4/json-api/accountsummary?user=inartcom";
+$url = "http://localhost:2087/G3T065AP3A15QZ22FKYSF7NO30Y5ROT4/json-api/accountsummary?user=inartcom";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
