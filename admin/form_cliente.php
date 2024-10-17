@@ -99,18 +99,31 @@
                   <input type="hidden" name="id" value="1"/>
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
-                  <!-- textarea -->
+                  <!-- Nome  CPF/CNPJ-->
                   <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-                  <label>Nome</label>
+                    <label>NOME</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
                     <label>CPF/CNPJ</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
+                    <label>RAZÃO SOCIAL</label>
+                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/
                   </div>
-                  <!-- textarea -->
-                  <div class="form-group">
-                      <label>Descrição</label>
-                      <textarea class="form-control" rows="10" placeholder="Enter ..." name="descricao"><?php echo $descEmpresa_1["PAD_DCTEXT"]; ?></textarea>
+                  <!-- Nome  CPF/CNPJ-->
+
+                  <!-- Nome  CPF/CNPJ-->
+                  <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+                    <label>E-MAIL</label>
+                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
+                    <label>TELEFONE 1</label>
+                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
+                    <label>TELEFONE 2</label>
+                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
                   </div>
+                  <!-- Nome  CPF/CNPJ-->
+
+
+
+                  
                   <div class="box-footer">
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">Salvar</button>
                   </div>
