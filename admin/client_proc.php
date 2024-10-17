@@ -28,14 +28,13 @@ class registerClient extends SITE_ADMIN
                 exit();
             } else 
                 {
-                    echo "teste222";
                     $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
                     echo $result;
                     $SUBJECT = "Cadastro de novo cliente";
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
-                    echo "Cliente cadastrado com sucesso."; 
+                   // echo "Cliente cadastrado com sucesso."; 
 
                     
                      
@@ -62,6 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $observacoes = $_POST['observacoes'];
     $registerClient = new registerClient();
     $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
-    echo $result;
+   // echo $result;
 }
 ?>
