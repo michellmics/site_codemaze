@@ -111,7 +111,7 @@
                         <td><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td><a href="#"><span class="label label-warning">EDITAR</span></a></td>
+                        <td><a href="register.php" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                     </tr>
                     <?php endforeach; ?>   
                     </tr>
