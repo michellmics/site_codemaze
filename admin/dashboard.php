@@ -419,6 +419,26 @@
         </div>
       </section>
 
+      <footer class="footer">
+  <div class="container text-center">
+    <p>Sistema do Michell</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+</style>
+
       <!--##############################################################-->
       <!-- Main content FRAME END-->
       <!--##############################################################-->
