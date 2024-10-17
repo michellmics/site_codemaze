@@ -13,7 +13,7 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfo();
   
-  var_dump($siteAdmin->RRAY_CLIENTINFO);
+  var_dump($siteAdmin->ARRAY_CLIENTINFO);
   die();
 
 
