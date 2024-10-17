@@ -11,6 +11,12 @@
   }
 */
 
+if (!isset($_POST['id'])) {
+  $id = htmlspecialchars($_POST['id']);
+  echo "ID do cliente não recebido";
+  die();
+}
+
   $idCLient = $_POST['id'];
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient);
