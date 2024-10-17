@@ -231,7 +231,7 @@
             }
             $CLI_STSTATUS = "ATIVO";
             $CLI_DTDATA_INSERT = date('Y-m-d H:i:s'); // Formato: 2024-10-17 08:30:00
-            $CLI_STSTATUSPENDING = "Pago";
+            $CLI_STSTATUSPENDING = "Recebido";
             try {
                 $sql = "INSERT INTO CLI_CLIENT 
                         (CLI_NMNAME, CLI_DCCPFCNPJ, CLI_DCRSOCIAL, CLI_DCEMAIL, CLI_DCTEL1, CLI_DCTEL2, CLI_DCADDRESS, CLI_DCSTATE, CLI_DCCITY, CLI_DCOBS, CLI_DTDATA_INSERT, CLI_STSTATUSPENDING, CLI_STSTATUS) 
