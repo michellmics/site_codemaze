@@ -99,7 +99,7 @@
                   <input type="hidden" name="id" value="1"/>
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
-                  <!-- Nome  CPF/CNPJ-->
+                <!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
                 <div style="width: 100%; margin-bottom: 20px;">
                   <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
                     <label>NOME</label>
@@ -110,21 +110,20 @@
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/
                   </div>
                 </div>
-                  <!-- Nome  CPF/CNPJ-->
+                <!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
                  
-                  <!-- Nome  CPF/CNPJ-->
+                <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
                 <div style="width: 100%; margin-bottom: 20px;">
                   <div class="form-group" style="display: flex; gap: 10px; align-items: center; margin-top: 20px;">
-                    <label>NOME</label>
+                    <label>E-MAIL</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>CPF/CNPJ</label>
+                    <label>TELEFONE 1</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>RAZÃO SOCIAL</label>
+                    <label>TELEFONE 2</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/
                   </div>
                 </div>
-
-                  <!-- Nome  CPF/CNPJ-->
+                 <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
 
 
 
