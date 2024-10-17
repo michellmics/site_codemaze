@@ -22,7 +22,7 @@ if (!isset($_POST['id'])) {
   $siteAdmin->getClientInfoById($idCLient); 
 
   var_dump($siteAdmin->ARRAY_CLIENTINFO);
-  die();
+  //die();
 
   /*
     //salvar formularios
