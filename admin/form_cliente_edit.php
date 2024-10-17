@@ -106,7 +106,7 @@
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
-			<label>NOME ( ID:  )</label>
+			<label>NOME ( ID: <? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"] ?> )</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
