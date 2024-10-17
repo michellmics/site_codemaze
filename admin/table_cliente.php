@@ -101,9 +101,9 @@
                     <tr>
                         <td><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
                         <td>
-                            <span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Pendente' ? 'label-danger' : 'label-success' ?>">
+                            <a href="#"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Pendente' ? 'label-danger' : 'label-success' ?>">
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
-                            </span>
+                            </span></>
                         </td>
                         <td><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
