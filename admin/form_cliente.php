@@ -76,7 +76,7 @@
      
 
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-right: 0px; background-color: white;">
+      <div class="content-wrapper" style="margin-left: 100px; background-color: white;">
         <!-- Content Header (Page header) -->
       
         <!-- ######################################################## --> 
