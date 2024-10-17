@@ -4,25 +4,37 @@ include_once 'objetos_status_server.php'; // Carrega a classe de conexão e obje
 //$swhmcpanel_info = new WHMCPANEL_STATUS();
 //$result = $swhmcpanel_info->getDiscUsage();
 
-var_dump($result);
 
-$token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4"; // Substituir pelo token gerado
-$username = "inartcom"; // Usuário da conta cPanel
 
-$url = "http://localhost:2087/G3T065AP3A15QZ22FKYSF7NO30Y5ROT4/json-api/accountsummary?user=inartcom";
 
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Evita problemas com SSL
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Authorization: cpanel $username:$token"
-]);
+$user = "root";
+    $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
 
-$response = curl_exec($ch);
-curl_close($ch);
+    $query = "https://127.0.0.1:2087/json-api/listaccts?api.version=1";
 
-var_dump($response);
-die();
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER,0);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
+
+    $header[0] = "Authorization: whm $user:$token";
+    curl_setopt($curl,CURLOPT_HTTPHEADER,$header);
+    curl_setopt($curl, CURLOPT_URL, $query);
+
+    $result = curl_exec($curl);
+
+    $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+    if ($http_status != 200) {
+        echo "[!] Error: " . $http_status . " returned\n";
+    } else {
+        $json = json_decode($result);
+        echo "[+] Current cPanel users on the system:\n";
+        foreach ($json->{'data'}->{'acct'} as $userdetails) {
+            echo "\t" . $userdetails->{'user'} . "\n";
+        }
+    }
+
+    curl_close($curl);
 
 
 ?>
