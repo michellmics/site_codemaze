@@ -99,42 +99,42 @@
                   <input type="hidden" name="id" value="1"/>
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
-        <!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->          
-				<div style="width: 100%; margin-bottom: 20px;">
-				<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-					<div style="flex: 1;">
-					<label>Título 1</label>
-					<input type="text" class="form-control" placeholder="Enter ..." name="titulo_1" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
-					</div>					
-					<div style="flex: 1;">
-					<label>Título 2</label>
-					<input type="text" class="form-control" placeholder="Enter ..." name="titulo_2" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
-					</div>					
-					<div style="flex: 1;">
-					<label>Título 3</label>
-					<input type="text" class="form-control" placeholder="Enter ..." name="titulo_3" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
-					</div>
-				</div>
-				</div>
-				<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
-        <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
-				<div style="width: 100%; margin-bottom: 20px;">
-					<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-					<div style="flex: 1;">
-					<label>Descrição 1</label>
-					<input type="text" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-					</div>
-					<div style="flex: 1;">
-					<label>Descrição 2</label>
-					<input type="text" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-					</div>
-					<div style="flex: 1;">
-					<label>Descrição 3</label>
-					<input type="text" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-					</div>
-				</div>
-				</div>
-        <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
+        	<!-- NOME  CPF/CNPJ RAZÃO SOCIAL-->          
+		<div style="width: 100%; margin-bottom: 20px;">
+		<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+			<div style="flex: 1;">
+			<label>NOME</label>
+			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_1" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			</div>					
+			<div style="flex: 1;">
+			<label>CPF/CNPJ</label>
+			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_2" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			</div>					
+			<div style="flex: 1;">
+			<label>RAZÃO SOCIAL</label>
+			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_3" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			</div>
+		</div>
+		</div>
+		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
+        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
+		<div style="width: 100%; margin-bottom: 20px;">
+			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+			<div style="flex: 1;">
+			<label>E-MAIL</label>
+			<input type="text" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			</div>
+			<div style="flex: 1;">
+			<label>TELEFONE 1</label>
+			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			</div>
+			<div style="flex: 1;">
+			<label>TELEFONE 2</label>
+			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			</div>
+		</div>
+		</div>
+        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
 
 
 
