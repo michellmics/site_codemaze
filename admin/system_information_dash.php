@@ -11,9 +11,9 @@ include_once 'objetos_status_server.php'; // Carrega a classe de conexão e obje
 
 
 $user = "inartcom";
-    $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT40---4443";
+    $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
 
-    $query = "https://127.0.0.1:2087/json-api/listaccts?api.version=1&searchtype=domain";
+    $query = "https://127.0.0.1:2087/json-api/getbandwidthdata?api.version=1&month=7&year=2024";
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
