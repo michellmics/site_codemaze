@@ -410,9 +410,9 @@
 
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.0
+          <b>Versão</b> 1.0
         </div>
-        <strong>Todos os direitos reservados &copy; 2024 <a href="#">Agência Codemaze</a>.</strong>
+        <strong>Desenvolvido pela <a href="#">Agência Codemaze</a>.</strong>Todos os direitos reservados.
       </footer>
 
     </div><!-- ./wrapper -->
