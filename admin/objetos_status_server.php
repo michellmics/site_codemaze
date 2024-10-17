@@ -1,32 +1,37 @@
 <?php
 
-	class WHMCPANEL_STATUS
+    class WHMCPANEL_STATUS
 	{
         //declaração de variaveis 
-        public $token = "L12T1GH3J4AD272VVQMX3WTN6RAUBRAZ";
-        
+        private $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
+        private $user = "codemaze";
+                
 
-
-        public function getDiscUsage()
-		{		
-			
-            $url = "https://r210us.hmservers.net:2087/json-api/getdiskusage?api.version=1";
-            
-
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Evita problemas com SSL
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Authorization: inartcom:$this->token"
-            ]);
-
-            $response = curl_exec($ch);
-            curl_close($ch);
-
-            return $response;           
-
-		}	
-	
+        public function getInfoWebServer($apiApp)
+	{
+	        $user = "codemaze";
+                        
+	        $query = "https://127.0.0.1:2087/json-api/$apiApp?api.version=1";
+	        //$query = "https://127.0.0.1:2087/json-api/loadavg?api.version=1";
+	        //$query = "https://127.0.0.1:2087/json-api/get_disk_usage?api.version=1";
+	        //$query = "https://127.0.0.1:2087/json-api/showbw?api.version=2";
+                        
+                        
+	        $curl = curl_init();
+	        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
+	        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER,0);
+	        curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);
+                        
+	        $header[0] = "Authorization: whm $this->user:$this->token";
+	        curl_setopt($curl,CURLOPT_HTTPHEADER,$header);
+	        curl_setopt($curl, CURLOPT_URL, $query);
+                        
+	        $result = json_decode(curl_exec($curl));
+	        $result = json_encode($result)  
+	        curl_close($curl);
+                    
+                return $result;
+        }		
 
     }
 
