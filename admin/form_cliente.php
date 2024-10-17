@@ -83,7 +83,7 @@
         <section class="content">
           <div class="row">
             <!-- left column -->
-            <div class="col-md-6">
+            <div class="col-md-12">
               <!-- general form elements -->
 
               <!-- INI BLOCO 1 -->
@@ -103,6 +103,7 @@
                   <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
                     <label>Título</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
+                    <label>Título</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
                   </div>
                   <!-- textarea -->
