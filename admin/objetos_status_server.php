@@ -7,7 +7,7 @@
         
 
 
-        public function getDiscUsage($stmtFunction)
+        public function getDiscUsage()
 		{		
 			
             $url = "https://localhost:2087/json-api/getdiskusage?api.version=1";
@@ -29,3 +29,5 @@
 	
 
     }
+
+?>
