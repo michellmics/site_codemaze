@@ -1,6 +1,6 @@
 <?php
-  include_once 'objetos.php'; 
-  /*
+include_once "objetos.php";
+/*
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
  
@@ -10,12 +10,12 @@
     exit();
   }
 */
-  $siteAdmin = new SITE_ADMIN();
-  $siteAdmin->getClientInfo();
-  
+$siteAdmin = new SITE_ADMIN();
+$siteAdmin->getClientInfo();
+
 // Configurações de Paginação
 $registrosPorPagina = 2;
-$paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+$paginaAtual = isset($_GET["pagina"]) ? (int) $_GET["pagina"] : 1;
 $totalRegistros = count($siteAdmin->ARRAY_CLIENTINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
@@ -23,11 +23,11 @@ $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorPagina);
-
-
-
-
+$dadosPagina = array_slice(
+    $siteAdmin->ARRAY_CLIENTINFO,
+    $inicio,
+    $registrosPorPagina
+);
 ?>
 
 
@@ -110,19 +110,41 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                     <tr>
                     <?php foreach ($dadosPagina as $client): ?>
                     <tr>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_IDCLIENT"]
+                        ) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;">
-                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Em aberto' ? 'label-danger' : 'label-success' ?>">
-                                <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
+                            <a href="#" target="_self"><span class="label <?= $client[
+                                "CLI_STSTATUSPENDING"
+                            ] == "Em aberto"
+                                ? "label-danger"
+                                : "label-success" ?>">
+                                <?= htmlspecialchars(
+                                    $client["CLI_STSTATUSPENDING"]
+                                ) ?>
                             </span>
                         </td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_NMNAME"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_DCEMAIL"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_DCCPFCNPJ"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_DCRSOCIAL"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_DCCITY"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_DCSTATE"]
+                        ) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars(
+                            $client["CLI_STSTATUS"]
+                        ) ?></td>                        
                         <td style="text-transform: uppercase; font-size: 12px;"><a href="#" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                     </tr>
                     <?php endforeach; ?>   
@@ -133,16 +155,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
             </div>
           </div>
 
-<!-- Paginação -->
-<nav aria-label="Page navigation" class="text-center">
-            <ul class="pagination">
-                <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
-                    <li class="<?= ($i == $paginaAtual) ? 'active' : '' ?>">
-                        <a href="?pagina=<?= $i ?>"><?= $i ?></a>
-                    </li>
-                <?php endfor; ?>
-            </ul>
-        </nav>
+          <!-- Paginação -->
+          <nav aria-label="Page navigation" class="text-center">
+              <ul class="pagination">
+                  <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                      <li class="<?= $i == $paginaAtual ? "active" : "" ?>">
+                          <a href="?pagina=<?= $i ?>"><?= $i ?></a>
+                      </li>
+                  <?php endfor; ?>
+              </ul>
+          </nav>
 
 
 
