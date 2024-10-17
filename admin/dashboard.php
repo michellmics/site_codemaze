@@ -325,38 +325,28 @@
             <li class="header"><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Formulários</span>
+                <i class="fa fa-edit"></i> <span>Menu</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('form_cliente.php')"><i class="fa fa-circle-o"></i> Cadastro de clientes</a></li>
+                <li><a href="#" onclick="loadInIframe('form_cliente.php')"><i class="fa fa-circle-o"></i> Cadastro de Clientes</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de Produtos</a></li>
-                <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+                
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista de Clientes</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista Produtos</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de OS</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista de OS</a></li>
+                <li><a href="#" onclick="loadInIframe('register.php')"><i class="fa fa-circle-o"></i> Cadastro de Usuários ADM</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Configurações</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
+
               </ul> 
             </li>
             
             
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Imagens do Site</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="pages/mailbox/mailbox.html">
-                <i class="fa fa-envelope"></i> <span>Abertura de chamado</span>
-                <small class="label pull-right bg-yellow">12</small>
-              </a>
-            </li>
+            
             
           </ul>
         </section>
