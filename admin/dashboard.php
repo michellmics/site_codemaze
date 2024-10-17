@@ -330,7 +330,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="#" onclick="loadInIframe('form_cliente.php')"><i class="fa fa-circle-o"></i> Cadastro de clientes</a></li>
-                <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de Produtos e Serviços</a></li>
                 <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
               </ul> 
             </li>
