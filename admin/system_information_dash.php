@@ -17,7 +17,7 @@ $user = "inartcom";
     //$query = "https://127.0.0.1:2087/json-api/loadavg?api.version=1";
     //$query = "https://127.0.0.1:2087/json-api/get_disk_usage?api.version=1";
     //$query = "https://127.0.0.1:2087/json-api/showbw?api.version=2";
-    $query = "https://127.0.0.1:2087/json-api/showstatus?api.version=2";
+    $query = "https://127.0.0.1:2087/json-api/listemail?api.version=2";
 
 
 
