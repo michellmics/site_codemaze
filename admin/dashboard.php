@@ -433,7 +433,7 @@
 
       <footer class="footer">
         <div class="container text-left">
-        <a href="https://codemaze.com.br" target="_blank">Site Codemaze</a>
+        <p><a href="https://codemaze.com.br" target="_blank">Site Codemaze</a></p>
         </div>
     </footer>
 
