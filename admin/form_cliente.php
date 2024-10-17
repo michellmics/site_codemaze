@@ -119,7 +119,7 @@
 		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
         	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
 		<div style="width: 100%; margin-bottom: 20px;">
-			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 1;">
 			<label>E-MAIL</label>
 			<input type="text" style="width: 100%;" maxlength="50" class="form-control" placeholder="Enter ..."  name="email" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
@@ -137,7 +137,7 @@
         	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
         	<!-- ENDEREÇO  ESTADO  CIDADE -->          
 		<div style="width: 100%; margin-bottom: 20px;">
-			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 1;">
 			<label>ENDEREÇO</label>
 			<input type="text" style="width: 170%;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
