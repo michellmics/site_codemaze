@@ -191,7 +191,9 @@ if (!isset($_POST['id'])) {
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]; ?>" name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
+                      	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="250" rows="5" >
+                        <? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]; ?>
+                        </textarea>
                     	</div>
 			</div>
 
