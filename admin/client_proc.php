@@ -29,14 +29,14 @@ class registerClient extends SITE_ADMIN
             } else 
                 {
                     $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
-                    
+                    echo $result;
                     $SUBJECT = "Cadastro de novo cliente";
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
                     echo "Cliente cadastrado com sucesso."; 
 
-                    return $result;
+                    
                      
                 }
         } catch (PDOException $e) {  
