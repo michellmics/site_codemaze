@@ -105,7 +105,7 @@ if (!isset($_POST['id'])) {
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>ID</label>
-			<input type="text" style="width: 300%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>" />
+			<input type="text" style="width: 30%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>" />
 			</div>			
       <div style="flex: 1;">
 			<label>NOME</label>
