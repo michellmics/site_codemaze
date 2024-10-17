@@ -76,20 +76,12 @@
      
 
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
+      <div class="content-wrapper" style="margin-right: 0px; background-color: white;">
         <!-- Content Header (Page header) -->
       
-
-        <!-- Main content  INI -->
-        
-
-       
-
-
-
-
-
-
+        <!-- ######################################################## --> 
+        <!-- Main MENU content  INI --> 
+        <!-- ######################################################## --> 
         <section class="content">
           <div class="row">
             <!-- left column -->
