@@ -3,7 +3,7 @@
 	class WHMCPANEL_STATUS
 	{
         //declaração de variaveis 
-        public $token = "4ZES9HJF02MGINRLER9IBHB4J1W36B8A";
+        public $token = "L12T1GH3J4AD272VVQMX3WTN6RAUBRAZ";
         
 
 
@@ -11,13 +11,13 @@
 		{		
 			
             $url = "https://r210us.hmservers.net:2087/json-api/getdiskusage?api.version=1";
-            $token = "4ZES9HJF02MGINRLER9IBHB4J1W36B8A";
+            
 
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Evita problemas com SSL
             curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Authorization: inartcom:$token"
+    "Authorization: inartcom:$this->token"
             ]);
 
             $response = curl_exec($ch);
