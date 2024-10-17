@@ -16,7 +16,7 @@ class registerClient extends SITE_ADMIN
                 
             $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id);
             var_dump($result);
-            echo "Cliente editado com sucesso.";                  
+            echo "Cliente editado com sucessow.";                  
                      
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
