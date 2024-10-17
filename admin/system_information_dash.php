@@ -15,7 +15,7 @@ $user = "inartcom";
 
     //$query = "https://127.0.0.1:2087/json-api/gethostname?api.version=1";
     //$query = "https://127.0.0.1:2087/json-api/loadavg?api.version=1";
-    $query = "https://127.0.0.1:2087/json-api/servicestatus?api.version=1";
+    $query = "https://127.0.0.1:2087/json-api/get_disk_usage?api.version=1";
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
