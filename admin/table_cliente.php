@@ -13,8 +13,7 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfo();
   
-  var_dump($siteAdmin->ARRAY_CLIENTINFO);
-  die();
+
 
 
 
