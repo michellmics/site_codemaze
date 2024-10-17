@@ -100,20 +100,20 @@
                     <tr>
                     <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $client): ?>
                     <tr>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;">
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;">
                             <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Em aberto' ? 'label-danger' : 'label-success' ?>">
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
                             </span>
                         </td> 
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 11px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 11px;"><a href="#" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="#" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                     </tr>
                     <?php endforeach; ?>   
                     </tr>
