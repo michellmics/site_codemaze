@@ -19,7 +19,7 @@ if (!isset($_POST['id'])) {
 
   $idCLient = $_POST['id'];
   $siteAdmin = new SITE_ADMIN();
-  $siteAdmin->getClientInfoById($idCLient);
+  $siteAdmin->getClientInfoById($idCLient); 
 
   /*
     //salvar formularios
