@@ -104,47 +104,11 @@
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
-			<label>NOME</label>
+			<label>NOME DO PRODUTO OU SERVIÇO ( ID:  )</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
-			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
-			</div>					
-			<div style="flex: 1;">
-			<label>RAZÃO SOCIAL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
-			</div>
-			</div>
-		</div>
-		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
-        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
-		<div style="width: 100%; margin-bottom: 20px;">
-			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div style="flex: 1;">
-			<label>E-MAIL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="email"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-			</div>
-			<div style="flex: 1;">
-			<label>TELEFONE 1</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-			</div>
-			<div style="flex: 1;">
-			<label>TELEFONE 2</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" name="telefone2"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-			</div>
-			</div>
-		</div>
-        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
-        	<!-- ENDEREÇO  ESTADO  CIDADE -->          
-		<div style="width: 100%; margin-bottom: 20px;">
-			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div style="flex: 6; min-width: 150px;">
-			<label>ENDEREÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-			</div>
-			<div style="flex: 2; min-width: 100px;">
-			<label>ESTADO</label>
+			<label>TIPO</label>
 			<select class="form-control" name="estado" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>
                 	<option value="AC">AC</option>
@@ -157,32 +121,16 @@
                 	<option value="ES">ES</option>
                 	<option value="GO">GO</option>
                 	<option value="MA">MA</option>
-                	<option value="MT">MT</option>
-                	<option value="MS">MS</option>
-                	<option value="MG">MG</option>
-                	<option value="PA">PA</option>
-                	<option value="PB">PB</option>
-                	<option value="PR">PR</option>
-                	<option value="PE">PE</option>
-                	<option value="PI">PI</option>
-                	<option value="RJ">RJ</option>
-                	<option value="RN">RN</option>
-                	<option value="RS">RS</option>
-                	<option value="RO">RO</option>
-                	<option value="RR">RR</option>
-                	<option value="SC">SC</option>
-                	<option value="SP">SP</option>
-                	<option value="SE">SE</option>
-                	<option value="TO">TO</option>
-            		</select>
 			</div>
-			<div style="flex: 4; min-width: 150px;">
-			<label>CIDADE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="descricao_3"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			</select>
+			<div style="flex: 1;">
+			<label>INVESTIMENTO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
-        	<!-- ENDEREÇO  ESTADO  CIDADE-->
+		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
+        	
 		<!-- OBSERVAÇÕES-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
