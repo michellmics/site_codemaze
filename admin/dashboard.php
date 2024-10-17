@@ -432,13 +432,14 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="container text-left">
-        <a href="https://codemaze.com.br" target="_blank">-&nbsp;&nbsp;&nbsp;&nbsp;CODEMAZE</a>&nbsp;&nbsp;Intranet versão 1.0 &nbsp;&nbsp;&nbsp;&nbsp;Login Realizado ás <? echo date('d/m/Y H:i:s'); ?> &nbsp;&nbsp;&nbsp;Nível de acesso: <font color="#39ed3f"><? echo $_SESSION['user_nivelacesso']; ?></font>
-        
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.0
         </div>
+        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
       </footer>
 
+      
 
 
       <!--##############################################################-->
