@@ -156,9 +156,9 @@
 		<!-- OBSERVAÇÕES-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div class="form-group" style="width: 70%;">
+			<div class="form-group" style="flex: 0 0 70%;">
                       	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  maxlength="200" rows="5" placeholder="Enter ..."></textarea>
+                      	<textarea class="form-control"  style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
                     	</div>
 			</div>
 		</div>
