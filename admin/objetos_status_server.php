@@ -10,7 +10,7 @@
         public function getDiscUsage()
 		{		
 			
-            $url = "https://localhost:2087/json-api/getdiskusage?api.version=1";
+            $url = "https://r210us.hmservers.net:2087/json-api/getdiskusage?api.version=1";
             $token = "4ZES9HJF02MGINRLER9IBHB4J1W36B8A";
 
             $ch = curl_init($url);
