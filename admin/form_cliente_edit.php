@@ -12,8 +12,10 @@
 */
 
   $idCLient = $_POST['id'];
-  $siteAdmin = new SITE_ADMIN();
-  $descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
+
+  echo $idCLient;
+  //$siteAdmin = new SITE_ADMIN();
+  //$descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
 
   
  
