@@ -6,7 +6,7 @@ include_once 'objetos_status_server.php'; // Carrega a classe de conexão e obje
 
 var_dump($result);
 
-$token = "L12T1GH3J4AD272VVQMX3WTN6RAUBRAZ"; // Substituir pelo token gerado
+$token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4"; // Substituir pelo token gerado
 $username = "inartcom"; // Usuário da conta cPanel
 
 $url = "https://r210us.hmservers.net:2083/cpsess1234567890/execute/DomainInfo/get_ip_address";
