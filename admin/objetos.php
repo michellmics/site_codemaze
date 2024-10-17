@@ -11,6 +11,7 @@
         public $ARRAY_USERINFO;
         public $ARRAY_USERINFOBYID;
         public $ARRAY_DESCEMPRESAINFO;
+        public $ARRAY_CLIENTINFO;
         
 
 
@@ -71,6 +72,31 @@
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  
             return $result;              
+        }
+
+        public function getClientInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT CLI_IDCLIENT,                                  
+                                CLI_NMNAME, 
+                                CLI_DCEMAIL,
+                                CLI_DCCPFCNPJ,
+                                CLI_DCRSOCIAL,
+                                CLI_DCCITY,
+                                CLI_DCSTATE,
+                                CLI_STSTATUSPENDING
+                                FROM CLI_CLIENT
+                                ORDER BY CLI_NMNAME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_CLIENTINFO = $stmt->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
         }
 
         public function getUserInfo()
@@ -204,11 +230,11 @@
             }
 
             $CLI_DTDATA_INSERT = date('Y-m-d H:i:s'); // Formato: 2024-10-17 08:30:00
-        
+            $CLI_STSTATUSPENDING = "0"
             try {
                 $sql = "INSERT INTO CLI_CLIENT 
-                        (CLI_NMNAME, CLI_DCCPFCNPJ, CLI_DCRSOCIAL, CLI_DCEMAIL, CLI_DCTEL1, CLI_DCTEL2, CLI_DCADDRESS, CLI_DCSTATE, CLI_DCCITY, CLI_DCOBS, CLI_DTDATA_INSERT) 
-                        VALUES (:CLI_NMNAME, :CLI_DCCPFCNPJ, :CLI_DCRSOCIAL, :CLI_DCEMAIL, :CLI_DCTEL1, :CLI_DCTEL2, :CLI_DCADDRESS, :CLI_DCSTATE, :CLI_DCCITY, :CLI_DCOBS, :CLI_DTDATA_INSERT)";
+                        (CLI_NMNAME, CLI_DCCPFCNPJ, CLI_DCRSOCIAL, CLI_DCEMAIL, CLI_DCTEL1, CLI_DCTEL2, CLI_DCADDRESS, CLI_DCSTATE, CLI_DCCITY, CLI_DCOBS, CLI_DTDATA_INSERT, CLI_STSTATUSPENDING) 
+                        VALUES (:CLI_NMNAME, :CLI_DCCPFCNPJ, :CLI_DCRSOCIAL, :CLI_DCEMAIL, :CLI_DCTEL1, :CLI_DCTEL2, :CLI_DCADDRESS, :CLI_DCSTATE, :CLI_DCCITY, :CLI_DCOBS, :CLI_DTDATA_INSERT, :CLI_STSTATUSPENDING)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -224,6 +250,8 @@
                 $stmt->bindParam(':CLI_DCCITY', $CLI_DCCITY, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCOBS', $CLI_DCOBS, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DTDATA_INSERT', $CLI_DTDATA_INSERT, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_STSTATUSPENDING', $CLI_STSTATUSPENDING, PDO::PARAM_STR);
+                
             
                 $stmt->execute();
             

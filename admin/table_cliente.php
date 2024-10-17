@@ -11,16 +11,11 @@
   }
 */
   $siteAdmin = new SITE_ADMIN();
-  $descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
-  $descEmpresa_2 = $siteAdmin->getDescInfo("EMPRESA",2);
+  $descClient = $siteAdmin->getClientInfo();
 
-  $descServicos_1 = $siteAdmin->getDescInfo("SERVICOS",1);
-  $descServicos_2 = $siteAdmin->getDescInfo("SERVICOS",2);
-  $descServicos_3 = $siteAdmin->getDescInfo("SERVICOS",3);
-  $descServicos_4 = $siteAdmin->getDescInfo("SERVICOS",4);
-  $descServicos_5 = $siteAdmin->getDescInfo("SERVICOS",5);
-  $descServicos_6 = $siteAdmin->getDescInfo("SERVICOS",6);
-  $descServicos_7 = $siteAdmin->getDescInfo("SERVICOS",7);
+  var_dump($descClient);
+  die();
+
 
 
 
@@ -80,7 +75,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Responsive Hover Table</h3>
+                  <h3 class="box-title">Lista de CLientes</h3>
                   <div class="box-tools">
                     <div class="input-group">
                       <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
