@@ -10,7 +10,7 @@
         public function getInfoWebServer($apiApp)
 	{                       
 	        //$query = "https://127.0.0.1:2087/json-api/$apiApp?api.version=1";
-	        $query = "https://127.0.0.1:2087/json-api/listaccts?api.version=1&searchtype=status&suspended=1";
+	        $query = "https://127.0.0.1:2087/json-api/listaccts?api.version=1&searchtype=status&suspended=0";
                 
                  
                         
