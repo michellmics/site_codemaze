@@ -1,4 +1,7 @@
 <?php
+
+header("Content-Type: application/json");
+
 include_once 'objetos_status_server.php'; // Carrega a classe de conexão e objetos
 
 //$swhmcpanel_info = new WHMCPANEL_STATUS();
@@ -21,12 +24,12 @@ $user = "inartcom";
     curl_setopt($curl,CURLOPT_HTTPHEADER,$header);
     curl_setopt($curl, CURLOPT_URL, $query);
 
-    $result = curl_exec($curl);
+    $result = json_encode(curl_exec($curl));
 
     
     curl_close($curl);
 
-    var_dump($result);
+   echo $result;
 
 
 ?>
