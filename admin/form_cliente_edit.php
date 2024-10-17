@@ -15,14 +15,8 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient);
 
-  var_dump($siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"]);
-  die();
-  
 
-
-  
  
-
   /*
     //salvar formularios
     if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
