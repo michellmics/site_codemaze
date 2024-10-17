@@ -98,15 +98,23 @@
                       <th>ESTADO</th>                      
                     </tr>
                     <tr>
-                      <td>183</td>
-                      <td><span class="label label-success">Sem Pendencias</span></td>
-                      <td>SERCONEO CONTABILIDADE</td>
-                      <td>CONTATO@SERCONEO.COM.BR</td>
-                      <td>04996791993</td>
-                      <td>SERCONEO CONTABILIDADE</td>
-                      <td>HORTOLANDIA</td>
-                      <td>SP</td>   
-                      <td><a href="#"><span class="label label-warning">EDITAR</span></a></td>   
+                    <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $client): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
+                        <td>
+                            <span class="label <?= $client['CLI_STSTATUSPENDING'] == '0' ? 'label-success' : 'label-danger' ?>">
+                                <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
+                            </span>
+                        </td>
+                        <td><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
+                        <td><a href="#"><span class="label label-warning">EDITAR</span></a></td>
+                    </tr>
+                    <?php endforeach; ?>   
                     </tr>
                   </table>
                 </div><!-- /.box-body -->
