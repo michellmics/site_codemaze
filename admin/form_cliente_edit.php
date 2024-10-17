@@ -146,7 +146,7 @@ if (!isset($_POST['id'])) {
 			</div>
       <div style="flex: 2; min-width: 150px;">
 			<label>CEP</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
