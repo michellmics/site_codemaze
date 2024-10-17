@@ -140,6 +140,10 @@
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 6; min-width: 150px;">
+			<label>CEP</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			</div>
+      <div style="flex: 6; min-width: 150px;">
 			<label>ENDEREÇO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>

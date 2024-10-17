@@ -88,7 +88,8 @@
                                 CLI_DCCITY,
                                 CLI_DCSTATE,
                                 CLI_STSTATUSPENDING,
-                                CLI_STSTATUS
+                                CLI_STSTATUS,
+                                CLI_DCCEP
                                 FROM CLI_CLIENT
                                 ORDER BY CLI_STSTATUSPENDING ASC";
 
@@ -244,7 +245,7 @@
             }
         }
 
-        public function updateClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $CLI_STSTATUS, $ID)
+        public function updateClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $CLI_STSTATUS, $ID, $CLI_DCCEP)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -263,7 +264,8 @@
                         CLI_DCSTATE = :CLI_DCSTATE,
                         CLI_DCCITY = :CLI_DCCITY,
                         CLI_DCOBS = :CLI_DCOBS,
-                        CLI_STSTATUS = :CLI_STSTATUS
+                        CLI_STSTATUS = :CLI_STSTATUS,
+                        CLI_DCCEP = :CLI_DCCEP
                         WHERE CLI_IDCLIENT = :CLI_IDCLIENT";
                         
                 $stmt = $this->pdo->prepare($sql);
@@ -281,6 +283,7 @@
                 $stmt->bindParam(':CLI_DCOBS', $CLI_DCOBS, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_IDCLIENT', $ID, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCCEP', $CLI_DCCEP, PDO::PARAM_STR);
                 
                 $stmt->execute();
             
@@ -322,7 +325,7 @@
             }
         }
 
-        public function insertClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS)
+        public function insertClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $CLI_DCCEP)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -333,8 +336,8 @@
             $CLI_STSTATUSPENDING = "Recebido";
             try {
                 $sql = "INSERT INTO CLI_CLIENT 
-                        (CLI_NMNAME, CLI_DCCPFCNPJ, CLI_DCRSOCIAL, CLI_DCEMAIL, CLI_DCTEL1, CLI_DCTEL2, CLI_DCADDRESS, CLI_DCSTATE, CLI_DCCITY, CLI_DCOBS, CLI_DTDATA_INSERT, CLI_STSTATUSPENDING, CLI_STSTATUS) 
-                        VALUES (:CLI_NMNAME, :CLI_DCCPFCNPJ, :CLI_DCRSOCIAL, :CLI_DCEMAIL, :CLI_DCTEL1, :CLI_DCTEL2, :CLI_DCADDRESS, :CLI_DCSTATE, :CLI_DCCITY, :CLI_DCOBS, :CLI_DTDATA_INSERT, :CLI_STSTATUSPENDING, :CLI_STSTATUS)";
+                        (CLI_NMNAME, CLI_DCCPFCNPJ, CLI_DCRSOCIAL, CLI_DCEMAIL, CLI_DCTEL1, CLI_DCTEL2, CLI_DCADDRESS, CLI_DCSTATE, CLI_DCCITY, CLI_DCOBS, CLI_DTDATA_INSERT, CLI_STSTATUSPENDING, CLI_STSTATUS, CLI_DCCEP) 
+                        VALUES (:CLI_NMNAME, :CLI_DCCPFCNPJ, :CLI_DCRSOCIAL, :CLI_DCEMAIL, :CLI_DCTEL1, :CLI_DCTEL2, :CLI_DCADDRESS, :CLI_DCSTATE, :CLI_DCCITY, :CLI_DCOBS, :CLI_DTDATA_INSERT, :CLI_STSTATUSPENDING, :CLI_STSTATUS, :CLI_DCCEP)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -352,6 +355,7 @@
                 $stmt->bindParam(':CLI_DTDATA_INSERT', $CLI_DTDATA_INSERT, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_STSTATUSPENDING', $CLI_STSTATUSPENDING, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCCEP', $CLI_DCCEP, PDO::PARAM_STR);
                 
                 $stmt->execute();
             
