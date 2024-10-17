@@ -29,7 +29,7 @@ class registerClient extends SITE_ADMIN
             } else 
                 {
                     $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
-                    echo $result;
+                    var_dump($result);
                     $SUBJECT = "Cadastro de novo cliente";
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
