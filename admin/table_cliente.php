@@ -11,9 +11,9 @@
   }
 */
   $siteAdmin = new SITE_ADMIN();
-  $descClient = $siteAdmin->getClientInfo();
-
-  var_dump($descClient);
+  $siteAdmin->getClientInfo();
+  
+  var_dump($siteAdmin->RRAY_CLIENTINFO);
   die();
 
 
