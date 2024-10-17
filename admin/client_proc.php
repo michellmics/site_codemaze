@@ -48,8 +48,7 @@ class registerClient extends SITE_ADMIN
 // Processa a requisição POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
-    echo "teste";
-    die();
+    
     $nome = $_POST['nome'];
     $cpfcnpj = $_POST['cpfcnpj'];
     $razaosocial = $_POST['razaosocial'];
@@ -60,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
     $observacoes = $_POST['observacoes'];
-    $registerClient = new rregisterClient();
+    $registerClient = new registerClient();
     $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
     echo $result;
 }
