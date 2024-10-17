@@ -145,7 +145,7 @@ if (!isset($_POST['id'])) {
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCADDRESS"]; ?>" />
 			</div>
       <div style="flex: 2; min-width: 150px;">
-			<label>CE P</label>
+			<label>CEP</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
