@@ -11,10 +11,10 @@ $discUsageServer = $swhmcpanel_info->getInfoWebServer("get_disk_usage");
 $bandWithServer = $swhmcpanel_info->getInfoWebServer("showbw");
 
 
-echo $hostNameServer;
+//echo $hostNameServer;
 echo $loadAvgServer;
-echo $discUsageServer;
-echo $bandWithServer;
+//echo $discUsageServer;
+//echo $bandWithServer;
 
 
 
