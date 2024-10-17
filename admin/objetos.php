@@ -203,7 +203,7 @@
                 $this->conexao();
             }
 
-            //$CLI_DTDATA_INSERT = date('Y-m-d H:i:s'); // Formato: 2024-10-17 08:30:00
+            $CLI_DTDATA_INSERT = date('Y-m-d H:i:s'); // Formato: 2024-10-17 08:30:00
         
             try {
                 $sql = "INSERT INTO CLI_CLIENT 
