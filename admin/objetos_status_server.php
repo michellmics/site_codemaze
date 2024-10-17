@@ -4,13 +4,11 @@
 	{
         //declaração de variaveis 
         private $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
-        private $user = "codemaze";
+        private $user = "inartcom";
                 
 
         public function getInfoWebServer($apiApp)
-	{
-	        $user = "codemaze";
-                        
+	{                       
 	        $query = "https://127.0.0.1:2087/json-api/$apiApp?api.version=1";
 	        //$query = "https://127.0.0.1:2087/json-api/loadavg?api.version=1";
 	        //$query = "https://127.0.0.1:2087/json-api/get_disk_usage?api.version=1";
