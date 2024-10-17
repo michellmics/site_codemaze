@@ -101,9 +101,9 @@
                   
                   <!-- textarea -->
                   <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-                  <label>Título 1</label>
+                  <label>Nome</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>Título</label>
+                    <label>CPF/CNPJ</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
                   </div>
                   <!-- textarea -->
