@@ -83,7 +83,7 @@
         <section class="content">
           <div class="row">
             <!-- left column -->
-            
+            <div class="col-md-6">
               <!-- general form elements -->
 
               <!-- INI BLOCO 1 -->
@@ -116,8 +116,8 @@
               </div>
               <!-- FIM BLOCO 1 -->
 
-            
-          </div><!-- /.box -->
+              </div><!-- /.box-body -->
+            </div><!-- /.box -->
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
