@@ -28,6 +28,7 @@ class registerClient extends SITE_ADMIN
                 exit();
             } else 
                 {
+                    echo "teste222";
                     $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
                     echo $result;
                     $SUBJECT = "Cadastro de novo cliente";
