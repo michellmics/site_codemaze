@@ -9,12 +9,14 @@ $hostNameServer = $swhmcpanel_info->getInfoWebServer("gethostname");
 $loadAvgServer = $swhmcpanel_info->getInfoWebServer("loadavg");
 $discUsageServer = $swhmcpanel_info->getInfoWebServer("get_disk_usage");
 $bandWithServer = $swhmcpanel_info->getInfoWebServer("showbw");
+$listacctsServer = $swhmcpanel_info->getInfoWebServer("listaccts");
 
 
 //echo $hostNameServer;
 //echo $loadAvgServer;
-echo $discUsageServer;
+//echo $discUsageServer;
 //echo $bandWithServer;
+//echo $listacctsServer;
 
 
 

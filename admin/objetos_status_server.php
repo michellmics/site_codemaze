@@ -3,7 +3,7 @@
     class WHMCPANEL_STATUS
 	{
         //declaração de variaveis 
-        private $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
+        private $token = "111G3T065AP3A15QZ22FKYSF7NO30Y5ROT4222";
         private $user = "inartcom";
                 
 
