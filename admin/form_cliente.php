@@ -158,7 +158,7 @@
 
                   
                   <div class="box-footer">
-                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">Salvar</button>
+                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
