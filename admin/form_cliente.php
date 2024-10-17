@@ -126,35 +126,7 @@
               </div>
               <!-- FIM BLOCO 1 -->
 
-              <!-- INI BLOCO 2 -->
-              <div class="box box-primary">
-                <div class="box-header">
-                  <h3 class="box-title">Página - Empresa</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <form role="form" method="POST" action="descricoes.php">
-
-                  <!-- CAMPOS COMO VARIAVEIS -->
-                  <input type="hidden" name="page" value="EMPRESA"/>
-                  <input type="hidden" name="id" value="2"/>
-                  <!-- CAMPOS COMO VARIAVEIS -->
-
-                  <!-- textarea -->
-                  <div class="form-group">
-                    <label>Título</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>"/>
-                  </div>
-                  <!-- textarea -->
-                  <div class="form-group">
-                      <label>Descrição</label>
-                      <textarea class="form-control" rows="10" placeholder="Enter ..." name="descricao"><?php echo $descEmpresa_2["PAD_DCTEXT"]; ?></textarea>
-                  </div>
-                  <div class="box-footer">
-                    <button type="submit" name="salvar_empresa_2" class="btn btn-primary">Salvar</button>
-                  </div>
-                </form>
-              </div>
-              <!-- FIM BLOCO 2 -->
+              
 
               <!-- Form Element sizes -->
               <div class="box box-success">
