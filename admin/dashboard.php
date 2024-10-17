@@ -83,7 +83,7 @@
       color: white;
       text-align: left;
       padding: 10px 0;
-      font-size: 16px;
+      font-size: 12px;
     }
   </style>
   
@@ -432,8 +432,8 @@
       </section>
 
       <footer class="footer">
-        <div class="container text-center">
-        <strong>Desenvolvido pela <a href="#">Agência Codemaze</a>.</strong>Todos os direitos reservados.
+        <div class="container text-left">
+        <a href="https://codemaze.com.br" target="_blank">Site Codemaze</a>
         </div>
     </footer>
 
