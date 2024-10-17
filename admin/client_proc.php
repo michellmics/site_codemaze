@@ -35,6 +35,8 @@ class registerClient extends SITE_ADMIN
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
                     echo "Cliente cadastrado com sucesso."; 
+
+                    return $result;
                      
                 }
         } catch (PDOException $e) {  
@@ -44,7 +46,8 @@ class registerClient extends SITE_ADMIN
 }
 
 // Processa a requisição POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
     $nome = $_POST['nome'];
     $cpfcnpj = $_POST['cpfcnpj'];
     $razaosocial = $_POST['razaosocial'];
@@ -56,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cidade = $_POST['cidade'];
     $observacoes = $_POST['observacoes'];
     $registerClient = new rregisterClient();
-    $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
+    $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes);
+    echo $result;
 }
 ?>
