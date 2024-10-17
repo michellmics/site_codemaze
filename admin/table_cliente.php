@@ -13,7 +13,17 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfo();
   
+// Configurações de Paginação
+$registrosPorPagina = 100;
+$paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+$totalRegistros = count($siteAdmin->ARRAY_CLIENTINFO);
+$totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
+// Determina o índice de início para a página atual
+$inicio = ($paginaAtual - 1) * $registrosPorPagina;
+
+// Divide o array para exibir apenas os registros da página atual
+$dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorPagina);
 
 
 
@@ -98,7 +108,7 @@
                       <th>STATUS</th>                      
                     </tr>
                     <tr>
-                    <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $client): ?>
+                    <?php foreach ($dadosPagina as $client): ?>
                     <tr>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;">
@@ -123,7 +133,16 @@
             </div>
           </div>
 
-
+<!-- Paginação -->
+<nav aria-label="Page navigation" class="text-center">
+            <ul class="pagination">
+                <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                    <li class="<?= ($i == $paginaAtual) ? 'active' : '' ?>">
+                        <a href="?pagina=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php endfor; ?>
+            </ul>
+        </nav>
 
 
 
