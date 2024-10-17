@@ -211,6 +211,55 @@
             }
         }
 
+        public function updateClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $ID, $CLI_STSTATUS)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+
+            try {
+                $sql = "UPDATE CLI_CLIENT
+                        SET CLI_NMNAME = :CLI_NMNAME,
+                        CLI_DCCPFCNPJ = :CLI_DCCPFCNPJ,
+                        CLI_DCRSOCIAL = :CLI_DCRSOCIAL,
+                        CLI_DCEMAIL = :CLI_DCEMAIL,
+                        CLI_DCTEL1 = :CLI_DCTEL1,
+                        CLI_DCTEL2 = :CLI_DCTEL2,
+                        CLI_DCADDRESS = :CLI_DCADDRESS,
+                        CLI_DCSTATE = :CLI_DCSTATE,
+                        CLI_DCCITY = :CLI_DCCITY,
+                        CLI_DCOBS = :CLI_DCOBS,
+                        CLI_STSTATUSPENDING = :CLI_STSTATUSPENDING,
+                        CLI_STSTATUS = :CLI_STSTATUS
+                        WHERE CLI_IDCLIENT = :CLI_IDCLIENT = $ID";
+                        
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':CLI_NMNAME', $CLI_NMNAME, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCCPFCNPJ', $CLI_DCCPFCNPJ, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCRSOCIAL', $CLI_DCRSOCIAL, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCEMAIL', $CLI_DCEMAIL, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCTEL1', $CLI_DCTEL1, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCTEL2', $CLI_DCTEL2, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCADDRESS', $CLI_DCADDRESS, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCSTATE', $CLI_DCSTATE, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCCITY', $CLI_DCCITY, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCOBS', $CLI_DCOBS, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_STSTATUSPENDING', $CLI_STSTATUSPENDING, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
+                
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return ["success" => "Cliente inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA)
         {          
             // Verifica se a conexão já foi estabelecida

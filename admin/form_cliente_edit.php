@@ -93,7 +93,7 @@ if (!isset($_POST['id'])) {
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="client_proc.php">
+                <form role="form" method="POST" action="client_proc_edit.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -191,6 +191,16 @@ if (!isset($_POST['id'])) {
                       	<textarea class="form-control"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]; ?>" name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
                     	</div>
 			</div>
+
+      <div style="flex: 2; min-width: 100px;">
+			<label>STATUS</label>
+			<select class="form-control" name="status" style="width: 100%;">
+                	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?>"><? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?></option>
+                  <option value="AC">ATIVO</option>
+                	<option value="AL">INATIVO</option>
+      </select>
+			</div>
+
 		</div>
 		<!-- OBSERVAÇÕES-->
 			
