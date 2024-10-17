@@ -138,7 +138,7 @@
         	<!-- ENDEREÇO  ESTADO  CIDADE -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div style="flex: 2;">
+			<div style="flex: 4;">
 			<label>ENDEREÇO</label>
 			<input type="text" style="width: 100%;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
