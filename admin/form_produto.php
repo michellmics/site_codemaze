@@ -111,17 +111,11 @@
 			<label>TIPO</label>
 			<select class="form-control" name="estado" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>
-                	<option value="HOSTING STANDARD">HOSTING STANDARD</option>
-                	<option value="HOSTING BUSINESS">HOSTING BUSINESS</option>
-                	<option value="HOSTING PREMIUM">HOSTING PREMIUM</option>
-                	<option value="CONSULTORIA WEB">CONSULTORIA WEB</option>
-                	<option value="CONSULTORIA TI">CONSULTORIA TI</option>
+                	<option value="HOSTING STANDARD">HOSTING</option>
+                	<option value="CONSULTORIA WEB">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
-                	<option value="DESENVOLVIMENTO DE SITES">DESENVOLVIMENTO DE SITES</option>
+                	<option value="DESENVOLVIMENTO DE SITES">DESENVOLVIMENTO</option>
                 	<option value="GESTÃO DE MIDIA SOCIAL">GESTÃO DE MIDIA SOCIAL</option>
-                	<option value="GOOGLE ADS">GOOGLE ADS</option>
-                	<option value="FACEBOOK ADS AVULSO">FACEBOOK ADS AVULSO</option>
-			<option value="INSTAGRAM ADS AVULSO">INSTAGRAM ADS AVULSO</option>
 			</select>
 			</div>
 			
