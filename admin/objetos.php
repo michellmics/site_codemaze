@@ -230,9 +230,8 @@
                         CLI_DCSTATE = :CLI_DCSTATE,
                         CLI_DCCITY = :CLI_DCCITY,
                         CLI_DCOBS = :CLI_DCOBS,
-                        CLI_STSTATUSPENDING = :CLI_STSTATUSPENDING,
                         CLI_STSTATUS = :CLI_STSTATUS
-                        WHERE CLI_IDCLIENT = :CLI_IDCLIENT = $ID";
+                        WHERE CLI_IDCLIENT = :CLI_IDCLIENT";
                         
                 $stmt = $this->pdo->prepare($sql);
             
@@ -247,8 +246,8 @@
                 $stmt->bindParam(':CLI_DCSTATE', $CLI_DCSTATE, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCCITY', $CLI_DCCITY, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCOBS', $CLI_DCOBS, PDO::PARAM_STR);
-                $stmt->bindParam(':CLI_STSTATUSPENDING', $CLI_STSTATUSPENDING, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_IDCLIENT', $ID, PDO::PARAM_STR);
                 
                 $stmt->execute();
             
