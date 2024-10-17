@@ -21,12 +21,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 $response = curl_exec($ch);
 curl_close($ch);
 
-if ($response) {
-    $data = json_decode($response, true);
-    echo "Endereço IP: " . $data['data']['ip'] ?? 'Erro';
-} else {
-    echo "Falha na requisição.";
-}
+var_dump($response);
+die();
 
 
 ?>
