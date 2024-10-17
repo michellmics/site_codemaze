@@ -111,7 +111,7 @@
                   <!-- Nome  CPF/CNPJ-->
 
                   <!-- Nome  CPF/CNPJ-->
-                  <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+                  <div class="form-group" style="display: flex; gap: 10px; align-items: center; margin-top: 20px;">
                     <label>E-MAIL</label>
                     <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
                     <label>TELEFONE 1</label>
