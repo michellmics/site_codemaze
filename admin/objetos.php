@@ -238,7 +238,7 @@
         public function notifyEmail($SUBJECT, $MSG)
         {
             // Configurações do e-mail
-            $to = "faleconosco@codemaze.com.br"; 
+            $to = "suporte@codemaze.com.br"; 
             $subject = "ATENÇÃO: $SUBJECT";
             $body = "Nome: $MSG\n";
 
