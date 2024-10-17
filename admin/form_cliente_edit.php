@@ -12,10 +12,13 @@
 */
 
   $idCLient = $_POST['id'];
+  $siteAdmin = new SITE_ADMIN();
+  $siteAdmin->getClientInfoById($idCLient);
 
-  echo $idCLient;
-  //$siteAdmin = new SITE_ADMIN();
-  //$descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
+  var_dump($siteAdmin->ARRAY_CLIENTINFO);
+  die();
+  
+
 
   
  
