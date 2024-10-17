@@ -87,7 +87,8 @@
                                 CLI_DCRSOCIAL,
                                 CLI_DCCITY,
                                 CLI_DCSTATE,
-                                CLI_STSTATUSPENDING
+                                CLI_STSTATUSPENDING,
+                                CLI_STSTATUS
                                 FROM CLI_CLIENT
                                 ORDER BY CLI_NMNAME ASC";
 
