@@ -28,6 +28,7 @@ class LoginSystem extends SITE_ADMIN
                 $_SESSION['user_name'] = $user['USA_DCNOME'];
                 $_SESSION['user_email'] = $user['USA_DCEMAIL'];
                 $_SESSION['user_sexo'] = $user['USA_DCSEXO'];
+                $_SESSION['user_nivelacesso'] = $user['USA_DCNIVELDEACESSO'];
                 echo '<meta http-equiv="refresh" content="0;url=dashboard.php">'; // Redireciona após login bem-sucedido
                 exit();
             } else 
