@@ -9,7 +9,7 @@ var_dump($result);
 $token = "L12T1GH3J4AD272VVQMX3WTN6RAUBRAZ"; // Substituir pelo token gerado
 $username = "inartcom"; // Usuário da conta cPanel
 
-$url = "https://localhost:2083/cpsess1234567890/execute/DomainInfo/get_ip_address";
+$url = "https://r210us.hmservers.net:2083/cpsess1234567890/execute/DomainInfo/get_ip_address";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
