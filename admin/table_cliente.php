@@ -9,14 +9,14 @@
     header("Location: index.php");
     exit();
   }
-
+*/
   $siteAdmin = new SITE_ADMIN();
   $descClient = $siteAdmin->getClientInfo();
 
   var_dump($descClient);
   die();
 
-*/
+
 
 
 ?>
