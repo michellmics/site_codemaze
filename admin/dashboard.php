@@ -341,6 +341,10 @@
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
+                <li><a href="#" onclick="loadInIframe('https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui')"><i class="fa fa-circle-o"></i> Google Analytics</a></li>
+
+
+               
 
               </ul> 
             </li>
