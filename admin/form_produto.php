@@ -121,8 +121,9 @@
                 	<option value="ES">ES</option>
                 	<option value="GO">GO</option>
                 	<option value="MA">MA</option>
-			</div>
 			</select>
+			</div>
+			
 			<div style="flex: 1;">
 			<label>INVESTIMENTO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
