@@ -142,7 +142,7 @@
 			<label>ENDEREÇO</label>
 			<input type="text" style="width: 170%;" maxlength="150" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
-			<div style="flex: 1;">
+			<div style="flex: 2;">
 			<label>ESTADO</label>
 			<input type="text" style="width: 30%;" maxlength="2" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
