@@ -11,7 +11,7 @@ include_once 'objetos_status_server.php'; // Carrega a classe de conexão e obje
 
 
 $user = "inartcom";
-    $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT4";
+    $token = "G3T065AP3A15QZ22FKYSF7NO30Y5ROT40---4443";
 
     $query = "https://127.0.0.1:2087/json-api/listaccts?api.version=1&searchtype=domain";
 
@@ -25,6 +25,7 @@ $user = "inartcom";
     curl_setopt($curl, CURLOPT_URL, $query);
 
     $result = json_encode(curl_exec($curl));
+
 
     
     curl_close($curl);
