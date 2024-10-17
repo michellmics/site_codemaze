@@ -433,7 +433,7 @@
 
       <footer class="footer">
         <div class="container text-left">
-        <a href="https://codemaze.com.br" target="_blank">-&nbsp;&nbsp;&nbsp;&nbsp;Website Codemaze - Login Realizado as <? echo date('d/m/Y H:i:s'); ?></a>
+        <a href="https://codemaze.com.br" target="_blank">-&nbsp;&nbsp;&nbsp;&nbsp;Website Codemaze - Login Realizado ás <? echo date('d/m/Y H:i:s'); ?></a>
         </div>
     </footer>
 
