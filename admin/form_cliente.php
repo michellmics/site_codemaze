@@ -50,10 +50,7 @@
   <head>
     <meta charset="UTF-8">
     <title></title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
-	  
+  
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -130,7 +127,7 @@
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" pattern="[0-9\-]*" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefone1"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
@@ -197,12 +194,6 @@
 		</div>
 		<!-- OBSERVAÇÕES-->
 			
-                 <script>
-  $(document).ready(function() {
-    $("#telefone1").inputmask("9999-9999");
-  });
-</script>
-
 
 
                   
