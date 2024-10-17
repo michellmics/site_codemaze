@@ -79,9 +79,9 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      background-color: #222;
+      background-color: #222d32;
       color: white;
-      text-align: center;
+      text-align: left;
       padding: 10px 0;
       font-size: 16px;
     }
