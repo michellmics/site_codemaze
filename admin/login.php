@@ -15,7 +15,7 @@ class LoginSystem extends SITE_ADMIN
             }
 
             // Prepara a consulta SQL para verificar o usuário
-            $sql = "SELECT USA_IDUSERADMIN, USA_DCSENHA, USA_DCEMAIL, USA_DCNOME, USA_DCSEXO FROM USA_USERADMIN WHERE USA_DCEMAIL = :email";
+            $sql = "SELECT USA_IDUSERADMIN, USA_DCSENHA, USA_DCEMAIL, USA_DCNOME, USA_DCSEXO, USA_DCNIVELDEACESSO FROM USA_USERADMIN WHERE USA_DCEMAIL = :email";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();

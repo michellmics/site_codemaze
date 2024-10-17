@@ -24,10 +24,6 @@
         $imgProfile = "dist/img/avatar3.png";
       }
 
-      echo $_SESSION['user_id'];
-      echo "Level";
-      die();
-
 ?>
 
 
