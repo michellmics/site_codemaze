@@ -94,14 +94,15 @@
                       <th>CPF/CNPJ</th>
                       <th>RAZÃO SOCIAL</th>
                       <th>CIDADE</th>
-                      <th>ESTADO</th>                      
+                      <th>ESTADO</th> 
+                      <th>STATUS</th>                      
                     </tr>
                     <tr>
                     <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $client): ?>
                     <tr>
                         <td><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
                         <td>
-                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Pendente' ? 'label-danger' : 'label-success' ?>">
+                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Em aberto' ? 'label-danger' : 'label-success' ?>">
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
                             </span>
                         </td>
@@ -111,6 +112,7 @@
                         <td><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
+                        <td><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
                         <td><a href="#" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                     </tr>
                     <?php endforeach; ?>   
