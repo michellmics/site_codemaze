@@ -24,7 +24,7 @@ else
 
 
 // Configurações de Paginação
-$registrosPorPagina = 50;
+$registrosPorPagina = 10;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $totalRegistros = count($siteAdmin->ARRAY_CLIENTINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);

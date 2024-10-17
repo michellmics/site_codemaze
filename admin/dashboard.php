@@ -73,6 +73,18 @@
       margin: 0;
       padding: 0;
     }
+  
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 16px;
+    }
   </style>
   
   </head>
@@ -420,24 +432,12 @@
       </section>
 
       <footer class="footer">
-  <div class="container text-center">
-    <p>Sistema do Michell</p>
-  </div>
-</footer>
+        <div class="container text-center">
+        <strong>Desenvolvido pela <a href="#">Agência Codemaze</a>.</strong>Todos os direitos reservados.
+        </div>
+    </footer>
 
-<style>
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-  }
-</style>
+
 
       <!--##############################################################-->
       <!-- Main content FRAME END-->
@@ -446,13 +446,7 @@
 
       </div><!-- /.content-wrapper -->
 
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Versão</b> 1.0
-        </div>
-        <strong>Desenvolvido pela <a href="#">Agência Codemaze</a>.</strong>Todos os direitos reservados.
-      </footer>
-
+      
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.3 -->
