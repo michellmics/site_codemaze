@@ -21,7 +21,7 @@ if (!isset($_POST['id'])) {
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient);
 
-var_dum($siteAdmin->ARRAY_CLIENTINFO);
+var_dump($siteAdmin->ARRAY_CLIENTINFO);
 die();
  
   /*
