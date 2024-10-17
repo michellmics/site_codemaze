@@ -108,8 +108,9 @@
                       <td>John Doe</td>
                       <td>TESTE@TESTE.COM.BR</td>
                       <td>04996791993</td>
+                      <td>razaosozial</td>
                       <td>HORTOLANDIA</td>
-                      <td>SP</td>                      
+                      <td>SP</td>       
                     </tr>
                   </table>
                 </div><!-- /.box-body -->
