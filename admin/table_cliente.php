@@ -101,9 +101,9 @@
                     <tr>
                         <td><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
                         <td>
-                            <a href="#"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Pendente' ? 'label-danger' : 'label-success' ?>">
+                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Pendente' ? 'label-danger' : 'label-success' ?>">
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
-                            </span></>
+                            </span>
                         </td>
                         <td><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
@@ -111,7 +111,7 @@
                         <td><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td><a href="register.php" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td><a href="#" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                     </tr>
                     <?php endforeach; ?>   
                     </tr>
