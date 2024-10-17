@@ -100,25 +100,50 @@
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
                   <!-- Nome  CPF/CNPJ-->
-                  <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-                    <label>NOME</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>CPF/CNPJ</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>RAZÃO SOCIAL</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/
-                  </div>
-                  <!-- Nome  CPF/CNPJ-->
-                  <BR>
-                  <!-- Nome  CPF/CNPJ-->
-                  <div class="form-group" style="display: flex; gap: 10px; align-items: center; margin-top: 20px;">
-                    <label>NOME</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>CPF/CNPJ</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/>
-                    <label>RAZÃO SOCIAL</label>
-                    <input type="text" class="form-control" placeholder="Enter ..." name="titulo" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>"/
-                  </div>
+<div style="width: 100%; margin-bottom: 20px;">
+  <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+    <div style="flex: 1;">
+      <label>Título 1</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="titulo_1" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+    </div>
+
+    <div style="flex: 1;">
+      <label>Título 2</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="titulo_2" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+    </div>
+
+    <div style="flex: 1;">
+      <label>Título 3</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="titulo_3" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+    </div>
+  </div>
+</div>
+
+<div style="width: 100%; margin-bottom: 20px;">
+  <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+    <div style="flex: 1;">
+      <label>Descrição 1</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+    </div>
+
+    <div style="flex: 1;">
+      <label>Descrição 2</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+    </div>
+
+    <div style="flex: 1;">
+      <label>Descrição 3</label>
+      <input type="text" class="form-control" placeholder="Enter ..." 
+             name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+    </div>
+  </div>
+</div>
+
                   <!-- Nome  CPF/CNPJ-->
 
 
