@@ -48,6 +48,8 @@ class registerClient extends SITE_ADMIN
 // Processa a requisição POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
+    echo "teste";
+    die();
     $nome = $_POST['nome'];
     $cpfcnpj = $_POST['cpfcnpj'];
     $razaosocial = $_POST['razaosocial'];
