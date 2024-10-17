@@ -89,7 +89,7 @@
               <!-- INI BLOCO 1 -->
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title">Página - Empresa</h3>
+                  <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form role="form" method="POST" action="descricoes.php">
@@ -104,15 +104,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>NOME</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_1" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 80%;" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_2" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" class="form-control" placeholder="Enter ..." name="cpfcnpj" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="titulo_3" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" class="form-control" placeholder="Enter ..." name="razaosocial" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
@@ -122,15 +122,15 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>E-MAIL</label>
-			<input type="text" class="form-control" placeholder="Enter ..."  name="descricao_1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" class="form-control" placeholder="Enter ..."  name="email" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 1</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" class="form-control" placeholder="Enter ..." name="telefone1" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 1;">
 			<label>TELEFONE 2</label>
-			<input type="text" class="form-control" placeholder="Enter ..." name="descricao_3" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" class="form-control" placeholder="Enter ..." name="telefone2" value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			</div>
 		</div>
@@ -173,68 +173,6 @@
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Main content FIM -->
-
-      
 
     <!-- jQuery 2.1.3 -->
     <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
