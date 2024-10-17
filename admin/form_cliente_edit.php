@@ -21,9 +21,6 @@ if (!isset($_POST['id'])) {
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient);
 
-var_dump($siteAdmin->ARRAY_CLIENTINFO);
-die();
- 
   /*
     //salvar formularios
     if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
