@@ -367,6 +367,37 @@
             }
         }
 
+        public function insertProductInfo($PRS_NMNOME, $PRS_DCTIPO, $PRS_DCINVESTIMENTO, $PRS_STSTATUS, $PRS_DCDESCRICAO)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            
+            try {
+                $sql = "INSERT INTO PRS_PRODUTO_SERVICO 
+                        (PRS_NMNOME, PRS_DCTIPO, PRS_DCINVESTIMENTO, PRS_STSTATUS, PRS_DCDESCRICAO) 
+                        VALUES (:PRS_NMNOME, :PRS_DCTIPO, :PRS_DCINVESTIMENTO, :PRS_STSTATUS, :PRS_DCDESCRICAO)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':PRS_NMNOME', $PRS_NMNOME, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_DCTIPO', $PRS_DCTIPO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_DCINVESTIMENTO', $PRS_DCINVESTIMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_DCDESCRICAO', $PRS_DCDESCRICAO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_STSTATUS', $PRS_STSTATUS, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return ["success" => "Produto inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function notifyEmail($SUBJECT, $MSG)
         {
             // Configurações do e-mail

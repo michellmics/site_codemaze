@@ -93,7 +93,7 @@
                   <h3 class="box-title">Cadastro de Produtos e Serviços</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="descricoes.php">
+                <form role="form" method="POST" action="produto_proc.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
