@@ -93,9 +93,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Lista de Produtos</h3>
-                  <div class="box-tools">
+                  <div class="box-tools" style="margin-bottom: 20px;">
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
-                    <form method="GET" action="" style="display: flex;">
+                    
+                       <!-- Botão "Adicionar Produto" -->
+                      <button class="btn bg-navy btn-flat margin" onclick="window.location.href='form_produto.php';">
+                        ADICIONAR PRODUTO
+                      </button>
+
+                  
+                  <form method="GET" action="" style="display: flex;">
                         <input 
                             type="text" 
                             name="table_search" 
@@ -109,11 +116,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                         </div>
                     </form>
 
-                    <!-- Botão "Adicionar Produto" -->
-    <button class="btn bg-navy btn-flat margin" onclick="window.location.href='form_produto.php';">
-      ADICIONAR PRODUTO
-    </button>
-
+               
                   </div>
                   
 
