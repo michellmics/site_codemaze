@@ -127,8 +127,12 @@
 			
 			<div style="flex: 1;"> 
 			<label>INVESTIMENTO</label>
+      <div class="input-group">
+      <span class="input-group-text">R$</span>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
 			</div>
+      </div>
+      
       <div style="flex: 1;">
 			<label>STATUS</label>
 			<select class="form-control" name="status" style="width: 100%;">
