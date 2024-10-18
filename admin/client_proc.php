@@ -34,6 +34,11 @@ class registerClient extends SITE_ADMIN
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
                     echo "Cliente cadastrado com sucesso."; 
+                    
+                    sleep(5);
+
+                    header("Location: sucesso.php");
+                    exit(); // Garante que o script pare aqui
 
                     
                      
