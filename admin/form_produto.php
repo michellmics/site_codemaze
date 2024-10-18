@@ -92,7 +92,7 @@
                 	<option value="HOSTING STANDARD">HOSTING</option>
                 	<option value="CONSULTORIA WEB">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
-                	<option value="DESENVOLVIMENTO DE SITES">DESENVOLVIMENTO</option>
+                	<option value="DESENVOLVIMENTO">DESENVOLVIMENTO</option>
                 	<option value="GESTÃO DE MIDIA SOCIAL">GESTÃO DE MIDIA SOCIAL</option>
 			</select>
 			</div>     
