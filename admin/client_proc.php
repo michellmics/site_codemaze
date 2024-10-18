@@ -37,8 +37,8 @@ class registerClient extends SITE_ADMIN
                     
                     sleep(5);
 
-                    header("Location: sucesso.php");
-                    exit(); // Garante que o script pare aqui
+                    header("Location: table_cliente.php");
+                    //exit(); // Garante que o script pare aqui
 
                     
                      
