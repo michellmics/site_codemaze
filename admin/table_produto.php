@@ -146,7 +146,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                         
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCDESCRICAO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_STSTATUS']) ?></td>                       
-                        <td style="text-transform: uppercase; font-size: 12px;"><a href="#" onclick="document.getElementById('form-<?= $client['PRS_IDPRODUTO_SERVICO'] ?>').submit();" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="#" onclick="document.getElementById('form-<?= $client['PRS_IDPRODUTO_SERVICO'] ?>').submit();" target="_blank"><span class="label label-warning">EDITAR</span></a></td>
                         <!-- Formulário oculto para envio via post-->
                         <form id="form-<?= $product['PRS_IDPRODUTO_SERVICO'] ?>" action="form_produto.php" method="POST" style="display: none;">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($product['PRS_IDPRODUTO_SERVICO']) ?>">
