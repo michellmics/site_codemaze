@@ -105,11 +105,11 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>NOME DO PRODUTO OU SERVIÇO ( ID:  )</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
 			</div>					
 			<div style="flex: 1;">
 			<label>TIPO</label>
-			<select class="form-control" name="estado" style="width: 100%;">
+			<select class="form-control" name="tipo" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>
                 	<option value="HOSTING STANDARD">HOSTING</option>
                 	<option value="CONSULTORIA WEB">CONSULTORIA</option>
@@ -118,11 +118,17 @@
                 	<option value="GESTÃO DE MIDIA SOCIAL">GESTÃO DE MIDIA SOCIAL</option>
 			</select>
 			</div>
+
+      
 			
 			<div style="flex: 1;">
 			<label>INVESTIMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="investimento" />
 			</div>
+      <div style="flex: 1;">
+			<label>STATUS</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="status" />
+			</div>	
 			</div>
 		</div>
 		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
@@ -131,8 +137,8 @@
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
-                      	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
+                      	<label>DESCRIÇÃO</label>
+                      	<textarea class="form-control"  style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..." name="descricao"></textarea>
                     	</div>
 			</div>
 		</div>
