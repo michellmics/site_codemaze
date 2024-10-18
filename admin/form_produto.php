@@ -100,7 +100,7 @@
                   <input type="hidden" name="id" value="1"/>
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
-        	<!-- NOME  CPF/CNPJ RAZÃO SOCIAL-->          
+        	<!-- STATUS TIPO NOME -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
@@ -135,9 +135,9 @@
 			</div>	
 			</div>
 		</div>
-		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
+		<!-- STATUS TIPO NOME --> 
         	
-		<!-- OBSERVAÇÕES-->
+		<!-- DESCRICAO-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
@@ -146,7 +146,7 @@
                     	</div>
 			</div>
 		</div>
-		<!-- OBSERVAÇÕES-->
+		<!-- DESCRICAO-->
 			
 
 
