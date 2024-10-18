@@ -97,7 +97,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
                     
                        <!-- Botão "Adicionar Produto" -->
-                      <button class="btn bg-navy btn-flat margin" onclick="window.location.href='form_produto.php';">
+                      <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_produto.php';">
                         ADICIONAR PRODUTO
                       </button>
 
