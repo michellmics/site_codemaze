@@ -117,13 +117,11 @@
                 	<option value="DESENVOLVIMENTO DE SITES">DESENVOLVIMENTO</option>
                 	<option value="GESTÃO DE MIDIA SOCIAL">GESTÃO DE MIDIA SOCIAL</option>
 			</select>
-			</div>
-
-      
+			</div>     
 			
 			<div style="flex: 1;"> 
 			<label>INVESTIMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="investimento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
@@ -164,9 +162,21 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
 
+
+
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->
+<script>
+$(document).ready(function () {
+    $('#investimento').mask('000.000.000,00', { reverse: true });
+});
+
+$('form').on('submit', function () {
+    let valor = $('#investimento').val().replace(/\./g, '').replace(',', '.');
+    $('#investimento').val(valor);  // Altera o valor do input para decimal
+});
+</script>
 
     <!-- jQuery 2.1.3 -->
     <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
@@ -178,5 +188,7 @@
     <script src="dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js" type="text/javascript"></script>
+    <!-- jQuery Mask Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   </body>
 </html>
