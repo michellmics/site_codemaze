@@ -94,7 +94,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                 <div class="box-header">
                   <h3 class="box-title">Lista de Produtos</h3>
                   <div class="box-tools">
-                  <div class="input-group">                  
+                  <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
                     <form method="GET" action="" style="display: flex;">
                         <input 
                             type="text" 
@@ -113,7 +113,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
     <button class="btn bg-navy btn-flat margin" onclick="window.location.href='form_produto.php';">
       ADICIONAR PRODUTO
     </button>
-    
+
                   </div>
                   
 
