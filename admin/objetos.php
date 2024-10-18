@@ -145,6 +145,7 @@
                                 ORDER BY PRS_NMNOME ASC";
 
                 $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
                 $this->ARRAY_PRODUCTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
