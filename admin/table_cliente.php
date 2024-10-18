@@ -147,7 +147,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 12px;"><a href="#" onclick="document.getElementById('form-<?= $client['CLI_IDCLIENT'] ?>').submit();" target="_self"><span class="btn bg-navy margin">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="#" onclick="document.getElementById('form-<?= $client['CLI_IDCLIENT'] ?>').submit();" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                         <!-- Formulário oculto para envio via post-->
                         <form id="form-<?= $client['CLI_IDCLIENT'] ?>" action="form_cliente_edit.php" method="POST" style="display: none;">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($client['CLI_IDCLIENT']) ?>">
