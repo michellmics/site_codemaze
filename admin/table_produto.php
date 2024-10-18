@@ -16,6 +16,8 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 {
   $search = $_GET['table_search'];
   $siteAdmin->getProductInfoBySearch($search);
+  echo $search;
+  echo "-";
 }
 else
   {
