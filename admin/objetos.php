@@ -12,6 +12,7 @@
         public $ARRAY_USERINFOBYID;
         public $ARRAY_DESCEMPRESAINFO;
         public $ARRAY_CLIENTINFO;
+        public $ARRAY_PRODUCTINFO;
         
 
 
@@ -96,6 +97,56 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CLIENTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getProductInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT PRS_IDPRODUTO_SERVICO,                                  
+                                PRS_NMNOME, 
+                                PRS_DCTIPO,
+                                PRS_DCINVESTIMENTO,
+                                PRS_DCDESCRICAO,
+                                PRS_STSTATUS
+                                FROM PRS_PRODUTO_SERVICO
+                                ORDER BY PRS_NMNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PRODUCTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getProductInfoBySearch($search)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT PRS_IDPRODUTO_SERVICO,                                  
+                                PRS_NMNOME, 
+                                PRS_DCTIPO,
+                                PRS_DCINVESTIMENTO,
+                                PRS_DCDESCRICAO,
+                                PRS_STSTATUS
+                                FROM PRS_PRODUTO_SERVICO
+                                WHERE PRS_NMNOME LIKE :search
+                                OR PRS_DCTIPO LIKE :search
+                                OR PRS_DCDESCRICAO LIKE :search
+                                OR PRS_STSTATUS LIKE :search
+                                ORDER BY PRS_NMNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PRODUCTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
