@@ -351,11 +351,9 @@
                 <i class="fa fa-edit"></i> <span>Formularios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('form_cliente.php')"><i class="fa fa-circle-o"></i> Cadastro de Clientes</a></li>
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de Produtos</a></li>                
-                <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Lista de Clientes</a></li>
-                <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Lista Produtos</a></li>
+              <ul class="treeview-menu">               
+                <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Produtos</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Cadastro de OS</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista de OS</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
