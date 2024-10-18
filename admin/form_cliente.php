@@ -70,6 +70,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <!-- jQuery 2.1.3 -->
+    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+
   </head>
   
   
@@ -212,17 +216,6 @@
         <span id="popupMessage"></span>
         <button onclick="$('#popup').hide();">Fechar</button>
     </div>
-    
-                </form>
-              </div>
-              <!-- FIM BLOCO 1 -->
-
-              </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!--/.col (right) -->
-      </div>   <!-- /.row -->
-    </section><!-- /.content -->
-
 
     <script>
         $(document).ready(function() {
@@ -244,12 +237,24 @@
         });
     </script>
 
+                </form>
+              </div>
+              <!-- FIM BLOCO 1 -->
+
+              </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!--/.col (right) -->
+      </div>   <!-- /.row -->
+    </section><!-- /.content -->
+
+
+
+
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->
 
-    <!-- jQuery 2.1.3 -->
-    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+
     <!-- Bootstrap 3.3.2 JS -->
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- FastClick -->
