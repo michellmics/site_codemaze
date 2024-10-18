@@ -202,8 +202,17 @@
 
                   
                   <div class="box-footer">
-                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="submit" id="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
+
+                  <div id="message"></div>
+
+    <!-- Popup -->
+    <div id="popup" style="display:none; border: 1px solid #000; padding: 20px; background-color: #fff;">
+        <span id="popupMessage"></span>
+        <button onclick="$('#popup').hide();">Fechar</button>
+    </div>
+    
                 </form>
               </div>
               <!-- FIM BLOCO 1 -->
@@ -213,6 +222,27 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+
+    <script>
+        $(document).ready(function() {
+            $('#submit').click(function() {
+                $.ajax({
+                    url: 'client_proc.php', // URL do seu script PHP
+                    type: 'POST',
+                    data: { action: 'execute' }, // Dados que você pode passar para o script
+                    success: function(response) {
+                        $('#popupMessage').text(response);
+                        $('#popup').show(); // Abre o popup com a mensagem
+                    },
+                    error: function() {
+                        $('#popupMessage').text('Erro ao executar a ação.');
+                        $('#popup').show();
+                    }
+                });
+            });
+        });
+    </script>
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
