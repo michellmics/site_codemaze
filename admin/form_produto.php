@@ -11,36 +11,8 @@
   }
 */
   $siteAdmin = new SITE_ADMIN();
-  $descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
-  $descEmpresa_2 = $siteAdmin->getDescInfo("EMPRESA",2);
 
-  $descServicos_1 = $siteAdmin->getDescInfo("SERVICOS",1);
-  $descServicos_2 = $siteAdmin->getDescInfo("SERVICOS",2);
-  $descServicos_3 = $siteAdmin->getDescInfo("SERVICOS",3);
-  $descServicos_4 = $siteAdmin->getDescInfo("SERVICOS",4);
-  $descServicos_5 = $siteAdmin->getDescInfo("SERVICOS",5);
-  $descServicos_6 = $siteAdmin->getDescInfo("SERVICOS",6);
-  $descServicos_7 = $siteAdmin->getDescInfo("SERVICOS",7);
-
-    //salvar formularios
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
-    {
-      $titulo = $_POST['titulo'];      
-      $descricao = $_POST['descricao']; 
-      $id = $_POST['id'];
-      $page = $_POST['page'];
-
-      $result = $siteAdmin->updateDesc($titulo, $descricao, $id, $page);
-
-      if (isset($result['error'])) 
-      {
-        echo "<div class='alert alert-danger'>" . $result['error'] . "</div>";      
-      } 
-      else 
-        {
-          echo "<div class='alert alert-success'>" . $result['success'] . "</div> ";      
-        }
-    }
+  
 
 ?>
 
@@ -126,7 +98,7 @@
 			</div>     
 			
 			<div style="flex: 1;"> 
-			<label>INVESTIMENTO(R$)</label>
+			<label>VALOR(R$)</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
