@@ -127,7 +127,11 @@
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="status" />
+			<select class="form-control" name="status" style="width: 100%;">
+          <option value="" disabled selected>Selecione...</option>
+          <option value="ATIVO">ATIVO</option>
+          <option value="INATIVO">INATIVO</option>
+      </select>
 			</div>	
 			</div>
 		</div>
