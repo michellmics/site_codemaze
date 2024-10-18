@@ -106,6 +106,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                             value="<?php echo isset($_GET['table_search']) ? htmlspecialchars($_GET['table_search']) : ''; ?>" 
                         />
                         <div class="input-group-btn">
+                        <button class="btn bg-navy btn-flat margin">ADICIONAR PRODUTO</button>
                             <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
