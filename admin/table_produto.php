@@ -94,9 +94,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                 <div class="box-header">
                   <h3 class="box-title">Lista de Produtos</h3>
                   <div class="box-tools">
-                    
-                  <div class="input-group">
-                  <button class="btn bg-navy btn-flat margin">ADICIONAR PRODUTO</button>
+                  <button class="btn bg-navy btn-flat margin">ADICIONAR PRODUTO</button> 
+                  <div class="input-group">                  
                     <form method="GET" action="" style="display: flex;">
                         <input 
                             type="text" 
