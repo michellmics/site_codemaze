@@ -12,6 +12,7 @@
 */
   $siteAdmin = new SITE_ADMIN();
 
+  $id = $_GET['id'];;
   
 
   die();
