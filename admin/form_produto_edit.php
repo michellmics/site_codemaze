@@ -13,7 +13,7 @@
   $siteAdmin = new SITE_ADMIN();
 
   $id = $_GET['id'];;
-  
+  echo $id;
 
   die();
 
