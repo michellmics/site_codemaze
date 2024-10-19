@@ -22,27 +22,6 @@ if (!isset($_POST['id'])) {
   $siteAdmin->getClientInfoById($idCLient); 
 
 
-  /*
-    //salvar formularios
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
-    {
-      $titulo = $_POST['titulo'];      
-      $descricao = $_POST['descricao']; 
-      $id = $_POST['id'];
-      $page = $_POST['page'];
-
-      $result = $siteAdmin->updateDesc($titulo, $descricao, $id, $page);
-
-      if (isset($result['error'])) 
-      {
-        echo "<div class='alert alert-danger'>" . $result['error'] . "</div>";      
-      } 
-      else 
-        {
-          echo "<div class='alert alert-success'>" . $result['success'] . "</div> ";      
-        }
-    }
-*/
 ?>
 
 
