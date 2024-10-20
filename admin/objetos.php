@@ -394,8 +394,7 @@
 
                 $stmt->execute();
             
-                // Retorna uma mensagem de sucesso (opcional)
-                return ["success" => "Produto atualizado com sucesso. $PRS_NMNOME"];
+                return ["success" => "Produto atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
