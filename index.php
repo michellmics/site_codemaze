@@ -216,7 +216,7 @@
             </div><!-- end title -->
 
             <div class="row">
-                <div class="service-widget">
+                <div class="col-md-4 col-sm-6" >
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
@@ -228,7 +228,7 @@
                 </div>
                 <!-- end service -->
 
-                <div class="service-widget">
+                <div class="col-md-4 col-sm-6">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
@@ -240,7 +240,7 @@
                 </div>
                 <!-- end service -->
 
-                <div class="service-widget">
+                <div class="col-md-4 col-sm-6">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/observabilidade.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/observabilidade.jpg" alt="" class="img-responsive img-rounded">
@@ -252,7 +252,7 @@
                 </div>
                 <!-- end service -->
 
-                <div class="service-widget">
+                <div class="col-md-4 col-sm-6">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/desenvolvimentoSistemas.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/desenvolvimentoSistemas.jpg" alt="" class="img-responsive img-rounded">
