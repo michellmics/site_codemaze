@@ -352,7 +352,7 @@
                             <li>3 Subdominios</li>
                             <li>2 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Contratar </a>
+                        <a href="#contact" class="pricingTable-signup">CONTRATAR </a>
                     </div>
                 </div>
 
@@ -378,7 +378,7 @@
                             <li>5 Subdominios</li>
                             <li>5 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Contratar </a>
+                        <a href="#contact" class="pricingTable-signup">CONTRATAR </a>
                     </div>
                 </div>
 
@@ -404,7 +404,7 @@
                             <li>8 Subdominios</li>
                             <li>10 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Contratar </a>
+                        <a href="#contact" class="pricingTable-signup">CONTRATAR </a>
                     </div>
                 </div>
             </div><!-- end row -->
