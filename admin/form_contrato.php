@@ -85,8 +85,8 @@
 			<select name="cliente_id" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o cliente</option>
         <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
-            <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
-                <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
+            <option value="<?php echo htmlspecialchars($cliente[0]['CLI_IDCLIENT']); ?>">
+                <?php echo htmlspecialchars($cliente[0]['CLI_NMNAME']); ?>
             </option>
         <?php endforeach; ?>
     </select>
