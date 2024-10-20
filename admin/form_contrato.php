@@ -79,12 +79,12 @@
 			<label>NOME DO CLIENTE</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
 			</div>					
-			<div style="flex: 1; min-width: 350px;">
+			<div style="flex: 1; min-width: 300px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"   />
 			</div>	
       <div style="flex: 1; min-width: 100px;">
-			<label>PERÍDO COBRANÇA</label>
+			<label>TIPO COBRANÇA</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="cobranca"  />
 			</div>						
 			<div style="flex: 1;">
@@ -92,7 +92,7 @@
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"   />
 			</div>
       <div style="flex: 1;">
-			<label>NÚM. CONTRATO</label>
+			<label>N. CONTRATO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" />
 			</div>
 			</div>
