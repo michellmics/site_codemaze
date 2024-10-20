@@ -207,24 +207,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
-    <div class="container">
-    <div class="owl-services owl-carousel owl-theme">
-        <!-- Cada widget de serviço -->
-        <div class="service-widget">
-            <div class="post-media wow fadeIn">
-                <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius">
-                    <i class="flaticon-unlink"></i>
-                </a>
-                <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
-            </div>
-            <div class="service-dit">
-                <h3>Gestão de Mídia Social</h3>
-                <p>Impulsione sua marca nas redes sociais com nosso serviço de destaque em mídias sociais!</p>
-            </div>
-        </div>
-        <!-- Repita os demais serviços aqui -->
-    </div>
-</div>
+    
 
     <div id="services" class="parallax section lb">
         <div class="container">
