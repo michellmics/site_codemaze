@@ -78,13 +78,13 @@
 			<label>NÚM. CONTRATO</label>
 			<input type="text" style="width: 30%; text-transform: uppercase;" pattern="[0-9]*"  class="form-control" placeholder="0000" name="contrato" />
 			</div>					      
-      <div style="flex: 1; min-width: 200px;">
+      <div style="flex: 0 0 40%; gap: 10px;">
 			<label>NOME DO CLIENTE</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
-			<div style="flex: 1;">
-			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<div style="flex: 0 0 35%;">
+			<label>PRODUTO OU SERVIÇO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
