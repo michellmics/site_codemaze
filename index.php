@@ -323,6 +323,97 @@
     </div><!-- end section -->
 
 
+
+
+    <div id="about" class="section wb">
+        <div class="container">
+           <div class="row text-center">
+           <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+			
+			</div>
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- ini hospedagem planos -->
 
     <div id="hosting" class="section wb">
