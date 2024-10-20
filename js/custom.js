@@ -85,7 +85,7 @@
         nav: true,
         dots: false,
         autoplay: true,
-        autoplayTimeout: 5000, // Tempo entre slides (5 segundos)
+        autoplayTimeout: 8000, // Tempo entre slides (5 segundos)
         loop: true,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         mouseDrag: false,
