@@ -375,7 +375,7 @@
             
             try {
                 $sql = "UPDATE PRS_PRODUTO_SERVICO 
-                        SET PRS_NMNOME = :PRS_NMNOME,
+                        SET PRS_NMNOM = :PRS_NMNOME,
                         PRS_DCTIPO = :PRS_DCTIPO,
                         PRS_DCINVESTIMENTO = :PRS_DCINVESTIMENTO,
                         PRS_STSTATUS = :PRS_STSTATUS,
@@ -395,7 +395,7 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
-                return ["success" => "Produtok inserido com sucesso."];
+                return ["success" => "Produto atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
