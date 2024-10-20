@@ -208,7 +208,7 @@
     </div><!-- end section -->
 	
 
-    <div id="services" class="parallax section lb">
+    <div id="services" >
         <div class="container">
             <div class="section-title text-center">
                 <h3>Soluções & Consultoria</h3>
