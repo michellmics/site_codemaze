@@ -14,9 +14,14 @@
   $siteAdmin->getClientInfo();
   $siteAdmin->getProductInfo();
 
-  // Ordena o array de clientes em ordem alfabética pelo nome
+// Ordena o array de clientes em ordem alfabética pelo nome
 usort($siteAdmin->ARRAY_CLIENTINFO, function($a, $b) {
   return strcmp($a['CLI_NMNAME'], $b['CLI_NMNAME']);
+});
+
+// Ordena o array de produtos em ordem alfabética pelo nome
+usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
+  return strcmp($a['PRS_NMNOME'], $b['PRS_NMNOME']);
 });
 
 ?>
@@ -83,19 +88,26 @@ usort($siteAdmin->ARRAY_CLIENTINFO, function($a, $b) {
 			
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
-			<select name="cliente_id" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o cliente</option>
         <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
             <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
                 <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
             </option>
         <?php endforeach; ?>
-    </select>
-  </div>					
+      </select>
+      </div>					
 			<div style="flex: 1; min-width: 300px;">
 			<label>PRODUTO OU SERVIÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"   />
-			</div>	
+			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
+        <option value="" disabled selected>Selecione o produto</option>
+        <?php foreach ($siteAdmin->ARRAY_PRODUCTINFO as $produto): ?>
+            <option value="<?php echo htmlspecialchars($produto['PRS_IDPRODUTO_SERVICO']); ?>">
+                <?php echo htmlspecialchars($produto['PRS_NMNOME']); ?>
+            </option>
+        <?php endforeach; ?>
+      </select>
+      </div>				
       <div style="flex: 1; min-width: 100px;">
 			<label>TIPO COBRANÇA</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="cobranca"  />
