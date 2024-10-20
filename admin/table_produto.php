@@ -1,6 +1,6 @@
 <?php
   include_once 'objetos.php'; 
-  /*
+  
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
  
@@ -9,7 +9,7 @@
     header("Location: index.php");
     exit();
   }
-*/
+
   $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
