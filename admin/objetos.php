@@ -18,6 +18,16 @@
 
         function conexao()
         {
+            /*
+                load fiule config.cfg
+
+                [DATA DB]
+                host = localhost
+                dbname = dbname
+                user = dbuser
+                pass = dbpass
+            */
+
             $host = 'localhost';
             $dbname = 'codemaze_dbprod';
             $user = 'codemaze_dbprod';
