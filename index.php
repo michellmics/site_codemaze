@@ -416,7 +416,7 @@
 
     <div id="parceiros" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">
-            <hr class="hr1">
+           
 
             <div class="row logos">
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
