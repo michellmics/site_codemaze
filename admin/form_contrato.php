@@ -29,7 +29,7 @@ $timestamp = microtime(true);
 $numeroContrato = (int)($timestamp * 1000);
 $numeroContrato = $numeroContrato % 1000000;
 $numeroAleatorio = rand(1, 9);
-$numeroContrato = $numeroAleatorio . $numeroContrato;
+$numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
 
 ?>
