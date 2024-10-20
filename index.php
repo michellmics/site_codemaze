@@ -209,7 +209,7 @@
 	
     
 
-    <div id="services" class="parallax section lb">
+    <div id="services" class="section wb">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Soluções & Consultoria</h3>
