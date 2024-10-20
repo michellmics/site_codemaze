@@ -271,7 +271,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Observabilidade</h3>
-						<p>Quer melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade utilizando Splunk ou Grafana.</p>
+						<p>Precisa melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade de dados utilizando Splunk ou Grafana.</p>
 					</div>
                 </div>
                 <!-- end service -->
