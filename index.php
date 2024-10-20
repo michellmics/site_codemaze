@@ -216,7 +216,7 @@
                 <p class="lead">Conte com a Codemaze para soluções eficazes e consultoria de qualidade. Juntos, vamos transformar suas ideias em realidade.</p>
             </div><!-- end title -->
 
-            <div class="owl-services owl-carousel">
+            <div class="owl-services owl-carousel owl-theme">
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
