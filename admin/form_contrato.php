@@ -108,10 +108,10 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
         <?php endforeach; ?>
       </select>
       </div>				
-      <div style="flex: 1; min-width: 100px;">
+      <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
 			<select class="form-control" name="cobranca" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>
+                	<option value="" disabled selected>SELECIONE</option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
                   <option value="TRIMESTRAL">TRIMESTRAL</option>
