@@ -209,7 +209,7 @@
 	
     
 
-    <div id="services" class="section wb">
+    <div id="services" class="parallax section lb">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Soluções & Consultoria</h3>
@@ -217,7 +217,7 @@
             </div><!-- end title -->
 
             <div class="owl-services owl-carousel owl-theme">
-                <div class="service-widget">
+                <div class="col-md-3 col-sm-6">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
@@ -229,7 +229,7 @@
                 </div>
                 <!-- end service -->
 
-                <div class="service-widget">
+                <div class="col-md-3 col-sm-6">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
