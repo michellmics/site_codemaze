@@ -327,9 +327,9 @@
                         </div>
                         <div class="price-value">
                             <div class="value">
-                                <span class="currency" style="font-size: 18px;">R$</span>
-                                <span class="amount" style="font-size: 18px;">14.<span style="font-size: 18px;">99</span></span>
-                                <span class="month" style="font-size: 18px;">/mês</span>
+                                <span class="currency" style="font-size: 25px;">R$</span>
+                                <span class="amount" style="font-size: 25px;">14.<span style="font-size: 25px;">99</span></span>
+                                <span class="month" style="font-size: 25px;">/mês</span>
                             </div>
                         </div>
                         <ul class="pricing-content">
