@@ -127,7 +127,7 @@
     </header>
 	
 	<div id="slide" class="slider-area">
-		<div class="slider-wrapper ">
+		<div class="slider-wrapper owl-carousel">
 			<div class="slider-item home-one-slider-otem slider-item-four slider-bg-one">
 				<div class="container">
 					<div class="row">
