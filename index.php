@@ -266,6 +266,18 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
+                        <a href="uploads/observabilidade.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/observabilidade.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Observabilidade</h3>
+						<p>Quer melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade utilizando Splunk ou Grafana.</p>
+					</div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
                         <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
                     </div>
@@ -340,7 +352,7 @@
                             <li>3 Subdominios</li>
                             <li>2 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Escolha o Plano </a>
+                        <a href="#contact" class="pricingTable-signup">Contratar </a>
                     </div>
                 </div>
 
@@ -366,7 +378,7 @@
                             <li>5 Subdominios</li>
                             <li>5 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Escolha o Plano </a>
+                        <a href="#contact" class="pricingTable-signup">Contratar </a>
                     </div>
                 </div>
 
@@ -392,7 +404,7 @@
                             <li>8 Subdominios</li>
                             <li>10 Banco de dados</li>
                         </ul>
-                        <a href="#contact" class="pricingTable-signup">Escolha o Plano </a>
+                        <a href="#contact" class="pricingTable-signup">Contratar </a>
                     </div>
                 </div>
             </div><!-- end row -->
@@ -418,7 +430,7 @@
         <div class="container">
             <div class="section-title text-center">
                 <h3>Agende uma conversa</h3>
-                <p class="lead">Preencha o formulário abaixo para agendar uma conversa e descobrir como nossos serviços podem atender às suas necessidades. <br>                    
+                <p class="lead">Preencha o formulário abaixo para agendar um bate papo conosco e descobrir como nossos serviços podem atender às suas necessidades. <br>                    
                     Estamos prontos para ajudar você a alcançar seus objetivos!!</p>
             </div><!-- end title -->
 
