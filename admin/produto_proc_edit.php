@@ -15,9 +15,7 @@ class updateProduct extends SITE_ADMIN
             }            
             
             $this->updateProductInfo($nome,$tipo,$investimento,$status,$descricao,$id);
-            echo "Produto atualizado com sucesso.";
-            sleep(4);
-            header("Location: table_produto.php");                             
+            echo "Produto atualizado com sucesso. <a href='table_produto.php'>VOLTAR</a>";                           
                
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
