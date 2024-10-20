@@ -329,7 +329,7 @@
         <div class="container">
            <div class="row text-center">
                 <div class="service-col-md-3 col-sm-6">
-                    <div class="post-media wow fadeIn">
+                    <div class="about-item">
                         <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
                     </div>
