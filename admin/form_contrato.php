@@ -74,7 +74,7 @@
         	<!-- NOME  CPF/CNPJ RAZÃO SOCIAL-->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-			<div style="flex: 1 1 5%;">
+			<div style="flex: 0 0 60px;">
 			<label>NÚMERO DO CONTRATO</label>
 			<input type="text" style="width: 30%; text-transform: uppercase;" pattern="[0-9]*"  class="form-control" placeholder="0000" name="contrato" />
 			</div>					      
