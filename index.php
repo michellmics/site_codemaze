@@ -216,8 +216,8 @@
                 <p class="lead">Conte com a Codemaze para soluções eficazes e consultoria de qualidade. Juntos, vamos transformar suas ideias em realidade.</p>
             </div><!-- end title -->
 
-            <div class="owl-services owl-carousel owl-theme">
-                <div class="col-md-3 col-sm-6">
+            <div >
+                <div class="service-widget">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
@@ -229,7 +229,7 @@
                 </div>
                 <!-- end service -->
 
-                <div class="col-md-3 col-sm-6">
+                <div class="service-widget">
                     <div class="post-media wow fadeIn">
                         <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
