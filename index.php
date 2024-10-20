@@ -334,7 +334,7 @@
                         <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
                     </div>
                     <div class="about-text">
-							<h3> <a href="#">Lorem ipsum dolor. </a></h3>
+							<h1>Lorem ipsum dolor. </13>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ea, quis magnam deserunt. </p>
 						</div>
                 </div>
