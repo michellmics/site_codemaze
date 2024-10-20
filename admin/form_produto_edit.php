@@ -73,7 +73,7 @@
                   <h3 class="box-title">Cadastro de Produtos e Serviços</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="produto_proc.php">
+                <form role="form" method="POST" action="produto_proc_edit.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -126,6 +126,14 @@
                     	</div>
 			</div>
 		</div>
+
+    <div style="flex: 2;">
+			<label style="display: none;">ID</label>
+			<input type="text" style="width: 100%; text-transform: uppercase; display: none;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_IDPRODUTO_SERVICO"]; ?>" />
+			</div>			
+
+		</div>
+
 		<!-- DESCRICAO-->
 			
 
