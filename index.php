@@ -4,7 +4,31 @@
 
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >  
+    
+     <!-- SEO Básico -->
+    <meta name="description" content="Somos a Codemaze, especialista em soluções digitais como desenvolvimento de sites, hospedagem, gestão de mídias sociais e campanhas de tráfego pago. Transformamos negócios com inovação e estratégias personalizadas.">
+    <meta name="keywords" content="desenvolvimento de sites, hospedagem, consultoria estratégica, mídias sociais, campanhas de tráfego pago, soluções digitais, marketing digital, Codemaze">
+    <meta name="author" content="Codemaze">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para Redes Sociais (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Codemaze - Transformação Digital e Estratégia Online">
+    <meta property="og:description" content="Na Codemaze, ajudamos empresas a crescerem com soluções digitais inovadoras e estratégias eficientes. Explore nossos serviços de desenvolvimento de sites, consultoria e gestão de mídias sociais.">
+    <meta property="og:image" content="https://www.codemaze.com.br/site/images/logo-2.png">
+    <meta property="og:url" content="https://www.codemaze.com.br">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Codemaze - Transformação Digital e Estratégia Online">
+    <meta name="twitter:description" content="Descubra como a Codemaze pode transformar seu negócio com inovação e estratégias eficientes.">
+    <meta name="twitter:image" content="https://www.codemaze.com.br/site/images/logo-2.png">
+    <meta name="twitter:site" content="@seuTwitterHandle">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.codemaze.com.br">
+
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
