@@ -11,8 +11,8 @@
   }
 
   $siteAdmin = new SITE_ADMIN();
-  $siteAdmin->getClientInfo;
-  $siteAdmin->getProductInfo;
+  $siteAdmin->getClientInfo();
+  $siteAdmin->getProductInfo();
 
   $siteAdmin->ARRAY_CLIENTINFO;
   $siteAdmin->ARRAY_PRODUCTINFO;
