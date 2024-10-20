@@ -325,8 +325,8 @@
 
 
 
-    <div id="about" class="section wb">
-        <div>
+    <div id="about" class="parallax section lb">
+        <div class="container">
            <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="about-item">
