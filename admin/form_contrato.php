@@ -78,7 +78,7 @@
 			<label>NÚM. CONTRATO</label>
 			<input type="text" style="width: 30%; text-transform: uppercase;" pattern="[0-9]*"  class="form-control" placeholder="0000" name="contrato" />
 			</div>					      
-      <div style="flex: 0 0 60%;">
+      <div style="flex: 0 0 40%; gap: 10px;">
 			<label>NOME DO CLIENTE</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
