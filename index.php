@@ -432,10 +432,10 @@
                     <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
                 </div>
             </div><!-- end row -->
 
