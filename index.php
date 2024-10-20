@@ -328,7 +328,7 @@
     <div id="about" class="section wb">
         <div class="container">
            <div class="row">
-                <div class="service-col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="about-item">
                         <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]"><i class="flaticon-unlink"></i></a>
                         <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
