@@ -77,19 +77,23 @@
 			
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
 			</div>					
 			<div style="flex: 1; min-width: 200px;">
 			<label>PRODUTO OU SERVIÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"   />
 			</div>	
       <div style="flex: 1; min-width: 100px;">
 			<label>PERÍDO COBRANÇA</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="cobranca"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="cobranca"  />
 			</div>						
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"   />
+			</div>
+      <div style="flex: 1;">
+			<label>NÚM. CONTRATO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" />
 			</div>
 			</div>
 		</div>
