@@ -224,7 +224,7 @@
                     </div>
 					<div class="service-dit">
 						<h3>Gestão de Mídia Social</h3>
-						<p>Impulsione sua marca nas redes sociais com nosso serviço de destaque em mídias sociais! Criamos estratégias e campanhas personalizadas que aumentam seu engajamento e ampliam sua visibilidade.</p>
+						<p>Impulsione sua marca com nosso serviço de destaque em mídias sociais! Criamos estratégias e campanhas personalizadas que aumentam seu engajamento e ampliam sua visibilidade.</p>
 					</div>
                 </div>
                 <!-- end service -->
