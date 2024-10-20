@@ -28,7 +28,7 @@
                 pass = dbpass
             */
 
-            $configPath = __DIR__ . '/../config.cfgs';
+            $configPath = __DIR__ . '/../config.cfg';
 
             if (!file_exists($configPath)) {
                 die("Erro: Arquivo de configuração não encontrado.");
