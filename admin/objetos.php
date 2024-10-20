@@ -375,7 +375,7 @@
             
             try {
                 $sql = "UPDATE PRS_PRODUTO_SERVICO 
-                        SET PRS_NMNOM = :PRS_NMNOME,
+                        SET PRS_NMNOME = :PRS_NMNOME,
                         PRS_DCTIPO = :PRS_DCTIPO,
                         PRS_DCINVESTIMENTO = :PRS_DCINVESTIMENTO,
                         PRS_STSTATUS = :PRS_STSTATUS,
