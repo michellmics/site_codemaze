@@ -29,8 +29,6 @@
             */
 
             $configPath = '/home/codemaze/config.cfg';
-            //echo $configPath;
-            //die();
 
             if (!file_exists($configPath)) {
                 die("Erro: Arquivo de configuração não encontrado.");
