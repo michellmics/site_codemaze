@@ -110,8 +110,15 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
       </div>				
       <div style="flex: 1; min-width: 100px;">
 			<label>TIPO COBRANÇA</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="cobranca"  />
-			</div>						
+			<select class="form-control" name="cobranca" style="width: 100%;">
+                	<option value="" disabled selected>Selecione...</option>
+                	<option value="UNICA">ÚNICA</option>
+                	<option value="MENSAL">MENSAL</option>
+                  <option value="TRIMESTRAL">TRIMESTRAL</option>
+                  <option value="SEMESTRAL">SEMESTRAL</option>
+                  <option value="ANUAL">ANUAL</option>
+      </select>
+      </div>						
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="razaosocial"   />
