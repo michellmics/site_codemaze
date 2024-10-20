@@ -91,9 +91,9 @@
 					<div class="right-top">
 						<div class="social-box">
 							<ul>
-								<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.facebook.com/profile.php?id=61567212358304"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.instagram.com/codemaze_"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.linkedin.com/company/agencia-codemaze/about/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 							<ul>
 						</div>
 					</div>
