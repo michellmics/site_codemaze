@@ -17,6 +17,9 @@
   $siteAdmin->ARRAY_CLIENTINFO;
   $siteAdmin->ARRAY_PRODUCTINFO;
 
+  var_dump($siteAdmin->ARRAY_CLIENTINFO);
+  die()
+
 
 ?>
 
