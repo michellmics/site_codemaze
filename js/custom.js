@@ -93,6 +93,28 @@
         smartSpeed: 700
     });
 
+    $(document).ready(function () {
+        $(".owl-services").owlCarousel({
+            items: 3,                // Número de itens visíveis
+            margin: 10,              // Espaço entre os itens
+            loop: true,              // Loop infinito
+            autoplay: true,          // Ativa o autoplay
+            autoplayTimeout: 5000,   // Tempo entre trocas (5 segundos)
+            autoplayHoverPause: true, // Pausa ao passar o mouse
+            nav: true,               // Ativa botões de navegação
+            dots: true,              // Exibe pontos de navegação
+            navText: [
+                "<i class='fa fa-angle-left'></i>", 
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            responsive: {
+                0: { items: 1 },     // 1 item em telas pequenas
+                600: { items: 2 },   // 2 itens em tablets
+                1000: { items: 3 }   // 3 itens em desktops
+            }
+        });
+    });
+
     /* ==============================================
      TOOLTIP -->
      =============================================== */
