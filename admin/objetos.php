@@ -29,8 +29,8 @@
             */
 
             $configPath = __DIR__ . '/../../config.cfg';
-            echo $configPath;
-            die();
+            //echo $configPath;
+            //die();
 
             if (!file_exists($configPath)) {
                 die("Erro: Arquivo de configuração não encontrado.");
