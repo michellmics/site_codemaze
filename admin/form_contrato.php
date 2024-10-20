@@ -95,7 +95,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <input type="hidden" name="id" value="1"/>
                   <!-- CAMPOS COMO VARIAVEIS -->
                   
-        	<!-- NOME  CPF/CNPJ RAZÃO SOCIAL-->          
+        	<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			
@@ -133,22 +133,38 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       </select>
       </div>						
 			<div style="flex: 1; min-width: 130px;">
-			  <label>DTCONTRATO</label>
-        <i class="fa fa-calendar"></i>
-			  <input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
+			<label>DTCONTRATO</label>
+      <i class="fa fa-calendar"></i>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
 
       <div style="flex: 1;">
 			<label>N. CONTRATO</label>
 			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<? echo $numeroContrato; ?>"/>
 			</div>
-			</div>
 		</div>
-		<!-- Nome  CPF/CNPJ RAZÃO SOCIAL-->
-        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
+		</div>
+		<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO --> 
+
+    <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div style="flex: 1;">
+      
+      <div style="flex: 1; min-width: 130px;">
+			<label>INICIO CONTRATO</label>
+      <i class="fa fa-calendar"></i>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="iniciocontrato"   />
+			</div>
+
+      <div style="flex: 1; min-width: 130px;">
+			<label>FIM CONTRATO</label>
+      <i class="fa fa-calendar"></i>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="fimcontrato"   />
+			</div>
+      
+      
+      
+      <div style="flex: 1;">
 			<label>E-MAIL</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="email"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
@@ -179,31 +195,6 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<select class="form-control" name="estado" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>
                 	<option value="AC">AC</option>
-                	<option value="AL">AL</option>
-                	<option value="AP">AP</option>
-                	<option value="AM">AM</option>
-                	<option value="BA">BA</option>
-                	<option value="CE">CE</option>
-                	<option value="DF">DF</option>
-                	<option value="ES">ES</option>
-                	<option value="GO">GO</option>
-                	<option value="MA">MA</option>
-                	<option value="MT">MT</option>
-                	<option value="MS">MS</option>
-                	<option value="MG">MG</option>
-                	<option value="PA">PA</option>
-                	<option value="PB">PB</option>
-                	<option value="PR">PR</option>
-                	<option value="PE">PE</option>
-                	<option value="PI">PI</option>
-                	<option value="RJ">RJ</option>
-                	<option value="RN">RN</option>
-                	<option value="RS">RS</option>
-                	<option value="RO">RO</option>
-                	<option value="RR">RR</option>
-                	<option value="SC">SC</option>
-                	<option value="SP">SP</option>
-                	<option value="SE">SE</option>
                 	<option value="TO">TO</option>
             		</select>
 			</div>
