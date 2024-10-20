@@ -568,7 +568,7 @@
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
                         <p>Whatsapp: +55 11 998273-4350<br>
-                        End.: Rua dos Estudantes, 505 - Hortolândia/SP<br>
+                        Endereço: R. Estudantes, 505 - Hortolândia/SP<br>
                         Suporte Técnico: suporte@codemaze.com.br<br>
                         E-mail: faleconosco@codemaze.com.br<br>
                         </p>
