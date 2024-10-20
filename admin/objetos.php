@@ -28,10 +28,22 @@
                 pass = dbpass
             */
 
-            $host = 'localhost';
-            $dbname = 'codemaze_dbprod';
-            $user = 'codemaze_dbprod';
-            $pass = 'dbprodcodemaze';
+            $configPath = __DIR__ . '/../config.cfgs';
+
+            if (!file_exists($configPath)) {
+                die("Erro: Arquivo de configuração não encontrado.");
+            }
+
+            $configContent = parse_ini_file($configPath, true);  // true para usar seções
+
+            if (!$configContent) {
+                die("Erro: Não foi possível ler o arquivo de configuração.");
+            }
+
+            $host = $configContent['DATA DB']['host'];
+            $dbname = $configContent['DATA DB']['dbname'];
+            $user = $configContent['DATA DB']['user'];
+            $pass = $configContent['DATA DB']['pass'];
 
             try {
                 $this->pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
