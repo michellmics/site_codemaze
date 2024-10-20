@@ -242,12 +242,12 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/desenvolvimentoSItes.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/desenvolvimentoSItes.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/observabilidade.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/observabilidade.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Desenvolvimento de Sites</h3>
-						<p>Transforme sua visão em realidade! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
+						<h3>Observabilidade</h3>
+						<p>Precisa melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade de dados utilizando Splunk ou Grafana.</p>
 					</div>
                 </div>
                 <!-- end service -->
@@ -266,12 +266,12 @@
 
                 <div class="service-widget">
                     <div class="post-media wow fadeIn">
-                        <a href="uploads/observabilidade.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                        <img src="uploads/observabilidade.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="uploads/desenvolvimentoSItes.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/desenvolvimentoSItes.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Observabilidade</h3>
-						<p>Precisa melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade de dados utilizando Splunk ou Grafana.</p>
+						<h3>Desenvolvimento de Sites</h3>
+						<p>Transforme sua visão em realidade! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
 					</div>
                 </div>
                 <!-- end service -->
