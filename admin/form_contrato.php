@@ -14,6 +14,11 @@
   $siteAdmin->getClientInfo();
   $siteAdmin->getProductInfo();
 
+  // Ordena o array de clientes em ordem alfabética pelo nome
+usort($siteAdmin->ARRAY_CLIENTINFO, function($a, $b) {
+  return strcmp($a['CLI_NMNAME'], $b['CLI_NMNAME']);
+});
+
 ?>
 
 
