@@ -9,13 +9,11 @@
     header("Location: index.php");
     exit();
   }
-
-  $siteAdmin = new SITE_ADMIN();
-
   $id = $_GET['id'];;
-  echo $id;
+  $siteAdmin = new SITE_ADMIN(); 
+  $siteAdmin->getProductInfoById($id);
 
-  die();
+  
 
 ?>
 
@@ -86,12 +84,12 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>NOME DO PRODUTO OU SERVIÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_NMNOME"]; ?>"placeholder="Enter ..." name="nome" />
 			</div>					
 			<div style="flex: 1;">
 			<label>TIPO</label>
 			<select class="form-control" name="tipo" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>
+                	<option value="<? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_DCTIPO"]; ?>" disabled selected><? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_DCTIPO"]; ?></option>
                 	<option value="HOSTING STANDARD">HOSTING</option>
                 	<option value="CONSULTORIA WEB">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
@@ -102,12 +100,12 @@
 			
 			<div style="flex: 1;"> 
 			<label>VALOR(R$)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_DCINVESTIMENTO"]; ?>" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
 			<select class="form-control" name="status" style="width: 100%;">
-          <option value="" disabled selected>Selecione...</option>
+          <option value="<? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_STSTATUS"]; ?>" disabled selected><? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_STSTATUS"]; ?></option>
           <option value="ATIVO">ATIVO</option>
           <option value="INATIVO">INATIVO</option>
       </select>
@@ -121,7 +119,9 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  style="width: 100%;" maxlength="150" rows="5" placeholder="Enter ..." name="descricao"></textarea>
+                      	<textarea class="form-control"  style="width: 100%;" maxlength="150" rows="5" placeholder="Enter ..." name="descricao">
+                        <? echo $siteAdmin->ARRAY_PRODUCTINFO["PRS_DCDESCRICAO"]; ?>
+                        </textarea>
                     	</div>
 			</div>
 		</div>
