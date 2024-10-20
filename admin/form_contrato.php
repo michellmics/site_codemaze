@@ -24,6 +24,11 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
   return strcmp($a['PRS_NMNOME'], $b['PRS_NMNOME']);
 });
 
+// gerador de num contrato
+$timestamp = microtime(true);
+$numeroContrato = (int)($timestamp * 1000);
+$numeroContrato = $numeroContrato % 1000000;
+
 ?>
 
 
@@ -125,7 +130,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
 			</div>
       <div style="flex: 1;">
 			<label>N. CONTRATO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" />
+			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<? echo $numeroContrato; ?>"/>
 			</div>
 			</div>
 		</div>
