@@ -16,7 +16,7 @@ class updateProduct extends SITE_ADMIN
             
             $result = $this->updateProductInfo($nome,$tipo,$investimento,$status,$descricao,$id);
             var_dump($result);
-            echo "Produto atualizado com sucesso.";                             
+            echo "Produto atualizado com sucesso. $id";                             
                
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
