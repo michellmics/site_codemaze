@@ -9,11 +9,14 @@
     header("Location: index.php");
     exit();
   }
+
+
   $id = $_GET['id'];;
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getProductInfoById($id);
-
-  
+echo $id;
+  var_dump($siteAdmin->ARRAY_PRODUCTINFO);
+  die();
 
 ?>
 
