@@ -13,8 +13,11 @@
 
   $id = $_GET['id'];;
   $siteAdmin = new SITE_ADMIN(); 
-  $siteAdmin->getProductInfoById($id);
-  
+ $result=$siteAdmin->getProductInfoById($id);
+echo $id;
+  var_dump($result);
+  die();
+
 ?>
 
 
