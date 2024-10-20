@@ -105,7 +105,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
         <?php endforeach; ?>
       </select>
       </div>					
-			<div style="flex: 1; min-width: 300px;">
+			<div style="flex: 1; min-width: 230px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o produto</option>
@@ -127,7 +127,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <option value="ANUAL">ANUAL</option>
       </select>
       </div>						
-			<div style="flex: 1;">
+			<div style="flex: 1; min-width: 150px;">
 			<label>DT CONTRATO</label>
       <div class="input-group">
                       <div class="input-group-addon">
