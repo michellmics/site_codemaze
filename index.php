@@ -47,26 +47,6 @@
             border: 1px solid #ccc;
             margin: 10px 0;
         }
-
-        /* css dos serviços atualizada */
-        .owl-services {
-          display: flex;
-          flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
-          justify-content: space-between; /* Distribuir espaço entre colunas */
-          gap: 20px; /* Espaçamento entre os serviços */
-        }
-
-        .service-widget {
-          flex: 1 1 calc(33.33% - 20px); /* 3 colunas */
-          box-sizing: border-box;
-        }
-
-        /* Estilo para dispositivos móveis */
-        @media (max-width: 768px) {
-          .service-widget {
-            flex: 1 1 100%; /* Cada serviço ocupa 100% da largura */
-          }
-        }
     </style> 
 
 </head>
@@ -235,36 +215,79 @@
                 <p class="lead">Conte com a Codemaze para soluções eficazes e consultoria de qualidade. Juntos, vamos transformar suas ideias em realidade.</p>
             </div><!-- end title -->
 
-<div class="owl-services">
-    <div class="service-widget">
-        <div class="post-media wow fadeIn">
-            <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius">
-                <i class="flaticon-unlink"></i>
-            </a>
-            <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
-        </div>
-        <div class="service-dit">
-            <h3>Gestão de Mídia Social</h3>
-            <p>Impulsione sua marca nas redes sociais com nosso serviço de destaque em mídias sociais!...</p>
-        </div>
-    </div>
+            <div class="owl-services owl-carousel owl-theme">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/gestaoMidiaSocial.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Gestão de Mídia Social</h3>
+						<p>Impulsione sua marca nas redes sociais com nosso serviço de destaque em mídias sociais! Criamos estratégias e campanhas personalizadas que aumentam seu engajamento e ampliam sua visibilidade.</p>
+					</div>
+                </div>
+                <!-- end service -->
 
-    <div class="service-widget">
-        <div class="post-media wow fadeIn">
-            <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius">
-                <i class="flaticon-unlink"></i>
-            </a>
-            <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
-        </div>
-        <div class="service-dit">
-            <h3>Gestão de Tráfego (Mkt Digital)</h3>
-            <p>Maximize seus resultados com nossa gestão de tráfego digital!...</p>
-        </div>
-    </div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/gestaoTrafego.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Gestão de Tráfego (Mkt DIgital)</h3>
+						<p>Maximize seus resultados com nossa gestão de tráfego digital! Implementamos campanhas estratégicas que direcionam visitantes qualificados ao seu site, aumentando as conversões e o retorno sobre o investimento. </p>
+					</div>
+                </div>
+                <!-- end service -->
 
-    <!-- Mais serviços... -->
-</div>
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/observabilidade.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/observabilidade.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Observabilidade</h3>
+						<p>Precisa melhorar o monitoramento e a gestão dos dados da sua empresa? Oferecemos serviços especializados para implementar sistemas de observabilidade de dados utilizando Splunk ou Grafana.</p>
+					</div>
+                </div>
+                <!-- end service -->
 
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/desenvolvimentoSistemas.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/desenvolvimentoSistemas.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Desenvolvimento de Sistemas</h3>
+						<p>Desenvolvemos sistemas sob medida para atender às suas necessidades específicas! Nossos serviços abrangem desde a concepção até a implementação, garantindo soluções eficientes e integradas.</p>
+					</div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/desenvolvimentoSItes.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/desenvolvimentoSItes.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Desenvolvimento de Sites</h3>
+						<p>Transforme sua visão em realidade! Criamos websites personalizados, responsivos e otimizados para garantir uma experiência excepcional ao usuário. Deixe sua marca brilhar online com uma presença digital impactante.</p>
+					</div>
+                </div>
+                <!-- end service -->
+
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <a href="uploads/consultoria.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        <img src="uploads/consultoria.jpg" alt="" class="img-responsive img-rounded">
+                    </div>
+					<div class="service-dit">
+						<h3>Consultoria</h3>
+						<p>Nossa consultoria oferece insights estratégicos para impulsionar o crescimento do seu negócio! Trabalhamos lado a lado com você para identificar oportunidades e implementar soluções eficazes.</p>
+					</div>
+                </div>
+                <!-- end service -->
+            </div><!-- end row -->
 
             <hr class="hr1">
 
