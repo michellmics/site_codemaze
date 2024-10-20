@@ -24,7 +24,7 @@ class registerClient extends SITE_ADMIN
             
             // Se o usuário for encontrado e a senha for válida
             if (isset($user['CLI_IDCLIENT'])) {
-                echo "Cliente já está cadastrado."; 
+                echo "Cliente já está cadastrado. <a href='form_cliente.php'> VOLTAR</a>"; 
                 exit();
             } else 
                 {
