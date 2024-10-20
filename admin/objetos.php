@@ -28,7 +28,7 @@
                 pass = dbpass
             */
 
-            $configPath = __DIR__ . '/../../config.cfg';
+            $configPath = '/home/codemaze/config.cfg';
             //echo $configPath;
             //die();
 
