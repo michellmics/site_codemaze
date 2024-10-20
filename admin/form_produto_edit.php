@@ -15,7 +15,7 @@
   $siteAdmin = new SITE_ADMIN(); 
  $result=$siteAdmin->getProductInfoById($id);
 echo $id;
-  var_dump($result);
+  var_dump($siteAdmin->ARRAY_PRODUCTINFO);
   die();
 
 ?>
