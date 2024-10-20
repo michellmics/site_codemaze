@@ -126,7 +126,7 @@
 			<label>ESTADO</label>
 			<select class="form-control" name="estado" style="width: 100%;">
                 	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCSTATE"]; ?>"><? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCSTATE"]; ?></option>
-                  <option value="AC">AC</option>
+                  	<option value="AC">AC</option>
                 	<option value="AL">AL</option>
                 	<option value="AP">AP</option>
                 	<option value="AM">AM</option>
