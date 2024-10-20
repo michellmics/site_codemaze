@@ -209,7 +209,7 @@
 	
 
     <div id="services" >
-        <div class="container">
+        <div>
             <div class="section-title text-center">
                 <h3>Soluções & Consultoria</h3>
                 <p class="lead">Conte com a Codemaze para soluções eficazes e consultoria de qualidade. Juntos, vamos transformar suas ideias em realidade.</p>
