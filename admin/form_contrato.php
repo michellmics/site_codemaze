@@ -11,6 +11,11 @@
   }
 
   $siteAdmin = new SITE_ADMIN();
+  $siteAdmin->getClientInfo;
+  $siteAdmin->getProductInfo;
+
+  $siteAdmin->ARRAY_CLIENTINFO;
+  $siteAdmin->ARRAY_PRODUCTINFO;
 
 
 ?>
@@ -77,8 +82,15 @@
 			
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
-			</div>					
+			<select name="cliente_id" class="form-control" style="width: 100%; text-transform: uppercase;">
+        <option value="" disabled selected>Selecione o cliente</option>
+        <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
+            <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
+                <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+  </div>					
 			<div style="flex: 1; min-width: 300px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" class="form-control" placeholder="00000000" name="produto"   />
