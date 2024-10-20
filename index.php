@@ -416,10 +416,6 @@
 
     <div id="parceiros" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">
-            <div class="section-title text-center">
-                <h3>Parceiros</h3>
-            </div><!-- end title -->
-
             <hr class="hr1">
 
             <div class="row logos">
