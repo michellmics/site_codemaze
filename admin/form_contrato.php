@@ -54,6 +54,10 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
          folder instead of downloading all of them to reduce the load. -->
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -130,7 +134,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<div style="flex: 1; min-width: 130px;">
 			  <label>DT CONTRATO</label>
         <i class="fa fa-calendar"></i>
-			  <input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="dtcontrato"   />
+			  <input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
 
       <div style="flex: 1;">
@@ -251,5 +255,14 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
     <script src="dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js" type="text/javascript"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#dtcontrato').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+  </script>
+
   </body>
 </html>
