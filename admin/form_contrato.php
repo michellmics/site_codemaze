@@ -74,11 +74,11 @@
         	<!-- NOME  CPF/CNPJ RAZÃO SOCIAL-->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-			<div style="flex: 0 0 25%;">
+			<div style="flex: 0 0 15%; min-width: 80px;">
 			<label>NÚM. CONTRATO</label>
 			<input type="text" style="width: 30%; text-transform: uppercase;" pattern="[0-9]*"  class="form-control" placeholder="0000" name="contrato" />
 			</div>					      
-      <div style="flex: 0 0 40%; gap: 10px;">
+      <div style="flex: 1; min-width: 200px;">
 			<label>NOME DO CLIENTE</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
