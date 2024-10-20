@@ -390,7 +390,7 @@
                 $stmt->bindParam(':PRS_DCINVESTIMENTO', $PRS_DCINVESTIMENTO, PDO::PARAM_STR);
                 $stmt->bindParam(':PRS_DCDESCRICAO', $PRS_DCDESCRICAO, PDO::PARAM_STR);
                 $stmt->bindParam(':PRS_STSTATUS', $PRS_STSTATUS, PDO::PARAM_STR);
-                $stmt->bindParam(':PRS_IDPRODUTO_SERVICO', $$ID, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_IDPRODUTO_SERVICO', $ID, PDO::PARAM_STR);
 
                 $stmt->execute();
             
