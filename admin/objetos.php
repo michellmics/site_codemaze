@@ -28,7 +28,7 @@
                 pass = dbpass
             */
 
-            $configPath = __DIR__ . '/../config.cfg';
+            $configPath = __DIR__ . '/../../config.cfg';
             echo $configPath;
             die();
 
