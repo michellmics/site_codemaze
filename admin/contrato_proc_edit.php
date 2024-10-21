@@ -52,7 +52,7 @@ class updateContrato extends SITE_ADMIN
             $parcelamento, 
             $valor);
             
-            echo "Contrato atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";
+            echo "Contrato atualizado com sucesso. <a href='table_contrato.php'>VOLTAR</a>";
                                       
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
