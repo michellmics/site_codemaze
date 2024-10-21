@@ -234,7 +234,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
-			<label>DATA VENCIMENTO</label>
+			<label>VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
@@ -249,8 +249,8 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <option value="TRANSFERENCIA BANCARIA">TRANSFERÊNCIA BANCÁRIA</option>
             		</select>
 			</div>
-      <div style="flex: 1; min-width: 110px;">
-			<label>PARCELAMENTO</label>
+      <div style="flex: 1; min-width: 30px;">
+			<label>PARC.</label>
 			<select class="form-control" name="parcelamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="1">1X</option>
