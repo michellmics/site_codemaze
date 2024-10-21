@@ -15,13 +15,9 @@
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getContratoInfoById($id);
 
-  $siteAdmin->getClientInfo();
+  $siteAdmin->getClientInfoById($siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]);
   $siteAdmin->getProductInfo();
 
-// Ordena o array de clientes em ordem alfabética pelo nome
-usort($siteAdmin->ARRAY_CLIENTINFO, function($a, $b) {
-  return strcmp($a['CLI_NMNAME'], $b['CLI_NMNAME']);
-});
 
 // Ordena o array de produtos em ordem alfabética pelo nome
 usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
@@ -102,7 +98,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
 			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
-      <option value="UNICA"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?></option>
+      <option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?>"><?php echo siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"]; ?></option>
       </select>      
       </div>			
 
