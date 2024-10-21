@@ -509,7 +509,7 @@
                                         GEC_DCDESCRICAO = :GEC_DCDESCRICAO,
                                         GEC_DTCONTRATACAO = :GEC_DTCONTRATACAO,
                                         GEC_DTPRAZOENTREGA = :GEC_DTPRAZOENTREGA,
-                                        GEC_DCPERIODO_CARENCIA = :GEC_DTPRAZOENTREGA,
+                                        GEC_DCPERIODO_CARENCIA = :GEC_DCPERIODO_CARENCIA,
                                         GEC_DCDESCONTO = :GEC_DCDESCONTO,
                                         GEC_DCPERIODO_DESCONTO = :GEC_DCPERIODO_DESCONTO,
                                         GEC_DTVENCIMENTO = :GEC_DTVENCIMENTO,
