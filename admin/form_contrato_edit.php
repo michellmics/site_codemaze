@@ -14,7 +14,7 @@
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getContratoInfoById($id);
 
-  $siteAdmin->getClientInfo();
+  $siteAdmin->getClientInfoById($siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]);
   $siteAdmin->getProductInfo();
 
 // Ordena o array de clientes em ordem alfabética pelo nome
@@ -28,7 +28,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
 });
 
 
-$siteAdmin->ARRAY_CONTRATOINFO[0][""]
+
 
 
 ?>
