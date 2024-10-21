@@ -541,7 +541,7 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
-                return ["success" => "Contrato atualizado com sucesso."];
+                return ["success" => "Contrato atualizado com sucesso1."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
