@@ -201,12 +201,12 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
       <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC.</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" id="dias" name="periododesconto"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="dias"  name="carencia"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
@@ -362,14 +362,26 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
   });
 
   $(document).ready(function() {
-    $('#dias').mask('00 DIAS', { placeholder: "__ DIAS" });
+    $('#periododesconto').mask('00 DIAS', { placeholder: "__ DIAS" });
     // Manipula o evento de envio do formulário
-    $('#form-dias').on('submit', function(e) {
+    $('#form-periododesconto').on('submit', function(e) {
       // Extrai apenas os números da entrada
-      let valor = $('#dias').val().replace(/\D/g, '');
+      let valor = $('#periododesconto').val().replace(/\D/g, '');
 
       // Define o valor limpo no campo hidden
-      $('#dias-enviar').val(valor);
+      $('#periododesconto-enviar').val(valor);
+    });
+  });
+
+  $(document).ready(function() {
+    $('#carencia').mask('00 DIAS', { placeholder: "__ DIAS" });
+    // Manipula o evento de envio do formulário
+    $('#form-carencia').on('submit', function(e) {
+      // Extrai apenas os números da entrada
+      let valor = $('#carencia').val().replace(/\D/g, '');
+
+      // Define o valor limpo no campo hidden
+      $('#carencia-enviar').val(valor);
     });
   });
     
