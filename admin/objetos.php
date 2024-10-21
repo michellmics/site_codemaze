@@ -521,8 +521,6 @@
             
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
-                $stmt->bindParam(':CLI_IDCLIENT', $CLI_IDCLIENT, PDO::PARAM_STR);
-                $stmt->bindParam(':PRS_IDPRODUTO_SERVICO', $PRS_IDPRODUTO_SERVICO, PDO::PARAM_STR);
                 $stmt->bindParam(':GEC_DTINICONTRATO', $GEC_DTINICONTRATO, PDO::PARAM_STR);
                 $stmt->bindParam(':GEC_DTENDCONTRATO', $GEC_DTENDCONTRATO, PDO::PARAM_STR);
                 $stmt->bindParam(':GEC_STCONTRATO', $GEC_STCONTRATO, PDO::PARAM_STR);
