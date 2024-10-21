@@ -36,12 +36,12 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
 
 //funções
-function getNomeClientbyId($ID)
+function getNomeClientbyId($ID, $siteAdmin)
 {
-  $instCliente = new SITE_ADMIN();
-
-  $instCliente->getClientInfoById($ID);
-  return $instCliente->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
+  $siteAdmin = new SITE_ADMIN();
+  
+  $siteAdmin->getClientInfoById($ID);
+  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
 }
 
 
@@ -153,10 +153,10 @@ function getNomeClientbyId($ID)
 
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= getClientById($contrato['CLI_IDCLIENT']); ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getNomeClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO ']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTINICONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
