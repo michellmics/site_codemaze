@@ -169,7 +169,7 @@ function getNomeProdutobyId($ID, $siteAdmin)
                     <tr>
 
 
-                        <td style="text-transform: uppercase; font-size: 14px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $contrato['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">PEND</span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getNomeClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getcpfcnpjClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>  
