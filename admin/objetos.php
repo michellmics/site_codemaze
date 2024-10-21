@@ -14,6 +14,7 @@
         public $ARRAY_CLIENTINFO;
         public $ARRAY_PRODUCTINFO;
         public $ARRAY_CONTRATOINFO;
+        public $ARRAY_CONTRATOINFOO;
         
 
 
@@ -167,7 +168,7 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
-                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $this->ARRAY_CONTRATOINFOO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
