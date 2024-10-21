@@ -147,7 +147,7 @@ function getClientbyId($ID)
                     <tr>
                     <?php foreach ($dadosPagina as $contrato): ?>
                     <tr>
-                        <? getClientbyId($contrato['CLI_IDCLIENT']); ?>
+                        
                      
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
