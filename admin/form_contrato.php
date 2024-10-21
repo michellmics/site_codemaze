@@ -270,13 +270,16 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   
                   <div class="box-footer">
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                  
+                    <form method="POST" action="gerar_contrato.php" target="_blank">
+                      <button type="submit" name="salvar_empresa_1" class="btn btn-danger">
+                        GERAR CONTRATO
+                      </button>
+                    </form>
+                  
+                  
                   </div>
                 </form>
-                <form method="POST" action="gerar_contrato.php" target="_blank">
-    <button type="submit" name="salvar_empresa_1" class="btn btn-danger">
-        GERAR CONTRATO
-    </button>
-</form>
               </div>
               <!-- FIM BLOCO 1 -->
 
