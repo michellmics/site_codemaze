@@ -95,7 +95,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
 			
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
-			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select readonly name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
       <option value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>"> <?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"]; ?></option>
       </select>      
       </div>			
@@ -103,7 +103,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
 			<div style="flex: 1; min-width: 240px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
-        <option value="" disabled selected>Selecione o produto</option>
+        <option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["PRS_IDPRODUTO_SERVICO"]; ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["PRS_NMNOME"]; ?></option>
         <?php foreach ($siteAdmin->ARRAY_PRODUCTINFO as $produto): ?>
             <option value="<?php echo htmlspecialchars($produto['PRS_IDPRODUTO_SERVICO']); ?>">
                 <?php echo htmlspecialchars($produto['PRS_NMNOME']); ?>
