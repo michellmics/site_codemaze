@@ -99,7 +99,7 @@
       </div>			
 
 			<div style="flex: 1; min-width: 240px;">
-			<label>PRODUTO OU SERVIÇ</label>
+			<label>PRODUTO OU SERVIÇO</label>
 			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
       <option value="<?php echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_IDPRODUTO_SERVICO"]; ?>"><?php echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_NMNOME"]; ?> </option>
       </select>
