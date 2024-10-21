@@ -226,7 +226,7 @@
       <div style="flex: 1; min-width: 160px;">
 			<label>FORMA DE PAG.</label>
 			<select class="form-control" name="formapagamento" style="width: 100%;">
-                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCFORMAPAGAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["	GEC_DCFORMAPAGAMENTO"] ?></option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCFORMAPAGAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCFORMAPAGAMENTO"] ?></option>
                 	<option value="CARTAO DE CREDITO">C. DE CRÉDITO</option>
                 	<option value="PIX">PIX</option>
                   <option value="BOLETO">BOLETO</option>
