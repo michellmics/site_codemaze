@@ -153,7 +153,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       <div style="flex: 1; min-width: 80px;">
 			<label>INICIO CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="iniciocontrato"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="iniciocontrato" name="iniciocontrato"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
@@ -277,7 +277,16 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
         placeholder: "__/__/____"
       });
     });
+
+    $(document).ready(function() {
+      $('#iniciocontrato').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+
   </script>
+
+  
  
 
   </body>
