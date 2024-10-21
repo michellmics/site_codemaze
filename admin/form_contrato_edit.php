@@ -134,7 +134,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
 
       <div style="flex: 1;">
 			<label>N. CONTRATO</label>
-			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTCONTRATACAO"] ?>" />
+			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_IDGESTAO_CONTRATO"] ?>" />
 			</div>
 		</div>
 		</div>
