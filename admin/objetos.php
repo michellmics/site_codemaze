@@ -144,6 +144,36 @@
             }          
         }
 
+        public function getContratoInfoBySearch()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM GEC_GESTAO_CONTRATO
+                                WHERE GEC_STCONTRATO <> 'INATIVO' AND 
+                                (
+                                PRS_NGEC_IDGESTAO_CONTRATOMNOME LIKE :search
+                                OR CLI_IDCLIENT LIKE :search
+                                OR GEC_DCEMAILCOBRANCA LIKE :search
+                                OR GEC_DCDESCRICAO LIKE :search
+                                OR GEC_STCONTRATO LIKE :search
+                                OR GEC_DCVALOR LIKE :search
+                                OR GEC_DCPERIODOCOBRANCA LIKE :search
+                                )
+                                ORDER BY GEC_IDGESTAO_CONTRATO ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+
         public function getProductInfo()
         {          
                 // Verifica se a conexão já foi estabelecida
