@@ -264,6 +264,24 @@
             }          
         }
 
+        public function getContratoInfoById($ID)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM GEC_GESTAO_CONTRATO
+                                WHERE GEC_IDGESTAO_CONTRATO = $ID";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getUserInfo()
         {          
                 // Verifica se a conexão já foi estabelecida
