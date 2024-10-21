@@ -19,6 +19,7 @@
   $siteAdmin->getProductInfo();
 
 
+
 // Ordena o array de produtos em ordem alfabética pelo nome
 usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
   return strcmp($a['PRS_NMNOME'], $b['PRS_NMNOME']);
@@ -98,7 +99,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
 			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
-      <option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?>"><?php echo siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"]; ?></option>
+      <option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?>"<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?></option>
       </select>      
       </div>			
 
