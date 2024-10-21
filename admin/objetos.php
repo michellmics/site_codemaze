@@ -460,6 +460,95 @@
             }
         }
 
+        public function updateContratoInfo($GEC_IDGESTAO_CONTRATO,
+        $CLI_IDCLIENT, 
+        $PRS_IDPRODUTO_SERVICO, 
+        $GEC_DTINICONTRATO, 
+        $GEC_DTENDCONTRATO, 
+        $GEC_STCONTRATO, 
+        $GEC_DCPERIODOCOBRANCA, 
+        $GEC_DCFORMAPAGAMENTO, 
+        $GEC_DCEMAILCOBRANCA, 
+        $GEC_DCTELEFONECOBRANCA, 
+        $GEC_DCDESCRICAO,
+        $GEC_DTCONTRATACAO, 
+        $GEC_DTPRAZOENTREGA, 
+        $GEC_DCPERIODO_CARENCIA, 
+        $GEC_DCDESCONTO, 
+        $GEC_DCPERIODO_DESCONTO, 
+        $GEC_DTVENCIMENTO, 
+        $GEC_DCPARCELAMENTO, 
+        $GEC_DCVALOR)
+        {          
+
+            // Conversão das datas para o formato YYYY-MM-DD
+            function convertDate($date) {
+                $dateObj = DateTime::createFromFormat('d/m/Y', $date);
+                return $dateObj ? $dateObj->format('Y-m-d') : null;  // Retorna null se a data for inválida
+            }
+
+            // Converte as datas recebidas do formulário
+            $GEC_DTINICONTRATO = convertDate($GEC_DTINICONTRATO);
+            $GEC_DTENDCONTRATO = convertDate($GEC_DTENDCONTRATO);
+            $GEC_DTCONTRATACAO = convertDate($GEC_DTCONTRATACAO );
+            $GEC_DTPRAZOENTREGA = convertDate($GEC_DTPRAZOENTREGA);
+            $GEC_DTVENCIMENTO = convertDate($GEC_DTVENCIMENTO );
+
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            try {
+                $sql = "UPDATE GEC_GESTAO_CONTRATO SET GEC_DTINICONTRATO = :GEC_DTINICONTRATO,
+                                        GEC_DTENDCONTRATO = :GEC_DTENDCONTRATO,
+                                        GEC_STCONTRATO = :GEC_STCONTRATO,
+                                        GEC_DCPERIODOCOBRANCA = :GEC_DCPERIODOCOBRANCA,
+                                        GEC_DCFORMAPAGAMENTO = :GEC_DCFORMAPAGAMENTO,
+                                        GEC_DCEMAILCOBRANCA = :GEC_DCEMAILCOBRANCA,
+                                        GEC_DCTELEFONECOBRANCA = :GEC_DCTELEFONECOBRANCA,
+                                        GEC_DCDESCRICAO = :GEC_DCDESCRICAO,
+                                        GEC_DTCONTRATACAO = :GEC_DTCONTRATACAO,
+                                        GEC_DTPRAZOENTREGA = :GEC_DTPRAZOENTREGA,
+                                        GEC_DCPERIODO_CARENCIA = :GEC_DTPRAZOENTREGA,
+                                        GEC_DCDESCONTO = :GEC_DCDESCONTO,
+                                        GEC_DCPERIODO_DESCONTO = :GEC_DCPERIODO_DESCONTO,
+                                        GEC_DTVENCIMENTO = :GEC_DTVENCIMENTO,
+                                        GEC_DCPARCELAMENTO = :GEC_DCPARCELAMENTO,
+                                        GEC_DCVALOR = :GEC_DCVALOR";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_IDCLIENT', $CLI_IDCLIENT, PDO::PARAM_STR);
+                $stmt->bindParam(':PRS_IDPRODUTO_SERVICO', $PRS_IDPRODUTO_SERVICO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DTINICONTRATO', $GEC_DTINICONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DTENDCONTRATO', $GEC_DTENDCONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_STCONTRATO', $GEC_STCONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCPERIODOCOBRANCA', $GEC_DCPERIODOCOBRANCA, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCFORMAPAGAMENTO', $GEC_DCFORMAPAGAMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCEMAILCOBRANCA', $GEC_DCEMAILCOBRANCA, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCTELEFONECOBRANCA', $GEC_DCTELEFONECOBRANCA, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCDESCRICAO', $GEC_DCDESCRICAO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DTCONTRATACAO', $GEC_DTCONTRATACAO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DTPRAZOENTREGA', $GEC_DTPRAZOENTREGA, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCPERIODO_CARENCIA', $GEC_DCPERIODO_CARENCIA, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCDESCONTO', $GEC_DCDESCONTO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCPERIODO_DESCONTO', $GEC_DCPERIODO_DESCONTO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DTVENCIMENTO', $GEC_DTVENCIMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCPARCELAMENTO', $GEC_DCPARCELAMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_DCVALOR', $GEC_DCVALOR, PDO::PARAM_STR);
+                
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return ["success" => "Contrato atualizado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA)
         {          
             // Verifica se a conexão já foi estabelecida

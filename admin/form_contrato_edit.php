@@ -18,8 +18,18 @@
   $siteAdmin->getProductInfoById($siteAdmin->ARRAY_CONTRATOINFO[0]["PRS_IDPRODUTO_SERVICO"]);
 
 
+function convertDate($date) 
+{
+    $dateObj = DateTime::createFromFormat('Y-m-d', $date); 
+    return $dateObj ? $dateObj->format('d/m/Y') : null;  // Retorna null se a data for inválida
+}
 
-
+// Converte as datas recebidas do formulário
+$siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTINICONTRATO"] = convertDate($siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTINICONTRATO"]); 
+$siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTENDCONTRATO"] = convertDate($siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTENDCONTRATO"]); 
+$siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTCONTRATACAO"] = convertDate($siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTCONTRATACAO"]); 
+$siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTPRAZOENTREGA"] = convertDate($siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTPRAZOENTREGA"]); 
+$siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"]); 
 
 
 
@@ -80,7 +90,7 @@
                   <h3 class="box-title">Gestão de Contratos</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="contrato_proc.php">
+                <form role="form" method="POST" action="contrato_proc_edit.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
