@@ -91,14 +91,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Clientes</h3>
+                  <h3 class="box-title">Lista de Contratos</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
 
                    <!-- Botão "Adicionar Produto" -->
-                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">
-                        ADICIONAR CLIENTE
+                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_contrato.php';">
+                        ADICIONAR CONTRATO
                       </button>
                     <form method="GET" action="" style="display: flex;">
                         <input 
