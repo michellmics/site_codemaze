@@ -269,8 +269,8 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
                   
                   <div class="box-footer">
-                  <button type="submit" name="salvar_empresa_1" class="btn btn-primary">GERAR CONTRATO</button>
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="submit" name="salvar_empresa_1" class="btn btn-danger">GERAR CONTRATO</button>
                   </div>
                 </form>
               </div>
