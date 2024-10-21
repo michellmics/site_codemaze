@@ -133,6 +133,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM GEC_GESTAO_CONTRATO
+                                WHERE GEC_STCONTRATO <> 'INATIVO'
                                 ORDER BY GEC_IDGESTAO_CONTRATO ASC";
 
                 $stmt = $this->pdo->prepare($sql);
