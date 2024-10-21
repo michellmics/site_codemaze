@@ -354,7 +354,7 @@
               <ul class="treeview-menu">               
                 <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
                 <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Produtos</a></li>
-                <li><a href="#" onclick="loadInIframe('form_contrato.php')"><i class="fa fa-circle-o"></i> Gestão de contratos</a></li>
+                <li><a href="#" onclick="loadInIframe('table_contrato.php')"><i class="fa fa-circle-o"></i> Gestão de contratos</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Lista de OS</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
