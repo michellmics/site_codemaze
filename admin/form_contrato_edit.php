@@ -10,7 +10,11 @@
     exit();
   }
 
-  $id = $_GET['id'];;
+  $id = $_GET['id'];
+
+  echo $id;
+  die();
+  
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getContratoInfoById($id);
 
@@ -104,7 +108,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
       <option value="UNICA"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?></option>
       </select>      
       </div>			
-      		
+
 			<div style="flex: 1; min-width: 240px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
