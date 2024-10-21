@@ -374,7 +374,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
   });
 
   $(document).ready(function() {
-    $('#carencia').mask('00 DIAS', { placeholder: "__ DIAS" });
+    $('#carencia').mask('00DIAS', { placeholder: "__DIAS" });
     // Manipula o evento de envio do formulário
     $('#form-carencia').on('submit', function(e) {
       // Extrai apenas os números da entrada
