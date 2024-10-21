@@ -51,6 +51,8 @@ class registerContrato extends SITE_ADMIN
             $dtvencimento,  
             $parcelamento, 
             $valor);
+
+            echo "Contrato inserido com sucesso. <a href='table_contrato.php'>VOLTAR</a>";
                                       
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
