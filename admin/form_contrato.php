@@ -173,11 +173,11 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
 			</div>
 			<div style="flex: 1; min-width: 110px;">
-			<label>TELEFONE FATURAMENTO</label>
+			<label>TEL FATURAMENTO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefonefaturamento" />
 			</div>
 
-      <div style="flex: 1; min-width: 80px;">
+      <div style="flex: 1; min-width: 60px;">
 			<label>STATUS</label>
 			<select class="form-control" name="statuscontrato" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
