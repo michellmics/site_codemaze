@@ -146,7 +146,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		</div>
 		<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO --> 
 
-    <!-- E-MAIL  TELEFONE 1 TELEFONE 2-->          
+    <!-- INICIO CONTRATO FIM CONTRATO DATA ENTREGA -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       
@@ -174,7 +174,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 			<div style="flex: 1; min-width: 150px;">
 			<label>TEL FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefonefaturamento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="(ex: 19 1234-5678)" required name="telefonefaturamento" />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
@@ -188,30 +188,44 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
 			</div>
 		</div>
-        	<!-- E-MAIL  TELEFONE 1 TELEFONE 2-->
+    <!-- INICIO CONTRATO FIM CONTRATO DATA ENTREGA -->   
+
         	<!-- ENDEREÇO  ESTADO  CIDADE -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-      <div style="flex: 6; min-width: 150px;">
-			<label>ENDEREÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+      
+      <div style="flex: 1; min-width: 50px;">
+			<label>DESCONTO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
-      <div style="flex: 2; min-width: 150px;">
-			<label>CEP</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+
+      <div style="flex: 1; min-width: 50px;">
+			<label>PERÍODO DESCONTO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="QTDE DE DIAS"  name="periododesconto"   />
 			</div>
-			<div style="flex: 2; min-width: 100px;">
-			<label>ESTADO</label>
-			<select class="form-control" name="estado" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>
-                	<option value="AC">AC</option>
-                	<option value="TO">TO</option>
+      
+      <div style="flex: 1; min-width: 50px;">
+			<label>CARÊNCIA</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="QTDE DE DIAS"  name="carencia"   />
+			</div>
+
+      <div style="flex: 1; min-width: 90px;">
+			<label>DATA VENCIMENTO</label>
+      <i class="fa fa-calendar"></i>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="prazoentrega"   />
+			</div>
+
+      <div style="flex: 1; min-width: 110px;">
+			<label>FORMA DE PAGAMENTO</label>
+			<select class="form-control" name="formapagamento" style="width: 100%;">
+                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="CARTAO DE CREDITO">CARTÃO DE CRÉDITO</option>
+                	<option value="PIX">PIX</option>
+                  <option value="OLETO BANCARIO">BOLETO BANCÁRIO</option>
+                  <option value="TRANSFERENCIA BANCARIA">TRANSFERÊNCIA BANCÁRIA</option>
             		</select>
 			</div>
-			<div style="flex: 4; min-width: 150px;">
-			<label>CIDADE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="cidade"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
-			</div>
+
 			</div>
 		</div>
     <!-- ENDEREÇO  ESTADO  CIDADE-->
