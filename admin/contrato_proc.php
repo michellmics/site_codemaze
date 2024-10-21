@@ -51,8 +51,6 @@ class registerContrato extends SITE_ADMIN
             $dtvencimento,  
             $parcelamento, 
             $valor);
-
-            var_dump($result);
                                       
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
