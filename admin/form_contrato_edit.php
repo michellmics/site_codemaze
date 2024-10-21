@@ -12,9 +12,6 @@
 
   $id = $_GET['id'];
 
-  echo $id;
-  die();
-  
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getContratoInfoById($id);
 
