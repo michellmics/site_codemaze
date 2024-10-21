@@ -212,7 +212,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       <div style="flex: 1; min-width: 90px;">
 			<label>DATA VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="prazoentrega"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
@@ -296,6 +296,11 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       });
     });
 
+    $(document).ready(function() {
+      $('#dtvencimento').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
 
 
   </script>
