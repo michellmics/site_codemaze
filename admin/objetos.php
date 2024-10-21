@@ -514,7 +514,8 @@
                                         GEC_DCPERIODO_DESCONTO = :GEC_DCPERIODO_DESCONTO,
                                         GEC_DTVENCIMENTO = :GEC_DTVENCIMENTO,
                                         GEC_DCPARCELAMENTO = :GEC_DCPARCELAMENTO,
-                                        GEC_DCVALOR = :GEC_DCVALOR";
+                                        GEC_DCVALOR = :GEC_DCVALOR
+                                    WHERE GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO";
 
                 $stmt = $this->pdo->prepare($sql);
             
