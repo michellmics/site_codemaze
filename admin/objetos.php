@@ -272,11 +272,11 @@
             try{           
                 $sql = "SELECT *
                                 FROM GEC_GESTAO_CONTRATO
-                                WHERE GEC_IDGESTAO_CONTRATO = $ID";
+                                WHERE GEC_IDGESTAO_CONTRATO = '".$ID."';
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
-                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC); 
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
