@@ -123,7 +123,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       </div>				
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
-			<select class="form-control" name="cobranca" style="width: 100%;">
+			<select class="form-control" name="tipocobranca" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
@@ -249,24 +249,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <option value="TRANSF BANCARIA">TRANSF BANCÁRIA</option>
             		</select>
 			</div>
-      <div style="flex: 1; min-width: 30px;">
-			<label>PARC.</label>
-			<select class="form-control" name="parcelamento" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
-                	<option value="1">1X</option>
-                  <option value="2">2X</option>
-                  <option value="3">3X</option>
-                  <option value="4">4X</option>
-                  <option value="5">5X</option>
-                  <option value="6">6X</option>
-                  <option value="7">7X</option>
-                  <option value="8">8X</option>
-                  <option value="9">9X</option>
-                  <option value="10">10X</option>
-                  <option value="11">11X</option>
-                  <option value="12">12X</option>                	
-      </select>
-			</div>
+
 
 			</div>
 		</div>
