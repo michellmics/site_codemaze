@@ -230,7 +230,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
       <div style="flex: 1; min-width: 50px;">
 			<label>VALOR</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="R$0.000,00"  name="valor"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
@@ -350,6 +350,13 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       });
     });
 
+    $(document).ready(function() {
+      $('#telfaturamento').mask('R$0.000,00', {
+        placeholder: "R$0.000,00"
+      });
+    });
+
+    
 
   </script>
 
