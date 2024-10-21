@@ -226,6 +226,11 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
             		</select>
 			</div>
 
+      <div style="flex: 1; min-width: 50px;">
+			<label>PARCELAMENTO</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" pattern="\d*" class="form-control" placeholder="QTDE DE VEZES"  name="carencia"   />
+			</div>
+
 			</div>
 		</div>
     <!-- fORMA DE PAGAMENTO DATA VENCIMENTO PERÍODO DESCONTO -->
