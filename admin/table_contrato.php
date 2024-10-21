@@ -139,7 +139,7 @@ function getNomeClientbyId($ID)
                       <th>SERVIÇO</th>
                       <th>INI CONTRATO</th>
                       <th>FIM CONTRATO</th> 
-                      <th>TIPO COBRANÇA</th>
+                      <th>TIPO COBRANÇ</th>
                       <th>VENCIMENTO</th>
                       <th>VALOR</th> 
                       <th>STATUS</th>    
