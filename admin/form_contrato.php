@@ -195,17 +195,17 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       
       <div style="flex: 1; min-width: 50px;">
-			<label>DESCONTO</label>
+			<label>DESCONTO (%)</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
-			<label>PER. DESC.</label>
+			<label>PER. DESC. (DIAS)</label>
 			<input type="text" pattern="\d*"  style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
-			<label>CARÊNCIA</label>
+			<label>CARÊNCIA (DIAS)</label>
 			<input type="text" pattern="\d*"  style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
