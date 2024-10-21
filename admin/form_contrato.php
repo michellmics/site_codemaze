@@ -209,6 +209,30 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="QTDE DE DIAS"  name="carencia"   />
 			</div>
 
+      <div style="flex: 1; min-width: 110px;">
+			<label>PARCELAMENTO</label>
+			<select class="form-control" name="parcelamento" style="width: 100%;">
+                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="1">1X</option>
+                  <option value="2">2X</option>
+                  <option value="3">3X</option>
+                  <option value="4">4X</option>
+                  <option value="5">5X</option>
+                  <option value="6">6X</option>
+                  <option value="7">7X</option>
+                  <option value="8">8X</option>
+                  <option value="9">9X</option>
+                  <option value="10">10X</option>
+                  <option value="11">11X</option>
+                  <option value="12">12X</option>                	
+      </select>
+			</div>
+
+      <div style="flex: 1; min-width: 50px;">
+			<label>VALOR</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="R$0.000,00"  name="valor"   />
+			</div>
+
       <div style="flex: 1; min-width: 90px;">
 			<label>DATA VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
@@ -225,10 +249,23 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <option value="TRANSFERENCIA BANCARIA">TRANSFERÊNCIA BANCÁRIA</option>
             		</select>
 			</div>
-
-      <div style="flex: 1; min-width: 50px;">
+      <div style="flex: 1; min-width: 110px;">
 			<label>PARCELAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" pattern="\d*" class="form-control" placeholder="QTDE DE VEZES"  name="carencia"   />
+			<select class="form-control" name="parcelamento" style="width: 100%;">
+                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="1">1X</option>
+                  <option value="2">2X</option>
+                  <option value="3">3X</option>
+                  <option value="4">4X</option>
+                  <option value="5">5X</option>
+                  <option value="6">6X</option>
+                  <option value="7">7X</option>
+                  <option value="8">8X</option>
+                  <option value="9">9X</option>
+                  <option value="10">10X</option>
+                  <option value="11">11X</option>
+                  <option value="12">12X</option>                	
+      </select>
 			</div>
 
 			</div>
