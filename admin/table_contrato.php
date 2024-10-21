@@ -36,7 +36,7 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
 
 //funções
-public function getClientbyId($ID)
+function getClientbyId($ID)
 {
   $siteAdmin->getClientInfoById($ID);
 }
