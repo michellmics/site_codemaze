@@ -38,8 +38,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
 //funções
 function getNomeClientbyId($ID)
 {
-  $siteAdmin->getClientInfoById($ID);
-  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
+  $instCliente = new SITE_ADMIN();
+
+  $instCliente->getClientInfoById($ID);
+  return $instCliente->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
 }
 
 
@@ -139,7 +141,7 @@ function getNomeClientbyId($ID)
                       <th>SERVIÇO</th>
                       <th>INI CONTRATO</th>
                       <th>FIM CONTRATO</th> 
-                      <th>TIPO COBRANÇ</th>
+                      <th>TIPO COBRANÇA</th>
                       <th>VENCIMENTO</th>
                       <th>VALOR</th> 
                       <th>STATUS</th>    
@@ -151,7 +153,7 @@ function getNomeClientbyId($ID)
 
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><? echo getClientById($contrato['CLI_IDCLIENT']); ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getClientById($contrato['CLI_IDCLIENT']); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO ']) ?></td>
