@@ -277,7 +277,8 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
         placeholder: "__/__/____"
       });
     });
-
+  </script>
+  <script>
     $(document).ready(function() {
       $("#telfaturamento").inputmask("(99) 99999-9999", { 
         placeholder: "(__) _____-____" 
