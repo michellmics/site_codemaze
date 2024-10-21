@@ -232,9 +232,9 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		<!-- DESCRIÇÃO-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div class="form-group" style="flex: 0 0 50%;">
+			<div class="form-group" style="flex: 0 0 70%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="200" rows="5" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
+                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="500" rows="8" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
                     	</div>
 			</div>
 		</div>
