@@ -150,29 +150,29 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       
-      <div style="flex: 1; min-width: 130px;">
+      <div style="flex: 1; min-width: 110px;">
 			<label>INICIO CONTRATO</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="iniciocontrato"   />
 			</div>
 
-      <div style="flex: 1; min-width: 130px;">
+      <div style="flex: 1; min-width: 110px;">
 			<label>FIM CONTRATO</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="fimcontrato"   />
 			</div>
 
-      <div style="flex: 1; min-width: 130px;">
+      <div style="flex: 1; min-width: 110px;">
 			<label>PRAZO DE ENTREGA</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="prazoentrega"   />
 			</div>
       
-      <div style="flex: 1; min-width: 300px;">
+      <div style="flex: 1; min-width: 350px;">
 			<label>E-MAIL PARA FATURAMENTO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
 			</div>
-			<div style="flex: 1; min-width: 150px;">
+			<div style="flex: 1; min-width: 110px;">
 			<label>TELEFONE FATURAMENTO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefonefaturamento" />
 			</div>
