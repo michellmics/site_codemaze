@@ -85,7 +85,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
               <!-- INI BLOCO 1 -->
               <div class="box box-primary">
                 <div class="box-header">
-                  <h3 class="box-title">Cadastro de Clientes</h3>
+                  <h3 class="box-title">Gestão de Contratos</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form role="form" method="POST" action="client_proc.php">
@@ -232,9 +232,9 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		<!-- DESCRIÇÃO-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div class="form-group" style="flex: 0 0 70%;">
+			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="500" rows="8" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
+                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="500" rows="6" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
                     	</div>
 			</div>
 		</div>
