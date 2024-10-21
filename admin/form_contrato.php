@@ -199,7 +199,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
 
-      <div style="flex: 1; min-width: 50px;">
+      <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC.</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="QTDE DE DIAS"  name="periododesconto"   />
 			</div>
