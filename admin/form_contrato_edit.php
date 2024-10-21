@@ -118,7 +118,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
 			<select class="form-control" name="tipocobranca" style="width: 100%;">
-                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?>" disabled selected><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?></option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?></option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
                   <option value="TRIMESTRAL">TRIMESTRAL</option>
