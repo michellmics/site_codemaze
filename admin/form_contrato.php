@@ -177,10 +177,10 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefonefaturamento" />
 			</div>
 
-      <div style="flex: 2; min-width: 50px;">
+      <div style="flex: 2; min-width: 50px; min-width: 50px;">
 			<label>STATUS</label>
 			<select class="form-control" name="statuscontrato" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE.</option>
+                	<option value="" disabled selected>SELECIONE</option>
                 	<option value="AC">ATIVO</option>
                 	<option value="TO">INATIVO</option>
             		</select>
