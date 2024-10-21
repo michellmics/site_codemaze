@@ -201,12 +201,12 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
       <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC. (DIAS)</label>
-			<input type="text" pattern="\d*"  style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
+			<input type="text" pattern="\d*"  title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA (DIAS)</label>
-			<input type="text" pattern="\d*"  style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
+			<input type="text" pattern="\d*"  title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
