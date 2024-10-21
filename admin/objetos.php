@@ -518,24 +518,8 @@
                                     WHERE GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO";
 
                 $stmt = $this->pdo->prepare($sql);
-                
-                $val = $GEC_IDGESTAO_CONTRATO." 2 ".
-                $GEC_DTINICONTRATO." 2 ".
-                $GEC_DTENDCONTRATO." 2 ".
-                $GEC_STCONTRATO." 2 ".
-                $GEC_DCPERIODOCOBRANCA." 2 ".
-                $GEC_DCFORMAPAGAMENTO." 2 ".
-                $GEC_DCEMAILCOBRANCA." 2 ".
-                $GEC_DCTELEFONECOBRANCA." 2 ".
-                $GEC_DCDESCRICAO." 2 ".
-                $GEC_DTCONTRATACAO." 2 ".
-                $GEC_DTPRAZOENTREGA." 2 ".
-                $GEC_DCPERIODO_CARENCIA." 2 ".
-                $GEC_DCDESCONTO." 2 ".
-                $GEC_DCPERIODO_DESCONTO." 2 ".
-                $GEC_DTVENCIMENTO." 2 ".
-                $GEC_DCPARCELAMENTO." 2 ".
-                $GEC_DCVALOR." 2 ";
+
+                $val = $GEC_IDGESTAO_CONTRATO." 2 ";
                 return $val;
             
                 // Liga os parâmetros aos valores
