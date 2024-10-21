@@ -36,9 +36,10 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
 
 //funções
-function getClientbyId($ID)
+function getNomeClientbyId($ID)
 {
   $siteAdmin->getClientInfoById($ID);
+  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
 }
 
 
@@ -150,7 +151,7 @@ function getClientbyId($ID)
 
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= getClientById($siteAdmin, $contrato['CLI_IDCLIENT']); ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getClientById($contrato['CLI_IDCLIENT']); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO ']) ?></td>
