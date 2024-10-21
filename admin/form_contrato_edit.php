@@ -194,7 +194,7 @@
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
-			<label>PARCELAMENTO</label>
+			<label>PARCELAMENT</label>
 			<select class="form-control" name="parcelamento" style="width: 100%;">
                 	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?></option>
                 	<option value="1">1X</option>
