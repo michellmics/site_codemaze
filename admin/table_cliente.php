@@ -98,7 +98,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">
-                        ADICIONAR PRODUTO
+                        ADICIONAR CLIENTE
                       </button>
                     <form method="GET" action="" style="display: flex;">
                         <input 
