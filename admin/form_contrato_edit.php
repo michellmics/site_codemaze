@@ -15,7 +15,7 @@
   $siteAdmin = new SITE_ADMIN(); 
   $siteAdmin->getContratoInfoById($id);
 
-  var_dump($siteAdmin->ARRAY_CONTRATOINFO);
+  var_dump($siteAdmin->ARRAY_CLIENTINFO);
   die();
 
   $siteAdmin->getClientInfoById($siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]);
