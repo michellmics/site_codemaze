@@ -159,13 +159,13 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       <div style="flex: 1; min-width: 90px;">
 			<label>FIM CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="fimcontrato"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="fimcontrato" name="fimcontrato"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
 			<label>DATA ENTREGA</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="prazoentrega"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
 			</div>
       
       <div style="flex: 1; min-width: 350px;">
@@ -283,6 +283,20 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
         placeholder: "__/__/____"
       });
     });
+
+    $(document).ready(function() {
+      $('#fimcontrato').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+
+    $(document).ready(function() {
+      $('#prazoentrega').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+
+
 
   </script>
 
