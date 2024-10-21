@@ -17,9 +17,6 @@
   $siteAdmin->getClientInfoById($siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]);
   $siteAdmin->getProductInfo();
 
-  var_dump($siteAdmin->ARRAY_CLIENTINFO);
-  die();
-
 // Ordena o array de produtos em ordem alfabética pelo nome
 usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
   return strcmp($a['PRS_NMNOME'], $b['PRS_NMNOME']);
