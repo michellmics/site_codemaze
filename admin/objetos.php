@@ -154,7 +154,7 @@
                                 FROM GEC_GESTAO_CONTRATO
                                 WHERE GEC_STCONTRATO <> 'INATIVO' AND 
                                 (
-                                GEC_IDGESTAO_CONTRATOMNOME LIKE :search
+                                GEC_IDGESTAO_CONTRATO LIKE :search
                                 OR CLI_IDCLIENT LIKE :search
                                 OR GEC_DCEMAILCOBRANCA LIKE :search
                                 OR GEC_DCDESCRICAO LIKE :search
