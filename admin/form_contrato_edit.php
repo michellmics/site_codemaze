@@ -180,23 +180,23 @@
       
       <div style="flex: 1; min-width: 50px;">
 			<label>DESCONTO (%)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCDESCONTO"] ?>" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC. (DIAS)</label>
-			<input type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
+			<input type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_DESCONTO"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA (DIAS)</label>
-			<input type="text" pattern="\d*" value="0" placeholder="Ex.: 15" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
+			<input type="text" pattern="\d*" value="0" placeholder="Ex.: 15" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_CARENCIA"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
 			<label>PARCELAMENTO</label>
 			<select class="form-control" name="parcelamento" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?></option>
                 	<option value="1">1X</option>
                   <option value="2">2X</option>
                   <option value="3">3X</option>
@@ -214,19 +214,19 @@
 
       <div style="flex: 1; min-width: 50px;">
 			<label>VALOR</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCVALOR"] ?>" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
 			<label>VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] ?>" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
 
       <div style="flex: 1; min-width: 160px;">
 			<label>FORMA DE PAG.</label>
 			<select class="form-control" name="formapagamento" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCFORMAPAGAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["	GEC_DCFORMAPAGAMENTO"] ?></option>
                 	<option value="CARTAO DE CREDITO">C. DE CRÉDITO</option>
                 	<option value="PIX">PIX</option>
                   <option value="BOLETO">BOLETO</option>
@@ -243,7 +243,9 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="600" rows="6" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
+                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="600" rows="6" placeholder="Escreva aqui a descrição do serviço contratado.">
+                        <?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCDESCRICAO"] ?>
+                        </textarea>
                     	</div>
 			</div>
 		</div>
