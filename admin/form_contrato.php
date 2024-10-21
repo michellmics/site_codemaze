@@ -150,19 +150,19 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       
-      <div style="flex: 1; min-width: 110px;">
+      <div style="flex: 1; min-width: 80px;">
 			<label>INICIO CONTRATO</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="iniciocontrato"   />
 			</div>
 
-      <div style="flex: 1; min-width: 110px;">
+      <div style="flex: 1; min-width: 90px;">
 			<label>FIM CONTRATO</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="fimcontrato"   />
 			</div>
 
-      <div style="flex: 1; min-width: 110px;">
+      <div style="flex: 1; min-width: 90px;">
 			<label>PRAZO DE ENTREGA</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="prazoentrega"   />
@@ -175,6 +175,15 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<div style="flex: 1; min-width: 110px;">
 			<label>TELEFONE FATURAMENTO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*"  title="Apenas números, espaços e hífens são permitidos" class="form-control" placeholder="Digite o telefone (ex: 19 1234-5678)" required name="telefonefaturamento" />
+			</div>
+
+      <div style="flex: 2; min-width: 100px;">
+			<label>STATUS</label>
+			<select class="form-control" name="statuscontrato" style="width: 100%;">
+                	<option value="" disabled selected>SELECIONE.</option>
+                	<option value="AC">ATIVO</option>
+                	<option value="TO">INATIVO</option>
+            		</select>
 			</div>
 
 			</div>
