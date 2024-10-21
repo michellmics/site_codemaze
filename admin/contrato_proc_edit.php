@@ -51,6 +51,7 @@ class updateContrato extends SITE_ADMIN
             $dtvencimento,  
             $parcelamento, 
             $valor);
+            var_dump($result);
                                       
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
@@ -104,6 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $valor
     );
 
-    var_dump($result);
+    
 }
 ?>
