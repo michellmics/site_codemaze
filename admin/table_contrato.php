@@ -151,14 +151,15 @@ function getNomeProdutobyId($ID, $siteAdmin)
                   <table class="table table-hover">
                     <tr>
                       <th>ID</th>
+                      <th></th>
                       <th>CLIENTE</th>
                       <th>CPF/CNPJ</th>
                       <th>RAZÃO SOCIAL</th>
                       <th>SERVIÇO</th>
-                      <th>INI CONTRATO</th>
-                      <th>FIM CONTRATO</th> 
-                      <th>TIPO COBRANÇA</th>
-                      <th>VENCIMENTO</th>
+                      <th>INI CONT</th>
+                      <th>FIM CONT</th> 
+                      <th>COBRANÇA</th>
+                      <th>VENC</th>
                       <th>VALOR</th> 
                       <th>STATUS</th>    
                       <th></th>                    
@@ -169,6 +170,7 @@ function getNomeProdutobyId($ID, $siteAdmin)
 
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $contrato['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">PEND</span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getNomeClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getcpfcnpjClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>  
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getRazaoSocialClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
