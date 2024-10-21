@@ -518,6 +518,8 @@
                                     WHERE GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO";
 
                 $stmt = $this->pdo->prepare($sql);
+
+                return $stmt;
             
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
