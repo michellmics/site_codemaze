@@ -78,7 +78,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
         <section class="content">
           <div class="row">
             <!-- left column -->
-            <div class="col-md-10">
+            <div class="col-md-12">
               <!-- general form elements -->
 
               <!-- INI BLOCO 1 -->
