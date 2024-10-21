@@ -51,7 +51,8 @@ class updateContrato extends SITE_ADMIN
             $dtvencimento,  
             $parcelamento, 
             $valor);
-
+            
+            echo "Contrato atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";
                                       
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
