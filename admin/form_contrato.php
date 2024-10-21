@@ -259,7 +259,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="600" rows="5" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
+                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="600" rows="4" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
                     	</div>
 			</div>
 		</div>
@@ -272,15 +272,6 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
-
-
-                  <div class="box-footer">                 
-                    <form method="POST" action="gerar_contrato.php" target="_blank">
-                      <button type="submit" name="salvar_empresa_1" class="btn btn-danger">
-                        GERAR CONTRATO
-                      </button>
-                    </form>
-                  </div>
               </div>
               <!-- FIM BLOCO 1 -->
 
