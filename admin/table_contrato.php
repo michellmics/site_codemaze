@@ -19,21 +19,24 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 }
 else
   {
-    $siteAdmin->getClientInfo();
+    $siteAdmin->getContratoInfo();
   }
 
+var_dump($siteAdmin->ARRAY_CONTRATOINFO);
 
 // Configurações de Paginação
 $registrosPorPagina = 10;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_CLIENTINFO);
+$totalRegistros = count($siteAdmin->ARRAY_CONTRATOINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
+
+die();
 
 ?>
 

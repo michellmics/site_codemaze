@@ -13,6 +13,7 @@
         public $ARRAY_DESCEMPRESAINFO;
         public $ARRAY_CLIENTINFO;
         public $ARRAY_PRODUCTINFO;
+        public $ARRAY_CONTRATOINFO;
         
 
 
@@ -119,6 +120,24 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CLIENTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getContratoInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM GEC_GESTAO_CONTRATO
+                                ORDER BY GEC_IDGESTAO_CONTRATO ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
