@@ -200,7 +200,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 
       <div style="flex: 1; min-width: 50px;">
-			<label>PERÍODO DESCONTO</label>
+			<label>PER. DESC.</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="QTDE DE DIAS"  name="periododesconto"   />
 			</div>
       
@@ -240,7 +240,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
-			<label>FORMA DE PAGAMENTO</label>
+			<label>FORMA DE PAG.</label>
 			<select class="form-control" name="formapagamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="CARTAO DE CREDITO">CARTÃO DE CRÉDITO</option>
