@@ -351,10 +351,15 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
     });
 
     $(document).ready(function() {
-      $('#valor').mask('R$0.000,00', {
-        placeholder: "R$0.000,00"
-      });
+    $('#valor').mask('R$ #.##0,00', { reverse: true });
+
+    // Remover a máscara antes de enviar o formulário
+    $('#form-dinheiro').on('submit', function(e) {
+      const valorComMascara = $('#valor').val();
+      const valorSemMascara = valorComMascara.replace(/[R$\s.]/g, '').replace(',', '.');
+      $('#valor').val(valorSemMascara);
     });
+  });
 
     
 
