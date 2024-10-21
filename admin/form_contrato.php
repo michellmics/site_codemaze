@@ -181,8 +181,8 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<label>STATUS</label>
 			<select class="form-control" name="statuscontrato" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
-                	<option value="AC">ATIVO</option>
-                	<option value="TO">INATIVO</option>
+                	<option value="ATIVO">ATIVO</option>
+                	<option value="INATIVO">INATIVO</option>
             		</select>
 			</div>
 
@@ -243,10 +243,10 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<label>FORMA DE PAG.</label>
 			<select class="form-control" name="formapagamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
-                	<option value="CARTAO DE CREDITO">CARTÃO DE CRÉDITO</option>
+                	<option value="CARTAO DE CREDITO">C. DE CRÉDITO</option>
                 	<option value="PIX">PIX</option>
-                  <option value="OLETO BANCARIO">BOLETO BANCÁRIO</option>
-                  <option value="TRANSFERENCIA BANCARIA">TRANSFERÊNCIA BANCÁRIA</option>
+                  <option value="BOLETO">BOLETO</option>
+                  <option value="TRANSF BANCARIA">TRANSF BANCÁRIA</option>
             		</select>
 			</div>
       <div style="flex: 1; min-width: 30px;">
