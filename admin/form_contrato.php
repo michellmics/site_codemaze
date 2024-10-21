@@ -88,7 +88,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
                   <h3 class="box-title">Gestão de Contratos</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="client_proc.php">
+                <form role="form" method="POST" action="contrato_proc.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
