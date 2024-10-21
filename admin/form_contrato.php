@@ -163,7 +163,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
-			<label>PRAZO DE ENTREGA</label>
+			<label>DATA ENTREGA</label>
       <i class="fa fa-calendar"></i>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="prazoentrega"   />
 			</div>
