@@ -151,7 +151,7 @@ function getNomeClientbyId($ID)
 
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= getClientById($contrato['CLI_IDCLIENT']); ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><? echo getClientById($contrato['CLI_IDCLIENT']); ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO ']) ?></td>
