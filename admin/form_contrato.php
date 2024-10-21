@@ -351,7 +351,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
     });
 
     $(document).ready(function() {
-      $('#telfaturamento').mask('R$0.000,00', {
+      $('#valor').mask('R$0.000,00', {
         placeholder: "R$0.000,00"
       });
     });
