@@ -174,7 +174,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			</div>
 			<div style="flex: 1; min-width: 150px;">
 			<label>TEL FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
@@ -278,13 +278,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       });
     });
   </script>
-  <script>
-    $(document).ready(function() {
-      $("#telfaturamento").inputmask("(99) 99999-9999", { 
-        placeholder: "(__) _____-____" 
-      });
-    });
-  </script>
+ 
 
   </body>
 </html>
