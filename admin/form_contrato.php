@@ -170,7 +170,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       
       <div style="flex: 1; min-width: 350px;">
 			<label>E-MAIL PARA FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="35" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
 			</div>
 			<div style="flex: 1; min-width: 150px;">
 			<label>TEL FATURAMENTO</label>
