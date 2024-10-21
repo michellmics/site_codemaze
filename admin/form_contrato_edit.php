@@ -108,7 +108,7 @@
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
 			<select class="form-control" name="tipocobranca" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?>" disabled selected><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?></option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
                   <option value="TRIMESTRAL">TRIMESTRAL</option>
@@ -119,12 +119,12 @@
 			<div style="flex: 1; min-width: 130px;">
 			<label>DT CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTCONTRATACAO"] ?>" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
 
       <div style="flex: 1;">
 			<label>N. CONTRATO</label>
-			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<? echo $numeroContrato; ?>"/>
+			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTCONTRATACAO"] ?>" />
 			</div>
 		</div>
 		</div>
@@ -137,34 +137,34 @@
       <div style="flex: 1; min-width: 80px;">
 			<label>INICIO CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="iniciocontrato" name="iniciocontrato"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTINICONTRATO"] ?>" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="iniciocontrato" name="iniciocontrato"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
 			<label>FIM CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimcontrato" name="fimcontrato"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTENDCONTRATO"] ?>" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimcontrato" name="fimcontrato"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
 			<label>DATA ENTREGA</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTPRAZOENTREGA"] ?>" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
 			</div>
       
       <div style="flex: 1; min-width: 350px;">
 			<label>E-MAIL PARA FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCEMAILCOBRANCA"] ?>" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
 			</div>
 			<div style="flex: 1; min-width: 150px;">
 			<label>TEL FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCTELEFONECOBRANCA"] ?>" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
 			<label>STATUS</label>
 			<select class="form-control" name="statuscontrato" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_STCONTRATO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_STCONTRATO"] ?></option>
                 	<option value="ATIVO">ATIVO</option>
                 	<option value="INATIVO">INATIVO</option>
             		</select>
