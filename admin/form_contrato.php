@@ -206,7 +206,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control"  id="dias"  name="carencia"   />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="dias"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
