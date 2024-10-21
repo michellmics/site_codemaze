@@ -190,7 +190,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 		</div>
     <!-- INICIO CONTRATO FIM CONTRATO DATA ENTREGA -->   
 
-        	<!-- ENDEREÇO  ESTADO  CIDADE -->          
+    <!-- fORMA DE PAGAMENTO DATA VENCIMENTO PERÍODO DESCONTO -->         
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       
@@ -228,17 +228,17 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
 			</div>
 		</div>
-    <!-- ENDEREÇO  ESTADO  CIDADE-->
-		<!-- OBSERVAÇÕES-->
+    <!-- fORMA DE PAGAMENTO DATA VENCIMENTO PERÍODO DESCONTO -->
+		<!-- DESCRIÇÃO-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
-                      	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
+                      	<label>DESCRIÇÃO</label>
+                      	<textarea class="form-control"  name="descricao" style="width: 100%;" maxlength="200" rows="5" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
                     	</div>
 			</div>
 		</div>
-		<!-- OBSERVAÇÕES-->
+		<!-- DESCRIÇÃO-->
 			
 
 
