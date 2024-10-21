@@ -55,7 +55,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
         <!-- jQuery 2.1.3 -->
-    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 
