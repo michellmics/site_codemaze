@@ -22,8 +22,6 @@ else
     $siteAdmin->getContratoInfo();
   }
 
-var_dump($siteAdmin->ARRAY_CONTRATOINFO);
-
 // Configurações de Paginação
 $registrosPorPagina = 10;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
@@ -35,8 +33,6 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
-
-die();
 
 ?>
 
@@ -125,32 +121,33 @@ die();
                   <table class="table table-hover">
                     <tr>
                       <th>ID</th>
-                      <th>STATUS</th>
-                      <th>NOME</th>
-                      <th>E-MAIL</th>
+                      <th>CLIENTE</th>
                       <th>CPF/CNPJ</th>
                       <th>RAZÃO SOCIAL</th>
-                      <th>CIDADE</th>
-                      <th>ESTADO</th> 
-                      <th>STATUS</th>                      
+                      <th>SERVIÇO</th>
+                      <th>INI CONTRATO</th>
+                      <th>FIM CONTRATO</th> 
+                      <th>TIPO COBRANÇA</th>
+                      <th>VENCIMENTO</th>
+                      <th>VALOR</th> 
+                      <th>STATUS</th>    
+                      <th></th>                    
                     </tr>
                     <tr>
-                    <?php foreach ($dadosPagina as $client): ?>
+                    <?php foreach ($dadosPagina as $contrato): ?>
                     <tr>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;">
-                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Em aberto' ? 'label-danger' : 'label-success' ?>">
-                                <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
-                            </span>
-                        </td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 12px;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $client['CLI_IDCLIENT']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO ']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTINICONTRATO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTVENCIMENTO']) ?></td>  
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCVALOR']) ?></td>  
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_STCONTRATO']) ?></td>                          
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $contrato['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                                            
                       </tr>
                     <?php endforeach; ?>   
