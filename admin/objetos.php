@@ -131,7 +131,7 @@
             
             try{           
                 $sql = "SELECT *
-                                FROM GEC_GESTAO_CONTRATO
+                                FROM VW_TABLE_GESTAO_CONTRATO
                                 WHERE GEC_STCONTRATO <> 'INATIVO'
                                 ORDER BY GEC_IDGESTAO_CONTRATO ASC";
 
@@ -150,11 +150,12 @@
             
             try{           
                 $sql = "SELECT *
-                                FROM GEC_GESTAO_CONTRATO
+                                FROM VW_TABLE_GESTAO_CONTRATO
                                 WHERE GEC_STCONTRATO <> 'INATIVO' AND 
                                 (
-                                GEC_IDGESTAO_CONTRATO LIKE :search
-                                OR CLI_IDCLIENT LIKE :search
+                                GEC_IDGESTAO_CONTRATO LIKE :search                                
+                                OR PRS_NMNOME LIKE :search
+                                OR CLI_NMNAME LIKE :search
                                 OR GEC_DCEMAILCOBRANCA LIKE :search
                                 OR GEC_DCDESCRICAO LIKE :search
                                 OR GEC_STCONTRATO LIKE :search
