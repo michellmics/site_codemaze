@@ -38,12 +38,28 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
 //funções
 function getNomeClientbyId($ID, $siteAdmin)
 {
-  $siteAdmin = new SITE_ADMIN();
-  
+  $siteAdmin = new SITE_ADMIN();  
   $siteAdmin->getClientInfoById($ID);
   return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
 }
-
+function getcpfcnpjClientbyId($ID, $siteAdmin)
+{
+  $siteAdmin = new SITE_ADMIN();  
+  $siteAdmin->getClientInfoById($ID);
+  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"];
+}
+function getRazaoSocialClientbyId($ID, $siteAdmin)
+{
+  $siteAdmin = new SITE_ADMIN();  
+  $siteAdmin->getClientInfoById($ID);
+  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCRSOCIAL"];
+}
+function getNomeProdutobyId($ID, $siteAdmin)
+{
+  $siteAdmin = new SITE_ADMIN();  
+  $siteAdmin->getProductInfoById($ID);
+  return $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_NMNOME"];
+}
 
 
 //-----------------
@@ -154,9 +170,9 @@ function getNomeClientbyId($ID, $siteAdmin)
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= getNomeClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_IDCLIENT']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_IDPRODUTO_SERVICO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getcpfcnpjClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>  
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getRazaoSocialClientbyId($contrato['CLI_IDCLIENT'], $siteAdmin); ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= getNomeProdutobyId($contrato['PRS_IDPRODUTO_SERVICO'], $siteAdmin); ?></td>  
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTINICONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
