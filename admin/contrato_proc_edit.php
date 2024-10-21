@@ -103,5 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $parcelamento, 
         $valor
     );
+
+    var_dump($result);
 }
 ?>
