@@ -239,7 +239,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
 
-      <div style="flex: 1; min-width: 110px;">
+      <div style="flex: 1; min-width: 160px;">
 			<label>FORMA DE PAG.</label>
 			<select class="form-control" name="formapagamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
