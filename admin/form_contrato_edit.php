@@ -101,14 +101,10 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
 			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
-        <option value="" disabled selected><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?></option>
-        <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
-            <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
-                <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
-            </option>
-        <?php endforeach; ?>
-      </select>
-      </div>					
+      <option value="UNICA"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["CLI_IDCLIENT"]; ?></option>
+      </select>      
+      </div>			
+      		
 			<div style="flex: 1; min-width: 240px;">
 			<label>PRODUTO OU SERVIÇO</label>
 			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
