@@ -143,7 +143,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_STPAGAMENTO']) ?></td>                         
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">LIQUIDAR</span></a></td>
                                            
                       </tr>
                     <?php endforeach; ?>   
