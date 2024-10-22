@@ -949,7 +949,7 @@
             // Configurações do e-mail
             $to = "suporte@codemaze.com.br"; 
             $subject = "ATENÇÃO: $SUBJECT";
-            $body = "Nome: $MSG\n";
+            $body = "$MSG\n";
 
             // Adiciona cabeçalhos para o e-mail
             $headers = "From: no-reply@codemaze.com.br\r\n";
