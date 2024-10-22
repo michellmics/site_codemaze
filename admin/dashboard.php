@@ -384,6 +384,18 @@
                 <li><a href="https://conta.hostmidia.com.br/hospedagem/acessar-cpanel/55618/whm/" target="_blank"><i class="fa fa-circle-o"></i> WHM</a></li>
               </ul> 
             </li>            
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-edit"></i> <span>Papelaria</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_MICHELL_FRONT.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Michell</a></li>
+                <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_VANESSA_FRONT.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Vanessa</a></li>
+                <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_BACK.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Back</a></li>
+              </ul> 
+            </li>            
             
             
             
