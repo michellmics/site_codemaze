@@ -142,11 +142,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                     <tr>
                         <? 
                           $result = $siteAdmin->getPendenciaInfo($contrato['GEC_IDGESTAO_CONTRATO']);
-                          var_dump($result); 
+                          if($result == "PEND"){$icon = "label label-danger";}
+                          if($result != "PEND"){$icon = "label label-success";}
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="label label-danger">PEND</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?>"><span class="l<? echo $icon; ?>"><? echo $result; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCCPFCNPJ']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCRSOCIAL']) ?></td>
