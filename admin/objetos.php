@@ -220,7 +220,7 @@
             }          
         }
 
-        public function updateLiquidacaoFinanceiraById($LFI_IDLIQUIDACAOFINANCEIRA, $ACAO)
+        public function updateLiquidacaoFinanceiraById($LFI_IDLIQUIDACAOFINANCEIRA, $ACAO, $LFI_DTPAGAMENTO)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -242,7 +242,8 @@
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':LFI_IDLIQUIDACAOFINANCEIRA', $LFI_IDLIQUIDACAOFINANCEIRA, PDO::PARAM_STR);
                 $stmt->bindParam(':LFI_STPAGAMENTO', $ACAO, PDO::PARAM_STR);
-                $stmt->bindParam(':LFI_DTPAGAMENTO', $DATA, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DTPAGAMENTOPROC', $DATA, PDO::PARAM_STR);
+                stmt->bindParam(':LFI_DTPAGAMENTO', $LFI_DTPAGAMENTO, PDO::PARAM_STR);
 
                 $stmt->execute();
             
