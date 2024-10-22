@@ -161,11 +161,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td> 
                         <td>
-			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="datapagamento" name="datapagamento"   />
+			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="pagamento" name="pagamento"   />
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
                           <a href="#" 
-                             onclick="return confirmarLiquidacao(event,<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                             onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                              <span class="label label-info">LIQUIDAR</span>
                           </a>
                         </td>
@@ -221,7 +221,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
       function confirmarLiquidacao(id) 
       {
-        const datapagamento = document.getElementById('datapagamento').value;
+        const datapagamento = document.getElementById('pagamento').value;
 
         if (!datapagamento) {
             alert("Por favor, insira a data de pagamento.");
