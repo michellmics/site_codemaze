@@ -14,15 +14,15 @@ $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['update']))
 {
-  $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
-
+  $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
+  var_dump($result);
 }
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
 {
   $search = $_GET['table_search'];
   $result = $siteAdmin->getLiquidacaoFinanceiraInfoBySearch($search);
-  var_dump($result);
+  
 }
 else
   {
