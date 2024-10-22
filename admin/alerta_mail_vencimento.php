@@ -13,7 +13,7 @@ echo "</pre>";
 
 foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 {
-    echo $arra["LFI_STPAGAMENTO"];
+    echo $array["LFI_STPAGAMENTO"];
 }
 
 ?>
