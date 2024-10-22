@@ -160,9 +160,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTOPROC']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td> 
                         <td>
-			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dataPagamaneto" name="dataPagamaneto"   />
+			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" value="<?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?>" class="form-control" placeholder="DD/MM/YYYY" id="dataPagamaneto" name="dataPagamaneto"   />
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
                           <a href="#" 
