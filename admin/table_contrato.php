@@ -16,7 +16,6 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 {
   $search = $_GET['table_search'];
   $result = $siteAdmin->getContratoInfoBySearch($search);
-  var_dump($result);
 }
 else
   {

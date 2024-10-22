@@ -13,8 +13,7 @@
         public $ARRAY_DESCEMPRESAINFO;
         public $ARRAY_CLIENTINFO;
         public $ARRAY_PRODUCTINFO;
-        public $ARRAY_CONTRATOINFO;   
-        public $ARRAY_CONTRATOINFOS;     
+        public $ARRAY_CONTRATOINFO;    
 
 
         function conexao()
@@ -144,7 +143,7 @@
             }          
         }
 
-        public function getContratoInfoBySearch()
+        public function getContratoInfoBySearch($search)
         {          
                 // Verifica se a conexão já foi estabelecida
                 if(!$this->pdo){$this->conexao();}
@@ -166,8 +165,7 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
-                $this->ARRAY_CONTRATOINFOS = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                return $this->ARRAY_CONTRATOINFOS;
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
