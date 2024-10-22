@@ -162,6 +162,38 @@
             }          
         }
 
+        public function getPendenciaInfo($GEC_IDGESTAO_CONTRATO)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+                                WHERE GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO
+                                ORDER BY LFI_STPAGAMENTO DESC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
+                $stmt->execute();
+                $arrayResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                foreach ($arrayResult as $contrato)
+                {
+                    $now = new DateTime(); 
+                    $vencimento = new DateTime($contrato['LFI_DTVENCIMENTO']); 
+                    
+                    // Calcula a diferença em dias
+                    $diferenca = (int)$now->diff($vencimento)->format('%r%a');
+
+                    if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO"){return "NOK";}  
+                }
+                return "OK";
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getLiquidacaoFinanceiraInfoBySearch($search)
         {          
                 // Verifica se a conexão já foi estabelecida

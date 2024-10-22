@@ -140,6 +140,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                     <tr>
                     <?php foreach ($dadosPagina as $contrato): ?>
                     <tr>
+                        <? 
+                          $result = $siteAdmin->getPendenciaInfo($contrato['GEC_IDGESTAO_CONTRATO']);
+                          var_dump($result); 
+                        ?>
+
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="label label-danger">PEND</span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_NMNAME']) ?></td>
