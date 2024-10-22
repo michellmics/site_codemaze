@@ -16,7 +16,6 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 {
   $search = $_GET['table_search'];
   $result = $siteAdmin->getContratoInfoBySearch($search);
-  var_dump($siteAdmin->ARRAY_CONTRATOINFOO);
 }
 else
   {
@@ -168,8 +167,6 @@ function getNomeProdutobyId($ID, $siteAdmin)
                     <tr>
                     <?php foreach ($dadosPagina as $contrato): ?>
                     <tr>
-
-
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="label label-danger">PEND</span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_NMNAME']) ?></td>

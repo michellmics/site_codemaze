@@ -156,8 +156,6 @@
                                 GEC_IDGESTAO_CONTRATO LIKE :search                                
                                 OR PRS_NMNOME LIKE :search
                                 OR CLI_NMNAME LIKE :search
-                                OR GEC_DCEMAILCOBRANCA LIKE :search
-                                OR GEC_DCDESCRICAO LIKE :search
                                 OR GEC_STCONTRATO LIKE :search
                                 OR GEC_DCVALOR LIKE :search
                                 OR GEC_DCPERIODOCOBRANCA LIKE :search
