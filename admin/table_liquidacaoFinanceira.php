@@ -165,13 +165,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 			                  <input  type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
-                          <a href="#" 
-                             onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
-                             <span class="label label-info">LIQUIDAR</span>
-                          </a>
-                        </td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>
-                                           
+                            <a href="#" 
+                               id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
+                               onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                               <span class="label label-info">LIQUIDAR</span>
+                            </a>
+                        </td>           
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
@@ -228,15 +227,19 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
         alert("Por favor, insira a data de pagamento.");
         return false;
     }
-            
+    
     if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
         const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
-        alert(url);
+        
+        // Redireciona para a URL gerada
+        window.location.href = url;
 
-        return true;
+        return true; // Pode ser omitido aqui, já que estamos redirecionando
     }
-    return false;
+    
+    return false; // Retorna false se o usuário cancelar
 }
+
 
     </script>              
     
