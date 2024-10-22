@@ -166,6 +166,7 @@
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
                 $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $this->ARRAY_CONTRATOINFO;
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
