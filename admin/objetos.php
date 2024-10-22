@@ -152,7 +152,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM VW_TABLE_LIQUIDACAOFINANCEIRA
-                                ORDER BY LFI_STPAGAMENTO DESC";
+                                ORDER BY LFI_DTVENCIMENTO DESC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
