@@ -152,7 +152,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM VW_TABLE_LIQUIDACAOFINANCEIRA
-                                ORDER BY LFI_DTVENCIMENTO DESC";
+                                ORDER BY LFI_STPAGAMENTO DESC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
@@ -176,7 +176,7 @@
                                 OR PRS_NMNOME LIKE :search
                                 OR LFI_DTVENCIMENTO LIKE :search
                                 OR LFI_STPAGAMENTO LIKE :search
-                                ORDER BY LFI_DTVENCIMENTO DESC";
+                                ORDER BY LFI_STPAGAMENTO DESC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
