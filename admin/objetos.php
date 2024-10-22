@@ -187,6 +187,37 @@
             }          
         }
 
+        public function updateLiquidacaoFinanceiraById($LFI_IDLIQUIDACAOFINANCEIRA, $ACAO)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            $now = new DateTime(); 
+            $DATA = $now->format('Y-m-d');
+            
+            try {
+                $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
+                        SET LFI_STPAGAMENTO = :LFI_STPAGAMENTO,
+                        LFI_DTPAGAMENTO = :LFI_DTPAGAMENTO
+                        WHERE LFI_IDLIQUIDACAOFINANCEIRA = :LFI_IDLIQUIDACAOFINANCEIRA";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':LFI_IDLIQUIDACAOFINANCEIRA', $LFI_IDLIQUIDACAOFINANCEIRA, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_STPAGAMENTO', $ACAO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DTPAGAMENTO', $DATA, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Produto atualizado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function getContratoInfoBySearch($search)
         {          
                 // Verifica se a conexão já foi estabelecida
