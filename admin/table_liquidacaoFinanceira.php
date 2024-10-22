@@ -16,7 +16,7 @@ if(isset($_GET['update']))
 {
 
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
-  echo "to aqui";
+  echo "to aqui 2";
   die();
 
 }
