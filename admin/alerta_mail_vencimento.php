@@ -23,7 +23,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
         echo $diferenca;
         echo "-";
-        echo $vencimento;
+        echo $array['LFI_STPAGAMENTO'];
 
         if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
