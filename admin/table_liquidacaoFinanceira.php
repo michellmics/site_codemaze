@@ -14,6 +14,8 @@ $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['update']))
 {
+  echo "to aqui";
+  die();
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
 
 }
