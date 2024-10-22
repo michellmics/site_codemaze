@@ -158,8 +158,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td>                     
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=LIQUIDADO" target="_self"><span class="label label-info">LIQUIDAR</span></a></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self"><span class="label label-default">DEIXAR ABERTO</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=LIQUIDADO" target="_self" onclick="return confirmacao();"><span class="label label-info">LIQUIDAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>
                                            
                       </tr>
                     <?php endforeach; ?>   
@@ -202,6 +202,15 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- FastClick -->
     <script src='plugins/fastclick/fastclick.min.js'></script>
+
+    <script>
+      function confirmacao() 
+      {
+        return confirm("Tem certeza que deseja mudar o status do pagamento");
+      }
+    </script>              
+
+
 
   </body>
 </html>
