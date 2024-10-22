@@ -31,19 +31,23 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
 
             $subject = "Pendência de Pagamento";
-            $msg = "Olá $contato, bom dia! <br><br>
-            Identificamos pendência(s) de pagamento em nosso sistema relacionadas à sua conta. <br>
-            Pedimos que entre em contato conosco o quanto antes para regularizar a situação e evitar a suspensão de seus serviços.<br><br><br>
-
-            Estamos à disposição para ajudá-lo(a)!<br>
-            Atenciosamente,<br><br>
-
-            Vanessa Kuasne - Departamento Financeiro <br>
-            Codemaze - Soluções de MKT e Software<br><br>
-            vanessa.kuasne@codemaze.com.br<br>
-            faleconosco@codemaze.com.br<br>
-            suporte@codemaze.com.br<br>
-            codemaze.com.br<br>";
+            $msg = "
+                    Olá <b>$contato</b>, bom dia! <br><br>
+                    Identificamos pendência(s) de pagamento em nosso sistema relacionadas à sua conta. <br>
+                    Pedimos que entre em contato conosco o quanto antes para regularizar a situação e evitar a suspensão de seus serviços.<br><br>
+                            
+                    Estamos à disposição para ajudá-lo(a)!<br>
+                    Atenciosamente,<br><br>
+                            
+                    Vanessa Kuasne - Departamento Financeiro <br><br>
+                    <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
+                            
+                    Codemaze - Soluções de MKT e Software<br><br>
+                    vanessa.kuasne@codemaze.com.br<br>
+                    faleconosco@codemaze.com.br<br>
+                    suporte@codemaze.com.br<br>
+                    <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
+                    ";
 
             $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança);
             echo "Cobrança para $contato <br>";
