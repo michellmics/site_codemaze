@@ -117,7 +117,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
 
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
-			<select class="form-control" name="tipocobranca" style="width: 100%;">
+			<select readonly class="form-control" name="tipocobranca" style="width: 100%;">
                 	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODOCOBRANCA"] ?></option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
@@ -195,17 +195,17 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
 
       <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC. (DIAS)</label>
-			<input type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_DESCONTO"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
+			<input readonly type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_DESCONTO"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA (DIAS)</label>
-			<input type="text" pattern="\d*" value="0" placeholder="Ex.: 15" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_CARENCIA"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
+			<input readonly type="text" pattern="\d*" value="0" placeholder="Ex.: 15" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPERIODO_CARENCIA"] ?>" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
 			<label>PARCELAMENT</label>
-			<select class="form-control" name="parcelamento" style="width: 100%;">
+			<select readonly class="form-control" name="parcelamento" style="width: 100%;">
                 	<option value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?>"><?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCPARCELAMENTO"] ?></option>
                 	<option value="1">1X</option>
                   <option value="2">2X</option>
