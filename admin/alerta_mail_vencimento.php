@@ -25,10 +25,10 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         echo "-";
         echo $vencimento;
 
-        if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
-            $contato = $contrato['CLI_NMNAME'];
-            $emalCobrança = $contrato['GEC_DCEMAILCOBRANCA']; 
+            $contato = $array['CLI_NMNAME'];
+            $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
 
             $subject = "Pendência de Pagamento";
             $msg = "Olá $contato, bom dia! <br><br>
