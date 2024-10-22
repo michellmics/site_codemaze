@@ -233,7 +233,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
 
           // Redireciona para a URL gerada
-          window.location.href = url;
+          window.parent.location.href = url;
 
           return true; // Pode ser omitido aqui, já que estamos redirecionando
       }
