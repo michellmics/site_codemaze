@@ -165,7 +165,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
                           <a href="#" 
-                             onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                             onclick="return confirmarLiquidacao(event,<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                              <span class="label label-info">LIQUIDAR</span>
                           </a>
                         </td>
@@ -229,7 +229,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
         }
       
         if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
-            const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(dataPagamento)}`;
+            const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
             window.location.href = url; // Redireciona para a URL construída
             return true;
         }
