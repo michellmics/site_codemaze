@@ -13,7 +13,8 @@
         public $ARRAY_DESCEMPRESAINFO;
         public $ARRAY_CLIENTINFO;
         public $ARRAY_PRODUCTINFO;
-        public $ARRAY_CONTRATOINFO;      
+        public $ARRAY_CONTRATOINFO;   
+        public $ARRAY_CONTRATOINFOS;     
 
 
         function conexao()
@@ -165,8 +166,8 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
-                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                return $this->ARRAY_CONTRATOINFO;
+                $this->ARRAY_CONTRATOINFOS = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $this->ARRAY_CONTRATOINFOS;
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
