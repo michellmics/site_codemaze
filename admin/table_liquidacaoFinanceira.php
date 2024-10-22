@@ -231,8 +231,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
             
     if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
         const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
-        alertt("datapagamento");
-        window.location.href = url;
+        alert(url);
+
         return true;
     }
     return false;
