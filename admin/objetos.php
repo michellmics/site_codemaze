@@ -228,6 +228,8 @@
             }
             $now = new DateTime(); 
             $DATA = $now->format('Y-m-d');
+
+            if($ACAO == "ABERTO"){$DATA = "";}
             
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
