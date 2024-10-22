@@ -177,6 +177,7 @@
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
                 $stmt->execute();
                 $arrayResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                if(count($arrayResult) == 0){return "Sem Dados";}
                 
                 foreach ($arrayResult as $contrato)
                 {
@@ -186,9 +187,9 @@
                     // Calcula a diferença em dias
                     $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
-                    if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO"){return "Pend";}  
+                    if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO"){return "PEND";}  
                 }
-                return "Em Dia";
+                return "EM DIA";
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
