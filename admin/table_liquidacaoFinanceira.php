@@ -16,8 +16,6 @@ if(isset($_GET['update']))
 {
 
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
-  var_dump($result);
-  die();
 
 }
 
