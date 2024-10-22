@@ -14,7 +14,9 @@ $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['update']))
 {
-  $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao']);
+  $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
+  echo $_GET['dataPagamento'];
+  die();
 }
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
@@ -159,9 +161,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td> 
                         <td>
-			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimcontrato" name="fimcontrato"   />
+			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dataPagamaneto" name="dataPagamaneto"   />
                         </td>                   
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=LIQUIDADO" target="_self" onclick="return confirmacao();"><span class="label label-info">LIQUIDAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;">
+                          <a href="#" 
+                             onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                             <span class="label label-info">LIQUIDAR</span>
+                          </a>
+                        </td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>
                                            
                       </tr>
@@ -211,8 +218,25 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       {
         return confirm("Tem certeza que deseja mudar o status do pagamento");
       }
-    </script>              
 
+      function confirmarLiquidacao(id) 
+      {
+        const dataPagamento = document.getElementById('dataPagamaneto').value;
+
+        if (!dataPagamento) {
+            alert("Por favor, insira a data de pagamento.");
+            return false;
+        }
+      
+        if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
+            const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(dataPagamento)}`;
+            window.location.href = url; // Redireciona para a URL construída
+            return true;
+        }
+          return false; // Cancela a ação se não confirmado
+        }
+    </script>              
+    
 
 
   </body>
