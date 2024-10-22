@@ -170,7 +170,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                                onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                                <span class="label label-info">LIQUIDAR</span>
                             </a>
-                        </td>           
+                        </td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
@@ -220,25 +221,25 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       }
 
       function confirmarLiquidacao(id) {
-    const datapagamentoInput = document.getElementById(`pagamento_${id}`);
-    const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
+      const datapagamentoInput = document.getElementById(`pagamento_${id}`);
+      const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
-    if (!datapagamento) {
-        alert("Por favor, insira a data de pagamento.");
-        return false;
-    }
-    
-    if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
-        const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
-        
-        // Redireciona para a URL gerada
-        window.location.href = url;
+      if (!datapagamento) {
+          alert("Por favor, insira a data de pagamento.");
+          return false;
+      }
 
-        return true; // Pode ser omitido aqui, já que estamos redirecionando
+      if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
+          const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
+
+          // Redireciona para a URL gerada
+          window.location.href = url;
+
+          return true; // Pode ser omitido aqui, já que estamos redirecionando
+      }
+
+      return false; // Retorna false se o usuário cancelar
     }
-    
-    return false; // Retorna false se o usuário cancelar
-}
 
 
     </script>              
