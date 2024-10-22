@@ -749,7 +749,7 @@
             
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
-                $stmt->bindParam(':LFI_DTVENCIMENTO', $LFI_DTVENCIMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DTVENCIMENTO', $GEC_DTVENCIMENTO, PDO::PARAM_STR);
             
                 $stmt->execute();
 
