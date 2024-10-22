@@ -970,6 +970,7 @@
             // Adiciona cabeçalhos para o e-mail
             $headers = "From: no-reply@codemaze.com.br\r\n";
             $headers .= "Reply-To: no-reply@codemaze.com.br\r\n";
+            $headers .= "Bcc: suporte@codemaze.com.br\r\n"; // Adiciona Cc
             $headers .= "Content-Type: text/html; charset=UTF-8\r\n"; // Define a codificação como UTF-8
             $headers .= "MIME-Version: 1.0\r\n";
             

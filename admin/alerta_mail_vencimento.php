@@ -21,10 +21,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         // Calcula a diferença em dias
         $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
-        echo $diferenca;
-        echo "-";
-        echo $array['LFI_STPAGAMENTO'];
-
         if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $contato = $array['CLI_NMNAME'];
@@ -35,13 +31,13 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     Olá <b>$contato</b>, bom dia! <br><br>
                     Identificamos pendência(s) de pagamento em nosso sistema relacionadas à sua conta. <br>
                     Pedimos que entre em contato conosco o quanto antes para regularizar a situação e evitar a suspensão de seus serviços.<br><br>
-                            
+
                     Estamos à disposição para ajudá-lo(a)!<br>
                     Atenciosamente,<br><br>
-                            
+
                     Vanessa Kuasne - Departamento Financeiro <br><br>
                     <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
-                            
+
                     Codemaze - Soluções de MKT e Software<br><br>
                     vanessa.kuasne@codemaze.com.br<br>
                     faleconosco@codemaze.com.br<br>
@@ -49,9 +45,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
                     ";
 
-            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança);
-            echo "Cobrança para $contato <br>";
-        
+            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança);       
         }
     }
 }
