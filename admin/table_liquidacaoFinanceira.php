@@ -15,8 +15,7 @@ $siteAdmin = new SITE_ADMIN();
 if(isset($_GET['update']))
 {
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$_GET['dataPagamento']);
-  echo "teste";
-  die();
+
 }
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
@@ -215,7 +214,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
     <script src='plugins/fastclick/fastclick.min.js'></script>
 
     <script>
-      
+      function confirmacao() 
+      {
+        return confirm("Tem certeza que deseja mudar o status do pagamento");
+      }
 
       function confirmarLiquidacao(id) {
     const datapagamentoInput = document.getElementById(`pagamento_${id}`);
@@ -225,9 +227,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
         alert("Por favor, insira a data de pagamento.");
         return false;
     }
-    const url2 = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
-        
-    if (confirm(url2)) {
+            
+    if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
         const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
         alertt("datapagamento");
         window.location.href = url;
