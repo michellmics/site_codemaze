@@ -142,8 +142,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                     <tr>
                         <? 
                           $result = $siteAdmin->getPendenciaInfo($contrato['GEC_IDGESTAO_CONTRATO']);
-                          if($result == "PEND"){$icon = "label label-danger";}
-                          if($result != "PEND"){$icon = "label label-success";}
+                          if($result == "Pend"){$icon = "label label-danger";}
+                          if($result != "Pend"){$icon = "label label-success";}
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>

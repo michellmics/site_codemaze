@@ -186,9 +186,9 @@
                     // Calcula a diferença em dias
                     $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
-                    if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO"){return "PEND";}  
+                    if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO"){return "Pend";}  
                 }
-                return "EM DIA";
+                return "Em Dia";
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
