@@ -242,7 +242,7 @@
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':LFI_IDLIQUIDACAOFINANCEIRA', $LFI_IDLIQUIDACAOFINANCEIRA, PDO::PARAM_STR);
                 $stmt->bindParam(':LFI_STPAGAMENTO', $ACAO, PDO::PARAM_STR);
-                stmt->bindParam(':LFI_DTPAGAMENTO', $LFI_DTPAGAMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DTPAGAMENTO', $LFI_DTPAGAMENTO, PDO::PARAM_STR);
 
                 $stmt->execute();
             
