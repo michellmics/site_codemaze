@@ -24,6 +24,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $contato = $contrato['CLI_NMNAME'];
+            $emalCobrança = $contrato['GEC_DCEMAILCOBRANCA']; 
 
             $subject = "Pendência de Pagamento";
             $msg = "Olá $contato, bom dia! <br><br>
@@ -40,7 +41,8 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             suporte@codemaze.com.br<br>
             codemaze.com.br<br>";
 
-            $siteAdmin->notifyEmail($subject, $msg);
+            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança);
+            echo "Cobrança para $contato <br>";
         
         }
     }

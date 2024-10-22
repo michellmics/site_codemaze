@@ -959,4 +959,20 @@
             
             mail($to, $subject, $body, $headers);        
         }
+
+        public function notifyPendenciasEmail($SUBJECT, $MSG, $CONTATO)
+        {
+            // Configurações do e-mail
+            $to = $CONTATO; 
+            $subject = "ATENÇÃO: $SUBJECT";
+            $body = "$MSG\n";
+
+            // Adiciona cabeçalhos para o e-mail
+            $headers = "From: no-reply@codemaze.com.br\r\n";
+            $headers .= "Reply-To: no-reply@codemaze.com.br\r\n";
+            $headers .= "Content-Type: text/plain; charset=UTF-8\r\n"; // Define a codificação como UTF-8
+            $headers .= "MIME-Version: 1.0\r\n";
+            
+            mail($to, $subject, $body, $headers);        
+        }
     }
