@@ -177,7 +177,7 @@
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
                 $stmt->execute();
                 $arrayResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                if(count($arrayResult) == 0){return "SEM DADOS";}
+                if(count($arrayResult) == 0){return "Sem Dados";}
                 
                 foreach ($arrayResult as $contrato)
                 {
