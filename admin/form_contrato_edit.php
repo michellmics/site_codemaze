@@ -190,7 +190,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
       
       <div style="flex: 1; min-width: 50px;">
 			<label>DESCONTO (%)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCDESCONTO"] ?>" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
+			<input readonly type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCDESCONTO"] ?>" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
@@ -230,7 +230,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
       <div style="flex: 1; min-width: 90px;">
 			<label>VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] ?>" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
+			<input readonly type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] ?>" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
 
       <div style="flex: 1; min-width: 160px;">
