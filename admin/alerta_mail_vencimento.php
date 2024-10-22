@@ -16,7 +16,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
     if($array["LFI_STPAGAMENTO"] != "LIQUIDADO")
     {
         $now = new DateTime(); 
-        $vencimento = new DateTime($contrato['LFI_DTVENCIMENTO']); 
+        $vencimento = new DateTime($array['LFI_DTVENCIMENTO']); 
         
         // Calcula a diferença em dias
         $diferenca = (int)$now->diff($vencimento)->format('%r%a');
