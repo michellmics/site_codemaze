@@ -711,9 +711,43 @@
                 $stmt->bindParam(':GEC_DCVALOR', $GEC_DCVALOR, PDO::PARAM_STR);
                 
                 $stmt->execute();
+
+                //insere as parcelas na tabela de controle de liquidação financeira
+                $dataVencimento = new DateTime($GEC_DTVENCIMENTO);
+                for($x=0; $x < $GEC_DCPARCELAMENTO; $x++)
+                {
+                    $this->insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $dataVencimento->format('Y-m-d'));
+                    $dataVencimento->modify('+1 month');
+                }
             
                 // Retorna uma mensagem de sucesso (opcional)
                 return ["success" => "Contrato inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
+        public function insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $GEC_DTVENCIMENTO)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+        
+            try {
+                $sql = "INSERT INTO LFI_LIQUIDACAOFINANCEIRA 
+                        (GEC_IDGESTAO_CONTRATO, LFI_DTVENCIMENTO) 
+                        VALUES (:GEC_IDGESTAO_CONTRATO, :LFI_DTVENCIMENTO)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DTVENCIMENTO', $LFI_DTVENCIMENTO, PDO::PARAM_STR);
+            
+                $stmt->execute();
+
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
