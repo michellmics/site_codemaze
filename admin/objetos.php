@@ -234,7 +234,8 @@
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
                         SET LFI_STPAGAMENTO = :LFI_STPAGAMENTO,
-                        LFI_DTPAGAMENTO = :LFI_DTPAGAMENTO
+                        LFI_DTPAGAMENTO = :LFI_DTPAGAMENTO,
+                        LFI_DTPAGAMENTOPROC = :LFI_DTPAGAMENTOPROC
                         WHERE LFI_IDLIQUIDACAOFINANCEIRA = :LFI_IDLIQUIDACAOFINANCEIRA";
 
                 $stmt = $this->pdo->prepare($sql);
