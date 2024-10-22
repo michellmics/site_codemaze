@@ -717,7 +717,12 @@
                 for($x=0; $x < $GEC_DCPARCELAMENTO; $x++)
                 {
                     $this->insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $dataVencimento->format('Y-m-d'));
-                    $dataVencimento->modify('+1 month');
+                    
+                    if($GEC_DCPERIODOCOBRANCA == "MENSAL"){$dataVencimento->modify('+1 month');}
+                    if($GEC_DCPERIODOCOBRANCA == "TRIMESTRAL"){$dataVencimento->modify('+3 month');}
+                    if($GEC_DCPERIODOCOBRANCA == "SEMESTRAL"){$dataVencimento->modify('+6 month');}
+                    if($GEC_DCPERIODOCOBRANCA == "ANUAL"){$dataVencimento->modify('+12 month');}                   
+                    
                 }
             
                 // Retorna uma mensagem de sucesso (opcional)
