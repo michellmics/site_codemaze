@@ -16,6 +16,7 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 {
   $search = $_GET['table_search'];
   $result = $siteAdmin->getContratoInfoBySearch($search);
+  var_dump($result);
 }
 else
   {
@@ -34,33 +35,6 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
-
-//funções
-function getNomeClientbyId($ID, $siteAdmin)
-{
-  $siteAdmin = new SITE_ADMIN();  
-  $siteAdmin->getClientInfoById($ID);
-  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_NMNAME"];
-}
-function getcpfcnpjClientbyId($ID, $siteAdmin)
-{
-  $siteAdmin = new SITE_ADMIN();  
-  $siteAdmin->getClientInfoById($ID);
-  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"];
-}
-function getRazaoSocialClientbyId($ID, $siteAdmin)
-{
-  $siteAdmin = new SITE_ADMIN();  
-  $siteAdmin->getClientInfoById($ID);
-  return $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCRSOCIAL"];
-}
-function getNomeProdutobyId($ID, $siteAdmin)
-{
-  $siteAdmin = new SITE_ADMIN();  
-  $siteAdmin->getProductInfoById($ID);
-  return $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_NMNOME"];
-}
-
 
 //-----------------
 
