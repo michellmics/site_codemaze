@@ -14,6 +14,7 @@
         public $ARRAY_CLIENTINFO;
         public $ARRAY_PRODUCTINFO;
         public $ARRAY_CONTRATOINFO;    
+        public $ARRAY_LIQUIDACAOFINANCEIRA; 
 
 
         function conexao()
@@ -138,6 +139,49 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getLiquidacaoFinanceiraInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+                                ORDER BY LFI_STPAGAMENTO DESC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_LIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getLiquidacaoFinanceiraInfoBySearch($search)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+                                WHERE
+                                GEC_IDGESTAO_CONTRATO LIKE :search                                
+                                OR CLI_NMNAME LIKE :search
+                                OR PRS_NMNOME LIKE :search
+                                OR LFI_DTVENCIMENTO LIKE :search
+                                OR LFI_STPAGAMENTO LIKE :search
+                                ORDER BY LFI_DTVENCIMENTO DESC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_LIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
