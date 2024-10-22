@@ -714,15 +714,17 @@
 
                 //insere as parcelas na tabela de controle de liquidação financeira
                 $dataVencimento = new DateTime($GEC_DTVENCIMENTO);
+                $NUMPARCELA = 1;
                 for($x=0; $x < $GEC_DCPARCELAMENTO; $x++)
                 {
-                    $this->insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $dataVencimento->format('Y-m-d'));
+                    $this->insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $dataVencimento->format('Y-m-d'), $GEC_DCVALOR, $NUMPARCELA);
                     
                     if($GEC_DCPERIODOCOBRANCA == "MENSAL"){$dataVencimento->modify('+1 month');}
                     if($GEC_DCPERIODOCOBRANCA == "TRIMESTRAL"){$dataVencimento->modify('+3 month');}
                     if($GEC_DCPERIODOCOBRANCA == "SEMESTRAL"){$dataVencimento->modify('+6 month');}
                     if($GEC_DCPERIODOCOBRANCA == "ANUAL"){$dataVencimento->modify('+12 month');}                   
                     
+                    $NUMPARCELA++;
                 }
             
                 // Retorna uma mensagem de sucesso (opcional)
@@ -733,7 +735,7 @@
             }
         }
 
-        public function insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $GEC_DTVENCIMENTO)
+        public function insertListaPagamanto($GEC_IDGESTAO_CONTRATO, $GEC_DTVENCIMENTO, $LFI_DCVALOR_PARCELA, $LFI_DCNUMPARCELA)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -742,14 +744,16 @@
         
             try {
                 $sql = "INSERT INTO LFI_LIQUIDACAOFINANCEIRA 
-                        (GEC_IDGESTAO_CONTRATO, LFI_DTVENCIMENTO) 
-                        VALUES (:GEC_IDGESTAO_CONTRATO, :LFI_DTVENCIMENTO)";
+                        (GEC_IDGESTAO_CONTRATO, LFI_DTVENCIMENTO, LFI_DCVALOR_PARCELA, LFI_DCNUMPARCELA) 
+                        VALUES (:GEC_IDGESTAO_CONTRATO, :LFI_DTVENCIMENTO, :LFI_DCVALOR_PARCELA, :LFI_DCNUMPARCELA)";
 
                 $stmt = $this->pdo->prepare($sql);
             
                 // Liga os parâmetros aos valores
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
                 $stmt->bindParam(':LFI_DTVENCIMENTO', $GEC_DTVENCIMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DCVALOR_PARCELA', $LFI_DCVALOR_PARCELA, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DCNUMPARCELA', $LFI_DCNUMPARCELA, PDO::PARAM_STR);
             
                 $stmt->execute();
 
