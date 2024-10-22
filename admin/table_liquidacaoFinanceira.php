@@ -164,10 +164,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 			                  <input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="pagamento" name="pagamento"   />
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
-                          <a href="#" 
-                             onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
-                             <span class="label label-info">LIQUIDAR</span>
-                          </a>
+                            <a href="#" 
+                               onclick="return confirmarLiquidacao(this, <?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                               <span class="label label-info">LIQUIDAR</span>
+                            </a>
                         </td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>
                                            
@@ -219,22 +219,27 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
         return confirm("Tem certeza que deseja mudar o status do pagamento");
       }
 
-      function confirmarLiquidacao(id) 
-      {
-        const datapagamento = document.getElementById('pagamento').value;
+      function confirmarLiquidacao(button, id) {
+    // Encontra a linha (tr) onde o botão foi clicado
+    const row = button.closest('tr');
+    
+    // Seleciona o input de data dentro dessa linha
+    const datapagamentoInput = row.querySelector('.datapagamento');
+    const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
-        if (!datapagamento) {
-            alert("Por favor, insira a data de pagamento.");
-            return false;
-        }
-      
-        if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
-            const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
-            window.location.href = url; // Redireciona para a URL construída
-            return true;
-        }
-          return false; // Cancela a ação se não confirmado
-        }
+    if (!datapagamento) {
+        alert("Por favor, insira a data de pagamento.");
+        return false;
+    }
+
+    if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
+        const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
+        window.location.href = url;
+        return true;
+    }
+    return false;
+}
+
     </script>              
     
 
