@@ -224,7 +224,7 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
 
       <div style="flex: 1; min-width: 50px;">
 			<label>VALOR</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCVALOR"] ?>" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
+			<input readonly type="text" style="width: 100%; text-transform: uppercase;" value="<?php echo $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DCVALOR"] ?>" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
