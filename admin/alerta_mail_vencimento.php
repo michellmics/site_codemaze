@@ -21,6 +21,10 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         // Calcula a diferença em dias
         $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
+        echo $diferenca;
+        echo "-";
+        echo $vencimento;
+
         if ($diferenca < -5 && $contrato['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $contato = $contrato['CLI_NMNAME'];
