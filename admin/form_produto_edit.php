@@ -101,7 +101,7 @@
 			
 			<div style="flex: 1;"> 
 			<label>VALOR(R$)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" id="investimento" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCINVESTIMENTO"]; ?>" placeholder="Enter ..." name="investimento" />
+			<input type="text" inputmode="decimal"  pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" id="investimento" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCINVESTIMENTO"]; ?>" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
@@ -155,16 +155,6 @@
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->
-<script>
-$(document).ready(function () {
-    $('#investimento').mask('###.###.###,##', { reverse: true });
-});
-
-$('form').on('submit', function () {
-    let valor = $('#investimento').val().replace(/\./g, '').replace(',', '.');
-    $('#investimento').val(valor);  // Altera o valor do input para decimal
-});
-</script>
 
     <!-- jQuery 2.1.3 -->
     
