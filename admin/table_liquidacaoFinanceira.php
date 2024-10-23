@@ -153,7 +153,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}       
                         ?>
-                        <td style="text-transform: uppercase; font-size: 14px;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
+                        <td style="text-transform: uppercase; font-size: 14px; font-color: red;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></td>
