@@ -88,7 +88,7 @@
 			<div style="flex: 1;">
 			<label>TIPO</label>
 			<select class="form-control" name="tipo" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>
+                <!--	<option value="" disabled selected>Selecione...</option> --> 
                 	<option value="HOSTING STANDARD">HOSTING</option>
                 	<option value="CONSULTORIA">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
@@ -104,7 +104,7 @@
       <div style="flex: 1;">
 			<label>STATUS</label>
 			<select class="form-control" name="status" style="width: 100%;">
-          <option value="" disabled selected>Selecione...</option>
+         <!--  <option value="" disabled selected>Selecione...</option> --> 
           <option value="ATIVO">ATIVO</option>
           <option value="INATIVO">INATIVO</option>
       </select>
