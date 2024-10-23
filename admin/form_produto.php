@@ -89,7 +89,7 @@
 			<label>TIPO</label>
 			<select class="form-control" name="tipo" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>  
-                	<option value="HOSTING STANDARD">HOSTING</option>
+                	<option value="HOSTING">HOSTING</option>
                 	<option value="CONSULTORIA">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
                 	<option value="DESENVOLVIMENTO">DESENVOLVIMENTO</option>

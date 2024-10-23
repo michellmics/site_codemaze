@@ -91,7 +91,7 @@
 			<label>TIPO</label>
 			<select class="form-control" name="tipo" style="width: 100%;">
                 	<option value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCTIPO"]; ?>" selected><? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCTIPO"]; ?></option>
-                	<option value="HOSTING STANDARD">HOSTING</option>
+                	<option value="HOSTING">HOSTING</option>
                 	<option value="CONSULTORIA">CONSULTORIA</option>
                 	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
                 	<option value="DESENVOLVIMENTO">DESENVOLVIMENTO</option>
