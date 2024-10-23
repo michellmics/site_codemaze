@@ -158,7 +158,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;">R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td> 
                         <td>
