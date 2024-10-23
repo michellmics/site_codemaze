@@ -99,7 +99,7 @@
 			
 			<div style="flex: 1;"> 
 			<label>VALOR(R$)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="10" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
+			<input type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="10" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>

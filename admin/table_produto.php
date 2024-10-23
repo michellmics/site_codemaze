@@ -128,7 +128,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                       <th>ID</th>
                       <th>NOME</th>
                       <th>TIPO</th>
-                      <th>INVESTIMENTO</th>
+                      <th>VALOR(R$)</th>
                       <th>DESCRIÇÃO</th>
                       <th>STATUS</th>                    
                     </tr>
@@ -147,7 +147,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                             }
                             else
                               {
-                                echo $product['PRS_DCINVESTIMENTO'];
+                                echo "R$".$product['PRS_DCINVESTIMENTO'];
                               }
                         
                           ?></td>
