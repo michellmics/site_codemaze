@@ -98,7 +98,7 @@
   <body class="skin-blue">
     <div class="wrapper">
       
-    <iframe src="header."></iframe>
+    <iframe src="header.php"></iframe>
 
 
       <!-- Left side column. contains the logo and sidebar -->
