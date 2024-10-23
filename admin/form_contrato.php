@@ -230,7 +230,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
       <div style="flex: 1; min-width: 50px;">
 			<label>VALOR PARCELA</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="R$0.000,00"  id="valor" name="valor"   />
+			<input type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" id="valor" name="valor"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
