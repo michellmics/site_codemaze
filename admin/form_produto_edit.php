@@ -157,7 +157,7 @@
 <!-- ######################################################## -->
 <script>
 $(document).ready(function () {
-    $('#investimento').mask('000.000.000,00', { reverse: true });
+    $('#investimento').mask('###.###.###,##', { reverse: true });
 });
 
 $('form').on('submit', function () {
