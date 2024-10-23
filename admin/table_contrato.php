@@ -129,7 +129,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                       <th>CPF/CNPJ</th>
                       <th>RAZÃO SOCIAL</th>
                       <th>SERVIÇO</th>
-                      <th>INI CONT</th>
                       <th>FIM CONT</th> 
                       <th>COBRANÇA</th>
                       <th>VENC</th>
@@ -152,7 +151,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCCPFCNPJ']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCRSOCIAL']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTINICONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTVENCIMENTO']) ?></td>  
