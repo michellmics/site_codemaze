@@ -41,6 +41,7 @@
     </script>
     <meta charset="UTF-8">
     <title>Intranet Codemaze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -86,13 +87,20 @@
       padding: 10px 0;
       font-size: 12px;
     }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
   </style>
   
   </head>
   <body class="skin-blue">
     <div class="wrapper">
       
+    <iframe src="header."></iframe>
 
+    
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
