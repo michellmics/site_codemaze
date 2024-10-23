@@ -101,7 +101,7 @@
 			
 			<div style="flex: 1;"> 
 			<label>VALOR(R$)</label>
-			<input type="text" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" id="investimento" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCINVESTIMENTO"]; ?>" placeholder="Enter ..." name="investimento" />
+			<input type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" id="investimento" value="<? echo $siteAdmin->ARRAY_PRODUCTINFO[0]["PRS_DCINVESTIMENTO"]; ?>" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
