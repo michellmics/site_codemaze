@@ -32,7 +32,7 @@ else
 
 
 // Configurações de Paginação
-$registrosPorPagina = 10;
+$registrosPorPagina = 50;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $totalRegistros = count($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
