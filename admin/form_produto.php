@@ -83,7 +83,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
 			<div style="flex: 1;">
 			<label>NOME DO PRODUTO OU SERVIÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="nome" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="40" class="form-control" placeholder="Enter ..." name="nome" />
 			</div>					
 			<div style="flex: 1;">
 			<label>TIPO</label>
@@ -99,7 +99,7 @@
 			
 			<div style="flex: 1;"> 
 			<label>VALOR(R$)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="10" class="form-control" id="investimento" placeholder="Enter ..." name="investimento" />
 			</div>
       <div style="flex: 1;">
 			<label>STATUS</label>
