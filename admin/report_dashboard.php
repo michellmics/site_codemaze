@@ -55,6 +55,10 @@
             </div>
           </div>
           -->
+          <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+                      <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
+                      <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
+                    </div>
          
           <div class="row">
             <div class="col-md-6">
