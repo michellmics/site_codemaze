@@ -174,7 +174,7 @@
 
       <div style="flex: 2; min-width: 100px;">
 			<label>STATUS</label>
-			<select class="form-control" name="status" style="width: 20%;">
+			<select required class="form-control" name="status" style="width: 20%;">
                 	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?>"><? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_STSTATUS"]; ?></option>
                   <option value="ATIVO">ATIVO</option>
                 	<option value="INATIVO">INATIVO</option>

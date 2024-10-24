@@ -101,7 +101,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			
       <div style="flex: 1; min-width: 400px;">
 			<label>NOME DO CLIENTE</label>
-			<select name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select required name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o cliente</option>
         <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
             <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
@@ -112,7 +112,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       </div>					
 			<div style="flex: 1; min-width: 240px;">
 			<label>PRODUTO OU SERVIÇO</label>
-			<select name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select required name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o produto</option>
         <?php foreach ($siteAdmin->ARRAY_PRODUCTINFO as $produto): ?>
             <option value="<?php echo htmlspecialchars($produto['PRS_IDPRODUTO_SERVICO']); ?>">
@@ -123,7 +123,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       </div>				
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO COBRANÇA</label>
-			<select class="form-control" name="tipocobranca" style="width: 100%;">
+			<select required class="form-control" name="tipocobranca" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="UNICA">ÚNICA</option>
                 	<option value="MENSAL">MENSAL</option>
@@ -135,7 +135,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 			<div style="flex: 1; min-width: 130px;">
 			<label>DT CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
 
       <div style="flex: 1;">
@@ -153,7 +153,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       <div style="flex: 1; min-width: 80px;">
 			<label>INICIO CONTRATO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="iniciocontrato" name="iniciocontrato"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="iniciocontrato" name="iniciocontrato"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
@@ -165,21 +165,21 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       <div style="flex: 1; min-width: 90px;">
 			<label>DATA ENTREGA</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
 			</div>
       
       <div style="flex: 1; min-width: 350px;">
 			<label>E-MAIL PARA FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
 			</div>
 			<div style="flex: 1; min-width: 150px;">
 			<label>TEL FATURAMENTO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
 			<label>STATUS</label>
-			<select class="form-control" name="statuscontrato" style="width: 100%;">
+			<select required class="form-control" name="statuscontrato" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="ATIVO">ATIVO</option>
                 	<option value="INATIVO">INATIVO</option>
@@ -196,22 +196,22 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       
       <div style="flex: 1; min-width: 50px;">
 			<label>DESCONTO (%)</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
 			</div>
 
       <div style="flex: 1; min-width: 40px;">
 			<label>PER. DESC. (DIAS)</label>
-			<input type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
+			<input required type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
 			</div>
       
       <div style="flex: 1; min-width: 50px;">
 			<label>CARÊNCIA (DIAS)</label>
-			<input type="text" pattern="\d*" value="0" placeholder="Ex.: 15" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
+			<input required type="text" pattern="\d*" value="0" placeholder="Ex.: 15" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
 			</div>
 
       <div style="flex: 1; min-width: 110px;">
 			<label>PARCELAMENTO</label>
-			<select class="form-control" name="parcelamento" style="width: 100%;">
+			<select required class="form-control" name="parcelamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="1">1X</option>
                   <option value="2">2X</option>
@@ -230,18 +230,18 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
       <div style="flex: 1; min-width: 50px;">
 			<label>VALOR PARCELA</label>
-			<input type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" id="valor" name="valor"   />
+			<input required type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" id="valor" name="valor"   />
 			</div>
 
       <div style="flex: 1; min-width: 90px;">
 			<label>VENCIMENTO</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
 			</div>
 
       <div style="flex: 1; min-width: 160px;">
 			<label>FORMA DE PAG.</label>
-			<select class="form-control" name="formapagamento" style="width: 100%;">
+			<select required class="form-control" name="formapagamento" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="CARTAO DE CREDITO">C. DE CRÉDITO</option>
                 	<option value="PIX">PIX</option>
