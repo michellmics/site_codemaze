@@ -123,7 +123,7 @@ $despesas = 125; //provisorio
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente; ?>" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
+                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Receitas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
