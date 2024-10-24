@@ -1,3 +1,26 @@
+<?php
+  include_once 'objetos.php'; 
+  
+  session_start(); 
+  define('SESSION_TIMEOUT', 1800); // 30 minutos
+ 
+  if (!isset($_SESSION['user_id'])) 
+  {
+    header("Location: index.php");
+    exit();
+  }
+
+  $dashboardValues = new SITE_ADMIN(); 
+  $totalCLient = $dashboardValues->countClientes();
+  $totalCLient = count($totalCLient);
+  echo $totalCLient;
+  die();
+
+ // <? echo $contrato['GEC_IDGESTAO_CONTRATO'];
+
+
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -52,7 +75,7 @@
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
-                      <div class="knob-label">Vago</div>
+                      <div class="knob-label">Contratos Inativos</div>
                     </div><!-- ./col -->
                   </div><!-- /.row -->
             </div>

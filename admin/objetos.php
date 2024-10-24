@@ -978,4 +978,19 @@
             
             mail($to, $subject, $body, $headers);        
         }
+
+        public function countClientes()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL FROM CLI_CLIENT ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+
+
+
+
     }
