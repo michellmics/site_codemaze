@@ -117,6 +117,38 @@
 
           </div><!-- /.row -->
 
+          
+          <div class="row">
+            <div class="col-md-6">
+            <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="4" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Clientes</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="70" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <div class="knob-label">Produtos Cadastrados</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Contratos Ativos</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
+                      <div class="knob-label">Vago</div>
+                    </div><!-- ./col -->
+                  </div><!-- /.row -->
+            </div>
+
+            <div class="col-md-4">
+              <div class="box box-solid">
+                aquiiii
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+
+
+          </div><!-- /.row -->
+
 
 
 
