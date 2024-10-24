@@ -39,7 +39,7 @@
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="31" data-width="50" data-height="50" data-fgColor="#3c8dbc"/>
+                      <input type="text" class="knob" value="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Contratos Ativos</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
