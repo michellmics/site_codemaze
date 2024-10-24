@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>AdminLTE 2 | Flot Charts</title>
+    <title></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,7 @@
 
 
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" tyle="margin-left: 0px; background-color: white;>
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
