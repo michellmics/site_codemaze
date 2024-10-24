@@ -14,7 +14,8 @@ setlocale(LC_TIME, 'pt_BR.UTF-8');
 $mêsCorrente = strftime('%B');
 $anoCorrente = date('Y');
 
-$despesas = "125"; //provisorio
+$despesas = 125; //provisorio
+
 
   $dashboardValues = new SITE_ADMIN(); 
   $totalCLient = $dashboardValues->countClientes();
@@ -23,6 +24,8 @@ $despesas = "125"; //provisorio
   $totalContratosInativos = $dashboardValues->countContratosInativos();
   $totalContratosAtivos = $dashboardValues->countContratosAtivos();
   $countReceitaMesCorrente = $dashboardValues->countReceitaMesCorrente();
+
+  $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
 
 
 
@@ -128,7 +131,7 @@ $despesas = "125"; //provisorio
                       <div class="knob-label">Despesas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente-$despesas; ?>" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
+                      <input type="text" class="knob" value="<? echo $liquidoMêsCorrente; ?>" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
                       <div class="knob-label">Liquido Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
