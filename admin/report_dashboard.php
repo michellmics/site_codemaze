@@ -14,6 +14,8 @@ setlocale(LC_TIME, 'pt_BR.UTF-8');
 $mêsCorrente = strftime('%B');
 $anoCorrente = date('Y');
 
+$despesas = "125"; //provisorio
+
   $dashboardValues = new SITE_ADMIN(); 
   $totalCLient = $dashboardValues->countClientes();
   $totalProdutos = $dashboardValues->countProdutos();
@@ -118,15 +120,15 @@ $anoCorrente = date('Y');
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="350" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
+                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente; ?>" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Receitas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-width="120" data-height="120" data-fgColor="#f56954"/>
+                      <input type="text" class="knob" value="<? echo $despesas; ?>" data-width="120" data-height="120" data-fgColor="#f56954"/>
                       <div class="knob-label">Despesas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
+                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente-$despesas; ?>" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
                       <div class="knob-label">Liquido Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
