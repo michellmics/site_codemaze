@@ -55,7 +55,20 @@
     <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
     <script src="plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
 
-  
+    <style>
+    /* Ocultar barras de rolagem */
+    body, html {
+      overflow: hidden; 
+      height: 100%; 
+      margin: 0; 
+    }
+
+    .content-wrapper {
+      overflow: hidden; 
+      height: 100%; 
+    }
+    </style>
+
    
   </body>
 </html>
