@@ -88,7 +88,7 @@
             <div class="col-md-4">
               <div class="box box-solid">
                 <div class="box-header">
-                  <h3 class="box-title text-blue">Sparkline line</h3>
+                  <h3 class="box-title text-blue">Evolução FInanceira (Liquido)</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                   </div>
@@ -129,7 +129,7 @@
             <div class="col-md-4">
               <div class="box box-solid">
                 <div class="box-header">
-                  <h3 class="box-title text-danger">Sparkline Pie</h3>
+                  <h3 class="box-title text-danger">Maiores Clientes</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                   </div>
@@ -151,15 +151,15 @@
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Vago</div>
+                      <div class="knob-label">Contratos a Vencer<BR>Próximos 10 dias</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#f56954"/>
-                      <div class="knob-label">Vago</div>
+                      <div class="knob-label">Contratos em Atraso<BR>Maior que 6 dias</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Vago</div>
+                      <div class="knob-label">Contratos Liquidados<BR>Outubro</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
