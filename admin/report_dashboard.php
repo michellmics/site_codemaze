@@ -33,7 +33,9 @@
         <section class="content">
           <div class="row">
             <div class="col-xs-12">
-              <!-- interactive chart -->
+            
+            
+              <!-- 
               <div class="box box-primary">
                 <div class="box-header">
                   <i class="fa fa-bar-chart-o"></i>
@@ -48,11 +50,11 @@
                 </div>
                 <div class="box-body">
                   <div id="interactive" style="height: 300px;"></div>
-                </div><!-- /.box-body-->
-              </div><!-- /.box -->
-
-            </div><!-- /.col -->
-          </div><!-- /.row -->
+                </div>
+              </div>
+             -->
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-md-6">
