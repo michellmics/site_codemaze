@@ -94,7 +94,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="index.html" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
+        <a href="#" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -439,6 +439,11 @@
         function loadInIframe(url) {
           document.getElementById('contentFrame').src = url;
         }
+
+        // Carrega a URL inicial no iframe quando a página é carregada
+        window.onload = function() {
+          loadInIframe('report_dashboard.php'); 
+        };
       </script>
 
 
