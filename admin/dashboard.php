@@ -94,7 +94,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="#" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
+        <a href="https://www.codemaze.com.br/site/admin/dashboard.php" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
