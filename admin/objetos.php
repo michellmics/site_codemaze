@@ -1019,6 +1019,19 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function countReceitaMesCorrente()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT ROUND(SUM(LFI_DCVALOR_PARCELA), 2) AS total_renda
+                    FROM LFI_LIQUIDACAOFINANCEIRA 
+                    WHERE LFI_STPAGAMENTO = 'LIQUIDADO' 
+                    AND DATE_FORMAT(LFI_DTPAGAMENTO, '%Y-%m') = DATE_FORMAT(CURDATE(), '%Y-%m');";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
 
 
 
