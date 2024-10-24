@@ -1023,7 +1023,7 @@
         {        
             if(!$this->pdo){$this->conexao();}
 
-            $sql = "SELECT ROUND(SUM(LFI_DCVALOR_PARCELA), 2) AS total_renda
+            $sql = "SELECT ROUND(SUM(LFI_DCVALOR_PARCELA), 2) AS TOTAL
                     FROM LFI_LIQUIDACAOFINANCEIRA 
                     WHERE LFI_STPAGAMENTO = 'LIQUIDADO' 
                     AND DATE_FORMAT(LFI_DTPAGAMENTO, '%Y-%m') = DATE_FORMAT(CURDATE(), '%Y-%m');";
