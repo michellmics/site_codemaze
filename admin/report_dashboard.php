@@ -140,7 +140,7 @@ $despesas = 125; //provisorio
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-min="0" data-max="20000" data-width="120" data-height="120" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Acumulado (R$)<br><? echo $anoCorrente; ?></div> 
+                      <div class="knob-label">Liquido Acum. (R$)<br><? echo $anoCorrente; ?></div> 
                     </div><!-- ./col -->
                   </div><!-- /.row -->
             </div>
