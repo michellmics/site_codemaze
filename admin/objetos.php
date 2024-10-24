@@ -989,6 +989,36 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function countProdutos()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL FROM PRS_PRODUTO_SERVICO ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function countContratosAtivos()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL FROM GEC_GESTAO_CONTRATO WHERE GEC_STCONTRATO = 'ATIVO' ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function countContratosInativos()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL FROM GEC_GESTAO_CONTRATO WHERE GEC_STCONTRATO = 'INATIVO' ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
 
 
 

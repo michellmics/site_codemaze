@@ -12,10 +12,16 @@
 
   $dashboardValues = new SITE_ADMIN(); 
   $totalCLient = $dashboardValues->countClientes();
-  $totalCLient["0"]["TOTAL"];
+  $totalProdutos = $dashboardValues->countProdutos();
+  $totalProdutos = $dashboardValues->countProdutos();
+  $totalContratosInativos = $dashboardValues->countContratosInativos();
+  $totalContratosAtivos = $dashboardValues->countContratosAtivos();
 
 
- // <? echo $totalCLient["0"]["TOTAL"]; 
+
+
+
+ // <? echo $totalContratosInativos["0"]["TOTAL"]; 
 
 
 
@@ -65,15 +71,15 @@
                       <div class="knob-label">Clientes</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="70" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <input type="text" class="knob" value="<? echo $totalProdutos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
                       <div class="knob-label">Produtos Cadastrados</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <input type="text" class="knob" value="<? echo $totalContratosAtivos["0"]["TOTAL"]; ?>" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
                       <div class="knob-label">Contratos Ativos</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
+                      <input type="text" class="knob" value="<? echo $totalContratosInativos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
                       <div class="knob-label">Contratos Inativos</div>
                     </div><!-- ./col -->
                   </div><!-- /.row -->
