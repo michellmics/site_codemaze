@@ -10,6 +10,10 @@
     exit();
   }
 
+setlocale(LC_TIME, 'pt_BR.UTF-8');
+$mêsCorrente = strftime('%B');
+$anoCorrente = date('Y');
+
   $dashboardValues = new SITE_ADMIN(); 
   $totalCLient = $dashboardValues->countClientes();
   $totalProdutos = $dashboardValues->countProdutos();
@@ -114,20 +118,20 @@
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="350" data-max="10000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Receitas Mês<br>Outubro</div>
+                      <input type="text" class="knob" value="350" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Receitas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="70.5" data-width="120" data-height="120" data-fgColor="#f56954"/>
-                      <div class="knob-label">Despesas Mês<br>Outubro</div>
-                    </div><!-- ./col -->
-                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Mês<br>Outubro</div>
+                      <input type="text" class="knob" value="0" data-width="120" data-height="120" data-fgColor="#f56954"/>
+                      <div class="knob-label">Despesas Mês<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Acumulado<br>2024</div>
+                      <div class="knob-label">Liquido Mês<br><? echo $mêsCorrente; ?></div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="55" data-min="0" data-max="90" data-width="120" data-height="120" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Liquido Acumulado<br><? echo $anoCorrente; ?></div> 
                     </div><!-- ./col -->
                   </div><!-- /.row -->
             </div>
