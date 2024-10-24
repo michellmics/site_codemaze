@@ -24,7 +24,11 @@ $despesas = 125; //provisorio
   $totalContratosInativos = $dashboardValues->countContratosInativos();
   $totalContratosAtivos = $dashboardValues->countContratosAtivos();
   $countReceitaMesCorrente = $dashboardValues->countReceitaMesCorrente();
+  $countContratosVencer = $dashboardValues->countContratosVencer();
+  $countContratosVencidos = $dashboardValues->countContratosVencidos();
+  $countContratosLiquidados = $dashboardValues->countContratosLiquidados();
 
+  
   $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
 
 
@@ -35,7 +39,7 @@ $despesas = 125; //provisorio
 
 
 
- // <? echo $countReceitaMesCorrente["0"]["TOTAL"]; 
+ // <? echo $countContratosLiquidados["0"]["TOTAL"]; 
 
 
 
@@ -166,16 +170,16 @@ $despesas = 125; //provisorio
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <input type="text" class="knob" value="<? echo $countContratosVencer["0"]["TOTAL"]; ?>" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Contratos a Vencer<BR>Próximos 10 dias</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <input type="text" class="knob" value="<? echo $countContratosVencidos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
                       <div class="knob-label">Contratos em Atraso<BR>Maior que 6 dias</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Contratos Liquidados<BR>Outubro</div>
+                      <input type="text" class="knob" value="<? echo $countContratosLiquidados["0"]["TOTAL"]; ?>" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Contratos Liquidados<BR><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>

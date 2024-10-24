@@ -1032,6 +1032,46 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function countContratosVencer()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL
+                    FROM LFI_LIQUIDACAOFINANCEIRA
+                    WHERE (LFI_STPAGAMENTO IS NULL OR LFI_STPAGAMENTO <> 'LIQUIDADO')
+                    AND LFI_DTVENCIMENTO BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 10 DAY);";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function countContratosVencidos()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL
+                    FROM LFI_LIQUIDACAOFINANCEIRA
+                    WHERE (LFI_STPAGAMENTO IS NULL OR LFI_STPAGAMENTO <> 'LIQUIDADO')
+                    AND LFI_DTVENCIMENTO < DATE_SUB(CURDATE(), INTERVAL 6 DAY);";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function countContratosLiquidados()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL
+                    FROM LFI_LIQUIDACAOFINANCEIRA
+                    WHERE LFI_STPAGAMENTO = 'LIQUIDADO'
+                    AND MONTH(LFI_DTVENCIMENTO) = MONTH(CURDATE())
+                    AND YEAR(LFI_DTVENCIMENTO) = YEAR(CURDATE());";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
 
 
 
