@@ -127,20 +127,20 @@ $despesas = 125; //provisorio
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="R$<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Receitas Mês<br><? echo $mêsCorrente; ?></div>
+                      <input type="text" class="knob" value=<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Receitas Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="<? echo $despesas; ?>" data-max="1000" data-width="120" data-height="120" data-fgColor="#f56954"/>
-                      <div class="knob-label">Despesas Mês<br><? echo $mêsCorrente; ?></div>
+                      <div class="knob-label">Despesas Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="<? echo $liquidoMêsCorrente; ?>" data-min="0" data-max="3000" data-width="120" data-height="120" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Mês<br><? echo $mêsCorrente; ?></div>
+                      <div class="knob-label">Liquido Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="0" data-min="0" data-max="20000" data-width="120" data-height="120" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Acumulado<br><? echo $anoCorrente; ?></div> 
+                      <div class="knob-label">Liquido Acumulado (R$)<br><? echo $anoCorrente; ?></div> 
                     </div><!-- ./col -->
                   </div><!-- /.row -->
             </div>
