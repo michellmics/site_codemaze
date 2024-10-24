@@ -366,7 +366,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Dash. Financeiro</a></li>
+                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Dashboard</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
               </ul> 
             </li>
