@@ -114,7 +114,7 @@
             <div class="col-md-6">
             <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="100" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
+                      <input type="text" class="knob" value="350" data-max="100" data-width="120" data-height="120" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Receitas Mês<br>Outubro</div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
