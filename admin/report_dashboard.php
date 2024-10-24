@@ -12,8 +12,7 @@
 
   $dashboardValues = new SITE_ADMIN(); 
   $totalCLient = $dashboardValues->countClientes();
-  $totalCLient = count($totalCLient);
-  echo $totalCLient;
+  echo $totalCLient["0"]["TOTAL"];
   die();
 
  // <? echo $contrato['GEC_IDGESTAO_CONTRATO'];
