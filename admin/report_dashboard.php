@@ -26,7 +26,7 @@
 
 
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-left: 0px; background-color: white;>
+      <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
 
 
         <!-- Main content -->
@@ -35,7 +35,7 @@
             <div class="col-xs-12">
             
             
-               
+               <!--
               <div class="box box-primary">
                 <div class="box-header">
                   <i class="fa fa-bar-chart-o"></i>
@@ -52,7 +52,7 @@
                   <div id="interactive" style="height: 300px;"></div>
                 </div>
               </div>
-            
+            -->
             </div>
           </div>
 
