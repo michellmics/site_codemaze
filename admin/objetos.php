@@ -1115,57 +1115,45 @@
 
             $data = '{
   "customer": {
-    "name": "Serconeo Contabilidade",
+    "name": "serconeo",
     "tax_id": "04996791993",
-    "email": "contato@serconeo.com.br"
+    "email": "teste@teste.com.br"
   },
-  "reference_id": "145973-2",
+  "reference_id": "122",
   "charges": [
     {
-      "amount": {
-        "value": 600,
-        "currency": "BRL"
+      "amount": { 
+        "value": 600, 
+        "currency": "BRL" 
       },
       "payment_method": {
+        "type": "BOLETO",
         "boleto": {
+          "due_date": "2024-11-30",
           "instruction_lines": {
-            "line_1": "Instruções para pagamento linha 1 vai aqui",
-            "line_2": "Instruções para pagamento linha 2 vai aqui"
+            "line_1": "Pagamento processado para DESC Fatura",
+            "line_2": "Via PagSeguro"
           },
           "holder": {
-            "name": "Nome do responsável pelo pagamento",
-            "tax_id": "cpf de quem paga o boleto",
-            "email": "emaildopagador@example.com",
+            "name": "serconeo",
+            "tax_id": "04996791993",
+            "email": "teste@teste.com.br",
             "address": {
-              "street": "Rua Exemplo",
-              "number": "123",
-              "complement": "Apto 101",
-              "locality": "Bairro Exemplo",
-              "city": "São Paulo",
-              "region_code": "SP",
               "country": "BRA",
-              "postal_code": "01001000"
+              "region": "São Paulo",
+              "region_code": "SP",
+              "city": "São Paulo",
+              "postal_code": "01452002",
+              "street": "Avenida Brigadeiro Faria Lima",
+              "number": "1384",
+              "locality": "Pinheiros"
             }
-          },
-          "due_date": "2024-11-18"
-        },
-        "type": "BOLETO"
-      },
-      "reference_id": "id_cobranca",
-      "notification_urls": [
-        "https://meusite.com/notificacoes"
-      ]
-    }
-  ],
-  "items": [
-    {
-      "name": "Serviço de Suporte TI",
-      "unit_amount": 35000,
-      "quantity": 1
+          }
+        }
+      }
     }
   ]
 }
-
                       ';
 
             $ch = curl_init($url);
