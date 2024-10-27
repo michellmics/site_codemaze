@@ -155,6 +155,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
                           
                           $inputLiquidarStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL ? 'display: none;' : '';
+                          $inputDeixarAbertoStatus = $liquidFin['LFI_DTPAGAMENTO'] == NULL ? 'display: none;' : '';
                           
 
                         ?> 
@@ -177,7 +178,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                                <span class="label label-info">LIQUIDAR</span>
                             </a>
                         </td>
-                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
