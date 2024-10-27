@@ -1138,6 +1138,12 @@
                 $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
                 $nameItem = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
 
+                $parcelaRef = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["LFI_DCNUMPARCELA"]; 
+
+                $linha1Boleto = "Pagamento referente a parcela $parcelaRef do produto $nameItem";
+                $linha2Boleto = "Em caso de dúvidas, entre em contato com a Codemaze 11 98273-4350";
+
+
 
             $data = '{
                   "customer": {
@@ -1155,8 +1161,8 @@
                       "payment_method": {
                         "boleto": {
                           "instruction_lines": {
-                            "line_1": "Instrucoes para pagamaneto linha 1 vai aqui",
-                            "line_2": "Instrucoes para pagamaneto linha 2 vai aqui"
+                            "line_1": "'.$linha1Boleto.'", 
+                            "line_2": "'.$linha2Boleto.'"
                           },
                           "holder": {
                             "address": {
