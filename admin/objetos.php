@@ -1114,47 +1114,60 @@
             $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
             $data = '{
-  "customer": {
-    "name": "serconeo",
-    "tax_id": "04996791993",
-    "email": "teste@teste.com.br"
-  },
-  "reference_id": "122",
-  "charges": [
-    {
-      "amount": { 
-        "value": 600, 
-        "currency": "BRL" 
-      },
-      "payment_method": {
-        "type": "BOLETO",
-        "boleto": {
-          "due_date": "2024-11-30",
-          "instruction_lines": {
-            "line_1": "Pagamento processado para DESC Fatura",
-            "line_2": "Via PagSeguro"
-          },
-          "holder": {
-            "name": "serconeo",
-            "tax_id": "04996791993",
-            "email": "teste@teste.com.br",
-            "address": {
-              "country": "BRA",
-              "region": "São Paulo",
-              "region_code": "SP",
-              "city": "São Paulo",
-              "postal_code": "01452002",
-              "street": "Avenida Brigadeiro Faria Lima",
-              "number": "1384",
-              "locality": "Pinheiros"
-            }
-          }
-        }
-      }
-    }
-  ]
-}
-                      ';
+                  "customer": {
+                    "name": "Serconeo Contabilidade",
+                    "tax_id": "04996791993",
+                    "email": "contato@serconeo.com.br"
+                  },
+                  "reference_id": "145973-2",
+                  "charges": [
+                    {
+                      "amount": {
+                        "value": 600,
+                        "currency": "BRL"
+                      },
+                      "payment_method": {
+                        "boleto": {
+                          "instruction_lines": {
+                            "line_1": "Instrucoes para pagamaneto linha 1 vai aqui",
+                            "line_2": "Instrucoes para pagamaneto linha 2 vai aqui"
+                          },
+                          "holder": {
+                            "address": {
+                              "street": "rua do cliente",
+                              "number": "44",
+                              "locality": "Cambui",
+                              "city": "Curitiba",
+                              "region": "Paraná",
+                              "region_code": "PR",
+                              "country": "Brasil",
+                              "postal_code": "13186170"
+                            },
+                            "name": "Nome do responsavel pelo pagamento",
+                            "tax_id": "04996791993",
+                            "email": "contato@responsavel.com.br"
+                          },
+                          "due_date": "2024-11-18"
+                        },
+                        "type": "BOLETO",
+                        "installments": 1
+                      },
+                      "reference_id": "id cobranca",
+                      "notification_urls": [
+                        "https://meusite.com/notificacoes"
+                      ],
+                      "description": "servios de ti descrição"
+                    }
+                  ],
+                  "items": [
+                    {
+                      "name": "Serviço de Suporte TI",
+                      "unit_amount": 35000,
+                      "quantity": 1
+                    }
+                  ]
+                }
+            ';
 
             $ch = curl_init($url);
 
