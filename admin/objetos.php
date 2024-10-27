@@ -1131,13 +1131,11 @@
                 $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
                 $reference_id = $LFI_IDOP;
                 $value = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
-
                 $street = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"];
                 $city = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"];
                 $region_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCSTATE"];
                 $postal_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCEP"];
                 $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
-
                 $nameItem = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
 
 
@@ -1197,7 +1195,7 @@
                 }
             ';
 
-            return $data;
+            //return $data;
 
             $ch = curl_init($url);
 
