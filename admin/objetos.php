@@ -1146,8 +1146,6 @@
                 $linha1Boleto = "Pagamento referente a parcela $parcelaRef do produto $nameItem";
                 $linha2Boleto = "Em caso de dúvidas, entre em contato com a Codemaze 11 98273-4350";
 
-
-
             $data = '{
                   "customer": {
                     "name": "'.$name.'",
