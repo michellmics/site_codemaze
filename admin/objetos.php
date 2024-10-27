@@ -1113,6 +1113,9 @@
             $url = 'https://sandbox.api.pagseguro.com/orders';
             $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
+            $now = new DateTime(); 
+            $DATA = $now->format('Y-m-d');
+
             if(!$this->pdo){$this->conexao();}            
           
                 $sql = "SELECT * 
@@ -1226,7 +1229,32 @@
             $idCobranca = $data['charges'][0]['id'];
             $idPedido = $data['id'];
 
-            return $response;            
+            try {
+                $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
+                        SET 
+                        LFI_PAGSEGURO_IDCOBRANCA_BOLETO = :CLI_STSTATUSPENDING,
+                        LFI_PAGSEGURO_IDPEDIDO_BOLETO = :CLI_STSTATUSPENDING,
+                        LFI_PAGSEGURO_DTGERACAO_BOLETO = :CLI_STSTATUSPENDING,
+                        LFI_PAGSEGURO_LINK_BOLETO = :CLI_STSTATUSPENDING
+                        WHERE LFI_IDOP = '$LFI_IDOP'";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':LFI_PAGSEGURO_IDCOBRANCA_BOLETO', $idCobranca, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_PAGSEGURO_IDPEDIDO_BOLETO', $idPedido, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_PAGSEGURO_DTGERACAO_BOLETO', $DATA, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_PAGSEGURO_LINK_BOLETO', $pdfLink, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Boleto criado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+
+            return $pdfLink;            
         }
 
     }
