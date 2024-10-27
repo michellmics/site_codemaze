@@ -1197,7 +1197,7 @@
                 }
             ';
 
-            //return $data;
+            return $data;
 
             $ch = curl_init($url);
 
