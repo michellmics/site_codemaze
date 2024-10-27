@@ -1116,6 +1116,10 @@
             $now = new DateTime(); 
             $DATA = $now->format('Y-m-d');
 
+            $nowVenc = new DateTime();
+            $nowVenc->modify('+1 day'); 
+            $DATAVENC = $nowVenc->format('Y-m-d'); 
+
             if(!$this->pdo){$this->conexao();}            
           
                 $sql = "SELECT * 
@@ -1140,6 +1144,7 @@
                 $postal_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCEP"];
                 $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
                 $nameItem = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
+                $DataVencimento = $DATAVENC;
 
                 $parcelaRef = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["LFI_DCNUMPARCELA"]; 
 
@@ -1180,7 +1185,7 @@
                             "tax_id": "'.$tax_id.'",
                             "email": "'.$email.'"
                           },
-                          "due_date": "2024-11-18"
+                          "due_date": "'.$DataVencimento.'" 
                         },
                         "type": "BOLETO",
                         "installments": 1
