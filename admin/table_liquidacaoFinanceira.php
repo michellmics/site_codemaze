@@ -129,7 +129,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                   <table class="table table-hover">
                     <tr>
                       <th>CONTRATO</th>
-                      <th>IOP</th>
+                      <th><center>IOP</center></th>
                       <th></th>
                       <th>CLIENTE</th>
                       <th>PRODUTO</th>
