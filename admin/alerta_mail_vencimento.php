@@ -27,8 +27,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
         if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
-            $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
-
             $contato = $array['CLI_NMNAME'];
             $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
 
@@ -51,7 +49,10 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
                     ";
 
-            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança);       
+            $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
+            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
+            
+            break;
         }
     }
 }
