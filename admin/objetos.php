@@ -607,7 +607,7 @@
             }
             
             try {
-                $sql = "UPDATE PRS_PRODUTO_SERVICO 
+                $sql = "UPDATE CLI_CLIENT 
                         SET CLI_STSTATUSPENDING = :CLI_STSTATUSPENDING
                         WHERE CLI_IDCLIENT = :CLI_IDCLIENT";
 
