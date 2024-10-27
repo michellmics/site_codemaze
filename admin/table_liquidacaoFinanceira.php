@@ -154,17 +154,17 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}       
                         ?> 
-                        <td style="text-transform: uppercase; font-size: 14px; color: red !important;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
+                        <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
                         <td>
-			                  <input  type="text" style="width: 52%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="YYYY-MM-DD" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
+			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle;" minlength="10" maxlength="10" class="form-control" placeholder="YYYY-MM-DD" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
                         <td style="text-transform: uppercase; font-size: 15px;">
                             <a href="#" 
@@ -173,7 +173,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                                <span class="label label-info">LIQUIDAR</span>
                             </a>
                         </td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
