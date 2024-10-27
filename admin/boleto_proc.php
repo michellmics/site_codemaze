@@ -4,6 +4,8 @@
 
     $siteAdmin = new SITE_ADMIN();
 
+    $LFI_IDOP = '40222010';
+
     $result = $siteAdmin->gerBoleto();
 
     echo $result;
