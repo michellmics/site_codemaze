@@ -1248,13 +1248,12 @@
 
                 $stmt->execute();
             
-                return ["success" => "Boleto criado com sucesso."];
+                return $pdfLink;
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
             }
-
-            return $pdfLink;            
+        
         }
 
     }
