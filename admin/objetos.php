@@ -1225,7 +1225,7 @@
 
             $data = json_decode($response, true);
 
-            return $data;
+            return $data['charges'][0]['payment_method']['boleto']['links'][0]['href'];
 
             $pdfLink = $data['charges'][0]['payment_method']['boleto']['links'][0]['href'];
             $idCobranca = $data['charges'][0]['id'];
