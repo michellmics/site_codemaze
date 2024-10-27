@@ -131,12 +131,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                       <th>CONTRATO</th>
                       <th><center>IOP</center></th>
                       <th></th>
-                      <th>CLIENTE</th>
-                      <th>PRODUTO</th>
-                      <th>PARCELA</th>
-                      <th>VALOR</th>
-                      <th>VENCIMENTO</th>
-                      <th>PAGAMENTO</th>
+                      <th><center>CLIENTE</center></th>
+                      <th><center>PRODUTO</center></th>
+                      <th><center>PARCELA</center></th>
+                      <th><center>VALOR</center></th>
+                      <th><center>VENCIMENTO</center></th>
+                      <th><center>PAGAMENTO</center></th>
                       <th></th>                    
                     </tr>
                     <tr>
@@ -158,11 +158,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;">R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="YYYY-MM-DD" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
