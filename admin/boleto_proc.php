@@ -8,7 +8,7 @@
 
     $result = $siteAdmin->gerBoleto($LFI_IDOP);
 
-    echo $result;
+    var_dump($result);
 
 
 ?>
