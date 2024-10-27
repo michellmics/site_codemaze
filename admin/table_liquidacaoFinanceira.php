@@ -170,7 +170,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $$boleto; ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="10" maxlength="10" class="form-control" placeholder="YYYY-MM-DD" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
