@@ -28,7 +28,7 @@ usort($siteAdmin->ARRAY_PRODUCTINFO, function($a, $b) {
 $timestamp = microtime(true);
 $numeroContrato = (int)($timestamp * 1000);
 $numeroContrato = $numeroContrato % 1000000;
-$numeroContrato = str_pad($numeroContrato, 6, '0', STR_PAD_LEFT);
+$numeroContrato = str_pad($numeroContrato, 6, '0', STR_PAD_LEFT); //garante 6 digitos
 $numeroAleatorio = rand(1, 9);
 $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
 
