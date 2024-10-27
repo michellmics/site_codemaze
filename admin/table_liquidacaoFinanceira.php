@@ -154,7 +154,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
                           
-                          $inputStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL ? 'display: none;' : '';
+                          $inputLiquidarStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL ? 'display: none;' : '';
                           
 
                         ?> 
@@ -170,7 +170,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="10" maxlength="10" class="form-control" placeholder="YYYY-MM-DD" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
-                        <td style="text-transform: uppercase; font-size: 15px; display: none;">
+                        <td style="text-transform: uppercase; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
                                id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
                                onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
