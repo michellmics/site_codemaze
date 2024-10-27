@@ -1120,12 +1120,12 @@
                 $stmt->execute();
                 $ARRAY_VWLIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                return $ARRAY_VWLIQUIDACAOFINANCEIRA;
+                $name = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"];
 
 
             $data = '{
                   "customer": {
-                    "name": "Serconeo Contabilidade",
+                    "name": "'.$name.'",
                     "tax_id": "04996791993",
                     "email": "contato@serconeo.com.br"
                   },
@@ -1178,6 +1178,8 @@
                   ]
                 }
             ';
+
+            return $data
 
             $ch = curl_init($url);
 
