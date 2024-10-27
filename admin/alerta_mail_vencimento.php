@@ -16,7 +16,7 @@ echo "</pre>";
 foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 {
     $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Liquidado");
-    echo $array['CLI_IDCLIENT'];
+
     if($array["LFI_STPAGAMENTO"] != "LIQUIDADO")
     {
         $now = new DateTime(); 
