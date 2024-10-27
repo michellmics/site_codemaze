@@ -129,6 +129,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                   <table class="table table-hover">
                     <tr>
                       <th>CONTRATO</th>
+                      <th>IOP</th>
                       <th></th>
                       <th>CLIENTE</th>
                       <th>PRODUTO</th>
@@ -154,6 +155,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}       
                         ?> 
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></td>

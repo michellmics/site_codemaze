@@ -878,11 +878,19 @@
             if (!$this->pdo) {
                 $this->conexao();
             }
+
+            // gerador de IOP ORDEM DE PAGAMENTO
+            $timestamp = microtime(true);
+            $numeroIOP = (int)($timestamp * 10000);
+            $numeroIOP = $numeroIOP % 1000000;
+            $numeroIOP = str_pad($numeroIOP, 6, '0', STR_PAD_LEFT); //garante 8 digitos
+            $numeroAleatorio = rand(10,20);
+            $LFI_IDOP = $numeroIOP.$numeroAleatorio;
         
             try {
                 $sql = "INSERT INTO LFI_LIQUIDACAOFINANCEIRA 
-                        (GEC_IDGESTAO_CONTRATO, LFI_DTVENCIMENTO, LFI_DCVALOR_PARCELA, LFI_DCNUMPARCELA) 
-                        VALUES (:GEC_IDGESTAO_CONTRATO, :LFI_DTVENCIMENTO, :LFI_DCVALOR_PARCELA, :LFI_DCNUMPARCELA)";
+                        (GEC_IDGESTAO_CONTRATO, LFI_DTVENCIMENTO, LFI_DCVALOR_PARCELA, LFI_DCNUMPARCELA, LFI_IDOP) 
+                        VALUES (:GEC_IDGESTAO_CONTRATO, :LFI_DTVENCIMENTO, :LFI_DCVALOR_PARCELA, :LFI_DCNUMPARCELA, :LFI_IDOP)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -891,6 +899,7 @@
                 $stmt->bindParam(':LFI_DTVENCIMENTO', $GEC_DTVENCIMENTO, PDO::PARAM_STR);
                 $stmt->bindParam(':LFI_DCVALOR_PARCELA', $LFI_DCVALOR_PARCELA, PDO::PARAM_STR);
                 $stmt->bindParam(':LFI_DCNUMPARCELA', $LFI_DCNUMPARCELA, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_IDOP', $LFI_IDOP, PDO::PARAM_STR);
             
                 $stmt->execute();
 
