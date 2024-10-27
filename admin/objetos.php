@@ -1226,7 +1226,7 @@
             $idCobranca = $data['charges'][0]['id'];
             $idPedido = $data['id'];
 
-            return $idCobranca;            
+            return $response;            
         }
 
     }
