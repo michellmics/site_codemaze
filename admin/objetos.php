@@ -1214,9 +1214,9 @@
             } 
             curl_close($ch);
 
-            $pdfLink = $data['charges'][0]['payment_method']['boleto']['links'][0]['href'];
-            $idCobranca = $data['charges'][0]['id'];
-            $idPedido = $data['id'];
+            $pdfLink = $response['charges'][0]['payment_method']['boleto']['links'][0]['href'];
+            $idCobranca = $response['charges'][0]['id'];
+            $idPedido = $response['id'];
 
             return $idCobranca;            
         }
