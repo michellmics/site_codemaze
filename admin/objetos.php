@@ -1114,46 +1114,48 @@
             $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
             $data = '{
-                          "customer": {
-                            "name": "Serconeo Contabilidade",
-                            "tax_id": "04996791993",
-                            "email": "contato@serconeo.com.br"
-                          },
-                          "reference_id": "145973-2",
-                          "charges": [
-                            {
-                              "amount": {
-                                "value": 600,
-                                "currency": "BRL"
-                              },
-                              "payment_method": {
-                                "boleto": {
-                                  "instruction_lines": {
-                                    "line_1": "Instrucoes para pagamaneto linha 1 vai aqui",
-                                    "line_2": "Instrucoes para pagamaneto linha 2 vai aqui"
-                                  },
-                                  "holder": {
-                                    "name": "Nome do responsavel pelo pagamento",
-                                    "tax_id": "cpf de quem paga o boleto"
-                                  },
-                                  "due_date": "2024-11-18"
-                                },
-                                "type": "BOLETO"
-                              },
-                              "reference_id": "id cobranca",
-                              "notification_urls": [
-                                "https://meusite.com/notificacoes"
-                              ]
-                            }
-                          ],
-                          "items": [
-                            {
-                              "name": "Serviço de Suporte TI",
-                              "unit_amount": 35000,
-                              "quantity": 1
-                            }
-                          ]
-                        }
+  "customer": {
+    "name": "Serconeo Contabilidade",
+    "tax_id": "04996791993",
+    "email": "contato@serconeo.com.br"
+  },
+  "reference_id": "145973-2",
+  "charges": [
+    {
+      "amount": {
+        "value": 600,
+        "currency": "BRL"
+      },
+      "payment_method": {
+        "boleto": {
+          "instruction_lines": {
+            "line_1": "Instrucoes para pagamento linha 1 vai aqui",
+            "line_2": "Instrucoes para pagamento linha 2 vai aqui"
+          },
+          "holder": {
+            "name": "Nome do responsável pelo pagamento",
+            "tax_id": "cpf de quem paga o boleto",
+            "email": "emaildopagador@example.com"
+          },
+          "due_date": "2024-11-18"
+        },
+        "type": "BOLETO"
+      },
+      "reference_id": "id cobranca",
+      "notification_urls": [
+        "https://meusite.com/notificacoes"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "Serviço de Suporte TI",
+      "unit_amount": 35000,
+      "quantity": 1
+    }
+  ]
+}
+
                       ';
 
             $ch = curl_init($url);
