@@ -8,7 +8,7 @@
 
     $result = $siteAdmin->gerBoleto($LFI_IDOP);
 
-    var_dump($result);
+    echo '<a href="' . htmlspecialchars($result) . '" target="_self">Abrir Boleto PDF</a>';
 
 
 ?>
