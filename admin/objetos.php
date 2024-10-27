@@ -1129,13 +1129,23 @@
       "payment_method": {
         "boleto": {
           "instruction_lines": {
-            "line_1": "Instrucoes para pagamento linha 1 vai aqui",
-            "line_2": "Instrucoes para pagamento linha 2 vai aqui"
+            "line_1": "Instruções para pagamento linha 1 vai aqui",
+            "line_2": "Instruções para pagamento linha 2 vai aqui"
           },
           "holder": {
             "name": "Nome do responsável pelo pagamento",
             "tax_id": "cpf de quem paga o boleto",
-            "email": "emaildopagador@example.com"
+            "email": "emaildopagador@example.com",
+            "address": {
+              "street": "Rua Exemplo",
+              "number": "123",
+              "complement": "Apto 101",
+              "locality": "Bairro Exemplo",
+              "city": "São Paulo",
+              "region_code": "SP",
+              "country": "BRA",
+              "postal_code": "01001000"
+            }
           },
           "due_date": "2024-11-18"
         },
