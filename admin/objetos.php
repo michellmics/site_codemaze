@@ -1108,8 +1108,74 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function gerBoleto()
+        {
+            $url = 'https://sandbox.api.pagseguro.com/orders';
+            $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
+            $data = '{
+              "customer": {
+                "name": "serconeo",
+                "tax_id": "04996791993",
+                "email": "teste@teste.com.br"
+              },
+              "reference_id": "122",
+              "charges": [
+                {
+                  "amount": { 
+                    "value": 600, 
+                    "currency": "BRL" 
+                  },
+                  "payment_method": {
+                    "type": "BOLETO",
+                    "boleto": {
+                      "due_date": "2024-11-30",
+                      "instruction_lines": {
+                        "line_1": "Pagamento processado para DESC Fatura",
+                        "line_2": "Via PagSeguro"
+                      },
+                      "holder": {
+                        "name": "serconeo",
+                        "tax_id": "04996791993",
+                        "email": "teste@teste.com.br",
+                        "address": {
+                          "country": "BRA",
+                          "region": "São Paulo",
+                          "region_code": "SP",
+                          "city": "São Paulo",
+                          "postal_code": "01452002",
+                          "street": "Avenida Brigadeiro Faria Lima",
+                          "number": "1384",
+                          "locality": "Pinheiros"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+            ';
 
+            $ch = curl_init($url);
 
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+            curl_setopt($ch, CURLOPT_POST, true);  
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data); 
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Authorization: Bearer ' . $token,
+                'Accept: */*',
+                'Content-Type: application/json'
+            ]);
+
+            $response = curl_exec($ch);
+
+            if (curl_errno($ch)) 
+            {                
+                return curl_error($ch);
+            } 
+            curl_close($ch);
+            
+            return $response;            
+        }
 
     }
