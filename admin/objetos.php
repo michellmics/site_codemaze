@@ -1195,8 +1195,6 @@
                 }
             ';
 
-            //return $data;
-
             $ch = curl_init($url);
 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
@@ -1216,7 +1214,11 @@
             } 
             curl_close($ch);
 
-            return $response;            
+            $pdfLink = $data['charges'][0]['payment_method']['boleto']['links'][0]['href'];
+            $idCobranca = $data['charges'][0]['id'];
+            $idPedido = $data['id'];
+
+            return $idCobranca;            
         }
 
     }
