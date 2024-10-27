@@ -1232,10 +1232,10 @@
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
                         SET 
-                        LFI_PAGSEGURO_IDCOBRANCA_BOLETO = :CLI_STSTATUSPENDING,
-                        LFI_PAGSEGURO_IDPEDIDO_BOLETO = :CLI_STSTATUSPENDING,
-                        LFI_PAGSEGURO_DTGERACAO_BOLETO = :CLI_STSTATUSPENDING,
-                        LFI_PAGSEGURO_LINK_BOLETO = :CLI_STSTATUSPENDING
+                        LFI_PAGSEGURO_IDCOBRANCA_BOLETO = :LFI_PAGSEGURO_IDCOBRANCA_BOLETO,
+                        LFI_PAGSEGURO_IDPEDIDO_BOLETO = :LFI_PAGSEGURO_IDPEDIDO_BOLETO,
+                        LFI_PAGSEGURO_DTGERACAO_BOLETO = :LFI_PAGSEGURO_DTGERACAO_BOLETO,
+                        LFI_PAGSEGURO_LINK_BOLETO = :LFI_PAGSEGURO_LINK_BOLETO
                         WHERE LFI_IDOP = '$LFI_IDOP'";
 
                 $stmt = $this->pdo->prepare($sql);
