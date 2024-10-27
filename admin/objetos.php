@@ -1246,10 +1246,10 @@
 
                 $stmt->execute();
             
-                return $pdfLink;
+                return "Boleto gerado com sucesso. <a href='table_liquidacaoFinanceira.php'>VOLTAR</a>";
             } catch (PDOException $e) {
-                // Captura e retorna o erro
-                return ["error" => $e->getMessage()];
+                return "Falha ao gerar o boleto. <a href='table_liquidacaoFinanceira.php'>VOLTAR</a>";
+                // return ["error" => $e->getMessage()];
             }
         
         }

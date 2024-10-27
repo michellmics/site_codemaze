@@ -1,14 +1,13 @@
 <?php
-    header('Content-Type: application/json');
     include_once 'objetos.php';
+
+    $LFI_IDOP = $_GET['LFI_IDOP'];
 
     $siteAdmin = new SITE_ADMIN();
 
-    $LFI_IDOP = '40222010';
-
     $result = $siteAdmin->gerBoleto($LFI_IDOP);
 
-    echo '<a href="' . htmlspecialchars($result) . '" target="_self">Abrir Boleto PDF</a>';
+    echo $result;
 
 
 ?>
