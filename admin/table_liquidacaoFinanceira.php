@@ -159,7 +159,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           $inputDeixarAbertoStatus = $liquidFin['LFI_DTPAGAMENTO'] == NULL || $liquidFin['LFI_DTPAGAMENTO'] == '0000-00-00' ? 'display: none;' : '';
                           
                           $idOrdemPagamento = htmlspecialchars($liquidFin['LFI_IDOP']);
-                          $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>Gerar Boleto</a>" : "Eita";
+                          $linkBoleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'];
+                          $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>Gerar Boleto</a>" : "<a href='$linkBoleto' target='_self'>Abrir Boleto</a>";
 
                         ?> 
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
