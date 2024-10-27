@@ -1130,7 +1130,7 @@
                 $tax_id = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCPFCNPJ"];
                 $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
                 $reference_id = $LFI_IDOP;
-                $value = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"];
+                $value = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
 
                 $street = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"];
                 $city = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"];
