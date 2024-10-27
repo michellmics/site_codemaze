@@ -154,8 +154,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
                           
-                          $inputLiquidarStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL ? 'display: none;' : '';
-                          $inputDeixarAbertoStatus = $liquidFin['LFI_DTPAGAMENTO'] == NULL ? 'display: none;' : '';
+                          $inputLiquidarStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL && $liquidFin['LFI_DTPAGAMENTO'] != '0000-00-00' ? 'display: none;' : '';
+                          $inputDeixarAbertoStatus = $liquidFin['LFI_DTPAGAMENTO'] == NULL || $liquidFin['LFI_DTPAGAMENTO'] == '0000-00-00' ? 'display: none;' : '';
                           
 
                         ?> 
