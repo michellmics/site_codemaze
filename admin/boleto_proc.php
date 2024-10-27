@@ -6,7 +6,7 @@
 
     $LFI_IDOP = '40222010';
 
-    $result = $siteAdmin->gerBoleto($LFI_IDOP);
+    $result = json_encode($siteAdmin->gerBoleto($LFI_IDOP));
 
      echo $result;
 

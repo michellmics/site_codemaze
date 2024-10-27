@@ -1115,10 +1115,16 @@
 
             if(!$this->pdo){$this->conexao();}            
           
-                $sql = "SELECT * FROM VW_TABLE_LIQUIDACAOFINANCEIRA WHERE LFI_IDOP = '$LFI_IDOP'";                
+                $sql = "SELECT * 
+                        FROM VW_TABLE_LIQUIDACAOFINANCEIRA LIF
+                        INNER JOIN CLI_CLIENT CLI ON (CLI.CLI_IDCLIENT = LIF.CLI_IDCLIENT)
+                        INNER JOIN GEC_GESTAO_CONTRATO GGC ON (GGC.GEC_IDGESTAO_CONTRATO = LIF.GEC_IDGESTAO_CONTRATO)
+                        WHERE LFI_IDOP = '$LFI_IDOP'";                
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $ARRAY_VWLIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                return $ARRAY_VWLIQUIDACAOFINANCEIRA;
 
                 $name = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"];
 
