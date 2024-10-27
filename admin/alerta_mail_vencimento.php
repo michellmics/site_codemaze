@@ -11,8 +11,12 @@ var_dump($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
 echo "</pre>";
 */
 
+
+
 foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 {
+    $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Liquidado");
+
     if($array["LFI_STPAGAMENTO"] != "LIQUIDADO")
     {
         $now = new DateTime(); 
@@ -23,6 +27,8 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
         if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
+            $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
+
             $contato = $array['CLI_NMNAME'];
             $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
 

@@ -599,6 +599,33 @@
             }
         }
 
+        public function updateClientFinStatus($CLI_IDCLIENT, $CLI_STSTATUSPENDING)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            
+            try {
+                $sql = "UPDATE PRS_PRODUTO_SERVICO 
+                        SET CLI_STSTATUSPENDING = :CLI_STSTATUSPENDING
+                        WHERE CLI_IDCLIENT = :CLI_IDCLIENT";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':CLI_STSTATUSPENDING', $CLI_STSTATUSPENDING, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_IDCLIENT', $CLI_IDCLIENT, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Cliente atualizado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function updateContratoInfo($GEC_IDGESTAO_CONTRATO,
         $CLI_IDCLIENT, 
         $PRS_IDPRODUTO_SERVICO, 
