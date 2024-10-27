@@ -136,7 +136,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                     <tr>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_IDCLIENT']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px;">
-                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Em aberto' ? 'label-danger' : 'label-success' ?>">
+                            <a href="#" target="_self"><span class="label <?= $client['CLI_STSTATUSPENDING'] == 'Vencido' ? 'label-danger' : 'label-success' ?>">
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?>
                             </span>
                         </td> 
