@@ -1151,7 +1151,7 @@
         },
         "type": "BOLETO"
       },
-      "reference_id": "id cobranca",
+      "reference_id": "id_cobranca",
       "notification_urls": [
         "https://meusite.com/notificacoes"
       ]
