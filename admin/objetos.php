@@ -1124,22 +1124,34 @@
                 $stmt->execute();
                 $ARRAY_VWLIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 
-                return $ARRAY_VWLIQUIDACAOFINANCEIRA;
+                
 
                 $name = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"];
+                $tax_id = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCPFCNPJ"];
+                $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
+                $reference_id = $LFI_IDOP;
+                $value = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"];
+
+                $street = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"];
+                $city = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"];
+                $region_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCSTATE"];
+                $postal_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCEP"];
+                $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
+
+                $nameItem = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
 
 
             $data = '{
                   "customer": {
                     "name": "'.$name.'",
-                    "tax_id": "04996791993",
-                    "email": "contato@serconeo.com.br"
+                    "tax_id": "'.$tax_id.'",
+                    "email": "'.$email.'"
                   },
-                  "reference_id": "145973-2",
+                  "reference_id": "'.$reference_id.'",
                   "charges": [
                     {
                       "amount": {
-                        "value": 600,
+                        "value": "'.$value.'",
                         "currency": "BRL"
                       },
                       "payment_method": {
@@ -1150,34 +1162,34 @@
                           },
                           "holder": {
                             "address": {
-                              "street": "rua do cliente",
-                              "number": "44",
-                              "locality": "Cambui",
-                              "city": "Curitiba",
+                              "street": "'.$street.'",
+                              "number": "000",
+                              "locality": "000",
+                              "city": "'.$city.'",
                               "region": "Paraná",
-                              "region_code": "PR",
+                              "region_code": "'.$region_code.'",
                               "country": "Brasil",
-                              "postal_code": "13186170"
+                              "postal_code": "'.$postal_code.'"
                             },
-                            "name": "Nome do responsavel pelo pagamento",
-                            "tax_id": "04996791993",
-                            "email": "contato@responsavel.com.br"
+                            "name": "'.$name.'",
+                            "tax_id": "'.$tax_id.'",
+                            "email": "'.$email.'"
                           },
                           "due_date": "2024-11-18"
                         },
                         "type": "BOLETO",
                         "installments": 1
                       },
-                      "reference_id": "id cobranca",
+                      "reference_id": "'.$reference_id.'",
                       "notification_urls": [
                         "https://meusite.com/notificacoes"
                       ],
-                      "description": "servios de ti descrição"
+                      "description": "'.$description.'"
                     }
                   ],
                   "items": [
                     {
-                      "name": "Serviço de Suporte TI",
+                      "name": "'.$nameItem.'", 
                       "unit_amount": 35000,
                       "quantity": 1
                     }
