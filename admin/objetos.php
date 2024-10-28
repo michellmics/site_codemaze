@@ -1137,7 +1137,9 @@
                 $tax_id = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCPFCNPJ"];
                 $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
                 $reference_id = $LFI_IDOP;
-                $value = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
+                $valorOrig = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
+                $valorJuros = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["LFI_DCVALOR_PARCELA_JUROS"] * 100);
+                $value = ($valorOrig + $valorJuros);
                 $street = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"];
                 $city = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"];
                 $region_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCSTATE"];
