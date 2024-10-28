@@ -1110,8 +1110,8 @@
 
         public function gerBoleto($LFI_IDOP)
         {
-           //$url = 'https://sandbox.api.pagseguro.com/orders'; //ambiente de homol
-            $url = 'https://api.pagseguro.com/orders'; //ambiente prod
+            $url = 'https://sandbox.api.pagseguro.com/orders'; //ambiente de homol
+            //$url = 'https://api.pagseguro.com/orders'; //ambiente prod
             $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
             $now = new DateTime(); 
@@ -1222,8 +1222,6 @@
             ]);
 
             $response = curl_exec($ch);
-
-            return $response;
 
             if (curl_errno($ch)) 
             {                
