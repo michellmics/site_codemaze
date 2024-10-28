@@ -1223,8 +1223,6 @@
 
             $response = curl_exec($ch);
 
-            return $response;
-
             if (curl_errno($ch)) 
             {                
                 return curl_error($ch);
