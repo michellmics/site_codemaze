@@ -157,6 +157,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 0 && $diferenca < 5 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "A VENCER";$classIcon = "label label-warning";}  
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
+
+                          
+
+                          $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] = $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] == NULL ? '0.00' : $liquidFin['LFI_DCVALOR_PARCELA_JUROS'];
                           
                           $inputLiquidarStatus = $liquidFin['LFI_DTPAGAMENTO'] != NULL && $liquidFin['LFI_DTPAGAMENTO'] != '0000-00-00' ? 'display: none;' : '';
                           $inputDeixarAbertoStatus = $liquidFin['LFI_DTPAGAMENTO'] == NULL || $liquidFin['LFI_DTPAGAMENTO'] == '0000-00-00' ? 'display: none;' : '';
