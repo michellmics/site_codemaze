@@ -30,7 +30,7 @@ $msg = "
         ";
 
 
-$siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
+$dashboardValues->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
 
 
 echo "Fim do Script";
