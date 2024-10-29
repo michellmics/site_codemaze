@@ -39,7 +39,45 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     Estamos à disposição para ajudá-lo(a)!<br>
                     Atenciosamente,<br><br>
 
-                    Vanessa Kuasne - Departamento Financeiro <br><br>
+                    <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
+
+                    Codemaze - Soluções de MKT e Software<br><br>
+                    vanessa.kuasne@codemaze.com.br<br>
+                    faleconosco@codemaze.com.br<br>
+                    suporte@codemaze.com.br<br>
+                    <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
+                    ";
+
+            $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
+            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
+            
+            break;
+        }
+
+        if ($diferenca <= 10 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        {
+            $contato = $array['CLI_NMNAME'];
+            $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
+
+            if($diferenca == 0)
+            {
+                $msgTxt = "Identificamos que sua fatura vence hoje.";
+            }
+            else
+                {
+                    $msgTxt = "Identificamos que faltam $diferenca dias para o vencimento de sua fatura.";
+                }
+            
+
+            $subject = "Aviso de vencimento - Codemaze";
+            $msg = "
+                    Olá <b>$contato</b>, bom dia! <br><br>
+                    $msgTxt<br>
+                    Caso já tenha realizado o pagamento, desconsidere este e-mail.<br><br>
+
+                    Estamos à disposição para ajudá-lo(a)!<br>
+                    Atenciosamente,<br><br>
+
                     <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
 
                     Codemaze - Soluções de MKT e Software<br><br>
