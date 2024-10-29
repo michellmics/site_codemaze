@@ -161,9 +161,7 @@ $despesas = 125; //provisorio
                 </a>
               </div>
             </div><!-- ./col -->
-
-
-                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+            <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value=<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Receitas Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
@@ -179,6 +177,8 @@ $despesas = 125; //provisorio
                       <input type="text" class="knob" value="0" data-min="0" data-max="20000" data-width="90" data-height="90" data-fgColor="#00a65a"/>
                       <div class="knob-label">Liquido Acum. (R$)<br><? echo $anoCorrente; ?></div> 
                     </div><!-- ./col -->
+
+                    
                 </div><!-- /.row -->
             </div>
 
@@ -213,22 +213,23 @@ $despesas = 125; //provisorio
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $totalCLient["0"]["TOTAL"]; ?>" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Clientes</div>
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value=<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Receitas Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $totalProdutos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Produtos Cadastrados</div>
+                      <input type="text" class="knob" value="<? echo $despesas; ?>" data-max="1000" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <div class="knob-label">Despesas Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $totalContratosAtivos["0"]["TOTAL"]; ?>" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Contratos Ativos</div>
+                      <input type="text" class="knob" value="<? echo $liquidoMêsCorrente; ?>" data-min="0" data-max="3000" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Liquido Mês (R$)<br><? echo $mêsCorrente; ?></div>
                     </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $totalContratosInativos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
-                      <div class="knob-label">Contratos Inativos</div>
+                      <input type="text" class="knob" value="0" data-min="0" data-max="20000" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Liquido Acum. (R$)<br><? echo $anoCorrente; ?></div> 
                     </div><!-- ./col -->
+                  </div><!-- /.row -->
             </div>
 
 
