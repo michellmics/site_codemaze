@@ -27,7 +27,9 @@ $despesas = 125; //provisorio
   $countContratosVencer = $dashboardValues->countContratosVencer();
   $countContratosVencidos = $dashboardValues->countContratosVencidos();
   $countContratosLiquidados = $dashboardValues->countContratosLiquidados();
- 
+  $countProdutosHospedagem = $dashboardValues->countProdutosHospedagem();
+var_dump($countProdutosHospedagem);
+die();
  
   $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
 
