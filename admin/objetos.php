@@ -214,6 +214,7 @@
                                 OR PRS_NMNOME LIKE :search
                                 OR LFI_DTVENCIMENTO LIKE :search
                                 OR LFI_STPAGAMENTO LIKE :search
+                                OR LFI_IDOP LIKE :search
                                 ORDER BY 
                             CASE 
                                 WHEN LFI_DTVENCIMENTO >= CURDATE() THEN 0 -- Vencimentos futuros ou hoje
