@@ -404,7 +404,8 @@
             try{           
                 $sql = "SELECT *
                                 FROM PRS_PRODUTO_SERVICO
-                                WHERE PRS_IDPRODUTO_SERVICO = $ID";
+                                WHERE PRS_IDPRODUTO_SERVICO = $ID
+                                ORDER BY PRS_NMNOME ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
