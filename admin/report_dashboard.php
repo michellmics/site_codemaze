@@ -104,40 +104,29 @@ $despesas = 125; //provisorio
             </div>
 
             <div class="col-md-4">
-  <div class="box box-solid">
-    <div class="box-header">
-      <h3 class="box-title text-danger">Maiores Clientes</h3>
-      <div class="box-tools pull-right">
-        <button class="btn btn-default btn-sm">
-          <i class="fa fa-refresh"></i>
-        </button>
-      </div>
-    </div>
+              <div class="box box-solid">
+                <div class="box-header">
+                  <h3 class="box-title text-danger">Maiores Clientes</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-body text-center">
+                  <div class="sparkline" data-type="pie" data-offset="90" data-width="100px" data-height="100px">
+                    6,4,8
+                  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
 
-    <div class="box-body d-flex" style="display: flex; align-items: center;">
-      <!-- Gráfico de Pizza -->
-      <div class="chart-container" style="flex: 1; text-align: center;">
-        <div class="sparkline"
-             data-type="pie"
-             data-width="100px"
-             data-height="100px"
-             data-slice-colors="#ff6384,#36a2eb,#cc65fe">
-          6,4,8
-        </div>
-      </div>
-
-      <!-- Legenda ao Lado Direito -->
-      <div class="legend-container" style="margin-left: 20px;">
+              <div class="legend-container" style="margin-left: 20px;">
         <ul class="list-unstyled">
           <li><span style="color:#ff6384">●</span> Cliente A: 6 unidades</li>
           <li><span style="color:#36a2eb">●</span> Cliente B: 4 unidades</li>
           <li><span style="color:#cc65fe">●</span> Cliente C: 8 unidades</li>
         </ul>
       </div>
-    </div>
-  </div>
-</div>
-
+      
+            </div><!-- /.col -->
 
 
 
