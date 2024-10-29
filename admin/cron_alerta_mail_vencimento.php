@@ -42,7 +42,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
 
                     Codemaze - Soluções de MKT e Software<br><br>
-                    vanessa.kuasne@codemaze.com.br<br>
                     faleconosco@codemaze.com.br<br>
                     suporte@codemaze.com.br<br>
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
@@ -54,7 +53,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             break;
         }
 
-        if ($diferenca <= 10 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        if ($diferenca <= 5 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $contato = $array['CLI_NMNAME'];
             $emalCobrança = $array['GEC_DCEMAILCOBRANCA']; 
@@ -81,7 +80,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
 
                     Codemaze - Soluções de MKT e Software<br><br>
-                    vanessa.kuasne@codemaze.com.br<br>
                     faleconosco@codemaze.com.br<br>
                     suporte@codemaze.com.br<br>
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
