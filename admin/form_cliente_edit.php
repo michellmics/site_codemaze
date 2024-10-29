@@ -83,7 +83,7 @@
 			</div>				
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="18" pattern="[0-9]*"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"]; ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="24"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"]; ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
