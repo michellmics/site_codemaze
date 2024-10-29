@@ -161,7 +161,11 @@ $despesas = 125; //provisorio
                 </a>
               </div>
             </div><!-- ./col -->
+     
 
+                    
+                </div><!-- /.row -->
+            </div>
 
             <div class="col-md-4">
               <div class="progress-group">
