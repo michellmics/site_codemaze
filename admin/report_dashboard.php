@@ -159,7 +159,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-purple">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup><? echo $countLiquidoAnoCorrente["0"]["TOTAL"]; ?>  
+                  <sup style="font-size: 20px">R$</sup><? echo round($countLiquidoAnoCorrente["0"]["TOTAL"],0); ?>  
                   </h3>
                   <p>
                   Liquido Acum. <? echo $anoCorrente; ?>
