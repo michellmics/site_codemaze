@@ -147,10 +147,11 @@ $despesas = 125; //provisorio
               <div class="small-box bg-purple">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup><? echo $anoCorrente; ?>
+                  <sup style="font-size: 20px">R$</sup>0
                   </h3>
                   <p>
-                  Liquido Acum. (R$)
+                  Liquido Acum. (R$)<br>
+                  <? echo $anoCorrente; ?>
                   </p>
                 </div>
                 <div class="icon">
