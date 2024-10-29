@@ -151,13 +151,13 @@
             
             try{           
                 $sql = "SELECT * 
-FROM VW_TABLE_LIQUIDACAOFINANCEIRA
-ORDER BY 
-    CASE 
-        WHEN LFI_DTVENCIMENTO >= CURDATE() THEN 0 -- Vencimentos futuros ou hoje
-        ELSE 1 -- Vencimentos passados
-    END, 
-    LFI_DTVENCIMENTO ASC";
+                        FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+                        ORDER BY 
+                            CASE 
+                                WHEN LFI_DTVENCIMENTO >= CURDATE() THEN 0 -- Vencimentos futuros ou hoje
+                                ELSE 1 -- Vencimentos passados
+                            END, 
+                            LFI_DTVENCIMENTO ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
@@ -214,7 +214,12 @@ ORDER BY
                                 OR PRS_NMNOME LIKE :search
                                 OR LFI_DTVENCIMENTO LIKE :search
                                 OR LFI_STPAGAMENTO LIKE :search
-                                ORDER BY LFI_DTVENCIMENTO DESC";
+                                ORDER BY 
+                            CASE 
+                                WHEN LFI_DTVENCIMENTO >= CURDATE() THEN 0 -- Vencimentos futuros ou hoje
+                                ELSE 1 -- Vencimentos passados
+                            END, 
+                            LFI_DTVENCIMENTO ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
@@ -1194,7 +1199,6 @@ ORDER BY
         public function gerBoleto($LFI_IDOP)
         {
             $url = 'https://sandbox.api.pagseguro.com/orders'; //ambiente de homol
-            //$url = 'https://api.pagseguro.com/orders'; //ambiente prod
             $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';  
 
             $now = new DateTime(); 
