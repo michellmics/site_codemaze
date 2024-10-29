@@ -25,7 +25,7 @@ else
 
 
 // Configurações de Paginação
-$registrosPorPagina = 10;
+$registrosPorPagina = 20;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $totalRegistros = count($siteAdmin->ARRAY_PRODUCTINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
