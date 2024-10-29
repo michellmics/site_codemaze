@@ -104,9 +104,6 @@ $despesas = 125; //provisorio
             </div>
 
             <div class="col-md-4">
-              <p class="text-center">
-                <strong>Goal Completion</strong>
-              </p>
               <div class="progress-group">
                 <span class="progress-text">Add Products to Cart</span>
                 <span class="progress-number"><b>50</b>/200</span>
