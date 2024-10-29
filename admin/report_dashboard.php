@@ -172,9 +172,9 @@ die();
             <div class="col-md-4"> 
               <div class="progress-group">
                 <span class="progress-text">Hosting Slots Dísponiveis</span>
-                <span class="progress-number"><b><? $hostPerc = ($countProdutosHospedagem["0"]["TOTAL"]/10)*100; echo $countProdutosHospedagem["0"]["TOTAL"]; ?></b>/10</span>
+                <span class="progress-number"><b>2</b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $hostPerc; ?>%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
