@@ -27,6 +27,9 @@ $despesas = 125; //provisorio
   $countContratosVencer = $dashboardValues->countContratosVencer();
   $countContratosVencidos = $dashboardValues->countContratosVencidos();
   $countContratosLiquidados = $dashboardValues->countContratosLiquidados();
+  $countProdutosHospedagem = $dashboardValues->countProdutosHospedagem();
+
+  
 
   
   $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
@@ -167,26 +170,26 @@ $despesas = 125; //provisorio
                 </div><!-- /.row -->
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4"> 
               <div class="progress-group">
                 <span class="progress-text">Hosting Slots Dísponiveis</span>
-                <span class="progress-number"><b>2</b>/10</span>
+                <span class="progress-number"><b><? $hostPerc = ($countProdutosHospedagem/10)*100; echo $countProdutosHospedagem; ?></b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $hostPerc; ?>%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Plano de Consultoria </span>
                 <span class="progress-number"><b>2</b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Desenvolvimento de Sites</span>
                 <span class="progress-number"><b>2</b>/20</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 10%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 10%"></div>
                 </div>
               </div><!-- /.progress-group -->
             </div><!-- /.col -->
@@ -223,21 +226,21 @@ $despesas = 125; //provisorio
                 <span class="progress-text">Tráfego Pago (R$)</span>
                 <span class="progress-number"><b>0</b>/500</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Contratos Social Midia</span>
                 <span class="progress-number"><b>0</b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 80%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 80%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Futuro</span>
                 <span class="progress-number"><b>0</b>/0</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
             </div><!-- /.col -->
@@ -273,21 +276,21 @@ $despesas = 125; //provisorio
                 <span class="progress-text">Futuro</span>
                 <span class="progress-number"><b>0</b>/0</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 0%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Futuro</span>
                 <span class="progress-number"><b>0</b>/0</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Futuro</span>
                 <span class="progress-number"><b>0</b>/0</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
             </div><!-- /.col -->
