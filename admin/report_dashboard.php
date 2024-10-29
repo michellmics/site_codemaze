@@ -172,7 +172,7 @@ $despesas = 125; //provisorio
                 <span class="progress-text">Hosting Slots Dísponiveis</span>
                 <span class="progress-number"><b>2</b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 20%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
