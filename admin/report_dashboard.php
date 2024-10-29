@@ -117,11 +117,11 @@ $despesas = 125; //provisorio
     <div class="box-body d-flex" style="display: flex; align-items: center;">
       <!-- Gráfico de Pizza -->
       <div class="chart-container" style="flex: 1; text-align: center;">
-        <div class="sparkline" 
-             data-type="pie" 
-             data-width="100px" 
-             data-height="100px" 
-             data-slice-colors="['#ff6384','#36a2eb','#cc65fe']">
+        <div class="sparkline"
+             data-type="pie"
+             data-width="100px"
+             data-height="100px"
+             data-slice-colors="#ff6384,#36a2eb,#cc65fe">
           6,4,8
         </div>
       </div>
