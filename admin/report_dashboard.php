@@ -115,20 +115,8 @@ $despesas = 125; //provisorio
                   <div class="sparkline" data-type="pie" data-offset="90" data-width="100px" data-height="100px">
                     6,4,8
                   </div>
-
-                  
-              <div class="legend-container" style="margin-left: 20px;">
-        <ul class="list-unstyled">
-          <li><span style="color:#ff6384">●</span> Cliente A: 6 unidades</li>
-          <li><span style="color:#36a2eb">●</span> Cliente B: 4 unidades</li>
-          <li><span style="color:#cc65fe">●</span> Cliente C: 8 unidades</li>
-        </ul>
-      </div>
-      
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
-
-
             </div><!-- /.col -->
 
 
