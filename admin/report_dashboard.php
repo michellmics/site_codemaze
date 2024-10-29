@@ -29,7 +29,8 @@ $despesas = 125; //provisorio
   $countContratosLiquidados = $dashboardValues->countContratosLiquidados();
   $countProdutosHospedagem = $dashboardValues->countProdutosHospedagem();
 
-  
+  echo $countProdutosHospedagem;
+  die();
 
   
   $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
@@ -175,7 +176,7 @@ $despesas = 125; //provisorio
                 <span class="progress-text">Hosting Slots Dísponiveis</span>
                 <span class="progress-number"><b><? $hostPerc = ($countProdutosHospedagem/10)*100; echo $countProdutosHospedagem; ?></b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $hostPerc; ?>%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
