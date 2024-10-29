@@ -10,7 +10,7 @@ $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
 
 $dashboardValues->insertBalancoMes($countReceitaMesCorrente, $despesas, $liquidoMêsCorrente);
 
-var_dump($countReceitaMesCorrente);
+var_dump($liquidoMêsCorrente);
 
 echo "Fim do Script";
 ?>
