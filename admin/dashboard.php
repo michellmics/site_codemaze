@@ -348,7 +348,7 @@
             <li class="header"><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-edit"></i> <span>Formularios</span>
+                <i class="fa fa-edit"></i> <span>Financeiro</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">               
@@ -366,7 +366,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Desempenho</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
               </ul> 
             </li>
