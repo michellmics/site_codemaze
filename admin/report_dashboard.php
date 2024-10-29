@@ -104,20 +104,38 @@ $despesas = 125; //provisorio
             </div>
 
             <div class="col-md-4">
-              <div class="box box-solid">
-                <div class="box-header">
-                  <h3 class="box-title text-danger">Maiores Clientes</h3>
-                  <div class="box-tools pull-right">
-                    <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                  </div>
-                </div><!-- /.box-header -->
-                <div class="box-body text-center">
-                  <div class="sparkline" data-type="pie" data-offset="90" data-width="100px" data-height="100px">
-                    6,4,8
-                  </div>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->
+                      <p class="text-center">
+                        <strong>Goal Completion</strong>
+                      </p>
+                      <div class="progress-group">
+                        <span class="progress-text">Add Products to Cart</span>
+                        <span class="progress-number"><b>50</b>/200</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-aqua" style="width: 20%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Complete Purchase</span>
+                        <span class="progress-number"><b>310</b>/400</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-red" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Visit Premium Page</span>
+                        <span class="progress-number"><b>480</b>/800</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-green" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Send Inquiries</span>
+                        <span class="progress-number"><b>250</b>/500</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                    </div><!-- /.col -->
 
 
 
