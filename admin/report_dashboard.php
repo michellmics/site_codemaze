@@ -147,10 +147,10 @@ $despesas = 125; //provisorio
               <div class="small-box bg-purple">
                 <div class="inner">
                   <h3>
-                    80<sup style="font-size: 20px">%</sup>
+                  <sup style="font-size: 20px">R$</sup><? echo $anoCorrente; ?>
                   </h3>
                   <p>
-                    Conversion Rate
+                  Liquido Acum. (R$)
                   </p>
                 </div>
                 <div class="icon">
