@@ -8,9 +8,7 @@ $despesas = 125; //provisorio
 $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
 
 
-$dashboardValues->insertBalancoMes($countReceitaMesCorrente, $despesas, $liquidoMêsCorrente);
-
-var_dump($liquidoMêsCorrente);
+$dashboardValues->insertBalancoMes($countReceitaMesCorrente["0"]["TOTAL"], $despesas, $liquidoMêsCorrente);
 
 echo "Fim do Script";
 ?>
