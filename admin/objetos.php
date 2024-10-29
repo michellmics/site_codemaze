@@ -987,6 +987,37 @@ ORDER BY
             }
         }
 
+        public function insertBalancoMes($BLM_DCRECEITA, $BLM_DCDESPESA, $BLM_DCLIQUIDO)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+
+            $BLM_DTFECHAMENTO = date('Y-m-d H:i:s'); // Formato: 2024-10-17 08:30:00
+
+            try {
+                $sql = "INSERT INTO BLM_BALANCO_MENSAL 
+                        (BLM_DTFECHAMENTO, BLM_DCRECEITA, BLM_DCDESPESA, BLM_DCLIQUIDO) 
+                        VALUES (:BLM_DTFECHAMENTO, :BLM_DCRECEITA, :BLM_DCDESPESA, :BLM_DCLIQUIDO)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':BLM_DTFECHAMENTO', $BLM_DTFECHAMENTO, PDO::PARAM_STR);
+                $stmt->bindParam(':BLM_DCRECEITA', $BLM_DCRECEITA, PDO::PARAM_STR);
+                $stmt->bindParam(':BLM_DCDESPESA', $BLM_DCDESPESA, PDO::PARAM_STR);
+                $stmt->bindParam(':BLM_DCLIQUIDO', $BLM_DCLIQUIDO, PDO::PARAM_STR);
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return ["success" => "Balanço inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function notifyEmail($SUBJECT, $MSG)
         {
             // Configurações do e-mail
