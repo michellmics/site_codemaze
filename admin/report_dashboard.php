@@ -83,7 +83,27 @@ $despesas = 125; //provisorio
         <section class="content">
           <div class="row">
             <div class="col-md-6">
-            <div class="row">
+              <div class="row">
+
+              <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3>
+                    150
+                  </h3>
+                  <p>
+                    New Orders
+                  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div><!-- ./col -->
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value="<? echo $totalCLient["0"]["TOTAL"]; ?>" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Clientes</div>
@@ -100,7 +120,7 @@ $despesas = 125; //provisorio
                       <input type="text" class="knob" value="<? echo $totalContratosInativos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
                       <div class="knob-label">Contratos Inativos</div>
                     </div><!-- ./col -->
-                  </div><!-- /.row -->
+                </div><!-- /.row -->
             </div>
 
             <div class="col-md-4">
@@ -133,7 +153,7 @@ $despesas = 125; //provisorio
 
           <div class="row">
             <div class="col-md-6">
-            <div class="row">
+              <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6 text-center">
                       <input type="text" class="knob" value=<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
                       <div class="knob-label">Receitas Mês (R$)<br><? echo $mêsCorrente; ?></div>
@@ -152,7 +172,7 @@ $despesas = 125; //provisorio
                     </div><!-- ./col -->
                   </div><!-- /.row -->
             </div>
-            <br>
+
 
             <div class="col-md-4">
               <div class="progress-group">
