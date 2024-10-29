@@ -355,8 +355,8 @@
                 <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
                 <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Produtos</a></li>
                 <li><a href="#" onclick="loadInIframe('table_contrato.php')"><i class="fa fa-circle-o"></i> Gestão de contratos</a></li>
-                <li><a href="#" onclick="loadInIframe('table_liquidacaoFinanceira.php')"><i class="fa fa-circle-o"></i> Liq. FInanceira</a></li>
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Fluxo de Caixa</a></li>
+                <li><a href="#" onclick="loadInIframe('table_liquidacaoFinanceira.php')"><i class="fa fa-circle-o"></i> Contas a receber</a></li>
+                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
               </ul> 
             </li>
@@ -366,7 +366,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Desempenho</a></li>
+                <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Desempenho Geral</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
               </ul> 
             </li>
