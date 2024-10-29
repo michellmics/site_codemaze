@@ -30,6 +30,10 @@ $despesas = 125; //provisorio
   $countProdutosHospedagem = $dashboardValues->countProdutosHospedagem();
   $countProdutosConsultoriaTI = $dashboardValues->countProdutosConsultoriaTI();
   $countProdutosDesenSite = $dashboardValues->countProdutosDesenSite();
+  $countLiquidoAnoCorrente = $dashboardValues->countLiquidoAnoCorrente();
+
+
+  
 
   
 
@@ -155,7 +159,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-purple">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup>0
+                  <sup style="font-size: 20px">R$</sup><? echo $countLiquidoAnoCorrente["0"]["TOTAL"]; ?>  
                   </h3>
                   <p>
                   Liquido Acum. <? echo $anoCorrente; ?>

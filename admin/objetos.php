@@ -1139,6 +1139,18 @@ ORDER BY
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function countLiquidoAnoCorrente()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT ROUND(SUM(BLM_DCLIQUIDO), 2) AS TOTAL
+                    FROM BLM_BALANCO_MENSAL 
+                    WHERE DATE_FORMAT(BLM_DTFECHAMENTO, '%Y') = DATE_FORMAT(CURDATE(), '%Y');";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
         public function countContratosVencer()
         {        
             if(!$this->pdo){$this->conexao();}
