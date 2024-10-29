@@ -231,14 +231,14 @@ $despesas = 125; //provisorio
                 <span class="progress-text">Tráfego Pago (R$)</span>
                 <span class="progress-number"><b>0</b>/500</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 20%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
                 <span class="progress-text">Contratos Social Midia</span>
                 <span class="progress-number"><b>0</b>/10</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 80%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
                 </div>
               </div><!-- /.progress-group -->
               <div class="progress-group">
