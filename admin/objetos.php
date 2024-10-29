@@ -150,9 +150,14 @@
                 if(!$this->pdo){$this->conexao();}
             
             try{           
-                $sql = "SELECT *
-                                FROM VW_TABLE_LIQUIDACAOFINANCEIRA
-                                ORDER BY LFI_DTVENCIMENTO DESC";
+                $sql = "SELECT * 
+FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+ORDER BY 
+    CASE 
+        WHEN LFI_DTVENCIMENTO >= CURDATE() THEN 0 -- Vencimentos futuros ou hoje
+        ELSE 1 -- Vencimentos passados
+    END, 
+    LFI_DTVENCIMENTO ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
