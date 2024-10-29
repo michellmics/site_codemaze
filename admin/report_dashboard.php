@@ -90,10 +90,10 @@ $despesas = 125; //provisorio
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3>
-                    150
+                  <sup style="font-size: 20px">R$</sup><? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>
                   </h3>
                   <p>
-                    New Orders
+                  Receitas Mês <? echo $mêsCorrente; ?>
                   </p>
                 </div>
                 <div class="icon">
@@ -109,10 +109,10 @@ $despesas = 125; //provisorio
               <div class="small-box bg-red">
                 <div class="inner">
                   <h3>
-                    65
+                  <sup style="font-size: 20px">R$</sup><? echo $despesas; ?>
                   </h3>
                   <p>
-                    Unique Visitors
+                  Despesas Mês <? echo $mêsCorrente; ?>
                   </p>
                 </div>
                 <div class="icon">
@@ -128,10 +128,10 @@ $despesas = 125; //provisorio
               <div class="small-box bg-green">
                 <div class="inner">
                   <h3>
-                    53<sup style="font-size: 20px">%</sup>
+                  <sup style="font-size: 20px">R$</sup><? echo $liquidoMêsCorrente; ?>
                   </h3>
                   <p>
-                    Bounce Rate
+                  Liquido Mês <? echo $mêsCorrente; ?>
                   </p>
                 </div>
                 <div class="icon">
@@ -150,8 +150,7 @@ $despesas = 125; //provisorio
                   <sup style="font-size: 20px">R$</sup>0
                   </h3>
                   <p>
-                  Liquido Acum. (R$)<br>
-                  <? echo $anoCorrente; ?>
+                  Liquido Acum. <? echo $anoCorrente; ?>
                   </p>
                 </div>
                 <div class="icon">
@@ -162,26 +161,7 @@ $despesas = 125; //provisorio
                 </a>
               </div>
             </div><!-- ./col -->
-            <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value=<? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>" data-max="3000" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
-                      <div class="knob-label">Receitas Mês (R$)<br><? echo $mêsCorrente; ?></div>
-                    </div><!-- ./col -->
-                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $despesas; ?>" data-max="1000" data-width="90" data-height="90" data-fgColor="#f56954"/>
-                      <div class="knob-label">Despesas Mês (R$)<br><? echo $mêsCorrente; ?></div>
-                    </div><!-- ./col -->
-                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="<? echo $liquidoMêsCorrente; ?>" data-min="0" data-max="3000" data-width="90" data-height="90" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Mês (R$)<br><? echo $mêsCorrente; ?></div>
-                    </div><!-- ./col -->
-                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
-                      <input type="text" class="knob" value="0" data-min="0" data-max="20000" data-width="90" data-height="90" data-fgColor="#00a65a"/>
-                      <div class="knob-label">Liquido Acum. (R$)<br><? echo $anoCorrente; ?></div> 
-                    </div><!-- ./col -->
 
-                    
-                </div><!-- /.row -->
-            </div>
 
             <div class="col-md-4">
               <div class="progress-group">
