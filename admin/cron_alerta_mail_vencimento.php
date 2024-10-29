@@ -85,7 +85,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
                     ";
 
-            $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
             $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
             
             break;
