@@ -104,38 +104,38 @@ $despesas = 125; //provisorio
             </div>
 
             <div class="col-md-4">
-                      <p class="text-center">
-                        <strong>Goal Completion</strong>
-                      </p>
-                      <div class="progress-group">
-                        <span class="progress-text">Add Products to Cart</span>
-                        <span class="progress-number"><b>50</b>/200</span>
-                        <div class="progress sm">
-                          <div class="progress-bar progress-bar-aqua" style="width: 20%"></div>
-                        </div>
-                      </div><!-- /.progress-group -->
-                      <div class="progress-group">
-                        <span class="progress-text">Complete Purchase</span>
-                        <span class="progress-number"><b>310</b>/400</span>
-                        <div class="progress sm">
-                          <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-                        </div>
-                      </div><!-- /.progress-group -->
-                      <div class="progress-group">
-                        <span class="progress-text">Visit Premium Page</span>
-                        <span class="progress-number"><b>480</b>/800</span>
-                        <div class="progress sm">
-                          <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-                        </div>
-                      </div><!-- /.progress-group -->
-                      <div class="progress-group">
-                        <span class="progress-text">Send Inquiries</span>
-                        <span class="progress-number"><b>250</b>/500</span>
-                        <div class="progress sm">
-                          <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-                        </div>
-                      </div><!-- /.progress-group -->
-                    </div><!-- /.col -->
+              <p class="text-center">
+                <strong>Goal Completion</strong>
+              </p>
+              <div class="progress-group">
+                <span class="progress-text">Add Products to Cart</span>
+                <span class="progress-number"><b>50</b>/200</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-aqua" style="width: 20%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Complete Purchase</span>
+                <span class="progress-number"><b>310</b>/400</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-red" style="width: 80%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Visit Premium Page</span>
+                <span class="progress-number"><b>480</b>/800</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-green" style="width: 80%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Send Inquiries</span>
+                <span class="progress-number"><b>250</b>/500</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+            </div><!-- /.col -->
 
 
 
@@ -166,17 +166,7 @@ $despesas = 125; //provisorio
 
             <div class="col-md-4">
               <div class="box box-solid">
-                <div class="box-header">
-                  <h3 class="box-title text-blue">Evolução FInanceira (Liquido)</h3>
-                  <div class="box-tools pull-right">
-                    <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                  </div>
-                </div><!-- /.box-header -->
-                <div class="box-body text-center">
-                  <div class="sparkline" data-type="line" data-spot-Radius="3" data-highlight-Spot-Color="#f39c12" data-highlight-Line-Color="#222" data-min-Spot-Color="#f56954" data-max-Spot-Color="#00a65a" data-spot-Color="#39CCCC" data-offset="90" data-width="100%" data-height="100px" data-line-Width='2' data-line-Color='#39CCCC' data-fill-Color='rgba(57, 204, 204, 0.08)'>
-                    6,4,7,8,4,3,2,2,5,6,7,4,1,5,7,9,9,8,7,6
-                  </div>
-                </div><!-- /.box-body -->
+                  Futuro
               </div><!-- /.box -->
             </div><!-- /.col -->
 
