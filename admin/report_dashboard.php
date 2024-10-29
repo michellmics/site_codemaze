@@ -29,6 +29,9 @@ $despesas = 125; //provisorio
   $countContratosLiquidados = $dashboardValues->countContratosLiquidados();
   $countProdutosHospedagem = $dashboardValues->countProdutosHospedagem();
   $countProdutosConsultoriaTI = $dashboardValues->countProdutosConsultoriaTI();
+  $countProdutosDesenSite = $dashboardValues->countProdutosDesenSite();
+
+  
 
 
   
@@ -187,11 +190,11 @@ $despesas = 125; //provisorio
                   <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $consTiPerc; ?>%"></div>
                 </div>
               </div><!-- /.progress-group -->
-              <div class="progress-group">
+              <div class="progress-group"> 
                 <span class="progress-text">Desenvolvimento de Sites</span>
-                <span class="progress-number"><b>2</b>/20</span>
+                <span class="progress-number"><b><? $siteDevPerc = ($countProdutosDesenSite["0"]["TOTAL"]/10)*100; echo $countProdutosDesenSite["0"]["TOTAL"]; ?></b>/20</span>
                 <div class="progress sm">
-                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 10%"></div>
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $siteDevPerc; ?>%"></div>
                 </div>
               </div><!-- /.progress-group -->
             </div><!-- /.col -->

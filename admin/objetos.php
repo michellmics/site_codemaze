@@ -1059,6 +1059,17 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function countProdutosDesenSite()
+        {        
+            if(!$this->pdo){$this->conexao();}
+
+            $sql = "SELECT COUNT(*) AS TOTAL FROM GEC_GESTAO_CONTRATO 
+            WHERE PRS_IDPRODUTO_SERVICO = 6";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
         public function countContratosAtivos()
         {        
             if(!$this->pdo){$this->conexao();}
