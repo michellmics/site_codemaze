@@ -5,7 +5,7 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getLiquidacaoFinanceiraConciliacaoBancaria();
 
-var_dump($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
+//var_dump($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
 
 
 
