@@ -37,7 +37,10 @@ $msg = "
         <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
         
 
-$siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
+$siteAdmin->notifyPendenciasEmail($subject, $msg, $email); 
+
+echo "Foram pagos $qtdeBoletosPagos boletos hoje.<br>";
+echo "Fim do Script";
 
 
 ?>
