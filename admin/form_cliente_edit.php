@@ -125,10 +125,6 @@
 			<label>BAIRRO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  id="bairro" name="bairro"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCBAIRRO"]; ?>" />
 			</div>
-      		<div style="flex: 2; min-width: 150px;">
-			<label>CEP</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" onblur="buscarEndereco()" maxlength="9" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
-			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
 			<select required class="form-control" id="estado" name="estado" style="width: 100%;">
