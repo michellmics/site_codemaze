@@ -234,6 +234,11 @@
                     })
                     .catch(error => console.error('Erro na requisição:', error));
             } else {
+				document.getElementById('endereco').value = null;
+                document.getElementById('bairro').value = null;
+                document.getElementById('cidade').value = null;
+                document.getElementById('estado').value = null;
+                document.getElementById('cep').value = null;
                 alert('CEP inválido! Certifique-se de que tem 8 dígitos.');
             }
         }
