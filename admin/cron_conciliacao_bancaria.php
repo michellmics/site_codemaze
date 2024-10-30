@@ -13,7 +13,7 @@ $siteAdmin->getLiquidacaoFinanceiraConciliacaoBancaria();
 
 
 $result=$siteAdmin->checkPagamentoBoleto("ORDE_9FFF06FC-3E82-4499-AF6C-EDD39680ABE7");
-var_dump($result['charges'][0]['status']);
+echo $result['charges'][0]['status'];
 
 
 
