@@ -113,6 +113,10 @@
         	<!-- ENDEREÇO  ESTADO  CIDADE -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+			<div style="flex: 2; min-width: 150px;">
+			<label>CEP</label>
+			<input required type="text" style="width: 100%; text-transform: uppercase;" onblur="buscarEndereco()" maxlength="9" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
+			</div>
 			<div style="flex: 6; min-width: 150px;">
 			<label>ENDEREÇO</label>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  id="endereco" name="endereco"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCADDRESS"]; ?>" />
@@ -121,7 +125,7 @@
 			<label>BAIRRO</label>
 			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  id="bairro" name="bairro"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCBAIRRO"]; ?>" />
 			</div>
-      <div style="flex: 2; min-width: 150px;">
+      		<div style="flex: 2; min-width: 150px;">
 			<label>CEP</label>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" onblur="buscarEndereco()" maxlength="9" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
 			</div>
