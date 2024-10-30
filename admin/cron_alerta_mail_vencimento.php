@@ -22,10 +22,10 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         $contrato = $array['GEC_IDGESTAO_CONTRATO'];
         $valor = $array['LFI_DCVALOR_PARCELA']; 
         $parcela = $array['LFI_DCNUMPARCELA'];
-        $produto = $array['PRS_NMNOME'];
+        $produto = upper($array['PRS_NMNOME']);
 
-        $contato = $array['CLI_NMNAME'];
-        $contato = "michell.oliveira@codemaze.com.br";
+        $contato = upper($array['CLI_NMNAME']);
+        $emalCobrança = "michell.oliveira@codemaze.com.br";
         //$emalCobrança = $array['GEC_DCEMAILCOBRANCA'];  
 
         $now = new DateTime(); 
@@ -79,6 +79,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             $msg = "
                     Olá <b>$contato</b>, bom dia! <br><br>
                     $msgTxt<br>
+                    <b>Produto contratado:</b> $produto<br><br>
                     Caso já tenha realizado o pagamento, desconsidere este e-mail.<br><br>
 
                     Estamos à disposição para ajudá-lo(a)!<br>
