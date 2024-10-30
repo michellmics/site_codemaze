@@ -61,7 +61,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             
         }
 
-        if ($diferenca <= 5 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        if ($diferenca <= 8 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $qtdeCobrancas++;
             if($diferenca == 0)
