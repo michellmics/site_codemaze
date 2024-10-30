@@ -12,8 +12,8 @@ var_dump($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
 
 
 
-
-
+$result=$siteAdmin->checkPagamentoBoleto("ORDE_9FFF06FC-3E82-4499-AF6C-EDD39680ABE7");
+var_dump($result);
 
 
 
