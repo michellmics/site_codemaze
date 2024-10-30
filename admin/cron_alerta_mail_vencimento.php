@@ -19,7 +19,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
     if($array["LFI_STPAGAMENTO"] != "LIQUIDADO")
     {
-        $qtdeCobrancas++;
         $contrato = $array['GEC_IDGESTAO_CONTRATO'];
         $valor = $array['LFI_DCVALOR_PARCELA']; 
         $parcela = $array['LFI_DCNUMPARCELA'];
@@ -37,6 +36,8 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
         if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
+            $qtdeCobrancas++;
+
             $subject = "Pendência de Pagamento";
             $msg = "
                     Olá <b>$contato</b>, bom dia! <br><br>
@@ -62,7 +63,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
         if ($diferenca <= 5 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
-
+            $qtdeCobrancas++;
             if($diferenca == 0)
             {
                 $msgTxt = "Identificamos que sua fatura no valor de <b>R$$valor</b> referente ao produto $produto vence <b>hoje</b>.";
