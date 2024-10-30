@@ -1266,6 +1266,7 @@
 
                 $name = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"];
                 $tax_id = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCPFCNPJ"];
+                $tax_id = preg_replace('/\D/', '', $tax_id); //deixar apenas numeros
                 $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
                 $reference_id = $LFI_IDOP;
                 $valorOrig = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
