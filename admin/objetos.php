@@ -167,6 +167,24 @@
             }          
         }
 
+        public function getLiquidacaoFinanceiraConciliacaoBancaria()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * 
+                        FROM VW_TABLE_LIQUIDACAOFINANCEIRA
+                        WHERE LFI_STPAGAMENTO <> 'LIQUIDADO' AND LFI_PAGSEGURO_LINK_BOLETO IS NOT NULL";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_LIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getPendenciaInfo($GEC_IDGESTAO_CONTRATO)
         {          
                 // Verifica se a conexão já foi estabelecida
