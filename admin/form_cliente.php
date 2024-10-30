@@ -109,7 +109,7 @@
 			</div>					
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="24" title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="24" title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<?php echo htmlspecialchars($descEmpresa_1["PAD_DCTITLE"]); ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
@@ -141,19 +141,19 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
       <div style="flex: 6; min-width: 150px;">
 			<label>ENDEREÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  id="endereco" name="endereco"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  id="endereco" name="endereco"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
       <div style="flex: 3; min-width: 80px;">
 			<label>BAIRRO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  id="bairro" name="bairro"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  id="bairro" name="bairro"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
       <div style="flex: 2; min-width: 150px;">
 			<label>CEP</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="9" onblur="buscarEndereco()" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="9" onblur="buscarEndereco()" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
-			<select class="form-control" id="estado" name="estado" style="width: 100%;">
+			<select required class="form-control" id="estado" name="estado" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>
                 	<option value="AC">AC</option>
                 	<option value="AL">AL</option>
@@ -238,6 +238,7 @@
                             document.getElementById('bairro').value = null;
                             document.getElementById('cidade').value = null;
                             document.getElementById('estado').value = null;
+                            document.getElementById('cep').value = null;
                             alert('CEP não encontrado!');
                         }
                     })

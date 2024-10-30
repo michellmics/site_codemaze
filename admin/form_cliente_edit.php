@@ -83,7 +83,7 @@
 			</div>				
 			<div style="flex: 1;">
 			<label>CPF/CNPJ</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="24"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"]; ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="24"   title="Apenas números são permitidos" class="form-control" placeholder="00000000000000" name="cpfcnpj"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCPFCNPJ"]; ?>" />
 			</div>					
 			<div style="flex: 1;">
 			<label>RAZÃO SOCIAL</label>
@@ -115,19 +115,19 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div style="flex: 6; min-width: 150px;">
 			<label>ENDEREÇO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  name="endereco"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCADDRESS"]; ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" placeholder="Enter ..."  id="endereco" name="endereco"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCADDRESS"]; ?>" />
 			</div>
 			<div style="flex: 3; min-width: 80px;">
 			<label>BAIRRO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  name="bairro"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCBAIRRO"]; ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..."  id="bairro" name="bairro"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCBAIRRO"]; ?>" />
 			</div>
       <div style="flex: 2; min-width: 150px;">
 			<label>CEP</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  id="cep" name="cep"  value="<?php echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCEP"]; ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
-			<select class="form-control" name="estado" style="width: 100%;">
+			<select required class="form-control" id="estado" name="estado" style="width: 100%;">
                 	<option value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCSTATE"]; ?>"><? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCSTATE"]; ?></option>
                   	<option value="AC">AC</option>
                 	<option value="AL">AL</option>
@@ -160,7 +160,7 @@
 			</div>
 			<div style="flex: 4; min-width: 150px;">
 			<label>CIDADE</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="cidade"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCITY"]; ?>" />
+			<input required id="cidade" type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="Enter ..." name="cidade"  value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCCITY"]; ?>" />
 			</div>
 			</div>
 		</div>
@@ -207,6 +207,37 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+	<script>
+        // Função para buscar o endereço pela API ViaCEP
+        function buscarEndereco() {
+            let cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            // Verifica se o CEP tem 8 dígitos
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            document.getElementById('endereco').value = data.logradouro;
+                            document.getElementById('bairro').value = data.bairro;
+                            document.getElementById('cidade').value = data.localidade;
+                            document.getElementById('estado').value = data.uf;
+                        } else {
+                            document.getElementById('endereco').value = null;
+                            document.getElementById('bairro').value = null;
+                            document.getElementById('cidade').value = null;
+                            document.getElementById('estado').value = null;
+                            document.getElementById('cep').value = null;
+                            alert('CEP não encontrado!');
+                        }
+                    })
+                    .catch(error => console.error('Erro na requisição:', error));
+            } else {
+                alert('CEP inválido! Certifique-se de que tem 8 dígitos.');
+            }
+        }
+    </script>
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
