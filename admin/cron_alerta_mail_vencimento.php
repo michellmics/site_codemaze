@@ -25,7 +25,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         $produto = $array['PRS_NMNOME'];
 
         $contato = $array['CLI_NMNAME'];
-        $contato = "michell.oliveira@sky.com.br";
+        $contato = "michell.oliveira@codemaze.com.br";
         //$emalCobrança = $array['GEC_DCEMAILCOBRANCA'];  
 
         $now = new DateTime(); 
