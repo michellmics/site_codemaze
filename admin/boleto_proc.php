@@ -12,8 +12,7 @@
 
     $result = $siteAdmin->gerBoleto($LFI_IDOP);
 
-        var_dump($result);
-    //echo $result;
+    echo $result;
 
 
 ?>
