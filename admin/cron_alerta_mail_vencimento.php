@@ -11,7 +11,7 @@ var_dump($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA);
 echo "</pre>";
 */
 
-
+$qtdeCobrancas = 0;
 
 foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 {
@@ -19,6 +19,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
     if($array["LFI_STPAGAMENTO"] != "LIQUIDADO")
     {
+        $qtdeCobrancas++;
         $contrato = $array['GEC_IDGESTAO_CONTRATO'];
         $valor = $array['LFI_DCVALOR_PARCELA']; 
         $parcela = $array['LFI_DCNUMPARCELA'];
@@ -95,7 +96,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         }
     }
 }
-
+echo "Quantidade de cobranças enviadas: $qtdeCobrancas <br><br>";
 echo "Fim do Script";
 
 ?>
