@@ -60,41 +60,6 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             
         }
 
-        if ($diferenca <= 2 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
-        {
-            $qtdeCobrancas++;
-            if($diferenca == 0)
-            {
-                $msgTxt = "Identificamos que sua fatura no valor de <b>R$$valor</b> referente ao produto $produto vence <b>hoje</b>.";
-            }
-            else
-                {
-                    $msgTxt = "Identificamos que faltam <b>$diferenca dias</b> para o vencimento de sua fatura com valor de <b>R$$valor</b><br>
-                    referente ao contrato <b>$contrato</b>, parcela <b>nº $parcela</b>.";
-                }
-            
-
-            $subject = "Aviso de vencimento - Codemaze";
-            $msg = "
-                    Olá <b>$contato</b>, bom dia! <br><br>
-                    $msgTxt<br>
-                    <b>Produto contratado:</b> $produto<br><br>
-                    Caso já tenha realizado o pagamento, desconsidere este e-mail.<br><br>
-
-                    Estamos à disposição para ajudá-lo(a)!<br>
-                    Atenciosamente,<br><br>
-
-                    <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
-
-                    Codemaze - Soluções de MKT e Software<br><br>
-                    faleconosco@codemaze.com.br<br>
-                    suporte@codemaze.com.br<br>
-                    <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
-                    ";
-
-            $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
-            
-        }
     }
 }
 echo "Quantidade de cobranças enviadas: $qtdeCobrancas <br><br>";
