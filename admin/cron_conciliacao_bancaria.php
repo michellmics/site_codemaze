@@ -39,7 +39,7 @@ $msg = "
 
 $siteAdmin->notifyPendenciasEmail($subject, $msg, $email); 
 
-echo "Foram pagos $qtdeBoletosPagos boletos hoje.<br>";
+echo "Foi detectado que $qtdeBoletosPagos boletos foram pagos neste momento.<br>";
 echo "Fim do Script";
 
 
