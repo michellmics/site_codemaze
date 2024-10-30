@@ -22,9 +22,9 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         $contrato = $array['GEC_IDGESTAO_CONTRATO'];
         $valor = $array['LFI_DCVALOR_PARCELA']; 
         $parcela = $array['LFI_DCNUMPARCELA'];
-        $produto = upper($array['PRS_NMNOME']);
+        $produto = strtoupper($array['PRS_NMNOME']);
 
-        $contato = upper($array['CLI_NMNAME']);
+        $contato = strtoupper($array['CLI_NMNAME']);
         $emalCobrança = "michell.oliveira@codemaze.com.br";
         //$emalCobrança = $array['GEC_DCEMAILCOBRANCA'];  
 
