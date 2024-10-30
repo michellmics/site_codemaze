@@ -149,7 +149,7 @@
 			</div>
       <div style="flex: 2; min-width: 150px;">
 			<label>CEP</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="12" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="9" onblur="buscarEndereco()" class="form-control" placeholder="Enter ..."  name="cep"  value="<?php echo htmlspecialchars($descEmpresa_2["PAD_DCTITLE"]); ?>" />
 			</div>
 			<div style="flex: 2; min-width: 100px;">
 			<label>ESTADO</label>
@@ -218,6 +218,31 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
     
+    <script>
+        // Função para buscar o endereço pela API ViaCEP
+        function buscarEndereco() {
+            let cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            // Verifica se o CEP tem 8 dígitos
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            document.getElementById('endereco').value = data.logradouro;
+                            document.getElementById('bairro').value = data.bairro;
+                            document.getElementById('cidade').value = data.localidade;
+                            document.getElementById('estado').value = data.uf;
+                        } else {
+                            alert('CEP não encontrado!');
+                        }
+                    })
+                    .catch(error => console.error('Erro na requisição:', error));
+            } else {
+                alert('CEP inválido! Certifique-se de que tem 8 dígitos.');
+            }
+        }
+    </script>
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
