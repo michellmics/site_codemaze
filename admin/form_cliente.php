@@ -234,6 +234,10 @@
                             document.getElementById('cidade').value = data.localidade;
                             document.getElementById('estado').value = data.uf;
                         } else {
+                            document.getElementById('endereco').value = null;
+                            document.getElementById('bairro').value = null;
+                            document.getElementById('cidade').value = null;
+                            document.getElementById('estado').value = null;
                             alert('CEP não encontrado!');
                         }
                     })
