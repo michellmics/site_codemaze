@@ -1264,7 +1264,7 @@
                 
                 
 
-                $name = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"];
+                $name = ucfirst(strtolower($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_NMNAME"]));
                 $tax_id = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCPFCNPJ"];
                 $tax_id = preg_replace('/\D/', '', $tax_id); //deixar apenas numeros
                 $email = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCEMAILCOBRANCA"];
@@ -1272,8 +1272,8 @@
                 $valorOrig = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCVALOR"] * 100);
                 $valorJuros = (int)($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["LFI_DCVALOR_PARCELA_JUROS"] * 100);
                 $value = ($valorOrig + $valorJuros);
-                $street = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"];
-                $city = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"];
+                $street = ucfirst(strtolower($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCADDRESS"]));
+                $city = ucfirst(strtolower($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"]));
                 $region_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCSTATE"];
                 $postal_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCEP"];
                 $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
