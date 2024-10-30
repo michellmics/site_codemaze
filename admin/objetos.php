@@ -175,7 +175,7 @@
             try{           
                 $sql = "SELECT * 
                         FROM VW_TABLE_LIQUIDACAOFINANCEIRA
-                        WHERE LFI_STPAGAMENTO != 'LIQUIDADO' AND LFI_PAGSEGURO_LINK_BOLETO IS NOT NULL";
+                        WHERE LFI_STPAGAMENTO != 'LIQUIDADO' OR LFI_STPAGAMENTO IS NULL";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
