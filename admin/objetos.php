@@ -1324,6 +1324,13 @@
 
             $data = json_decode($response, true);
 
+            
+            
+            if(!isset($data['charges'][0]['links'][0]['href']))
+            {
+                return "Não foi possível gerar o boleto. Resposta: $response";
+            }
+                        
             $pdfLink = $data['charges'][0]['links'][0]['href'];           
             $idCobranca = $data['charges'][0]['id'];
             $idPedido = $data['id'];
