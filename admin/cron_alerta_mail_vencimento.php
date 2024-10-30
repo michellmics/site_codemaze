@@ -25,8 +25,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         $produto = strtoupper($array['PRS_NMNOME']);
 
         $contato = strtoupper($array['CLI_NMNAME']);
-        $emalCobrança = "michell.oliveira@codemaze.com.br";
-        //$emalCobrança = $array['GEC_DCEMAILCOBRANCA'];  
+        $emalCobrança = $array['GEC_DCEMAILCOBRANCA'];  
 
         $now = new DateTime(); 
         $vencimento = new DateTime($array['LFI_DTVENCIMENTO']); 
@@ -61,7 +60,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
             
         }
 
-        if ($diferenca <= 8 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        if ($diferenca <= 2 && $diferenca >= 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $qtdeCobrancas++;
             if($diferenca == 0)
