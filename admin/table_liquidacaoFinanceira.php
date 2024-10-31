@@ -158,6 +158,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
 
+                          $dataFormatada = date("d/m/Y", strtotime($liquidFin['LFI_DTVENCIMENTO']));
+
                           
 
                           $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] = $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] == NULL ? '0.00' : $liquidFin['LFI_DCVALOR_PARCELA_JUROS'];
@@ -178,7 +180,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA_JUROS']) ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTVENCIMENTO']) ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $dataFormatada ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
                         <td>
