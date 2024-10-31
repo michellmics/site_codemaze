@@ -261,7 +261,7 @@
             $now = new DateTime(); 
             $DATA = $now->format('Y-m-d');
 
-            if($ACAO == "ABERTO"){$LFI_DTPAGAMENTO = "";}
+            if($ACAO == "ABERTO"){$LFI_DTPAGAMENTO = NULL;}
             
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
