@@ -107,7 +107,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
                         <? 
                           $dataFormatada = date("d/m/Y", strtotime($balanco['BLM_DTFECHAMENTO'])); 
                           $timestamp = strtotime($balanco['BLM_DTFECHAMENTO']); 
-                          $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+                          $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::LONG, IntlDateFormatter::NONE, null, IntlDateFormatter::GREGORIAN, 'MMMM');
                           $mesPorExtenso = $formatter->format($timestamp);
                           $ano = date('Y', $timestamp);                        
                         ?>
