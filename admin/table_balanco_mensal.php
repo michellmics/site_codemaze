@@ -94,6 +94,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
+                      <th>ANO</th>
+                      <th>MÊS</th>
                       <th>DT FECHAMENTO</th>
                       <th>FATURAMENTO</th>
                       <th>DESPESA</th>
@@ -104,7 +106,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
                     <tr>
                         <? 
                           $dataFormatada = date("d/m/Y", strtotime($balanco['BLM_DTFECHAMENTO'])); 
+                          $timestamp = strtotime($balanco['BLM_DTFECHAMENTO']); 
+                          $mesPorExtenso = ucfirst(date('F', $timestamp)); 
+                          $ano = date('Y', $timestamp);                        
                         ?>
+                        <td style="text-transform: uppercase; font-size: 16px;"><?= $ano ?></td>
+                        <td style="text-transform: uppercase; font-size: 16px;"><?= $mesPorExtenso ?></td>
 
                         <td style="text-transform: uppercase; font-size: 16px;"><?= $dataFormatada ?></td>
                         <td style="text-transform: uppercase; font-size: 16px; color: blue;">R$<?= htmlspecialchars($balanco['BLM_DCRECEITA']) ?></td>
