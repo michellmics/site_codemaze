@@ -22,24 +22,27 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
     }
 }
 
-$contato = "Codemaze";
-$email= "suporte@codemaze.com.br";  
-$subject = "Pagamento com boleto detectado.";
-$msg = "
-        Olá <b>$contato</b>, bom dia! <br><br>
-        Foram identificamos $qtdeBoletosPagos pagamentos utilizando boletos. <br><br>
-
-        Atenciosamente,<br><b
-        <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <b
-        Codemaze - Soluções de MKT e Software<br><br>
-        faleconosco@codemaze.com.br<br>
-        suporte@codemaze.com.br<br>
-        <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
-        
-
-$siteAdmin->notifyPendenciasEmail($subject, $msg, $email); 
-
-echo "Foi detectado que $qtdeBoletosPagos boletos foram pagos neste momento.<br>";
+if($qtdeBoletosPagos > 0)
+{
+    $contato = "Codemaze";
+    $email= "suporte@codemaze.com.br";  
+    $subject = "Pagamento com boleto detectado.";
+    $msg = "
+            Olá <b>$contato</b>, bom dia! <br><br>
+            Foram identificamos $qtdeBoletosPagos pagamentos utilizando boletos. <br><br>
+    
+            Atenciosamente,<br><b
+            <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <b
+            Codemaze - Soluções de MKT e Software<br><br>
+            faleconosco@codemaze.com.br<br>
+            suporte@codemaze.com.br<br>
+            <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
+            
+    
+    $siteAdmin->notifyPendenciasEmail($subject, $msg, $email); 
+    
+    echo "Foi detectado que $qtdeBoletosPagos boletos foram pagos neste momento.<br>";
+}
 echo "Fim do Script";
 
 
