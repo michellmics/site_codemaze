@@ -462,7 +462,8 @@
             
             try{           
                 $sql = "SELECT *
-                                FROM BLM_BALANCO_MENSAL";
+                                FROM BLM_BALANCO_MENSAL
+                                ORDER BY BLM_DTFECHAMENTO DESC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
