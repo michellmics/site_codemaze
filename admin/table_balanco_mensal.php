@@ -83,7 +83,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Contratos</h3>
+                  <h3 class="box-title">Fechamento Mensal</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
 
