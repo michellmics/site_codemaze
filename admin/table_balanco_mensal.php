@@ -107,9 +107,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= $dataFormatada ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;">R$<?= htmlspecialchars($balanco['BLM_DCRECEITA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;">R$<?= htmlspecialchars($balanco['BLM_DCDESPESA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;">R$<?= htmlspecialchars($balanco['BLM_DCLIQUIDO']) ?></td>                 
+                        <td style="text-transform: uppercase; font-size: 12px; color: yellow;">R$<?= htmlspecialchars($balanco['BLM_DCRECEITA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px; color: red;">R$<?= htmlspecialchars($balanco['BLM_DCDESPESA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px; color: green;">R$<?= htmlspecialchars($balanco['BLM_DCLIQUIDO']) ?></td>                 
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
