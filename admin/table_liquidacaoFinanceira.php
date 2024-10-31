@@ -240,13 +240,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
     <script src='plugins/fastclick/fastclick.min.js'></script>
 
     <script>
-      $(document).ready(function() {
-      $('#pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-
       function confirmacao() 
       {
         return confirm("Tem certeza que deseja mudar o status do pagamento");
