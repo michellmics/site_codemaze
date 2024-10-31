@@ -357,7 +357,7 @@
                 <li><a href="#" onclick="loadInIframe('table_contrato.php')"><i class="fa fa-circle-o"></i> Gestão de Contratos</a></li>
                 <li><a href="#" onclick="loadInIframe('table_liquidacaoFinanceira.php')"><i class="fa fa-circle-o"></i> Contas a Receber</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Contas a Pagar</a></li>
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Conciliação Fiscal</a></li>
+                <li><a href="#" onclick="loadInIframe('table_balanco_mensal.php')"><i class="fa fa-circle-o"></i> Fechamento Mensal</a></li> 
               </ul> 
             </li>
             <li class="treeview">
