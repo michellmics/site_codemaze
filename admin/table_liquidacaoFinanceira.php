@@ -158,9 +158,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
 
-                          $dataFormatada = date("d/m/Y", strtotime($liquidFin['LFI_DTVENCIMENTO']));
-
-                          
+                          $dataFormatada = date("d/m/Y", strtotime($liquidFin['LFI_DTVENCIMENTO']));                     
 
                           $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] = $liquidFin['LFI_DCVALOR_PARCELA_JUROS'] == NULL ? '0.00' : $liquidFin['LFI_DCVALOR_PARCELA_JUROS'];
                           
@@ -170,6 +168,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           $idOrdemPagamento = htmlspecialchars($liquidFin['LFI_IDOP']);
                           $linkBoleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'];
                           $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>Gerar Boleto</a>" : "<a href='$linkBoleto' target='_blank'><i class='fas fa-file-pdf'></i></a>";
+
+                          $dataFormatadaPag = date("d/m/Y", strtotime($liquidFin['LFI_DTPAGAMENTO']));
 
                         ?> 
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
@@ -182,7 +182,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA_JUROS']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $dataFormatada ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DTPAGAMENTO']) ?></center></td> 
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $dataFormatadaPag ?></center></td> 
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="15" maxlength="15" class="form-control" placeholder="DD/MM/AAAA" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
