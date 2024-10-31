@@ -11,17 +11,7 @@
   }
 
   $siteAdmin = new SITE_ADMIN();
-
-if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
-{
-  $search = $_GET['table_search'];
-  $result = $siteAdmin->getContratoInfoBySearch($search);
-}
-else
-  {
-    $siteAdmin->getBalancoMensal();
-  }
-
+  $siteAdmin->getBalancoMensal();
 
 // Configurações de Paginação
 $registrosPorPagina = 12;
@@ -104,40 +94,22 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosP
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th>ID</th>
-                      <th></th>
-                      <th>CLIENTE</th>
-                      <th>CPF/CNPJ</th>
-                      <th>RAZÃO SOCIAL</th>
-                      <th>SERVIÇO</th>
-                      <th>FIM CONT</th> 
-                      <th>COBRANÇA</th>
-                      <th>VENC</th>
-                      <th>VALOR</th>  
-                      <th></th>                    
+                      <th>DT FECHAMENTO</th>
+                      <th>FATURAMENTO</th>
+                      <th>DESPESA</th>
+                      <th>L. LIQUIDO</th>                   
                     </tr>
                     <tr>
-                    <?php foreach ($dadosPagina as $contrato): ?>
+                    <?php foreach ($dadosPagina as $balanco): ?>
                     <tr>
                         <? 
-                          $result = $siteAdmin->getPendenciaInfo($contrato['GEC_IDGESTAO_CONTRATO']);
-                          if($result == "PENDENTE"){$icon = "label label-danger";}
-                          if($result == "EM DIA"){$icon = "label label-success";}
-                          if($result == "Sem Dados"){$icon = "label label-default";}
+                          $dataFormatada = date("d/m/Y", strtotime($balanco['BLM_DTFECHAMENTO'])); 
                         ?>
 
-                        <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?>"><span class="<? echo $icon; ?>"><? echo $result; ?></span></a></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCCPFCNPJ']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCRSOCIAL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTVENCIMENTO']) ?></td>  
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCVALOR']) ?></td>                          
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $contrato['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
-                                           
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= $dataFormatada ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($balanco['BLM_DCRECEITA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($balanco['BLM_DCDESPESA']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($balanco['BLM_DCLIQUIDO']) ?></td>                 
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
