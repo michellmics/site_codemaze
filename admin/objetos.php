@@ -15,6 +15,7 @@
         public $ARRAY_PRODUCTINFO;
         public $ARRAY_CONTRATOINFO;    
         public $ARRAY_LIQUIDACAOFINANCEIRA; 
+        public $ARRAY_BALANCOMENSAL;
 
 
         function conexao()
@@ -449,6 +450,23 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getBalancoMensal()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM BLM_BALANCO_MENSAL";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_BALANCOMENSAL = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          

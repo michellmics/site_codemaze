@@ -19,21 +19,21 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 }
 else
   {
-    $siteAdmin->getContratoInfo();
+    $siteAdmin->getBalancoMensal();
   }
 
 
 // Configurações de Paginação
-$registrosPorPagina = 10;
+$registrosPorPagina = 12;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_CONTRATOINFO);
+$totalRegistros = count($siteAdmin->ARRAY_BALANCOMENSAL);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_BALANCOMENSAL, $inicio, $registrosPorPagina);
 
 //-----------------
 
@@ -96,26 +96,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                   <h3 class="box-title">Lista de Contratos</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
-                  <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
 
-                   <!-- Botão "Adicionar Produto" -->
-                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_contrato.php';">
-                        ADICIONAR CONTRATO
-                      </button>
-                    <form method="GET" action="" style="display: flex;">
-                        <input 
-                            type="text" 
-                            name="table_search" 
-                            class="form-control input-sm pull-right" 
-                            style="width: 150px;" 
-                            placeholder="Buscar" 
-                            value="<?php echo isset($_GET['table_search']) ? htmlspecialchars($_GET['table_search']) : ''; ?>" 
-                        />
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
-                  </div>
                   
 
                   </div>
