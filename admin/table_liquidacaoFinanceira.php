@@ -151,7 +151,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                       <th></th>                    
                     </tr>
                     <tr>
-                    <? $linha = 0; ?>
+                    <? $linha = 1; ?>
                     <?php foreach ($dadosPagina as $liquidFin): ?>
                     <tr>
                         <? 
@@ -184,7 +184,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
 
                         ?> 
-                        <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><? echo $linha; ?></td>
+                        <td style="text-transform: uppercase; font-size: 14px; color: '#a8a8a8' !important; vertical-align: middle;"><? echo $linha; ?></td>
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
