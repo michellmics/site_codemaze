@@ -151,10 +151,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                       <th></th>                    
                     </tr>
                     <tr>
+                    <? $linha = 0; ?>
                     <?php foreach ($dadosPagina as $liquidFin): ?>
                     <tr>
                         <? 
-                          $linha = 0;
                           $now = new DateTime(); 
                           $vencimento = new DateTime($liquidFin['LFI_DTVENCIMENTO']); 
                           
