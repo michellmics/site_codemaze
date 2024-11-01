@@ -69,9 +69,7 @@
             if (!file_exists($this->configPath)) {
                 die("Erro: Arquivo de configuração não encontrado.");
             }
-            
-            var_dump($anexo);
-            
+                       
             $configMail = parse_ini_file($this->configPath, true);  // true para usar seções
             $user = $configMail['EMAIL']['Username'];
             $pass = $configMail['EMAIL']['Password'];

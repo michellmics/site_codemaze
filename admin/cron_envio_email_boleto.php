@@ -27,6 +27,8 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     sleep(5);      
 }
 
+$siteAdmin->getProxContratosAVencer(); //busca novamente os dados mas agora com os boletos
+
 // Reestruturação dos dados agrupando por cliente
 $resultado = array();
 
@@ -48,11 +50,6 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
 }
 
 $LISTA_EMAIL_BOLETOS = $resultado;
-
-echo "<pre>";
-var_dump($LISTA_EMAIL_BOLETOS);
-echo "</pre>";
-die();
 
 foreach($LISTA_EMAIL_BOLETOS as $itens)
 {
