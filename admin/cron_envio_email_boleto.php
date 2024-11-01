@@ -6,15 +6,13 @@ $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer();
 
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
-{
-    echo $item["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"];
-    /*
-    if($registro["LFI_PAGSEGURO_LINK_BOLETO"] != NULL)
+{ 
+    if($item["LFI_PAGSEGURO_LINK_BOLETO"] != NULL)
     {
-        $result = $siteAdmin->gerBoleto($registro["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"]);
+        $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
         echo $result;
     }
-        */
+        
 }
 
 /*
