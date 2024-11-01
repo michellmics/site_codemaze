@@ -48,6 +48,12 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
 
 $LISTA_EMAIL_BOLETOS = $resultado;
 
+echo "<pre>";
+var_dump($LISTA_EMAIL_BOLETOS); 
+echo "</pre>";
+
+die();
+
 foreach($LISTA_EMAIL_BOLETOS as $itens)
 {
     $listaBoletos = array();
