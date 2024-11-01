@@ -62,7 +62,7 @@
 
         public function sendEmailPHPMailer()
         {     
-            $mail = new PHPMailer(true);
+            $mail = new PHPMailer();
             return "aqui";
             try {
                 //Configurações do servidor
