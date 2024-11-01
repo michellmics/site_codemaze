@@ -53,7 +53,7 @@ foreach ($boletosPorCliente as $clienteId => $boletos) {
  
 
 echo "<pre>";
-var_dump($boletosPorCliente);
+var_dump($boletosPorCliente); 
 echo "</pre>";
 
 
