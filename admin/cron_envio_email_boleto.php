@@ -10,6 +10,11 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer(); 
 
+$teste = count($siteAdmin->ARRAY_PROXVENCIMENTOS);
+echo $teste;
+die();
+
+
 if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 {
     echo "Não há boletos com vencimento próximo.";
