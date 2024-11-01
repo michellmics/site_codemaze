@@ -62,7 +62,21 @@
 
         public function sendEmailPHPMailer()
         {          
+            try {
+                require __DIR__ . '/phpMailer/src/PHPMailer.php';
+                require __DIR__ . '/phpMailer/src/SMTP.php';
+                require __DIR__ . '/phpMailer/src/Exception.php';
             
+                // Testa se as classes foram carregadas corretamente
+                if (class_exists('PHPMailer\PHPMailer\PHPMailer') && class_exists('PHPMailer\PHPMailer\Exception')) {
+                    return "PHPMailer carregado com sucesso!";
+                } else {
+                    return "Erro: PHPMailer não foi carregado.";
+                }
+            } catch (Exception $e) {
+                return "Erro ao incluir os arquivos: " . $e->getMessage();
+            }
+
             $mail = new PHPMailer(true); 
             return "aqui1";
             try {
