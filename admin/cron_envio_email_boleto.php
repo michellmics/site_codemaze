@@ -21,7 +21,7 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
     if(($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL || $item["LFI_PAGSEGURO_LINK_BOLETO"] == "") && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL || $item["LFI_STPAGAMENTO"] == ""))
     {
-        echo "to aqui";
+        echo $item["LFI_IDOP"];
         die();
 
         $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
