@@ -76,8 +76,10 @@
 
             $mail = new PHPMailer(true);
 
-            foreach ($anexo as $item) {
-                if (!empty($item)) { 
+            foreach ($anexo as $item) 
+            {
+                if (!empty($item)) 
+                { 
                     $fileContent = file_get_contents($item); 
                     $fileName = basename($item); 
                     $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
@@ -85,6 +87,7 @@
                     
                     return "O caminho do arquivo está vazio: $item<br>";
                 }
+                sleep(2);
             }
            
 

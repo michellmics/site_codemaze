@@ -23,7 +23,8 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     {
         $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
         echo "$result<br>";
-    }        
+    }  
+    sleep(5);      
 }
 
 // Reestruturação dos dados agrupando por cliente
