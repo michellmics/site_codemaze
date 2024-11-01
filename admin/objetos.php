@@ -64,6 +64,7 @@
 
         public function sendEmailPHPMailer()
         {          
+            return "aqui";
             $mail = new PHPMailer(true); 
 
             try {
