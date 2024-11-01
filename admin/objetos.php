@@ -1,8 +1,6 @@
 <?php
 
     //include_once 'db.php';
-    use phpMailer\PHPMailer;
-    use phpMailer\Exception;
 
     require 'phpMailer/src/PHPMailer.php';
     require 'phpMailer/src/SMTP.php';
