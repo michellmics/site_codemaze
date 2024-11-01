@@ -77,9 +77,7 @@
             $mail = new PHPMailer(true);
 
             $fileContent = file_get_contents($anexo); // Baixa o conteúdo do PDF
-            $fileName = basename($anexo); // Extrai o nome do arquivo do link
-
-            
+            $fileName = basename($anexo); // Extrai o nome do arquivo do link            
 
             try {
                 //Configurações do servidor

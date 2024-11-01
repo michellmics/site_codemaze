@@ -9,8 +9,8 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer();
-/*
 
+//gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
     if($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL))
@@ -20,12 +20,13 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     }        
 }
 
-*/
+var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
+
 
     
 
-$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio anexo", "testooouuu","https://boleto.pagseguro.com.br/44040181-84cd-4c6f-935f-b5f5be9c88c3.pdf"); 
-echo $resultMail;
+//$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio anexo", "testooouuu","https://boleto.pagseguro.com.br/44040181-84cd-4c6f-935f-b5f5be9c88c3.pdf"); 
+//echo $resultMail;
 /*
 echo "<pre>";
 var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
