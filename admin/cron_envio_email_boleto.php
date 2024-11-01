@@ -7,11 +7,14 @@ $siteAdmin->getProxContratosAVencer();
 
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $registro)
 {
+    echo $registro["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"];
+    /*
     if($registro["LFI_PAGSEGURO_LINK_BOLETO"] != NULL)
     {
         $result = $siteAdmin->gerBoleto($registro["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"]);
         echo $result;
     }
+        */
 }
 
 /*
