@@ -10,7 +10,9 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer(); 
 
+echo "<pre>";
 var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
+echo "</pre>";
 die();
 
 if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
