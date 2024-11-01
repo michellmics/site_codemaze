@@ -117,7 +117,8 @@
 
         public function updateMailCobranca($GEC_IDGESTAO_CONTRATO)
         {          
-            
+            $ATUALIZAÇÃO = "ENVIADO";
+
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
                         SET LFI_DCEMAIL_SENDED = :LFI_DCEMAIL_SENDED
@@ -126,7 +127,7 @@
                 $stmt = $this->pdo->prepare($sql);
             
                 // Liga os parâmetros aos valores
-                $stmt->bindParam(':LFI_DCEMAIL_SENDED', 'ENVIADO', PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_DCEMAIL_SENDED', $ATUALIZAÇÃO, PDO::PARAM_STR);
                 $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
 
                 $stmt->execute();
