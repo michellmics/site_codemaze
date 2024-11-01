@@ -71,6 +71,8 @@
             }
 
             $configMail = parse_ini_file($this->configPath, true);  // true para usar seções
+            $user = $configMail['EMAIL']['Username'];
+            $pass = $configMail['EMAIL']['Password'];
 
             $mail = new PHPMailer(true);
 
@@ -79,8 +81,8 @@
                 $mail->isSMTP(); 
                 $mail->Host = $configMail['EMAIL']['Host'];
                 $mail->SMTPAuth = true; 
-                $mail->Username = $configMail['EMAIL']['Username'];
-                $mail->Password = $configMail['EMAIL']['Password'];
+                $mail->Username = $user;
+                $mail->Password = $pass;
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
                 $mail->Port = $configMail['EMAIL']['Port'];
             
