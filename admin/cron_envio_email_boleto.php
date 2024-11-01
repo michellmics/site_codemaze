@@ -20,10 +20,40 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     }        
 }
 
+
+$boletosPorCliente = [];
+
+foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $item) {
+    $clienteId = $item['CLI_IDCLIENT'];
+
+    // Inicializa um array para o cliente se ele não existir ainda
+    if (!isset($boletosPorCliente[$clienteId])) {
+        $boletosPorCliente[$clienteId] = [];
+    }
+
+    // Adiciona o boleto ao array do cliente
+    $boletosPorCliente[$clienteId][] = $item;
+}
+
+
+
+/*
+
+// Exemplo de uso: percorrendo cada cliente para enviar os boletos por e-mail
+foreach ($boletosPorCliente as $clienteId => $boletos) {
+    // Aqui você pode gerar a mensagem para o cliente e enviar o e-mail
+    echo "Enviando e-mail para o cliente ID: $clienteId\n";
+    
+    foreach ($boletos as $boleto) {
+        echo "Boleto para o cliente $clienteId - Link: " . $boleto['LFI_PAGSEGURO_LINK_BOLETO'] . "\n";
+        // Aqui você pode implementar a lógica de envio do e-mail com o link do boleto
+    }
+}
+*/
  
 
 echo "<pre>";
-var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
+var_dump($boletosPorCliente);
 echo "</pre>";
 
 
