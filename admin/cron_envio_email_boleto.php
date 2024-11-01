@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 $siteAdmin = new SITE_ADMIN();
-$siteAdmin->getProxContratosAVencer();
+$siteAdmin->getProxContratosAVencer(); 
 
 //gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
@@ -19,7 +19,6 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
         echo $result;
     }        
 }
-
 
 // Reestruturação dos dados agrupando por cliente
 $resultado = array();
@@ -39,14 +38,37 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
 
     // Adicionar o boleto ao cliente correspondente
     $resultado[$cliente_id]['boletos'][] = $boleto;
-    //$resultado = array_values($resultado); //reacertar os indices
 }
+
+$LISTA_EMAIL_BOLETOS = $resultado;
+
+foreach($LISTA_EMAIL_BOLETOS as $itens)
+{
+    $listaBoletos = array();
+    $aux=0;
+
+    foreach($LISTA_EMAIL_BOLETOS["boletos"] as $boletos)
+    {
+        $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"];
+    }
+
+    echo "<pre>";
+    print_r($listaBoletos);
+    echo "</pre>";
+
+    die();
+
+}
+
+
+
+
 echo "<pre>";
 print_r($resultado);
 echo "</pre>";
 
 
-
+//LFI_DCEMAIL_SENDED
 /*
 
 // Exemplo de uso: percorrendo cada cliente para enviar os boletos por e-mail
