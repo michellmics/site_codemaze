@@ -22,7 +22,7 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     if(($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL || $item["LFI_PAGSEGURO_LINK_BOLETO"] == "") && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL || $item["LFI_STPAGAMENTO"] == ""))
     {
         $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
-        echo $result;
+        echo "$result<br>";
     }        
 }
 
@@ -56,7 +56,9 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     foreach($itens["boletos"] as $boletos)
     {
         $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"]; 
-        $siteAdmin->updateMailCobranca($boletos["GEC_IDGESTAO_CONTRATO"]);
+        $updateResult = $siteAdmin->updateMailCobranca($boletos["GEC_IDGESTAO_CONTRATO"]);
+        echo "$updateResult<br>";
+        sleep(1);
         $aux++;
     }
 
@@ -78,6 +80,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
 
     $resultMail = $siteAdmin->sendEmailPHPMailer($email,$assunto,$body,$listaBoletos); 
+    sleep(1);
 
     echo "$resultMail <br>";
 }
