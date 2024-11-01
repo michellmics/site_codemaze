@@ -1234,8 +1234,8 @@
             $sql = "SELECT COUNT(*) AS TOTAL
                     FROM LFI_LIQUIDACAOFINANCEIRA
                     WHERE LFI_STPAGAMENTO = 'LIQUIDADO'
-                    AND MONTH(LFI_DTVENCIMENTO) = MONTH(CURDATE())
-                    AND YEAR(LFI_DTVENCIMENTO) = YEAR(CURDATE());";
+                    AND MONTH(LFI_DTPAGAMENTO) = MONTH(CURDATE())
+                    AND YEAR(LFI_DTPAGAMENTO) = YEAR(CURDATE());";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
