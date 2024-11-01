@@ -10,11 +10,6 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer(); 
 
-echo "<pre>";
-var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
-echo "</pre>";
-die();
-
 if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 {
     echo "Não há boletos com vencimento próximo.";
@@ -24,12 +19,17 @@ if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 //gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
-    if($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL))
+    if(($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL || $item["LFI_PAGSEGURO_LINK_BOLETO"] == "") && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL || || $item["LFI_STPAGAMENTO"] == ""))
     {
         $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
         echo $result;
     }        
 }
+
+echo "<pre>";
+var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
+echo "</pre>";
+die();
 
 // Reestruturação dos dados agrupando por cliente
 $resultado = array();
