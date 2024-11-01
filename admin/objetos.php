@@ -1,6 +1,6 @@
 <?php
 
-    //include_once 'db.php';
+    //include_once 'db.php'; 
 
     require 'phpMailer/src/PHPMailer.php';
     require 'phpMailer/src/SMTP.php';
