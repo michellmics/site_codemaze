@@ -64,9 +64,9 @@
 
         public function sendEmailPHPMailer()
         {          
-            return "aqui";
+            
             $mail = new PHPMailer(true); 
-
+            return "aqui1";
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
