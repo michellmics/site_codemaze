@@ -69,7 +69,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     $assunto = "Codemaze - Fatura a vencer";
     $email = $boletos["GEC_DCEMAILCOBRANCA"];
     $body = " Olá <b>$nome</b>, bom dia! <br><br>
-                    Gostaríamos de lembrar que sua(s) fatura(s) vencerá(ão) em 5 dias.<br>
+                    Gostaríamos de lembrar que sua(s) fatura(s) vencerá(ão) em 7 dias.<br>
                     Por favor, confira os boletos anexados referentes ao próximo vencimento.<br><br>
                     
                     Estamos à disposição para ajudá-lo(a)!<br>
