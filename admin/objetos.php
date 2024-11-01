@@ -62,11 +62,7 @@
 
         public function sendEmailPHPMailer()
         {         return "aqui"; 
-            try {
-                require __DIR__ . '/phpMailer/src/PHPMailer.php';
-                require __DIR__ . '/phpMailer/src/SMTP.php';
-                require __DIR__ . '/phpMailer/src/Exception.php';
-            
+            try {           
                 // Testa se as classes foram carregadas corretamente
                 if (class_exists('PHPMailer\PHPMailer\PHPMailer') && class_exists('PHPMailer\PHPMailer\Exception')) {
                     return "PHPMailer carregado com sucesso!";
