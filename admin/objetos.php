@@ -61,7 +61,7 @@
         }
 
         public function sendEmailPHPMailer()
-        {          
+        {         return "aqui"; 
             try {
                 require __DIR__ . '/phpMailer/src/PHPMailer.php';
                 require __DIR__ . '/phpMailer/src/SMTP.php';
