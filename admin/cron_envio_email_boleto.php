@@ -21,19 +21,17 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 }
 
 
-$boletosPorCliente = [];
+$resultado = array();
 
-foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $item) {
-    $clienteId = $item['CLI_IDCLIENT'];
-
-    // Inicializa um array para o cliente se ele não existir ainda
-    if (!isset($boletosPorCliente[$clienteId])) {
-        $boletosPorCliente[$clienteId] = [];
+foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $cliente_id => $boletos_cliente) {
+    foreach ($boletos_cliente as $boleto) {
+        $resultado[$cliente_id]['CLI_IDCLIENT'] = $cliente_id;
+        $resultado[$cliente_id]['CLI_NMNAME'] = $boleto['CLI_NMNAME'];
+        $resultado[$cliente_id]['boletos'][] = $boleto;
     }
-
-    // Adiciona o boleto ao array do cliente
-    $boletosPorCliente[$clienteId][] = $item;
 }
+
+print_r($resultado);
 
 
 
@@ -49,13 +47,13 @@ foreach ($boletosPorCliente as $clienteId => $boletos) {
         // Aqui você pode implementar a lógica de envio do e-mail com o link do boleto
     }
 }
-*/
+
  
 
 echo "<pre>";
 var_dump($boletosPorCliente); 
 echo "</pre>";
-
+*/
 
 
 
