@@ -75,7 +75,7 @@
                 $mail->Username = 'financeiro@codemaze.com.br'; 
                 $mail->Password = 'Mi479585!'; 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-                $mail->Port = 465; 
+                $mail->Port = 587; 
             
                 // Destinatários
                 $mail->setFrom('no-reply@dominio.com', 'Codemaze');
