@@ -12,7 +12,7 @@ $siteAdmin->getProxContratosAVencer();
 
 if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 {
-    echo "Não há boletos com vencimento próximo."
+    echo "Não há boletos com vencimento próximo.";
     die();
 }
 
