@@ -14,9 +14,11 @@ $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['update']))
 {
-  echo $_GET['dataPagamento'];
-  echo "teste";
-  die();
+  if($_GET['dataPagamento'] == "")
+  {
+    $_GET['dataPagamento'] = "00/00/0000";
+  }
+
   $dataPagamento = DateTime::createFromFormat('d/m/Y', $_GET['dataPagamento']);
   $dataFormatada = $dataPagamento->format('Y-m-d');
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$dataFormatada); 
