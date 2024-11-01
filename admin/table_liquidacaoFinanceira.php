@@ -136,6 +136,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
+                      <th></th>
                       <th>CONTRATO</th>
                       <th><center>IOP</center></th>
                       <th></th>
@@ -153,6 +154,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                     <?php foreach ($dadosPagina as $liquidFin): ?>
                     <tr>
                         <? 
+                          $linha = 0;
                           $now = new DateTime(); 
                           $vencimento = new DateTime($liquidFin['LFI_DTVENCIMENTO']); 
                           
@@ -182,6 +184,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
 
                         ?> 
+                        <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><? echo $linha; ?></td>
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="#"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></a></td>
@@ -205,7 +208,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         </td>
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
                       </tr>
-                    <?php endforeach; ?>   
+                    <?php endforeach; $linha++;?>   
                     </tr>
                   </table>
                 </div><!-- /.box-body -->
