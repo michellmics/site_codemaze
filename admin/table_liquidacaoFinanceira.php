@@ -16,9 +16,6 @@ if(isset($_GET['update']))
 {
   $dataPagamento = DateTime::createFromFormat('d/m/Y', $_GET['dataPagamento']);
   $dataFormatada = $dataPagamento->format('Y-m-d');
-echo $dataFormatada;
-die();
-
   $result = $siteAdmin->updateLiquidacaoFinanceiraById($_GET['update'],$_GET['acao'],$dataFormatada); 
 
 }
