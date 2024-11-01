@@ -49,6 +49,9 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
 
 $LISTA_EMAIL_BOLETOS = $resultado;
 
+var_dump($LISTA_EMAIL_BOLETOS);
+die();
+
 foreach($LISTA_EMAIL_BOLETOS as $itens)
 {
     $listaBoletos = array();
