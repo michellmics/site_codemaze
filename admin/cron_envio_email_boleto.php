@@ -10,6 +10,12 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer(); 
 
+if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
+{
+    echo "Não há boletos com vencimento próximo."
+    die();
+}
+
 //gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
@@ -49,24 +55,36 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
 
     foreach($itens["boletos"] as $boletos)
     {
-        $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"];
+        $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"]; 
         $aux++;
     }
 
-    echo "<pre>";
-    print_r($listaBoletos);
-    echo "</pre>";
+    $nome = $boletos["CLI_NMNAME"];
+    $assunto = "Codemaze - Fatura a vencer";
+    $email = $boletos["GEC_DCEMAILCOBRANCA"];
+    $body = " Olá <b>$nome</b>, bom dia! <br><br>
+                    Gostaríamos de lembrar que sua(s) fatura(s) vencerá(ão) em 5 dias.<br>
+                    Por favor, confira os boletos anexados referentes ao próximo vencimento.<br><br>
+                    
+                    Estamos à disposição para ajudá-lo(a)!<br>
+                    Atenciosamente,<br><br>
 
-    die();
+                    <img src='https://www.codemaze.com.br/site/images/logos/logo.jpg' alt='Codemaze Logo' style='max-width:200px;'> <br>
 
+                    Codemaze - Soluções de MKT e Software<br><br>
+                    financeiro@codemaze.com.br<br>
+                    suporte@codemaze.com.br<br>
+                    <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
+
+    $resultMail = $siteAdmin->sendEmailPHPMailer($email,$assunto,$body,$listaBoletos); 
+
+    echo "$resultMail <br>";
 }
 
 
 
 
-echo "<pre>";
-print_r($resultado);
-echo "</pre>";
+
 
 
 //LFI_DCEMAIL_SENDED
