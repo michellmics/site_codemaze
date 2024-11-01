@@ -280,7 +280,7 @@
             try{           
                 $sql = "SELECT * 
                         FROM VW_BOLETO_PROX_VENCIMENTO
-                        WHERE GEC_DCEMAILCOBRANCA != 'ENVIADO'";
+                        WHERE LFI_DCEMAIL_SENDED != 'ENVIADO'";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
