@@ -50,6 +50,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     foreach($itens["boletos"] as $boletos)
     {
         $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"];
+        $aux++;
     }
 
     echo "<pre>";
