@@ -24,6 +24,7 @@
         public $ARRAY_LIQUIDACAOFINANCEIRA; 
         public $ARRAY_BALANCOMENSAL;
         public $ARRAY_PROXVENCIMENTOS;
+        public $configPath = '/home/codemaze/config.cfg';
 
 
         function conexao()
@@ -38,13 +39,13 @@
                 pass = dbpass
             */
 
-            $configPath = '/home/codemaze/config.cfg';
+            $this->configPath = '/home/codemaze/config.cfg';
 
-            if (!file_exists($configPath)) {
+            if (!file_exists($this->configPath)) {
                 die("Erro: Arquivo de configuração não encontrado.");
             }
 
-            $configContent = parse_ini_file($configPath, true);  // true para usar seções
+            $configContent = parse_ini_file($this->configPath, true);  // true para usar seções
 
             if (!$configContent) {
                 die("Erro: Não foi possível ler o arquivo de configuração.");
@@ -63,19 +64,25 @@
             }
         }
 
-        public function sendEmailPHPMailer()
+        public function sendEmailPHPMailer($addAddress, $Subject, $Body, $anexo)
         {     
+            if (!file_exists($this->configPath)) {
+                die("Erro: Arquivo de configuração não encontrado.");
+            }
+
+            $configMail = parse_ini_file($this->configPath, true);  // true para usar seções
+
             $mail = new PHPMailer(true);
 
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
-                $mail->Host = 'mail.codemaze.com.br'; 
+                $mail->Host = $configMail['EMAIL']['Host'];
                 $mail->SMTPAuth = true; 
-                $mail->Username = 'financeiro@codemaze.com.br'; 
-                $mail->Password = 'Mi479585!'; 
+                $mail->Username = $configMail['EMAIL']['Username'];
+                $mail->Password = $configMail['EMAIL']['Password'];
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-                $mail->Port = 587; 
+                $mail->Port = $configMail['EMAIL']['Port'];
             
                 // Destinatários
                 $mail->setFrom('no-reply@dominio.com', 'Codemaze');
@@ -85,16 +92,13 @@
                 // Conteúdo do e-mail
                 $mail->isHTML(true); // Defina o formato do e-mail como HTML
                 $mail->Subject = 'Assunto do E-mail';
-                $mail->Body    = 'Corpo do e-mail em HTML';
-                $mail->AltBody = 'Corpo do e-mail em texto simples para clientes de e-mail que não suportam HTML';
+                $mail->Body    = 'Corpo do e-mail em HTML'; 
             
                 $mail->send();
                 return 'E-mail enviado com sucesso';
             } catch (Exception $e) {
                 return "Erro ao enviar e-mail: {$mail->ErrorInfo}";
-            }  
-            
-    
+            }            
         }
 
 
