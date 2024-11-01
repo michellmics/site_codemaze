@@ -7,7 +7,7 @@ $siteAdmin->getProxContratosAVencer();
 
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 {
-    //echo $item["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"];
+    echo $item["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"];
     /*
     if($registro["LFI_PAGSEGURO_LINK_BOLETO"] != NULL)
     {
