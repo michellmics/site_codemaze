@@ -16,8 +16,8 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 }
 
 */
-//$resultMail = $siteAdmin->sendEmailPHPMailer();
-//echo $resultMail;
+$resultMail = $siteAdmin->sendEmailPHPMailer();
+echo $resultMail;
 /*
 echo "<pre>";
 var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
