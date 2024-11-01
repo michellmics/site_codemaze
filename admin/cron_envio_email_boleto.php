@@ -5,11 +5,21 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer();
 
+foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as array)
+{
+    if($array["LFI_PAGSEGURO_LINK_BOLETO"] != NULL)
+    {
+        $result = $siteAdmin->gerBoleto($array["LFI_PAGSEGURO_LINK_BOLETO"]["LFI_IDOP"]);
+        echo $result;
+    }
+}
+
+/*
 echo "<pre>";
 var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
 echo "</pre>";
 
-
+*/
 
 
 
