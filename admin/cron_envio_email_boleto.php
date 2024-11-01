@@ -56,6 +56,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     foreach($itens["boletos"] as $boletos)
     {
         $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"]; 
+        $siteAdmin->updateMailCobranca($boletos["GEC_IDGESTAO_CONTRATO"]);
         $aux++;
     }
 

@@ -93,6 +93,10 @@
                 $mail->Password = $pass;
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
                 $mail->Port = $configMail['EMAIL']['Port'];
+
+                // Configurações de codificação
+                $mail->CharSet = 'UTF-8';
+                $mail->Encoding = 'base64';
             
                 // Destinatários
                 $mail->setFrom('no-reply@dominio.com', 'Codemaze');
@@ -109,6 +113,29 @@
             } catch (Exception $e) {
                 return "Erro ao enviar e-mail: {$mail->ErrorInfo}";
             }            
+        }
+
+        public function updateMailCobranca($GEC_IDGESTAO_CONTRATO)
+        {          
+            
+            try {
+                $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
+                        SET LFI_DCEMAIL_SENDED = :LFI_DCEMAIL_SENDED
+                        WHERE 	GEC_IDGESTAO_CONTRATO = :	GEC_IDGESTAO_CONTRATO";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':LFI_DCEMAIL_SENDED', 'ENVIADO', PDO::PARAM_STR);
+                $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Contrato atualizado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
         }
 
 
@@ -252,7 +279,8 @@
             
             try{           
                 $sql = "SELECT * 
-                        FROM VW_BOLETO_PROX_VENCIMENTO";
+                        FROM VW_BOLETO_PROX_VENCIMENTO
+                        WHERE GEC_DCEMAILCOBRANCA != 'ENVIADO'";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
