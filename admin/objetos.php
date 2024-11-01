@@ -121,7 +121,7 @@
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
                         SET LFI_DCEMAIL_SENDED = :LFI_DCEMAIL_SENDED
-                        WHERE 	GEC_IDGESTAO_CONTRATO = :	GEC_IDGESTAO_CONTRATO";
+                        WHERE 	GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO";
 
                 $stmt = $this->pdo->prepare($sql);
             
