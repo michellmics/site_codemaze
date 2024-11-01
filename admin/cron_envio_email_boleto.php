@@ -16,6 +16,11 @@ if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
     die();
 }
 
+echo "<pre>";
+var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS); 
+echo "</pre>";
+die();
+
 //gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
