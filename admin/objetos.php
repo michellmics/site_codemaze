@@ -61,7 +61,7 @@
         }
 
         public function sendEmailPHPMailer()
-        {         return "aqui"; 
+        {     
             try {           
                 // Testa se as classes foram carregadas corretamente
                 if (class_exists('PHPMailer\PHPMailer\PHPMailer') && class_exists('PHPMailer\PHPMailer\Exception')) {
