@@ -1279,10 +1279,10 @@
 
         public function gerBoleto($LFI_IDOP)
         {
-            //$url = 'https://sandbox.api.pagseguro.com/orders'; //ambiente de homol
-            $url = 'https://api.pagseguro.com/orders'; //ambiente de prod
-            //$token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';//homol
-            $token = '55d8da92-b849-474f-83eb-d4ba4a40b0110f552fab4326bb141e293697d3bf8c87ea3e-ab12-45ee-9862-0ab3b288e9f8';//prod
+            $url = 'https://sandbox.api.pagseguro.com/orders'; //ambiente de homol
+            $token = '5f6b7dd5-93b5-4b26-b18f-9139400d969f70cf7dd24a82ac4af6b3b452387faeda1566-92ba-4c8e-a183-237ebc053c94';//homol
+            //$url = 'https://api.pagseguro.com/orders'; //ambiente de prod
+            //$token = '55d8da92-b849-474f-83eb-d4ba4a40b0110f552fab4326bb141e293697d3bf8c87ea3e-ab12-45ee-9862-0ab3b288e9f8';//prod
 
             $now = new DateTime(); 
             $DATA = $now->format('Y-m-d');
