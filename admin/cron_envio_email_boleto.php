@@ -4,6 +4,7 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProxContratosAVencer();
+/*
 
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
@@ -14,7 +15,7 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     }        
 }
 
-
+*/
 $resultMail = $siteAdmin->sendEmailPHPMailer();
 echo $resultMail;
 /*
