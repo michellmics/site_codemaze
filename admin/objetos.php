@@ -76,9 +76,9 @@
             } catch (Exception $e) {
                 return "Erro ao incluir os arquivos: " . $e->getMessage();
             }
-
-            $mail = new PHPMailer(true); 
             return "aqui1";
+            //$mail = new PHPMailer(true); 
+            
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
