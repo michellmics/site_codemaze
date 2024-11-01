@@ -326,7 +326,7 @@
             <div class="row text-center">
                 <div class="col-md-6">
                     <div class="customwidget text-left">
-                        <h1>Gestão de Mídia Social</h1>
+                        <h1>Gestão de Mídias Sociais</h1>
                         <p>Maximize sua presença online com nosso serviço de Gestão de Mídia Social! <br>Oferecemos relatórios personalizados e estratégias inovadoras que aumentam o engajamento e potencializam sua marca.</p>
                         <ul class="list-inline">
                             <li><i class="fa fa-check"></i> Portal do Cliente</li>
