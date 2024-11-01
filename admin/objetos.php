@@ -1,12 +1,12 @@
 <?php
 
     //include_once 'db.php';
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+    use phpMailer\PHPMailer;
+    use phpMailer\Exception;
 
-    require 'PHPmailer/src/PHPMailer.php';
-    require 'PHPmailer/src/SMTP.php';
-    require 'PHPmailer/src/Exception.php';
+    require 'phpMailer/src/PHPMailer.php';
+    require 'phpMailer/src/SMTP.php';
+    require 'phpMailer/src/Exception.php';
 
 
 	class SITE_ADMIN
