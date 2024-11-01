@@ -115,19 +115,19 @@
             }            
         }
 
-        public function updateMailCobranca($GEC_IDGESTAO_CONTRATO)
+        public function updateMailCobranca($LFI_IDOP)
         {          
             try {
                 $sql = "UPDATE LFI_LIQUIDACAOFINANCEIRA 
                         SET LFI_DCEMAIL_SENDED = :LFI_DCEMAIL_SENDED
-                        WHERE 	GEC_IDGESTAO_CONTRATO = :GEC_IDGESTAO_CONTRATO";
+                        WHERE 	LFI_IDOP = :LFI_IDOP";
 
                 $stmt = $this->pdo->prepare($sql);
             
                 // Liga os parâmetros aos valores
                 $status = 'ENVIADO';
                 $stmt->bindParam(':LFI_DCEMAIL_SENDED', $status, PDO::PARAM_STR);
-                $stmt->bindParam(':GEC_IDGESTAO_CONTRATO', $GEC_IDGESTAO_CONTRATO, PDO::PARAM_STR);
+                $stmt->bindParam(':LFI_IDOP', $LFI_IDOP, PDO::PARAM_STR);
 
                 $stmt->execute();
             

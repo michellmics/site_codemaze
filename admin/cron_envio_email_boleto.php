@@ -48,12 +48,6 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
 
 $LISTA_EMAIL_BOLETOS = $resultado;
 
-echo "<pre>";
-var_dump($LISTA_EMAIL_BOLETOS); 
-echo "</pre>";
-
-die();
-
 foreach($LISTA_EMAIL_BOLETOS as $itens)
 {
     $listaBoletos = array();
@@ -62,7 +56,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     foreach($itens["boletos"] as $boletos)
     {
         $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"]; 
-        $updateResult = $siteAdmin->updateMailCobranca($boletos["GEC_IDGESTAO_CONTRATO"]);
+        $updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
         echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
         sleep(1);
         $aux++;
