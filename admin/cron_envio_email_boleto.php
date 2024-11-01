@@ -40,8 +40,9 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
     // Adicionar o boleto ao cliente correspondente
     $resultado[$cliente_id]['boletos'][] = $boleto;
 }
-
+echo "<pre>";
 print_r($resultado);
+echo "</pre>";
 
 
 
