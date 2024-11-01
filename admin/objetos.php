@@ -16,6 +16,7 @@
         public $ARRAY_CONTRATOINFO;    
         public $ARRAY_LIQUIDACAOFINANCEIRA; 
         public $ARRAY_BALANCOMENSAL;
+        public $ARRAY_PROXVENCIMENTOS;
 
 
         function conexao()
@@ -184,6 +185,23 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_LIQUIDACAOFINANCEIRA = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getProxContratosAVencer()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * 
+                        FROM VW_BOLETO_PROX_VENCIMENTOIRA";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PROXVENCIMENTOS = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
