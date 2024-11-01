@@ -247,7 +247,7 @@
                         <img src="uploads/gestaoMidiaSocial.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Gestão de Mídia Social</h3>
+						<h3>Gestão de Mídias Sociais</h3>
 						<p>Impulsione sua marca com nosso serviço de destaque em mídias sociais! Criamos estratégias e campanhas personalizadas que aumentam seu engajamento e ampliam sua visibilidade.</p>
 					</div>
                 </div>
