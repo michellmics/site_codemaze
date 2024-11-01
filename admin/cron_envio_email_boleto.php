@@ -47,7 +47,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
     $listaBoletos = array();
     $aux=0;
 
-    foreach($LISTA_EMAIL_BOLETOS["boletos"] as $boletos)
+    foreach($itens["boletos"] as $boletos)
     {
         $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"];
     }
