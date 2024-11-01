@@ -1,6 +1,12 @@
 <?php
 
     //include_once 'db.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'PHPmailer/src/PHPMailer.php';
+    require 'PHPmailer/src/SMTP.php';
+    require 'PHPmailer/src/Exception.php';
 
 
 	class SITE_ADMIN
@@ -54,6 +60,38 @@
             } catch (PDOException $e) {
                 die("Erro na conexão: " . $e->getMessage());
             }
+        }
+
+        public function sendEmailPHPMailer()
+        {          
+            $mail = new PHPMailer(true); 
+
+            try {
+                //Configurações do servidor
+                $mail->isSMTP(); 
+                $mail->Host = 'mail.codemaze.com.br'; 
+                $mail->SMTPAuth = true; 
+                $mail->Username = 'financeiro@codemaze.com.br'; 
+                $mail->Password = 'Mi479585!'; 
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+                $mail->Port = 465; 
+            
+                // Destinatários
+                $mail->setFrom('no-reply@dominio.com', 'Codemaze');
+                $mail->addAddress('michell.oliveira@codemaze.com.br'); // Adicione um destinatário
+                $mail->addBCC('suporte@codemaze.com.br'); // Se desejar enviar cópia oculta
+            
+                // Conteúdo do e-mail
+                $mail->isHTML(true); // Defina o formato do e-mail como HTML
+                $mail->Subject = 'Assunto do E-mail';
+                $mail->Body    = 'Corpo do e-mail em HTML';
+                $mail->AltBody = 'Corpo do e-mail em texto simples para clientes de e-mail que não suportam HTML';
+            
+                $mail->send();
+                return 'E-mail enviado com sucesso';
+            } catch (Exception $e) {
+                return "Erro ao enviar e-mail: {$mail->ErrorInfo}";
+            }     
         }
 
 
