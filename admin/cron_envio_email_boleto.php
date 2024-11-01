@@ -1,7 +1,9 @@
 <?php
+//informa erros na tela
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+//informa erros na tela
 
 include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
