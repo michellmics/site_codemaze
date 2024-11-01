@@ -1399,7 +1399,7 @@
                 $city = ucfirst(strtolower($ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCITY"]));
                 $region_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCSTATE"];
                 $postal_code = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["CLI_DCCEP"];
-                $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["GEC_DCDESCRICAO"];
+                $description = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
                 $nameItem = $ARRAY_VWLIQUIDACAOFINANCEIRA[0]["PRS_NMNOME"];
                 $DataVencimento = $DATAVENC;
 
