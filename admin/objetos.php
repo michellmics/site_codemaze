@@ -2,9 +2,9 @@
 
     //include_once 'db.php'; 
 
-    require 'phpMailer/src/PHPMailer.php';
-    require 'phpMailer/src/SMTP.php';
-    require 'phpMailer/src/Exception.php';
+    include 'phpMailer/src/PHPMailer.php';
+    include 'phpMailer/src/SMTP.php';
+    include 'phpMailer/src/Exception.php';
 
 
 	class SITE_ADMIN
