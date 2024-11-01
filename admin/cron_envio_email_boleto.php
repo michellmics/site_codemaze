@@ -22,7 +22,9 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 
 */
 
-$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio", "testooouuu","anexo"); 
+    
+
+$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio anexo", "testooouuu","https://boleto.pagseguro.com.br/44040181-84cd-4c6f-935f-b5f5be9c88c3.pdf"); 
 echo $resultMail;
 /*
 echo "<pre>";

@@ -76,6 +76,11 @@
 
             $mail = new PHPMailer(true);
 
+            $fileContent = file_get_contents($anexo); // Baixa o conteúdo do PDF
+            $fileName = basename($anexo); // Extrai o nome do arquivo do link
+
+            
+
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
@@ -85,6 +90,7 @@
                 $mail->Password = $pass;
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
                 $mail->Port = $configMail['EMAIL']['Port'];
+                $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
             
                 // Destinatários
                 $mail->setFrom('no-reply@dominio.com', 'Codemaze');
