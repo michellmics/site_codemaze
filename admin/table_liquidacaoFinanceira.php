@@ -169,10 +169,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           $linkBoleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'];
                           $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>Gerar Boleto</a>" : "<a href='$linkBoleto' target='_blank'><i class='fas fa-file-pdf'></i></a>";
 
-                          if($liquidFin['LFI_DTPAGAMENTO'] != "" && $liquidFin['LFI_DTPAGAMENTO'] != NULL && $liquidFin['LFI_DTPAGAMENTO'] != "'0000-00-00")
-                          {
+                         // if($liquidFin['LFI_DTPAGAMENTO'] != "" && $liquidFin['LFI_DTPAGAMENTO'] != NULL && $liquidFin['LFI_DTPAGAMENTO'] != "'0000-00-00")
+                         // {
                             $dataFormatadaPag = date("d/m/Y", strtotime($liquidFin['LFI_DTPAGAMENTO']));
-                          }
+                         // }
+
 
                         ?> 
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
