@@ -16,19 +16,11 @@ if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
     die();
 }
 
-echo "<pre>";
-var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS); 
-echo "</pre>";
-die();
-
 //gerar os boletos
 foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 { 
     if(($item["LFI_PAGSEGURO_LINK_BOLETO"] == NULL || $item["LFI_PAGSEGURO_LINK_BOLETO"] == "") && ($item["LFI_STPAGAMENTO"] == "ABERTO" || $item["LFI_STPAGAMENTO"] == NULL || $item["LFI_STPAGAMENTO"] == ""))
     {
-        echo $item["LFI_IDOP"];
-        die();
-
         $result = $siteAdmin->gerBoleto($item["LFI_IDOP"]);
         echo $result;
     }        
