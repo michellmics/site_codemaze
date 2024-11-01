@@ -21,7 +21,8 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
 }
 
 */
-$resultMail = $siteAdmin->sendEmailPHPMailer();
+
+$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio", "testooouuu","anexo"); 
 echo $resultMail;
 /*
 echo "<pre>";
