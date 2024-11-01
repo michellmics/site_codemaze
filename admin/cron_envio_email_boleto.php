@@ -20,19 +20,12 @@ foreach($siteAdmin->ARRAY_PROXVENCIMENTOS as $item)
     }        
 }
 
-var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
+ 
 
-
-    
-
-//$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio anexo", "testooouuu","https://boleto.pagseguro.com.br/44040181-84cd-4c6f-935f-b5f5be9c88c3.pdf"); 
-//echo $resultMail;
-/*
 echo "<pre>";
 var_dump($siteAdmin->ARRAY_PROXVENCIMENTOS);
 echo "</pre>";
 
-*/
 
 
 
@@ -40,6 +33,8 @@ echo "</pre>";
 
 
 
+//$resultMail = $siteAdmin->sendEmailPHPMailer("michell.oliveira@codemaze.com.br","teste de envio anexo", "testooouuu","https://boleto.pagseguro.com.br/44040181-84cd-4c6f-935f-b5f5be9c88c3.pdf"); 
+//echo $resultMail;
 
 
 die();
