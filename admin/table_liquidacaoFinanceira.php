@@ -14,7 +14,7 @@ $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['update']))
 {
-  echo "$_GET['dataPagamento']";
+  echo $_GET['dataPagamento'];
   echo "teste";
   die();
   $dataPagamento = DateTime::createFromFormat('d/m/Y', $_GET['dataPagamento']);
