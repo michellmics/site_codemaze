@@ -66,7 +66,7 @@
         public function sendEmailPHPMailer()
         {     
             $mail = new PHPMailer(true);
-            return "aqui";
+
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
@@ -94,7 +94,7 @@
                 return "Erro ao enviar e-mail: {$mail->ErrorInfo}";
             }  
             
-   
+    
         }
 
 
