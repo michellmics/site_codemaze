@@ -197,7 +197,7 @@
             
             try{           
                 $sql = "SELECT * 
-                        FROM VW_BOLETO_PROX_VENCIMENTOIRA";
+                        FROM VW_BOLETO_PROX_VENCIMENTO";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
