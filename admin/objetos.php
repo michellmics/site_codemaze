@@ -6,6 +6,9 @@
     include 'phpMailer/src/SMTP.php';
     include 'phpMailer/src/Exception.php';
 
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
 
 	class SITE_ADMIN
 	{
@@ -62,7 +65,7 @@
 
         public function sendEmailPHPMailer()
         {     
-            $mail = new PHPMailer();
+            $mail = new PHPMailer(true);
             return "aqui";
             try {
                 //Configurações do servidor
