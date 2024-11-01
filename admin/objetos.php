@@ -88,13 +88,13 @@
             
                 // Destinatários
                 $mail->setFrom('no-reply@dominio.com', 'Codemaze');
-                $mail->addAddress('michell.oliveira@codemaze.com.br'); // Adicione um destinatário
+                $mail->addAddress($addAddress); // Adicione um destinatário
                 $mail->addBCC('suporte@codemaze.com.br'); // Se desejar enviar cópia oculta
             
                 // Conteúdo do e-mail
                 $mail->isHTML(true); // Defina o formato do e-mail como HTML
-                $mail->Subject = 'Assunto do E-mail';
-                $mail->Body    = 'Corpo do e-mail em HTML'; 
+                $mail->Subject = $Subject;
+                $mail->Body    = $Body; 
             
                 $mail->send();
                 return 'E-mail enviado com sucesso';
