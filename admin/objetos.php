@@ -76,11 +76,15 @@
 
             $mail = new PHPMailer(true);
 
-            foreach($anexo as $item)
-            {
-                $fileContent = file_get_contents($item); // Baixa o conteúdo do PDF
-                $fileName = basename($item); // Extrai o nome do arquivo do link 
-                $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
+            foreach ($anexo as $item) {
+                if (!empty($item)) { 
+                    $fileContent = file_get_contents($item); 
+                    $fileName = basename($item); 
+                    $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
+                } else {
+                    
+                    return "O caminho do arquivo está vazio: $item<br>";
+                }
             }
            
 
@@ -131,7 +135,7 @@
 
                 $stmt->execute();
             
-                return ["success" => "Contrato atualizado com sucesso."];
+                return ["success" => "Status de notificação atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];
