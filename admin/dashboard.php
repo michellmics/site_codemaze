@@ -234,7 +234,28 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                   <li class="footer"><a href="#">Ver Todos</a></li>
                 </ul>
               </li>
-              <!-- Notifications: style can be found in dropdown.less -->
+              
+            <!-- Notifications: MODALs -->              
+              <div class="example-modal">
+                <div class="modal modal-danger" id="alertModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal Danger</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p id="modalBodyContent">One fine body&hellip;</p> <!-- ID adicionado -->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline">Save changes</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+              </div><!-- /.example-modal -->
+
 
               <script>
                 function reconAlarme(alertaId) {
@@ -248,7 +269,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               </script>          
 
 
-
+                <!-- Notifications: style can be found in dropdown.less -->
               <!-- Tasks: style can be found in dropdown.less -->
               <li class="dropdown tasks-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
