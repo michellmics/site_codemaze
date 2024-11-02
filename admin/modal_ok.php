@@ -25,7 +25,7 @@
                         <p id="modalBodyContent">One fine body&hellip;</p> <!-- ID adicionado -->
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-outline" data-dismiss="modal">Fechar</button>
+                        <button type="button" id="closeModal" class="btn btn-outline" data-dismiss="modal">Fechar</button>
                       </div>
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
