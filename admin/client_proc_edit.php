@@ -43,12 +43,18 @@
     <script src="dist/js/demo.js" type="text/javascript"></script>
 
     <script>
-        function showModal(message) {
+        function showModal(message,redirectUrl) {
             console.log(message); // Adiciona este log
           // Define o conteúdo do corpo do modal
           document.getElementById('modalBodyContent').innerText = message;
           // Abre o modal
           $('#alertModal').modal('show');
+
+            // Adiciona um evento de clique ao botão de fechar
+            document.getElementById('closeModal').onclick = function() {
+            // Redireciona para a URL fornecida
+            window.location.href = redirectUrl;
+        };
         }
     </script>
 
@@ -74,7 +80,7 @@ class registerClient extends SITE_ADMIN
                 
             $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
            // echo "Cliente atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";   
-            echo "<script>showModal('Cliente atualizado com sucesso.');</script>";               
+            echo "<script>showModal('Cliente atualizado com sucesso.',`table_cliente.php`);</script>";               
                      
         } catch (PDOException $e) {  
             echo "Erro: " . $e->getMessage();
