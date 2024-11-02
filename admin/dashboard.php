@@ -223,7 +223,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                           if($level == "Info"){$icon = "fa fa-users text-aqua";}
 
                           echo "<li style='display: flex; align-items: center; justify-content: space-between; padding: 5px 0;'>
-                                  <a href='#' onclick='showModal(\"$msg\", \"$idAlerta\")' style='display: flex; align-items: center; flex-grow: 1; text-decoration: none; color: inherit;'><i class='".$icon."'></i>$msg</a>
+                                  <a href='#' onclick='showModal(\"$msg\", \"$idAlerta\")'><i class='".$icon."'></i>$msg</a>
                                    <button onclick='reconAlarme($idAlerta)' style='padding: 3px 6px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; margin-right: 5px;'>OK</button>  
                                 </li>";
                         }
