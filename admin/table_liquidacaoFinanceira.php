@@ -1,5 +1,6 @@
 <?php
   include_once 'objetos.php'; 
+  include 'modal.php';
   
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
@@ -260,9 +261,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
       const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
+
+
       if (!datapagamento) {
-          alert("Por favor, insira a data de pagamento.");
-          return false;
+          showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
+          return false; // Impede a continuação do código
+      }
+
+      function showErrorModal(message) {
+          document.getElementById('modalBodyContent').innerText = message; // Define a mensagem de erro
+          $('#modalBodyContent').modal('show'); // Abre o modal
       }
 
       if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
