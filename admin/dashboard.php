@@ -210,7 +210,7 @@
 
                           echo "<li style='display: flex; align-items: center; justify-content: space-between; padding: 5px 0;'>
                                   <a href='#'><i class='".$icon."'></i>$msg</a>
-                                   <button style='padding: 3px 6px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer;'>OK</button>  
+                                   <button style='padding: 3px 6px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; margin-right: 3px;'>OK</button>  
                                 </li>";
                         }
                       
