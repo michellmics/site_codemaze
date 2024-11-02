@@ -208,7 +208,12 @@
                           if($level == "High"){$icon = "fa fa-users text-red";}
                           if($level == "Info"){$icon = "fa fa-users text-aqua";}
 
-                          echo "<li><a href='#'><i class='".$icon."'></i>$msg</a></li>";
+                          echo "<li>
+                                  <a href='#'><i class='".$icon."'></i>$msg</a>
+                                  <button style='margin-left: auto; padding: 5px 10px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer;'>
+                  Ação
+                </button>  
+                                </li>";
                         }
                       
 
