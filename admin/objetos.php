@@ -244,7 +244,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM ALE_ALERTA
-                                WHERE ALE_STALERTA = 'ALARMANDO'
+                                WHERE ALE_STALERTA != 'RECONHECIDO'
                                 ORDER BY ALE_DTALERTA DESC";
 
                 $stmt = $this->pdo->prepare($sql);
