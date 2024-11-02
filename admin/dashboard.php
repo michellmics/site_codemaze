@@ -200,9 +200,15 @@
                         foreach($siteAdmin->ARRAY_ALERTA as $item)
                         {
                           $msg = $item["ALE_DCMSG"];
-                          $level = substr($item["ALE_DCLEVEL"],0,20);
+                          $level = substr($item["ALE_DCLEVEL"],0,30);
                           $data = $item["ALE_DTALERTA"];
-                          echo "<li><a href='#'><i class='fa fa-users text-aqua'></i>$msg</a></li>";
+                          $icon = "fa fa-users text-aqua";
+
+                          if($level == "Warning"){$icon = "fa fa-warning text-yellow";}
+                          if($level == "High"){$icon = "fa fa-users text-red";}
+                          if($level == "Info"){$icon = "fa fa-users text-aqua";}
+
+                          echo "<li><a href='#'><i class=$icon></i>$msg</a></li>";
                         }
                       
 
