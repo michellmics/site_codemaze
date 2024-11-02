@@ -85,7 +85,7 @@
                     $fileName = basename($item); 
                     $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
                 } else {
-                    
+                    $this->InsertAlarme("Gerar Boleto: Caminho do arquivo está vazio.","High");
                     return "O caminho do arquivo está vazio: $item<br>";
                 }
                 sleep(2);
@@ -119,6 +119,7 @@
                 $mail->send();
                 return 'E-mail enviado com sucesso';
             } catch (Exception $e) {
+                $this->InsertAlarme("Erro ao enviar e-mail. $mail->ErrorInfo","High");
                 return "Erro ao enviar e-mail: {$mail->ErrorInfo}";
             }            
         }
@@ -142,6 +143,7 @@
                 return ["success" => "Status de notificação atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateMailCobranca.","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -473,6 +475,7 @@
                 return ["success" => "Produto atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateLiquidacaoFinanceiraById.","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -753,6 +756,7 @@
                 return ["success" => "Descrição atualizada com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateDesc.","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -805,6 +809,7 @@
                 return ["success" => "Cliente inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateClientInfo. $CLI_NMNAME","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -840,6 +845,7 @@
                 return ["success" => "Produto atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateProductInfo. $PRS_NMNOME","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -867,6 +873,7 @@
                 return ["success" => "Cliente atualizado com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateClientFinStatus.","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -956,6 +963,7 @@
                 return ["success" => "Contrato atualizado com sucesso1."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateContratoInfo. $GEC_IDGESTAO_CONTRATO","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -983,9 +991,11 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Inserido novo usuário. $USA_DCNOME","Warning");
                 return ["success" => "Usuário adm inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertUserInfo. $USA_DCNOME","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1113,6 +1123,7 @@
                 return ["success" => "Contrato inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertContratoInfo. $GEC_IDGESTAO_CONTRATO","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1150,6 +1161,7 @@
 
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertListaPagamanto. $GEC_IDGESTAO_CONTRATO","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1193,6 +1205,7 @@
                 return ["success" => "Cliente inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertClientInfo. $CLI_NMNAME","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1221,9 +1234,11 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Novo produto cadastrado. $PRS_NMNOME","Info");
                 return ["success" => "Produto inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertProductInfo. $PRS_NMNOME","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1255,6 +1270,7 @@
                 return ["success" => "Balanço inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertBalancoMes. $BLM_DTFECHAMENTO","High");
                 return ["error" => $e->getMessage()];
             }
         }
@@ -1581,6 +1597,7 @@
             
             if(!isset($data['charges'][0]['links'][0]['href']))
             {
+                $this->InsertAlarme("Não foi possível gerar o boleto. Resposta: $response","High");
                 return "Não foi possível gerar o boleto. Resposta: $response";
             }
                         
@@ -1609,6 +1626,7 @@
             
                 return "Boleto gerado com sucesso. <a href='table_liquidacaoFinanceira.php'>VOLTAR</a>";
             } catch (PDOException $e) {
+                $this->InsertAlarme("Falha ao gerar o boleto. $idCobranca","High");
                 return "Falha ao gerar o boleto. <a href='table_liquidacaoFinanceira.php'>VOLTAR</a>";
                 // return ["error" => $e->getMessage()];
             }
