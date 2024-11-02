@@ -27,20 +27,8 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Fechar</button>
-                        <button type="button" onclick='reconAlarme(<span id="idAlerta"></span>)' class="btn btn-outline">Reconhecer Alerta</button>
                       </div>
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
               </div><!-- /.example-modal -->
-
-              <script>
-                function reconAlarme(alertaId) {
-                  fetch('dashboard.php?alerta=' + alertaId)
-                  .then(response => response.text())
-                  .then(data => {
-                    window.location.reload();
-                  })
-                  .catch(error => console.error('Erro:', error));
-                }
-                </script>
