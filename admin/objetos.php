@@ -407,7 +407,35 @@
 
                 $stmt->execute();
             
-                return ["success" => "Produto atualizado com sucesso."];
+                return ["success" => "Alarme reconhecido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
+        public function InsertAlarme($ALE_DCMSG,$ALE_DCLEVEL)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            $now = new DateTime(); 
+            $DATA = $now->format('Y-m-d');
+            
+            try {
+                $sql = "INSERT INTO ALE_ALERTA (ALE_DCMSG,ALE_DCLEVEL,ALE_DTALERTA) VALUES (:ALE_DCMSG,:ALE_DCLEVEL,:ALE_DTALERTA)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':ALE_DCMSG', $ALE_DCMSG, PDO::PARAM_STR);
+                $stmt->bindParam(':ALE_DCLEVEL', $ALE_DCLEVEL, PDO::PARAM_STR);
+                $stmt->bindParam(':ALE_DTALERTA', $DATA, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Alerta inserido com sucesso."];
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 return ["error" => $e->getMessage()];

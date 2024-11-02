@@ -54,7 +54,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
                     suporte@codemaze.com.br<br>
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>
                     ";
-
+            $siteAdmin->InsertAlarme("Identificado fatura vencida do cliente $contato.","Info");
             $siteAdmin->updateClientFinStatus($array['CLI_IDCLIENT'],"Vencido");
             $siteAdmin->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
             
