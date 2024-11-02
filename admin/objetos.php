@@ -24,6 +24,7 @@
         public $ARRAY_LIQUIDACAOFINANCEIRA; 
         public $ARRAY_BALANCOMENSAL;
         public $ARRAY_PROXVENCIMENTOS;
+        public $ARRAY_ALERTA;
         public $configPath = '/home/codemaze/config.cfg';
 
 
@@ -230,6 +231,25 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getAlertaInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM ALE_ALERTA
+                                WHERE ALE_STALERTA = 'ALARMANDO'
+                                ORDER BY ALE_DTALERTA DESC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_ALERTA = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
