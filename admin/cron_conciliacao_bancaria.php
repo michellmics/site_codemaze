@@ -17,6 +17,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
 
     if(isset($data['charges'][0]['status']) && $data['charges'][0]['status'] == "PAID")
     {
+        $siteAdmin->InsertAlarme("Identificado o pagamento de um boleto.","Info");
         $siteAdmin->updateLiquidacaoFinanceiraById($array["LFI_IDLIQUIDACAOFINANCEIRA"],"LIQUIDADO",$DATA);
         $qtdeBoletosPagos++;
     }

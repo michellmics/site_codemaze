@@ -31,6 +31,7 @@ $msg = "
 
 
 $dashboardValues->notifyPendenciasEmail($subject, $msg, $emalCobrança); 
+$dashboardValues->InsertAlarme("Ocorreu o fechamento do balanço do mês.","Info");
 
 
 echo "Fim do Script";
