@@ -259,7 +259,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       }
 
       function showErrorModal(message) {
-        alert("XANAAAAA");
           document.getElementById('modalBodyContent').innerText = message; // Define a mensagem de erro
           $('#modalBodyContent').modal('show'); // Abre o modal
       }

@@ -23,7 +23,6 @@
                       </div>
                       <div class="modal-body">
                         <p id="modalBodyContent">One fine body&hellip;</p> <!-- ID adicionado -->
-                        <p>ID do Alerta: <span id="idAlerta"></span></p> <!-- Campo para exibir o ID do alerta -->
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-outline" data-dismiss="modal">Fechar</button>
