@@ -212,7 +212,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                         foreach($siteAdmin->ARRAY_ALERTA as $item)
                         {
                           $msg = $item["ALE_DCMSG"];
-                          $level = substr($item["ALE_DCLEVEL"],0,30);
+                          $level = substr($item["ALE_DCLEVEL"],0,200);
                           $data = $item["ALE_DTALERTA"];
                           $icon = "fa fa-users text-aqua";
                           $idAlerta = $item["ALE_IDALERTA"];
