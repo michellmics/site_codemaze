@@ -1,3 +1,17 @@
+<style>
+.modal-body {
+    max-height: 400px; /* Ajuste a altura máxima conforme necessário */
+    overflow-y: auto;  /* Permite rolagem vertical se o conteúdo exceder a altura */
+    word-wrap: break-word; /* Permite que palavras longas quebrem a linha */
+    white-space: normal; /* Permite a quebra de linha normal */
+}
+
+.modal-dialog {
+    max-width: 600px; /* Ajuste a largura máxima conforme necessário */
+    width: auto; /* Define a largura automaticamente */
+}
+</style>
+            
             <!-- Notifications: MODALs -->              
             <div class="example-modal">
                 <div class="modal modal-danger" id="alertModal">
