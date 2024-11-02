@@ -244,7 +244,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM ALE_ALERTA
-                                WHERE ALE_STALERTA != 'RECONHECIDO'
+                                WHERE ALE_STALERTA = 'ALARMANDO'
                                 ORDER BY ALE_DTALERTA DESC";
 
                 $stmt = $this->pdo->prepare($sql);
@@ -422,9 +422,10 @@
             }
             $now = new DateTime(); 
             $DATA = $now->format('Y-m-d');
+            $ALE_STALERTA = "ALARMANDO";
             
             try {
-                $sql = "INSERT INTO ALE_ALERTA (ALE_DCMSG,ALE_DCLEVEL,ALE_DTALERTA) VALUES (:ALE_DCMSG,:ALE_DCLEVEL,:ALE_DTALERTA)";
+                $sql = "INSERT INTO ALE_ALERTA (ALE_DCMSG,ALE_DCLEVEL,ALE_DTALERTA,ALE_STALERTA) VALUES (:ALE_DCMSG,:ALE_DCLEVEL,:ALE_DTALERTA,:ALE_STALERTA)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -432,6 +433,7 @@
                 $stmt->bindParam(':ALE_DCMSG', $ALE_DCMSG, PDO::PARAM_STR);
                 $stmt->bindParam(':ALE_DCLEVEL', $ALE_DCLEVEL, PDO::PARAM_STR);
                 $stmt->bindParam(':ALE_DTALERTA', $DATA, PDO::PARAM_STR);
+                $stmt->bindParam(':ALE_STALERTA', $ALE_STALERTA, PDO::PARAM_STR);
 
                 $stmt->execute();
             
