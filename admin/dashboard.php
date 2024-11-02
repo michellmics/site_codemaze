@@ -232,7 +232,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                       ?>
                     </ul>
                   </li>
-                  <li class="footer"><a href="#">Ver Todos</a></li>
+                  <!-- <li class="footer"><a href="#">Ver Todos</a></li> -->
                 </ul>
               </li>
               
