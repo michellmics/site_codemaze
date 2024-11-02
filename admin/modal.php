@@ -27,7 +27,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Fechar</button>
-                        <button type="button" onclick='reconAlarme($idAlerta)' class="btn btn-outline">Reconhecer Alerta</button>
+                        <button type="button" onclick='reconAlarme(<span id="idAlerta"></span>)' class="btn btn-outline">Reconhecer Alerta</button>
                       </div>
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
