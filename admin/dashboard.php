@@ -194,7 +194,13 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               <li class="dropdown notifications-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
-                  <span class="label label-warning"><?= $countAlertas ?></span>
+                  <?
+                    if($countAlertas != 0)
+                    {
+                      echo "<span class='label label-warning'>$countAlertas</span>";
+                    }
+                    
+                  ?>                  
                 </a>
                 <ul class="dropdown-menu">
                   <li class="header">Você têm <?= $countAlertas ?> notificações</li>
