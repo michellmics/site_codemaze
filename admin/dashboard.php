@@ -200,6 +200,8 @@
                         foreach($siteAdmin->ARRAY_ALERTA as $item)
                         {
                           $msg = $item["ALE_DCMSG"];
+                          $level = substr($item["ALE_DCLEVEL"],0,20);
+                          $data = $item["ALE_DTALERTA"];
                           echo "<li><a href='#'><i class='fa fa-users text-aqua'></i>$msg</a></li>";
                         }
                       
