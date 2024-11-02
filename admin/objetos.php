@@ -381,6 +381,39 @@
             }          
         }
 
+        public function alarmeRecon($ALE_IDALERTA)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            $now = new DateTime(); 
+            $DATA = $now->format('Y-m-d');
+            
+            $ALE_STALERTA = "RECONHECIDO";
+
+            try {
+                $sql = "UPDATE ALE_ALERTA 
+                        SET ALE_STALERTA = :ALE_STALERTA,
+                        ALE_DTRECONALERTA = :ALE_DTRECONALERTA
+                        WHERE ALE_IDALERTA = :ALE_IDALERTA";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':ALE_STALERTA', $ALE_STALERTA, PDO::PARAM_STR);
+                $stmt->bindParam(':ALE_IDALERTA', $ALE_IDALERTA, PDO::PARAM_STR);
+                $stmt->bindParam(':ALE_DTRECONALERTA', $DATA, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                return ["success" => "Produto atualizado com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function updateLiquidacaoFinanceiraById($LFI_IDLIQUIDACAOFINANCEIRA, $ACAO, $LFI_DTPAGAMENTO)
         {          
             // Verifica se a conexão já foi estabelecida

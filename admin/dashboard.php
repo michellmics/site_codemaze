@@ -25,6 +25,12 @@
         $imgProfile = "dist/img/avatar3.png";
       }
 
+if (isset($_GET['alerta'])) //reconheciento de alerta
+{
+  $ALE_IDALERTA = $_GET['alerta'];
+  $siteAdmin->alarmeRecon($ALE_IDALERTA);
+}
+
 ?>
 
 
@@ -203,6 +209,7 @@
                           $level = substr($item["ALE_DCLEVEL"],0,30);
                           $data = $item["ALE_DTALERTA"];
                           $icon = "fa fa-users text-aqua";
+                          $idAlerta = $item["ALE_IDALERTA"];
 
                           if($level == "Warning"){$icon = "fa fa-warning text-yellow";}
                           if($level == "High"){$icon = "fa fa-users text-red";}
@@ -210,7 +217,7 @@
 
                           echo "<li style='display: flex; align-items: center; justify-content: space-between; padding: 5px 0;'>
                                   <a href='#'><i class='".$icon."'></i>$msg</a>
-                                   <button style='padding: 3px 6px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; margin-right: 3px;'>OK</button>  
+                                   <button onclick='reconAlarme($idAlerta)' style='padding: 3px 6px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; margin-right: 5px;'>OK</button>  
                                 </li>";
                         }
                       
@@ -223,7 +230,16 @@
               </li>
               <!-- Notifications: style can be found in dropdown.less -->
 
-
+              <script>
+                function reconAlarme(alertaId) {
+                  fetch('dashboard.php?alerta=' + alertaId)
+                  .then(response => response.text())
+                  .then(data => {
+                    alert(data); // Opcional: mostra a resposta do servidor
+                  })
+                  .catch(error => console.error('Erro:', error));
+                }
+              </script>          
 
 
 
