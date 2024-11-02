@@ -257,6 +257,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
         return confirm("Tem certeza que deseja mudar o status do pagamento");
       }
 
+      function showErrorModal(message) {
+          document.getElementById('modalBodyContent').innerText = message; // Define a mensagem de erro
+          $('#modalBodyContent').modal('show'); // Abre o modal
+      }
+
       function confirmarLiquidacao(id) {
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
       const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
@@ -268,10 +273,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           return false; // Impede a continuação do código
       }
 
-      function showErrorModal(message) {
-          document.getElementById('modalBodyContent').innerText = message; // Define a mensagem de erro
-          $('#modalBodyContent').modal('show'); // Abre o modal
-      }
+
 
       if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
           const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
