@@ -26,7 +26,7 @@
                         <p>ID do Alerta: <span id="idAlerta"></span></p> <!-- Campo para exibir o ID do alerta -->
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-outline" data-dismiss="modal">Fechar</button>
                       </div>
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
