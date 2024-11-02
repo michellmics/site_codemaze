@@ -235,6 +235,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                   fetch('dashboard.php?alerta=' + alertaId)
                   .then(response => response.text())
                   .then(data => {
+                    window.location.reload();
                   })
                   .catch(error => console.error('Erro:', error));
                 }
