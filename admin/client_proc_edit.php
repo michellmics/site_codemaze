@@ -93,6 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     <script>
         function showModal(message) {
+            console.log(message); // Adiciona este log
           // Define o conteúdo do corpo do modal
           document.getElementById('modalBodyContent').innerText = message;
           // Abre o modal
