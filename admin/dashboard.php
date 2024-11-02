@@ -191,15 +191,20 @@
                   <span class="label label-warning"><?= $countAlertas ?></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header">Você têm <?= $countAlertas ?> alermes</li>
+                  <li class="header">Você têm <?= $countAlertas ?> notificações</li>
                   <li>
                     <!-- inner menu: contains the actual data -->
                     <ul class="menu">
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                        </a>
-                      </li>
+
+                      <?
+                        foreach($siteAdmin->ARRAY_ALERTA as $item)
+                        {
+                          $msg = $item["ALE_DCMSG"];
+                          echo "<li><a href='#'><i class='fa fa-users text-aqua'></i>$msg</a></li>";
+                        }
+                      
+
+                      ?>
                     </ul>
                   </li>
                   <li class="footer"><a href="#">Ver Todos</a></li>
