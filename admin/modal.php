@@ -33,3 +33,14 @@
                   </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
               </div><!-- /.example-modal -->
+
+              <script>
+                function reconAlarme(alertaId) {
+                  fetch('dashboard.php?alerta=' + alertaId)
+                  .then(response => response.text())
+                  .then(data => {
+                    window.location.reload();
+                  })
+                  .catch(error => console.error('Erro:', error));
+                }
+                </script>

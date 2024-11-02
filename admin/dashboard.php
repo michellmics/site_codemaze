@@ -258,16 +258,6 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                   $('#alertModal').modal('show');
                 }
 
-                function reconAlarme(alertaId) {
-                  // Envia uma solicitação GET para o PHP com o ID do alerta
-                  fetch('alarmeRecon.php?ALE_IDALERTA=' + alertaId)
-                    .then(response => response.text())
-                    .then(data => {
-                      alert(data); // Mostra a resposta do servidor
-                      window.location.reload(); // Recarrega a página após o reconhecimento
-                    })
-                    .catch(error => console.error('Erro:', error));
-                 }
               </script>          
 
 
