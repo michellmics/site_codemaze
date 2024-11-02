@@ -25,8 +25,8 @@
                         <p id="modalBodyContent">One fine body&hellip;</p> <!-- ID adicionado -->
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-outline">Save changes</button>
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Fechar</button>
+                        <button type="button" onclick='reconAlarme($idAlerta)' class="btn btn-outline">Reconhecer Alerta</button>
                       </div>
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
