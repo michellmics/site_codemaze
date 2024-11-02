@@ -83,6 +83,7 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
 
     $resultMail = $siteAdmin->sendEmailPHPMailer($email,$assunto,$body,$listaBoletos); 
+    $siteAdmin->InsertAlarme("Enviado o boleto para o cliente $nome.","Info");
     sleep(1);
 
     echo "$resultMail <br>";
