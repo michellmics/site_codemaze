@@ -157,20 +157,7 @@
                     }
                 });
             },
-            eventResize: function(event, delta, revertFunc) {
-   // Exibe o objeto que será enviado para o servidor
-    var eventData = {
-        id: event.id,
-        title: event.title,
-        start: event.start.format(),  // Formato da data de início
-        end: event.end.format(),      // Formato da data de término
-        allDay: event.allDay,
-        backgroundColor: event.backgroundColor,
-        borderColor: event.borderColor
-    };
-    
-    console.log("Dados enviados para o servidor (eventResize):", eventData);
-                
+            eventResize: function(event, delta, revertFunc) {               
                 $.ajax({
                     url: 'calendar_api.php',
                     type: 'POST',
@@ -179,7 +166,8 @@
                         title: event.title,
                         start: event.start.format(),
                         end: event.end.format(), // Enviando a data de término atualizada
-                        allDay: event.allDay,
+                       // allDay: event.allDay,
+                        allDay: false,
                         backgroundColor: event.backgroundColor,
                         borderColor: event.borderColor
                     }),
