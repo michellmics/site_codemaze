@@ -3,9 +3,9 @@ header('Content-Type: application/json');
 
 // Conexão com o banco de dados
 $host = 'localhost';
-$dbname = 'calendar_db';
-$username = 'root';
-$password = '';
+$dbname = 'codemaze_dbprod';
+$username = 'codemaze_dbprod';
+$password = 'dbprodcodemaze';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
