@@ -98,6 +98,7 @@
                             event.start = moment(event.start).format(); // Garantir que o formato esteja correto
                             if (event.end) {
                                 event.end = moment(event.end).format(); // Certificar que o formato de 'end' esteja correto
+                                console.log("Evento end. "+event.end);
                             }
                             return event;
                         });
