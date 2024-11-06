@@ -96,10 +96,10 @@
                         var events = data.map(function(event) {
                             // Garantir que o FullCalendar consiga interpretar as datas corretamente
                             //event.start = moment(event.start).format(); // Garantir que o formato esteja correto
-                            event.start = moment(event.start).format('YYYY-MM-DD HH:mm:ss');  // Remover fuso horário
+                             event.start = moment(event.start).format('YYYY-MM-DDTHH:mm:ss');
                             if (event.end) {
                                // event.end = moment(event.end).format(); // Certificar que o formato de 'end' esteja correto
-                                event.end = moment(event.end).format('YYYY-MM-DD HH:mm:ss');  // Remover fuso horário
+                                event.end = moment(event.end).format('YYYY-MM-DDTHH:mm:ss');  // Ajuste para o formato esperado
                                 console.log("Evento end. "+event.end);
                             }
                             return event;
