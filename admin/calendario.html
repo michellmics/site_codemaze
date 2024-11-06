@@ -96,6 +96,7 @@
                         var events = data.map(function(event) {
                             if (event.end) {
                                 event.end = moment(event.end).format(); // Garantir que a data de término está no formato correto
+                                console.log("Evento end:"+event.end);
                             }
                             event.start = moment(event.start).format(); // Garantir que a data de início está no formato correto
                             return event;
