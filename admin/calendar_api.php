@@ -51,18 +51,18 @@ if ($method == 'GET') {
     $allDay = isset($input['allDay']) ? $input['allDay'] : false;
     $backgroundColor = $input['backgroundColor'];
     $borderColor = $input['borderColor'];
-   // $url = isset($input['url']) ? $input['url'] : null;
+    $url = isset($input['url']) ? $input['url'] : null;
 
     // Log de depuração para verificar os dados recebidos
     file_put_contents('debug.log', "Recebido PUT: " . json_encode($input) . "\n", FILE_APPEND);
 
     // Atualizar evento no banco de dados
-    $stmt = $pdo->prepare("UPDATE events SET title=?, start=?, end=?, allDay=?, backgroundColor=?, borderColor=? WHERE id=?");
-    $stmt->execute([$title, $start, $end, $allDay, $backgroundColor, $borderColor, $id]);
+    $stmt = $pdo->prepare("UPDATE events SET title=?, start=?, end=?, allDay=?, backgroundColor=?, borderColor=?, url=? WHERE id=?");
+    $stmt->execute([$title, $start, $end, $allDay, $backgroundColor, $borderColor, $url, $id]);
 
     // Resposta de sucesso
     echo json_encode(['status' => 'success']);
-
+    
 } elseif ($method == 'DELETE') {
     // Deletar evento
     $id = $input['id'];
