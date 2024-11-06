@@ -63,118 +63,121 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
     <script src="plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
 
-    <script type="text/javascript">
-        $(function () {
-            function ini_events(ele) {
-                ele.each(function () {
-                    var eventObject = {
-                        title: $.trim($(this).text())
-                    };
-                    $(this).data('eventObject', eventObject);
-                    $(this).draggable({
-                        zIndex: 1070,
-                        revert: true,
-                        revertDuration: 0
-                    });
+<script type="text/javascript">
+    $(function () {
+        function ini_events(ele) {
+            ele.each(function () {
+                var eventObject = {
+                    title: $.trim($(this).text())
+                };
+                $(this).data('eventObject', eventObject);
+                $(this).draggable({
+                    zIndex: 1070,
+                    revert: true,
+                    revertDuration: 0
+                });
+            });
+        }
+        ini_events($('#external-events div.external-event'));
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            editable: true,
+            droppable: true,
+            events: function(start, end, timezone, callback) {
+                $.ajax({
+                    url: 'calendar_api.php',
+                    type: 'GET',
+                    success: function(data) {
+                        var events = data.map(function(event) {
+                            if (event.end) {
+                                event.end = moment(event.end).format(); // Garantir que a data de término está no formato correto
+                            }
+                            event.start = moment(event.start).format(); // Garantir que a data de início está no formato correto
+                            return event;
+                        });
+                        callback(events);
+                    }
+                });
+            },
+            drop: function(date, allDay) {
+                var originalEventObject = $(this).data('eventObject');
+                var copiedEventObject = {
+                    title: originalEventObject.title,
+                    start: date.format(),
+                    end: date.add(1, 'hour').format(),  // Definir o tempo de término como 1 hora após o início (ajustável)
+                    allDay: allDay,
+                    backgroundColor: $(this).css("background-color"),
+                    borderColor: $(this).css("border-color")
+                };
+
+                $.ajax({
+                    url: 'calendar_api.php',
+                    type: 'POST',
+                    data: JSON.stringify(copiedEventObject),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        copiedEventObject.id = response.id;
+                        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Erro ao adicionar evento.");
+                    }
+                });
+            },
+            eventDrop: function(event, delta, revertFunc) {
+                $.ajax({
+                    url: 'calendar_api.php',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        id: event.id,
+                        title: event.title,
+                        start: event.start.format(),
+                        end: event.end ? event.end.format() : null, // Enviando a data de término
+                        allDay: event.allDay,
+                        backgroundColor: event.backgroundColor,
+                        borderColor: event.borderColor
+                    }),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        console.log("Evento atualizado com sucesso.");
+                    },
+                    error: function(xhr, status, error) {
+                        revertFunc();
+                        alert("Erro ao atualizar o evento.");
+                    }
+                });
+            },
+            eventResize: function(event, delta, revertFunc) {
+                $.ajax({
+                    url: 'calendar_api.php',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        id: event.id,
+                        title: event.title,
+                        start: event.start.format(),
+                        end: event.end.format(), // Enviando a data de término atualizada
+                        allDay: event.allDay,
+                        backgroundColor: event.backgroundColor,
+                        borderColor: event.borderColor
+                    }),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        console.log("Evento atualizado com sucesso.");
+                    },
+                    error: function(xhr, status, error) {
+                        revertFunc();
+                        alert("Erro ao atualizar o evento.");
+                    }
                 });
             }
-            ini_events($('#external-events div.external-event'));
-
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                },
-                editable: true,
-                droppable: true,
-                events: function(start, end, timezone, callback) {
-                    $.ajax({
-                        url: 'calendar_api.php',
-                        type: 'GET',
-                        success: function(data) {
-                            var events = data.map(function(event) {
-                                if (event.end) {
-                                    event.end = moment(event.end); // Garantir que a data de término está no formato correto
-                                }
-                                return event;
-                            });
-                            callback(events);
-                        }
-                    });
-                },
-                drop: function(date, allDay) {
-                    var originalEventObject = $(this).data('eventObject');
-                    var copiedEventObject = {
-                        title: originalEventObject.title,
-                        start: date.format(),
-                        allDay: allDay,
-                        backgroundColor: $(this).css("background-color"),
-                        borderColor: $(this).css("border-color")
-                    };
-
-                    $.ajax({
-                        url: 'calendar_api.php',
-                        type: 'POST',
-                        data: JSON.stringify(copiedEventObject),
-                        contentType: 'application/json',
-                        success: function(response) {
-                            copiedEventObject.id = response.id;
-                            $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-                        },
-                        error: function(xhr, status, error) {
-                            alert("Erro ao adicionar evento.");
-                        }
-                    });
-                },
-                eventDrop: function(event, delta, revertFunc) {
-                    $.ajax({
-                        url: 'calendar_api.php',
-                        type: 'POST',
-                        data: JSON.stringify({
-                            id: event.id,
-                            title: event.title,
-                            start: event.start.format(),
-                            end: event.end ? event.end.format() : null,
-                            allDay: event.allDay,
-                            backgroundColor: event.backgroundColor,
-                            borderColor: event.borderColor
-                        }),
-                        contentType: 'application/json',
-                        success: function(response) {
-                            console.log("Evento atualizado com sucesso.");
-                        },
-                        error: function(xhr, status, error) {
-                            revertFunc();
-                            alert("Erro ao atualizar o evento.");
-                        }
-                    });
-                },
-                eventResize: function(event, delta, revertFunc) {
-                    $.ajax({
-                        url: 'calendar_api.php',
-                        type: 'POST',
-                        data: JSON.stringify({
-                            id: event.id,
-                            title: event.title,
-                            start: event.start.format(),
-                            end: event.end.format(), // Enviando a data de término atualizada
-                            allDay: event.allDay,
-                            backgroundColor: event.backgroundColor,
-                            borderColor: event.borderColor
-                        }),
-                        contentType: 'application/json',
-                        success: function(response) {
-                            console.log("Evento atualizado com sucesso.");
-                        },
-                        error: function(xhr, status, error) {
-                            revertFunc();
-                            alert("Erro ao atualizar o evento.");
-                        }
-                    });
-                }
-            });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
