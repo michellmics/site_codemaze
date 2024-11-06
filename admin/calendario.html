@@ -93,7 +93,13 @@
                         url: 'calendar_api.php',
                         type: 'GET',
                         success: function(data) {
-                            callback(data);
+                            var events = data.map(function(event) {
+                                if (event.end) {
+                                    event.end = moment(event.end); // Garantir que a data de término está no formato correto
+                                }
+                                return event;
+                            });
+                            callback(events);
                         }
                     });
                 },
@@ -152,14 +158,14 @@
                             id: event.id,
                             title: event.title,
                             start: event.start.format(),
-                            end: event.end.format(),  // Enviando a data de término atualizada
+                            end: event.end.format(), // Enviando a data de término atualizada
                             allDay: event.allDay,
                             backgroundColor: event.backgroundColor,
                             borderColor: event.borderColor
                         }),
                         contentType: 'application/json',
                         success: function(response) {
-                            console.log("Evento atualizado com sucesso. end "+event.end);
+                            console.log("Evento atualizado com sucesso.");
                         },
                         error: function(xhr, status, error) {
                             revertFunc();
