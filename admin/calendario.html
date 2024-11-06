@@ -94,11 +94,11 @@
                     type: 'GET',
                     success: function(data) {
                         var events = data.map(function(event) {
+                            // Garantir que o FullCalendar consiga interpretar as datas corretamente
+                            event.start = moment(event.start).format(); // Garantir que o formato esteja correto
                             if (event.end) {
-                                event.end = moment(event.end).format(); // Garantir que a data de término está no formato correto
-                                console.log("Evento end:"+event.end+event.title);
+                                event.end = moment(event.end).format(); // Certificar que o formato de 'end' esteja correto
                             }
-                            event.start = moment(event.start).format(); // Garantir que a data de início está no formato correto
                             return event;
                         });
                         callback(events);
@@ -110,7 +110,7 @@
                 var copiedEventObject = {
                     title: originalEventObject.title,
                     start: date.format(),
-                    end: date.add(1, 'hour').format(),  // Definir o tempo de término como 1 hora após o início (ajustável)
+                    end: date.add(1, 'hour').format(), // Estipula 1 hora após a data de início
                     allDay: allDay,
                     backgroundColor: $(this).css("background-color"),
                     borderColor: $(this).css("border-color")
@@ -138,7 +138,7 @@
                         id: event.id,
                         title: event.title,
                         start: event.start.format(),
-                        end: event.end ? event.end.format() : null, // Enviando a data de término
+                        end: event.end ? event.end.format() : null, // Garantir que a data de término seja enviada corretamente
                         allDay: event.allDay,
                         backgroundColor: event.backgroundColor,
                         borderColor: event.borderColor
