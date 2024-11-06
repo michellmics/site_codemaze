@@ -142,31 +142,41 @@
                     }
                 });
             },
-            drop: function(date, allDay) {
-                var originalEventObject = $(this).data('eventObject');
-                var copiedEventObject = {
-                    title: originalEventObject.title,
-                    start: date.format(),
-                    end: date.add(1, 'hour').format(), // Estipula 1 hora após a data de início
-                    allDay: allDay,
-                    backgroundColor: $(this).css("background-color"),
-                    borderColor: $(this).css("border-color")
-                };
+drop: function(date, allDay) {
+    var originalEventObject = $(this).data('eventObject');
+    var copiedEventObject = {
+        title: originalEventObject.title,
+        start: date.format(),
+        end: date.add(1, 'hour').format(), // Estipula 1 hora após a data de início
+        allDay: allDay,
+        backgroundColor: $(this).css("background-color"),
+        borderColor: $(this).css("border-color")
+    };
 
-                $.ajax({
-                    url: 'calendar_api.php',
-                    type: 'POST',
-                    data: JSON.stringify(copiedEventObject),
-                    contentType: 'application/json',
-                    success: function(response) {
-                        copiedEventObject.id = response.id;
-                        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-                    },
-                    error: function(xhr, status, error) {
-                        alert("Erro ao adicionar evento.");
-                    }
-                });
-            },
+    // Filtrando propriedades do evento para evitar dados circulares
+    var eventData = {
+        title: copiedEventObject.title,
+        start: copiedEventObject.start,
+        end: copiedEventObject.end,
+        allDay: copiedEventObject.allDay,
+        backgroundColor: copiedEventObject.backgroundColor,
+        borderColor: copiedEventObject.borderColor
+    };
+
+    $.ajax({
+        url: 'calendar_api.php',
+        type: 'POST',
+        data: JSON.stringify(eventData), // Passando apenas as propriedades relevantes
+        contentType: 'application/json',
+        success: function(response) {
+            copiedEventObject.id = response.id;
+            $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+        },
+        error: function(xhr, status, error) {
+            alert("Erro ao adicionar evento.");
+        }
+    });
+},
             eventDrop: function(event, delta, revertFunc) {
                 $.ajax({
                     url: 'calendar_api.php',
