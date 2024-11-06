@@ -23,6 +23,15 @@ if ($method == 'GET') {
     $stmt = $pdo->prepare("SELECT * FROM events");
     $stmt->execute();
     $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Converter as datas para o formato ISO8601 (que o FullCalendar entende)
+    foreach ($events as &$event) {
+        if ($event['end']) {
+            $event['end'] = date('c', strtotime($event['end'])); // Formato ISO8601
+        }
+        $event['start'] = date('c', strtotime($event['start'])); // Formato ISO8601
+    }
+
     echo json_encode($events);
 
 } elseif ($method == 'POST') {
@@ -58,5 +67,4 @@ if ($method == 'GET') {
     $stmt->execute([$title, $start, $end, $id]);
     echo json_encode(['status' => 'updated']);
 }
-
 ?>
