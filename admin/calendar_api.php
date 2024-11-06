@@ -47,7 +47,7 @@ if ($method == 'GET') {
     $id = $input['id'];
     $title = $input['title'];
     $start = $input['start'];
-    $end = isset($input['end']) ? $input['end'] : null;
+    $end = isset($input['end']) ? $input['end'] : $start; // Se não houver "end", usa o "start" como valor
     $allDay = isset($input['allDay']) ? $input['allDay'] : false;
     $backgroundColor = $input['backgroundColor'];
     $borderColor = $input['borderColor'];
@@ -55,6 +55,12 @@ if ($method == 'GET') {
 
     // Log de depuração para verificar os dados recebidos
     file_put_contents('debug.log', "Recebido PUT: " . json_encode($input) . "\n", FILE_APPEND);
+
+    // Verificar se "end" é válido
+    if (!$end) {
+        // Se "end" estiver vazio ou inválido, defina um valor padrão
+        $end = $start; // ou uma data de sua escolha
+    }
 
     // Atualizar evento no banco de dados
     $stmt = $pdo->prepare("UPDATE events SET title=?, start=?, end=?, allDay=?, backgroundColor=?, borderColor=?, url=? WHERE id=?");
