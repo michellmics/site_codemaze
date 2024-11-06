@@ -102,9 +102,9 @@
                                 event.end = moment(event.end).format('YYYY-MM-DDTHH:mm:ss');  // Ajuste para o formato esperado
                                 console.log("Evento end. "+event.end);
                             }
-                             console.log("Eventos formatados: ", events);
                             return event;
                         });
+                        console.log("Eventos formatados: ", events);
                         callback(events);
                     }
                 });
