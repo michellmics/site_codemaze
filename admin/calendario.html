@@ -84,7 +84,7 @@
             header: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'month,agendaWeek,agendaDay'
+                right: 'month'  // Removendo agendaWeek e agendaDay
             },
             editable: true,
             droppable: true,
@@ -95,16 +95,12 @@
                     success: function(data) {
                         var events = data.map(function(event) {
                             // Garantir que o FullCalendar consiga interpretar as datas corretamente
-                            //event.start = moment(event.start).format(); // Garantir que o formato esteja correto
-                             event.start = moment(event.start).format('YYYY-MM-DDTHH:mm:ss');
+                            event.start = moment(event.start).format('YYYY-MM-DDTHH:mm:ss');
                             if (event.end) {
-                               // event.end = moment(event.end).format(); // Certificar que o formato de 'end' esteja correto
-                                event.end = moment(event.end).format('YYYY-MM-DDTHH:mm:ss');  // Ajuste para o formato esperado
-                                console.log("Evento end. "+event.end);
+                                event.end = moment(event.end).format('YYYY-MM-DDTHH:mm:ss');
                             }
                             return event;
                         });
-                        console.log("Evento allDay: " + event.allDay);
                         callback(events);
                     }
                 });
@@ -166,14 +162,13 @@
                         title: event.title,
                         start: event.start.format(),
                         end: event.end.format(), // Enviando a data de término atualizada
-                       // allDay: event.allDay,
                         allDay: false,
                         backgroundColor: event.backgroundColor,
                         borderColor: event.borderColor
                     }),
                     contentType: 'application/json',
                     success: function(response) {
-                        console.log("Evento atualizado com sucesso. "+event.end.format());
+                        console.log("Evento atualizado com sucesso.");
                     },
                     error: function(xhr, status, error) {
                         revertFunc();
