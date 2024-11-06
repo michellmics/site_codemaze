@@ -29,31 +29,35 @@ if ($method == 'GET') {
     // Criar novo evento
     $title = $input['title'];
     $start = $input['start'];
-    $end = $input['end'];
+    $end = isset($input['end']) ? $input['end'] : null; // Usando um valor padrão caso 'end' não seja enviado
     $allDay = isset($input['allDay']) ? $input['allDay'] : false;
     $backgroundColor = $input['backgroundColor'];
     $borderColor = $input['borderColor'];
     $url = isset($input['url']) ? $input['url'] : null;
 
+    // Inserir o evento no banco de dados
     $stmt = $pdo->prepare("INSERT INTO events (title, start, end, allDay, backgroundColor, borderColor, url) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([$title, $start, $end, $allDay, $backgroundColor, $borderColor, $url]);
 
+    // Retornar o ID do evento recém-criado
     echo json_encode(['id' => $pdo->lastInsertId()]);
 
 } elseif ($method == 'PUT') {
-    // Atualizar evento
+    // Atualizar evento existente
     $id = $input['id'];
     $title = $input['title'];
     $start = $input['start'];
-    $end = $input['end'];
+    $end = isset($input['end']) ? $input['end'] : null;
     $allDay = isset($input['allDay']) ? $input['allDay'] : false;
     $backgroundColor = $input['backgroundColor'];
     $borderColor = $input['borderColor'];
     $url = isset($input['url']) ? $input['url'] : null;
 
+    // Atualizar evento no banco de dados
     $stmt = $pdo->prepare("UPDATE events SET title=?, start=?, end=?, allDay=?, backgroundColor=?, borderColor=?, url=? WHERE id=?");
     $stmt->execute([$title, $start, $end, $allDay, $backgroundColor, $borderColor, $url, $id]);
 
+    // Resposta de sucesso
     echo json_encode(['status' => 'success']);
 
 } elseif ($method == 'DELETE') {
@@ -63,7 +67,9 @@ if ($method == 'GET') {
     $stmt = $pdo->prepare("DELETE FROM events WHERE id=?");
     $stmt->execute([$id]);
 
+    // Resposta de sucesso
     echo json_encode(['status' => 'deleted']);
+
 } else {
     echo json_encode(['error' => 'Método HTTP não suportado']);
 }
