@@ -163,8 +163,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           // Calcula a diferença em dias
                           $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
-                          if ($diferenca <= -1 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "VENCIDO";$classIcon = "label label-danger";}  
-                          if ($diferenca > 0 && $diferenca <= 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "A VENCER";$classIcon = "label label-warning";}  
+                          if ($diferenca < 0 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "VENCIDO";$classIcon = "label label-danger";}  
+                          if ($diferenca >= 0 && $diferenca <= 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "A VENCER";$classIcon = "label label-warning";}  
                           if ($diferenca > 10 && $liquidFin['LFI_STPAGAMENTO'] != "LIQUIDADO"){$msg = "EM ABERTO";$classIcon = "label label-primary";}  
                           if ($liquidFin['LFI_STPAGAMENTO'] == "LIQUIDADO"){$msg = "LIQUIDADO";$classIcon = "label label-success";}   
 
