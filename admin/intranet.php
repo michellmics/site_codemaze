@@ -148,7 +148,7 @@
         </a>
         <a href="#" onclick="loadIframe('register.php');">
             <i class="fas fa-comments"></i>
-            Cadastro User
+            Novo usuário
         </a>
         <a href="#" onclick="loadIframe('logoff.php');">
             <i class="fas fa-question-circle"></i>
