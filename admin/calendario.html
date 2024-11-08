@@ -30,7 +30,6 @@
                                 <h4 class="box-title">Draggable Events</h4>
                             </div>
                             <div class="box-body">
-                                <!-- the events -->
                                 <div id='external-events'>
                                     <div class='external-event bg-green'>Lunch</div>
                                     <div class='external-event bg-yellow'>Go home</div>
@@ -46,36 +45,6 @@
                                 </div>
                             </div><!-- /.box-body -->
                         </div><!-- /. box -->
-                        <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Create Event</h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
-                                    <ul class="fc-color-picker" id="color-chooser">
-                                        <li><a class="text-aqua" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-blue" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-light-blue" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-teal" href="#"><i class="fa fa-square"></i></a></li>																						
-                                        <li><a class="text-yellow" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-orange" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-green" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-lime" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-red" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-purple" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-fuchsia" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-muted" href="#"><i class="fa fa-square"></i></a></li>
-                                        <li><a class="text-navy" href="#"><i class="fa fa-square"></i></a></li>
-                                    </ul>
-                                </div><!-- /btn-group -->
-                                <div class="input-group">
-                                    <input id="new-event" type="text" class="form-control" placeholder="Event Title">
-                                    <div class="input-group-btn">
-                                        <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
-                                    </div><!-- /btn-group -->
-                                </div><!-- /input-group -->
-                            </div>
-                        </div>
                     </div><!-- /.col -->
 
                     <div class="col-md-9">
@@ -121,7 +90,7 @@
             header: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'month'  // Removendo agendaWeek e agendaDay
+                right: 'month'
             },
             editable: true,
             droppable: true,
@@ -131,7 +100,6 @@
                     type: 'GET',
                     success: function(data) {
                         var events = data.map(function(event) {
-                            // Garantir que o FullCalendar consiga interpretar as datas corretamente
                             event.start = moment(event.start).format('YYYY-MM-DDTHH:mm:ss');
                             if (event.end) {
                                 event.end = moment(event.end).format('YYYY-MM-DDTHH:mm:ss');
@@ -142,84 +110,57 @@
                     }
                 });
             },
-drop: function(date, allDay) {
-    var originalEventObject = $(this).data('eventObject');
-    var copiedEventObject = {
-        title: originalEventObject.title,
-        start: date.format(),
-        end: date.add(1, 'hour').format(), // Estipula 1 hora após a data de início
-        allDay: allDay,
-        backgroundColor: $(this).css("background-color"),
-        borderColor: $(this).css("border-color")
-    };
+            drop: function(date, allDay) {
+                var originalEventObject = $(this).data('eventObject');
+                var copiedEventObject = {
+                    title: originalEventObject.title,
+                    start: date.format(),
+                    end: date.add(1, 'hour').format(),
+                    allDay: allDay,
+                    backgroundColor: $(this).css("background-color"),
+                    borderColor: $(this).css("border-color")
+                };
 
-    // Filtrando propriedades do evento para evitar dados circulares
-    var eventData = {
-        title: copiedEventObject.title,
-        start: copiedEventObject.start,
-        end: copiedEventObject.end,
-        allDay: copiedEventObject.allDay,
-        backgroundColor: copiedEventObject.backgroundColor,
-        borderColor: copiedEventObject.borderColor
-    };
+                var eventData = {
+                    title: copiedEventObject.title,
+                    start: copiedEventObject.start,
+                    end: copiedEventObject.end,
+                    allDay: copiedEventObject.allDay,
+                    backgroundColor: copiedEventObject.backgroundColor,
+                    borderColor: copiedEventObject.borderColor
+                };
 
-    $.ajax({
-        url: 'calendar_api.php',
-        type: 'POST',
-        data: JSON.stringify(eventData), // Passando apenas as propriedades relevantes
-        contentType: 'application/json',
-        success: function(response) {
-            copiedEventObject.id = response.id;
-            $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-        },
-        error: function(xhr, status, error) {
-            alert("Erro ao adicionar evento.");
-        }
-    });
-},
-            eventDrop: function(event, delta, revertFunc) {
                 $.ajax({
                     url: 'calendar_api.php',
                     type: 'POST',
-                    data: JSON.stringify({
-                        id: event.id,
-                        title: event.title,
-                        start: event.start.format(),
-                        end: event.end ? event.end.format() : null, // Garantir que a data de término seja enviada corretamente
-                        allDay: event.allDay,
-                        backgroundColor: event.backgroundColor,
-                        borderColor: event.borderColor
-                    }),
+                    data: JSON.stringify(eventData),
                     contentType: 'application/json',
                     success: function(response) {
-                        console.log("Evento atualizado com sucesso.");
+                        copiedEventObject.id = response.id;
+                        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
                     },
                     error: function(xhr, status, error) {
-                        revertFunc();
-                        alert("Erro ao atualizar o evento.");
+                        alert("Erro ao adicionar evento.");
                     }
                 });
             },
-            eventResize: function(event, delta, revertFunc) {               
-                $.ajax({
-                    url: 'calendar_api.php',
-                    type: 'POST',
-                    data: JSON.stringify({
-                        id: event.id,
-                        title: event.title,
-                        start: event.start.format(),
-                        end: event.end.format(), // Enviando a data de término atualizada
-                        allDay: false,
-                        backgroundColor: event.backgroundColor,
-                        borderColor: event.borderColor
-                    }),
-                    contentType: 'application/json',
-                    success: function(response) {
-                        console.log("Evento atualizado com sucesso.");
-                    },
-                    error: function(xhr, status, error) {
-                        revertFunc();
-                        alert("Erro ao atualizar o evento.");
+            eventRender: function(event, element) {
+                element.append('<span class="delete-event" style="color: red; cursor: pointer;">&times;</span>');
+                element.find('.delete-event').click(function() {
+                    if (confirm('Deseja realmente excluir este evento?')) {
+                        $.ajax({
+                            url: 'calendar_api.php',
+                            type: 'POST',
+                            data: JSON.stringify({ id: event.id, action: 'delete' }),
+                            contentType: 'application/json',
+                            success: function(response) {
+                                $('#calendar').fullCalendar('removeEvents', event.id);
+                                alert("Evento excluído com sucesso!");
+                            },
+                            error: function(xhr, status, error) {
+                                alert("Erro ao excluir o evento.");
+                            }
+                        });
                     }
                 });
             }
@@ -234,16 +175,6 @@ drop: function(date, allDay) {
                 ini_events(newEvent);
                 $('#new-event').val('');
             }
-        });
-
-        // Alterar a cor do evento
-        $('#color-chooser li a').click(function(e) {
-            e.preventDefault();
-            var color = $(this).css("color");
-            $('#add-new-event').css({
-                "background-color": color,
-                "border-color": color
-            });
         });
     });
 </script>
