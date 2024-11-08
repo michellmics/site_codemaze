@@ -120,7 +120,7 @@ $despesas = 125; //provisorio
               <!-- small box -->
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3>
+                  <h3 style="font-size: 25px">
                   <sup style="font-size: 14px">R$</sup><? echo $despesas; ?>
                   </h3>
                   <p>
@@ -139,7 +139,7 @@ $despesas = 125; //provisorio
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>
+                  <h3 style="font-size: 25px">
                   <sup style="font-size: 14px">R$</sup><? echo $liquidoMêsCorrente; ?>
                   </h3>
                   <p>
@@ -158,7 +158,7 @@ $despesas = 125; //provisorio
               <!-- small box -->
               <div class="small-box bg-purple">
                 <div class="inner">
-                  <h3>
+                  <h3 style="font-size: 25px">
                   <sup style="font-size: 14px">R$</sup><? echo round($countLiquidoAnoCorrente["0"]["TOTAL"],0); ?>  
                   </h3>
                   <p>
