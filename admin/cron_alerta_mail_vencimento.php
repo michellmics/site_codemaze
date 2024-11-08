@@ -33,7 +33,7 @@ foreach($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA as $array)
         // Calcula a diferença em dias
         $diferenca = (int)$now->diff($vencimento)->format('%r%a');
 
-        if ($diferenca < -5 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
+        if ($diferenca < 0 && $array['LFI_STPAGAMENTO'] != "LIQUIDADO")
         {
             $qtdeCobrancas++;
 
