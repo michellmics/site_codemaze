@@ -150,7 +150,7 @@
             <i class="fas fa-user-plus"></i>
             Novo usuário
         </a>
-        <a href="#" onclick="loadIframe('logoff.php');">
+        <a href="logoff.php">
             <i class="fas fa-sign-out-alt"></i>
             Logoff
         </a>
