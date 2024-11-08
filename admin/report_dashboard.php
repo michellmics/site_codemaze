@@ -101,7 +101,7 @@ $despesas = 125; //provisorio
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3>
+                  <h3 style="font-size: 14px">
                   <sup style="font-size: 14px">R$</sup><? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>
                   </h3>
                   <p>
