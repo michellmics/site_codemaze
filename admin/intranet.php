@@ -122,6 +122,10 @@
 
     <!-- Barra superior com 8 ícones e textos -->
     <div class="navbar">
+        <a href="#" onclick="loadIframe('intro.html');">
+            <i class=" fa fa-home"></i>
+            Home
+        </a>
         <a href="#" onclick="loadIframe('dashboard.php');">
             <i class="fa fa-low-vision"></i>
             SGCS
