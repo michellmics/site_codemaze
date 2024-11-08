@@ -179,7 +179,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                           
                           $idOrdemPagamento = htmlspecialchars($liquidFin['LFI_IDOP']);
                           $linkBoleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'];
-                          $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>Gerar Boleto</a>" : "<a href='$linkBoleto' target='_blank'><i class='fas fa-barcode'></i></a>";
+                          $boleto = $liquidFin['LFI_PAGSEGURO_LINK_BOLETO'] == NULL ? "<a href='https://www.codemaze.com.br/site/admin/boleto_proc.php?LFI_IDOP=$idOrdemPagamento' target='_self'>G. Boleto</a>" : "<a href='$linkBoleto' target='_blank'><i class='fas fa-barcode fa-3x'></i></a>";
 
                           if($liquidFin['LFI_DTPAGAMENTO'] != "" && $liquidFin['LFI_DTPAGAMENTO'] != "0000-00-00")
                           {
@@ -198,7 +198,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA_JUROS']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $dataFormatada ?></center></td>
-                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $liquidFin['LFI_DTPAGAMENTO'] ?></center></td> 
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="15" maxlength="15" class="form-control" placeholder="DD/MM/AAAA" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
