@@ -139,7 +139,7 @@
             WHM
         </a>
         <a href="https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank">
-            <i class="fas fa-blog"></i>
+            <i class="fas fa-chart-line"></i>
             Google Analytics
         </a>
         <a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1" target="_blank">
@@ -147,11 +147,11 @@
             Google Ads
         </a>
         <a href="#" onclick="loadIframe('register.php');">
-            <i class="fas fa-comments"></i>
+            <i class="fas fa-user-plus"></i>
             Novo usuário
         </a>
         <a href="#" onclick="loadIframe('logoff.php');">
-            <i class="fas fa-question-circle"></i>
+            <i class="fas fa-sign-out-alt"></i>
             Logoff
         </a>
     </div>
