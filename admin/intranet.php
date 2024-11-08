@@ -126,23 +126,23 @@
             <i class="fas fa-home"></i>
             SGCS
         </a>
-        <a href="#" onclick="loadIframe('https://accounts.mlabs.io/accounts/sign_in');">
+        <a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank">
             <i class="fas fa-info-circle"></i>
             mLabs
         </a>
-        <a href="#" onclick="loadIframe('https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=');">
+        <a href="https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=" target="_blank">
             <i class="fas fa-cogs"></i>
             cPanel
         </a>
-        <a href="#" onclick="loadIframe('https://conta.hostmidia.com.br/');">
+        <a href="https://conta.hostmidia.com.br/" target="_blank">
             <i class="fas fa-phone-alt"></i>
             WHM
         </a>
-        <a href="#" onclick="loadIframe('https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui');">
+        <a href="https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank">
             <i class="fas fa-blog"></i>
             Google Analytics
         </a>
-        <a href="#" onclick="loadIframe('https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1');">
+        <a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1" target="_blank">
             <i class="fas fa-briefcase"></i>
             Google Ads
         </a>
