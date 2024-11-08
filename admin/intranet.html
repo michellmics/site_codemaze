@@ -1,117 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Barra Superior</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Intranet Codemaze</title>
     <style>
-        /* Estilo geral da página */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
 
-        /* Estilo da barra superior */
-        .navbar {
+        /* Barra superior */
+        .top-bar {
             background-color: #333;
+            color: white;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
-        /* Estilo dos itens da barra (ícones e textos) */
-        .navbar a {
+        /* Título à esquerda */
+        .top-bar .title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Links na barra superior */
+        .top-bar .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar .menu li {
+            margin: 0 10px;
+        }
+
+        .top-bar .menu a {
             color: white;
             text-decoration: none;
+            font-size: 14px;
             display: flex;
             align-items: center;
-            font-size: 13px; /* Texto ainda mais suave */
-            margin: 0 15px; /* Espaçamento mais suave */
-            transition: all 0.3s ease-in-out; /* Transição suave */
+            transition: color 0.3s;
         }
 
-        /* Cor dos ícones */
-        .navbar a i {
-            color: #e74c3c; /* Vermelho suave */
-            font-size: 18px; /* Ícones suaves */
-            margin-right: 6px; /* Menos espaço entre ícone e texto */
-            transition: all 0.3s ease-in-out; /* Transição suave para hover */
+        .top-bar .menu a:hover {
+            color: #e60000; /* Vermelho ao passar o mouse */
         }
 
-        /* Efeito hover nos links */
-        .navbar a:hover {
-            opacity: 0.8;
-            transform: scale(1.1); /* Leve aumento de tamanho */
+        /* Ícones */
+        .top-bar .menu i {
+            margin-right: 5px;
+            font-size: 18px; /* Ícones menores */
         }
 
-        .navbar a:hover i {
-            color: #c0392b; /* Vermelho mais intenso no hover */
+        /* Corpo da página para não sobrepor com a barra fixa */
+        .content {
+            margin-top: 60px; /* Dá espaço para a barra fixa */
+            padding: 20px;
         }
 
-        /* Estilo dos iframes */
         iframe {
             width: 100%;
             height: 500px;
             border: none;
-            margin-top: 20px;
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
     </style>
 </head>
 <body>
 
-    <!-- Barra superior com 8 ícones e textos -->
-    <div class="navbar">
-        <a href="#" onclick="loadIframe('https://www.example.com');">
-            <i class="fas fa-home"></i>
-            Home
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/about');">
-            <i class="fas fa-info-circle"></i>
-            About
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/services');">
-            <i class="fas fa-cogs"></i>
-            Services
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/contact');">
-            <i class="fas fa-phone-alt"></i>
-            Contact
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/blog');">
-            <i class="fas fa-blog"></i>
-            Blog
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/portfolio');">
-            <i class="fas fa-briefcase"></i>
-            Portfolio
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/testimonials');">
-            <i class="fas fa-comments"></i>
-            Testimonials
-        </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/faqs');">
-            <i class="fas fa-question-circle"></i>
-            FAQs
-        </a>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <!-- Título da barra -->
+        <div class="title">Intranet Codemaze</div>
+
+        <!-- Menu de ícones e links -->
+        <ul class="menu">
+            <li><a href="#" onclick="loadIframe('home.html')"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" onclick="loadIframe('about.html')"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#" onclick="loadIframe('services.html')"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="#" onclick="loadIframe('contact.html')"><i class="fas fa-phone-alt"></i> Contact</a></li>
+        </ul>
     </div>
 
-    <!-- Área do iframe onde o conteúdo será carregado -->
-    <div id="iframe-container">
-        <iframe id="iframe" src="https://www.example.com"></iframe>
+    <!-- Conteúdo da página -->
+    <div class="content">
+        <iframe id="iframe" src=""></iframe>
     </div>
 
+    <!-- Script para carregar os iframes -->
     <script>
-        function loadIframe(url) {
-            document.getElementById('iframe').src = url;
+        function loadIframe(page) {
+            document.getElementById('iframe').src = page;
         }
     </script>
+    
 </body>
 </html>
