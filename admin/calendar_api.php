@@ -11,7 +11,7 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die(json_encode(["error" => "Erro na conexão: " . $e->getMessage()])); 
+    die(json_encode(["error" => "Erro na conexão: " . $e->getMessage()]));
 }
 
 // Funções CRUD
@@ -71,11 +71,22 @@ if ($method == 'GET') {
     // Deletar evento
     if (isset($input['id'])) {
         $id = $input['id'];
-        $stmt = $pdo->prepare("DELETE FROM events WHERE id = ?");
+        
+        // Verificar se o evento existe antes de tentar deletar
+        $stmt = $pdo->prepare("SELECT * FROM events WHERE id = ?");
         $stmt->execute([$id]);
+        $event = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($event) {
+            // Se o evento existir, deleta completamente
+            $stmt = $pdo->prepare("DELETE FROM events WHERE id = ?");
+            $stmt->execute([$id]);
 
-        if ($stmt->rowCount() > 0) {
-            echo json_encode(['status' => 'success', 'message' => 'Evento excluído com sucesso']);
+            if ($stmt->rowCount() > 0) {
+                echo json_encode(['status' => 'success', 'message' => 'Evento excluído com sucesso']);
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'Erro ao excluir evento']);
+            }
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Evento não encontrado']);
         }
