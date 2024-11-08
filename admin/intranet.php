@@ -165,7 +165,7 @@
 
     <!-- Área do iframe onde o conteúdo será carregado -->
     <div id="iframe-container">
-        <iframe id="iframe" ></iframe>
+        <iframe id="iframe" src="intro.html"></iframe>
     </div>
 
     <script>
