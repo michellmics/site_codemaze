@@ -63,7 +63,7 @@ $despesas = 125; //provisorio
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="skin-blue">
+  <body >
     <div class="wrapper">
 
       <!-- Right side column. Contains the navbar and content of the page -->
