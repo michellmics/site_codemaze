@@ -202,14 +202,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td>
 			                  <input  type="text" style="width: 52%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="15" maxlength="15" class="form-control" placeholder="DD/MM/AAAA" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
-                        <td style="text-transform: uppercase; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
+                        <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
                                id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
                                onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                                <span class="label label-info">LIQUIDAR</span>
                             </a>
                         </td>
-                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
+                        <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">DEIXAR ABERTO</span></a></td>           
                           <? $linha++; ?>
                         </tr>
                     <?php endforeach;?>   
