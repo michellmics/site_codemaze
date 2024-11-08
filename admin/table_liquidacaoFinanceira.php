@@ -150,7 +150,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                       <th><center>VENCIMENTO</center></th>
                       <th><center>BOLETO</center></th>
                       <th><center>PAGAMENTO</center></th>
-                      <th></th>                    
+                      <th></th>     
+		      <th>AÇÃO</th> 
                     </tr>
                     <tr>
                     <? $linha = 1; ?>
@@ -209,7 +210,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                                <span class="label label-info">LIQUIDAR</span>
                             </a>
                         </td>
-                        <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">PENDENTE</span></a></td>           
+                        <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; vertical-align: middle; <? echo  $inputDeixarAbertoStatus ?>"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=<? echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>&acao=ABERTO" target="_self" onclick="return confirmacao();"><span class="label label-default">REPROGRAMAR</span></a></td>           
                           <? $linha++; ?>
                         </tr>
                     <?php endforeach;?>   
