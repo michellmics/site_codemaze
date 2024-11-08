@@ -48,7 +48,7 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            font-size: 13px; /* Texto ainda mais suave */
+            font-size: 11px; /* Texto ainda mais suave */
             margin: 0 15px; /* Espaçamento mais suave */
             transition: all 0.3s ease-in-out; /* Transição suave */
         }
@@ -56,7 +56,7 @@
         /* Cor dos ícones */
         .navbar a i {
             color: #d35400; /* Laranja mais escuro */
-            font-size: 20px; /* Ícones com tamanho adequado */
+            font-size: 18px; /* Ícones com tamanho adequado */
             margin-right: 6px; /* Menos espaço entre ícone e texto */
             transition: all 0.3s ease-in-out; /* Transição suave para hover */
         }
