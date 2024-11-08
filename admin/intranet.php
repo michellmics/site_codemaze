@@ -126,33 +126,33 @@
             <i class="fas fa-home"></i>
             SGCS
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/about');">
+        <a href="#" onclick="loadIframe('https://accounts.mlabs.io/accounts/sign_in');">
             <i class="fas fa-info-circle"></i>
-            About
+            mLabs
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/services');">
+        <a href="#" onclick="loadIframe('https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=');">
             <i class="fas fa-cogs"></i>
-            Services
+            cPanel
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/contact');">
+        <a href="#" onclick="loadIframe('https://conta.hostmidia.com.br/');">
             <i class="fas fa-phone-alt"></i>
-            Contact
+            WHM
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/blog');">
+        <a href="#" onclick="loadIframe('https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui');">
             <i class="fas fa-blog"></i>
-            Blog
+            Google Analytics
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/portfolio');">
+        <a href="#" onclick="loadIframe('https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1');">
             <i class="fas fa-briefcase"></i>
-            Portfolio
+            Google Ads
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/testimonials');">
+        <a href="#" onclick="loadIframe('register.php');">
             <i class="fas fa-comments"></i>
-            Testimonials
+            Cadastro User
         </a>
-        <a href="#" onclick="loadIframe('https://www.example.com/faqs');">
+        <a href="#" onclick="loadIframe('logoff.php');">
             <i class="fas fa-question-circle"></i>
-            FAQs
+            Logoff
         </a>
     </div>
 
