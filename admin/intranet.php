@@ -127,7 +127,7 @@
             SGCS
         </a>
         <a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank">
-            <i class="fa fa-instagram"></i>
+            <i class="fas fa-maxcdn"></i>
             mLabs
         </a>
         <a href="https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=" target="_blank">
