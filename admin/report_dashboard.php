@@ -32,28 +32,8 @@ $despesas = 125; //provisorio
   $countProdutosDesenSite = $dashboardValues->countProdutosDesenSite();
   $countLiquidoAnoCorrente = $dashboardValues->countLiquidoAnoCorrente();
 
-
-  
-
-  
-
-
-  
-
- 
   $liquidoMêsCorrente = $countReceitaMesCorrente["0"]["TOTAL"] - $despesas;
-
-
-
-
-
-
-
-
-
  // <? echo $countContratosLiquidados["0"]["TOTAL"]; 
-
-
 
 ?>
 <!DOCTYPE html>
@@ -83,9 +63,6 @@ $despesas = 125; //provisorio
   </head>
   <body class="skin-blue">
     <div class="wrapper">
-      
-
-
 
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
