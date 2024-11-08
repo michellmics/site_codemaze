@@ -102,7 +102,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup><? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>
+                  <sup style="font-size: 14px">R$</sup><? echo $countReceitaMesCorrente["0"]["TOTAL"]; ?>
                   </h3>
                   <p>
                   Receitas Mês <? echo $mêsCorrente; ?>
@@ -121,7 +121,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-red">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup><? echo $despesas; ?>
+                  <sup style="font-size: 14px">R$</sup><? echo $despesas; ?>
                   </h3>
                   <p>
                   Despesas Mês <? echo $mêsCorrente; ?>
@@ -140,7 +140,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-green">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 20px">R$</sup><? echo $liquidoMêsCorrente; ?>
+                  <sup style="font-size: 14px">R$</sup><? echo $liquidoMêsCorrente; ?>
                   </h3>
                   <p>
                   Liquido Mês <? echo $mêsCorrente; ?>
@@ -159,7 +159,7 @@ $despesas = 125; //provisorio
               <div class="small-box bg-purple">
                 <div class="inner">
                   <h3>
-                  <sup style="font-size: 15px">R$</sup><? echo round($countLiquidoAnoCorrente["0"]["TOTAL"],0); ?>  
+                  <sup style="font-size: 14px">R$</sup><? echo round($countLiquidoAnoCorrente["0"]["TOTAL"],0); ?>  
                   </h3>
                   <p>
                   Liquido Acum. <? echo $anoCorrente; ?>
