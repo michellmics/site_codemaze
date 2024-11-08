@@ -73,6 +73,37 @@
         body {
             padding-top: 50px; /* Espaço para a barra não cobrir conteúdo */
         }
+
+        /* Estilo da barra de navegação vertical */
+        .vertical-nav {
+            width: 200px; /* Largura da barra lateral */
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #333;
+            display: block; /* Mostrar por padrão */
+            padding-top: 20px;
+            padding-left: 10px;
+            z-index: 500; /* Garante que a barra lateral fique atrás da barra superior */
+        }
+
+        .vertical-nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .vertical-nav a:hover {
+            color: #e67e22; /* Laranja quando o mouse passa sobre */
+        }
+
+        /* CSS para ocultar a barra lateral */
+        .hide-vertical-nav {
+            display: none; /* Isso oculta a barra lateral */
+        }
     </style>
 </head>
 <body>
@@ -113,6 +144,13 @@
         </a>
     </div>
 
+    <!-- Barra de navegação vertical (escondida por padrão) -->
+    <div class="vertical-nav hide-vertical-nav" id="vertical-nav">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+
     <!-- Área do iframe onde o conteúdo será carregado -->
     <div id="iframe-container">
         <iframe id="iframe" src="https://www.example.com"></iframe>
@@ -121,6 +159,12 @@
     <script>
         function loadIframe(url) {
             document.getElementById('iframe').src = url;
+        }
+
+        // Função para mostrar ou ocultar a barra lateral
+        function toggleVerticalNav() {
+            var nav = document.getElementById('vertical-nav');
+            nav.classList.toggle('hide-vertical-nav');
         }
     </script>
 </body>
