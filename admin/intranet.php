@@ -123,7 +123,7 @@
     <!-- Barra superior com 8 ícones e textos -->
     <div class="navbar">
         <a href="#" onclick="loadIframe('dashboard.php');">
-            <i class="fas fa-home"></i>
+            <i class="fa fa-low-vision"></i>
             SGCS
         </a>
         <a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank">
