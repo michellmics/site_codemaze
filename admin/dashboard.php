@@ -274,22 +274,8 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               <ul class="treeview-menu">
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Configurações</a></li>
                 <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li>
-                <li><a href="#" onclick="loadInIframe('register.php')"><i class="fa fa-circle-o"></i> Cadastro de Usuários ADM</a></li>
-                <li><a href="https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank"><i class="fa fa-circle-o"></i> Google Analytics</a></li>
-                <li><a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1" target="_blank"><i class="fa fa-circle-o"></i> Google Ads</a></li>
               </ul> 
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Links</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank"><i class="fa fa-circle-o"></i> mLabs Codemaze</a></li>
-                <li><a href="https://www.codemaze.com.br/cpanel" target="_blank"><i class="fa fa-circle-o"></i> CPanel</a></li>
-                <li><a href="https://conta.hostmidia.com.br/hospedagem/acessar-cpanel/55618/whm/" target="_blank"><i class="fa fa-circle-o"></i> WHM</a></li>
-              </ul> 
-            </li>            
+            </li>        
 
             <li class="treeview">
               <a href="#">
