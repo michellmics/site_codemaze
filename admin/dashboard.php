@@ -263,7 +263,6 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               </a>
               <ul class="treeview-menu">
                 <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Desempenho Geral</a></li>
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> xxxxxx</a></li>
               </ul> 
             </li>
             <li class="treeview">
