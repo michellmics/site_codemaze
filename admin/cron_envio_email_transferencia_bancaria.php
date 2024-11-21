@@ -60,7 +60,8 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
         $listaDebitos[$aux] = array(
             "valor" => $boletos["LFI_DCVALOR_PARCELA"], 
             "contrato" => $boletos["GEC_IDGESTAO_CONTRATO"], 
-            "servico" => $boletos["PRS_NMNOME"]
+            "servico" => $boletos["PRS_NMNOME"],
+            "vencimento" => $boletos["LFI_DTVENCIMENTO"]
         );
         //$updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
         //echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
@@ -72,7 +73,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
 
     foreach($listaDebitos as $itens)
     {
-        $mensagemListaDebitos = $mensagemListaDebitos.$itens["contrato"]." - ".ucfirst(strtolower($itens["servico"])).": Valor: R$".$itens["valor"]."<br>";
+        $mensagemListaDebitos = $mensagemListaDebitos.$itens["contrato"]." - ".$itens["vencimento"]." - ".ucfirst(strtolower($itens["servico"])).": Valor: R$".$itens["valor"]."<br>";
     }
 
 
