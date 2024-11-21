@@ -68,11 +68,16 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
         $aux++;
     }
 
-
-
-
     $totalValores = array_sum(array_column($listaDebitos, 'valor'));
 
+    foreach($totalValores as $itens)
+    {
+        $mensagemListaDebitos = $itens["contrato"]." : ".$itens["servico"].": Valor: R$".$itens["servico"]."<br>";
+    }
+
+
+    echo $mensagemListaDebitos;
+    die();
     echo "<pre>";
 print_r($totalValores);
 echo "</pre>";
@@ -86,8 +91,12 @@ die();
     $email = $boletos["GEC_DCEMAILCOBRANCA"];
     $body = " Olá <b>$nome</b>, bom dia! <br><br>
                     Gostaríamos de lembrar que sua(s) fatura(s) vencerá(ão) nos próximos dias.<br>
-                    Por favor, confira os boletos anexados referentes ao próximo vencimento.<br><br>
+                    Por favor, confira abaixo os débitos referentes ao próximo vencimento.<br><br>
                     
+
+
+
+
                     Estamos à disposição para ajudá-lo(a)!<br>
                     Atenciosamente,<br><br>
 
