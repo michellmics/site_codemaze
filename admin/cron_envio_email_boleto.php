@@ -65,8 +65,6 @@ foreach($LISTA_EMAIL_BOLETOS as $itens)
         $aux++;
     }
 
-    die(); 
-    
     $nome = $boletos["CLI_NMNAME"];
     $assunto = "Codemaze - Fatura a vencer";
     $email = $boletos["GEC_DCEMAILCOBRANCA"];
