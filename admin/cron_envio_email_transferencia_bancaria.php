@@ -76,27 +76,27 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
     }
 
 
-    echo $mensagemListaDebitos;
-    die();
-    echo "<pre>";
-print_r($listaDebitos);
-echo "</pre>";
-die();
-
-
-
-
     $nome = $boletos["CLI_NMNAME"];
     $assunto = "Codemaze - Fatura a vencer";
-    $email = $boletos["GEC_DCEMAILCOBRANCA"];
+    //$email = $boletos["GEC_DCEMAILCOBRANCA"];
+    $email = "michell.oliveira@codemaze.com.br";
     $body = " Olá <b>$nome</b>, bom dia! <br><br>
                     Gostaríamos de lembrar que sua(s) fatura(s) vencerá(ão) nos próximos dias.<br>
                     Por favor, confira abaixo os débitos referentes ao próximo vencimento.<br><br>
                     
+                    $mensagemListaDebitos
 
-
-
-
+                    <b>Total da Fatura: R$$totalValores</b>
+                    <br>
+                    <br>
+                    <b>Informações para pagamento </b>
+                    <b>Nome do Beneficiario: Michell Duarte de Oliveira
+                    <b>Banco:</b> Itaú
+                    <b>PIX CPF:</b> 049.967.919-93
+                    <b>Agência:</b> 3704
+                    <b>Conta Corrente:</b> 16720-8
+                    <br>
+                    <br>
                     Estamos à disposição para ajudá-lo(a)!<br>
                     Atenciosamente,<br><br>
 
@@ -107,7 +107,7 @@ die();
                     suporte@codemaze.com.br<br>
                     <a href='https://www.codemaze.com.br'>codemaze.com.br</a><br>";
 
-    $resultMail = $siteAdmin->sendEmailPHPMailer($email,$assunto,$body,$listaBoletos); 
+    $resultMail = $siteAdmin->sendEmailPHPMailer($email,$assunto,$body,"na"); 
     $siteAdmin->InsertAlarme("Enviado o boleto para o cliente $nome.","Info");
     sleep(1);
 

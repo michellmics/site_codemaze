@@ -77,18 +77,21 @@
 
             $mail = new PHPMailer(true);
 
-            foreach ($anexo as $item) 
+            if($anexo != "na")
             {
-                if (!empty($item)) 
-                { 
-                    $fileContent = file_get_contents($item); 
-                    $fileName = basename($item); 
-                    $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
-                } else {
-                    $this->InsertAlarme("Gerar Boleto: Caminho do arquivo está vazio.","High");
-                    return "O caminho do arquivo está vazio: $item<br>";
+                foreach ($anexo as $item) 
+                {
+                    if (!empty($item)) 
+                    { 
+                        $fileContent = file_get_contents($item); 
+                        $fileName = basename($item); 
+                        $mail->addStringAttachment($fileContent, $fileName, 'base64', 'application/pdf');
+                    } else {
+                        $this->InsertAlarme("Gerar Boleto: Caminho do arquivo está vazio.","High");
+                        return "O caminho do arquivo está vazio: $item<br>";
+                    }
+                    sleep(2);
                 }
-                sleep(2);
             }
            
 
