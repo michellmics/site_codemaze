@@ -483,7 +483,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                                <h4>Michell Duarte <small>- Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
+                                <h4>Michell Duarte <small>Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
@@ -491,12 +491,11 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                <p class="lead">Experiência sólida em operações empresariais, controle financeiro, supervisão de equipes, gerenciamento de projetos e gestão de mídias sociais. Vivência em ambientes dinâmicos, com foco em otimização de processos, liderança de equipes e implementação de estratégias.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                                <h4>Vanessa Kuasne <small>- Analista e Social Media</small></h4>
+                                <h4>Vanessa Kuasne <small>Co-Fundadora / Analista de Social Media</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
@@ -504,12 +503,11 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                <p class="lead">Desenvolvedor com ampla experiência, tendo passado por grandes empresas do setor. Ele é especializado no desenvolvimento de aplicativos móveis, focando sempre na melhor experiência do usuário e no desempenho das aplicações.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                                <h4>Jacques Philips <small>- Designer</small></h4>
+                                <h4>Fabricio Cordeiro  <small>Desenvolvedor Mobile</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
