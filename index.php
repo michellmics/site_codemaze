@@ -359,16 +359,13 @@
                             <p> Você está pronto para ter controle total sobre seus dados? Oferecemos o serviço de criação de dashboards de observabilidade personalizados, que permitem monitorar, visualizar e entender suas métricas em tempo real.
 
 Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados (logs, bancos de dados e sistemas) em painéis interativos e intuitivos. Identifique tendências, antecipe problemas e tome decisões baseadas em insights claros e acionáveis..</p>
-
-                            <p><b>Nosso objetivo</b> é ajudar empresas a se destacarem no mercado digital com experiências únicas e estratégias eficientes. Atuamos lado a lado com nossos parceiros, entendendo suas necessidades e adaptando soluções para maximizar resultados. Com uma equipe apaixonada por inovação, buscamos sempre as melhores práticas do mercado. Na Codemaze, seu sucesso é a nossa prioridade — crescer juntos é nossa essência.</p>
-
-                        <a href="#services" class="btn btn-light btn-radius btn-brd grd1">Leia mais</a>
+                        <a href="#contact" class="btn btn-light btn-radius btn-brd grd1">Vamos conversar?</a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
                 <div class="col-md-6">
                     <div class="post-media wow fadeIn">
-                        <img src="uploads/about_01.jpg" alt="" >
+                        <img src="uploads/observabilidade_demo.JPG" alt="" >
                        
                     </div><!-- end media -->
                 </div><!-- end col -->
