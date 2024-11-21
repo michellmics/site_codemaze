@@ -72,7 +72,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
 
     foreach($listaDebitos as $itens)
     {
-        $mensagemListaDebitos += $itens["contrato"]." - ".ucfirst(strtolower($itens["servico"])).": Valor: R$".$itens["valor"]."<br>";
+        $mensagemListaDebitos = $mensagemListaDebitos.$itens["contrato"]." - ".ucfirst(strtolower($itens["servico"])).": Valor: R$".$itens["valor"]."<br>";
     }
 
 
