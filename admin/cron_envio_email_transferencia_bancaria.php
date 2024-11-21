@@ -28,7 +28,7 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $cobranca) {
         $resultado[$cliente_id] = array(
             'CLI_IDCLIENT' => $cliente_id,
             'CLI_NMNAME' => $cobranca['CLI_NMNAME'],
-            'cobranca' => array()
+            'boletos' => array()
         );
     }
 
