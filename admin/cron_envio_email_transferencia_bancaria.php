@@ -19,21 +19,21 @@ if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 // Reestruturação dos dados agrupando por cliente
 $resultado = array();
 
-foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $boleto) {
+foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $cobranca) {
     // Obter o ID do cliente para organizar os boletos
-    $cliente_id = $boleto['CLI_IDCLIENT'];
+    $cliente_id = $cobranca['CLI_IDCLIENT'];
     
     // Verificar se o cliente já foi adicionado no array de resultado
     if (!isset($resultado[$cliente_id])) {
         $resultado[$cliente_id] = array(
             'CLI_IDCLIENT' => $cliente_id,
-            'CLI_NMNAME' => $boleto['CLI_NMNAME'],
+            'CLI_NMNAME' => $cobranca['CLI_NMNAME'],
             'boletos' => array()
         );
     }
 
     // Adicionar o boleto ao cliente correspondente
-    $resultado[$cliente_id]['boletos'][] = $boleto;
+    $resultado[$cliente_id]['boletos'][] = $cobranca;
 }
 echo "<pre>";
 print_r($resultado);
