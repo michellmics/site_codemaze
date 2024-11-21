@@ -469,8 +469,8 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
     <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Nossa Equipe</h3>
-                <p class="lead">Conheça a equipe incrível por trás da Codemaze! Somos apaixonados por impulsionar a inovação em desenvolvimento de software, observabilidade e marketing digital. <br>Deixe-nos mostrar como nossa expertise faz a diferença em cada projeto!</p>
+                <h3>Um time de ponta!</h3>
+                <p class="lead">Conheça a equipe incrível por trás da Codemaze! Somos apaixonados por impulsionar a inovação em desenvolvimento de software, observabilidade e marketing digital.</p>
             </div><!-- end title -->
 
             <div class="row">
@@ -479,11 +479,11 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                                <p class="lead">Atuou como integrador de sistemas, desenvolvedor de software e especialista em sistemas de compressão de vídeo em grandes empresas brasileiras do setor, como GVT e SKY TV. Possui também sólida experiência em edição de vídeo, SEO e gestão de mídias sociais, unindo técnica e criatividade para alcançar resultados de alto impacto. Além disso, possui expertise em observabilidade de dados, o que agrega valor ao monitorar e otimizar sistemas, garantindo excelente desempenho e eficiência.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                                <h4>Michell Duarte <small>- Diretor de Criação / Desenvolvedor de Software</small></h4>
+                                <h4>Michell Duarte <small>- Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
