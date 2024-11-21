@@ -230,7 +230,84 @@
 
         </div><!-- end container -->
     </div><!-- end section -->
-	
+
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Um time de ponta!</h3>
+                <p class="lead">Conheça a liderança por trás da Codemaze!</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                
+                                <p class="lead">Atuou como integrador de sistemas, desenvolvedor de software e especialista em sistemas de compressão de vídeo em grandes empresas brasileiras. Possui também sólida experiência em edição de vídeo, SEO e gestão de mídias sociais, unindo técnica e criatividade para alcançar resultados de alto impacto. Além disso, possui expertise em observabilidade de dados, o que agrega valor ao monitorar e otimizar sistemas, garantindo excelente desempenho e eficiência.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/mics.png" alt="" class="img-responsive alignleft">
+                                <h4>Michell Duarte <small>Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <p class="lead">Experiência sólida em operações empresariais, controle financeiro, supervisão de equipes, gerenciamento de projetos e gestão de mídias sociais. Vivência em ambientes dinâmicos, com foco em otimização de processos, liderança de equipes e implementação de estratégias.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/nessa.png" alt="" class="img-responsive alignleft">
+                                <h4>Vanessa Kuasne <small>Co-Fundadora / Analista de Social Media</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <p class="lead">Desenvolvedor com ampla experiência, tendo passado por grandes empresas do setor. Especialista no desenvolvimento de aplicativos móveis, focando sempre na melhor experiência do usuário e no desempenho das aplicações.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <h4>Fabricio Cordeiro  <small>Desenvolvedor Mobile</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="hr1">
+
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+
+        </div><!-- end container -->
+    </div><!-- end section -->	
     
 
     <div id="services" class="parallax section lb">
@@ -465,83 +542,6 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
         </div><!-- end container -->
     </div><!-- end section -->
     <!-- end hospedagem planos -->
-
-    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Um time de ponta!</h3>
-                <p class="lead">Conheça a liderança por trás da Codemaze!</p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="testi-carousel owl-carousel owl-theme">
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                
-                                <p class="lead">Atuou como integrador de sistemas, desenvolvedor de software e especialista em sistemas de compressão de vídeo em grandes empresas brasileiras. Possui também sólida experiência em edição de vídeo, SEO e gestão de mídias sociais, unindo técnica e criatividade para alcançar resultados de alto impacto. Além disso, possui expertise em observabilidade de dados, o que agrega valor ao monitorar e otimizar sistemas, garantindo excelente desempenho e eficiência.</p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/mics.png" alt="" class="img-responsive alignleft">
-                                <h4>Michell Duarte <small>Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <p class="lead">Experiência sólida em operações empresariais, controle financeiro, supervisão de equipes, gerenciamento de projetos e gestão de mídias sociais. Vivência em ambientes dinâmicos, com foco em otimização de processos, liderança de equipes e implementação de estratégias.</p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/nessa.png" alt="" class="img-responsive alignleft">
-                                <h4>Vanessa Kuasne <small>Co-Fundadora / Analista de Social Media</small></h4>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <p class="lead">Desenvolvedor com ampla experiência, tendo passado por grandes empresas do setor. Especialista no desenvolvimento de aplicativos móveis, focando sempre na melhor experiência do usuário e no desempenho das aplicações.</p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                                <h4>Fabricio Cordeiro  <small>Desenvolvedor Mobile</small></h4>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-
-                    </div><!-- end carousel -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-
-            <hr class="hr1">
-
-            <div class="row logos">
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div>
-            </div><!-- end row -->
-
-        </div><!-- end container -->
-    </div><!-- end section -->
 
     <!-- ini contato -->
     <div id="contact" class="section wb">
