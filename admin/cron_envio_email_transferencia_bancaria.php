@@ -76,10 +76,9 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
     }
 
 
-    echo $mensagemListaDebitos;
-    die();
+
     echo "<pre>";
-print_r($totalValores);
+print_r($listaDebitos);
 echo "</pre>";
 die();
 
