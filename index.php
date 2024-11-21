@@ -348,6 +348,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
+    <!-- observabilidade section -->
     <div id="observabilidade" class="section wb">
         <div class="container">
             <div class="row">
@@ -370,12 +371,10 @@
                     </div><!-- end media -->
                 </div><!-- end col -->
             </div><!-- end row -->
-
-            <hr class="hr1"> 
-
         </div><!-- end container -->
     </div><!-- end section -->
-    
+    <!-- observabilidade section -->
+
     <!-- ini hospedagem planos -->
 
     <div id="hosting" class="section wb">
