@@ -319,33 +319,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div id="observabilidade" class="section wb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="message-box">
-                        <h4>Quem somos</h4>
-                        <h2>Bem vindo(a) a Codemaze</h2>
-                            <p> Somos uma empresa especializada em soluções digitais, comprometida em transformar negócios e potencializar resultados no ambiente online. Com uma abordagem personalizada, oferecemos serviços de desenvolvimento de sites, hospedagem, consultoria estratégica, gerenciamento de mídias sociais e campanhas de tráfego pago.</p>
 
-                            <p><b>Nosso objetivo</b> é ajudar empresas a se destacarem no mercado digital com experiências únicas e estratégias eficientes. Atuamos lado a lado com nossos parceiros, entendendo suas necessidades e adaptando soluções para maximizar resultados. Com uma equipe apaixonada por inovação, buscamos sempre as melhores práticas do mercado. Na Codemaze, seu sucesso é a nossa prioridade — crescer juntos é nossa essência.</p>
-
-                        <a href="#services" class="btn btn-light btn-radius btn-brd grd1">Leia mais</a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-                <div class="col-md-6">
-                    <div class="post-media wow fadeIn">
-                        <img src="uploads/about_01.jpg" alt="" >
-                       
-                    </div><!-- end media -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-
-            <hr class="hr1"> 
-
-        </div><!-- end container -->
-    </div><!-- end section -->
 
 
 
@@ -374,7 +348,34 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
+    <div id="observabilidade" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4>Quem somos</h4>
+                        <h2>Bem vindo(a) a Codemaze</h2>
+                            <p> Somos uma empresa especializada em soluções digitais, comprometida em transformar negócios e potencializar resultados no ambiente online. Com uma abordagem personalizada, oferecemos serviços de desenvolvimento de sites, hospedagem, consultoria estratégica, gerenciamento de mídias sociais e campanhas de tráfego pago.</p>
 
+                            <p><b>Nosso objetivo</b> é ajudar empresas a se destacarem no mercado digital com experiências únicas e estratégias eficientes. Atuamos lado a lado com nossos parceiros, entendendo suas necessidades e adaptando soluções para maximizar resultados. Com uma equipe apaixonada por inovação, buscamos sempre as melhores práticas do mercado. Na Codemaze, seu sucesso é a nossa prioridade — crescer juntos é nossa essência.</p>
+
+                        <a href="#services" class="btn btn-light btn-radius btn-brd grd1">Leia mais</a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="uploads/about_01.jpg" alt="" >
+                       
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="hr1"> 
+
+        </div><!-- end container -->
+    </div><!-- end section -->
+    
     <!-- ini hospedagem planos -->
 
     <div id="hosting" class="section wb">
