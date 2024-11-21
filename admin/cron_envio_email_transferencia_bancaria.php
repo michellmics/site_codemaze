@@ -63,7 +63,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
             "servico" => $boletos["PRS_NMNOME"]
         );
         //$updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
-        echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
+        //echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
         sleep(1);
         $aux++;
     }
