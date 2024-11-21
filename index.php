@@ -355,7 +355,7 @@
                 <div class="col-md-6">
                     <div class="message-box">
                         <h4>Observabilidade</h4>
-                        <h2>Tenha a visão do andamento do seu negócio</h2>
+                        <h2>Tenha a visão do seu negócio</h2>
                             <p> Você está pronto para ter controle total sobre seus dados? Oferecemos o serviço de criação de dashboards de observabilidade personalizados, que permitem monitorar, visualizar e entender suas métricas em tempo real.
 
 Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados (logs, bancos de dados e sistemas) em painéis interativos e intuitivos. Identifique tendências, antecipe problemas e tome decisões baseadas em insights claros e acionáveis..</p>
