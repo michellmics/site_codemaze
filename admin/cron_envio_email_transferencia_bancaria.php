@@ -44,6 +44,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
     $listaDebitos = array();
     $aux=0;
 
+    /*
     foreach($itens["boletos"] as $boletos)
     {
         $listaDebitos[$aux] = $boletos["LFI_DCVALOR_PARCELA"]; 
@@ -52,10 +53,28 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
         sleep(1);
         $aux++;
     }
+    */
 
+    foreach($itens["boletos"] as $boletos) 
+    {
+        $listaDebitos[$aux] = array(
+            "valor" => $boletos["LFI_DCVALOR_PARCELA"], 
+            "contrato" => $boletos["GEC_IDGESTAO_CONTRATO"], 
+            "servico" => $boletos["PRS_NMNOME"]
+        );
+        $updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
+        echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
+        sleep(1);
+        $aux++;
+    }
+
+
+
+
+    $totalValores = array_sum(array_column($listaDebitos, 'valor'));
 
     echo "<pre>";
-print_r($listaDebitos);
+print_r($totalValores);
 echo "</pre>";
 die();
 
