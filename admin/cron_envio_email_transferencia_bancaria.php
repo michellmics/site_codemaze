@@ -12,7 +12,7 @@ $siteAdmin->getProxContratosAVencerTransferenciaBancaria();
 
 if(count($siteAdmin->ARRAY_PROXVENCIMENTOS) == 0)
 {
-    echo "Não há boletos a serem enviados com vencimento próximo.";
+    echo "Não há cobranças a serem enviados com vencimento próximo.";
     die();
 }
 
@@ -44,17 +44,6 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
     $listaDebitos = array();
     $mensagemListaDebitos = "";
     $aux=0;
-
-    /*
-    foreach($itens["boletos"] as $boletos)
-    {
-        $listaDebitos[$aux] = $boletos["LFI_DCVALOR_PARCELA"]; 
-        $updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
-        echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
-        sleep(1);
-        $aux++;
-    }
-    */
 
     foreach($itens["boletos"] as $boletos) 
     {
