@@ -309,7 +309,25 @@
             try{           
                 $sql = "SELECT * 
                         FROM VW_BOLETO_PROX_VENCIMENTO
-                        WHERE LFI_DCEMAIL_SENDED != 'ENVIADO'";
+                        WHERE LFI_DCEMAIL_SENDED != 'ENVIADO' AND GEC_DCFORMAPAGAMENTO = 'BOLETO'";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PROXVENCIMENTOS = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getProxContratosAVencerTransferenciaBancaria()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * 
+                        FROM VW_BOLETO_PROX_VENCIMENTO
+                        WHERE LFI_DCEMAIL_SENDED != 'ENVIADO' AND GEC_DCFORMAPAGAMENTO = 'TRANSF BANCARIA'";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
