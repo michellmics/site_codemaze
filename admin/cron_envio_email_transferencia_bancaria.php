@@ -35,26 +35,32 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $cobranca) {
     // Adicionar o boleto ao cliente correspondente
     $resultado[$cliente_id]['boletos'][] = $cobranca;
 }
-echo "<pre>";
-print_r($resultado);
-echo "</pre>";
-die();
+
 
 $LISTA_EMAIL_COBRANÇA = $resultado;
 
 foreach($LISTA_EMAIL_COBRANÇA as $itens)
 {
-    $listaBoletos = array();
+    $listaDebitos = array();
     $aux=0;
 
     foreach($itens["boletos"] as $boletos)
     {
-        $listaBoletos[$aux] = $boletos["LFI_PAGSEGURO_LINK_BOLETO"]; 
+        $listaDebitos[$aux] = $boletos["LFI_DCVALOR_PARCELA"]; 
         $updateResult = $siteAdmin->updateMailCobranca($boletos["LFI_IDOP"]);
         echo "<pre>" . print_r($updateResult, true) . "</pre><br>";
         sleep(1);
         $aux++;
     }
+
+
+    echo "<pre>";
+print_r($listaDebitos);
+echo "</pre>";
+die();
+
+
+
 
     $nome = $boletos["CLI_NMNAME"];
     $assunto = "Codemaze - Fatura a vencer";
