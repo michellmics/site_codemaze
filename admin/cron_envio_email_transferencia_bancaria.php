@@ -72,7 +72,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
 
     foreach($listaDebitos as $itens)
     {
-        $mensagemListaDebitos = $itens["contrato"]." : ".$itens["servico"].": Valor: R$".$itens["servico"]."<br>";
+        $mensagemListaDebitos = $itens["contrato"]." : ".$itens["servico"].": Valor: R$".$itens["valor"]."<br>";
     }
 
 
