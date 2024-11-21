@@ -42,6 +42,7 @@ $LISTA_EMAIL_COBRANÇA = $resultado;
 foreach($LISTA_EMAIL_COBRANÇA as $itens)
 {
     $listaDebitos = array();
+    $mensagemListaDebitos = "";
     $aux=0;
 
     /*
@@ -90,12 +91,12 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
                     <b>Total da Fatura: R$$totalValores</b>
                     <br>
                     <br>
-                    <b>Informações para pagamento </b>
-                    <b>Nome do Beneficiario: Michell Duarte de Oliveira
-                    <b>Banco:</b> Itaú
-                    <b>PIX CPF:</b> 049.967.919-93
-                    <b>Agência:</b> 3704
-                    <b>Conta Corrente:</b> 16720-8
+                    <b>Informações para pagamento </b><br>
+                    <b>Nome do Beneficiario: Michell Duarte de Oliveira<br>
+                    <b>Banco:</b> Itaú<br>
+                    <b>PIX CPF:</b> 049.967.919-93<br>
+                    <b>Agência:</b> 3704<br>
+                    <b>Conta Corrente:</b> 16720-8<br>
                     <br>
                     <br>
                     Estamos à disposição para ajudá-lo(a)!<br>
