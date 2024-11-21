@@ -259,7 +259,7 @@
                         <img src="uploads/gestaoTrafego.jpg" alt="" class="img-responsive img-rounded">
                     </div>
 					<div class="service-dit">
-						<h3>Gestão de Tráfego (Mkt DIgital)</h3>
+						<h3>Gestão de Tráfego (Mkt Digital)</h3>
 						<p>Maximize seus resultados com nossa gestão de tráfego digital! Implementamos campanhas estratégicas que direcionam visitantes qualificados ao seu site, aumentando as conversões e o retorno sobre o investimento. </p>
 					</div>
                 </div>
