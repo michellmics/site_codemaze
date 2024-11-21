@@ -503,7 +503,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <p class="lead">Desenvolvedor com ampla experiência, tendo passado por grandes empresas do setor. Ele é especializado no desenvolvimento de aplicativos móveis, focando sempre na melhor experiência do usuário e no desempenho das aplicações.</p>
+                                <p class="lead">Desenvolvedor com ampla experiência, tendo passado por grandes empresas do setor. Especialista no desenvolvimento de aplicativos móveis, focando sempre na melhor experiência do usuário e no desempenho das aplicações.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
