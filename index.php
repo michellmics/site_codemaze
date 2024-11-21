@@ -470,7 +470,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
         <div class="container">
             <div class="section-title text-center">
                 <h3>Um time de ponta!</h3>
-                <p class="lead">Conheça a equipe incrível por trás da Codemaze! Somos apaixonados por impulsionar a inovação em desenvolvimento de software, observabilidade e marketing digital.</p>
+                <p class="lead">Conheça a liderança por trás da Codemaze!</p>
             </div><!-- end title -->
 
             <div class="row">
