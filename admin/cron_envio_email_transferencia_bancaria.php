@@ -92,7 +92,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
                     <br>
                     <br>
                     <b>Informações para pagamento </b><br>
-                    <b>Nome do Beneficiario: Michell Duarte de Oliveira<br>
+                    <b>Nome do Beneficiario:</b> Michell Duarte de Oliveira<br>
                     <b>Banco:</b> Itaú<br>
                     <b>PIX CPF:</b> 049.967.919-93<br>
                     <b>Agência:</b> 3704<br>
