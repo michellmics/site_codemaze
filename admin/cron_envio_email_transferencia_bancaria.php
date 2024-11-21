@@ -28,7 +28,7 @@ foreach ($siteAdmin->ARRAY_PROXVENCIMENTOS as $cobranca) {
         $resultado[$cliente_id] = array(
             'CLI_IDCLIENT' => $cliente_id,
             'CLI_NMNAME' => $cobranca['CLI_NMNAME'],
-            'boletos' => array()
+            'cobranca' => array()
         );
     }
 
@@ -40,9 +40,9 @@ print_r($resultado);
 echo "</pre>";
 die();
 
-$LISTA_EMAIL_BOLETOS = $resultado;
+$LISTA_EMAIL_COBRANÇA = $resultado;
 
-foreach($LISTA_EMAIL_BOLETOS as $itens)
+foreach($LISTA_EMAIL_COBRANÇA as $itens)
 {
     $listaBoletos = array();
     $aux=0;
