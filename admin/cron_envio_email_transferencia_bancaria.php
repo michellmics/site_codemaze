@@ -70,7 +70,7 @@ foreach($LISTA_EMAIL_COBRANÇA as $itens)
 
     $totalValores = array_sum(array_column($listaDebitos, 'valor'));
 
-    foreach($totalValores as $itens)
+    foreach($listaDebitos as $itens)
     {
         $mensagemListaDebitos = $itens["contrato"]." : ".$itens["servico"].": Valor: R$".$itens["servico"]."<br>";
     }
