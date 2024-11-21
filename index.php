@@ -482,7 +482,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                                 <p class="lead">Atuou como integrador de sistemas, desenvolvedor de software e especialista em sistemas de compressão de vídeo em grandes empresas brasileiras. Possui também sólida experiência em edição de vídeo, SEO e gestão de mídias sociais, unindo técnica e criatividade para alcançar resultados de alto impacto. Além disso, possui expertise em observabilidade de dados, o que agrega valor ao monitorar e otimizar sistemas, garantindo excelente desempenho e eficiência.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/mics.png" alt="" class="img-responsive alignleft">
                                 <h4>Michell Duarte <small>Co-Fundador / Diretor de Criação / Desenvolvedor de Software</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -494,7 +494,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                                 <p class="lead">Experiência sólida em operações empresariais, controle financeiro, supervisão de equipes, gerenciamento de projetos e gestão de mídias sociais. Vivência em ambientes dinâmicos, com foco em otimização de processos, liderança de equipes e implementação de estratégias.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/nessa.png" alt="" class="img-responsive alignleft">
                                 <h4>Vanessa Kuasne <small>Co-Fundadora / Analista de Social Media</small></h4>
                             </div>
                             <!-- end testi-meta -->
