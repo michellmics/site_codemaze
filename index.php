@@ -359,7 +359,7 @@
                             <p> Você está pronto para ter controle total sobre seus dados? Oferecemos o serviço de criação de dashboards de observabilidade personalizados, que permitem monitorar, visualizar e entender suas métricas em tempo real.
 
 Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados (logs, bancos de dados e sistemas) em painéis interativos e intuitivos. Identifique tendências, antecipe problemas e tome decisões baseadas em insights claros e acionáveis..</p>
-                        <a href="#contact" class="btn btn-light btn-radius btn-brd grd1">Vamos conversar?</a>
+                        <a href="#contact" class="btn btn-light btn-radius btn-brd grd1">Vamos conversar?</a><a href="#contact" class="btn btn-light btn-radius btn-brd grd1">Vamos conversar?</a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
