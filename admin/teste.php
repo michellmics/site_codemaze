@@ -6,7 +6,8 @@
     <title>Exemplo SweetAlert</title>
 <!-- Include the Bulma theme -->
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Formulário de Contato</h1>
