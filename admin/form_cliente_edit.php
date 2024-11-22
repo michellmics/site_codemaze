@@ -238,8 +238,12 @@
       showDenyButton: true,
       confirmButtonText: 'Save',
       denyButtonText: `Don't save`,
-      width: '700px', // Largura do alerta
-      icon: 'warning'
+      width: '400px', // Largura do alerta
+      icon: 'warning',
+      customClass: {
+        title: 'swal-title', // Classe para o título
+        content: 'swal-content' // Classe para o conteúdo (texto)
+      }
     }).then((result) => {
       if (result.isConfirmed) {
         // Se o usuário confirmar, envia o formulário
@@ -259,7 +263,15 @@
   document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
 </script>
 
-
+<style>
+  /* Estilos para aumentar o tamanho da fonte */
+  .swal-title {
+    font-size: 24px !important; /* Tamanho maior para o título */
+  }
+  .swal-content {
+    font-size: 20px !important; /* Tamanho maior para o conteúdo */
+  }
+</style>
 
 
 
