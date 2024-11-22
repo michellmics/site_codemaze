@@ -15,8 +15,7 @@
     </form>
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Lógica do processamento (como salvar dados, enviar e-mail, etc.)
+
         echo "
         <script>
             Swal.fire({
@@ -25,7 +24,7 @@
                 text: 'Formulário enviado com sucesso!',
             });
         </script>";
-    }
+ 
     ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
