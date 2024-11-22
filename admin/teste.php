@@ -20,37 +20,18 @@
         // Lógica do processamento (como salvar dados, enviar e-mail, etc.)
         echo "
         <script>
-           const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: "btn btn-success",
-    cancelButton: "btn btn-danger"
-  },
-  buttonsStyling: false
-});
-swalWithBootstrapButtons.fire({
-  title: "Are you sure?",
-  text: "You won't be able to revert this!",
-  icon: "warning",
+Swal.fire({
+  title: 'Do you want to save the changes?'',
+  showDenyButton: true,
   showCancelButton: true,
-  confirmButtonText: "Yes, delete it!",
-  cancelButtonText: "No, cancel!",
-  reverseButtons: true
+  confirmButtonText: 'Save',
+  denyButtonText: `Don't save`
 }).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
-    swalWithBootstrapButtons.fire({
-      title: "Deleted!",
-      text: "Your file has been deleted.",
-      icon: "success"
-    });
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire({
-      title: "Cancelled",
-      text: "Your imaginary file is safe :)",
-      icon: "error"
-    });
+    Swal.fire('Saved!', '', 'success');
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info');
   }
 });
         </script>";
