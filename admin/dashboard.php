@@ -105,7 +105,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
 }
 
 .content-wrapper {
-  margin-top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
+  margin-top: 20px; /* Ajuste conforme a altura do seu cabeçalho */
 }
 
   </style>
