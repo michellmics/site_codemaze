@@ -267,17 +267,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-      document.addEventListener("input", function (e) {
-          if (e.target.id.startsWith("pagamento_")) {
-              const input = e.target;
-              let value = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
-              const masked = value
-                  .replace(/^(\d{2})(\d)/, "$1/$2")
-                  .replace(/(\d{2})(\d)/, "$1/$2");
-              input.value = masked.substring(0, 10); // Limita a 10 caracteres
-          }
-      });
-
       function selecionarData()
       {
           const { value: date } = await Swal.fire({
