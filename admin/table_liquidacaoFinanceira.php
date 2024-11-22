@@ -305,19 +305,13 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
 
       if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
-    const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
+          const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
 
-    // Verifica se o conteúdo está dentro de um iframe
-    if (window.frameElement) {
-        // Se estiver dentro de um iframe, muda a URL do iframe
-        window.frameElement.src = url;
-    } else {
-        // Caso contrário, faz o redirecionamento normal (fora de um iframe)
-        window.location.href = url;
-    }
+          // Redireciona para a URL gerada
+          window.location.href = url;
 
-    return true; // Pode ser omitido aqui, já que estamos redirecionando
-}
+          return true; // Pode ser omitido aqui, já que estamos redirecionando
+      }
 
       return false; // Retorna false se o usuário cancelar
     }
