@@ -198,7 +198,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="button" id="salvarCadastro" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
@@ -209,65 +209,6 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
-
-    <!-- ########################################################## -->
-    <!-- MODAL DE RESULTADOS -->
-    <div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="resultadoModalLabel">Resultado</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modalContent">
-            <!-- Resultado será exibido aqui -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- MODAL DE RESULTADOS -->
-    <!-- ########################################################## -->
-
-
-
-    <script>
-      document.getElementById('salvarCadastro').addEventListener('click', function() {
-        const formData = new FormData(document.querySelector('form')); // Captura os dados do formulário
-      
-        fetch('client_proc_edit.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-          // Insere o resultado no modal
-          document.getElementById('modalContent').innerHTML = data;
-        
-          // Exibe o modal
-          $('#resultadoModal').modal('show');
-        })
-        .catch(error => {
-          console.error('Erro:', error);
-          alert('Ocorreu um erro no processamento.');
-        });
-      });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
 
 	<script>
         // Função para buscar o endereço pela API ViaCEP
