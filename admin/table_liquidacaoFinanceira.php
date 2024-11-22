@@ -293,11 +293,17 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           $('#alertModal').modal('show'); // Abre o modal
       }
 
+      function converterData(data) {
+        const partes = data.split('-'); // Divide a data pelo traço
+        return `${partes[2]}/${partes[1]}/${partes[0]}`; // Rearranja os valores para 'DD/MM/YYYY'
+      }
+
       function confirmarLiquidacao(id,date) {
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
       //const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
-      const datapagamento = date;
-      return confirm(date);
+      const datapagamento = converterData(date);
+    
+
       if (!datapagamento) {
           showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
           return false; // Impede a continuação do código
