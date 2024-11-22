@@ -261,9 +261,6 @@
       }
     });
   }
-
-
-
   // Atribui a função ao botão de submit
   document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
 </script>
@@ -284,22 +281,6 @@
   .swal-cancel-btn {
     font-size: 20px !important; /* Tamanho maior para os textos dos botões */
     padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
-  }
-
-  /* Estilo extra para botões */
-  .swal-confirm-btn {
-    background-color: #4289a6 !important;
-    border-color: #4289a6 !important;
-  }
-
-  .swal-deny-btn {
-    background-color: #ff8a33 !important;
-    border-color: #ff8a33 !important;
-  }
-
-  .swal-cancel-btn {
-    background-color: #ff8a33 !important;
-    border-color: #ff8a33 !important;
   }
 </style>
 
