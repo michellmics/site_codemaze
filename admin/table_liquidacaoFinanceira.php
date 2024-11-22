@@ -291,23 +291,24 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           $('#alertModal').modal('show'); // Abre o modal
       }
 
-      function confirmarLiquidacao(id) {
-      const datapagamentoInput = document.getElementById(`pagamento_${id}`);
-      const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
+      function confirmarLiquidacao(id) 
+      {
+        const datapagamentoInput = document.getElementById(`pagamento_${id}`);
+        const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
 
-    const { value: date } = await Swal.fire({
-        title: "Selecione a data de pagamento",
-        input: "date",
-        didOpen: () => {
-            const today = (new Date()).toISOString();
-            Swal.getInput().min = today.split("T")[0]; // Definindo a data mínima
+        const { value: date } = Swal.fire({
+            title: "Selecione a data de pagamento",
+            input: "date",
+            didOpen: () => {
+                const today = (new Date()).toISOString();
+                Swal.getInput().min = today.split("T")[0]; // Definindo a data mínima
+            }
+        });
+        if (date) {
+            Swal.fire("Data de pagamento", date); // Exibe a data escolhida
+            // Aqui você pode adicionar a lógica para salvar essa data no banco, se necessário.
         }
-    });
-    if (date) {
-        Swal.fire("Data de pagamento", date); // Exibe a data escolhida
-        // Aqui você pode adicionar a lógica para salvar essa data no banco, se necessário.
-    }
 
 
 
