@@ -280,40 +280,29 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           $('#alertModal').modal('show'); // Abre o modal
       }
 
-      function confirmarLiquidacao(id) 
-      {
-        const datapagamentoInput = document.getElementById(`pagamento_${id}`);
-        const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
-
-        const { value: date } = await Swal.fire({
-        title: "select departure date",
-        input: "date",
-        didOpen: () => {
-          const today = (new Date()).toISOString();
-          Swal.getInput().min = today.split("T")[0];
-        }
-        });
-        if (date) {
-          Swal.fire("Departure date", date);
-        }
-
-        if (!datapagamento) {
-            showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
-            return false; // Impede a continuação do código
-        }
+      function confirmarLiquidacao(id) {
+      const datapagamentoInput = document.getElementById(`pagamento_${id}`);
+      const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
 
 
-        if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
-            const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
+      if (!datapagamento) {
+          showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
+          return false; // Impede a continuação do código
+      }
 
-            // Redireciona para a URL gerada
-            window.location.href = url;
 
-            return true; // Pode ser omitido aqui, já que estamos redirecionando
-        }
 
-        return false; // Retorna false se o usuário cancelar
+      if (confirm("Tem certeza que deseja liquidar o pagamento?")) {
+          const url = `https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?update=${id}&acao=LIQUIDADO&dataPagamento=${encodeURIComponent(datapagamento)}`;
+
+          // Redireciona para a URL gerada
+          window.location.href = url;
+
+          return true; // Pode ser omitido aqui, já que estamos redirecionando
+      }
+
+      return false; // Retorna false se o usuário cancelar
     }
 
 
