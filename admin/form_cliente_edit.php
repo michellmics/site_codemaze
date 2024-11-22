@@ -275,7 +275,7 @@
   }
 
   .swal-text {
-    font-size: 32px !important; /* Tamanho maior para o conteúdo */
+    font-size: 24px !important; /* Tamanho maior para o conteúdo */
   }
 
   /* Aumentar o tamanho dos textos dos botões */
