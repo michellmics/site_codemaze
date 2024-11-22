@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo SweetAlert</title>
 <!-- Include the Bulma theme -->
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -20,20 +21,7 @@
         // Lógica do processamento (como salvar dados, enviar e-mail, etc.)
         echo "
         <script>
-Swal.fire({
-  title: 'Do you want to save the changes?'',
-  showDenyButton: true,
-  showCancelButton: true,
-  confirmButtonText: 'Save',
-  denyButtonText: `Don't save`
-}).then((result) => {
-  /* Read more about isConfirmed, isDenied below */
-  if (result.isConfirmed) {
-    Swal.fire('Saved!', '', 'success');
-  } else if (result.isDenied) {
-    Swal.fire('Changes are not saved', '', 'info');
-  }
-});
+            Swal.fire('SweetAlert2 is working!');
         </script>";
     }
     ?>
