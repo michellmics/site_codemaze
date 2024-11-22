@@ -94,15 +94,26 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
       padding: 10px 0;
       font-size: 12px;
     }
+
+    header.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; /* Garante que o header esteja acima de outros elementos */
+  background-color: #fff; /* Pode ser ajustado para a cor de fundo desejada */
+}
+
+.content-wrapper {
+  margin-top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
+}
+
   </style>
   
   </head>
   <body class="skin-blue">
     <div class="wrapper">
       
-
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
       <header class="main-header">
         <!-- Logo -->
         <a href="https://www.codemaze.com.br/site/admin/dashboard.php" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
@@ -233,6 +244,8 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
           </div>
         </nav>
       </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
