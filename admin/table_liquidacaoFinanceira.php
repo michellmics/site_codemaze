@@ -268,10 +268,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           const { value: date } = await Swal.fire({
               title: "select departure date",
               input: "date",
-              didOpen: () => {
-                  const today = (new Date()).toISOString();
-                  Swal.getInput().min = today.split("T")[0]; // Definindo a data mínima
-              }
+
           });
         
           if (date) {
