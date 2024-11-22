@@ -234,10 +234,13 @@
 
     Swal.fire({
       title: 'Do you want to save the changes?',
+      text: "The changes you made will be saved if you confirm.",
       showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Save',
-      denyButtonText: `Don't save`
+      denyButtonText: `Don't save`,
+      width: '400px', // Largura do alerta
+      icon: 'warning'
     }).then((result) => {
       if (result.isConfirmed) {
         // Se o usuário confirmar, envia o formulário
@@ -254,6 +257,7 @@
   // Atribui a função ao botão de submit
   document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
 </script>
+
 
 
 
