@@ -100,6 +100,9 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
   <body class="skin-blue">
     <div class="wrapper">
       
+
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
       <header class="main-header">
         <!-- Logo -->
         <a href="https://www.codemaze.com.br/site/admin/dashboard.php" class="logo"><b>  <?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCSITE"]); ?></b></a>
@@ -230,8 +233,6 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
           </div>
         </nav>
       </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
