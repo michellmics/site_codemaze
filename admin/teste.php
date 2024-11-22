@@ -29,6 +29,6 @@
     ?>
 
     <!-- Carregar SweetAlert2 no final -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
