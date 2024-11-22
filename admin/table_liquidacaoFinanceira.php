@@ -160,8 +160,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                       <th><center>VENCIMENTO</center></th>
                       <th><center>BOLETO</center></th>
                       <th><center>PAGAMENTO</center></th>
-                      <th></th>     
-		      <th>AÇÃO</th> 
+		                  <th>AÇÃO</th> 
                     </tr>
                     <tr>
                     <? $linha = 1; ?>
@@ -210,9 +209,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= $dataFormatada ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle; color: red;"><center><?= $liquidFin['LFI_DTPAGAMENTO'] ?></center></td> 
-                        <td>
-			                  <input  type="text" onclick="selecionarData()" style="width: 100%; text-transform: uppercase; vertical-align: middle; font-size: 14px;"  class="form-control"  id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
-                        </td>                   
+                                       
                         <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
                                id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
