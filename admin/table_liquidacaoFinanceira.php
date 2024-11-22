@@ -258,9 +258,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
     <script>
 
       $(document).ready(function() {
-        $('#pagamento').mask('00/00/0000', {
-          placeholder: "__/__/____"
-        });
+          $('[id^="pagamento_"]').mask('00/00/0000', {
+              placeholder: "__/__/____"
+          });
       });
 
       function confirmacao() 
