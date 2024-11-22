@@ -245,7 +245,8 @@
       customClass: {
         title: 'swal-title', // Classe para o título
         content: 'swal-content', // Classe para o conteúdo (texto)
-        confirmButton: 'swal-confirm-btn'
+        confirmButton: 'swal-confirm-btn',
+        denyButton: 'swal-deny-btn'
       }
     }).then((result) => {
       if (result.isConfirmed) {
@@ -280,7 +281,7 @@
   .swal-confirm-btn,
   .swal-deny-btn,
   .swal-cancel-btn {
-    font-size: 36px !important; /* Tamanho maior para os textos dos botões */
+    font-size: 24px !important; /* Tamanho maior para os textos dos botões */
     padding: 18px 35px !important; /* Aumenta o espaço ao redor do texto */
   }
 
