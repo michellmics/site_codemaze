@@ -108,6 +108,21 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
   margin-top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
 }
 
+.content-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o conteúdo da header fique acima de outros elementos */
+  background-color: #f4f4f4; /* Se necessário, defina a cor de fundo */
+  padding: 10px 15px; /* Ajuste o espaçamento conforme necessário */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombras para destacar a seção */
+}
+
+.content {
+  margin-top: 80px; /* Ajuste o valor conforme necessário, dependendo da altura da header fixa */
+}
+
   </style>
   
   </head>
@@ -313,7 +328,15 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        
+        <section class="content-header">
+          <h1>
+            SGCS - Sistema de Gestão de Clientes e Serviços
+            <small>Versão 1.0</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="https://www.codemaze.com.br/site/admin/dashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+          </ol>
+        </section>
       
       <!--##############################################################-->
       <!-- Main content FRAME INI-->
