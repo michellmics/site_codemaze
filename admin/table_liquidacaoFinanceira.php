@@ -216,7 +216,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
                                id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
-                               onclick="return confirmarLiquidacao(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                               onclick="return selecionarData(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                                <span class="label label-info">FINALIZAR</span>
                             </a>
                         </td>
@@ -267,7 +267,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-      async function selecionarData() {
+      async function selecionarData(id) {
           const { value: date } = await Swal.fire({
               title: "select departure date",
               input: "date",
@@ -278,8 +278,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           });
         
           if (date) {
-              // Atualiza o valor do campo de input com o id 'pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>'
-              document.getElementById('pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>').value = date;
+            confirmarLiquidacao(id,date)
           }
       }
 
@@ -294,9 +293,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
           $('#alertModal').modal('show'); // Abre o modal
       }
 
-      function confirmarLiquidacao(id) {
+      function confirmarLiquidacao(id,date) {
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
-      const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
+      //const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
+      const datapagamento = date;
 
       if (!datapagamento) {
           showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
