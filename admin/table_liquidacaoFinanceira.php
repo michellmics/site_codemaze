@@ -266,19 +266,15 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
       async function selecionarData(id) {
           const { value: date } = await Swal.fire({
-              title: "Select departure date",
+              title: "Selecione a data do pagamento",
               input: "date",
-              inputPlaceholder: "dd/mm/yyyy", // Este é o placeholder
-              didOpen: () => {
-                  const today = new Date();
-                  const formattedDate = today.toLocaleDateString('pt-BR'); // Formato dd/mm/yyyy
-                  Swal.getInput().value = formattedDate; // Definindo o valor inicial
-              }
           });
+        
           if (date) {
-            confirmarLiquidacao(id, date);
+            confirmarLiquidacao(id,date)
           }
       }
+
 
       function confirmacao() 
       {
