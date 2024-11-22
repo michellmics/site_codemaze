@@ -297,7 +297,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
       //const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
       const datapagamento = date;
-
+      return confirm(date);
       if (!datapagamento) {
           showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
           return false; // Impede a continuação do código
