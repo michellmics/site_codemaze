@@ -260,7 +260,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
     <script>
 
       $(document).ready(function() {
-          $('[id^="pagamento_"]').mask('00/00/0000', {
+          $('#pagamento').mask('00/00/0000', {
               placeholder: "__/__/____"
           });
       });
