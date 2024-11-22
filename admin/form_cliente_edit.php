@@ -283,18 +283,18 @@
 
   /* Estilo extra para botões */
   .swal-confirm-btn {
-    background-color: #3085d6 !important;
-    border-color: #3085d6 !important;
+    background-color: #4289a6 !important;
+    border-color: #4289a6 !important;
   }
 
   .swal-deny-btn {
-    background-color: #d33 !important;
-    border-color: #d33 !important;
+    background-color: #ff8a33 !important;
+    border-color: #ff8a33 !important;
   }
 
   .swal-cancel-btn {
-    background-color: #aaa !important;
-    border-color: #aaa !important;
+    background-color: #ff8a33 !important;
+    border-color: #ff8a33 !important;
   }
 </style>
 
