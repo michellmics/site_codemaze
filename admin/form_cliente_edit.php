@@ -238,7 +238,7 @@
       showDenyButton: true,
       confirmButtonText: 'Save',
       denyButtonText: `Don't save`,
-      width: '400px', // Largura do alerta
+      width: '600px', // Largura do alerta
       icon: 'warning',
       customClass: {
         title: 'swal-title', // Classe para o título
@@ -266,10 +266,35 @@
 <style>
   /* Estilos para aumentar o tamanho da fonte */
   .swal-title {
-    font-size: 36px !important; /* Tamanho maior para o título */
+    font-size: 24px !important; /* Tamanho maior para o título */
   }
+
   .swal-content {
-    font-size: 26px !important; /* Tamanho maior para o conteúdo */
+    font-size: 20px !important; /* Tamanho maior para o conteúdo */
+  }
+
+  /* Aumentar o tamanho dos textos dos botões */
+  .swal-confirm-btn,
+  .swal-deny-btn,
+  .swal-cancel-btn {
+    font-size: 18px !important; /* Tamanho maior para os textos dos botões */
+    padding: 12px 20px !important; /* Aumenta o espaço ao redor do texto */
+  }
+
+  /* Estilo extra para botões */
+  .swal-confirm-btn {
+    background-color: #3085d6 !important;
+    border-color: #3085d6 !important;
+  }
+
+  .swal-deny-btn {
+    background-color: #d33 !important;
+    border-color: #d33 !important;
+  }
+
+  .swal-cancel-btn {
+    background-color: #aaa !important;
+    border-color: #aaa !important;
   }
 </style>
 
