@@ -68,7 +68,7 @@
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="client_proc_edit.php">
+                <form id="clientForm" role="form">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -198,7 +198,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
@@ -210,24 +210,27 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
 
-      <!-- Modal (do include 'modal.php') -->
+    <script>
+      // Função para enviar os dados do formulário via AJAX
+      function submitForm() {
+        // Coleta os dados do formulário
+        const formData = new FormData(document.getElementById('clientForm'));
 
-  <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src='plugins/fastclick/fastclick.min.js'></script>
-  <script src="dist/js/app.min.js" type="text/javascript"></script>
-  <script src="dist/js/demo.js" type="text/javascript"></script>
-
-  <script>
-    // Abre o modal ao clicar no botão
-    var modal = $('#alertModal');
-    var btn = document.getElementById("myBtn");
-
-    btn.onclick = function() {
-      modal.modal('show'); // Bootstrap method para abrir o modal
-    }
-  </script>
-  
+        // Envia os dados via AJAX para o PHP
+        fetch('client_proc_edit.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text()) // Espera a resposta como texto
+        .then(data => {
+          // Exibe o resultado no console
+          console.log('Resultado do processamento:', data);
+        })
+        .catch(error => {
+          console.error('Erro no processamento:', error);
+        });
+      }
+    </script>
 
 	<script>
         // Função para buscar o endereço pela API ViaCEP
