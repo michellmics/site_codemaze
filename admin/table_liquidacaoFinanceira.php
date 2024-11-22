@@ -203,7 +203,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><? echo $boleto; ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle; color: red;"><center><?= $liquidFin['LFI_DTPAGAMENTO'] ?></center></td> 
                         <td>
-			                  <input  type="text" style="width: 100%; text-transform: uppercase; vertical-align: middle; font-size: 12px;" minlength="15" maxlength="15" class="form-control"  placeholder="__/__/____" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
+			                  <input  type="text" style="width: 100%; text-transform: uppercase; vertical-align: middle; font-size: 14px;" minlength="15" maxlength="15" class="form-control"  placeholder="__/__/____" id="pagamento_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" name="pagamento" />
                         </td>                   
                         <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
@@ -259,16 +259,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-document.addEventListener("input", function (e) {
-    if (e.target.id.startsWith("pagamento_")) {
-        const input = e.target;
-        let value = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
-        const masked = value
-            .replace(/^(\d{2})(\d)/, "$1/$2")
-            .replace(/(\d{2})(\d)/, "$1/$2");
-        input.value = masked.substring(0, 10); // Limita a 10 caracteres
-    }
-});
+      document.addEventListener("input", function (e) {
+          if (e.target.id.startsWith("pagamento_")) {
+              const input = e.target;
+              let value = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+              const masked = value
+                  .replace(/^(\d{2})(\d)/, "$1/$2")
+                  .replace(/(\d{2})(\d)/, "$1/$2");
+              input.value = masked.substring(0, 10); // Limita a 10 caracteres
+          }
+      });
 
       function confirmacao() 
       {
