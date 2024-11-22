@@ -68,7 +68,7 @@
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" id="clientForm" method="POST">
+                <form role="form" method="POST" action="client_proc_edit.php">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -198,7 +198,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="button" name="salvar_empresa_1" class="btn btn-primary" onclick="submitForm()">SALVAR CADASTRO</button>
+                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
@@ -209,27 +209,6 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
-
-    <script>
-      // Função para enviar o formulário via AJAX e exibir a resposta em um modal
-      function submitForm() {
-        var formData = new FormData(document.getElementById('clientForm'));
-
-        fetch('client_proc_edit.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-          // Exibe a resposta no modal
-          document.getElementById('modalBody').innerHTML = data;
-          $('#responseModal').modal('show'); // Exibe o modal
-        })
-        .catch(error => {
-          console.error('Erro:', error);
-        });
-      }
-    </script>
 
 	<script>
         // Função para buscar o endereço pela API ViaCEP
