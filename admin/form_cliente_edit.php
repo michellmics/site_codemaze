@@ -233,11 +233,13 @@
     event.preventDefault(); // Impede o envio do formulário
 
     Swal.fire({
-      title: 'Do you want to save the changes?',
-      text: "The changes you made will be saved if you confirm.",
+      title: 'Têm certeza que deseja salvar?',
+      text: "",
       showDenyButton: true,
-      confirmButtonText: 'Save',
-      denyButtonText: `Don't save`,
+      confirmButtonText: 'SALVAR',
+      denyButtonText: `CANCELAR`,
+      confirmButtonColor: "#4289a6",
+      denyButtonColor: "#ff8a33",
       width: '600px', // Largura do alerta
       icon: 'warning',
       customClass: {
@@ -247,12 +249,12 @@
     }).then((result) => {
       if (result.isConfirmed) {
         // Se o usuário confirmar, envia o formulário
-        Swal.fire('Saved!', '', 'success').then(() => {
+        Swal.fire('Mudanças foram Salvas!', '', 'success').then(() => {
           event.target.closest("form").submit();
         });
       } else if (result.isDenied) {
         // Se o usuário negar, exibe uma mensagem
-        Swal.fire('Changes are not saved', '', 'info');
+        Swal.fire('Mudanças descartadas', '', 'info');
       }
     });
   }
