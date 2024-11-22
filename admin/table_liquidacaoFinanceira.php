@@ -295,17 +295,21 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
       const datapagamentoInput = document.getElementById(`pagamento_${id}`);
       const datapagamento = datapagamentoInput ? datapagamentoInput.value.trim() : '';
 
-      const { value: date } = await Swal.fire({
-              title: "select departure date",
-              input: "date",
-              didOpen: () => {
-                  const today = (new Date()).toISOString();
-                  Swal.getInput().min = today.split("T")[0]; // Definindo a data mínima
-              }
-          });
-          if (date) {
-              Swal.fire("Departure date", date); // Exibindo a data escolhida
-          }
+
+    const { value: date } = await Swal.fire({
+        title: "Selecione a data de pagamento",
+        input: "date",
+        didOpen: () => {
+            const today = (new Date()).toISOString();
+            Swal.getInput().min = today.split("T")[0]; // Definindo a data mínima
+        }
+    });
+    if (date) {
+        Swal.fire("Data de pagamento", date); // Exibe a data escolhida
+        // Aqui você pode adicionar a lógica para salvar essa data no banco, se necessário.
+    }
+
+
 
       if (!datapagamento) {
           showErrorModal("Por favor, insira a data de pagamento."); // Chama a função para abrir o modal
