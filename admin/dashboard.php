@@ -371,7 +371,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
 
       <footer class="footer">
         <div class="container text-left">
-        <a href="https://codemaze.com.br" target="_blank">-&nbsp;&nbsp;&nbsp;&nbsp;CODEMAZE</a>&nbsp;&nbsp;Intranet versão 1.0 &nbsp;&nbsp;&nbsp;&nbsp;Login Realizado ás <? echo date('d/m/Y H:i:s'); ?> &nbsp;&nbsp;&nbsp;Nível de acesso: <font color="#39ed3f"><? echo $_SESSION['user_nivelacesso']; ?></font>
+        <a href="https://codemaze.com.br" target="_blank">-&nbsp;&nbsp;&nbsp;&nbsp;CODEMAZE</a>&nbsp;&nbsp;Sistema de Gestão de Clientes e Serviços &nbsp;&nbsp;&nbsp;&nbsp;Login Realizado ás <? echo date('d/m/Y H:i:s'); ?> &nbsp;&nbsp;&nbsp;Nível de acesso: <font color="#39ed3f"><? echo $_SESSION['user_nivelacesso']; ?></font>
         
         </div>
       </footer>
