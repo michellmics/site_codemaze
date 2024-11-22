@@ -247,7 +247,7 @@
         content: 'swal-content', // Classe para o conteúdo (texto)
         confirmButton: 'swal-confirm-btn',
         denyButton: 'swal-deny-btn',
-        container: 'swal-text'
+        htmlContainer: 'swal-text'
       }
     }).then((result) => {
       if (result.isConfirmed) {
