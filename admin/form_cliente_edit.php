@@ -36,7 +36,7 @@
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
-         folder instead of downloading all of them to reduce the load. -->
+    folder instead of downloading all of them to reduce the load. -->
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -45,6 +45,22 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+  
+  <!-- ######################################################## --> 
+      <!-- SWEETALERT 2 --> 
+
+      <!-- SweetAlert2 CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
+      <!-- SweetAlert2 JS -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+
+  <!-- ######################################################## --> 
+  
+  
+  
+  
+  
+  
   </head>
   
   
@@ -209,6 +225,46 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+
+    <script>
+  // Função para mostrar SweetAlert de confirmação ao salvar
+  function confirmSave(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    Swal.fire({
+      title: 'Você tem certeza?',
+      text: "As informações serão salvas!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sim, salvar!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Se o usuário confirmar, envia o formulário
+        event.target.closest("form").submit();
+      }
+    });
+  }
+
+  // Atribui a função ao botão de submit
+  document.querySelector('[name="salvar_empresa_1"]').addEventListener('click', confirmSave);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<script>
         // Função para buscar o endereço pela API ViaCEP
