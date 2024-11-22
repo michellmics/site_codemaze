@@ -34,21 +34,18 @@
         // Lógica do processamento (como salvar dados, enviar e-mail, etc.)
         echo "
         <script>
-            Swal.fire({
-  title: 'Are you sure?',
-  text: 'You wont be able to revert this!',
-  icon: 'warning',
+Swal.fire({
+  title: 'Do you want to save the changes?',
+  showDenyButton: true,
   showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
+  confirmButtonText: 'Save',
+  denyButtonText: `Don't save`
 }).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
-    Swal.fire({
-      title: 'Deleted!',
-      text: 'Your file has been deleted.',
-      icon: 'success'
-    });
+    Swal.fire('Saved!', '', 'success');
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info');
   }
 });
         </script>";
