@@ -228,21 +228,25 @@
 
 
     <script>
-  // Função para mostrar SweetAlert de confirmação ao salvar
+  // Função para mostrar o SweetAlert2 de confirmação ao salvar
   function confirmSave(event) {
     event.preventDefault(); // Impede o envio do formulário
 
     Swal.fire({
-      title: 'Você tem certeza?',
-      text: "As informações serão salvas!",
-      icon: 'warning',
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
       showCancelButton: true,
-      confirmButtonText: 'Sim, salvar!',
-      cancelButtonText: 'Cancelar'
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`
     }).then((result) => {
       if (result.isConfirmed) {
         // Se o usuário confirmar, envia o formulário
-        event.target.closest("form").submit();
+        Swal.fire('Saved!', '', 'success').then(() => {
+          event.target.closest("form").submit();
+        });
+      } else if (result.isDenied) {
+        // Se o usuário negar, exibe uma mensagem
+        Swal.fire('Changes are not saved', '', 'info');
       }
     });
   }
@@ -250,6 +254,7 @@
   // Atribui a função ao botão de submit
   document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
 </script>
+
 
 
 
