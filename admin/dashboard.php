@@ -243,6 +243,15 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
             </ul>
           </div>
         </nav>
+        <section class="content-header">
+          <h1>
+            SGCS - Sistema de Gestão de Clientes e Serviços
+            <small>Versão 1.0</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="https://www.codemaze.com.br/site/admin/dashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+          </ol>
+        </section>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
@@ -313,15 +322,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            SGCS - Sistema de Gestão de Clientes e Serviços
-            <small>Versão 1.0</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="https://www.codemaze.com.br/site/admin/dashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-          </ol>
-        </section>
+
       
       <!--##############################################################-->
       <!-- Main content FRAME INI-->
