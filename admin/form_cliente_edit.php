@@ -266,7 +266,7 @@
 <style>
   /* Estilos para aumentar o tamanho da fonte */
   .swal-title {
-    font-size: 36px !important; /* Tamanho maior para o título */
+    font-size: 50px !important; /* Tamanho maior para o título */
   }
 
   .swal-content {
@@ -278,7 +278,7 @@
   .swal-deny-btn,
   .swal-cancel-btn {
     font-size: 36px !important; /* Tamanho maior para os textos dos botões */
-    padding: 12px 20px !important; /* Aumenta o espaço ao redor do texto */
+    padding: 18px 35px !important; /* Aumenta o espaço ao redor do texto */
   }
 
   /* Estilo extra para botões */
