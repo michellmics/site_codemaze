@@ -281,8 +281,8 @@
   .swal-confirm-btn,
   .swal-deny-btn,
   .swal-cancel-btn {
-    font-size: 24px !important; /* Tamanho maior para os textos dos botões */
-    padding: 18px 35px !important; /* Aumenta o espaço ao redor do texto */
+    font-size: 20px !important; /* Tamanho maior para os textos dos botões */
+    padding: 18px 12px !important; /* Aumenta o espaço ao redor do texto */
   }
 
   /* Estilo extra para botões */
