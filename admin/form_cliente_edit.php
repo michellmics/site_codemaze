@@ -171,7 +171,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>OBSERVAÇÕES</label>
-                      	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="250" rows="5" >
+                      	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="250" rows="3" >
                         <? echo trim($siteAdmin->ARRAY_CLIENTINFO[0]["CLI_DCOBS"]); ?>
                         </textarea>
                     	</div>
@@ -197,6 +197,7 @@
 
                   
                   <div class="box-footer">
+                    <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
