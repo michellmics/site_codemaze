@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo SweetAlert</title>
-    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<!-- Include the Bulma theme -->
+<link rel="stylesheet" href="@sweetalert2/theme-bulma/bulma.css">
+
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
 </head>
 <body>
     <h1>Formulário de Contato</h1>
