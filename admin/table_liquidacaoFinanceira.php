@@ -267,7 +267,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-
+function selecionarData()
+      {
+        return confirm("Tem certeza que deseja mudar o status do pagamento");
+      }
 
       function confirmacao() 
       {
