@@ -214,7 +214,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
@@ -248,7 +248,7 @@
   }
 
   // Atribui a função ao botão de submit
-  document.querySelector('[name="salvar_empresa_1"]').addEventListener('click', confirmSave);
+  document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
 </script>
 
 
