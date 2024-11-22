@@ -267,20 +267,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-      function selecionarData()
-      {
-          const { value: date } = await Swal.fire({
-          title: "select departure date",
-          input: "date",
-          didOpen: () => {
-            const today = (new Date()).toISOString();
-            Swal.getInput().min = today.split("T")[0];
-          }
-        });
-        if (date) {
-          Swal.fire("Departure date", date);
-        }
-      }
+
 
       function confirmacao() 
       {
