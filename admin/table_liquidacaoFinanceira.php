@@ -259,11 +259,13 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
 
     <script>
 
-      $(document).ready(function() {
-          $('#pagamento').mask('00/00/0000', {
-              placeholder: "__/__/____"
-          });
-      });
+$(document).ready(function() {
+    $('input[name="pagamento"]').each(function() {
+        $(this).mask('00/00/0000', {
+            placeholder: "__/__/____"
+        });
+    });
+});
 
       function confirmacao() 
       {
