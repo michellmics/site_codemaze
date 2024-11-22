@@ -265,8 +265,8 @@ $siteAdmin->ARRAY_CONTRATOINFO[0]["GEC_DTVENCIMENTO"] = convertDate($siteAdmin->
 
                   
                   <div class="box-footer">
+                    <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
                     <button type="submit" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
-                    <button type="submit" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
                   </div>
                 </form>
               </div>
