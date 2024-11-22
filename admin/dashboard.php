@@ -120,7 +120,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
 }
 
 .content {
-  margin-top: 120px; /* Ajuste o valor conforme necessário, dependendo da altura da header fixa */
+  margin-top: 40px; /* Ajuste o valor conforme necessário, dependendo da altura da header fixa */
 }
 
   </style>
