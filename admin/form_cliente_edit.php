@@ -266,10 +266,10 @@
 <style>
   /* Estilos para aumentar o tamanho da fonte */
   .swal-title {
-    font-size: 24px !important; /* Tamanho maior para o título */
+    font-size: 36px !important; /* Tamanho maior para o título */
   }
   .swal-content {
-    font-size: 20px !important; /* Tamanho maior para o conteúdo */
+    font-size: 26px !important; /* Tamanho maior para o conteúdo */
   }
 </style>
 
