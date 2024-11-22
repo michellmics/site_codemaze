@@ -232,27 +232,26 @@
   function confirmSave(event) {
     event.preventDefault(); // Impede o envio do formulário
 
-    Swal.fire({
-      title: 'Do you want to save the changes?',
-      text: "The changes you made will be saved if you confirm.",
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Save',
-      denyButtonText: `Don't save`,
-      width: '700px', // Largura do alerta
-      icon: 'warning'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Se o usuário confirmar, envia o formulário
-        Swal.fire('Saved!', '', 'success').then(() => {
-          event.target.closest("form").submit();
-        });
-      } else if (result.isDenied) {
+    
+
+
+  Swal.fire({
+  title: 'Are you sure?',
+  text: 'You wont be able to revert this!',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    event.target.closest("form").submit();
+  }
+  else {
         // Se o usuário negar, exibe uma mensagem
         Swal.fire('Changes are not saved', '', 'info');
       }
-    });
-  }
+});
 
   // Atribui a função ao botão de submit
   document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
