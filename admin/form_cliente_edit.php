@@ -244,7 +244,8 @@
       icon: 'warning',
       customClass: {
         title: 'swal-title', // Classe para o título
-        content: 'swal-content' // Classe para o conteúdo (texto)
+        content: 'swal-content', // Classe para o conteúdo (texto)
+        confirmButton: 'swal-confirm-btn'
       }
     }).then((result) => {
       if (result.isConfirmed) {
