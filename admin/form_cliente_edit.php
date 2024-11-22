@@ -234,7 +234,7 @@
 
     Swal.fire({
       title: 'Têm certeza que deseja salvar?',
-      text: "",
+      text: "dasdsadsad",
       showDenyButton: true,
       confirmButtonText: 'SALVAR',
       denyButtonText: `CANCELAR`,
@@ -246,7 +246,8 @@
         title: 'swal-title', // Classe para o título
         content: 'swal-content', // Classe para o conteúdo (texto)
         confirmButton: 'swal-confirm-btn',
-        denyButton: 'swal-deny-btn'
+        denyButton: 'swal-deny-btn',
+        container: 'swal-text'
       }
     }).then((result) => {
       if (result.isConfirmed) {
@@ -282,7 +283,7 @@
   .swal-deny-btn,
   .swal-cancel-btn {
     font-size: 20px !important; /* Tamanho maior para os textos dos botões */
-    padding: 18px 12px !important; /* Aumenta o espaço ao redor do texto */
+    padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
   }
 
   /* Estilo extra para botões */
