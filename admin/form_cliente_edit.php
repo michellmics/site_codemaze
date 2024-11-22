@@ -239,7 +239,7 @@
       showCancelButton: true,
       confirmButtonText: 'Save',
       denyButtonText: `Don't save`,
-      width: '400px', // Largura do alerta
+      width: '700px', // Largura do alerta
       icon: 'warning'
     }).then((result) => {
       if (result.isConfirmed) {
