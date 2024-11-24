@@ -235,14 +235,15 @@
     event.preventDefault(); // Impede o envio padrão do formulário
 
     Swal.fire({
-      title: 'Deseja salvar as alterações?',
-      text: "Você pode revisar os dados antes de confirmar.",
+      title: 'Têm certeza que deseja salvar?',
+      text: "dasdsadsad",
+      showDenyButton: true,
+      confirmButtonText: 'SALVAR',
+      denyButtonText: `CANCELAR`,
+      confirmButtonColor: "#4289a6",
+      denyButtonColor: "#ff8a33",
+      width: '600px', // Largura do alerta
       icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Sim, salvar!',
-      cancelButtonText: 'Cancelar',
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
       customClass: {
         title: 'swal-title', // Classe para o título
         content: 'swal-content', // Classe para o conteúdo (texto)
