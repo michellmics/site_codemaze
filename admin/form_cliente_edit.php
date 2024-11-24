@@ -229,33 +229,60 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
-  $(document).ready(function () {
-    $("#form-empresa").on("submit", function (event) {
-      event.preventDefault(); // Evita o redirecionamento padrão
+    <script>
+  // Função para mostrar o SweetAlert2 de confirmação antes de enviar via AJAX
+  function confirmAndSubmit(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-      // Capturar os dados do formulário
-      var formData = $(this).serialize();
+    Swal.fire({
+      title: 'Deseja salvar as alterações?',
+      text: "Você pode revisar os dados antes de confirmar.",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sim, salvar!',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Capturar os dados do formulário
+        var formData = $("#form-empresa").serialize();
 
-      // Fazer a requisição AJAX
-      $.ajax({
-        url: "client_proc_edit.php", // O arquivo que processa os dados
-        type: "POST",
-        data: formData,
-        success: function (response) {
-          // Manipula o resultado do servidor
-          alert("Dados salvos com sucesso!");
-          console.log(response); // Para debug, exibe a resposta no console
-        },
-        error: function (xhr, status, error) {
-          // Caso ocorra erro na requisição
-          console.error("Erro: " + error);
-          alert("Ocorreu um erro ao salvar os dados.");
-        },
-      });
+        // Fazer a requisição AJAX
+        $.ajax({
+          url: "client_proc_edit.php", // URL para processamento
+          type: "POST",
+          data: formData,
+          success: function (response) {
+            Swal.fire(
+              'Salvo!',
+              'As alterações foram salvas com sucesso.',
+              'success'
+            ).then(() => {
+              // Redirecionar ou atualizar a página, se necessário
+              location.reload();
+            });
+          },
+          error: function (xhr, status, error) {
+            Swal.fire(
+              'Erro!',
+              'Ocorreu um problema ao salvar os dados.',
+              'error'
+            );
+          },
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
+      }
     });
+  }
+
+  // Associar a função ao botão de submit
+  $(document).ready(function () {
+    $("#salvar_empresa_1").on("click", confirmAndSubmit);
   });
 </script>
+
 
     
 
