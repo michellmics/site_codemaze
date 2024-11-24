@@ -263,10 +263,9 @@
           data: formData,
           success: function (response) {
             Swal.fire(
-              width: '600px', // Largura do alerta
               'Salvo!',
               'As alterações foram salvas com sucesso.',
-              'success',
+              'success'
             ).then(() => {
               // Redirecionar ou atualizar a página, se necessário
               location.reload();
