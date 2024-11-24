@@ -84,7 +84,8 @@
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="POST" action="client_proc_edit.php">
+                <!-- <form role="form" method="POST" action="client_proc_edit.php"> -->
+                <form id="form-empresa" role="form" method="POST">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -214,7 +215,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">
                   </div>
                 </form>
               </div>
@@ -226,6 +227,35 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $("#form-empresa").on("submit", function (event) {
+      event.preventDefault(); // Evita o redirecionamento padrão
+
+      // Capturar os dados do formulário
+      var formData = $(this).serialize();
+
+      // Fazer a requisição AJAX
+      $.ajax({
+        url: "client_proc_edit.php", // O arquivo que processa os dados
+        type: "POST",
+        data: formData,
+        success: function (response) {
+          // Manipula o resultado do servidor
+          alert("Dados salvos com sucesso!");
+          console.log(response); // Para debug, exibe a resposta no console
+        },
+        error: function (xhr, status, error) {
+          // Caso ocorra erro na requisição
+          console.error("Erro: " + error);
+          alert("Ocorreu um erro ao salvar os dados.");
+        },
+      });
+    });
+  });
+</script>
 
     <script>
   // Função para mostrar o SweetAlert2 de confirmação ao salvar
