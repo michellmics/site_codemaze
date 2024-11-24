@@ -257,43 +257,7 @@
   });
 </script>
 
-    <script>
-  // Função para mostrar o SweetAlert2 de confirmação ao salvar
-  function confirmSave(event) {
-    event.preventDefault(); // Impede o envio do formulário
-
-    Swal.fire({
-      title: 'Têm certeza que deseja salvar?',
-      text: "dasdsadsad",
-      showDenyButton: true,
-      confirmButtonText: 'SALVAR',
-      denyButtonText: `CANCELAR`,
-      confirmButtonColor: "#4289a6",
-      denyButtonColor: "#ff8a33",
-      width: '600px', // Largura do alerta
-      icon: 'warning',
-      customClass: {
-        title: 'swal-title', // Classe para o título
-        content: 'swal-content', // Classe para o conteúdo (texto)
-        confirmButton: 'swal-confirm-btn',
-        denyButton: 'swal-deny-btn',
-        htmlContainer: 'swal-text'
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Se o usuário confirmar, envia o formulário
-        Swal.fire('Mudanças foram Salvas!', '', 'success').then(() => {
-          event.target.closest("form").submit();
-        });
-      } else if (result.isDenied) {
-        // Se o usuário negar, exibe uma mensagem
-        Swal.fire('Mudanças descartadas', '', 'info');
-      }
-    });
-  }
-  // Atribui a função ao botão de submit
-  document.querySelector('[id="salvar_empresa_1"]').addEventListener('click', confirmSave);
-</script>
+    
 
 <style>
   /* Estilos para aumentar o tamanho da fonte */
