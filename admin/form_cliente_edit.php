@@ -84,7 +84,7 @@
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <!-- <form role="form" method="POST" action="client_proc_edit.php"> -->
+                <!-- <form role="form" method="POST" action="client_proc_edit.php">  -->
                 <form id="form-empresa" role="form" method="POST">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
@@ -215,7 +215,7 @@
                   
                   <div class="box-footer">
                     <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">
+                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
                   </div>
                 </form>
               </div>
