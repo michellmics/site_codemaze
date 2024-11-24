@@ -314,6 +314,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                 <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_MICHELL_FRONT.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Michell</a></li>
                 <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_VANESSA_FRONT.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Vanessa</a></li>
                 <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CARTAO_BACK.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Back</a></li>
+                <li><a href="https://www.codemaze.com.br/site/admin/papelaria/proposta_modelo.pptx" target="_blank"><i class="fa fa-circle-o"></i> Proposta Comercial</a></li>
                 <li><a href="https://www.codemaze.com.br/site/admin/papelaria/CONTRATO_PROJETO_SITE.docx" target="_blank"><i class="fa fa-circle-o"></i> Contrato Desen. Site</a></li>
               </ul> 
             </li>            
