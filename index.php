@@ -260,7 +260,7 @@
                                 <p class="lead">Experiência sólida em operações empresariais, controle financeiro, supervisão de equipes, gerenciamento de projetos e gestão de mídias sociais. Vivência em ambientes dinâmicos, com foco em otimização de processos, liderança de equipes e implementação de estratégias.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/nessa.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/nessa_v2.png" alt="" class="img-responsive alignleft">
                                 <h4>Vanessa Kuasne <small>Co-Fundadora / Analista de Social Media</small></h4>
                             </div>
                             <!-- end testi-meta -->
