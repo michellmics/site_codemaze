@@ -243,6 +243,13 @@
       cancelButtonText: 'Cancelar',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
+      customClass: {
+        title: 'swal-title', // Classe para o título
+        content: 'swal-content', // Classe para o conteúdo (texto)
+        confirmButton: 'swal-confirm-btn',
+        denyButton: 'swal-deny-btn',
+        htmlContainer: 'swal-text'
+      }
     }).then((result) => {
       if (result.isConfirmed) {
         // Capturar os dados do formulário
