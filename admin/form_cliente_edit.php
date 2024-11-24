@@ -263,9 +263,17 @@
           data: formData,
           success: function (response) {
             Swal.fire(
+              width: '600px', // Largura do alerta
               'Salvo!',
               'As alterações foram salvas com sucesso.',
-              'success'
+              'success',
+              customClass: {
+        title: 'swal-title', // Classe para o título
+        content: 'swal-content', // Classe para o conteúdo (texto)
+        confirmButton: 'swal-confirm-btn',
+        denyButton: 'swal-deny-btn',
+        htmlContainer: 'swal-text'
+      }
             ).then(() => {
               // Redirecionar ou atualizar a página, se necessário
               location.reload();
