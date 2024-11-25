@@ -282,7 +282,7 @@
           error: function (xhr, status, error) {
             Swal.fire({
           title: 'Erro!',
-          text: 'As alterações não foram salvas.',
+          text: `${response}`,
           icon: 'error',
           width: '600px', // Largura do alerta
           confirmButtonColor: "#4289a6",

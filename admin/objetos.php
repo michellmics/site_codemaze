@@ -827,11 +827,11 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
-                return ["success" => "Cliente atualizado com sucesso."];
+                return "Cliente atualizado com sucesso.";
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 $this->InsertAlarme("Erro na função updateClientInfo. $CLI_NMNAME","High");
-                return ["error" => $e->getMessage()];
+                return "Erro ao atualizar o Cliente.";
             }
         }
 
