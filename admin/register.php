@@ -70,7 +70,7 @@ $result = $siteAdmin->getSiteInfo();
                 </div>
                 <div class="form-group has-feedback">
                     <label for="foto">Foto</label>
-                    <input type="file" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png" required />
+                    <input type="file" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png"/>
                 </div>
                 <div class="row">
                     <div class="col-xs-8">

@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id']))
 
 class registerUser extends SITE_ADMIN
 {
-    public function insertUser($email, $senha, $nome, $sexo)
+    public function insertUser($email, $senha, $nome, $sexo, $foto)
     {
         try {
             // Cria conexão com o banco de dados
@@ -36,7 +36,7 @@ class registerUser extends SITE_ADMIN
             } else 
                 {
                     $passHash = password_hash($senha, PASSWORD_DEFAULT);
-                    $result = $this->insertUserInfo($email, $nome, $sexo, $passHash);
+                    $result = $this->insertUserInfo($email, $nome, $sexo, $passHash, $foto);
                     
                     $SUBJECT = "Cadastro de novo usuário administrador";
                     $MSG = "O usuário(a) $nome com e-mail $email foi cadastrado como administrador da intranet da Codemaze.";
@@ -58,7 +58,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $sexo = $_POST['sexo'];
 
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['foto']['tmp_name'];
+        $fileName = $_FILES['foto']['name'];
+        $fileSize = $_FILES['foto']['size'];
+        $fileType = $_FILES['foto']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
+
+        // Extensões permitidas
+        $allowedExts = ['jpg', 'jpeg', 'png'];
+
+        // Verifica a extensão e o tamanho do arquivo
+        if (in_array($fileExtension, $allowedExts) && $fileSize < 2 * 1024 * 1024) { // 2MB máximo
+            // Define o diretório para salvar a foto
+            $uploadDir = 'uploads/';
+            $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+            $uploadFile = $uploadDir . $newFileName;
+
+            // Move o arquivo para o diretório de uploads
+            if (move_uploaded_file($fileTmpPath, $uploadFile)) {
+                $foto = $uploadFile; // Caminho da foto
+            } else {
+                echo "Erro ao fazer upload da foto.";
+                exit();
+            }
+        } else {
+            echo "Formato de arquivo inválido ou o arquivo é muito grande.";
+            exit();
+        }
+    }
+
     $registerUser = new registerUser();
-    $registerUser->insertUser($email, $senha, $nome, $sexo);
+    $registerUser->insertUser($email, $senha, $nome, $sexo, $foto);
 }
 ?>
