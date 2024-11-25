@@ -15,7 +15,7 @@ class registerClient extends SITE_ADMIN
                 $this->conexao();
             }
                 
-            $result = $this->updateClientInf($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
+            $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
            // echo "Cliente atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";   
             echo $result;             
                      
