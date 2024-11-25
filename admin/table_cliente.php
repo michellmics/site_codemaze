@@ -24,10 +24,11 @@ if($activesList == "Inativos")
 {
   $siteAdmin->getClientInactiveInfo();
 }
-else
-  {
-    $siteAdmin->getClientInfo();
-  }
+if($activesList == "Ativos")
+{
+  $siteAdmin->getClientInactiveInfo();
+}
+
 
 
 // Configurações de Paginação
