@@ -227,89 +227,84 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
 
+
+
+    <!-- ######################################################## --> 
+    <!-- SWEETALERT 2 -->   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
-  // Função para mostrar o SweetAlert2 de confirmação antes de enviar via AJAX
-  function confirmAndSubmit(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    Swal.fire({
-      title: 'Formulárioo de Cliente',
-      text: "Têm certeza que deseja salvar?",
-      showDenyButton: true,
-      confirmButtonText: 'SALVAR',
-      denyButtonText: `CANCELAR`,
-      confirmButtonColor: "#4289a6",
-      denyButtonColor: "#ff8a33",
-      width: '600px', // Largura do alerta
-      icon: 'warning',
-      customClass: {
-        title: 'swal-title', // Classe para o título
-        content: 'swal-content', // Classe para o conteúdo (texto)
-        confirmButton: 'swal-confirm-btn',
-        denyButton: 'swal-deny-btn',
-        htmlContainer: 'swal-text'
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Capturar os dados do formulário
-        var formData = $("#form-empresa").serialize();
-
-        // Fazer a requisição AJAX
-        $.ajax({
-          url: "client_proc_edit.php", // URL para processamento
-          type: "POST",
-          data: formData,
-          success: function (response) {
-            Swal.fire({
-          title: 'Salvo!',
-          text: `${response}`,
-          icon: 'success',
-          width: '600px', // Largura do alerta
+      function confirmAndSubmit(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        Swal.fire({
+          title: 'Formulárioo de Cliente',
+          text: "Têm certeza que deseja salvar?",
+          showDenyButton: true,
+          confirmButtonText: 'SALVAR',
+          denyButtonText: `CANCELAR`,
           confirmButtonColor: "#4289a6",
+          denyButtonColor: "#ff8a33",
+          width: '600px', // Largura do alerta
+          icon: 'warning',
           customClass: {
-            title: 'swal-title', // Aplicando a mesma classe do título
-            content: 'swal-content', // Aplicando a mesma classe do texto
-            htmlContainer: 'swal-text',
-            confirmButton: 'swal-confirm-btn'
+            title: 'swal-title', // Classe para o título
+            content: 'swal-content', // Classe para o conteúdo (texto)
+            confirmButton: 'swal-confirm-btn',
+            denyButton: 'swal-deny-btn',
+            htmlContainer: 'swal-text'
           }
-        }).then(() => {
-              // Redirecionar ou atualizar a página, se necessário
-              location.reload();
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Capturar os dados do formulário
+            var formData = $("#form-empresa").serialize();
+            // Fazer a requisição AJAX
+            $.ajax({
+              url: "client_proc_edit.php", // URL para processamento
+              type: "POST",
+              data: formData,
+              success: function (response) {
+                Swal.fire({
+              title: 'Salvo!',
+              text: `${response}`,
+              icon: 'success',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
+            }).then(() => {
+                  // Redirecionar ou atualizar a página, se necessário
+                  location.reload();
+                });
+              },
+              error: function (xhr, status, error) {
+                Swal.fire({
+              title: 'Erro!',
+              text: 'Erro ao atualizar o Cliente.',
+              icon: 'error',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
             });
-          },
-          error: function (xhr, status, error) {
-            Swal.fire({
-          title: 'Erro!',
-          text: 'Erro ao atualizar o Cliente.',
-          icon: 'error',
-          width: '600px', // Largura do alerta
-          confirmButtonColor: "#4289a6",
-          customClass: {
-            title: 'swal-title', // Aplicando a mesma classe do título
-            content: 'swal-content', // Aplicando a mesma classe do texto
-            htmlContainer: 'swal-text',
-            confirmButton: 'swal-confirm-btn'
+              },
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
           }
         });
-          },
-        });
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
       }
-    });
-  }
-
-  // Associar a função ao botão de submit
-  $(document).ready(function () {
-    $("#salvar_empresa_1").on("click", confirmAndSubmit);
-  });
-</script>
-
-
-    
-
+      // Associar a função ao botão de submit
+      $(document).ready(function () {
+        $("#salvar_empresa_1").on("click", confirmAndSubmit);
+      });
+</script> 
 <style>
   /* Estilos para aumentar o tamanho da fonte */
   .swal-title {
@@ -328,7 +323,8 @@
     padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
   }
 </style>
-
+<!-- ######################################################## --> 
+<!-- SWEETALERT 2 -->   
 
 
 
