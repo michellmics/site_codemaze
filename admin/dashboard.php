@@ -16,12 +16,8 @@
   $siteAdmin->getUserInfo();
   $siteAdmin->getAlertaInfo();
 
-  var_dump($siteAdmin->ARRAY_USERINFO);
-  die();
-
   //defin usuario
-
-if($siteAdmin->ARRAY_USERINFO[0]["USA_DCFOTO"] == "NULL")
+if($siteAdmin->ARRAY_USERINFO["USA_DCFOTO"] == "NULL")
 {
   if($_SESSION['user_sexo'] == "MASCULINO")
   {
