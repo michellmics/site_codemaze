@@ -1,6 +1,6 @@
 <?php
 include_once 'objetos.php'; // Carrega a classe de conexão e objetos
-include 'modal_ok.php';
+//include 'modal_ok.php';
 
 session_start(); // Inicia a sessão para armazenar dados do usuário
 
