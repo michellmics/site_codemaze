@@ -94,8 +94,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <h3 class="box-title">Lista de Clientes</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
-                  <div class="input-group" style="display: flex; align-items: center; gap: 20px;">
-                  <input type="checkbox" id="status" name="status" value="Ativo"> Ativo
+                  <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
+                  <input type="checkbox" id="status" name="status" value="Ativo"> Clientes Inativos
                   
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
