@@ -191,7 +191,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
   function redirectToLink(checkbox) {
     const value = checkbox.value; // Valor do checkbox
     if (checkbox.checked) {
-      window.location.href = "https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}";
+      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
     }
   }
 </script>
