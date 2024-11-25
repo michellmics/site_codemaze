@@ -23,7 +23,7 @@
   $descServicos_5 = $siteAdmin->getDescInfo("SERVICOS",5);
   $descServicos_6 = $siteAdmin->getDescInfo("SERVICOS",6);
   $descServicos_7 = $siteAdmin->getDescInfo("SERVICOS",7);
-*/
+
     //salvar formularios
     if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
     {
@@ -43,7 +43,7 @@
           echo "<div class='alert alert-success'>" . $result['success'] . "</div> ";      
         }
     }
-
+*/
 ?>
 
 
