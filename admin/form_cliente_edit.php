@@ -264,7 +264,7 @@
           success: function (response) {
             Swal.fire({
           title: 'Salvo!',
-          text: 'As alterações foram salvas com sucesso.',
+          text: '${response}',
           icon: 'success',
           width: '600px', // Largura do alerta
           confirmButtonColor: "#4289a6",
