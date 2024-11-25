@@ -48,12 +48,10 @@
   
   <!-- ######################################################## --> 
       <!-- SWEETALERT 2 --> 
-
       <!-- SweetAlert2 CSS -->
       <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
-
   <!-- ######################################################## --> 
   
   
@@ -84,7 +82,6 @@
                   <h3 class="box-title">Cadastro de Clientes</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <!-- <form role="form" method="POST" action="client_proc_edit.php">  -->
                 <form id="form-empresa" role="form" method="POST">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
