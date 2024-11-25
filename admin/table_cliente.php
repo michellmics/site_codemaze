@@ -18,9 +18,9 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
   $siteAdmin->getClientInfoBySearch($search);
 }
 
-$activesList = $_GET['actives'];
+$activesList = $_GET['statusBusca'];
 
-if($activesList == "NO")
+if($activesList == "Inativos")
 {
   $siteAdmin->getClientInactiveInfo();
 }
@@ -102,7 +102,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <input type="checkbox" id="status" name="status" value="Ativo" onchange="redirectToLink(this)">Inativos
+                  <input type="checkbox" id="status" name="status" value="Inativos" onchange="redirectToLink(this)"><? echo $activesList; ?>
                   
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
@@ -190,7 +190,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(checkbox) {
     if (checkbox.checked) {
-      window.location.href = "https://www.codemaze.com.br/site/admin/table_cliente.php?actives=NO";
+      window.location.href = "https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=Inativos";
     }
   }
 </script>
