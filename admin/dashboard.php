@@ -16,7 +16,7 @@
   $siteAdmin->getUserInfo();
   $siteAdmin->getAlertaInfo();
 
-  var_dump($siteAdmin->ARRAY_USERINFO)
+  var_dump($siteAdmin->ARRAY_USERINFO);
   die();
 
   //defin usuario
