@@ -688,13 +688,13 @@
             }          
         }
 
-        public function getUserInfo()
+        public function getUserInfo($USA_IDUSERADMIN)
         {          
                 // Verifica se a conexão já foi estabelecida
                 if(!$this->pdo){$this->conexao();}
             
             try{           
-                $sql = "SELECT * FROM USA_USERADMIN";
+                $sql = "SELECT * FROM USA_USERADMIN WHERE USA_IDUSERADMIN = $USA_IDUSERADMIN";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();

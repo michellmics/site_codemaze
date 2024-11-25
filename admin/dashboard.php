@@ -11,9 +11,11 @@
     exit();
   }
 
+  $idUser = $_SESSION['user_id'];
+
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getSiteInfo(); 
-  $siteAdmin->getUserInfo();
+  $siteAdmin->getUserInfo($idUser);
   $siteAdmin->getAlertaInfo();
 
   //defin usuario
