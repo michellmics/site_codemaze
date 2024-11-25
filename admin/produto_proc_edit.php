@@ -22,10 +22,10 @@ class updateProduct extends SITE_ADMIN
             }            
             
             $this->updateProductInfo($nome,$tipo,$investimento,$status,$descricao,$id);
-            echo "Produto atualizado com sucesso. <a href='table_produto.php'>VOLTAR</a>";                           
+            echo "Produto atualizado com sucesso.";                           
                
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage();
+            echo "ERRO: Não foi possível atualizar o produto.";  
         } 
     }
 }

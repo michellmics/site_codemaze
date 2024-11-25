@@ -42,7 +42,7 @@ class registerProduct extends SITE_ADMIN
                      
                 }
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage();
+            echo "Erro ao cadastrar o produto."; 
         } 
     }
 }

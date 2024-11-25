@@ -156,7 +156,7 @@
       function confirmAndSubmit(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulárioo de Cliente',
+          title: 'Formulário de Produtos',
           text: "Têm certeza que deseja salvar?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
