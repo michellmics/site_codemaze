@@ -146,13 +146,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?> </a>
                             </span>
                         </td> 
+                        <?if($client['CLI_DCSTATE'] == "Ativo"){$styleStatus = "text-transform: uppercase; font-size: 12px; color: #00d40a;";} else {$styleStatus = "text-transform: uppercase; font-size: 12px; color: #ff0202;";} ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px; background-color: #00d40a; border-color: #00d40a;" ><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
+                        <td style="text-transform: uppercase; font-size: 12px; color: #ffd700;" ><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $client['CLI_IDCLIENT']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
                       </tr>
                     <?php endforeach; ?>   
