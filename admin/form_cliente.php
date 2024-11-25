@@ -11,6 +11,8 @@
   }
 
   $siteAdmin = new SITE_ADMIN();
+
+  /*
   $descEmpresa_1 = $siteAdmin->getDescInfo("EMPRESA",1);
   $descEmpresa_2 = $siteAdmin->getDescInfo("EMPRESA",2);
 
@@ -21,7 +23,7 @@
   $descServicos_5 = $siteAdmin->getDescInfo("SERVICOS",5);
   $descServicos_6 = $siteAdmin->getDescInfo("SERVICOS",6);
   $descServicos_7 = $siteAdmin->getDescInfo("SERVICOS",7);
-
+*/
     //salvar formularios
     if ($_SERVER['REQUEST_METHOD'] === 'POST') //botao salvar empresa_1
     {
