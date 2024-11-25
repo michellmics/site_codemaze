@@ -16,7 +16,12 @@
   $siteAdmin->getUserInfo();
   $siteAdmin->getAlertaInfo();
 
+  
+
   //defin usuario
+
+if($siteAdmin->ARRAY_USERINFO[0]["USA_DCFOTO"] == "NULL")
+{
   if($_SESSION['user_sexo'] == "MASCULINO")
   {
     $imgProfile = "dist/img/avatar5.png";
@@ -25,6 +30,11 @@
       {
         $imgProfile = "dist/img/avatar3.png";
       }
+}
+else
+    {
+      $imgProfile = $siteAdmin->ARRAY_USERINFO[0]["USA_DCFOTO"];
+    }
 
 if (isset($_GET['alerta'])) //reconheciento de alerta
 {
@@ -220,7 +230,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src=<? echo $imgProfile ?> class="user-image" alt="User Image"/>
+                  <img src=<? echo $imgProfile ?> class="user-image" alt="User Image"/>                    
                   <span class="hidden-xs"><?php echo htmlspecialchars($_SESSION['user_name']); ?></span>
                 </a>
                 <ul class="dropdown-menu">

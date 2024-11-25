@@ -694,11 +694,7 @@
                 if(!$this->pdo){$this->conexao();}
             
             try{           
-                $sql = "SELECT USA_IDUSERADMIN,                                  
-                                USA_DCEMAIL, 
-                                USA_DCNOME,
-                                USA_DCSEXO
-                                FROM USA_USERADMIN";
+                $sql = "SELECT * FROM USA_USERADMIN";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
