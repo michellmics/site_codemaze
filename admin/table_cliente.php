@@ -102,8 +102,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <input type="checkbox" id="status" name="status" value="Inativos" checked onchange="redirectToLink(this)"><? echo $activesList; ?>
-                  <input type="checkbox" id="status" name="status" value="Inativos" checked onchange="redirectToLink(this)"><? echo $activesList; ?>
+                  <input type="checkbox" id="status" name="status" value="Ativos" checked onchange="redirectToLink(this)">Ativos
+                  <input type="checkbox" id="status" name="status" value="Inativos" checked onchange="redirectToLink(this)">Inativos
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
                     <form method="GET" action="" style="display: flex;">
@@ -189,8 +189,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 <script>
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(checkbox) {
+    const value = checkbox.value; // Valor do checkbox
     if (checkbox.checked) {
-      window.location.href = "https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=Inativos";
+      window.location.href = "https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}";
     }
   }
 </script>
