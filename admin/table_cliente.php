@@ -102,8 +102,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <input type="checkbox" id="status" name="status" value="Ativos" checked onchange="redirectToLink(this)">Ativos
-                  <input type="checkbox" id="status" name="status" value="Inativos" checked onchange="redirectToLink(this)">Inativos
+                  <input type="checkbox" id="status" name="status" value="Ativos"  onchange="redirectToLink(this)">Ativos
+                  <input type="checkbox" id="status" name="status" value="Inativos"  onchange="redirectToLink(this)">Inativos
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
                     <form method="GET" action="" style="display: flex;">
