@@ -22,11 +22,11 @@ $activesList = $_GET['statusBusca'];
 
 if($activesList == "Inativos")
 {
-  $siteAdmin->getClientInfo();
+  $siteAdmin->getClientInactiveInfo();
 }
 else
   {
-    $siteAdmin->getClientInactiveInfo(); 
+    $siteAdmin->getClientInfo(); 
   }
 
 
@@ -102,7 +102,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)"> Ativos </button>
                   <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)"> Inativos </button>
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
@@ -189,9 +188,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 <script>
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(checkbox) {
-    const valueAct = checkbox.value; // Valor do checkbox
+    console.log("Valor do botão clicado:", value); // Log para verificar
     if (checkbox.checked) {
-      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${valueAct}`;
+      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
     }
   }
 </script>
