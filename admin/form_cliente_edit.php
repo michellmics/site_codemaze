@@ -235,8 +235,8 @@
     event.preventDefault(); // Impede o envio padrão do formulário
 
     Swal.fire({
-      title: 'Têm certeza que deseja salvar?',
-      text: "dasdsadsad",
+      title: 'Formulárioo de Cliente',
+      text: "Têm certeza que deseja salvar?",
       showDenyButton: true,
       confirmButtonText: 'SALVAR',
       denyButtonText: `CANCELAR`,
@@ -270,7 +270,8 @@
           confirmButtonColor: "#4289a6",
           customClass: {
             title: 'swal-title', // Aplicando a mesma classe do título
-            content: 'swal-content' // Aplicando a mesma classe do texto
+            content: 'swal-content', // Aplicando a mesma classe do texto
+            htmlContainer: 'swal-text'
           }
         }).then(() => {
               // Redirecionar ou atualizar a página, se necessário
