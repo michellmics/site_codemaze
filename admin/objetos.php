@@ -985,7 +985,7 @@
             }
         }
 
-        public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA, $USA_DCFOTO)
+        public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA, $USA_DCFOTO, $USA_DCNIVELDEACESSO)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -994,8 +994,8 @@
         
             try {
                 $sql = "INSERT INTO USA_USERADMIN 
-                        (USA_DCEMAIL, USA_DCNOME, USA_DCSEXO, USA_DCSENHA, USA_DCFOTO) 
-                        VALUES (:USA_DCEMAIL, :USA_DCNOME, :USA_DCSEXO, :USA_DCSENHA, :USA_DCFOTO)";
+                        (USA_DCEMAIL, USA_DCNOME, USA_DCSEXO, USA_DCSENHA, USA_DCFOTO, USA_DCNIVELDEACESSO) 
+                        VALUES (:USA_DCEMAIL, :USA_DCNOME, :USA_DCSEXO, :USA_DCSENHA, :USA_DCFOTO, :USA_DCNIVELDEACESSO)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -1005,6 +1005,7 @@
                 $stmt->bindParam(':USA_DCSEXO', $USA_DCSEXO, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCSENHA', $USA_DCSENHA, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCFOTO', $USA_DCFOTO, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_DCNIVELDEACESSO', $USA_DCNIVELDEACESSO, PDO::PARAM_STR);
             
                 $stmt->execute();
             

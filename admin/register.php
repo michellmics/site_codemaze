@@ -65,6 +65,14 @@ $result = $siteAdmin->getSiteInfo();
                 </div>
 
                 <div class="form-group has-feedback">
+                    <select name="nivel" class="form-control" required>
+                        <option value="" disabled selected>Nível de Acesso</option>
+                        <option value="MASCULINO">ADMINISTRADOR</option>
+                        <option value="FEMININO">OPERADOR</option>
+                    </select>
+                </div>
+
+                <div class="form-group has-feedback">
                     <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
