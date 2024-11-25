@@ -75,7 +75,7 @@ class registerClient extends SITE_ADMIN
         try {
             // Cria conexão com o banco de dados
             if (!$this->pdo) {
-                $this->conexao();
+                $this->conexaso();
             }
                 
             $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
