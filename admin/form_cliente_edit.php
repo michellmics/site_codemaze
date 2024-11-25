@@ -282,7 +282,7 @@
           error: function (xhr, status, error) {
             Swal.fire({
           title: 'Erro!',
-          text: `${response}`,
+          text: 'Erro ao atualizar o Cliente.',
           icon: 'error',
           width: '600px', // Largura do alerta
           confirmButtonColor: "#4289a6",
