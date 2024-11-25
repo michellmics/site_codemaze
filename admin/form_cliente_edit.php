@@ -262,11 +262,16 @@
           type: "POST",
           data: formData,
           success: function (response) {
-            Swal.fire(
-              'Salvo!',
-              'As alterações foram salvas com sucesso.',
-              'success'
-            ).then(() => {
+            Swal.fire({
+          title: 'Salvo!',
+          text: 'As alterações foram salvas com sucesso.',
+          icon: 'success',
+          width: '600px', // Largura do alerta
+          customClass: {
+            title: 'swal-title', // Aplicando a mesma classe do título
+            content: 'swal-content' // Aplicando a mesma classe do texto
+          }
+        }).then(() => {
               // Redirecionar ou atualizar a página, se necessário
               location.reload();
             });
