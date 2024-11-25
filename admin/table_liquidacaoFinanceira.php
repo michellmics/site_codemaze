@@ -213,7 +213,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; vertical-align: middle; font-size: 15px; <? echo  $inputLiquidarStatus ?>">
                             <a href="#" 
                                id="liquidarLink_<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>" 
-                               onclick="selecionarData(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
+                               onclick="return selecionarData(<?php echo $liquidFin['LFI_IDLIQUIDACAOFINANCEIRA']; ?>);">
                                <span class="label label-info">FINALIZAR</span>
                             </a>
                         </td>
