@@ -189,10 +189,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 <script>
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(checkbox) {
-    const value = checkbox.value; // Valor do checkbox
-    console.log("Valor do botão clicado:", value); // Log para verificar
+    const valueAct = checkbox.value; // Valor do checkbox
     if (checkbox.checked) {
-      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
+      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${valueAct}`;
     }
   }
 </script>
