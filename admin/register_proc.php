@@ -58,38 +58,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $sexo = $_POST['sexo'];
 
-    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-        $fileTmpPath = $_FILES['foto']['tmp_name'];
-        $fileName = $_FILES['foto']['name'];
-        $fileSize = $_FILES['foto']['size'];
-        $fileType = $_FILES['foto']['type'];
-        $fileNameCmps = explode(".", $fileName);
-        $fileExtension = strtolower(end($fileNameCmps));
-
-        // Extensões permitidas
-        $allowedExts = ['jpg', 'jpeg', 'png'];
-
-        // Verifica a extensão e o tamanho do arquivo
-        if (in_array($fileExtension, $allowedExts) && $fileSize < 2 * 1024 * 1024) { // 2MB máximo
-            // Define o diretório para salvar a foto
-            $uploadDir = 'uploads/';
-            $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
-            $uploadFile = $uploadDir . $newFileName;
-
-            // Move o arquivo para o diretório de uploads
-            if (move_uploaded_file($fileTmpPath, $uploadFile)) {
-                $foto = $uploadFile; // Caminho da foto
-            } else {
-                echo "Erro ao fazer upload da foto.";
-                exit();
-            }
-        } else {
-            echo "Formato de arquivo inválido ou o arquivo é muito grande.";
-            exit();
-        }
-    }
-
-    $registerUser = new registerUser();
-    $registerUser->insertUser($email, $senha, $nome, $sexo, $foto);
-}
-?>
+     // Verifica se o arquivo foi enviado
+     $foto = null;
+     if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+         $fileTmpPath = $_FILES['foto']['tmp_name'];
+         $fileName = $_FILES['foto']['name'];
+         $fileSize = $_FILES['foto']['size'];
+         $fileType = $_FILES['foto']['type'];
+         $fileNameCmps = explode(".", $fileName);
+         $fileExtension = strtolower(end($fileNameCmps));
+ 
+         // Extensões permitidas
+         $allowedExts = ['jpg', 'jpeg', 'png'];
+ 
+         // Verifica a extensão e o tamanho do arquivo
+         if (in_array($fileExtension, $allowedExts) && $fileSize < 2 * 1024 * 1024) { // 2MB máximo
+             // Define o diretório para salvar a foto
+             $uploadDir = 'uploads/';
+             $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+             $uploadFile = $uploadDir . $newFileName;
+ 
+             // Redimensiona a imagem para 75x75
+             $image = null;
+             if ($fileExtension == 'jpg' || $fileExtension == 'jpeg') {
+                 $image = imagecreatefromjpeg($fileTmpPath);
+             } elseif ($fileExtension == 'png') {
+                 $image = imagecreatefrompng($fileTmpPath);
+             }
+ 
+             if ($image !== null) {
+                 // Redimensiona a imagem
+                 $resizedImage = imagescale($image, 75, 75); // Redimensiona para 75x75 pixels
+ 
+                 // Salva a imagem redimensionada
+                 if ($fileExtension == 'jpg' || $fileExtension == 'jpeg') {
+                     imagejpeg($resizedImage, $uploadFile);
+                 } elseif ($fileExtension == 'png') {
+                     imagepng($resizedImage, $uploadFile);
+                 }
+ 
+                 // Libera a memória
+                 imagedestroy($image);
+                 imagedestroy($resizedImage);
+ 
+                 // Caminho da foto
+                 $foto = $uploadFile;
+             } else {
+                 echo "Erro ao processar a imagem.";
+                 exit();
+             }
+         } else {
+             echo "Formato de arquivo inválido ou o arquivo é muito grande.";
+             exit();
+         }
+     }
+ 
+     // Cria o objeto de registro de usuário e chama o método insertUser
+     $registerUser = new registerUser();
+     $registerUser->insertUser($email, $senha, $nome, $sexo, $foto);
+ }
+ ?>
