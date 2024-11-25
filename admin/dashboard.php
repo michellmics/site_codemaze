@@ -16,7 +16,8 @@
   $siteAdmin->getUserInfo();
   $siteAdmin->getAlertaInfo();
 
-  
+  var_dump($siteAdmin->ARRAY_USERINFO)
+  die();
 
   //defin usuario
 
@@ -33,7 +34,7 @@ if($siteAdmin->ARRAY_USERINFO[0]["USA_DCFOTO"] == "NULL")
 }
 else
     {
-      $imgProfile = $siteAdmin->ARRAY_USERINFO[0]["USA_DCFOTO"];
+      $imgProfile = $siteAdmin->ARRAY_USERINFO["USA_DCFOTO"];
     }
 
 if (isset($_GET['alerta'])) //reconheciento de alerta
