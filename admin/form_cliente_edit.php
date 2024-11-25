@@ -230,6 +230,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+      function dumpVar(variable) {
+    console.log(JSON.stringify(variable, null, 2));
+}
+
   // Função para mostrar o SweetAlert2 de confirmação antes de enviar via AJAX
   function confirmAndSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -262,7 +266,7 @@
           type: "POST",
           data: formData,
           success: function (response) {
-            console.log("Response recebido:", response);
+            dumpVar(myArray);
             Swal.fire({
           title: 'Salvo!',
           text: `${response}`,
