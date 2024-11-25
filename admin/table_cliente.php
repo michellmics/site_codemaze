@@ -197,7 +197,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 <script>
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(checkbox) {
-    const value = selectElement.value; // Valor selecionado
+    const value = selectElement.value; // Captura o valor selecionado
     if (checkbox.checked) {
       window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
     }
