@@ -267,6 +267,7 @@
           text: 'As alterações foram salvas com sucesso.',
           icon: 'success',
           width: '600px', // Largura do alerta
+          confirmButtonColor: "#4289a6",
           customClass: {
             title: 'swal-title', // Aplicando a mesma classe do título
             content: 'swal-content' // Aplicando a mesma classe do texto
