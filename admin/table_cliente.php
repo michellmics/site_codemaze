@@ -102,16 +102,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <select 
-        id="status" 
-        name="status" 
-        class="form-control input-sm" 
-        onchange="redirectToLink(this)"
-        style="width: auto;"
-    >
-        <option value="Ativos">Ativos</option>
-        <option value="Inativos">Inativos</option>
-    </select>
+                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)"> Ativos </button>
+                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)"> Inativos </button>
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
                     <form method="GET" action="" style="display: flex;">
@@ -196,9 +188,9 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
 
 <script>
   // Função para redirecionar ao link quando o checkbox for selecionado
-  function redirectToLink(selectElement) {
-    const value = selectElement.value; // Captura o valor selecionado
-      window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
+  function redirectToLink(button) {
+    const value = button.value;
+    window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
   }
 </script>
 
