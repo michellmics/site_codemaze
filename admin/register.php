@@ -45,7 +45,7 @@ $result = $siteAdmin->getSiteInfo();
 
         <div class="register-box-body">
             <p class="login-box-msg">Cadastro de novo usuário(a)</p>
-            <form action="register_proc.php" method="post" id="formRegistro">
+            <form action="register_proc.php" method="post" id="formRegistro" enctype="multipart/form-data">
                 <div class="form-group has-feedback">
                     <input type="text" name="nome" class="form-control" placeholder="Nome Completo" maxlength="45" required/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -68,7 +68,10 @@ $result = $siteAdmin->getSiteInfo();
                     <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
-
+                <div class="form-group has-feedback">
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png" required />
+                </div>
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="checkbox icheck"></div>                        
