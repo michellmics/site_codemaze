@@ -20,7 +20,7 @@ class registerClient extends SITE_ADMIN
             echo $result;             
                      
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage();
+            echo "Erro: " . $e->getMessage(); 
         } 
     }
 }
