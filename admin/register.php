@@ -77,7 +77,7 @@ $result = $siteAdmin->getSiteInfo();
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <label for="foto">Foto</label>
+                    <label for="foto">Foto (Tamanho máximo 2MB)</label>
                     <input type="file" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png"/>
                 </div>
                 <div class="row">
