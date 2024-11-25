@@ -22,13 +22,12 @@ $activesList = $_GET['statusBusca'];
 
 if($activesList == "Inativos")
 {
-  $siteAdmin->getClientInactiveInfo();
+  $siteAdmin->getClientInfo();
 }
-if($activesList == "Ativos")
-{
-  $siteAdmin->getClientInactiveInfo();
-}
-
+else
+  {
+    $siteAdmin->getClientInactiveInfo(); 
+  }
 
 
 // Configurações de Paginação
