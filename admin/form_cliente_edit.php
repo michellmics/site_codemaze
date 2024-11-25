@@ -266,7 +266,7 @@
           type: "POST",
           data: formData,
           success: function (response) {
-            dumpVar(myArray);
+            dumpVar(response);
             Swal.fire({
           title: 'Salvo!',
           text: `${response}`,
