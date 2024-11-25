@@ -297,7 +297,7 @@ $numeroContrato = $numeroContrato ."-".$numeroAleatorio;
       function confirmAndSubmit(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulárioo de Contrato',
+          title: 'Formulário de Contrato',
           text: "Têm certeza que deseja salvar?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
