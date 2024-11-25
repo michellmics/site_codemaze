@@ -262,9 +262,13 @@
           type: "POST",
           data: formData,
           success: function (response) {
+
+            let jsonResponse = JSON.parse(response); // Decodifica o JSON recebido
+            let formattedResponse = JSON.stringify(jsonResponse, null, 2); // Formata para leitura
+
             Swal.fire({
           title: 'Salvo!',
-          text: `<pre>${response}</pre>`,
+          text: `<pre>${formattedResponse}</pre>`,
           icon: 'success',
           width: '600px', // Largura do alerta
           confirmButtonColor: "#4289a6",
