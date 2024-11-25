@@ -93,13 +93,17 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                 <div class="box-header">
                   <h3 class="box-title">Lista de Clientes</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
-                    
+                  <form action="processa_status.php" method="post">
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="checkbox" id="status" name="status" value="Ativo"> Ativo
+        </div>
+
+    </form>
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
 
                    <!-- Botão "Adicionar Produto" -->
-                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">
-                        ADICIONAR CLIENTE
-                      </button>
+                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
                     <form method="GET" action="" style="display: flex;">
                         <input 
                             type="text" 
