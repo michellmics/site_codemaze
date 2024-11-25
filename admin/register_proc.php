@@ -76,6 +76,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
             $uploadFile = $uploadDir . $newFileName;
 
+            echo $uploadFile;
+            exit();
+
             // Move o arquivo para o diretório de uploads
             if (move_uploaded_file($fileTmpPath, $uploadFile)) {
                 $foto = $uploadFile; // Caminho da foto
