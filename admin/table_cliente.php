@@ -102,7 +102,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)"> Inativos </button>
+                  <select 
+        id="status" 
+        name="status" 
+        class="form-control input-sm" 
+        onchange="redirectToLink(this)"
+        style="width: auto;"
+    >
+        <option value="Ativos">Ativos</option>
+        <option value="Inativos">Inativos</option>
+    </select>
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
                     <form method="GET" action="" style="display: flex;">
