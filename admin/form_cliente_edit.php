@@ -280,11 +280,19 @@
             });
           },
           error: function (xhr, status, error) {
-            Swal.fire(
-              'Erro!',
-              'Ocorreu um problema ao salvar os dados.',
-              'error'
-            );
+            Swal.fire({
+          title: 'Erro!',
+          text: 'As alterações não foram salvas.',
+          icon: 'error',
+          width: '600px', // Largura do alerta
+          confirmButtonColor: "#4289a6",
+          customClass: {
+            title: 'swal-title', // Aplicando a mesma classe do título
+            content: 'swal-content', // Aplicando a mesma classe do texto
+            htmlContainer: 'swal-text',
+            confirmButton: 'swal-confirm-btn'
+          }
+        });
           },
         });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
