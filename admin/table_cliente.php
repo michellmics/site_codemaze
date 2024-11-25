@@ -146,7 +146,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                                 <?= htmlspecialchars($client['CLI_STSTATUSPENDING']) ?> </a>
                             </span>
                         </td> 
-                        <?if($client['CLI_STSTATUS'] == "Ativo"){$styleStatus = "text-transform: uppercase; font-size: 12px; color: #00d40a;";} else {$styleStatus = "text-transform: uppercase; font-size: 12px; color: #ff0202;";} ?>
+                        <?if($client['CLI_STSTATUS'] == "ATIVO"){$styleStatus = "text-transform: uppercase; font-size: 12px; color: #00d40a;";} else {$styleStatus = "text-transform: uppercase; font-size: 12px; color: #ff0202;";} ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_NMNAME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCEMAIL']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCPFCNPJ']) ?></td>
