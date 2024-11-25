@@ -15,12 +15,12 @@ class registerClient extends SITE_ADMIN
                 $this->conexao();
             }
                 
-            $result = $this->updateClientInfoa($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
+            $result = $this->updateClientInfos($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
            // echo "Cliente atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";   
             echo $result;             
                      
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage(); 
+            echo "Erro ao atualizar o Cliente."; 
         } 
     }
 }
