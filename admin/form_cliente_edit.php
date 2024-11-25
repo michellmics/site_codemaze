@@ -271,7 +271,8 @@
           customClass: {
             title: 'swal-title', // Aplicando a mesma classe do título
             content: 'swal-content', // Aplicando a mesma classe do texto
-            htmlContainer: 'swal-text'
+            htmlContainer: 'swal-text',
+            confirmButton: 'swal-confirm-btn'
           }
         }).then(() => {
               // Redirecionar ou atualizar a página, se necessário
