@@ -201,7 +201,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_LIQUIDACAOFINANCEIRA, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 14px; color: red !important; vertical-align: middle;"><b><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $liquidFin['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><?= htmlspecialchars($liquidFin['GEC_IDGESTAO_CONTRATO']) ?></a></b></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($liquidFin['LFI_IDOP']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><span class="<? echo $classIcon; ?>"><? echo $msg; ?></span></td>
-                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><a href="#"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $liquidFin['CLI_IDCLIENT']; ?>" target="_self"><?= htmlspecialchars($liquidFin['CLI_NMNAME']) ?></a></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['PRS_NMNOME']) ?></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center><?= htmlspecialchars($liquidFin['LFI_DCNUMPARCELA']) ?></center></center></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><center>R$<?= htmlspecialchars($liquidFin['LFI_DCVALOR_PARCELA']) ?></center></td>
