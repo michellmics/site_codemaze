@@ -152,9 +152,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CLIENTINFO, $inicio, $registrosPorP
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCRSOCIAL']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCCITY']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_DCSTATE']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $client['CLI_IDCLIENT']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
-                                           
+                        <td style="text-transform: uppercase; font-size: 12px; background-color: #00d40a; border-color: #00d40a;" ><?= htmlspecialchars($client['CLI_STSTATUS']) ?></td>                        
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $client['CLI_IDCLIENT']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
