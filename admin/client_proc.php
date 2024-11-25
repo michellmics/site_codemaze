@@ -24,7 +24,7 @@ class registerClient extends SITE_ADMIN
             
             // Se o usuário for encontrado e a senha for válida
             if (isset($user['CLI_IDCLIENT'])) {
-                echo "Cliente já está cadastrado. <a href='form_cliente.php'> VOLTAR</a>"; 
+                echo "Cliente já está cadastrado."; 
                 exit();
             } else 
                 {
@@ -33,12 +33,12 @@ class registerClient extends SITE_ADMIN
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
                     $this->notifyEmail($SUBJECT, $MSG); //notificação por email
-                    echo "Cliente cadastrado com sucesso."; 
+                    echo $result; 
                                       
                      
                 }
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage();
+            echo "ERRO: Não foi possível cadastrar o cliente.";
         } 
     }
 }

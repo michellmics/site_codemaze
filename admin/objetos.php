@@ -1223,11 +1223,11 @@
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
-                return ["success" => "Cliente inserido com sucesso."];
+                return "Cliente cadastrado com sucesso.";
             } catch (PDOException $e) {
                 // Captura e retorna o erro
                 $this->InsertAlarme("Erro na função insertClientInfo. $CLI_NMNAME","High");
-                return ["error" => $e->getMessage()];
+                return "ERRO: Não foi possível cadastrar o cliente.";
             }
         }
 
