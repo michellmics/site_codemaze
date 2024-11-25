@@ -281,10 +281,10 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
           <ul class="sidebar-menu">
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+              <img src="<? echo $imgProfile ?>" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p><span class="hidden-xs"><?php echo htmlspecialchars($_SESSION['user_name']); ?></p>
 
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
