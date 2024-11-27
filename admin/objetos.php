@@ -269,6 +269,25 @@
             }          
         }
 
+        public function getContratoInactiveInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_TABLE_GESTAO_CONTRATO
+                                WHERE GEC_STCONTRATO = 'INATIVO'
+                                ORDER BY GEC_IDGESTAO_CONTRATO ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getAlertaInfo()
         {          
                 // Verifica se a conexão já foi estabelecida

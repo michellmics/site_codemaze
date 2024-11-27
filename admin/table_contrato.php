@@ -17,11 +17,18 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
   $search = $_GET['table_search'];
   $result = $siteAdmin->getContratoInfoBySearch($search);
 }
+
+
+$activesList = $_GET['statusBusca'];
+
+if($activesList == "Inativos")
+{
+  $siteAdmin->getContratoInactiveInfo();
+}
 else
   {
     $siteAdmin->getContratoInfo();
   }
-
 
 // Configurações de Paginação
 $registrosPorPagina = 10;
@@ -97,7 +104,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-
+                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
+                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button>
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_contrato.php';">
                         ADICIONAR CONTRATO
@@ -187,6 +195,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+  <script>
+  // Função para redirecionar ao link quando o checkbox for selecionado
+  function redirectToLink(button) {
+    const value = button.value;
+    window.location.href = `https://www.codemaze.com.br/site/admin/table_contrato.php?statusBusca=${value}`;
+  }
+  </script>
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
