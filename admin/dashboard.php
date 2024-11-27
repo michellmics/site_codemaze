@@ -13,6 +13,13 @@
 
   $idUser = $_SESSION['user_id'];
 
+
+  echo '<pre>';
+print_r($_SESSION); // Mostra a estrutura da $_SESSION
+echo '</pre>';
+
+die();
+
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getSiteInfo(); 
   $siteAdmin->getUserInfo($idUser);
