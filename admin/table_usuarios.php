@@ -128,12 +128,13 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                       <th>NOME</th>
                       <th>E-MAIL</th>
                       <th>SEXO</th>
-                      <th>NIVEL DE ACESSO</th>                  
+                      <th>NIVEL DE ACESSO</th>    
+                      <th></th>               
                     </tr>
                     <tr>
                     
                     <?php foreach ($dadosPagina as $usuario): ?>
-                    <tr> aaa
+                    <tr> 
                     <?php $styleStatus = ($usuario['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNOME']) ?></td>
