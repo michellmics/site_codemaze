@@ -787,7 +787,7 @@
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
-                $this->ARRAY_USERINFOLIST = $stmt->fetch(PDO::FETCH_ASSOC);
+                $this->ARRAY_USERINFOLIST = $stmt->fetchall(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
