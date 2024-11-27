@@ -67,8 +67,11 @@ $result = $siteAdmin->getSiteInfo();
                 <div class="form-group has-feedback">
                     <select name="nivel" class="form-control" required>
                         <option value="" disabled selected>Nível de Acesso</option>
-                        <option value="MASCULINO">ADMINISTRADOR</option>
-                        <option value="FEMININO">OPERADOR</option>
+                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                        <option value="FINANCEIRO">FINANCEIRO</option>
+                        <option value="OPERADOR">OPERADOR</option>
+                        <option value="RECEPCAO">RECEPÇÃO</option>
+                        <option value="SUPORTE TECNICO">SUPORTE TÉCNICO</option>
                     </select>
                 </div>
 
