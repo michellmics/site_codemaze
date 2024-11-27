@@ -590,6 +590,31 @@
                                 PRS_DCDESCRICAO,
                                 PRS_STSTATUS
                                 FROM PRS_PRODUTO_SERVICO
+                                WHERE PRS_STSTATUS <> 'INATIVO'
+                                ORDER BY PRS_NMNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PRODUCTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getProductInactiveInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT PRS_IDPRODUTO_SERVICO,                                  
+                                PRS_NMNOME, 
+                                PRS_DCTIPO,
+                                PRS_DCINVESTIMENTO,
+                                PRS_DCDESCRICAO,
+                                PRS_STSTATUS
+                                FROM PRS_PRODUTO_SERVICO
+                                WHERE PRS_STSTATUS = 'INATIVO'
                                 ORDER BY PRS_NMNOME ASC";
 
                 $stmt = $this->pdo->prepare($sql);

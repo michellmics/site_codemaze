@@ -16,12 +16,19 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 {
   $search = $_GET['table_search'];
   $siteAdmin->getProductInfoBySearch($search);
-
 }
-else
+
+
+  $activesList = $_GET['statusBusca'];
+
+  if($activesList == "Inativos")
   {
-    $siteAdmin->getProductInfo();
+    $siteAdmin->getProductInactiveInfo();    
   }
+  else
+    {
+      $siteAdmin->getProductInfo();
+    }
 
 
 // Configurações de Paginação
@@ -95,7 +102,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                   <h3 class="box-title">Lista de Produtos</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
-                    
+                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
+                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button> 
                        <!-- Botão "Adicionar Produto" -->
                       <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_produto.php';">
                         ADICIONAR PRODUTO
@@ -133,6 +141,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                       <th>STATUS</th>                    
                     </tr>
                     <tr>
+                    <?php $styleStatus = ($product['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
                     <?php foreach ($dadosPagina as $product): ?>
                     <tr>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_IDPRODUTO_SERVICO']) ?></td> 
@@ -153,7 +162,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                           ?></td>
                         
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCDESCRICAO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_STSTATUS']) ?></td>                       
+                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($product['PRS_STSTATUS']) ?></td>                       
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $product['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                         
                   
@@ -189,6 +198,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+    <script>
+  // Função para redirecionar ao link quando o checkbox for selecionado
+  function redirectToLink(button) {
+    const value = button.value;
+    window.location.href = `https://www.codemaze.com.br/site/admin/table_produto.php?statusBusca=${value}`;
+  }
+  </script>
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
