@@ -132,7 +132,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                       <th>NÍVEL DE ACESSO</th>                  
                     </tr>
                     <tr>
-                    
+                    <?php var_dump($dadosPagina); ?>
                     <?php foreach ($dadosPagina as $usuario): ?>
                     <tr><?php echo $usuario['USA_DCEMAIL']; ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_IDUSERADMIN']) ?></td> 
