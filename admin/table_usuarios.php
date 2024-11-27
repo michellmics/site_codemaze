@@ -134,11 +134,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                     <tr>
                       <?php foreach ($dadosPagina as $admusers): ?>
                         <tr> <? var_dump($dadosPagina); ?>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></td>                     
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_IDUSERADMIN']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCEMAIL']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCSEXO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCNIVELDEACESSO']) ?></td>                     
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
