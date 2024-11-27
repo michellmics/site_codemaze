@@ -132,9 +132,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                     <tr>
                       <?php foreach ($dadosPagina as $admusers): ?>
                         <tr> 
-                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "ADMINISTRADOR"){ $spam='class="badge bg-red"';} ?>
-                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "FINANCEIRO"){ $spam='class="badge bg-yellow"';} ?>
-                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "OPERADOR"){ $spam='class="badge bg-green"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "ADMINISTRADOR"){ $spam='class="badge bg-black"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "FINANCEIRO"){ $spam='class="badge bg-red"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "OPERADOR"){ $spam='class="badge bg-blue"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "RECEPCAO"){ $spam='class="badge bg-green"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "SUPORTE TECNICO"){ $spam='class="badge bg-yellow"';} ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
