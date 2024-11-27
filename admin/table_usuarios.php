@@ -133,7 +133,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                     </tr>
                     <tr>
                       <?php foreach ($dadosPagina as $admusers): ?>
-                        <tr> <? var_dump($admusers); ?>
+                        <tr> <? var_dump($admusers['USA_DCEMAIL']); ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
