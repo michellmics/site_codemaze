@@ -97,7 +97,7 @@ $siteAdmin->getUserInfo($userid);
                         <div class="checkbox icheck"></div>                        
                     </div><!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">SALVAR CADASTRO</button>
+                        <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">SALVAR</button>
                     </div><!-- /.col -->
                 </div>
             </form>
