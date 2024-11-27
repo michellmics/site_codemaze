@@ -34,6 +34,9 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
 
+var_dump($dadosPagina);
+die();
+
 ?>
 
 
