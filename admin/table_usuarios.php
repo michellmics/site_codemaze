@@ -128,8 +128,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                       <th>NOME</th>
                       <th>E-MAIL</th>
                       <th>SEXO</th>
-                      <th>NIVEL DE ACESSO</th>    
-                      <th></th>               
+                      <th>NIVEL DE ACESSO</th>                
                     </tr>
                     <tr>
                     
@@ -140,7 +139,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCEMAIL']) ?></td>                        
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCSEXO']) ?></td>
-                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($usuario['USA_DCNIVELDEACESSO']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNIVELDEACESSO']) ?></td>                    
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $usuario['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                       </tr>
                     <?php endforeach; ?>   
