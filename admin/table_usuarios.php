@@ -35,8 +35,6 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPorPagina);
 
-var_dump($dadosPagina);
-
 ?>
 
 
@@ -138,7 +136,9 @@ var_dump($dadosPagina);
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></td>                     
+                        <td style="text-transform: uppercase; font-size: 12px;"><span class="badge bg-red"><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td> 
+                     
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $product['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>                    
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
