@@ -26,14 +26,14 @@ else
 // Configurações de Paginação
 $registrosPorPagina = 20;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_USERINFO);
+$totalRegistros = count($siteAdmin->ARRAY_USERINFOLIST);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPorPagina);
 
 var_dump($dadosPagina);
 
