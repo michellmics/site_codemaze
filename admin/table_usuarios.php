@@ -17,31 +17,23 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
   $search = $_GET['table_search'];
   $siteAdmin->getProductInfoBySearch($search);
 }
-
-
-  $activesList = $_GET['statusBusca'];
-
-  if($activesList == "Inativos")
-  {
-    $siteAdmin->getProductInactiveInfo();    
-  }
-  else
+else
     {
-      $siteAdmin->getProductInfo();
+      $siteAdmin->getUserInfoList();
     }
 
 
 // Configurações de Paginação
 $registrosPorPagina = 20;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_PRODUCTINFO);
+$totalRegistros = count($siteAdmin->ARRAY_USERINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
 
 ?>
 
@@ -135,36 +127,20 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                     <tr>
                       <th>ID</th>
                       <th>NOME</th>
-                      <th>TIPO</th>
-                      <th>VALOR(R$)</th>
-                      <th>DESCRIÇÃO</th>
-                      <th>STATUS</th>                    
+                      <th>E-MAIL</th>
+                      <th>SEXO</th>
+                      <th>NÍVEL DE ACESSO</th>                  
                     </tr>
                     <tr>
                     
-                    <?php foreach ($dadosPagina as $product): ?>
+                    <?php foreach ($dadosPagina as $usuario): ?>
                     <tr>
-                    <?php $styleStatus = ($product['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_IDPRODUTO_SERVICO']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCTIPO']) ?></td>
-
-                        <td style="text-transform: uppercase; font-size: 12px;">
-                          <? 
-                            if($product['PRS_DCINVESTIMENTO'] == "0")
-                            {
-                              echo "INDEFINIDO";
-                            }
-                            else
-                              {
-                                echo "R$".$product['PRS_DCINVESTIMENTO'];
-                              }
-                        
-                          ?></td>
-                        
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCDESCRICAO']) ?></td>
-                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($product['PRS_STSTATUS']) ?></td>                       
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $product['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_IDUSERADMIN']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCEMAIL']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCSEXO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNIVELDEACESSO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $usuario['USA_IDUSERADMIN']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                         
                   
                       
