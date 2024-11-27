@@ -52,22 +52,21 @@ $siteAdmin->getUserInfo($userid);
 
         <div class="register-box-body">
             <p class="login-box-msg">Cadastro de novo usuário(a)</p>
-            <form action="register_proc.php" method="post" id="formRegistro" enctype="multipart/form-data">
+            <form action="register_edit_proc.php" method="post" id="formRegistro" enctype="multipart/form-data">
                 <div class="form-group has-feedback">
                     <input type="text" name="nome" class="form-control" value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"] ?>" placeholder="Nome Completo" maxlength="45" required/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
 
                 <div class="form-group has-feedback">
-                    <input type="email" name="email" class="form-control" placeholder="E-mail" maxlength="45" required/>
+                    <input type="email" value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCEMAIL"] ?>" name="email" class="form-control" placeholder="E-mail" maxlength="45" required/>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                         
                 <div class="form-group has-feedback">
                     <select name="sexo" class="form-control" required>
                         <option value="" selected>Selecione o sexo</option>
-                        <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] ?></option>
-                        
+                        <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_DCSEXO"] ?></option>   
                         <option value="MASCULINO">MASCULINO</option>
                         <option value="FEMININO">FEMININO</option>
                     </select>
@@ -75,7 +74,8 @@ $siteAdmin->getUserInfo($userid);
 
                 <div class="form-group has-feedback">
                     <select name="nivel" class="form-control" required>
-                        <option value="" disabled selected>Nível de Acesso</option>
+                        <option value="" disabled>Nível de Acesso</option>
+                        <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCNIVELDEACESSO"] ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_DCNIVELDEACESSO"] ?></option>
                         <option value="ADMINISTRADOR">ADMINISTRADOR</option>
                         <option value="FINANCEIRO">FINANCEIRO</option>
                         <option value="OPERADOR">OPERADOR</option>
@@ -85,19 +85,19 @@ $siteAdmin->getUserInfo($userid);
                 </div>
 
                 <div class="form-group has-feedback">
-                    <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
+                    <input type="password" value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCSENHA"] ?>" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
                     <label for="foto">Foto (tamanho máximo: 2MB)</label>
-                    <input type="file" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png"/>
+                    <input type="file" value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCFOTO"] ?>" name="foto" id="foto" class="form-control" accept=".jpg,.jpeg,.png"/>
                 </div>
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="checkbox icheck"></div>                        
                     </div><!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                        <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">SALVAR CADASTRO</button>
                     </div><!-- /.col -->
                 </div>
             </form>
