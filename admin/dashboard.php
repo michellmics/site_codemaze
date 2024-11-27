@@ -238,7 +238,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                   <li class="user-header">
                     <img src=<? echo $imgProfile ?> class="img-circle" alt="User Image" />
                     <p>
-                    <?php echo htmlspecialchars($_SESSION['user_name']); ?> - ADM
+                    <?php echo htmlspecialchars($_SESSION['user_name']); ?> - <?php echo htmlspecialchars($_SESSION['user_nivelacesso']); ?>
                       <small><?php echo htmlspecialchars($_SESSION['user_email']); ?></small>
                     </p>
                   </li>
