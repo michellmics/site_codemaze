@@ -132,11 +132,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                     <tr>
                       <?php foreach ($dadosPagina as $admusers): ?>
                         <tr> 
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "ADMINISTRADOR"){ $spam='class="badge bg-red"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "FINANCEIRO"){ $spam='class="badge bg-yellow"';} ?>
+                        <?php if($admusers['USA_DCNIVELDEACESSO'] == "OPERADOR"){ $spam='class="badge bg-green"';} ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><span class="badge bg-red"><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><span <? echo $spam; ?>><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td> 
                      
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $product['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>                    
                         </tr>
