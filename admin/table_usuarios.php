@@ -35,7 +35,7 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
 
-var_dump($dadosPagina);
+
 
 ?>
 
@@ -133,6 +133,7 @@ var_dump($dadosPagina);
                     </tr>
                     <tr>
                       <?php foreach ($dadosPagina as $usuario): ?>
+                        <? echo $usuario['USA_DCNOME']; ?>
                         <tr>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNOME']) ?></td>
