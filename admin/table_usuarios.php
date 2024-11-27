@@ -22,7 +22,9 @@ else
       $siteAdmin->getUserInfoList();
     }
 
-
+    var_dump($siteAdmin->ARRAY_USERINFO);
+    die();
+    
 // Configurações de Paginação
 $registrosPorPagina = 20;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
