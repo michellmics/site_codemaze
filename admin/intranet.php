@@ -150,7 +150,7 @@
             <i class="fas fa-briefcase"></i>
             Google Ads
         </a>
-        <a href="#" onclick="loadIframe('register.php');">
+        <a href="#" onclick="loadIframe('table_usuarios.php');">
             <i class="fas fa-user-plus"></i>
             Novo usuário
         </a>

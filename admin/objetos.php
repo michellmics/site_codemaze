@@ -776,6 +776,22 @@
             }          
         }
 
+        public function getUserInfoList()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * FROM USA_USERADMIN ORDER BY USA_DCNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_USERINFO = $stmt->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getUserInfoById($ID)
         {          
                 // Verifica se a conexão já foi estabelecida
