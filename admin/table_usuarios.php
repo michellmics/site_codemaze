@@ -35,7 +35,7 @@ $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 // Divide o array para exibir apenas os registros da página atual
 $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
 
-
+var_dump($dadosPagina);
 
 ?>
 
@@ -131,14 +131,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                       <th>SEXO</th>
                       <th>NÍVEL DE ACESSO</th>                  
                     </tr>
-                    <tr><? var_dump($dadosPagina); ?>
+                    <tr>
                       <?php foreach ($dadosPagina as $admusers): ?>
                         <tr> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_IDUSERADMIN']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCEMAIL']) ?></td>                       
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($dadosPagina['USA_DCNIVELDEACESSO']) ?></td>                     
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></td>                     
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
