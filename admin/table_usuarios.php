@@ -17,22 +17,31 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
   $search = $_GET['table_search'];
   $siteAdmin->getProductInfoBySearch($search);
 }
-else
+
+
+  $activesList = $_GET['statusBusca'];
+
+  if($activesList == "Inativos")
+  {
+    $siteAdmin->getProductInactiveInfo();    
+  }
+  else
     {
-      $siteAdmin->getUserInfoList();
+      $siteAdmin->getProductInfo();
     }
+
 
 // Configurações de Paginação
 $registrosPorPagina = 20;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_USERINFO);
+$totalRegistros = count($siteAdmin->ARRAY_PRODUCTINFO);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPorPagina);
 
 ?>
 
@@ -87,17 +96,17 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
 
 
               <div class="row">
-            <div class="col-xs-7" style="display: flex; align-items: center;">
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de usuários</h3>
+                  <h3 class="box-title">Lista de Produtos</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
                   <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
                   <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button> 
                        <!-- Botão "Adicionar Produto" -->
-                      <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='register.php';">
-                        ADICIONAR USUÁRIO
+                      <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_produto.php';">
+                        ADICIONAR PRODUTO
                       </button>
 
                   
@@ -126,26 +135,40 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
                     <tr>
                       <th>ID</th>
                       <th>NOME</th>
-                      <th>E-MAIL</th>
-                      <th>SEXO</th>
-                      <th>NIVEL DE ACESSO</th>                
+                      <th>TIPO</th>
+                      <th>VALOR(R$)</th>
+                      <th>DESCRIÇÃO</th>
+                      <th>STATUS</th>                    
                     </tr>
                     <tr>
                     
-                    <?php foreach ($dadosPagina as $usuario): ?>
-                    <tr> 
-                    <?php $styleStatus = ($usuario['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_IDUSERADMIN']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCEMAIL']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($usuario['USA_DCNIVELDEACESSO']) ?></td>                    
-                        <td style="text-transform: uppercase; font-size: 15px;">
-    <a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<?= htmlspecialchars($usuario['PRS_IDPRODUTO_SERVICO'] ?? ''); ?>" target="_self">
-        <span class="label label-warning">EDITAR</span>
-    </a>
-</td>
+                    <?php foreach ($dadosPagina as $product): ?>
+                    <tr>
+                    <?php $styleStatus = ($product['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_IDPRODUTO_SERVICO']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_NMNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCTIPO']) ?></td>
 
+                        <td style="text-transform: uppercase; font-size: 12px;">
+                          <? 
+                            if($product['PRS_DCINVESTIMENTO'] == "0")
+                            {
+                              echo "INDEFINIDO";
+                            }
+                            else
+                              {
+                                echo "R$".$product['PRS_DCINVESTIMENTO'];
+                              }
+                        
+                          ?></td>
+                        
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCDESCRICAO']) ?></td>
+                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($product['PRS_STSTATUS']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_produto_edit.php?id=<? echo $product['PRS_IDPRODUTO_SERVICO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        
+                  
+                      
+                      
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
