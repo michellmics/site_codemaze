@@ -141,9 +141,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PRODUCTINFO, $inicio, $registrosPor
                       <th>STATUS</th>                    
                     </tr>
                     <tr>
-                    <?php $styleStatus = ($product['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
+                    
                     <?php foreach ($dadosPagina as $product): ?>
                     <tr>
+                    <?php $styleStatus = ($product['PRS_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; ?>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_IDPRODUTO_SERVICO']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_NMNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($product['PRS_DCTIPO']) ?></td>
