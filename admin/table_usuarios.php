@@ -88,7 +88,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFO, $inicio, $registrosPorPag
 
 
               <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-7">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Lista de usuários</h3>
