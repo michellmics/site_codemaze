@@ -146,11 +146,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><span <? echo $spam; ?>><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td>                     
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/register_edit.php?id=<? echo $admusers['USA_IDUSERADMIN']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>  
-                          <td style="text-transform: uppercase; font-size: 15px;">
-    <a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)">
-        <span class="label label-danger">DELETAR</span>
-    </a>
-</td>                   
+                          <td style="text-transform: uppercase; font-size: 15px;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)"><span class="label label-danger">DELETAR</span></a></td>                   
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
@@ -189,8 +185,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
       function confirmDelete(userId){
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulárioo de Cliente',
-          text: "Têm certeza que deseja salvar?",
+          title: 'Formulário de usuários',
+          text: "Têm certeza que deseja excluir o usuário?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
           denyButtonText: `CANCELAR`,
@@ -213,7 +209,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
             $.ajax({
               url: "register_delete.php", // URL para processamento
               type: "POST",
-              data: formData,
+              data: { id: userId }, // Dados enviados
               success: function (response) {
                 Swal.fire({
               title: 'Salvo!',
