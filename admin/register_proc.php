@@ -32,7 +32,7 @@ class registerUser extends SITE_ADMIN
             // Se o usuário for encontrado e a senha for válida
             if (isset($user['USA_IDUSERADMIN'])) {
                 echo "Usuário já cadastrado."; 
-                exit();
+                //exit();
             } else 
                 {
                     $passHash = password_hash($senha, PASSWORD_DEFAULT);
@@ -46,7 +46,7 @@ class registerUser extends SITE_ADMIN
                     
                 }
         } catch (PDOException $e) {  
-            echo "Erro: " . $e->getMessage();
+            echo "Erro ao cadastrar usuário."; 
         } 
     }
 }
