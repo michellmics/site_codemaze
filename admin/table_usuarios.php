@@ -141,7 +141,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "OPERADOR"){ $spam='class="badge bg-blue"';} ?>
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "RECEPCAO"){ $spam='class="badge bg-blue"';} ?>
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "SUPORTE TECNICO"){ $spam='class="badge bg-blue"';} ?>
-                        <td style="text-transform: uppercase; font-size: 12px;"><img src=<?php echo $admusers['USA_DCFOTO'] ?> class="user-image" alt="User Image"/></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><img src=<?php echo $admusers['USA_DCFOTO'] ?> class="user-image" alt="User Image" style="width: 25px; height: 25px;" alt="User Image"/></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
