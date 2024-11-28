@@ -113,6 +113,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              exit();
          }
      }
+     else
+        {
+            if ($sexo == "MASCULINO") 
+            {
+                $foto = "dist/img/avatar5.png";
+            } 
+            else 
+                {
+                    $foto = "dist/img/avatar3.png";
+                }
+        }
  
      // Cria o objeto de registro de usuário e chama o método insertUser
      $registerUser = new registerUser();
