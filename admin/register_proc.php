@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
     else 
         {
-         
+            $foto = null;
              $fileTmpPath = $_FILES['foto']['tmp_name'];
              $fileName = $_FILES['foto']['name'];
              $fileSize = $_FILES['foto']['size'];
