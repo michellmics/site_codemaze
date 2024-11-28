@@ -63,11 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         if($sexo == "MASCULINO")
         {
-            $_FILES['foto'] = "dist/img/avatar5.png";
+            $_FILES['foto']['tmp_name'] = "dist/img/avatar5.png";
         }
         else
             {
-                $_FILES['foto'] = "dist/img/avatar3.png";
+                $_FILES['foto']['tmp_name'] = "dist/img/avatar3.png";
             }
     }
      // Verifica se o arquivo foi enviado
