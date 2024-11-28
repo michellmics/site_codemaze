@@ -85,6 +85,7 @@ $result = $siteAdmin->getSiteInfo();
                 </div>
 
                 <div class="form-group has-feedback">
+                    <label for="senha">Senha: 8 Caracteres 1 Especial e 1 Maiúscula</label>
                     <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
