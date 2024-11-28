@@ -69,7 +69,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->  
-  <body class="register-page">
+  <body class="register-page" style="margin-center: 0px; ">
     <div class="wrapper" style="margin-center: 0px; ">
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="col-md-10" style="margin-center: 0px; ">
