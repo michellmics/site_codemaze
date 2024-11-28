@@ -69,10 +69,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->  
-  <body class="skin-blue">
+  <body class="register-page">
     <div class="wrapper">
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
+      <div class="content-wrapper" style="margin-left: 0px; background-color: black;">
         <!-- Content Header (Page header) -->
         <section class="content">
           <div class="row">
@@ -88,7 +88,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
 
 
               <div class="row">
-            <div class="col-xs-7">
+            <div class="col-xs-8">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Lista de Produtos</h3>
