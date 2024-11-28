@@ -59,19 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sexo = $_POST['sexo'];
     $nivel = $_POST['nivel'];
 
-    if(!$_FILES['foto'])
-    {
-        if($sexo == "MASCULINO")
-        {
-            $_FILES['foto']['tmp_name'] = "dist/img/avatar5.png";
+    if (empty($_FILES['foto']['tmp_name']) || $_FILES['foto']['error'] !== UPLOAD_ERR_OK) {
+        if ($sexo == "MASCULINO") {
+            $foto = "dist/img/avatar5.png";
+        } else {
+            $foto = "dist/img/avatar3.png";
         }
-        else
-            {
-                $_FILES['foto']['tmp_name'] = "dist/img/avatar3.png";
-            }
-    }
-     // Verifica se o arquivo foi enviado
-     $foto = null;
+    } else {
      if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
          $fileTmpPath = $_FILES['foto']['tmp_name'];
          $fileName = $_FILES['foto']['name'];
@@ -124,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              exit();
          }
      }
- 
+    }
      // Cria o objeto de registro de usuário e chama o método insertUser
      $registerUser = new registerUser();
      $registerUser->insertUser($email, $senha, $nome, $sexo, $foto, $nivel);
