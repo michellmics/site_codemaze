@@ -198,12 +198,14 @@ $result = $siteAdmin->getSiteInfo();
         }).then((result) => {
           if (result.isConfirmed) {
             // Capturar os dados do formulário
-            var formData = $("#form-empresa").serialize();
+            var formData = new FormData($("#form-empresa")[0]); // Usa o FormData para enviar arquivos
             // Fazer a requisição AJAX
             $.ajax({
               url: "register_proc.php", // URL para processamento
               type: "POST",
               data: formData,
+              processData: false, // Impede o jQuery de processar os dados
+              contentType: false, // Impede o jQuery de definir o tipo de conteúdo
               success: function (response) {
                 Swal.fire({
               title: 'Salvo!',
