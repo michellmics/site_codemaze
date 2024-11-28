@@ -188,7 +188,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
           title: 'Formulário de usuários',
           text: "Têm certeza que deseja excluir o usuário?",
           showDenyButton: true,
-          confirmButtonText: 'SALVAR',
+          confirmButtonText: 'SIM',
           denyButtonText: `CANCELAR`,
           confirmButtonColor: "#4289a6",
           denyButtonColor: "#ff8a33",
