@@ -98,7 +98,7 @@ $result = $siteAdmin->getSiteInfo();
                     </div><!-- /.col -->
                     <div class="col-xs-4">
                         <!-- <button type="button" onclick="validarFormulario()" class="btn btn-primary btn-block btn-flat">Registrar</button> -->
-                        <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                        <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary btn-block btn-flat">Registrar</button>
                     </div><!-- /.col -->
                 </div>
             </form>
@@ -175,7 +175,7 @@ $result = $siteAdmin->getSiteInfo();
         if (!isValid) {
             return;
         }
-        
+
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
           title: 'Formulário de usuários',
