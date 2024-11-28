@@ -146,7 +146,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><span <? echo $spam; ?>><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td>                     
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/register_edit.php?id=<? echo $admusers['USA_IDUSERADMIN']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>  
-                          <td style="text-transform: uppercase; font-size: 15px;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)"><span class="label label-danger">DELETAR</span></a></td>                   
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)"><span class="label label-danger">DELETAR</span></a></td>                   
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
