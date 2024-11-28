@@ -164,6 +164,7 @@ $result = $siteAdmin->getSiteInfo();
                         alert("A senha deve ter pelo menos 8 caracteres, incluir pelo menos uma letra maiúscula e um caractere especial.");
                         return false;
                     }
+                    return true;
                 }
 
 
