@@ -168,7 +168,14 @@ $result = $siteAdmin->getSiteInfo();
 
 
       function confirmAndSubmit(event) {
-        validarFormulario()
+          // Chama a validação do formulário
+        const isValid = validarFormulario();
+
+        // Se a validação falhar, interrompe a execução
+        if (!isValid) {
+            return;
+        }
+        
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
           title: 'Formulário de usuários',
