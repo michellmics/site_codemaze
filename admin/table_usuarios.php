@@ -72,7 +72,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
   <body class="register-page">
     <div class="wrapper">
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="col-md-8" style="margin-center: 0px; ">
+      <div class="col-md-10" style="margin-center: 0px; ">
         <!-- Content Header (Page header) -->
         <section class="content">
           <div class="row">
@@ -88,7 +88,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
 
 
               <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Lista de Produtos</h3>
