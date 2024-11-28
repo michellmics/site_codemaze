@@ -54,7 +54,7 @@ $result = $siteAdmin->getSiteInfo();
 
         <div class="register-box-body">
             <p class="login-box-msg">Cadastro de novo usuário(a)</p>
-             <form id="form-empresa" role="form" method="POST">
+             <form id="form-empresa" role="form" method="POST" enctype="multipart/form-data">
                 <div class="form-group has-feedback">
                     <input type="text" name="nome" class="form-control" placeholder="Nome Completo" maxlength="45" required/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
