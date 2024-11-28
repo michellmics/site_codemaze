@@ -126,8 +126,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th></th>
                       <th>ID</th>
+                      <th></th>
                       <th>NOME</th>
                       <th>E-MAIL</th>
                       <th>SEXO</th>
@@ -141,14 +141,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "OPERADOR"){ $spam='class="badge bg-blue"';} ?>
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "RECEPCAO"){ $spam='class="badge bg-blue"';} ?>
                         <?php if($admusers['USA_DCNIVELDEACESSO'] == "SUPORTE TECNICO"){ $spam='class="badge bg-blue"';} ?>
-                        <td style="text-transform: uppercase; font-size: 12px;"><img src=<?php echo $admusers['USA_DCFOTO'] ?> class="user-image" alt="User Image" style="width: 25px; height: 25px;" alt="User Image"/></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><span <? echo $spam; ?>><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td>                     
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/register_edit.php?id=<? echo $admusers['USA_IDUSERADMIN']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>  
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)"><span class="label label-danger">DELETAR</span></a></td>                   
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($admusers['USA_IDUSERADMIN']) ?></td> 
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><img src=<?php echo $admusers['USA_DCFOTO'] ?> class="user-image" alt="User Image" style="width: 25px; height: 25px;" alt="User Image"/></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($admusers['USA_DCNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($admusers['USA_DCEMAIL']) ?></td>                       
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><?= htmlspecialchars($admusers['USA_DCSEXO']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><span <? echo $spam; ?>><?= htmlspecialchars($admusers['USA_DCNIVELDEACESSO']) ?></span></td>                     
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="https://www.codemaze.com.br/site/admin/register_edit.php?id=<? echo $admusers['USA_IDUSERADMIN']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>  
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['USA_IDUSERADMIN']; ?>)"><span class="label label-danger">DELETAR</span></a></td>                   
                         </tr>
                       <?php endforeach; ?>   
                     </tr>
