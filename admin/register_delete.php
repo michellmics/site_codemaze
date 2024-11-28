@@ -37,8 +37,8 @@ class deleteUser extends SITE_ADMIN
 }
 
 // Processa a requisição GET
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $id = $_GET['id'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
  
      $deleteUser = new deleteUser();
      $deleteUser->deleteUser($id);
