@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sexo = $_POST['sexo'];
     $nivel = $_POST['nivel'];
 
-    if (empty($_FILES['foto']['tmp_name']) || $_FILES['foto']['error'] !== UPLOAD_ERR_OK) {
+    if (empty($_FILES['foto']['tmp_name'])) {
         if ($sexo == "MASCULINO") {
             $foto = "dist/img/avatar5.png";
         } else {
