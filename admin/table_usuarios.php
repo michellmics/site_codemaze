@@ -70,7 +70,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->  
   <body class="register-page">
-    <div class="wrapper">
+    <div class="wrapper" style="margin-center: 0px; ">
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="col-md-10" style="margin-center: 0px; ">
         <!-- Content Header (Page header) -->
@@ -81,17 +81,11 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
               <!-- general form elements -->
 
               <!-- INI BLOCO 1 -->
-
-
-
-
-
-
               <div class="row">
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Produtos</h3>
+                  <h3 class="box-title">Cadastro de usu[arios</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">                  
                        <!-- Botão "Adicionar Produto" -->
