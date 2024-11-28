@@ -72,7 +72,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_USERINFOLIST, $inicio, $registrosPo
   <body class="register-page">
     <div class="wrapper">
       <!-- Right side column. Contains the navbar and content of the page -->
-      <div class="content-wrapper" style="margin-left: 0px; background-color: black;">
+      <div class="content-wrapper" style="margin-center: 0px; ">
         <!-- Content Header (Page header) -->
         <section class="content">
           <div class="row">
