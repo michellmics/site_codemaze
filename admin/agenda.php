@@ -69,7 +69,7 @@ $jsonEventos = json_encode($arrayEventos);
         listWeek: { buttonText: 'Listar por semana' }
       },
       initialView: 'listWeek',
-      defaultDate: moment().format('YYYY-MM-DD'),
+      initialDate: '2024-11-30',
       navLinks: true,
       editable: true,
       dayMaxEvents: true,
