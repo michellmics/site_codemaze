@@ -29,20 +29,39 @@
           start: '2023-01-12T10:00:00',
           descricao: 'João',
           imageUrl: 'https://via.placeholder.com/40', // URL da foto
-          status: 'Em andamento' // Status do evento
+          status: 'Em andamento', // Status do evento
+          statusLink: 'https://example.com/event-status/1' // URL do status
         },
         {
           title: 'Apresentação do Projeto',
           start: '2023-01-13T14:00:00',
           descricao: 'Maria',
           imageUrl: 'https://via.placeholder.com/40',
-          status: 'Concluído' // Status do evento
+          status: 'Concluído', // Status do evento
+          statusLink: 'https://example.com/event-status/2' // URL do status
+        },
+        {
+          title: 'Apresentação do Projeto',
+          start: '2023-01-13T16:00:00',
+          descricao: 'Maria',
+          imageUrl: 'https://via.placeholder.com/40',
+          status: 'Pendente', // Status do evento
+          statusLink: 'https://example.com/event-status/2' // URL do status
+        },
+        {
+          title: 'Entrega do Relatório',
+          start: '2023-01-11T15:00:00',
+          descricao: 'Carlos',
+          imageUrl: 'https://via.placeholder.com/40',
+          status: 'Atrasado', // Status do evento
+          statusLink: 'https://example.com/event-status/3' // URL do status
         }
       ],
 
       eventContent: function(info) {
         // Determinar a classe da badge com base no status
         let status = info.event.extendedProps.status || 'Sem status';
+        let statusLink = info.event.extendedProps.statusLink || '#'; // Link padrão caso não exista
         let badgeClass = '';
 
         switch (status) {
@@ -55,11 +74,14 @@
           case 'Pendente':
             badgeClass = 'badge-warning';
             break;
+          case 'Atrasado':
+            badgeClass = 'badge-danger';
+            break;
           default:
             badgeClass = 'badge-secondary';
         }
 
-        // HTML personalizado para exibir a foto, status e descrição
+        // HTML personalizado para exibir a foto, status clicável e descrição
         return {
           html: `
             <div style="display: flex; align-items: center;">
@@ -67,7 +89,7 @@
               <div>
                 <strong>${info.event.title}</strong><br>
                 <em>Descrição: ${info.event.extendedProps.descricao || 'Não definido'}</em><br>
-                <span class="badge ${badgeClass}">${status}</span>
+                <a href="${statusLink}" target="_blank" class="badge ${badgeClass}" style="text-decoration: none;">${status}</a>
               </div>
             </div>
           `
@@ -117,8 +139,16 @@
     color: #212529;
   }
 
+  .badge-danger {
+    background-color: #dc3545;
+  }
+
   .badge-secondary {
     background-color: #6c757d;
+  }
+
+  .badge:hover {
+    opacity: 0.8; /* Adiciona um efeito ao passar o mouse */
   }
 </style>
 </head>
