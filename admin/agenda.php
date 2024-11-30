@@ -32,7 +32,7 @@
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
               <div class="box box-solid">
                 <div class="box-header with-border">
                   <h4 class="box-title">Draggable Events</h4>
