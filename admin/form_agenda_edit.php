@@ -102,8 +102,17 @@
 			<div style="flex: 1;">
 			<label>FUNCIONÁRIO</label>
 			<select required class="form-control" name="funcionario" style="width: 100%;">
-      <option value="<?php var_dump($siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]); ?>" selected><?php var_dump($siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]); ?></option>
-
+      <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_IDUSERADMIN"]; ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></option>
+          <?php
+            // Verifica se o array não está vazio
+            if (!empty($siteAdmin->ARRAY_USERINFOLIST)) {
+                // Itera sobre o array de usuários
+                foreach ($siteAdmin->ARRAY_USERINFOLIST as $user) {
+                    // Exibe os nomes no select e usa o ID de usuário como valor
+                    echo '<option value="' . htmlspecialchars($user['USA_IDUSERADMIN']) . '">' . htmlspecialchars($user['USA_DCNOME']) . '</option>';
+                }
+            }
+          ?>
 			</select> 
 			</div> 
       <div style="flex: 3">
