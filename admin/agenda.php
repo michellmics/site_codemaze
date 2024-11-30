@@ -106,7 +106,7 @@ $jsonEventos = json_encode($arrayEventos);
               <div>
                 <strong>${info.event.title}</strong><br>
                 <em>Descrição: ${info.event.extendedProps.descricao || 'Não definido'}</em><br>
-                <a href="${statusLink}" target="_self" class="badge ${badgeClass}" style="text-decoration: none;">${status}</a>
+                <a href="${statusLink}" target="_self" class="badge ${badgeClass}" ">${status}</a>
               </div>
             </div>
           `
