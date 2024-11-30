@@ -150,7 +150,7 @@
                   
                   <div class="box-footer">
                   <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
-                  <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
+                  <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR ATIVIDADE</button>
                   </div>
                 </form>
               </div>
@@ -168,7 +168,7 @@
       function confirmAndSubmit(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulário de Produtos',
+          title: 'Formulário de Atividades',
           text: "Têm certeza que deseja salvar?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
@@ -190,7 +190,7 @@
             var formData = $("#form-empresa").serialize();
             // Fazer a requisição AJAX
             $.ajax({
-              url: "produto_proc.php", // URL para processamento
+              url: "agenda_proc.php", // URL para processamento
               type: "POST",
               data: formData,
               success: function (response) {

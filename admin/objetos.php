@@ -1350,6 +1350,39 @@
                 return ["error" => $e->getMessage()];
             }
         }
+                                        
+        public function insertAgendaInfo($AGE_DCTITULO,$AGE_DTINI,$AGE_DTFIM,$AGE_STSTATUS,$AGE_DCDESC)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            
+            try {
+                $sql = "INSERT INTO AGE_AGENDA 
+                        (AGE_DCTITULO,AGE_DTINI,AGE_DTFIM,AGE_STSTATUS,AGE_DCDESC) 
+                        VALUES (:AGE_DCTITULO,:AGE_DTINI,:AGE_DTFIM,:AGE_STSTATUS,:AGE_DCDESC)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':AGE_DCTITULO', $AGE_DCTITULO, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DTINI', $AGE_DTINI, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DTFIM', $AGE_DTFIM, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_STSTATUS', $AGE_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DCDESC', $AGE_DCDESC, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Nova tarefa cadastrada. $AGE_DCTITULO","Info");
+                return ["success" => "Tarefa inserida com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertAgendaInfo. $AGE_DCTITULO","High");
+                return ["error" => $e->getMessage()];
+            }
+        }
 
         public function insertBalancoMes($BLM_DCRECEITA, $BLM_DCDESPESA, $BLM_DCLIQUIDO)
         {          
