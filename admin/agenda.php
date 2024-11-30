@@ -33,8 +33,7 @@
     );
 }
 
-print_r($arrayEventos);
-die();
+$jsonEventos = json_encode($arrayEventos);
 
 
 
@@ -49,7 +48,7 @@ die();
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-
+    var events = <?php echo $jsonEventos; ?>;
     var calendar = new FullCalendar.Calendar(calendarEl, {
       locale: 'pt-br',
       headerToolbar: {
@@ -69,40 +68,7 @@ die();
       navLinks: true,
       editable: true,
       dayMaxEvents: true,
-      events: [
-        {
-          title: 'Reunião de Equipe',
-          start: '2023-01-12T10:00:00',
-          descricao: 'João',
-          imageUrl: 'https://via.placeholder.com/40', // URL da foto
-          status: 'Em andamento', // Status do evento
-          statusLink: 'https://example.com/event-status/1' // URL do status
-        },
-        {
-          title: 'Apresentação do Projeto',
-          start: '2023-01-13T14:00:00',
-          descricao: 'Maria',
-          imageUrl: 'https://via.placeholder.com/40',
-          status: 'Concluído', // Status do evento
-          statusLink: 'https://example.com/event-status/2' // URL do status
-        },
-        {
-          title: 'Apresentação do Projeto',
-          start: '2023-01-13T16:00:00',
-          descricao: 'Maria',
-          imageUrl: 'https://via.placeholder.com/40',
-          status: 'Pendente', // Status do evento
-          statusLink: 'https://example.com/event-status/2' // URL do status
-        },
-        {
-          title: 'Entrega do Relatório',
-          start: '2023-01-11T15:00:00',
-          descricao: 'Carlos',
-          imageUrl: 'https://via.placeholder.com/40',
-          status: 'Atrasado', // Status do evento
-          statusLink: 'https://example.com/event-status/3' // URL do status
-        }
-      ],
+      events: events,
 
       eventContent: function(info) {
         // Determinar a classe da badge com base no status
