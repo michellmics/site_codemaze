@@ -17,7 +17,7 @@
       views: {
         listDay: { buttonText: 'Listar por dia' },
         listWeek: { buttonText: 'Listar por semana' },
-        listToday: { buttonText: 'Hoje' }
+        listThisWeek: { buttonText: 'Hoje' }
       },
       initialView: 'listWeek',
       initialDate: '2023-01-12',
