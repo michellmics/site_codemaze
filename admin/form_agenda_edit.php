@@ -101,27 +101,10 @@
 					
 			<div style="flex: 1;">
 			<label>FUNCIONÁRIO</label>
-      <select required class="form-control" name="funcionario" style="width: 100%;">
-    <option value="" disabled selected>Selecione...</option>  
-    <?php
-    // Exibe o primeiro item do array com o atributo "selected"
-    if (!empty($siteAdmin->ARRAY_USERINFO)) {
-        $selectedUserId = $siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]; // ID do usuário selecionado
-        echo '<option value="' . htmlspecialchars($selectedUserId) . '" selected>' . htmlspecialchars($siteAdmin->ARRAY_USERINFO[0]["USA_DCNOME"]) . '</option>';
-    }
+			<select required class="form-control" name="funcionario" style="width: 100%;">
+      <option value="<? echo $siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]; ?>" selected><? echo $siteAdmin->ARRAY_USERINFO[0]["USA_DCNOME"]; ?></option>
 
-    // Verifica se o array não está vazio
-    if (!empty($siteAdmin->ARRAY_USERINFOLIST)) {
-        // Itera sobre o array de usuários
-        foreach ($siteAdmin->ARRAY_USERINFOLIST as $user) {
-            // Verifica se o usuário deve ser marcado como "selected"
-            $selected = ($user['USA_IDUSERADMIN'] == $selectedUserId) ? 'selected' : '';
-            // Exibe os nomes no select e usa o ID de usuário como valor
-            echo '<option value="' . htmlspecialchars($user['USA_IDUSERADMIN']) . '" ' . $selected . '>' . htmlspecialchars($user['USA_DCNOME']) . '</option>';
-        }
-    }
-    ?>
-</select>
+			</select> 
 			</div> 
       <div style="flex: 3">
 			<label>TÍTULO</label>
