@@ -33,8 +33,7 @@
     );
 }
 
-
-var_dump($arrayEventos);
+print_r($arrayEventos);
 die();
 
 
