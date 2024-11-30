@@ -19,7 +19,6 @@
   $userID = $siteAdmin->ARRAY_AGENDAINFO[0]["USA_IDUSERADMIN"];
   $siteAdmin->getUserInfoList(); 
   $siteAdmin->getUserInfo($userID); 
-  var_dump($siteAdmin->ARRAY_USERINFO);
   
 $dateIni = DateTime::createFromFormat('Y-m-d H:i:s', $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DTINI"]);
 $dateIniFormat = $dateIni->format('d/m/Y H:i');
