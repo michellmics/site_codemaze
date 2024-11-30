@@ -10,7 +10,7 @@
     var calendar = new FullCalendar.Calendar(calendarEl, {
       locale: 'pt-br',
       headerToolbar: {
-        left: 'prev,next today',
+        left: 'prev,next hoje',
         center: 'title',
         right: 'listDay,listWeek'
       },
