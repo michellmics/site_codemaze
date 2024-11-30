@@ -15,7 +15,29 @@
 
   $siteAdmin->getAgendaAtividadesInfo();
   var_dump($siteAdmin->ARRAY_AGENDAATIVIDADES);
+
+
+
+  $arrayEventos = array();
+
+  foreach($siteAdmin->ARRAY_AGENDAATIVIDADES as $evento) {
+    // Alimentando o arrayEventos com as informações de cada evento
+    $arrayEventos[] = array(
+        'title' => $evento['AGE_DCTITULO'],               // Título do evento
+        'start' => $evento['AGE_DTINI'], 
+        'end' => $evento['AGE_DTFIM'],               // Data e hora do evento
+        'descricao' => $evento['AGE_DCDESC'],       // Descrição do evento
+        'imageUrl' => $evento['USA_DCFOTO'],         // URL da imagem do evento
+        'status' => $evento['AGE_STSTATUS'],             // Status do evento
+        'statusLink' => $evento['AGE_IDAGENDA']      // URL do status
+    );
+}
+
+
+var_dump($arrayEventos);
 die();
+
+
 
 ?>
 
