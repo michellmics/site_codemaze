@@ -27,13 +27,13 @@
         {
           title: 'Reunião de Equipe',
           start: '2023-01-12T10:00:00',
-          responsavel: 'João',
+          Descrição: 'João',
           imageUrl: 'https://via.placeholder.com/40' // URL da foto
         },
         {
           title: 'Apresentação do Projeto',
           start: '2023-01-13T14:00:00',
-          responsavel: 'Maria',
+          Descrição: 'Maria',
           imageUrl: 'https://via.placeholder.com/40'
         }
       ],
