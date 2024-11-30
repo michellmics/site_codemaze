@@ -17,9 +17,9 @@
   $id = "3";
   $siteAdmin->getAgendaInfoById($id);
   $userID = $siteAdmin->ARRAY_AGENDAINFO[0]["USA_IDUSERADMIN"];
-  echo $userID;
   $siteAdmin->getUserInfoList(); 
   $siteAdmin->getUserInfo($userID); 
+  var_dump($siteAdmin->ARRAY_USERINFO);
   
   
   
