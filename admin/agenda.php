@@ -86,7 +86,7 @@
                 </div>
               </div>
             </div><!-- /.col -->
-            <div class="col-md-9">
+            <div class="col-md-10">
               <div class="box box-primary">
                 <div class="box-body no-padding">
                   <!-- THE CALENDAR -->
