@@ -269,17 +269,70 @@ $('form').on('submit', function () {
 });
 </script>
 <script>
-    $(document).ready(function() {
-      $('#dtinicio').mask('00/00/0000 00:00', {
-        placeholder: "__/__/____ __:__"
-      });
+  $(document).ready(function () {
+    // Aplica a máscara de data e hora
+    $('#dtinicio').mask('00/00/0000 00:00', { placeholder: "__/__/____ __:__" });
+    $('#dtfim').mask('00/00/0000 00:00', { placeholder: "__/__/____ __:__" });
+
+    // Validação para hora e minutos
+    function validateTimeInput(input) {
+      let timeValue = input.val().trim();
+      let timeParts = timeValue.split(' '); // Divide em data e hora
+      if (timeParts.length === 2) {
+        let time = timeParts[1].split(':'); // Divide a hora em horas e minutos
+        let hour = parseInt(time[0], 10);
+        let minute = parseInt(time[1], 10);
+
+        // Se a hora for maior que 23 ou minuto maior que 59, exibe um alerta
+        if (hour > 23) {
+          input.val(timeParts[0] + ' 23:59');
+          alert('Hora não pode ser maior que 23!');
+        } else if (minute > 59) {
+          input.val(timeParts[0] + ' ' + hour + ':59');
+          alert('Minuto não pode ser maior que 59!');
+        }
+      }
+    }
+
+    // Validação para a data
+    function validateDateInput(input) {
+      let dateValue = input.val().trim();
+      let dateParts = dateValue.split(' '); // Divide em data e hora
+      if (dateParts.length === 2) {
+        let date = dateParts[0].split('/'); // Divide a data em dia, mês e ano
+        let day = parseInt(date[0], 10);
+        let month = parseInt(date[1], 10);
+        let year = parseInt(date[2], 10);
+
+        // Se o ano for maior que 2100, exibe um alerta
+        if (year > 2100) {
+          input.val('31/12/2100 23:59');
+          alert('Ano não pode ser maior que 2100!');
+        }
+        // Se o mês for maior que 12, exibe um alerta
+        else if (month > 12) {
+          input.val('31/12/2100 23:59');
+          alert('Mês não pode ser maior que 12!');
+        }
+        // Se o dia for maior que 31, exibe um alerta
+        else if (day > 31) {
+          input.val('31/12/2100 23:59');
+          alert('Dia não pode ser maior que 31!');
+        }
+      }
+    }
+
+    // Valida os campos quando o usuário sai do campo (blur)
+    $('#dtinicio').on('blur', function () {
+      validateTimeInput($(this));
+      validateDateInput($(this));
     });
 
-    $(document).ready(function() {
-      $('#dtfim').mask('00/00/0000 00:00', {
-        placeholder: "__/__/____ __:__"
-      });
+    $('#dtfim').on('blur', function () {
+      validateTimeInput($(this));
+      validateDateInput($(this));
     });
+  });
 </script>
     <!-- jQuery 2.1.3 -->
     
