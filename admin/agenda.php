@@ -46,7 +46,7 @@
               <img src="${info.event.extendedProps.imageUrl}" alt="Foto" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
               <div>
                 <strong>${info.event.title}</strong><br>
-                <em>Responsável: ${info.event.extendedProps.responsavel || 'Não definido'}</em>
+                <em>Descrição: ${info.event.extendedProps.responsavel || 'Não definido'}</em>
               </div>
             </div>
           `
