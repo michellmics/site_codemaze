@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors', 1);
   include_once 'objetos.php'; 
 
   session_start(); 
@@ -20,6 +19,7 @@ ini_set('display_errors', 1);
   $userID = $siteAdmin->ARRAY_AGENDAINFO[0]["USA_IDUSERADMIN"];
   $siteAdmin->getUserInfoList(); 
   $siteAdmin->getUserInfo($userID); 
+  var_dump($siteAdmin->ARRAY_USERINFO);
   
 $dateIni = DateTime::createFromFormat('Y-m-d H:i:s', $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DTINI"]);
 $dateIniFormat = $dateIni->format('d/m/Y H:i');
@@ -126,11 +126,11 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			
 			<div style="flex: 1;"> 
 			<label>DATA INICIO</label>
-			<input required type="text" value="<? echo $dateIni; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtinicio" name="dtinicio"   />
+			<input required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DTINI"]; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtinicio" name="dtinicio"   />
 			</div>
       <div style="flex: 1;">
 			<label>DATA FIM</label>
-      <input required type="text" value="<? echo $dateFim; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtfim" name="dtfim"   />
+      <input required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DTFIM"]; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtfim" name="dtfim"   />
 			</div>	
 
       <div style="flex: 1;">
