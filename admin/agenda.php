@@ -8,7 +8,7 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-
+      locale: 'pt-br',
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
