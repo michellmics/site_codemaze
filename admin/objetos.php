@@ -1351,7 +1351,7 @@
             }
         }
                                         
-        public function insertAgendaInfo($AGE_DCTITULO,$AGE_DTINI,$AGE_DTFIM,$AGE_STSTATUS,$AGE_DCDESC)
+        public function insertAgendaInfo($AGE_DCTITULO,$AGE_DTINI,$AGE_DTFIM,$AGE_STSTATUS,$AGE_DCDESC,$USA_IDUSERADMIN)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -1360,8 +1360,8 @@
             
             try {
                 $sql = "INSERT INTO AGE_AGENDA 
-                        (AGE_DCTITULO,AGE_DTINI,AGE_DTFIM,AGE_STSTATUS,AGE_DCDESC) 
-                        VALUES (:AGE_DCTITULO,:AGE_DTINI,:AGE_DTFIM,:AGE_STSTATUS,:AGE_DCDESC)";
+                        (AGE_DCTITULO,AGE_DTINI,AGE_DTFIM,AGE_STSTATUS,AGE_DCDESC,USA_IDUSERADMIN) 
+                        VALUES (:AGE_DCTITULO,:AGE_DTINI,:AGE_DTFIM,:AGE_STSTATUS,:AGE_DCDESC,:USA_IDUSERADMIN)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -1371,6 +1371,7 @@
                 $stmt->bindParam(':AGE_DTFIM', $AGE_DTFIM, PDO::PARAM_STR);
                 $stmt->bindParam(':AGE_STSTATUS', $AGE_STSTATUS, PDO::PARAM_STR);
                 $stmt->bindParam(':AGE_DCDESC', $AGE_DCDESC, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
 
                 $stmt->execute();
             
