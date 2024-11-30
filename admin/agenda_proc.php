@@ -55,7 +55,6 @@ class registerAgenda extends SITE_ADMIN
 // Processa a requisição POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
-    
     $titulo = $_POST['titulo'];
     $dtinicio = $_POST['dtinicio'];
     $dtfim = $_POST['dtfim'];
