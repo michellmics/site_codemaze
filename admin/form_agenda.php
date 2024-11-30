@@ -12,8 +12,8 @@
 
   $siteAdmin = new SITE_ADMIN();
 
+  $siteAdmin->getUserInfoList()
   
-
 ?>
 
 
@@ -92,18 +92,22 @@
 					
 			<div style="flex: 1;">
 			<label>FUNCIONÁRIO</label>
-			<select class="form-control" name="funcionario" style="width: 100%;">
-                	<option value="" disabled selected>Selecione...</option>  
-                	<option value="HOSTING">HOSTING</option>
-                	<option value="CONSULTORIA">CONSULTORIA</option>
-                	<option value="GESTÃO DE TRÁFEGO">GESTÃO DE TRÁFEGO</option>
-                	<option value="DESENVOLVIMENTO">DESENVOLVIMENTO</option>
-                	<option value="GESTÃO DE MIDIA SOCIAL">GESTÃO DE MIDIA SOCIAL</option>
+			<select required class="form-control" name="funcionario" style="width: 100%;">
+          <?php
+            // Verifica se o array não está vazio
+            if (!empty($siteAdmin->ARRAY_USERINFOLIST)) {
+                // Itera sobre o array de usuários
+                foreach ($siteAdmin->ARRAY_USERINFOLIST as $user) {
+                    // Exibe os nomes no select e usa o ID de usuário como valor
+                    echo '<option value="' . htmlspecialchars($user['USA_IDUSERADMIN']) . '">' . htmlspecialchars($user['USA_DCNOME']) . '</option>';
+                }
+            }
+          ?>
 			</select>
 			</div> 
       <div style="flex: 1;">
 			<label>TÍTULO</label>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="40" class="form-control" placeholder="Enter ..." name="titulo" />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="40" class="form-control" placeholder="Enter ..." name="titulo" />
 			</div>    
 			
 			<div style="flex: 1;"> 
@@ -117,7 +121,7 @@
 
       <div style="flex: 1;">
 			<label>STATUS</label>
-			<select class="form-control" name="status" style="width: 100%;">
+			<select required class="form-control" name="status" style="width: 100%;">
                 	<option value="" disabled selected>Selecione...</option>  
                 	<option value="PENDENTE">PENDENTE</option>
                 	<option value="EM ANDAMENTO">EM ANDAMENTO</option>
