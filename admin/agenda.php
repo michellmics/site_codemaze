@@ -10,13 +10,14 @@
     var calendar = new FullCalendar.Calendar(calendarEl, {
       locale: 'pt-br',
       headerToolbar: {
-        left: 'prev,next hoje',
+        left: 'prev,next today',
         center: 'title',
         right: 'listDay,listWeek'
       },
       views: {
         listDay: { buttonText: 'Listar por dia' },
-        listWeek: { buttonText: 'Listar por semana' }
+        listWeek: { buttonText: 'Listar por semana' },
+        listToday: { buttonText: 'Hoje' }
       },
       initialView: 'listWeek',
       initialDate: '2023-01-12',
