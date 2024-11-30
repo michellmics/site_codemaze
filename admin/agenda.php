@@ -32,7 +32,8 @@
         'end' => $dataFimFormatada,               // Data e hora do evento
         'descricao' => $evento['AGE_DCDESC'],       // Descrição do evento
         'imageUrl' => $evento['USA_DCFOTO'],         // URL da imagem do evento
-        'status' => $evento['AGE_STSTATUS'],             // Status do evento
+        'status' => $evento['AGE_STSTATUS'],  
+        'color' => 'green',           // Status do evento
         'statusLink' => $evento['AGE_IDAGENDA']      // URL do status
     );
 }
