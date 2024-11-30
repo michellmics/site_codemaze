@@ -283,6 +283,13 @@ $('form').on('submit', function () {
         let hour = parseInt(time[0], 10);
         let minute = parseInt(time[1], 10);
 
+        // Verifica se a hora e minutos estão preenchidos
+        if (time[0] === "" || time[1] === "") {
+          alert('Hora e minuto são obrigatórios!');
+          input.val(''); // Limpa o campo
+          return false;
+        }
+
         // Se a hora for maior que 23 ou minuto maior que 59, exibe um alerta
         if (hour > 23) {
           input.val(timeParts[0] + ' 23:59');
@@ -291,6 +298,9 @@ $('form').on('submit', function () {
           input.val(timeParts[0] + ' ' + hour + ':59');
           alert('Minuto não pode ser maior que 59!');
         }
+      } else {
+        alert('Por favor, preencha o campo de hora corretamente!');
+        input.val(''); // Limpa o campo
       }
     }
 
@@ -324,13 +334,23 @@ $('form').on('submit', function () {
 
     // Valida os campos quando o usuário sai do campo (blur)
     $('#dtinicio').on('blur', function () {
-      validateTimeInput($(this));
-      validateDateInput($(this));
+      if ($(this).val().trim() === "") {
+        alert('O campo data e hora de início é obrigatório!');
+        $(this).val(''); // Limpa o campo
+      } else {
+        validateTimeInput($(this));
+        validateDateInput($(this));
+      }
     });
 
     $('#dtfim').on('blur', function () {
-      validateTimeInput($(this));
-      validateDateInput($(this));
+      if ($(this).val().trim() === "") {
+        alert('O campo data e hora de término é obrigatório!');
+        $(this).val(''); // Limpa o campo
+      } else {
+        validateTimeInput($(this));
+        validateDateInput($(this));
+      }
     });
   });
 </script>
