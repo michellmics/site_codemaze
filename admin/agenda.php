@@ -14,7 +14,6 @@
 
 
   $siteAdmin->getAgendaAtividadesInfo();
-  var_dump($siteAdmin->ARRAY_AGENDAATIVIDADES);
 
 
 
