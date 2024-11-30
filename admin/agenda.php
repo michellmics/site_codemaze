@@ -19,8 +19,8 @@
       // customize the button names,
       // otherwise they'd all just say "list"
       views: {
-        listDay: { buttonText: 'list day' },
-        listWeek: { buttonText: 'list week' }
+        listDay: { buttonText: 'Listar por dia' },
+        listWeek: { buttonText: 'Listar por semana' }
       },
 
       initialView: 'listWeek',
