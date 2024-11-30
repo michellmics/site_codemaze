@@ -14,10 +14,12 @@
         center: 'title',
         right: 'listDay,listWeek'
       },
+      buttonText: {
+        today: 'Esta Semana' 
+      },
       views: {
         listDay: { buttonText: 'Listar por dia' },
-        listWeek: { buttonText: 'Listar por semana' },
-        listThisWeek: { buttonText: 'Hoje' }
+        listWeek: { buttonText: 'Listar por semana' }
       },
       initialView: 'listWeek',
       initialDate: '2023-01-12',
