@@ -26,6 +26,7 @@
         public $ARRAY_BALANCOMENSAL;
         public $ARRAY_PROXVENCIMENTOS;
         public $ARRAY_ALERTA;
+        public $ARRAY_AGENDAINFO;
         public $configPath = '/home/codemaze/config.cfg';
 
 
@@ -720,6 +721,25 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_PRODUCTINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getAgendaInfoById($ID)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM AGE_AGENDA
+                                WHERE AGE_IDAGENDA = $ID
+                                ORDER BY AGE_DCTITULO ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_AGENDAINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
