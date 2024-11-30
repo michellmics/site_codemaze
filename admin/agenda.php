@@ -21,10 +21,15 @@
 
   foreach($siteAdmin->ARRAY_AGENDAATIVIDADES as $evento) {
     // Alimentando o arrayEventos com as informações de cada evento
+    $dataInicio = new DateTime($evento['AGE_DTINI']); // A data de término do evento (AGE_DTFIM)
+    $dataInicioFormatada = $dataInicio->format('Y-m-d\TH:i:s'); // Formato necessário para o FullCalendar
+    $dataFim= new DateTime($evento['AGE_DTFIM']); // A data de término do evento (AGE_DTFIM)
+    $dataFimFormatada = $dataFim->format('Y-m-d\TH:i:s'); // Formato necessário para o FullCalendar
+
     $arrayEventos[] = array(
         'title' => $evento['AGE_DCTITULO'],               // Título do evento
-        'start' => $evento['AGE_DTINI'], 
-        'end' => $evento['AGE_DTFIM'],               // Data e hora do evento
+        'start' => $dataInicioFormatada, 
+        'end' => $dataFimFormatada,               // Data e hora do evento
         'descricao' => $evento['AGE_DCDESC'],       // Descrição do evento
         'imageUrl' => $evento['USA_DCFOTO'],         // URL da imagem do evento
         'status' => $evento['AGE_STSTATUS'],             // Status do evento
