@@ -30,7 +30,8 @@
           title: 'All Day Event',
           start: '2023-01-01',
           responsavel: 'João',
-          color: 'green'
+          color: 'green',
+          imageUrl: 'https://via.placeholder.com/40'
         },
         {
           title: 'Long Event',
@@ -43,7 +44,8 @@
           title: 'Repeating Event',
           start: '2023-01-09T16:00:00',
           end: '2023-01-09T17:00:00',
-          responsavel: 'Carlos'
+          responsavel: 'Carlos',
+          imageUrl: 'https://via.placeholder.com/40'
         },
         {
           title: 'Conference',
