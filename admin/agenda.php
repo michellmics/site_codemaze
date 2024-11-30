@@ -41,6 +41,7 @@
           groupId: 999,
           title: 'Repeating Event',
           start: '2023-01-09T16:00:00',
+          end: '2023-01-09T17:00:00',
           responsavel: 'Carlos'
         },
         {
