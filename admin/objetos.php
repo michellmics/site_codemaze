@@ -27,6 +27,7 @@
         public $ARRAY_PROXVENCIMENTOS;
         public $ARRAY_ALERTA;
         public $ARRAY_AGENDAINFO;
+        public $ARRAY_AGENDAATIVIDADES;
         public $configPath = '/home/codemaze/config.cfg';
 
 
@@ -792,6 +793,22 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_USERINFO = $stmt->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getAgendaAtividadesInfo($USA_IDUSERADMIN)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * FROM VW_AGENDA_ATIVIDADES";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_AGENDAATIVIDADES = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          

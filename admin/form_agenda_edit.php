@@ -13,8 +13,7 @@
   $siteAdmin = new SITE_ADMIN();
 
 
-  //$id = $_GET['id'];
-  $id = "3";
+  $id = $_GET['id'];
   $siteAdmin->getAgendaInfoById($id);
   $userID = $siteAdmin->ARRAY_AGENDAINFO[0]["USA_IDUSERADMIN"];
   $siteAdmin->getUserInfoList(); 

@@ -1,3 +1,25 @@
+<?php
+  include_once 'objetos.php'; 
+
+  session_start(); 
+  define('SESSION_TIMEOUT', 1800); // 30 minutos
+ 
+  if (!isset($_SESSION['user_id'])) 
+  {
+    header("Location: index.php");
+    exit();
+  }
+
+  $siteAdmin = new SITE_ADMIN();
+
+
+  $siteAdmin->getAgendaAtividadesInfo();
+  var_dump($siteAdmin->ARRAY_AGENDAATIVIDADES);
+die();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
