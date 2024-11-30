@@ -102,7 +102,7 @@
 			<div style="flex: 1;">
 			<label>FUNCIONÁRIO</label>
 			<select required class="form-control" name="funcionario" style="width: 100%;">
-      <option value="<?php echo $siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]; ?>" selected><?php echo $siteAdmin->ARRAY_USERINFO[0]["USA_DCNOME"]; ?></option>
+      <option value="<?php var_dump($siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]); ?>" selected><?php var_dump($siteAdmin->ARRAY_USERINFO[0]["USA_IDUSERADMIN"]); ?></option>
 
 			</select> 
 			</div> 
