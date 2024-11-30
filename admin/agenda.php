@@ -34,7 +34,7 @@
         'imageUrl' => $evento['USA_DCFOTO'],         // URL da imagem do evento
         'status' => $evento['AGE_STSTATUS'],  
         'color' => 'green',           // Status do evento
-        'statusLink' => $evento['AGE_IDAGENDA']      // URL do status
+        'statusLink' => 'https://www.codemaze.com.br/site/admin/form_agenda_edit.php?id=' . $evento['AGE_IDAGENDA'] // URL do status
     );
 }
 
