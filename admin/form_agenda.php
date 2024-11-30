@@ -105,7 +105,7 @@
           ?>
 			</select>
 			</div> 
-      <div style="flex: 1;">
+      <div style="flex: 3">
 			<label>TÍTULO</label>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="40" class="form-control" placeholder="Enter ..." name="titulo" />
 			</div>    
