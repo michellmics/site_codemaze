@@ -29,7 +29,8 @@
         {
           title: 'All Day Event',
           start: '2023-01-01',
-          responsavel: 'João'
+          responsavel: 'João',
+          color: 'green'
         },
         {
           title: 'Long Event',
