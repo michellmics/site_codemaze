@@ -14,12 +14,10 @@
         center: 'title',
         right: 'listDay,listWeek'
       },
-
       views: {
         listDay: { buttonText: 'Listar por dia' },
         listWeek: { buttonText: 'Listar por semana' }
       },
-
       initialView: 'listWeek',
       initialDate: '2023-01-12',
       navLinks: true,
@@ -27,45 +25,33 @@
       dayMaxEvents: true,
       events: [
         {
-          title: 'All Day Event',
-          start: '2023-01-01',
+          title: 'Reunião de Equipe',
+          start: '2023-01-12T10:00:00',
           responsavel: 'João',
-          color: 'green',
+          imageUrl: 'https://via.placeholder.com/40' // URL da foto
+        },
+        {
+          title: 'Apresentação do Projeto',
+          start: '2023-01-13T14:00:00',
+          responsavel: 'Maria',
           imageUrl: 'https://via.placeholder.com/40'
-        },
-        {
-          title: 'Long Event',
-          start: '2023-01-07',
-          end: '2023-01-10',
-          responsavel: 'Maria'
-        },
-        {
-          groupId: 999,
-          title: 'Repeating Event',
-          start: '2023-01-09T16:00:00',
-          end: '2023-01-09T17:00:00',
-          responsavel: 'Carlos',
-          imageUrl: 'https://via.placeholder.com/40'
-        },
-        {
-          title: 'Conference',
-          start: '2023-01-11',
-          end: '2023-01-13',
-          responsavel: 'Ana'
         }
       ],
 
       eventContent: function(info) {
+        // HTML personalizado para exibir a foto ao lado do evento
         return {
           html: `
-            <div>
-              <strong>${info.event.title}</strong><br>
-              <em>Responsável: ${info.event.extendedProps.responsavel || 'Não definido'}</em>
+            <div style="display: flex; align-items: center;">
+              <img src="${info.event.extendedProps.imageUrl}" alt="Foto" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+              <div>
+                <strong>${info.event.title}</strong><br>
+                <em>Responsável: ${info.event.extendedProps.responsavel || 'Não definido'}</em>
+              </div>
             </div>
           `
         };
       }
-
     });
 
     calendar.render();
