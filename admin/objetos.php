@@ -798,7 +798,7 @@
             }          
         }
 
-        public function getAgendaAtividadesInfo($USA_IDUSERADMIN)
+        public function getAgendaAtividadesInfo()
         {          
                 // Verifica se a conexão já foi estabelecida
                 if(!$this->pdo){$this->conexao();}
