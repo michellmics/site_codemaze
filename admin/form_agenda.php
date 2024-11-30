@@ -270,14 +270,14 @@ $('form').on('submit', function () {
 </script>
 <script>
     $(document).ready(function() {
-      $('#dtinicio').mask('00/00/0000', {
-        placeholder: "__/__/____"
+      $('#dtinicio').mask('00/00/0000 00:00', {
+        placeholder: "__/__/____ __:__"
       });
     });
 
     $(document).ready(function() {
-      $('#dtfim').mask('00/00/0000', {
-        placeholder: "__/__/____"
+      $('#dtfim').mask('00/00/0000 00:00', {
+        placeholder: "__/__/____ __:__"
       });
     });
 </script>
