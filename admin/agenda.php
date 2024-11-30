@@ -27,13 +27,13 @@
         {
           title: 'Reunião de Equipe',
           start: '2023-01-12T10:00:00',
-          Descrição: 'João',
+          descricao: 'João',
           imageUrl: 'https://via.placeholder.com/40' // URL da foto
         },
         {
           title: 'Apresentação do Projeto',
           start: '2023-01-13T14:00:00',
-          Descrição: 'Maria',
+          descricao: 'Maria',
           imageUrl: 'https://via.placeholder.com/40'
         }
       ],
@@ -46,7 +46,7 @@
               <img src="${info.event.extendedProps.imageUrl}" alt="Foto" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
               <div>
                 <strong>${info.event.title}</strong><br>
-                <em>Descrição: ${info.event.extendedProps.responsavel || 'Não definido'}</em>
+                <em>Descrição: ${info.event.extendedProps.descricao || 'Não definido'}</em>
               </div>
             </div>
           `
