@@ -27,20 +27,20 @@ if($activesList == "Inativos")
 }
 else
   {
-    $siteAdmin->getContratoInfo();
+    $siteAdmin->getAgendaAtividadesInfo();
   }
 
 // Configurações de Paginação
 $registrosPorPagina = 10;
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_CONTRATOINFO);
+$totalRegistros = count($siteAdmin->ARRAY_AGENDAATIVIDADES);
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Determina o índice de início para a página atual
 $inicio = ($paginaAtual - 1) * $registrosPorPagina;
 
 // Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPorPagina);
+$dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registrosPorPagina);
 
 //-----------------
 
@@ -100,15 +100,15 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Contratos</h3>
+                  <h3 class="box-title">Lista de Atividades</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
                   <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
                   <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button>
                    <!-- Botão "Adicionar Produto" -->
-                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_contrato.php';">
-                        ADICIONAR CONTRATO
+                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_agenda.php';">
+                        ADICIONAR ATIVIDADE
                       </button>
                     <form method="GET" action="" style="display: flex;">
                         <input 
@@ -131,42 +131,28 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_CONTRATOINFO, $inicio, $registrosPo
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th>ID</th>
-                      <th></th>
-                      <th>CLIENTE</th>
-                      <th>CPF/CNPJ</th>
-                      <th>RAZÃO SOCIAL</th>
-                      <th>SERVIÇO</th>
-                      <th>FIM CONT</th> 
-                      <th>COBRANÇA</th>
-                      <th>VENC</th>
-                      <th>VALOR</th>
-                      <th>STATUS</th>   
-                      <th></th>                    
+                      <th>STATUS</th>
+                      <th>NOME</th>
+                      <th>DATA INI</th>
+                      <th>DATA FIM</th>
+                      <th>TITULO</th>                 
                     </tr>
                     <tr>
-                    <?php foreach ($dadosPagina as $contrato): ?>
+                    <?php foreach ($dadosPagina as $atividade): ?>
                     <tr>
                         <? 
-                          $styleStatus = ($contrato['GEC_STCONTRATO'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; 
-                          $result = $siteAdmin->getPendenciaInfo($contrato['GEC_IDGESTAO_CONTRATO']);
-                          if($result == "PENDENTE"){$icon = "label label-danger";}
-                          if($result == "EM DIA"){$icon = "label label-success";}
-                          if($result == "Sem Dados"){$icon = "label label-default";}
+                          $result = $atividade['AGE_STSTATUS'];
+                          if($result == "ATRASADO"){$icon = "label label-danger";}
+                          if($result == "CONCLUÍDO"){$icon = "label label-success";}
+                          if($result == "EM ANDAMENTO"){$icon = "label label-default";}
+                         
                         ?>
-
-                        <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?></b></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($contrato['GEC_IDGESTAO_CONTRATO']) ?>"><span class="<? echo $icon; ?>"><? echo $result; ?></span></a></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_NMNAME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCCPFCNPJ']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['CLI_DCRSOCIAL']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['PRS_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTENDCONTRATO']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCPERIODOCOBRANCA']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DTVENCIMENTO']) ?></td>  
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($contrato['GEC_DCVALOR']) ?></td>   
-                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($contrato['GEC_STCONTRATO']) ?></td>                        
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $contrato['GEC_IDGESTAO_CONTRATO']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($atividade['AGE_STSTATUS']) ?>"><span class="<? echo $icon; ?>"><? echo $result; ?></span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['USA_DCNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTINI']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTFIM']) ?></td>                  
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DCTITULO']) ?></td>     
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_agenda_edit.php?id=<? echo $atividade['AGE_IDAGENDA']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                                            
                       </tr>
                     <?php endforeach; ?>   
