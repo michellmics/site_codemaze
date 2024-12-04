@@ -366,9 +366,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
       <!--##############################################################-->
       <!-- Main content FRAME INI-->
       <!--##############################################################-->
-        
-                <br><br>
-      <!-- Script JavaScript -->
+             <!-- Script JavaScript -->
       <script>
         function loadInIframe(url) {
           document.getElementById('contentFrame').src = url;
@@ -386,7 +384,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
           <iframe 
             id="contentFrame" 
             class="embed-responsive-item" 
-            style="border:0; width:100%; height:80%;" 
+            style="border:0; width:100%; height:50%;" 
             allowfullscreen>
           </iframe>
         </div>
