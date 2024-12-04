@@ -19,6 +19,7 @@ if ($_SESSION['user_nivelacesso'] == "ADMINISTRADOR")
   }
   else
     {
+      $idUser = $_SESSION['user_id'];
       $siteAdmin->getAgendaAtividadesInfo();
     }
 }
