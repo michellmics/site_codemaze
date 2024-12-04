@@ -10,7 +10,7 @@
     exit();
   }
 
-  if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ss") 
+  if ($_SESSION['user_nivelacesso'] != " FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ss") 
   {
     header("Location: noAuth.html");
     exit();
