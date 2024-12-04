@@ -1,5 +1,6 @@
 <?php
   include_once 'objetos.php'; 
+  $siteAdmin = new SITE_ADMIN();
 
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
@@ -10,10 +11,17 @@
     exit();
   }
 
-  $siteAdmin = new SITE_ADMIN();
+  if ($_SESSION['user_nivelacesso'] == "ADMINISTRADOR") 
+  {
+    $siteAdmin->getAgendaAtividadesInfo();
+  }
 
+  if ($_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+  {
+    $idUser = $_SESSION['user_id'];
+    $siteAdmin->getAgendaAtividadesByIdInfo($idUser);
+  }
 
-  $siteAdmin->getAgendaAtividadesInfo();
 
 
 
