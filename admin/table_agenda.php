@@ -17,18 +17,12 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
   $search = $_GET['table_search'];
   $result = $siteAdmin->getAgendaAtividadeInfoBySearch($search);
 }
-
-
-$activesList = $_GET['statusBusca'];
-
-if($activesList == "Inativos")
-{
-  $siteAdmin->getContratoInactiveInfo();
-}
 else
   {
     $siteAdmin->getAgendaAtividadesInfo();
   }
+
+
 
 // Configurações de Paginação
 $registrosPorPagina = 10;
