@@ -25,6 +25,7 @@
                         <p id="modalBodyContent">One fine body&hellip;</p> <!-- ID adicionado -->
                       </div>
                       <div class="modal-footer">
+                        <span id="idAlerta" style="display:none;"></span>
                         <button type="button" class="btn btn-outline" data-dismiss="modal">Fechar</button>
                       </div>
                     </div><!-- /.modal-content -->
