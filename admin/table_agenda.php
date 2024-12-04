@@ -169,7 +169,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTINI']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTFIM']) ?></td>                  
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DCTITULO']) ?></td>     
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_agenda_edit.php?id=<? echo $atividade['AGE_IDAGENDA']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_agenda_edit.php?id=<? echo $atividade['AGE_IDAGENDA']; ?>" target="_self"><span class="label label-primary">VISUALIZAR</span></a></td>
                                            
                       </tr>
                     <?php endforeach; ?>   
