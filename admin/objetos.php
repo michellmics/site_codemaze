@@ -566,7 +566,7 @@
                                 OR AGE_STSTATUS LIKE :search
                                 OR USA_DCNOME LIKE :search                              
                                 ORDER BY AGE_DTFIM DESC";
-
+                echo $sql;
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
                 $stmt->execute();
