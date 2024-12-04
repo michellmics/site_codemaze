@@ -119,7 +119,7 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			</div> 
       <div style="flex: 3">
 			<label>TÍTULO</label>
-			<input required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCTITULO"]; ?>" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="40" class="form-control" placeholder="Enter ..." name="titulo" />
+			<input required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCTITULO"]; ?>" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="100" class="form-control" placeholder="Enter ..." name="titulo" />
 			</div>    
 			
 			<div style="flex: 1;"> 
