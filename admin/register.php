@@ -10,6 +10,12 @@ if (!isset($_SESSION['user_id']))
   exit();
 }
 
+if ($_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+{
+  header("Location: noAuth.html");
+  exit();
+}
+
 $siteAdmin = new SITE_ADMIN();
 $result = $siteAdmin->getSiteInfo();
 

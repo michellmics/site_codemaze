@@ -10,6 +10,12 @@ if (!isset($_SESSION['user_id']))
   exit();
 }
 
+if ($_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+{
+  header("Location: noAuth.html");
+  exit();
+}
+
 if(!isset($_GET['id'])) //trazer os dados de acordo com o q foi colocado na busca
 {
     echo "parâmetro não encontrado";

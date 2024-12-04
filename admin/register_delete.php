@@ -9,6 +9,11 @@ if (!isset($_SESSION['user_id']))
   header("Location: index.php");
   exit();
 }
+if (_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+{
+  header("Location: noAuth.html");
+  exit();
+}
 
 
 class deleteUser extends SITE_ADMIN

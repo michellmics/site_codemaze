@@ -9,7 +9,11 @@
     header("Location: index.php");
     exit();
   }
-
+  if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+  {
+    header("Location: noAuth.html");
+    exit();
+  }
   $siteAdmin = new SITE_ADMIN();
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca

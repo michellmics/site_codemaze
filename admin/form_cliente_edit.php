@@ -11,6 +11,12 @@
     exit();
   }
 
+  if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+  {
+    header("Location: noAuth.html");
+    exit();
+  }
+
 
   $idCLient = $_GET['id'];
   $siteAdmin = new SITE_ADMIN();
