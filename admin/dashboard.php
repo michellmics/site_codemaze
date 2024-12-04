@@ -367,7 +367,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
       <!-- Main content FRAME INI-->
       <!--##############################################################-->
         
-
+                <br><br>
       <!-- Script JavaScript -->
       <script>
         function loadInIframe(url) {
