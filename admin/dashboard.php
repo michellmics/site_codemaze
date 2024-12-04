@@ -299,12 +299,12 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
             </div>
           </div>
             <li class="header"><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></li>
+            <li><a href="#" onclick="loadInIframe('agenda.php')"><i class="fa fa-circle-o"></i> Home</a></li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-edit"></i> <span>Financeiro</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
               <ul class="treeview-menu">               
                 <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
                 <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Produtos</a></li>
