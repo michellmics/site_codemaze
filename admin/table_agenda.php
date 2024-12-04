@@ -1,26 +1,45 @@
 <?php
   include_once 'objetos.php'; 
+  $siteAdmin = new SITE_ADMIN();
   
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
  
-  if (!isset($_SESSION['user_id'])) 
-  {
-    header("Location: index.php");
-    exit();
-  }
-
-  $siteAdmin = new SITE_ADMIN();
-
-if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
+if (!isset($_SESSION['user_id'])) 
 {
-  $search = $_GET['table_search'];
-  $result = $siteAdmin->getAgendaAtividadeInfoBySearch($search);
+  header("Location: index.php");
+  exit();
 }
-else
+if ($_SESSION['user_nivelacesso'] == "ADMINISTRADOR") 
+{
+  if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
   {
-    $siteAdmin->getAgendaAtividadesInfo();
+    $search = $_GET['table_search'];
+    $result = $siteAdmin->getAgendaAtividadeInfoBySearch($search);
   }
+  else
+    {
+      $siteAdmin->getAgendaAtividadesInfo();
+    }
+}
+
+if ($_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+{
+  if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
+  {
+    $search = $_GET['table_search'];
+    $idUser = $_SESSION['user_id'];
+    $result = $siteAdmin->getAgendaAtividadeInfoByIdBySearch($search, $idUser);
+  }
+  else
+    {
+      $siteAdmin->getAgendaAtividadesByIdInfo($idUser);
+    }
+}
+
+
+
+
 
 
 

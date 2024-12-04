@@ -575,6 +575,32 @@
             }          
         }
 
+        public function getAgendaAtividadeInfoByIdBySearch($search, $USA_IDUSERADMIN)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_AGENDA_ATIVIDADES
+                                WHERE 
+                                USA_IDUSERADMIN = :USA_IDUSERADMIN
+                                AND (AGE_DCTITULO LIKE :search                                
+                                OR AGE_DTINI LIKE :search
+                                OR AGE_DTFIM LIKE :search
+                                OR AGE_STSTATUS LIKE :search
+                                OR USA_DCNOME LIKE :search)                             
+                                ORDER BY AGE_DTFIM DESC";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+                $stmt->bindValue(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_AGENDAATIVIDADES = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getContratoInfoBySearch($search)
         {          
                 // Verifica se a conexão já foi estabelecida
@@ -831,6 +857,23 @@
                 $sql = "SELECT * FROM VW_AGENDA_ATIVIDADES ORDER BY AGE_DTFIM DESC";
 
                 $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_AGENDAATIVIDADES = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getAgendaAtividadesByIdInfo($USA_IDUSERADMIN)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * FROM VW_AGENDA_ATIVIDADES WHERE USA_IDUSERADMIN = :USA_IDUSERADMIN ORDER BY AGE_DTFIM DESC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
                 $stmt->execute();
                 $this->ARRAY_AGENDAATIVIDADES = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
