@@ -184,7 +184,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(button) {
     const value = button.value;
-    window.location.href = `https://www.codemaze.com.br/site/admin/table_contrato.php?statusBusca=${value}`;
+    //window.location.href = `https://www.codemaze.com.br/site/admin/table_contrato.php?statusBusca=${value}`;
   }
   </script>
 
