@@ -804,7 +804,7 @@
                 if(!$this->pdo){$this->conexao();}
             
             try{           
-                $sql = "SELECT * FROM VW_AGENDA_ATIVIDADES";
+                $sql = "SELECT * FROM VW_AGENDA_ATIVIDADES ORDER BY AGE_DTFIM DESC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
