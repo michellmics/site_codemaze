@@ -98,8 +98,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
-                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button>
+                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">futuro </button>
+                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> futuro </button>
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_agenda.php';">
                         ADICIONAR ATIVIDADE
@@ -142,7 +142,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                           if($result == "EM ANDAMENTO"){$icon = "label label-default";}
                          
                         ?>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($atividade['AGE_STSTATUS']) ?>"><span class="<? echo $icon; ?>"><? echo $result; ?></span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><span class="<? echo $icon; ?>"><? echo $result; ?></span></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTINI']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTFIM']) ?></td>                  
