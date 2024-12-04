@@ -304,6 +304,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                 <i class="fa fa-edit"></i> <span>Financeiro</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
+              <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
               <ul class="treeview-menu">               
                 <li><a href="#" onclick="loadInIframe('table_cliente.php')"><i class="fa fa-circle-o"></i> Clientes</a></li>
                 <li><a href="#" onclick="loadInIframe('table_produto.php')"><i class="fa fa-circle-o"></i> Produtos</a></li>
