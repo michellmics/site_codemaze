@@ -165,7 +165,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                         ?>
                         <td style="text-transform: uppercase; font-size: 15px;"><span class="<? echo $icon; ?>"><? echo $result; ?></span></td>
                         <td style="text-transform: uppercase; font-size: 12px; vertical-align: middle;"><img src=<?php echo $atividade['USA_DCFOTO'] ?> class="user-image" alt="User Image" style="width: 25px; height: 25px;" alt="User Image"/></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['USA_IDUSERADMIN']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['USA_IDUSERADMIN']) ?><? echo "-".$idUser ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['USA_DCNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTINI']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($atividade['AGE_DTFIM']) ?></td>                  
