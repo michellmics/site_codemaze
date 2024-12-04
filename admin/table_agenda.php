@@ -144,6 +144,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                           $result = $atividade['AGE_STSTATUS'];
                           if($result == "ATRASADO"){$icon = "label label-danger";}
                           if($result == "CONCLUÍDO"){$icon = "label label-success";}
+                          if($result == "PENDENTE"){$icon = "label label-warning";}
                           if($result == "EM ANDAMENTO"){$icon = "label label-default";}
                          
                         ?>
