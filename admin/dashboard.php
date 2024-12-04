@@ -133,6 +133,14 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
   margin-top: 40px; /* Ajuste o valor conforme necessário, dependendo da altura da header fixa */
 }
 
+#alertModal .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
   </style>
   
   </head>
