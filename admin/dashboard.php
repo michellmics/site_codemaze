@@ -331,8 +331,8 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Configurações</a></li>
-                <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li>
+                <!-- <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Configurações</a></li> -->
+                <!-- <li><a href="#" onclick="loadInIframe('form_produto.php')"><i class="fa fa-circle-o"></i> Dados da Codemaze</a></li> -->
                 <li><a href="#" onclick="loadInIframe('table_usuarios.php')"><i class="fa fa-circle-o"></i> Usuários do Sistema</a></li>
               </ul> 
             </li>        
