@@ -126,7 +126,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_AGENDAATIVIDADES, $inicio, $registr
                   <table class="table table-hover">
                     <tr>
                       <th>STATUS</th>
-                      <th>d</th>
+                      <th></th>
                       <th>NOME</th>
                       <th>DATA INI</th>
                       <th>DATA FIM</th>
