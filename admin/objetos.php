@@ -558,7 +558,7 @@
             
             try{           
                 $sql = "SELECT *
-                                FROM VW_AGENDA_ATIVIDADES
+                                FROM VW_GENDA_ATIVIDADES
                                 WHERE 
                                 AGE_DCTITULO LIKE :search                                
                                 OR AGE_DTINI LIKE :search
