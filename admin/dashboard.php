@@ -298,7 +298,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
-            <li class="header"><?php echo htmlspecialchars($siteAdmin->ARRAY_SITEINFO["SBI_DCDOMAINSITE"]); ?></li>
+            <li class="header"><a href="#" onclick="loadInIframe('agenda.php')"><i class="fa fa-circle-o">HOME</a></li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-edit"></i> <span>Financeiro</span>
