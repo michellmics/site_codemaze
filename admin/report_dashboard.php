@@ -332,8 +332,7 @@ $despesas = 125; //provisorio
     <script src='plugins/fastclick/fastclick.min.js'></script>
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js" type="text/javascript"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js" type="text/javascript"></script>
+
     <!-- jQuery Knob -->
     <script src="plugins/knob/jquery.knob.js" type="text/javascript"></script>
     <!-- Sparkline -->
