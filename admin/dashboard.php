@@ -384,7 +384,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
           <iframe 
             id="contentFrame" 
             class="embed-responsive-item" 
-            style="border:0; width:100%; height:50%;" 
+            style="border:0; width:100%; height:85%;" 
             allowfullscreen>
           </iframe>
         </div>
