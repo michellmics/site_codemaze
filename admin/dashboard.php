@@ -382,7 +382,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
 
         // Carrega a URL inicial no iframe quando a página é carregada
         window.onload = function() {
-          loadInIframe('report_dashboard.php'); 
+          loadInIframe('agenda.php'); 
         };
       </script>
 
