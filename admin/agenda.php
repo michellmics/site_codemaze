@@ -35,7 +35,7 @@
     $dataFimFormatada = $dataFim->format('Y-m-d\TH:i:s'); // Formato necessário para o FullCalendar
 
     $arrayEventos[] = array(
-        'title' => $evento['AGE_DCTITULO'],               // Título do evento
+        'title' => strtoupper($evento['AGE_DCTITULO']),               // Título do evento
         'start' => $dataInicioFormatada, 
         'end' => $dataFimFormatada,               // Data e hora do evento
         'descricao' => $evento['AGE_DCDESC'],       // Descrição do evento
