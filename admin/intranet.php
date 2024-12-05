@@ -136,7 +136,7 @@
         </a>
         <a href="https://www.canva.com/" target="_blank">
             <i class="fas fa-info-circle"></i> 
-            Canvas
+            Canva
         </a>
         <a href="https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=" target="_blank">
             <i class="fas fa-cogs"></i>
