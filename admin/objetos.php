@@ -1489,6 +1489,46 @@
             }
         }
 
+        public function updateAgendaInfo($AGE_DCTITULO,$AGE_DTINI,$AGE_DTFIM,$AGE_STSTATUS,$AGE_DCDESC,$USA_IDUSERADMIN,$AGE_IDAGENDA)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            
+            try {
+                $sql = "UPDATE AGE_AGENDA 
+                        SET AGE_DCTITULO = :AGE_DCTITULO,
+                        AGE_DTINI = :AGE_DTINI,
+                        AGE_DTFIM = :AGE_DTFIM,
+                        AGE_STSTATUS = :AGE_STSTATUS,
+                        AGE_DCDESC = :AGE_DCDESC,
+                        USA_IDUSERADMIN = :USA_IDUSERADMIN
+                        WHERE AGE_IDAGENDA = :AGE_IDAGENDA";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':AGE_DCTITULO', $AGE_DCTITULO, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DTINI', $AGE_DTINI, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DTFIM', $AGE_DTFIM, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_STSTATUS', $AGE_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_DCDESC', $AGE_DCDESC, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
+                $stmt->bindParam(':AGE_IDAGENDA', $AGE_IDAGENDA, PDO::PARAM_STR);
+
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Tarefa atualizada. $AGE_DCTITULO","Info");
+                return ["success" => "Tarefa atualizada com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updateAgendaInfo. $AGE_DCTITULO","High");
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function insertBalancoMes($BLM_DCRECEITA, $BLM_DCDESPESA, $BLM_DCLIQUIDO)
         {          
             // Verifica se a conexão já foi estabelecida

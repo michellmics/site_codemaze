@@ -127,8 +127,13 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			</div> 
       <div style="flex: 3">
 			<label>TÍTULO</label>
-			<input required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCTITULO"]; ?>" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="100" class="form-control" placeholder="Enter ..." name="titulo" />
-			</div>    
+			<input <? echo $readyonly ?> required type="text" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCTITULO"]; ?>" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="100" class="form-control" placeholder="Enter ..." name="titulo" />
+			</div> 
+      
+      <div style="flex: 2;">
+			<label style="display: none;">ID</label>
+			<input type="text" style="width: 100%; text-transform: uppercase; display: none;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_IDAGENDA"]; ?>" />
+			</div>			
 			
 			<div style="flex: 1;"> 
 			<label>DATA INICIO</label>
@@ -210,7 +215,7 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
             var formData = $("#form-empresa").serialize();
             // Fazer a requisição AJAX
             $.ajax({
-              url: "agenda_proc.php", // URL para processamento
+              url: "agenda_proc_edit.php", // URL para processamento
               type: "POST",
               data: formData,
               success: function (response) {
