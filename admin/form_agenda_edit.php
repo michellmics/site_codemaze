@@ -159,7 +159,7 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea <? echo $readyonly ?> class="form-control"  style="width: 100%;" maxlength="400" rows="10" placeholder="Enter ..." name="descricao"><? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCDESC"]; ?></textarea>
+                      	<textarea <? echo $readyonly ?> class="form-control"  style="width: 100%;" maxlength="1000" rows="10" placeholder="Enter ..." name="descricao"><? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCDESC"]; ?></textarea>
                     	</div>
 			</div>
 		</div>

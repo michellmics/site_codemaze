@@ -145,7 +145,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  style="width: 100%;" maxlength="400" rows="10" placeholder="Enter ..." name="descricao"></textarea>
+                      	<textarea class="form-control"  style="width: 100%;" maxlength="1000" rows="10" placeholder="Enter ..." name="descricao"></textarea>
                     	</div>
 			</div>
 		</div>
