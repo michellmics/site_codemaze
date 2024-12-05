@@ -10,6 +10,14 @@
     exit();
   }
 
+  $readyonly="";
+
+  if ($_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
+  {
+    $readyonly="readonly";
+  }
+
+
   $siteAdmin = new SITE_ADMIN();
 
 
@@ -103,7 +111,7 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 					
 			<div style="flex: 1;">
 			<label>FUNCIONÁRIO</label>
-			<select required class="form-control" name="funcionario" style="width: 100%;">
+			<select required class="form-control" name="funcionario" style="width: 100%;" <? echo $readyonly ?>>
       <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_IDUSERADMIN"]; ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></option>
           <?php
             // Verifica se o array não está vazio
@@ -124,11 +132,11 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			
 			<div style="flex: 1;"> 
 			<label>DATA INICIO</label>
-			<input required type="text" value="<? echo $dateIniFormat; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtinicio" name="dtinicio"   />
+			<input required <? echo $readyonly ?> type="text" value="<? echo $dateIniFormat; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtinicio" name="dtinicio"   />
 			</div>
       <div style="flex: 1;">
 			<label>DATA FIM</label>
-      <input required type="text" value="<? echo $dateFimFormat; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtfim" name="dtfim"   />
+      <input required <? echo $readyonly ?> type="text" value="<? echo $dateFimFormat; ?>" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtfim" name="dtfim"   />
 			</div>	
 
       <div style="flex: 1;">
@@ -151,7 +159,7 @@ $dateFimFormat = $dateFim->format('d/m/Y H:i');
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 50%;">
                       	<label>DESCRIÇÃO</label>
-                      	<textarea class="form-control"  style="width: 100%;" maxlength="400" rows="10" placeholder="Enter ..." name="descricao"><? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCDESC"]; ?></textarea>
+                      	<textarea <? echo $readyonly ?> class="form-control"  style="width: 100%;" maxlength="400" rows="10" placeholder="Enter ..." name="descricao"><? echo $siteAdmin->ARRAY_AGENDAINFO[0]["AGE_DCDESC"]; ?></textarea>
                     	</div>
 			</div>
 		</div>
