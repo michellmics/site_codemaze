@@ -134,6 +134,10 @@
             <i class="fas fa-info-circle"></i>
             mLabs
         </a>
+        <a href="https://www.canva.com/" target="_blank">
+            <i class="fa fa-superpowers"></i>
+            Canvas
+        </a>
         <a href="https://cpanel.codemaze.com.br/unprotected/redirect.html?goto_uri=" target="_blank">
             <i class="fas fa-cogs"></i>
             cPanel
@@ -155,7 +159,7 @@
             Logoff
         </a>
     </div>
-
+    
     <!-- Barra de navegação vertical (escondida por padrão) -->
     <div class="vertical-nav hide-vertical-nav" id="vertical-nav">
         <a href="#">Link 1</a>
