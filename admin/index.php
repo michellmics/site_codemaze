@@ -35,7 +35,10 @@
 
     <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
-
+    <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+    <meta name="apple-mobile-web-app-title" content="Codemaze">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
   </head>
   <body class="login-page">
     <div class="login-box">
