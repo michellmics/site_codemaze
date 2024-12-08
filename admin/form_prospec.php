@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="UTF-8">
-    <title>AdminLTE 2 | Advanced form elements</title>
+    <title>Codemaze - Prospecção</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -43,7 +43,7 @@
               <!-- general form elements disabled -->
               <div class="box box-warning">
                 <div class="box-header">
-                  <h3 class="box-title">General Elements</h3>
+                  <h3 class="box-title">Codemaze - Prospecção</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <form role="form">
@@ -150,8 +150,6 @@
     <script src='plugins/fastclick/fastclick.min.js'></script>
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js" type="text/javascript"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js" type="text/javascript"></script>
     <!-- Page script -->
     <script type="text/javascript">
       $(function () {
