@@ -26,24 +26,24 @@ else
   $siteAdmin->getProspecInfo();
 }
 
-if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
+if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) > 0)
 {
-  echo "Não há clientes a serem prospectados para este usuário.";
-  exit();
+  // Configurações de Paginação
+  $registrosPorPagina = 30;
+  $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+  $totalRegistros = count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO);
+  $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
+
+  // Determina o índice de início para a página atual
+  $inicio = ($paginaAtual - 1) * $registrosPorPagina;
+
+  // Divide o array para exibir apenas os registros da página atual
+  $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $registrosPorPagina);
 }
-
-// Configurações de Paginação
-$registrosPorPagina = 30;
-$paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$totalRegistros = count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO);
-$totalPaginas = ceil($totalRegistros / $registrosPorPagina);
-
-// Determina o índice de início para a página atual
-$inicio = ($paginaAtual - 1) * $registrosPorPagina;
-
-// Divide o array para exibir apenas os registros da página atual
-$dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $registrosPorPagina);
-
+else
+  {
+    $dadosPagina = "Não há clientes a serem prospectados para este usuário.";
+  }
 ?>
 
 
@@ -139,6 +139,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
 
                   </div>
                   
+                  <? 
+                    if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
+                    {
+                      echo $dadosPagina;
+                      exit(); 
+                    }                
+                  
+                  ?>
 
                   </div>
                 </div><!-- /.box-header -->
