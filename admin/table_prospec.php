@@ -175,7 +175,7 @@ else
                             {
                               $classLabelMaps = 'class="label label-default"';
                               $statusVisitaMaps = "";
-                              $linkMaps = "#";
+                              $linkMaps = "";
                             } 
                   
                       ?>
