@@ -24,9 +24,6 @@ $idProspec = $_GET['id'];
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProspecInfoByProspecId($idProspec); 
 
-var_dump($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO);
-die();
-
 ?>
 
 
