@@ -3,6 +3,10 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 session_start(); // Inicia a sessão para armazenar dados do usuário
 
+// Evita cache das páginas
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 class LoginSystem extends SITE_ADMIN
 {
@@ -44,7 +48,7 @@ class LoginSystem extends SITE_ADMIN
                     else
                         {
                             //echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
-                            header("Location: https://www.codemaze.com.br/site/admin/table_prospec.php");
+                            header("Location: table_prospec.php");
                             exit(); 
                         }
             } else 
