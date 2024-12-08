@@ -87,7 +87,7 @@
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Cliente ainda não recebeu visita.
+                          Cliente ainda não recebeu visita. f
                         </label>
                       </div>
                       <div class="radio">
@@ -98,13 +98,13 @@
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled/>
-                          Cliente pediu a proposta.
+                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
+                          Cliente pediu a proposta. 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled/>
+                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
                           Cliente recusou a oferta.
                         </label>
                       </div>
