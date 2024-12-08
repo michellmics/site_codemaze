@@ -29,7 +29,7 @@ else
 if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) > 0)
 {
   // Configurações de Paginação
-  $registrosPorPagina = 30;
+  $registrosPorPagina = 50;
   $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
   $totalRegistros = count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO);
   $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
@@ -138,6 +138,9 @@ else
 
                   </div>
                 <div class="box-body table-responsive no-padding">
+                <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='register.php';">
+                        CADASTRAR USUÁRIO
+                      </button>
                   <table class="table table-hover">
                     <tr>
                       <th></th> 
