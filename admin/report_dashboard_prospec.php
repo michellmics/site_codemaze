@@ -165,6 +165,137 @@ $despesas = 125; //provisorio
                 </div><!-- /.row -->
             </div>
 
+            <div class="col-md-4"> 
+              <div class="progress-group">
+                <span class="progress-text">Hosting Slots Dísponiveis</span>
+                <span class="progress-number"><b><? $hostPerc = ($countProdutosHospedagem["0"]["TOTAL"]/10)*100; echo $countProdutosHospedagem["0"]["TOTAL"]; ?></b>/10</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $hostPerc; ?>%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group"> 
+                <span class="progress-text">Plano de Consultoria </span>
+                <span class="progress-number"><b><? $consTiPerc = ($countProdutosConsultoriaTI["0"]["TOTAL"]/10)*100; echo $countProdutosConsultoriaTI["0"]["TOTAL"]; ?></b>/10</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $consTiPerc; ?>%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group"> 
+                <span class="progress-text">Desenvolvimento de Sites</span>
+                <span class="progress-number"><b><? $siteDevPerc = ($countProdutosDesenSite["0"]["TOTAL"]/10)*100; echo $countProdutosDesenSite["0"]["TOTAL"]; ?></b>/20</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: <? echo $siteDevPerc; ?>%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+            </div><!-- /.col -->
+
+
+
+          </div><!-- /.row -->
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $totalCLient["0"]["TOTAL"]; ?>" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Clientes</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $totalProdutos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Produtos Cadastrados</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $totalContratosAtivos["0"]["TOTAL"]; ?>" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Contratos Ativos</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $totalContratosInativos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <div class="knob-label">Contratos Inativos</div>
+                    </div><!-- ./col -->
+                  </div><!-- /.row -->
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="progress-group">
+                <span class="progress-text">Tráfego Pago (R$)</span>
+                <span class="progress-number"><b>0</b>/500</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Contratos Social Midia</span>
+                <span class="progress-number"><b>0</b>/10</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Futuro</span>
+                <span class="progress-number"><b>0</b>/0</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+            </div><!-- /.col -->
+
+
+          </div><!-- /.row -->
+
+          
+          <div class="row">
+            <div class="col-md-6">
+            <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $countContratosVencer["0"]["TOTAL"]; ?>" data-max="100" data-width="90" data-height="90" data-fgColor="#3c8dbc"/>
+                      <div class="knob-label">Contratos a Vencer<BR>Próximos 10 dias</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $countContratosVencidos["0"]["TOTAL"]; ?>" data-width="90" data-height="90" data-fgColor="#f56954"/>
+                      <div class="knob-label">Contratos em Atraso<BR>Maior que 6 dias</div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="<? echo $countContratosLiquidados["0"]["TOTAL"]; ?>" data-min="0" data-max="90" data-width="90" data-height="90" data-fgColor="#00a65a"/>
+                      <div class="knob-label">Contratos Liquidados<BR><? echo $mêsCorrente; ?></div>
+                    </div><!-- ./col -->
+                    <div class="col-md-3 col-sm-6 col-xs-6 text-center">
+                      <input type="text" class="knob" value="0" data-width="90" data-height="90" data-fgColor="#00c0ef"/>
+                      <div class="knob-label">Vago</div>
+                    </div><!-- ./col -->
+                  </div><!-- /.row -->
+            </div>
+
+            <div class="col-md-4">
+              <div class="progress-group">
+                <span class="progress-text">Futuro</span>
+                <span class="progress-number"><b>0</b>/0</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Futuro</span>
+                <span class="progress-number"><b>0</b>/0</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+              <div class="progress-group">
+                <span class="progress-text">Futuro</span>
+                <span class="progress-number"><b>0</b>/0</span>
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 0%"></div>
+                </div>
+              </div><!-- /.progress-group -->
+            </div><!-- /.col -->
+
+
+          </div><!-- /.row -->
+
+
+
+
         </section><!-- /.content -->
 
 
