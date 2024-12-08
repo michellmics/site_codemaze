@@ -143,6 +143,7 @@ $dataConv =  $dateObj ? $dateObj->format('d/m/Y') : null;  // Retorna null se a 
                     <div class="form-group">
                       <label>Select</label>
                       <select  id="status" name="status" class="form-control">
+                      <option value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_STSTATUS"]; ?>" selected><? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_STSTATUS"]; ?></option>
                         <option>Não recebeu visita.</option>
                         <option>Não atendeu.</option>
                         <option>Pediu uma proposta. </option>
