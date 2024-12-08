@@ -117,7 +117,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Prospecção - <? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></h3>
+                  <h3 class="box-title"><b>Lista de Prospecção</b> :  <? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
