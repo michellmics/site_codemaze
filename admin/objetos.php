@@ -1179,7 +1179,17 @@
         }
 
         public function insertProspecInfo($PRC_NMNOME, $PRC_DCENDERECO, $PRC_DCMAPS_END, $PRC_NMCONTATO, $PRC_DCTELEFONE, $PRC_DCEMAIL, $PRC_DTVISITA, $PRC_STSTATUS, $PRC_DCOBSERVACOES)
-        {          
+        {    
+            
+            // Conversão das datas para o formato YYYY-MM-DD
+            function convertDate($date) {
+                $dateObj = DateTime::createFromFormat('d/m/Y', $date);
+                return $dateObj ? $dateObj->format('Y-m-d') : null;  // Retorna null se a data for inválida
+            }
+
+            // Converte as datas recebidas do formulário
+            $PRC_DTVISITA = convertDate($PRC_DTVISITA);
+
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
                 $this->conexao();

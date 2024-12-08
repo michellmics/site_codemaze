@@ -32,10 +32,10 @@ class registerProspec extends SITE_ADMIN
             $status,
             $obs);
 
-            echo "Prospec inserido com sucesso.";
+            echo "Cliente inserido com sucesso.";
                                       
         } catch (PDOException $e) {  
-            echo "ERRO: Não foi possível inserir o Prospec.";
+            echo "ERRO: Não foi possível inserir o Cliente.";
         } 
     }
 }
