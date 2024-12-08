@@ -169,7 +169,7 @@ else
                         {
                           $classLabelMaps = 'class="label label-info"';
                           $statusVisitaMaps = "MAPS";
-                          $linkMaps = "href=$client['PRC_DCMAPS_END'] target='_blank'";                          
+                          $linkMaps = 'href="'.$client['PRC_DCMAPS_END'].'" target="_blank"';                         
                         }
                         else
                             {
