@@ -34,11 +34,14 @@
     <![endif]-->
   </head>
   <body>
-    <div class="content">
-    <a class="navbar-brand" href="index.php"><img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="image"></a>
-      <section class="content">
-
-      
+      <!-- Logo centralizado -->
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="index.php">
+      <img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="Codemaze Logo" style="max-width: 150px;">
+    </a>
+  </div>
+    <div class="content">    
+      <section class="content">      
             <!-- right column -->
             <div class="col-md-6">
               <!-- general form elements disabled -->
