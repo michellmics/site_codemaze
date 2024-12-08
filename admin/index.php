@@ -52,6 +52,15 @@
             <input type="password" class="form-control" id="password" placeholder="password" name="password"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
+          <div class="form-group">
+                      <label>Select</label>
+                      <select  id="status" name="status" class="form-control">
+                        <option>Cliente ainda não recebeu visita.</option>
+                        <option>Cliente não atendeu.</option>
+                        <option>Cliente pediu uma proposta. </option>
+                        <option>Cliente recusou a oferta.</option>
+                      </select>
+                    </div>
           <div class="row">
             <div class="col-xs-8">                 
             </div><!-- /.col -->
