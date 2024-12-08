@@ -138,7 +138,7 @@ else
                     <tr>
                       <th></th> 
                       <th>NOME</th>
-                      <th>STATUS</th>                  
+                      <th>ENDEREÇO</th>                  
                     </tr>
                     <tr>
                     <? 
@@ -183,7 +183,7 @@ else
                         </td> 
                         <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"> <?= htmlspecialchars(strlen($client['PRC_NMNOME']) > 25 ? substr($client['PRC_NMNOME'], 0, 25) . '...' : $client['PRC_NMNOME']) ?></td>
                         
-                        <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"><?= htmlspecialchars(strlen($client['PRC_STSTATUS']) > 25 ? substr($client['PRC_STSTATUS'], 0, 25) . '...' : $client['PRC_STSTATUS']) ?></td>  
+                        <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"><?= htmlspecialchars(strlen($client['PRC_DCENDERECO']) > 25 ? substr($client['PRC_DCENDERECO'], 0, 25) . '...' : $client['PRC_DCENDERECO']) ?></td>  
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><i class="fa fa-location-arrow"></i></span></a></td>                  
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $client['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger"><i class="fa fa-trash"></i></span></a></td>         
                       </tr>
