@@ -100,6 +100,10 @@ $dataConv =  $dateObj ? $dateObj->format('d/m/Y') : null;  // Retorna null se a 
                 <div class="box-body">
                 <form id="form-empresa" role="form" method="POST">
                     <!-- text input -->
+                  <!-- CAMPOS COMO VARIAVEIS -->
+                  <input type="hidden" name="id" value="<? echo $idProspec; ?>"/>
+                  <!-- CAMPOS COMO VARIAVEIS -->
+
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do Cliente</label>
                       <input id="nome" name="nome"  value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_NMNOME"]; ?>" style="text-transform: uppercase;" type="text" class="form-control" id="inputWarning" placeholder="Enter ..." required/>

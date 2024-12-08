@@ -999,6 +999,62 @@
             }          
         }
 
+        public function updateProspecInfo($PRC_NMNOME, $PRC_DCENDERECO, $PRC_DCMAPS_END, $PRC_NMCONTATO, $PRC_DCTELEFONE, $PRC_DCEMAIL, $PRC_DTVISITA, $PRC_STSTATUS, $PRC_DCOBSERVACOES, $PRC_IDPROSPEC_CLIENTES)
+        {    
+            
+            // Conversão das datas para o formato YYYY-MM-DD
+            function convertDate($date) {
+                $dateObj = DateTime::createFromFormat('d/m/Y', $date);
+                return $dateObj ? $dateObj->format('Y-m-d') : null;  // Retorna null se a data for inválida
+            }
+
+            // Converte as datas recebidas do formulário
+            $PRC_DTVISITA = convertDate($PRC_DTVISITA);
+
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+        
+            try {
+                $sql = "UPDATE PRC_PROSPEC_CLIENTES 
+                        SET 
+                        PRC_NMNOME = :PRC_NMNOME, 
+                        PRC_DCENDERECO = :PRC_DCENDERECO, 
+                        PRC_DCMAPS_END = :PRC_DCMAPS_END, 
+                        PRC_NMCONTATO = :PRC_NMCONTATO, 
+                        PRC_DCTELEFONE = :PRC_DCTELEFONE, 
+                        PRC_DCEMAIL = :PRC_DCEMAIL, 
+                        PRC_DTVISITA = :PRC_DTVISITA, 
+                        PRC_STSTATUS = :PRC_STSTATUS, 
+                        PRC_DCOBSERVACOES = :PRC_DCOBSERVACOES
+                        WHERE PRC_IDPROSPEC_CLIENTES = :PRC_IDPROSPEC_CLIENTES";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':PRC_NMNOME', $PRC_NMNOME, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCENDERECO', $PRC_DCENDERECO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCMAPS_END', $PRC_DCMAPS_END, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_NMCONTATO', $PRC_NMCONTATO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCTELEFONE', $PRC_DCTELEFONE, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCEMAIL', $PRC_DCEMAIL, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DTVISITA', $PRC_DTVISITA, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_STSTATUS', $PRC_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCOBSERVACOES', $PRC_DCOBSERVACOES, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_IDPROSPEC_CLIENTES', $PRC_IDPROSPEC_CLIENTES, PDO::PARAM_STR);                
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Inserido novo prospec. $PRC_NMNOME","Warning");
+                return ["success" => "Prospec inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertProspecInfo. $PRC_NMNOME","High");
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function updateDesc($PAD_DCTITLE, $PAD_DCTEXT, $PAD_IDPAGEDESCR, $PAD_NMPAGE)
         {          
             // Verifica se a conexão já foi estabelecida

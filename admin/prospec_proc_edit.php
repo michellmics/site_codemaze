@@ -14,7 +14,8 @@ class registerProspec extends SITE_ADMIN
     $email,
     $data,
     $status,
-    $obs)
+    $obs,
+    $id)
     {
         try {
             // Cria conexão com o banco de dados
@@ -30,7 +31,8 @@ class registerProspec extends SITE_ADMIN
             $email,
             $data,
             $status,
-            $obs);
+            $obs,
+            $id);
 
             echo "Cliente atualizado com sucesso.";
                                       
@@ -53,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $data = $_POST['data']; 
     $status = $_POST['status'];  
     $obs = $_POST['obs'];
+    $id = $_POST['id'];
     $registerProspec = new registerProspec();
     
     $result = $registerProspec->updateProspec($nome,
@@ -63,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $email,
         $data,
         $status,
-        $obs
+        $obs,
+        $id
     );
 }
 ?>
