@@ -246,6 +246,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
           denyButtonColor: "#ff8a33",
           width: '600px', // Largura do alerta
           icon: 'warning',
+          position: 'top', // Define a posição na parte superior da tela
           customClass: {
             title: 'swal-title', // Classe para o título
             content: 'swal-content', // Classe para o conteúdo (texto)
