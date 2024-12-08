@@ -19,7 +19,8 @@ $siteAdmin->getUserInfo($userId);
 
 if($_SESSION['user_nivelacesso'] != "ADMINISTRADOR")
 {
-  $siteAdmin->getProspecInfoByUserId($userId);
+  //$siteAdmin->getProspecInfoByUserId($userId);
+  $siteAdmin->getProspecInfo();
 }
 else
 {
