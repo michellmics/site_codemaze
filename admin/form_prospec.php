@@ -39,7 +39,7 @@
     <a href="index.php">
       <img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="Codemaze Logo" style="max-width: 150px;">
     </a>
-  </div>
+  </div> 
     <div class="content">    
       <section class="content">      
             <!-- right column -->
