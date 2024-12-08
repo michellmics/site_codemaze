@@ -153,17 +153,17 @@ else
                         if($client['PRC_STSTATUS'] == 'Não recebeu visita.')
                         {
                           $classLabel = 'class="label label-danger"';
-                          $statusVisita = "PEN";
+                          $statusVisita = "N";
                         }
                         else
                             {
                               $classLabel = 'class="label label-success"';
-                              $statusVisita = "OK";
+                              $statusVisita = "S";
                             }    
                             
                         if($client['PRC_DCMAPS_END'] != '')
                         {
-                          $classLabelMaps = 'class="label label-primary"';
+                          $classLabelMaps = 'class="label label-success"';
                           $statusVisitaMaps = "MAPS";
                           $linkMaps = $client['PRC_DCMAPS_END'];
                         }
