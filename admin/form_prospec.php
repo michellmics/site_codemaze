@@ -32,6 +32,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+      <!-- ######################################################## --> 
+      <!-- SWEETALERT 2 --> 
+      <!-- SweetAlert2 CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
+      <!-- SweetAlert2 JS -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+  <!-- ######################################################## --> 
   </head>
   <body>
       <!-- Logo centralizado -->
@@ -51,7 +59,7 @@
                   <h3 class="box-title">Codemaze - Prospecção</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <form role="form">
+                <form id="form-empresa" role="form" method="POST">
                     <!-- text input -->
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do Cliente</label>
@@ -124,7 +132,7 @@
                       <textarea class="form-control" rows="5" placeholder="Enter ..."></textarea>
                     </div>
                    
-                    <button type="submit" id="salvar" name="salvar" class="btn btn-warning">SALVAR CADASTRO</button>
+                    <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-warning">SALVAR CADASTRO</button>
 
                   </form>
                 </div><!-- /.box-body -->
@@ -136,6 +144,104 @@
 
 
     </section><!-- /.content -->
+
+    <!-- ######################################################## --> 
+    <!-- SWEETALERT 2 -->   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function confirmAndSubmit(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        Swal.fire({
+          title: 'Formulário de Contrato',
+          text: "Têm certeza que deseja salvar?",
+          showDenyButton: true,
+          confirmButtonText: 'SALVAR',
+          denyButtonText: `CANCELAR`,
+          confirmButtonColor: "#4289a6",
+          denyButtonColor: "#ff8a33",
+          width: '600px', // Largura do alerta
+          icon: 'warning',
+          customClass: {
+            title: 'swal-title', // Classe para o título
+            content: 'swal-content', // Classe para o conteúdo (texto)
+            confirmButton: 'swal-confirm-btn',
+            denyButton: 'swal-deny-btn',
+            htmlContainer: 'swal-text'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Capturar os dados do formulário
+            var formData = $("#form-empresa").serialize();
+            // Fazer a requisição AJAX
+            $.ajax({
+              url: "contrato_proc.php", // URL para processamento
+              type: "POST",
+              data: formData,
+              success: function (response) {
+                Swal.fire({
+              title: 'Salvo!',
+              text: `${response}`,
+              icon: 'success',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
+            }).then(() => {
+                  // Redirecionar ou atualizar a página, se necessário
+                  location.reload();
+                });
+              },
+              error: function (xhr, status, error) {
+                Swal.fire({
+              title: 'Erro!',
+              text: 'Erro ao atualizar o contrato.',
+              icon: 'error',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
+            });
+              },
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
+          }
+        });
+      }
+      // Associar a função ao botão de submit
+      $(document).ready(function () {
+        $("#salvar_empresa_1").on("click", confirmAndSubmit);
+      });
+</script> 
+<style>
+  /* Estilos para aumentar o tamanho da fonte */
+  .swal-title {
+    font-size: 36px !important; /* Tamanho maior para o título */
+  }
+
+  .swal-text {
+    font-size: 24px !important; /* Tamanho maior para o conteúdo */
+  }
+
+  /* Aumentar o tamanho dos textos dos botões */
+  .swal-confirm-btn,
+  .swal-deny-btn,
+  .swal-cancel-btn {
+    font-size: 20px !important; /* Tamanho maior para os textos dos botões */
+    padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
+  }
+</style>
+<!-- ######################################################## --> 
+<!-- SWEETALERT 2 --> 
+
     </div><!-- /.content-wrapper -->
 
     <!-- jQuery 2.1.3 -->
