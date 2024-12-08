@@ -87,7 +87,7 @@
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Cliente ainda não recebeu visita. f
+                          Cliente ainda não recebeu visita. 
                         </label>
                       </div>
                       <div class="radio">
