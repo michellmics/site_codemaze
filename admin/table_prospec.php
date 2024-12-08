@@ -154,12 +154,12 @@ else
                         if($client['PRC_STSTATUS'] == 'Não recebeu visita.')
                         {
                           $classLabel = 'class="label label-danger"';
-                          $statusVisita = "Pendente";
+                          $statusVisita = "PEN";
                         }
                         else
                             {
                               $classLabel = 'class="label label-success"';
-                              $statusVisita = "Visitado";
+                              $statusVisita = "OK";
                             }    
                             
                         if($client['PRC_DCMAPS_END'] != '')
@@ -186,7 +186,7 @@ else
                         <td style="text-transform: uppercase; font-size: 12px;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><? echo $statusVisitaMaps; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_STSTATUS']) ?></td>                    
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td> 
-                          <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $client['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger">DELETAR</span></a></td>         
+                          <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $client['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger"><i class="fa fa-exclamation-triangle"></i></span></a></td>         
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
