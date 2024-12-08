@@ -271,6 +271,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
               icon: 'success',
               width: '200px', // Largura do alerta
               confirmButtonColor: "#4289a6",
+              position: 'top', // Define a posição na parte superior da tela
               customClass: {
                 title: 'swal-title', // Aplicando a mesma classe do título
                 content: 'swal-content', // Aplicando a mesma classe do texto
@@ -289,6 +290,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
               icon: 'error',
               width: '200px', // Largura do alerta
               confirmButtonColor: "#4289a6",
+              position: 'top', // Define a posição na parte superior da tela
               customClass: {
                 title: 'swal-title', // Aplicando a mesma classe do título
                 content: 'swal-content', // Aplicando a mesma classe do texto
