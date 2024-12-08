@@ -77,6 +77,8 @@ else
     <meta name="apple-mobile-web-app-title" content="Codemaze">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
         <!-- ######################################################## --> 
     <!-- SWEETALERT 2 --> 
@@ -85,6 +87,15 @@ else
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
     <!-- ######################################################## --> 
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Impede barras de rolagem */
+      }
+    </style>
+  
+  
   </head>
 
   
