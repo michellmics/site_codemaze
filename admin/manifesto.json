@@ -2,8 +2,8 @@
     "name": "Codemaze",
     "short_name": "Codemaze",
     "description": "Aplicativo Codemaze",
-    "start_url": "/",
-    "display": "fullscreen",
+    "start_url": "table_prospec.php",
+    "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4289a6",
     "icons": [
