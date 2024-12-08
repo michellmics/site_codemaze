@@ -49,18 +49,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
 <html>
   <head>
     <meta charset="UTF-8">
-    <title></title>
-
-    <script>
-    if (screen.orientation) {
-      screen.orientation.lock('landscape').catch(function(err) {
-        console.error("Falha ao bloquear a orientação: ", err);
-      });
-    } else {
-      console.warn("API de Orientação de Tela não suportada neste navegador.");
-    }
-    </script>
-  
+    <title></title> 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -81,7 +70,18 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+  <style>
+  @media screen and (orientation: portrait) {
+    body {
+      transform: rotate(-90deg);
+      transform-origin: center;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+    }
+  }
+</style>
   
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
