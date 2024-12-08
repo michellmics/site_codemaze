@@ -72,19 +72,22 @@ else
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
-    <meta name="apple-mobile-web-app-title" content="Codemaze">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
-    <meta name="apple-mobile-web-app-title" content="Codemaze">
+    <!-- Impede o comportamento padrão da barra de endereços no mobile -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Garantir que o site seja exibido em tela cheia, sem barra de endereços -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- Definir a cor da barra de status no Android -->
+<meta name="theme-color" content="#4289a6">
+
+<!-- Ícone para a tela inicial -->
+<link rel="icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+<link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+
 
         <!-- ######################################################## --> 
     <!-- SWEETALERT 2 --> 
