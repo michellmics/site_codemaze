@@ -19,12 +19,17 @@ $siteAdmin->getUserInfo($userId);
 
 if($_SESSION['user_nivelacesso'] != "ADMINISTRADOR")
 {
-  //$siteAdmin->getProspecInfoByUserId($userId);
-  $siteAdmin->getProspecInfo();
+  $siteAdmin->getProspecInfoByUserId($userId);
 }
 else
 {
   $siteAdmin->getProspecInfo();
+}
+
+if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
+{
+  echo "Não há clientes a serem prospectados para este usuário.";
+  exit();
 }
 
 // Configurações de Paginação
