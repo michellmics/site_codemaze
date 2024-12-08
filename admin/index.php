@@ -82,32 +82,38 @@
 
 						<!-- Ajax para envio e exibicao do resultado sem load de pag nova -->
 						<script>
-							document.getElementById('demo-form').addEventListener('submit', function(e) {
-							    e.preventDefault(); // Impede o envio tradicional do formulário
-							
-							    // Verifica o reCAPTCHA
-							    var recaptchaResponse = grecaptcha.getResponse();
-							    if (recaptchaResponse.length === 0) {
-							        document.getElementById('form-message').innerHTML = "Por favor, complete o reCAPTCHA.";
-							        return; // Se o reCAPTCHA não foi resolvido, não submeta o formulário
-							    }
-							
-							    var formData = new FormData(this); // Captura todos os dados do formulário
-							
-							    var xhr = new XMLHttpRequest();
-							    xhr.open('POST', this.action, true); // Configura o envio via POST para o arquivo PHP
-							
-							    xhr.onload = function() {
-							        if (xhr.status === 200) {
-							            // Exibe a resposta do servidor na página
-							            document.getElementById('form-message').innerHTML = xhr.responseText;
-							        } else {
-							            document.getElementById('form-message').innerHTML = "Houve um erro no envio do formulário.";
-							        }
-							    };
-							
-							    xhr.send(formData); // Envia o formulário via AJAX
-							});
+document.getElementById('demo-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o envio tradicional do formulário
+
+    // Verifica o reCAPTCHA
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        document.getElementById('form-message').innerHTML = "Por favor, complete o reCAPTCHA.";
+        return;
+    }
+
+    var formData = new FormData(this); // Captura todos os dados do formulário
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', this.action, true); // Configura o envio via POST para o arquivo PHP
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+
+            if (response.redirect) {
+                // Redireciona para a página especificada
+                window.location.href = response.redirect;
+            } else if (response.error) {
+                document.getElementById('form-message').innerHTML = response.error;
+            }
+        } else {
+            document.getElementById('form-message').innerHTML = "Erro no servidor. Tente novamente.";
+        }
+    };
+
+    xhr.send(formData); // Envia o formulário via AJAX
+});
 						</script>
 
        
