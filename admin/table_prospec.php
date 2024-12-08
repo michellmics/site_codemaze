@@ -98,14 +98,7 @@ else
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
     <!-- ######################################################## --> 
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden; /* Impede barras de rolagem */
-      }
-    </style>
-  
+ 
   
   </head>
 
