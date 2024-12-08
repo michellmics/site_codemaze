@@ -22,7 +22,6 @@
   $siteAdmin = new SITE_ADMIN();
   $siteAdmin->getClientInfoById($idCLient); 
 
-
 ?>
 
 

@@ -245,6 +245,25 @@
             }          
         }
 
+        public function getProspecInfoByProspecId($PRC_IDPROSPEC_CLIENTES)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM PRC_PROSPEC_CLIENTES
+                                WHERE PRC_IDPROSPEC_CLIENTES = :PRC_IDPROSPEC_CLIENTES";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindParam(':PRC_IDPROSPEC_CLIENTES', $PRC_IDPROSPEC_CLIENTES, PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_PROSPEC_CLIENTESINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         
         public function getProspecInfoByUserId($USA_IDUSERADMIN)
         {          
