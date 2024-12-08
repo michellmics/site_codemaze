@@ -112,7 +112,7 @@
                     <!-- textarea -->
                     <div class="form-group">
                       <label>Observações</label>
-                      <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                      <textarea class="form-control" rows="5" placeholder="Enter ..."></textarea>
                     </div>
                    
 
