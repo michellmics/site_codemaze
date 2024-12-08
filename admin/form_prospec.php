@@ -49,7 +49,7 @@
                   <form role="form">
                     <!-- text input -->
                     <div class="form-group has-warning">
-                      <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do CLiente</label>
+                      <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do Cliente</label>
                       <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
                     </div>
                     <div class="form-group">
@@ -61,6 +61,15 @@
                       <input type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
+                    <label>US phone mask:</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-phone"></i>
+                      </div>
+                      <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                    <div class="form-group">
                       <label>E-mail:</label>
                       <input type="text" class="form-control" placeholder="Enter ..." />
                     </div>
@@ -69,19 +78,25 @@
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Option one is this and that&mdash;be sure to include why it's great
+                          Cliente ainda não recebeu visita.
                         </label>
                       </div>
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else and selecting it will deselect option one
+                          Cliente não atendeu.
                         </label>
                       </div>
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled/>
-                          Option three is disabled
+                          Cliente pediu a proposta.
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled/>
+                          Cliente recusou a oferta.
                         </label>
                       </div>
                     </div>
