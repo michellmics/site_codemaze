@@ -33,7 +33,8 @@
     <!-- iCheck -->
     <link href="plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
 
-    
+    <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
 
   </head>
   <body class="login-page">

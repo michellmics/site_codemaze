@@ -5,7 +5,8 @@
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >  
-    
+    <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">   
      <!-- SEO Básico -->
     <meta name="description" content="Somos a Codemaze, especialista em soluções digitais como desenvolvimento de sites, hospedagem, gestão de mídias sociais e campanhas de tráfego pago. Transformamos negócios com inovação e estratégias personalizadas.">
     <meta name="keywords" content="desenvolvimento de sites, hospedagem, consultoria estratégica, mídias sociais, campanhas de tráfego pago, soluções digitais, marketing digital, Codemaze">
