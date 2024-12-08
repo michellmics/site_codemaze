@@ -46,7 +46,12 @@ if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="plugins/iCheck/all.css" rel="stylesheet" type="text/css" />
-
+    <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+    <meta name="apple-mobile-web-app-title" content="Codemaze">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
