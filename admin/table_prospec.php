@@ -14,7 +14,7 @@ $userId = $_SESSION['user_id'];
 
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getUserInfo($userId);
-
+ 
 
 
 if($_SESSION['user_nivelacesso'] != "ADMINISTRADOR")
@@ -72,22 +72,11 @@ else
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link rel="icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Impede o comportamento padrão da barra de endereços no mobile -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="mobile-web-app-capable" content="yes">
-
-<!-- Garantir que o site seja exibido em tela cheia, sem barra de endereços -->
-<meta name="mobile-web-app-capable" content="yes">
-
-<!-- Definir a cor da barra de status no Android -->
-<meta name="theme-color" content="#4289a6">
-
-<!-- Ícone para a tela inicial -->
-<link rel="icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
-<link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+    <link rel="shortcut icon" href="https://www.codemaze.com.br/site/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+    <meta name="apple-mobile-web-app-title" content="Codemaze">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 
 
