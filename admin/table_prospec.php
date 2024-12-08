@@ -98,14 +98,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Clientes</h3>
+                  <h3 class="box-title">Lista de Prospecção</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
-                  <button  id="status" name="status" value="Ativos" class="btn btn-primary btn-sm" onclick="redirectToLink(this)" style="background-color: #00d40a; border-color: #00d40a;">Ativos </button>
-                  <button  id="statusInativo" name="statusInativo" value="Inativos" class="btn btn-warning btn-sm" onclick="redirectToLink(this)" style="background-color: #ff0202; border-color: #ff0202;"> Inativos </button>
                    <!-- Botão "Adicionar Produto" -->
-                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_cliente.php';">ADICIONAR CLIENTE</button>
+                   <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_prospec.php';">ADICIONAR PROSPECÇÃO</button>
                     <form method="GET" action="" style="display: flex;">
                         <input 
                             type="text" 
@@ -134,18 +132,34 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                       <th>STATUS</th>                     
                     </tr>
                     <tr>
+
+
                     <?php foreach ($dadosPagina as $client): ?>
+                      <?php 
+                        if($client['PRC_STSTATUS'] == 'Cliente ainda não recebeu visita.')
+                        {
+                          $classLabel = 'class="label label-danger"';
+                          $statusVisita = "Pendente";
+                        }
+                        else
+                            {
+                              $classLabel = 'class="label label-success"';
+                              $statusVisita = "Já Visitado";
+                            }
+                  
+                  
+                      ?>
                    <tr>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_IDPROSPEC_CLIENTES']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px;">
-                            <a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<? echo $client['PRC_STSTATUS']; ?>" target="_self"><span class="label <?= $client['PRC_DTVISITA'] == 'Cliente ainda não recebeu visita.' ? 'label-danger' : 'label-success' ?>">
-                                Visitado </a>
+                            <span  <? echo $classLabel; ?>>
+                            <? echo $statusVisita; ?>
                             </span>
                         </td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_NMNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_DCMAPS_END']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_STSTATUS']) ?></td>                    
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_cliente_edit.php?id=<? echo $client['CLI_IDCLIENT']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
@@ -181,7 +195,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
   // Função para redirecionar ao link quando o checkbox for selecionado
   function redirectToLink(button) {
     const value = button.value;
-    window.location.href = `https://www.codemaze.com.br/site/admin/table_cliente.php?statusBusca=${value}`;
+    window.location.href = `https://www.codemaze.com.br/site/admin/table_prospec.php?statusBusca=${value}`;
   }
 </script>
 
