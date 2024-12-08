@@ -28,6 +28,7 @@
         public $ARRAY_ALERTA;
         public $ARRAY_AGENDAINFO;
         public $ARRAY_AGENDAATIVIDADES;
+        public $ARRAY_PROSPEC_CLIENTESINFO;
         public $configPath = '/home/codemaze/config.cfg';
 
 
@@ -225,6 +226,25 @@
                 return ["error" => $e->getMessage()];
             }          
         }
+
+        public function getProspecInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM PRC_PROSPEC_CLIENTES
+                                ORDER BY PRC_NMNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PROSPEC_CLIENTESINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getClientInactiveInfo()
         {          
                 // Verifica se a conexão já foi estabelecida

@@ -104,7 +104,7 @@
                     <div class="form-group">
                       <label>Select</label>
                       <select  id="status" name="status" class="form-control">
-                        <option>Cliente ainda não recebeu visita. </option>
+                        <option>Cliente ainda não recebeu visita.</option>
                         <option>Cliente não atendeu.</option>
                         <option>Cliente pediu uma proposta. </option>
                         <option>Cliente recusou a oferta.</option>
