@@ -251,7 +251,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
             content: 'swal-content', // Classe para o conteúdo (texto)
             confirmButton: 'swal-confirm-btn',
             denyButton: 'swal-deny-btn',
-            htmlContainer: 'swal-text'
+            htmlContainer: 'swal-text',
+            popup: 'swal-custom-popup', // Classe para customizar o popup
           }
         }).then((result) => {
           if (result.isConfirmed) {
@@ -315,6 +316,13 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
   .swal-text {
     font-size: 16px !important; /* Tamanho maior para o conteúdo */
   }
+
+  @media screen and (max-width: 768px) {
+  .swal-custom-popup {
+    top: 10% !important; /* Ajuste de posição vertical */
+    transform: translateY(0) !important; /* Centraliza no topo */
+  }
+}
 
   /* Aumentar o tamanho dos textos dos botões */
   .swal-confirm-btn,
