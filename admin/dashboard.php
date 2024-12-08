@@ -344,8 +344,8 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="https://www.codemaze.com.br/site/admin/documentation/fluxo_clientes_prospectados.pptx" target="_blank"><i class="fa fa-circle-o"></i> Fluxo CLientes Prospectados</a></li>
-                <li><a href="https://www.codemaze.com.br/site/admin/documentation/CARTAO_VANESSA_FRONT.pdf" target="_blank"><i class="fa fa-circle-o"></i> Cartão Vanessa</a></li>
+              <li><a href="https://www.codemaze.com.br/site/admin/documentation/fluxo_clientes_prospectados.pptx" target="_blank"><i class="fa fa-circle-o"></i> Fluxo Prospecção de Clientes</a></li>
+                <li><a href="https://www.codemaze.com.br/site/admin/documentation/fluxo_clientes_prospectados.pptx" target="_blank"><i class="fa fa-circle-o"></i> Fluxo Clientes Prospectados</a></li>
               </ul> 
             </li> 
 
