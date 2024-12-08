@@ -86,7 +86,18 @@ else
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
     <!-- ######################################################## --> 
   </head>
-
+  <style>
+  @media screen and (orientation: portrait) {
+    body {
+      transform: rotate(-90deg);
+      transform-origin: center;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+    }
+  }
+</style>
   
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
