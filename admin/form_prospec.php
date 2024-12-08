@@ -115,7 +115,7 @@
                       <label>Observações</label>
                       <textarea id="obs" name="obs"  class="form-control" rows="5" placeholder="Enter ..."></textarea>
                     </div>
-                   
+                    <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
                     <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-warning">SALVAR CADASTRO</button>
 
                   </form>
