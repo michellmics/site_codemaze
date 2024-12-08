@@ -6,25 +6,15 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerContrato extends SITE_ADMIN
 {
-    public function insertContrato($numcontrato,
-    $cliente, 
-    $produto, 
-    $iniciocontrato, 
-    $fimcontrato, 
-    $statuscontrato, 
-    $tipocobranca,
-    $formapagamento,
-    $emailfaturamento,
-    $telfaturamento, 
-    $descricao,
-    $dtcontrato,
-    $prazoentrega, 
-    $carencia,
-    $desconto, 
-    $periododesconto, 
-    $dtvencimento,  
-    $parcelamento, 
-    $valor)
+    public function insertProspec($nome,
+    $endereco, 
+    $maps, 
+    $contato, 
+    $telefone, 
+    $email,
+    $data,
+    $status,
+    $obs)
     {
         try {
             // Cria conexão com o banco de dados
@@ -32,30 +22,20 @@ class registerContrato extends SITE_ADMIN
                 $this->conexao();
             }
 
-            $result = $this->insertContratoInfo($numcontrato,
-            $cliente, 
-            $produto, 
-            $iniciocontrato, 
-            $fimcontrato, 
-            $statuscontrato, 
-            $tipocobranca,
-            $formapagamento,
-            $emailfaturamento,
-            $telfaturamento, 
-            $descricao,
-            $dtcontrato,
-            $prazoentrega, 
-            $carencia,
-            $desconto, 
-            $periododesconto, 
-            $dtvencimento,  
-            $parcelamento, 
-            $valor);
+            $result = $this->insertProspecInfo($nome,
+            $endereco, 
+            $maps, 
+            $contato, 
+            $telefone, 
+            $email,
+            $data,
+            $status,
+            $obs);
 
-            echo "Contrato inserido com sucesso.";
+            echo "Prospec inserido com sucesso.";
                                       
         } catch (PDOException $e) {  
-            echo "ERRO: Não foi possível inserir o contrato.";
+            echo "ERRO: Não foi possível inserir o Prospec.";
         } 
     }
 }
@@ -64,46 +44,26 @@ class registerContrato extends SITE_ADMIN
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
     
-    $cliente = $_POST['cliente']; 
-    $produto = $_POST['produto']; 
-    $tipocobranca = $_POST['tipocobranca']; 
-    $dtcontrato = $_POST['dtcontrato']; 
-    $numcontrato = $_POST['numcontrato']; 
-    $iniciocontrato = $_POST['iniciocontrato']; 
-    $fimcontrato = $_POST['fimcontrato']; 
-    $prazoentrega = $_POST['prazoentrega']; 
-    $emailfaturamento = $_POST['emailfaturamento'];
-    $telfaturamento = $_POST['telfaturamento']; 
-    $statuscontrato = $_POST['statuscontrato']; 
-    $desconto = $_POST['desconto']; 
-    $periododesconto = $_POST['periododesconto']; 
-    $carencia = $_POST['carencia']; 
-    $parcelamento = $_POST['parcelamento']; 
-    $valor = $_POST['valor']; 
-    $dtvencimento = $_POST['dtvencimento']; 
-    $formapagamento = $_POST['formapagamento'];
-    $descricao = $_POST['descricao'];
-    $registerContrato = new registerContrato();
+    $nome = $_POST['nome']; 
+    $endereco = $_POST['endereco']; 
+    $maps = $_POST['maps']; 
+    $contato = $_POST['contato']; 
+    $telefone = $_POST['telefone']; 
+    $email = $_POST['email']; 
+    $data = $_POST['data']; 
+    $status = $_POST['status']; 
+    $obs = $_POST['obs'];
+    $registerProspec = new registerProspec();
     
-    $result = $registerContrato->insertContrato($numcontrato,
-        $cliente, 
-        $produto, 
-        $iniciocontrato, 
-        $fimcontrato, 
-        $statuscontrato, 
-        $tipocobranca,
-        $formapagamento,
-        $emailfaturamento,
-        $telfaturamento, 
-        $descricao,
-        $dtcontrato,
-        $prazoentrega, 
-        $carencia,
-        $desconto, 
-        $periododesconto, 
-        $dtvencimento,  
-        $parcelamento, 
-        $valor
+    $result = $registerProspec->insertProspec($nome,
+        $endereco, 
+        $maps, 
+        $contato, 
+        $telefone, 
+        $email,
+        $data,
+        $status,
+        $obs
     );
 }
 ?>

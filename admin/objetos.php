@@ -1178,6 +1178,43 @@
             }
         }
 
+        public function insertProspecInfo($PRC_NMNOME, $PRC_DCENDERECO, $PRC_DCMAPS_END, $PRC_NMCONTATO, $PRC_DCTELEFONE, $PRC_DCEMAIL, $PRC_DTVISITA, $PRC_STSTATUS, $PRC_DCOBSERVACOES)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+        
+            try {
+                $sql = "INSERT INTO PRC_PROSPEC_CLIENTES 
+                        (PRC_NMNOME, PRC_DCENDERECO, PRC_DCMAPS_END, PRC_NMCONTATO, PRC_DCTELEFONE, PRC_DCEMAIL, PRC_DTVISITA, PRC_STSTATUS, PRC_DCOBSERVACOES) 
+                        VALUES (:PRC_NMNOME, :PRC_DCENDERECO, :PRC_DCMAPS_END, :PRC_NMCONTATO, :PRC_DCTELEFONE, :PRC_DCEMAIL, :PRC_DTVISITA, :PRC_STSTATUS, :PRC_DCOBSERVACOES)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':PRC_NMNOME', $PRC_NMNOME, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCENDERECO', $PRC_DCENDERECO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCMAPS_END', $PRC_DCMAPS_END, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_NMCONTATO', $PRC_NMCONTATO, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCTELEFONE', $PRC_DCTELEFONE, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCEMAIL', $PRC_DCEMAIL, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DTVISITA', $PRC_DTVISITA, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_STSTATUS', $PRC_STSTATUS, PDO::PARAM_STR);
+                $stmt->bindParam(':PRC_DCOBSERVACOES', $PRC_DCOBSERVACOES, PDO::PARAM_STR);
+                           
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                $this->InsertAlarme("Inserido novo prospec. $PRC_NMNOME","Warning");
+                return ["success" => "Prospec inserido com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertProspecInfo. $PRC_NMNOME","High");
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA, $USA_DCFOTO, $USA_DCNIVELDEACESSO)
         {          
             // Verifica se a conexão já foi estabelecida
