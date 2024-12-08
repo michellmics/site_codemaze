@@ -50,6 +50,16 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
   <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <script>
+    if (screen.orientation) {
+      screen.orientation.lock('landscape').catch(function(err) {
+        console.error("Falha ao bloquear a orientação: ", err);
+      });
+    } else {
+      console.warn("API de Orientação de Tela não suportada neste navegador.");
+    }
+    </script>
   
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
