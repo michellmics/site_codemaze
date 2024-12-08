@@ -41,6 +41,7 @@
             <!-- right column -->
             <div class="col-md-6">
               <!-- general form elements disabled -->
+              <a class="navbar-brand" href="index.php"><img src="../images/logos/logocodemaze_preto.png" alt="image"></a>
               <div class="box box-warning">
                 <div class="box-header">
                   <h3 class="box-title">Codemaze - Prospecção</h3>
