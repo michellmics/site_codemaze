@@ -61,7 +61,7 @@
                       <input type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
-                    <label>US phone mask:</label>
+                    <label>Telefone:</label>
                     <div class="input-group">
                       <div class="input-group-addon">
                         <i class="fa fa-phone"></i>
@@ -73,6 +73,15 @@
                       <label>E-mail:</label>
                       <input type="text" class="form-control" placeholder="Enter ..." />
                     </div>
+                    <div class="form-group">
+                    <label>Data da visita:</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
                     <!-- radio -->
                     <div class="form-group">
                       <div class="radio">
