@@ -126,7 +126,7 @@ else
                 <h3 class="box-title">
                   <b>Lista</b> : <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?>
                 </h3>
-                <button class="btn btn-danger btn-sm" onclick="window.location.href='form_prospec.php';">
+                <button class="btn btn-danger btn-sm" onclick="window.location.href='logoff.php';">
                   LOGOUT
                 </button>
               </div>
