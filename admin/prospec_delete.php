@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id']))
 
 class deleteProspec extends SITE_ADMIN
 {
-    public function deleteProspec($USA_IDUSERADMIN)
+    public function deleteProspec($PRC_IDPROSPEC_CLIENTES)
     {
         try {
             // Cria conexão com o banco de dados
@@ -22,9 +22,9 @@ class deleteProspec extends SITE_ADMIN
             }
 
             // Prepara a consulta SQL para verificar o usuário
-            $sql = "DELETE FROM PRC_PROSPEC_CLIENTES WHERE USA_IDUSERADMIN = :USA_IDUSERADMIN";
+            $sql = "DELETE FROM PRC_PROSPEC_CLIENTES WHERE PRC_IDPROSPEC_CLIENTES = :PRC_IDPROSPEC_CLIENTES";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
+            $stmt->bindParam(':PRC_IDPROSPEC_CLIENTES', $PRC_IDPROSPEC_CLIENTES, PDO::PARAM_STR);
             $stmt->execute();
 
             echo "Prospecção deletada com sucesso.";
