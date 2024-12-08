@@ -152,17 +152,13 @@ else
                       <th>STATUS</th>                     
                     </tr>
                     <tr>
-
                     <? 
-                    if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
-                    {
-                      echo "<br><br><center>$dadosPagina</center>";
-                      exit(); 
-                    }                
-                  
-                  ?>
-
-
+                      if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
+                      {
+                        echo "<br><br><center>$dadosPagina</center><br><br>";
+                        exit(); 
+                      }               
+                    ?>
                     <?php foreach ($dadosPagina as $client): ?>
                       <?php 
                         if($client['PRC_STSTATUS'] == 'Não recebeu visita.')
