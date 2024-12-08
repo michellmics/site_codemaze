@@ -63,19 +63,19 @@
                     <!-- text input -->
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do Cliente</label>
-                      <input type="text" class="form-control" id="inputWarning" placeholder="Enter ..."/>
+                      <input id="nome" name="nome"  style="text-transform: uppercase;" type="text" class="form-control" id="inputWarning" placeholder="Enter ..." required/>
                     </div>
                     <div class="form-group">
                       <label>Endereço:</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="endereco" name="endereco" style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                       <label>Link Maps:</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="maps" name="maps" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                       <label>Nome do Contato:</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="contato" name="contato" style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                     <label>Telefone:</label>
@@ -83,12 +83,12 @@
                       <div class="input-group-addon">
                         <i class="fa fa-phone"></i>
                       </div>
-                      <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
+                      <input id="telefone" name="telefone" type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
                     <div class="form-group">
                       <label>E-mail:</label>
-                      <input type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="email" name="email" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                     <label>Data da visita:</label>
@@ -96,40 +96,24 @@
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                      <input id="data" name="data"  type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
-                    <!-- radio -->
+
+                    <!-- select -->
                     <div class="form-group">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Cliente ainda não recebeu visita. 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Cliente não atendeu.
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
-                          Cliente pediu a proposta. 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
-                          Cliente recusou a oferta.
-                        </label>
-                      </div>
+                      <label>Select</label>
+                      <select  id="status" name="status" class="form-control">
+                        <option>Cliente ainda não recebeu visita. </option>
+                        <option>Cliente não atendeu.</option>
+                        <option>Cliente pediu uma proposta. </option>
+                        <option>Cliente recusou a oferta.</option>
+                      </select>
                     </div>
-                    <!-- textarea -->
+                       <!-- textarea -->
                     <div class="form-group">
                       <label>Observações</label>
-                      <textarea class="form-control" rows="5" placeholder="Enter ..."></textarea>
+                      <textarea id="obs" name="obs"  class="form-control" rows="5" placeholder="Enter ..."></textarea>
                     </div>
                    
                     <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-warning">SALVAR CADASTRO</button>
@@ -152,7 +136,7 @@
       function confirmAndSubmit(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulário de Contrato',
+          title: 'Formulário de Cliente',
           text: "Têm certeza que deseja salvar?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
@@ -174,7 +158,7 @@
             var formData = $("#form-empresa").serialize();
             // Fazer a requisição AJAX
             $.ajax({
-              url: "contrato_proc.php", // URL para processamento
+              url: "prospec_proc.php", // URL para processamento
               type: "POST",
               data: formData,
               success: function (response) {
