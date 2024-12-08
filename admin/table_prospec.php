@@ -139,14 +139,7 @@ else
 
                   </div>
                   
-                  <? 
-                    if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
-                    {
-                      echo "<br><br><center>$dadosPagina</center>";
-                      exit(); 
-                    }                
-                  
-                  ?>
+
 
                   </div>
                 </div><!-- /.box-header -->
@@ -159,6 +152,15 @@ else
                       <th>STATUS</th>                     
                     </tr>
                     <tr>
+
+                    <? 
+                    if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
+                    {
+                      echo "<br><br><center>$dadosPagina</center>";
+                      exit(); 
+                    }                
+                  
+                  ?>
 
 
                     <?php foreach ($dadosPagina as $client): ?>
