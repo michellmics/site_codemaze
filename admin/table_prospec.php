@@ -181,7 +181,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_NMNOME']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><? echo $statusVisitaMaps; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_STSTATUS']) ?></td>                    
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td> 
+                          <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $admusers['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger">DELETAR</span></a></td>         
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
@@ -220,6 +221,103 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
     window.location.href = `https://www.codemaze.com.br/site/admin/table_prospec.php?statusBusca=${value}`;
   }
 </script>
+
+<!-- ######################################################## --> 
+    <!-- SWEETALERT 2 -->   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function confirmDelete(userId){
+        event.preventDefault(); // Impede o envio padrão do formulário
+        Swal.fire({
+          title: 'Formulário de Clientes',
+          text: "Têm certeza que deseja excluir a prospecção?",
+          showDenyButton: true,
+          confirmButtonText: 'SIM',
+          denyButtonText: `CANCELAR`,
+          confirmButtonColor: "#4289a6",
+          denyButtonColor: "#ff8a33",
+          width: '600px', // Largura do alerta
+          icon: 'warning',
+          customClass: {
+            title: 'swal-title', // Classe para o título
+            content: 'swal-content', // Classe para o conteúdo (texto)
+            confirmButton: 'swal-confirm-btn',
+            denyButton: 'swal-deny-btn',
+            htmlContainer: 'swal-text'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Capturar os dados do formulário
+            var formData = $("#form-empresa").serialize();
+            // Fazer a requisição AJAX
+            $.ajax({
+              url: "prospec_delete.php", // URL para processamento
+              type: "POST",
+              data: { id: userId }, // Dados enviados
+              success: function (response) {
+                Swal.fire({
+              title: 'Salvo!',
+              text: `${response}`,
+              icon: 'success',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
+            }).then(() => {
+                  // Redirecionar ou atualizar a página, se necessário
+                  location.reload();
+                });
+              },
+              error: function (xhr, status, error) {
+                Swal.fire({
+              title: 'Erro!',
+              text: 'Erro ao atualizar o Cliente.',
+              icon: 'error',
+              width: '600px', // Largura do alerta
+              confirmButtonColor: "#4289a6",
+              customClass: {
+                title: 'swal-title', // Aplicando a mesma classe do título
+                content: 'swal-content', // Aplicando a mesma classe do texto
+                htmlContainer: 'swal-text',
+                confirmButton: 'swal-confirm-btn'
+              }
+            });
+              },
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
+          }
+        });
+      }
+      // Associar a função ao botão de submit
+      $(document).ready(function () {
+        $("#salvar_empresa_1").on("click", confirmAndSubmit);
+      });
+</script> 
+<style>
+  /* Estilos para aumentar o tamanho da fonte */
+  .swal-title {
+    font-size: 36px !important; /* Tamanho maior para o título */
+  }
+
+  .swal-text {
+    font-size: 24px !important; /* Tamanho maior para o conteúdo */
+  }
+
+  /* Aumentar o tamanho dos textos dos botões */
+  .swal-confirm-btn,
+  .swal-deny-btn,
+  .swal-cancel-btn {
+    font-size: 20px !important; /* Tamanho maior para os textos dos botões */
+    padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
+  }
+</style>
+<!-- ######################################################## --> 
+<!-- SWEETALERT 2 -->   
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
