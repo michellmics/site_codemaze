@@ -185,8 +185,7 @@ else
                         
                         <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"><?= htmlspecialchars($client['PRC_STSTATUS']) ?></td>  
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><i class="fa fa-location-arrow"></i></span></a></td>                  
-                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning"><i class="fa fa-eye"></i></span></a></td> 
-                          <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $client['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger"><i class="fa fa-trash"></i></span></a></td>         
+                        <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="javascript:void(0);" onclick="confirmDelete(<?= $client['PRC_IDPROSPEC_CLIENTES']; ?>)"><span class="label label-danger"><i class="fa fa-trash"></i></span></a></td>         
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
