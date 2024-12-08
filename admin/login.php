@@ -43,11 +43,8 @@ class LoginSystem extends SITE_ADMIN
                     }
                     else
                         {
-                           // echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
-                           echo '<script type="text/javascript">
-                           window.location.replace("table_prospec.php");
-                       </script>';
-                       exit(); // Certifica-se que o código não continue executando
+                            echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
+                            exit(); 
                         }
             } else 
                 {
