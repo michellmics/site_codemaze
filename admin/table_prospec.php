@@ -175,7 +175,7 @@ else
                             } 
                   
                       ?>
-                   <tr>
+                      <tr style="cursor: pointer;" onclick="window.location.href='https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<?= $client['PRC_IDPROSPEC_CLIENTES'] ?>';">
                         <td style="text-transform: uppercase; font-size: 15px;">
                             <span  <? echo $classLabel; ?>>
                             <? echo $statusVisita; ?>
