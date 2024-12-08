@@ -24,6 +24,11 @@ $idProspec = $_GET['id'];
 $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getProspecInfoByProspecId($idProspec); 
 
+// Conversão das datas para o formato YYYY-MM-DD
+$date = $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DTVISITA"];
+$dateObj = DateTime::createFromFormat('Y-m-d', $date);
+$dataConv =  $dateObj ? $dateObj->format('d/m/Y') : null;  // Retorna null se a data for inválida
+ 
 ?>
 
 
@@ -128,9 +133,9 @@ $siteAdmin->getProspecInfoByProspecId($idProspec);
                     <label>Data da visita:</label>
                     <div class="input-group">
                       <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
+                        <i class="fa fa-calendar"></i> 
                       </div>
-                      <input id="data" name="data"  type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                      <input id="data" name="data"  value="<? echo $dataConv; ?>" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
 
