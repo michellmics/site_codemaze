@@ -38,7 +38,8 @@ class LoginSystem extends SITE_ADMIN
                 else
                     if($user['USA_STPROSPEC'] != "SIM")
                     {
-                        echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
+                        echo $user['USA_STPROSPEC'];
+                        //echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
                         exit();
                     }
                     else
