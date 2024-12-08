@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $telefone = $_POST['telefone']; 
     $email = $_POST['email']; 
     $data = $_POST['data']; 
-    $status = $_POST['status']; 
+    $status = $_POST['status'];  
     $obs = $_POST['obs'];
     $registerProspec = new registerProspec();
     
