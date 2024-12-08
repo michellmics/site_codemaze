@@ -156,12 +156,12 @@ else
                       <?php 
                         if($client['PRC_STSTATUS'] == 'Não recebeu visita.')
                         {
-                          $classLabel = 'class="label label-danger"';
+                          $classLabel = 'class="label label-warning"';
                           $statusVisita = "N";
                         }
                         else
                             {
-                              $classLabel = 'class="label label-success"';
+                              $classLabel = 'class="label label-info"';
                               $statusVisita = "S";
                             }    
                             
@@ -173,7 +173,7 @@ else
                         }
                         else
                             {
-                              $classLabelMaps = 'class="label label-danger"';
+                              $classLabelMaps = 'class="label label-default"';
                               $statusVisitaMaps = "";
                               $linkMaps = "#";
                             } 
