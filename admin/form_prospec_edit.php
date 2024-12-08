@@ -97,19 +97,19 @@ $siteAdmin->getProspecInfoByProspecId($idProspec);
                     <!-- text input -->
                     <div class="form-group has-warning">
                       <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Nome do Cliente</label>
-                      <input id="nome" name="nome"  value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_NMNOME"]; ?> style="text-transform: uppercase;" type="text" class="form-control" id="inputWarning" placeholder="Enter ..." required/>
+                      <input id="nome" name="nome"  value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_NMNOME"]; ?>" style="text-transform: uppercase;" type="text" class="form-control" id="inputWarning" placeholder="Enter ..." required/>
                     </div>
                     <div class="form-group">
                       <label>Endereço:</label>
-                      <input id="endereco" name="endereco" value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCENDERECO"]; ?> style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="endereco" name="endereco" value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCENDERECO"]; ?>" style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                       <label>Link Maps:</label>
-                      <input id="maps" name="maps" value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCMAPS_END"]; ?> type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="maps" name="maps" value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCMAPS_END"]; ?>" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                       <label>Nome do Contato:</label>
-                      <input id="contato" name="contato" value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_NMCONTATO"]; ?> style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="contato" name="contato" value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_NMCONTATO"]; ?>" style="text-transform: uppercase;" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                     <label>Telefone:</label>
@@ -117,12 +117,12 @@ $siteAdmin->getProspecInfoByProspecId($idProspec);
                       <div class="input-group-addon">
                         <i class="fa fa-phone"></i>
                       </div>
-                      <input id="telefone" name="telefone" value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCTELEFONE"]; ?> type="text" class="form-control" data-inputmask='"mask": "(99) 9999-9999"' data-mask/>
+                      <input id="telefone" name="telefone" value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCTELEFONE"]; ?>" type="text" class="form-control" data-inputmask='"mask": "(99) 9999-9999"' data-mask/>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
                     <div class="form-group">
                       <label>E-mail:</label>
-                      <input id="email" name="email" value=<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCEMAIL"]; ?> type="text" class="form-control" placeholder="Enter ..." />
+                      <input id="email" name="email" value="<? echo $siteAdmin->ARRAY_PROSPEC_CLIENTESINFO[0]["PRC_DCEMAIL"]; ?>" type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
                     <label>Data da visita:</label>
