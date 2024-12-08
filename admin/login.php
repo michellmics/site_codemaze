@@ -36,21 +36,18 @@ class LoginSystem extends SITE_ADMIN
 
                 if($area == "Intranet")
                 {
-                    //echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
-                    header("Location: intranet.php");
+                    echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
                     exit();
                 }
                 else
                     if($user['USA_STPROSPEC'] != "SIM")
                     {
-                        //echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
-                        header("Location: noAuth.html");
+                        echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
                         exit();
                     }
                     else
                         {
-                            //echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
-                            header("Location: table_prospec.php");
+                            echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
                             exit(); 
                         }
             } else 
