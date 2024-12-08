@@ -149,7 +149,20 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                             {
                               $classLabel = 'class="label label-success"';
                               $statusVisita = "Visitado";
-                            }                            
+                            }    
+                            
+                        if($client['PRC_DCMAPS_END'] != '')
+                        {
+                          $classLabelMaps = 'class="label label-danger"';
+                          $statusVisitaMaps = "MAPS";
+                          $linkMaps = $client['PRC_DCMAPS_END'];
+                        }
+                        else
+                            {
+                              $classLabelMaps = '';
+                              $statusVisitaMaps = "";
+                              $linkMaps = "#";
+                            } 
                   
                       ?>
                    <tr>
@@ -160,7 +173,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                             </span>
                         </td> 
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_NMNOME']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><a href="<?= htmlspecialchars($client['PRC_DCMAPS_END']) ?>" target="_blank"><span class="label label-success">MAPS</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 12px;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><? echo $statusVisitaMaps; ?></span></a></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_STSTATUS']) ?></td>                    
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_prospec_edit.php?id=<? echo $client['PRC_IDPROSPEC_CLIENTES']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>        
                       </tr>
