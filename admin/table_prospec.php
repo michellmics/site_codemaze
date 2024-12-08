@@ -181,7 +181,7 @@ else
                             <? echo $statusVisita; ?>
                             </span>
                         </td> 
-                        <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"> <?= htmlspecialchars(strlen($client['PRC_NMNOME']) > 25 ? substr($client['PRC_NMNOME'], 0, 25) . '...' : $client['PRC_NMNOME']) ?></td>
+                        <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"> <?= htmlspecialchars(strlen($client['PRC_NMNOME']) > 20 ? substr($client['PRC_NMNOME'], 0, 20) . '...' : $client['PRC_NMNOME']) ?></td>
                         
                         <td style="text-transform: uppercase; font-size: 10px; vertical-align: middle;"><?= htmlspecialchars(strlen($client['PRC_DCENDERECO']) > 25 ? substr($client['PRC_DCENDERECO'], 0, 25) . '...' : $client['PRC_DCENDERECO']) ?></td>  
                         <td style="text-transform: uppercase; font-size: 15px; vertical-align: middle;"><a href="<?php echo $linkMaps; ?>" target="_blank"><span <? echo $classLabel; ?>><i class="fa fa-location-arrow"></i></span></a></td>                  
