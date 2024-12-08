@@ -163,7 +163,7 @@ else
                             
                         if($client['PRC_DCMAPS_END'] != '')
                         {
-                          $classLabelMaps = 'class="label label-success"';
+                          $classLabelMaps = 'class="label label-primary"';
                           $statusVisitaMaps = "MAPS";
                           $linkMaps = $client['PRC_DCMAPS_END'];
                         }
