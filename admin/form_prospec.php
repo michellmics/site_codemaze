@@ -36,7 +36,7 @@
   <body>
       <!-- Logo centralizado -->
   <div style="text-align: center; margin-top: 20px;">
-    <a href="index.php">
+    <a href="#">
       <img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="Codemaze Logo" style="max-width: 150px;">
     </a>
   </div> 
@@ -59,6 +59,10 @@
                     </div>
                     <div class="form-group">
                       <label>Endereço:</label>
+                      <input type="text" class="form-control" placeholder="Enter ..." />
+                    </div>
+                    <div class="form-group">
+                      <label>Link Maps:</label>
                       <input type="text" class="form-control" placeholder="Enter ..." />
                     </div>
                     <div class="form-group">
@@ -120,6 +124,7 @@
                       <textarea class="form-control" rows="5" placeholder="Enter ..."></textarea>
                     </div>
                    
+                    <button type="submit" id="salvar" name="salvar" class="btn btn-warning">SALVAR CADASTRO</button>
 
                   </form>
                 </div><!-- /.box-body -->
