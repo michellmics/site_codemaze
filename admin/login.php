@@ -32,13 +32,13 @@ class LoginSystem extends SITE_ADMIN
 
                 if($area == "Intranet")
                 {
-                    echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
+                   // echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
                     exit();
                 }
                 else
                     if($user['USA_STPROSPEC'] != "SIM")
                     {
-                        echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
+                       // echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
                         exit();
                     }
                     else
