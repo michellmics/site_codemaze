@@ -142,7 +142,7 @@ else
                   <? 
                     if(count($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO) == 0)
                     {
-                      echo $dadosPagina;
+                      echo "<br><br><center>$dadosPagina</center>";
                       exit(); 
                     }                
                   
