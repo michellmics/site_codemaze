@@ -35,9 +35,10 @@
   </head>
   <body>
     <div class="content">
+    <a class="navbar-brand" href="index.php"><img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="image"></a>
       <section class="content">
 
-      <a class="navbar-brand" href="index.php"><img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="image"></a>
+      
             <!-- right column -->
             <div class="col-md-6">
               <!-- general form elements disabled -->
