@@ -124,7 +124,7 @@ else
               <div class="box">
               <div class="box-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <h3 class="box-title">
-                  <b>Lista de Prospecção</b> : <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?>
+                  <b>Lista</b> : <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?>
                 </h3>
                 <button class="btn btn-danger btn-sm" onclick="window.location.href='form_prospec.php';">
                   LOGOUT
