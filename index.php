@@ -107,7 +107,7 @@
 							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> faleconosco@codemaze.com.br</a>
 						</div>
 						<div class="phone-box">
-							<a href="tel:1234567890"><i class="fab fa-whatsapp" aria-hidden="true"></i> 11 98273-4350</a>
+							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 11 98273-4350</a>
 						</div>
 					</div>
 				</div>
