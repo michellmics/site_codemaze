@@ -47,8 +47,7 @@ class LoginSystem extends SITE_ADMIN
                            echo '<script type="text/javascript">
                            window.location.replace("table_prospec.php");
                        </script>';
-                            
-                            //exit();
+                       exit(); // Certifica-se que o código não continue executando
                         }
             } else 
                 {
