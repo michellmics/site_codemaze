@@ -161,7 +161,7 @@ else
                         }
                         else
                             {
-                              $classLabel = 'class="label label-info"';
+                              $classLabel = 'class="label label-success"';
                               $statusVisita = "S";
                             }    
                             
