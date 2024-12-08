@@ -3,7 +3,6 @@ include_once 'objetos.php'; // Carrega a classe de conexão e objetos
 
 session_start(); // Inicia a sessão para armazenar dados do usuário
 
-
 class LoginSystem extends SITE_ADMIN
 {
     public function validateUser($email, $password, $area)
@@ -21,7 +20,7 @@ class LoginSystem extends SITE_ADMIN
             $stmt->execute();
 
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+
             // Se o usuário for encontrado e a senha for válida
             if ($user && password_verify($password, $user['USA_DCSENHA'])) {
                 $_SESSION['user_id'] = $user['USA_IDUSERADMIN']; // Armazena o ID na sessão
@@ -30,32 +29,25 @@ class LoginSystem extends SITE_ADMIN
                 $_SESSION['user_sexo'] = $user['USA_DCSEXO'];
                 $_SESSION['user_nivelacesso'] = $user['USA_DCNIVELDEACESSO'];
 
-                if($area == "Intranet")
-                {
-                   // echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
+                // Redirecionamento de acordo com a área e permissões do usuário
+                if($area == "Intranet") {
+                    header("Location: intranet.php");
+                    exit();
+                } else if($user['USA_STPROSPEC'] != "SIM") {
+                    header("Location: noAuth.html");
+                    exit();
+                } else {
+                    header("Location: table_prospec.php");
                     exit();
                 }
-                else
-                    if($user['USA_STPROSPEC'] != "SIM")
-                    {
-                       // echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
-                        exit();
-                    }
-                    else
-                        {
-                            
-                            header("Location: table_prospec.php");
-                            exit(); 
-                        }
-            } else 
-                {
-                    $_SESSION = [];
-                    session_destroy();
-                    echo "Usuário ou senha incorretos."; 
-                }
-        } catch (PDOException $e) {  
+            } else {
+                $_SESSION = [];
+                session_destroy();
+                echo "Usuário ou senha incorretos."; 
+            }
+        } catch (PDOException $e) {
             echo "Erro: " . $e->getMessage();
-        } 
+        }
     }
 }
 
@@ -71,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     // Verifique se o token foi recebido
     if (!empty($recaptchaResponse)) 
     {
-        
         // Verifique o reCAPTCHA fazendo uma solicitação à API do Google
         $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}");
         $responseKeys = json_decode($response, true);
@@ -79,25 +70,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         // Verifique o sucesso da validação
         if ($responseKeys["success"]) 
         {
-
             $email = $_POST['email'];
             $password = $_POST['password'];
             $area = $_POST['area'];
 
             $loginSystem = new LoginSystem();
-            $result=$loginSystem->validateUser($email, $password, $area);
+            $loginSystem->validateUser($email, $password, $area);
         }
-        else 
-            {
-                // Validação falhou
-                echo "Falha na verificação do reCAPTCHA. Por favor, tente novamente.";
-            }
+        else {
+            // Validação falhou
+            echo "Falha na verificação do reCAPTCHA. Por favor, tente novamente.";
+        }
     }
-    else 
-        {
-            // reCAPTCHA não foi resolvido
-            echo "Por favor, complete o reCAPTCHA.";
-        }
+    else {
+        // reCAPTCHA não foi resolvido
+        echo "Por favor, complete o reCAPTCHA.";
+    }
 }
- 
 ?>
