@@ -77,6 +77,7 @@ else
     <!-- Impede o comportamento padrão da barra de endereços no mobile -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
 
 <!-- Garantir que o site seja exibido em tela cheia, sem barra de endereços -->
 <meta name="mobile-web-app-capable" content="yes">
@@ -87,6 +88,7 @@ else
 <!-- Ícone para a tela inicial -->
 <link rel="icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
 <link rel="apple-touch-icon" href="https://www.codemaze.com.br/site/logo_small_site.png">
+
 
 
         <!-- ######################################################## --> 
