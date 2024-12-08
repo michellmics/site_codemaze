@@ -120,18 +120,19 @@ else
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title"><b>Lista de Prospecção</b> :  <? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></h3>
-                  <div class="box-tools" style="margin-bottom: 20px;">
+                  
+                  
+
+
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
                    <!-- Botão "Adicionar Produto" -->
                    <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_prospec.php';">ADICIONAR PROSPECÇÃO</button>
 
                   </div>
-                  
-
-
-                  </div>
-                </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
