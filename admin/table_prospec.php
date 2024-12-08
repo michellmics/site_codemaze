@@ -144,7 +144,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                         else
                             {
                               $classLabel = 'class="label label-success"';
-                              $statusVisita = "Já Visitado";
+                              $statusVisita = "Visitado";
                             }
                   
                   
