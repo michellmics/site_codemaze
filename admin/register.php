@@ -93,8 +93,8 @@ $result = $siteAdmin->getSiteInfo();
                 <div class="form-group has-feedback">
                     <select name="prospec" class="form-control" required>
                         <option value="" disabled selected>Prospecção de Clientes</option>
-                        <option value="0">NÃO</option>
-                        <option value="1">SIM</option>
+                        <option value="NÃO">NÃO</option>
+                        <option value="SIM">SIM</option>
                     </select>
                 </div>
 

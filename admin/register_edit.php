@@ -91,6 +91,15 @@ $siteAdmin->getUserInfo($userid);
                 </div>
 
                 <div class="form-group has-feedback">
+                    <select name="prospec" class="form-control" required>
+                        <option value="" disabled selected>Prospecção de Clientes</option>
+                        <option value="<? echo $siteAdmin->ARRAY_USERINFO["USA_STPROSPEC"] ?>" selected><? echo $siteAdmin->ARRAY_USERINFO["USA_STPROSPEC"] ?></option>
+                        <option value="NÃO">NÃO</option>
+                        <option value="SIM">SIM</option>
+                    </select>
+                </div>
+
+                <div class="form-group has-feedback">
                     <input type="password" value="<? echo $siteAdmin->ARRAY_USERINFO["USA_DCSENHA"] ?>" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                 </div>
