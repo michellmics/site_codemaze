@@ -125,10 +125,10 @@ if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso
                     <div class="form-group">
                       <label>Select</label>
                       <select  id="status" name="status" class="form-control">
-                        <option>Cliente ainda não recebeu visita.</option>
-                        <option>Cliente não atendeu.</option>
-                        <option>Cliente pediu uma proposta. </option>
-                        <option>Cliente recusou a oferta.</option>
+                        <option>Não recebeu visita.</option>
+                        <option>Não atendeu.</option>
+                        <option>Pediu uma proposta. </option>
+                        <option>Recusou a oferta.</option>
                       </select>
                     </div>
                        <!-- textarea -->

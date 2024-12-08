@@ -15,7 +15,11 @@
     exit();
   }
 
+$userId = $_SESSION['user_id'];
+
 $siteAdmin = new SITE_ADMIN();
+$siteAdmin->getUserInfo($userId);
+
 
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
 {
@@ -113,7 +117,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Prospecção</h3>
+                  <h3 class="box-title">Lista de Prospecção - <? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
@@ -128,7 +132,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th>ID</th>
                       <th></th> 
                       <th>NOME</th>
                       <th>MAPS</th>
@@ -139,7 +142,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
 
                     <?php foreach ($dadosPagina as $client): ?>
                       <?php 
-                        if($client['PRC_STSTATUS'] == 'Cliente ainda não recebeu visita.')
+                        if($client['PRC_STSTATUS'] == 'Não recebeu visita.')
                         {
                           $classLabel = 'class="label label-danger"';
                           $statusVisita = "Pendente";
@@ -165,7 +168,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
                   
                       ?>
                    <tr>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($client['PRC_IDPROSPEC_CLIENTES']) ?></td>
                         <td style="text-transform: uppercase; font-size: 15px;">
                             <span  <? echo $classLabel; ?>>
                             <? echo $statusVisita; ?>
