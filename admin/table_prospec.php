@@ -138,8 +138,7 @@ else
                     <tr>
                       <th></th> 
                       <th>NOME</th>
-                      <th>STATUS</th>  
-                      <th>MAPS</th>                   
+                      <th>STATUS</th>                  
                     </tr>
                     <tr>
                     <? 
