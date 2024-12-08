@@ -267,7 +267,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
               title: 'Salvo!',
               text: `${response}`,
               icon: 'success',
-              width: '600px', // Largura do alerta
+              width: '200px', // Largura do alerta
               confirmButtonColor: "#4289a6",
               customClass: {
                 title: 'swal-title', // Aplicando a mesma classe do título
@@ -285,7 +285,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
               title: 'Erro!',
               text: 'Erro ao atualizar o Cliente.',
               icon: 'error',
-              width: '600px', // Largura do alerta
+              width: '200px', // Largura do alerta
               confirmButtonColor: "#4289a6",
               customClass: {
                 title: 'swal-title', // Aplicando a mesma classe do título
@@ -309,19 +309,19 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
 <style>
   /* Estilos para aumentar o tamanho da fonte */
   .swal-title {
-    font-size: 36px !important; /* Tamanho maior para o título */
+    font-size: 22px !important; /* Tamanho maior para o título */
   }
 
   .swal-text {
-    font-size: 24px !important; /* Tamanho maior para o conteúdo */
+    font-size: 16px !important; /* Tamanho maior para o conteúdo */
   }
 
   /* Aumentar o tamanho dos textos dos botões */
   .swal-confirm-btn,
   .swal-deny-btn,
   .swal-cancel-btn {
-    font-size: 20px !important; /* Tamanho maior para os textos dos botões */
-    padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
+    font-size: 14px !important; /* Tamanho maior para os textos dos botões */
+    padding: 9px 9px !important; /* Aumenta o espaço ao redor do texto */
   }
 </style>
 <!-- ######################################################## --> 
