@@ -53,12 +53,10 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="form-group">
-                      <label>Select</label>
-                      <select  id="status" name="status" class="form-control">
-                        <option>Cliente ainda não recebeu visita.</option>
-                        <option>Cliente não atendeu.</option>
-                        <option>Cliente pediu uma proposta. </option>
-                        <option>Cliente recusou a oferta.</option>
+                      <label>Área</label>
+                      <select  id="area" name="area" class="form-control">
+                        <option>Intranet</option>
+                        <option>Prospecção</option>
                       </select>
                     </div>
           <div class="row">

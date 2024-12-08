@@ -6,7 +6,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class LoginSystem extends SITE_ADMIN
 {
-    public function validateUser($email, $password)
+    public function validateUser($email, $password, $area)
     {
         try {
             // Cria conexão com o banco de dados
@@ -29,8 +29,17 @@ class LoginSystem extends SITE_ADMIN
                 $_SESSION['user_email'] = $user['USA_DCEMAIL'];
                 $_SESSION['user_sexo'] = $user['USA_DCSEXO'];
                 $_SESSION['user_nivelacesso'] = $user['USA_DCNIVELDEACESSO'];
-                echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
-                exit();
+
+                if($area == "Intranet")
+                {
+                    echo '<meta http-equiv="refresh" content="0;url=intranet.php">'; // Redireciona após login bem-sucedido
+                    exit();
+                }
+                else
+                    {
+                        echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
+                        exit();
+                    }
             } else 
                 {
                     $_SESSION = [];
@@ -66,9 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $area = $_POST['area'];
 
             $loginSystem = new LoginSystem();
-            $result=$loginSystem->validateUser($email, $password);
+            $result=$loginSystem->validateUser($email, $password, $area);
         }
         else 
             {
