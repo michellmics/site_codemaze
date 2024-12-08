@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id']))
 
 class registerUser extends SITE_ADMIN
 {
-    public function insertUser($email, $senha, $nome, $sexo, $foto, $nivel)
+    public function insertUser($email, $senha, $nome, $sexo, $foto, $nivel, $prospec)
     {
         try {
             // Cria conexão com o banco de dados
@@ -36,7 +36,7 @@ class registerUser extends SITE_ADMIN
             } else 
                 {
                     $passHash = password_hash($senha, PASSWORD_DEFAULT);
-                    $result = $this->insertUserInfo($email, $nome, $sexo, $passHash, $foto, $nivel);
+                    $result = $this->insertUserInfo($email, $nome, $sexo, $passHash, $foto, $nivel, $prospec);
                     
                     $SUBJECT = "Cadastro de novo usuário administrador";
                     $MSG = "O usuário(a) $nome com e-mail $email foi cadastrado como administrador da intranet da Codemaze.";
@@ -127,6 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  
      // Cria o objeto de registro de usuário e chama o método insertUser
      $registerUser = new registerUser();
-     $registerUser->insertUser($email, $senha, $nome, $sexo, $foto, $nivel);
+     $registerUser->insertUser($email, $senha, $nome, $sexo, $foto, $nivel, $prospec);
  }
  ?>

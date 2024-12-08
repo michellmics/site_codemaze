@@ -21,17 +21,15 @@ $siteAdmin = new SITE_ADMIN();
 $siteAdmin->getUserInfo($userId);
 
 
-if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
+
+if($_SESSION['user_nivelacesso'] != "ADMINISTRADOR")
 {
-  $search = $_GET['table_search'];
-  $siteAdmin->getClientInfoBySearch($search);
+  $siteAdmin->getProspecInfoByUserId($userId);
 }
 else
-  {
-    $siteAdmin->getProspecInfo();
-  }
-
-
+{
+  $siteAdmin->getProspecInfo();
+}
 
 // Configurações de Paginação
 $registrosPorPagina = 30;

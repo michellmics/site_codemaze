@@ -36,10 +36,16 @@ class LoginSystem extends SITE_ADMIN
                     exit();
                 }
                 else
+                    if($user['USA_STPROSPEC'] != "1")
                     {
-                        echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
+                        echo '<meta http-equiv="refresh" content="0;url=noAuth.html">'; // Redireciona após login bem-sucedido
                         exit();
                     }
+                    else
+                        {
+                            echo '<meta http-equiv="refresh" content="0;url=table_prospec.php">'; // Redireciona após login bem-sucedido
+                            exit();
+                        }
             } else 
                 {
                     $_SESSION = [];

@@ -91,6 +91,14 @@ $result = $siteAdmin->getSiteInfo();
                 </div>
 
                 <div class="form-group has-feedback">
+                    <select name="prospec" class="form-control" required>
+                        <option value="" disabled selected>Prospecção de Clientes</option>
+                        <option value="0">NÃO</option>
+                        <option value="1">SIM</option>
+                    </select>
+                </div>
+
+                <div class="form-group has-feedback">
                     <label for="senha">Senha: 8 Caracteres 1 Especial e 1 Maiúscula</label>
                     <input type="password" name="senha" class="form-control" placeholder="Digite a senha" maxlength="20" required/>
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>

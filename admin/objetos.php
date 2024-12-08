@@ -245,6 +245,27 @@
             }          
         }
 
+        
+        public function getProspecInfoByUserId($USA_IDUSERADMIN)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM PRC_PROSPEC_CLIENTES
+                                WHERE USA_IDUSERADMIN = :USA_IDUSERADMIN
+                                ORDER BY PRC_NMNOME ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindParam(':USA_IDUSERADMIN', $USA_IDUSERADMIN, PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_PROSPEC_CLIENTESINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
         public function getClientInactiveInfo()
         {          
                 // Verifica se a conexão já foi estabelecida
@@ -1245,7 +1266,7 @@
             }
         }
 
-        public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA, $USA_DCFOTO, $USA_DCNIVELDEACESSO)
+        public function insertUserInfo($USA_DCEMAIL, $USA_DCNOME, $USA_DCSEXO, $USA_DCSENHA, $USA_DCFOTO, $USA_DCNIVELDEACESSO, $USA_STPROSPEC)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -1254,8 +1275,8 @@
         
             try {
                 $sql = "INSERT INTO USA_USERADMIN 
-                        (USA_DCEMAIL, USA_DCNOME, USA_DCSEXO, USA_DCSENHA, USA_DCFOTO, USA_DCNIVELDEACESSO) 
-                        VALUES (:USA_DCEMAIL, :USA_DCNOME, :USA_DCSEXO, :USA_DCSENHA, :USA_DCFOTO, :USA_DCNIVELDEACESSO)";
+                        (USA_DCEMAIL, USA_DCNOME, USA_DCSEXO, USA_DCSENHA, USA_DCFOTO, USA_DCNIVELDEACESSO, USA_STPROSPEC) 
+                        VALUES (:USA_DCEMAIL, :USA_DCNOME, :USA_DCSEXO, :USA_DCSENHA, :USA_DCFOTO, :USA_DCNIVELDEACESSO, :USA_STPROSPEC)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -1266,6 +1287,7 @@
                 $stmt->bindParam(':USA_DCSENHA', $USA_DCSENHA, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCFOTO', $USA_DCFOTO, PDO::PARAM_STR);
                 $stmt->bindParam(':USA_DCNIVELDEACESSO', $USA_DCNIVELDEACESSO, PDO::PARAM_STR);
+                $stmt->bindParam(':USA_STPROSPEC', $USA_STPROSPEC, PDO::PARAM_STR);
             
                 $stmt->execute();
             
