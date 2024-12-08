@@ -122,14 +122,14 @@ else
               <div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title"><b>Lista de Prospecção</b> :  <? echo $siteAdmin->ARRAY_USERINFO["USA_DCNOME"]; ?></h3>
-                  <button class="btn btn-block btn-info btn-sm" onclick="window.location.href='form_prospec.php';">LOGOUT</button>
-                  
-
-
-                  </div>
-                </div><!-- /.box-header -->
+              <div class="box-header" style="display: flex; justify-content: space-between; align-items: center;">
+  <h3 class="box-title">
+    <b>Lista de Prospecção</b> : <?php echo htmlspecialchars($siteAdmin->ARRAY_USERINFO["USA_DCNOME"]); ?>
+  </h3>
+  <button class="btn btn-info btn-sm" onclick="window.location.href='form_prospec.php';">
+    LOGOUT
+  </button>
+</div>
                 <div class="box-tools" style="margin-bottom: 20px;">
                   
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
