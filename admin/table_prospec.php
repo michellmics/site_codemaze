@@ -87,6 +87,12 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PROSPEC_CLIENTESINFO, $inicio, $reg
 <!-- Main MENU content  INI --> 
 <!-- ######################################################## -->  
   <body class="skin-blue">
+          <!-- Logo centralizado -->
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="#">
+      <img src="https://codemaze.com.br/site/images/logos/logocodemaze_preto.png" alt="Codemaze Logo" style="max-width: 150px;">
+    </a>
+  </div>
     <div class="wrapper">
       <!-- Right side column. Contains the navbar and content of the page -->
       <div class="content-wrapper" style="margin-left: 0px; background-color: white;">
