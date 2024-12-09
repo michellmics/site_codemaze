@@ -111,7 +111,7 @@
 							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> faleconosco@codemaze.com.br</a>
 						</div>
 						<div class="phone-box">
-							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 11 98273-4350</a>
+							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 19 99017-5759</a>
 						</div>
 					</div>
 				</div>
@@ -647,7 +647,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         <div class="widget-title">
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
-                        <p>Whatsapp: +55 11 998273-4350<br>
+                        <p>Whatsapp: +55 19 99017-5759<br>
                         Endereço: R. Estudantes, 505 - Hortolândia/SP<br>
                         Suporte Técnico: suporte@codemaze.com.br<br>
                         E-mail: faleconosco@codemaze.com.br<br>
