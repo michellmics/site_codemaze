@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
-            responderMensagem($from, $respostaGatilho);
+            responderMensagem($from, $respostaAjudarMaisAlgumaCoisa);
             if($text === '1') {
                 deleteUserInteraction($from); // Exclui a interação e volta ao início
                 responderMensagem($from, $respostaGatilho);
