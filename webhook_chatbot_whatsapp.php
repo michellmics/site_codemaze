@@ -49,7 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Mensagens de resposta------------------------
 
         $respostaGatilho = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
-
+        $respostaAjudarMaisAlgumaCoisa = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
+        $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
 
 
 
@@ -71,6 +72,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
+            responderMensagem($from, $respostaGatilho);
+            if($text === '1') {
+                deleteUserInteraction($from); // Exclui a interação e volta ao início
+                responderMensagem($from, $respostaGatilho);
+            }elseif($text === '2') {
+                deleteUserInteraction($from); // Exclui a interação e volta ao início
+                responderMensagem($from, $respostaObrigadoPorContatar);
+            }
         } elseif ($text === '2') {
             responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
         } elseif ($text === '3') {
