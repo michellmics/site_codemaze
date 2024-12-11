@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Respostas automáticas baseadas no texto
-        if ($text === 'olá' || $text != 'oi') {
+        if ($text === 'olá' || $text === 'oi') {
             responderMensagem($from, "Olá! Tudo bem? Como posso ajudar?");
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
