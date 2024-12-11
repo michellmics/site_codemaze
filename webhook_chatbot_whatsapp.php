@@ -46,12 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verificar se o usuário já interagiu com o menu
         $userHasInteracted = hasUserInteracted($from);
-
-        $respostaGatilho = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro";
         
         // Mensagens de resposta baseadas no texto
         if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
             // Enviar o menu pela primeira vez
+            $respostaGatilho = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro";
             responderMensagem($from, $respostaGatilho);
             // Registrar a interação do usuário
             setUserHasInteracted($from);
