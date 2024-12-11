@@ -44,9 +44,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             responderMensagem($from, "Parece que você demorou para responder. Estarei aguardando quando você tiver tempo.");
         }
 
+
+        //Mensagens de resposta------------------------
+
+        $respostaGatilho = "Olá, bem vindo(a) a Codemaze - Soluções de MKT e Software.
+                            Escolha uma das opções a seguir e envie o número 
+                            correspondente a esta escolha: /n/n
+
+                            1 - Mídias Sociais /n
+                            2 - Desenvolvimento de Software /n
+                            3 - Observabilidade /n
+                            4 - Consultoria /n
+                            5 - Suporte Técnico /n
+                            6 - Financeiro";
+
+
+
+
+        //----------------------------------------------
+
+
+
+
+
+
+
+
         // Respostas automáticas baseadas no texto
         if ($text === 'olá' || $text === 'oi') {
-            responderMensagem($from, "Olá! Tudo bem? Como posso ajudar?");
+            responderMensagem($from, $respostaGatilho);
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
