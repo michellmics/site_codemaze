@@ -3,7 +3,7 @@
 // Verificação do webhook
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     
-    $config = parse_ini_file('../config.cfg', true);
+    $config = parse_ini_file('../../config.cfg', true);
 
     if (!$config) {
         die("Erro ao carregar o arquivo de configuração.");
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 function responderMensagem($to, $message) {
     
-    $config = parse_ini_file('../config.cfg', true);
+    $config = parse_ini_file('../../config.cfg', true);
 
     if (!$config) {
         die("Erro ao carregar o arquivo de configuração.");
