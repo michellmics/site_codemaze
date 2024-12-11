@@ -59,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-
+        $userHasInteracted = hasUserInteracted($from);
 
 
         // Respostas automáticas baseadas no texto
-        if ($text === 'olá' || $text === 'oi') {
+        if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
             responderMensagem($from, $respostaGatilho);
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
@@ -165,5 +165,32 @@ function setUserLastInteractionTime($userId, $time) {
     }
 
     file_put_contents($filename, implode("\n", $lines) . "\n");
+}
+
+// Função para verificar se o usuário já interagiu com o menu
+function hasUserInteracted($userId) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_interaction.dat';
+
+    // Verificar se o arquivo de interação existe
+    if (file_exists($filename)) {
+        $data = file_get_contents($filename);
+        $lines = explode("\n", $data);
+
+        foreach ($lines as $line) {
+            if ($line === $userId) {
+                return true; // O usuário já interagiu
+            }
+        }
+    }
+
+    return false; // O usuário ainda não interagiu
+}
+
+// Função para registrar que o usuário interagiu com o menu
+function setUserHasInteracted($userId) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_interaction.dat';
+
+    // Adicionar o ID do usuário que interagiu
+    file_put_contents($filename, $userId . "\n", FILE_APPEND);
 }
 ?>
