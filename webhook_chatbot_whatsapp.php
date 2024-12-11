@@ -102,12 +102,12 @@ function responderMensagem($to, $message) {
     curl_close($ch);
 
     // Log da resposta
-    file_put_contents('response_log.txt', $response, FILE_APPEND);
+ //   file_put_contents('response_log.txt', $response, FILE_APPEND);
 }
 
 // Função para obter o tempo da última interação do usuário
 function getUserLastInteractionTime($userId) {
-    $filename = '../../last_interaction_time.txt';
+    $filename = '../../chatbot_last_interaction_time.dat';
 
     // Verificar se o arquivo de interação existe
     if (file_exists($filename)) {
@@ -127,7 +127,7 @@ function getUserLastInteractionTime($userId) {
 
 // Função para registrar o tempo da última interação
 function setUserLastInteractionTime($userId, $time) {
-    $filename = '../../last_interaction_time.txt';
+    $filename = '../../chatbot_last_interaction_time.dat';
     
     // Adicionar ou atualizar o tempo de interação do usuário
     $data = file_get_contents($filename);
