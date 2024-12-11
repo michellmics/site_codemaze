@@ -78,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($text === '7') {
             responderMensagem($from, "Voltando ao início...");
             deleteUserInteraction($from); // Exclui a interação e volta ao início
+            responderMensagem($from, $respostaGatilho);
         } else {
             responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
         }
