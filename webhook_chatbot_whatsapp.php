@@ -107,7 +107,7 @@ function responderMensagem($to, $message) {
 
 // Função para obter o tempo da última interação do usuário
 function getUserLastInteractionTime($userId) {
-    $filename = 'last_interaction_time.txt';
+    $filename = '../../last_interaction_time.txt';
 
     // Verificar se o arquivo de interação existe
     if (file_exists($filename)) {
@@ -127,7 +127,7 @@ function getUserLastInteractionTime($userId) {
 
 // Função para registrar o tempo da última interação
 function setUserLastInteractionTime($userId, $time) {
-    $filename = 'last_interaction_time.txt';
+    $filename = '../../last_interaction_time.txt';
     
     // Adicionar ou atualizar o tempo de interação do usuário
     $data = file_get_contents($filename);
