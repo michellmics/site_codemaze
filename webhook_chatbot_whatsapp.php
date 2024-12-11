@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Respostas automáticas baseadas no texto
         if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
             responderMensagem($from, $respostaGatilho);
+            setUserHasInteracted($from);
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
