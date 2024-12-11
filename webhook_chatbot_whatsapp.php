@@ -40,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verificar se já passaram 10 minutos desde a última interação
         $userLastInteractionTime = getUserLastInteractionTime($from);
-        if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 600 segundos = 10 minutos
+        if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
             responderMensagem($from, "Parece que você demorou para responder. Estarei aguardando quando você tiver tempo.");
         }
 
         // Respostas automáticas baseadas no texto
-        if ($text === 'olá' || $text != 'oi' || $text !== '') {
+        if ($text === 'olá' || $text != 'oi') {
             responderMensagem($from, "Olá! Tudo bem? Como posso ajudar?");
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
         } elseif ($text === '2') {
             responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
-        } elseif ($text !== '') {
+        } elseif ($text !== '3') {
             responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
         } else {
             responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
