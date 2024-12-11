@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         //Mensagens de resposta------------------------
 
-        $respostaGatilho = "Olá, bem-vindo(a) à Codemaze - Soluções de MKT e Software.\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n1 - Mídias Sociais\n2 - Desenvolvimento de Software\n3 - Observabilidade\n4 - Consultoria\n5 - Suporte Técnico\n6 - Financeiro";
+        $respostaGatilho = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n1 - Mídias Sociais\n2 - Desenvolvimento de Software\n3 - Observabilidade\n4 - Consultoria\n5 - Suporte Técnico\n6 - Financeiro";
 
 
 
