@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userLastInteractionTime = getUserLastInteractionTime($from);
         if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
             responderMensagem($from, "Parece que você demorou para responder. Estarei aguardando quando você tiver tempo.");
+            deleteUserInteraction($from);
         }
 
 
@@ -72,8 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
         } elseif ($text === '2') {
             responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
-        } elseif ($text !== '3') {
+        } elseif ($text === '3') {
             responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
+        } elseif ($text === '4') {
+            responderMensagem($from, "Voltando ao início...");
+            deleteUserInteraction($from); // Exclui a interação e volta ao início
         } else {
             responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
         }
@@ -193,5 +197,23 @@ function setUserHasInteracted($userId) {
 
     // Adicionar o ID do usuário que interagiu
     file_put_contents($filename, $userId . "\n", FILE_APPEND);
+}
+
+// Função para excluir a interação do usuário (quando terminar o atendimento ou voltar ao início)
+function deleteUserInteraction($userId) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_interaction.dat';
+
+    if (file_exists($filename)) {
+        $data = file_get_contents($filename);
+        $lines = explode("\n", $data);
+
+        // Remove o ID do usuário
+        $lines = array_filter($lines, function($line) use ($userId) {
+            return $line !== $userId;
+        });
+
+        // Grava de volta o arquivo sem a interação
+        file_put_contents($filename, implode("\n", $lines) . "\n");
+    }
 }
 ?>
