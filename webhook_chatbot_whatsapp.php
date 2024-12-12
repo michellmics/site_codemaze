@@ -47,8 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         //Mensagens de perguntas------------------------
-        $respostaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
-        $respostaGatilho[1] = "ID1";
+        $respostaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁";
+        $respostaGatilho[1] = "ID0";
+
+        $respostaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
+        $respostaMenuPrincipal[1] = "ID1";
 
         $respostaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
         $respostaAjudarMaisAlgumaCoisa[1] = "ID2";
@@ -63,20 +66,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $lastUserLastAwnser = getUserLastAwnser($from); 
 
         // GATILHO - MENU PRINCIPAL
-        if (($text === 'olá' ||  $text === 'oi' ||  $text === 'ola') && $lastUserLastAwnser = "ID1") {
+        if ($text !== '' && $lastUserLastAwnser == "ID0") {
             responderMensagem($from, $respostaGatilho[0]);
-            setUserLastAwnser($from, $respostaGatilho[1]); 
-        } elseif ($text === 'ajuda') {
-            responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
-        } elseif ($text === '1') {
-            responderMensagem($from, "Seu saldo atual é R$ 100,00.");
-        } elseif ($text === '2') {
-            responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
-        } elseif ($text === '3') {
-            responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
-        } else {
-            responderMensagem($from, "Olá, envie um Oi para iniciar o atendimento.");
+            responderMensagem($from, $respostaMenuPrincipal[0]);
+            setUserLastAwnser($from, $respostaMenuPrincipal[1]); //proximo menu
         }
+
+         //MENU PRINCIPAL
+        if($lastUserLastAwnser = "ID1")
+        {
+            switch ($text) {
+                case "1":
+                    responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
+                    break;
+                case "2":
+                    responderMensagem($from, "Seu saldo atual é R$ 100,00.");
+                    break;
+                case "3":
+                    responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
+                    break;
+                case "4":
+                    responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
+                    break;  
+                default: 
+                    responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
+            }
+        }
+
 
         // Registrar o momento da interação
         setUserLastInteractionTime($from, time());
@@ -166,7 +182,7 @@ function getUserLastAwnser($userId) {
             }
         }
     }
-    return "ID1"; // Nenhuma interação anterior encontrada
+    return "ID0"; // Nenhuma interação anterior encontrada
 }
 
 // Função para registrar o tempo da última interação
