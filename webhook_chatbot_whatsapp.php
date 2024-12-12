@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
          //MENU PRINCIPAL
-        if($lastUserLastAwnser = "ID1")
+        if($lastUserLastAwnser == "ID1")
         {
             switch ($text) {
                 case "1":
