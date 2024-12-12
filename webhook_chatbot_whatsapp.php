@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
             responderMensagem($from, "Entendi que você pode estar ocupado(a) agora. Sem problemas!\nEstamos à disposição, é só nos chamar quando puder. 😊");
             deleteUserInteraction($from);
+            setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
         }
 
 
