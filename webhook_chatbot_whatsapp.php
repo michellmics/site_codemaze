@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($text === '3') {
             responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
         } else {
-            responderMensagem($from, "$lastUserLastAwnser Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
+            responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
         }
 
         // Registrar o momento da interação
