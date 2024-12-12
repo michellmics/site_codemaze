@@ -48,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         //Mensagens de perguntas------------------------
         $respostaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
-        $respostaGatilho[1] = "ID1";
+        $respostaGatilho[1] = "1";
 
         $respostaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
-        $respostaAjudarMaisAlgumaCoisa[1] = "ID2";
+        $respostaAjudarMaisAlgumaCoisa[1] = "2";
         //Mensagens de perguntas------------------------
         
         //Mensagens Afirmativas-------------------------
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $lastUserLastAwnser = getUserLastAwnser($from);
 
         // GATILHO - MENU PRINCIPAL
-        if ($text !== '' && $lastUserLastAwnser = "0") {
+        if ($text !== '' && $lastUserLastAwnser = "1") {
             responderMensagem($from, $respostaGatilho[0]);
             setUserLastAwnser($from, $respostaGatilho[1]); 
         } elseif ($text === 'ajuda') {
@@ -166,7 +166,7 @@ function getUserLastAwnser($userId) {
             }
         }
     }
-    return "0"; // Nenhuma interação anterior encontrada
+    return "1"; // Nenhuma interação anterior encontrada
 }
 
 // Função para registrar o tempo da última interação
