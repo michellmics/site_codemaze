@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $lastUserLastAwnser = getUserLastAwnser($from);
 
         // GATILHO - MENU PRINCIPAL
-        if ($text !== '' && $lastUserLastAwnser = "ID1") {
+        if (($text !== 'olá' ||  $text !== 'oi' ||  $text !== 'ola') && $lastUserLastAwnser = "ID1") {
             responderMensagem($from, $respostaGatilho[0]);
             setUserLastAwnser($from, $respostaGatilho[1]); 
         } elseif ($text === 'ajuda') {
