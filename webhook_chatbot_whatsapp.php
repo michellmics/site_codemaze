@@ -120,15 +120,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              switch ($text) {
                  case "1":
                      responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     deleteUserLastAwnser($from);
                      break;
                  case "2":
                      responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     deleteUserLastAwnser($from);
                      break;
                  case "3":
                      responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     deleteUserLastAwnser($from);
                      break;
                  case "4":
                      responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     deleteUserLastAwnser($from);
                      break;  
                  default: 
                      responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
