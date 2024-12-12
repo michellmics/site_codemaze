@@ -386,6 +386,7 @@ function responderMensagemWhats($to, $message) {
     // Verifica se houve erro
     if (curl_errno($ch)) {
         echo "Erro ao enviar mensagem: " . curl_error($ch) . "\n";
+        file_put_contents('response_log.txt', curl_error($ch), FILE_APPEND);
     } else {
         // Exibe a resposta da API para fins de debug
         echo "Resposta da API: $response\n";
