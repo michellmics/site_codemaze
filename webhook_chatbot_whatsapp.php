@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
             responderMensagem($from, "Entendi que você pode estar ocupado(a) agora. Sem problemas!\nEstamos à disposição, é só nos chamar quando puder. 😊");
             deleteUserInteraction($from);
-            deleteUserLastAwnser($from);
+            setUserLastAwnser($from, $perguntaGatilho[1]); 
         }
 
 
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $perguntaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
         $perguntaAjudarMaisAlgumaCoisa[1] = "ID2";
 
-        $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria\n*5* - Voltar ao menu principal";
+        $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria\n*5* - Checar o status dos servidores WEB\n*6* - Voltar ao menu principal";
         $perguntaSuporteTecnico[1] = "ID3";
         //Mensagens de perguntas------------------------
         
@@ -140,6 +140,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;  
                 case "5":
+                    responderMensagem($from, "Status dos Servidores OK");
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "6":
                     responderMensagem($from, $$respostaRedirMenuPrincipal);
                     responderMensagem($from, $perguntaMenuPrincipal[0]);
                     setUserLastAwnser($from, $perguntaMenuPrincipal[1]); //direciona para o Menu principal
@@ -260,24 +264,6 @@ function getUserLastAwnser($userId) {
         }
     }
     return "ID0"; // Nenhuma interação anterior encontrada
-}
-
-// Função para deletar a info do ultimo menu que o usuario iterou
-function deleteUserLastAwnser($userId) {
-    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
-
-    if (file_exists($filename)) {
-        $data = file_get_contents($filename);
-        $lines = explode("\n", $data);
-
-        // Remove o ID do usuário
-        $lines = array_filter($lines, function($line) use ($userId) {
-            return $line !== $userId;
-        });
-
-        // Grava de volta o arquivo sem a interação
-        file_put_contents($filename, implode("\n", $lines) . "\n");
-    }
 }
 
 // Função para registrar o tempo da última interação
