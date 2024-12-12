@@ -74,27 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
             responderMensagem($from, $respostaGatilho[0]);
             setUserLastAwnser($from, $respostaGatilho[1]); 
-            setUserHasInteracted($from);
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
-            responderMensagem($from, $respostaAjudarMaisAlgumaCoisa[0]);
-            if($text === '1') {
-                deleteUserInteraction($from); // Exclui a interação e volta ao início
-                responderMensagem($from, $respostaGatilho[0]);
-            }elseif($text === '2') {
-                deleteUserInteraction($from); // Exclui a interação e volta ao início
-                responderMensagem($from, $respostaObrigadoPorContatar);
-            }
         } elseif ($text === '2') {
             responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
         } elseif ($text === '3') {
             responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
-        } elseif ($text === '7') {
-            responderMensagem($from, "Voltando ao início...");
-            deleteUserInteraction($from); // Exclui a interação e volta ao início
-            responderMensagem($from, $respostaGatilho[0]);
         } else {
             responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
         }
@@ -206,14 +193,6 @@ function hasUserInteracted($userId) {
     }
 
     return false; // O usuário ainda não interagiu
-}
-
-// Função para registrar que o usuário interagiu com o menu
-function setUserHasInteracted($userId) {
-    $filename = '../../chatbot_whatsapp/chatbot_user_interaction.dat';
-
-    // Adicionar o ID do usuário que interagiu
-    file_put_contents($filename, $userId . "\n", FILE_APPEND);
 }
 
 // Função para registrar a ultima pergunta que o usuario interagiu
