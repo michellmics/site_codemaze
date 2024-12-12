@@ -135,7 +135,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         {
             switch ($text) {
                 case "1":                    
-                    enviarMensagemComBotoes($from, $respostaEquipamento);
+                    //enviarMensagemComBotoes($from, $respostaEquipamento); //exemplo de resposta com botao sim e nao
+                    enviarMensagemComLista($from, $respostaEquipamento); //exemplo de resposta com botao e lista                 
                     //responderMensagem($from, $respostaEquipamento);
                     setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;
@@ -408,6 +409,66 @@ function enviarMensagemComBotoes($numero, $mensagem) {
     return $result;
 }
 
+function enviarMensagemComLista($numero, $mensagem) {
+
+    $config = parse_ini_file('../../config.cfg', true);
+
+    if (!$config) {
+        die("Erro ao carregar o arquivo de configuração.");
+    }
+    $token = $config['TOKEN_WHATSAPP']['Token'];
+    $phoneNumberId = $config['TOKEN_WHATSAPP']['TelId'];
+
+    $url = "https://graph.facebook.com/v14.0/$phoneNumberId/messages"; // Substitua pelo seu ID do número
+
+    $data = [
+        'messaging_product' => 'whatsapp',
+        'to' => $numero,
+        'type' => 'interactive',
+        'interactive' => [
+            'type' => 'list',
+            'body' => [
+                'text' => $mensagem
+            ],
+            'action' => [
+                'button' => 'Escolha uma opção', // Texto do botão
+                'sections' => [
+                    [
+                        'title' => 'Opções', // Título da seção
+                        'rows' => [
+                            [
+                                'id' => 'sim', // ID da opção
+                                'title' => 'Sim' // Texto da opção
+                            ],
+                            [
+                                'id' => 'nao', // ID da opção
+                                'title' => 'Não' // Texto da opção
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+    // Configuração do cabeçalho para a requisição
+    $options = [
+        'http' => [
+            'method'  => 'POST',
+            'header'  => "Content-Type: application/json\r\nAuthorization: Bearer $token\r\n",
+            'content' => json_encode($data),
+        ],
+    ];
+
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+
+    if ($result === FALSE) {
+        die('Erro ao enviar mensagem');
+    }
+
+    return $result;
+}
 
 
 
