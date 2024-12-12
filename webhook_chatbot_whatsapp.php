@@ -43,22 +43,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
             responderMensagem($from, "Parece que você demorou para responder. Estarei aguardando quando você tiver tempo.");
             deleteUserInteraction($from);
+            deleteUserLastAwnser($from);
         }
 
 
         //Mensagens de perguntas------------------------
-        $respostaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁";
-        $respostaGatilho[1] = "ID0";
+        $perguntaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁";
+        $perguntaGatilho[1] = "ID0";
 
-        $respostaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
-        $respostaMenuPrincipal[1] = "ID1";
+        $perguntaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
+        $perguntaMenuPrincipal[1] = "ID1";
 
-        $respostaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
-        $respostaAjudarMaisAlgumaCoisa[1] = "ID2";
+        $perguntaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
+        $perguntaAjudarMaisAlgumaCoisa[1] = "ID2";
+
+        $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria";
+        $perguntaSuporteTecnico[1] = "ID3";
         //Mensagens de perguntas------------------------
         
         //Mensagens Afirmativas-------------------------
         $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
+        $respostaVamosRedirecionarAtendente = "Aguarde um momento.\nEstamos encaminhando sua solicitação para um atendente.";
         //Mensagens Afirmativas-------------------------
 
         //----------------------------------------------
@@ -67,9 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // GATILHO - MENU PRINCIPAL
         if ($text !== '' && $lastUserLastAwnser == "ID0") {
-            responderMensagem($from, $respostaGatilho[0]);
-            responderMensagem($from, $respostaMenuPrincipal[0]);
-            setUserLastAwnser($from, $respostaMenuPrincipal[1]); //proximo menu
+            responderMensagem($from, $perguntaGatilho[0]);
+            responderMensagem($from, $perguntaMenuPrincipal[0]);
+            setUserLastAwnser($from, $perguntaMenuPrincipal[1]); //proximo menu
         }
 
          //MENU PRINCIPAL
@@ -77,21 +82,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         {
             switch ($text) {
                 case "1":
-                    responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
                     break;
                 case "2":
-                    responderMensagem($from, "Seu saldo atual é R$ 100,00.");
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
                     break;
                 case "3":
-                    responderMensagem($from, "Para suporte técnico, envie um e-mail para suporte@empresa.com.");
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
                     break;
                 case "4":
-                    responderMensagem($from, "Aguarde enquanto conectamos você a um humano...");
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
                     break;  
+                case "5":
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                    break; 
+                case "6":
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                    break;  
+                case "7":
+                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                    break; 
                 default: 
                     responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
             }
         }
+
+         //MENU SUPORTE TÉCNICO
+         if($lastUserLastAwnser == "ID3")
+         {
+             switch ($text) {
+                 case "1":
+                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     break;
+                 case "2":
+                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     break;
+                 case "3":
+                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     break;
+                 case "4":
+                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     break;  
+                 default: 
+                     responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
+             }
+         }
+
+
+
+        
 
 
         // Registrar o momento da interação
@@ -183,6 +222,24 @@ function getUserLastAwnser($userId) {
         }
     }
     return "ID0"; // Nenhuma interação anterior encontrada
+}
+
+// Função para deletar a info do ultimo menu que o usuario iterou
+function deleteUserLastAwnser($userId) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
+
+    if (file_exists($filename)) {
+        $data = file_get_contents($filename);
+        $lines = explode("\n", $data);
+
+        // Remove o ID do usuário
+        $lines = array_filter($lines, function($line) use ($userId) {
+            return $line !== $userId;
+        });
+
+        // Grava de volta o arquivo sem a interação
+        file_put_contents($filename, implode("\n", $lines) . "\n");
+    }
 }
 
 // Função para registrar o tempo da última interação
