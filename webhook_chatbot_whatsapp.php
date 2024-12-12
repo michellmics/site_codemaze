@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     break; 
                 case "6":
                     responderMensagem($from, $perguntaFinanceiro[0]); 
-                    responderMensagem($from, $perguntaFinanceiro[1]); 
+                    setUserLastAwnser($from, $perguntaFinanceiro[1]); 
                     break;   
                 default: 
                     responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊");            
