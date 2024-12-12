@@ -46,13 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 
-        //Mensagens de resposta------------------------
+        //Mensagens de perguntas------------------------
+        $respostaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
+        $respostaGatilho[1] = "ID1";
 
-        $respostaGatilho = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁\n\nEscolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
-        $respostaAjudarMaisAlgumaCoisa = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
+        $respostaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
+        $respostaAjudarMaisAlgumaCoisa[1] = "ID2";
+        //Mensagens de perguntas------------------------
+        
+        //Mensagens Afirmativas-------------------------
         $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
+        //Mensagens Afirmativas-------------------------
 
-
+        $pergunta=0; //controla qual pergunta o usuario irá responder
 
 
         //----------------------------------------------
@@ -66,16 +72,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Respostas automáticas baseadas no texto
         if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
-            responderMensagem($from, $respostaGatilho);
+            responderMensagem($from, $respostaGatilho[0]);
+            setUserLastAwnser($from, $respostaGatilho[1]); 
             setUserHasInteracted($from);
         } elseif ($text === 'ajuda') {
             responderMensagem($from, "Aqui estão algumas opções:\n1. Consultar saldo\n2. Suporte técnico\n3. Falar com um humano");
         } elseif ($text === '1') {
             responderMensagem($from, "Seu saldo atual é R$ 100,00.");
-            responderMensagem($from, $respostaAjudarMaisAlgumaCoisa);
+            responderMensagem($from, $respostaAjudarMaisAlgumaCoisa[0]);
             if($text === '1') {
                 deleteUserInteraction($from); // Exclui a interação e volta ao início
-                responderMensagem($from, $respostaGatilho);
+                responderMensagem($from, $respostaGatilho[0]);
             }elseif($text === '2') {
                 deleteUserInteraction($from); // Exclui a interação e volta ao início
                 responderMensagem($from, $respostaObrigadoPorContatar);
@@ -87,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($text === '7') {
             responderMensagem($from, "Voltando ao início...");
             deleteUserInteraction($from); // Exclui a interação e volta ao início
-            responderMensagem($from, $respostaGatilho);
+            responderMensagem($from, $respostaGatilho[0]);
         } else {
             responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");
         }
@@ -207,6 +214,14 @@ function setUserHasInteracted($userId) {
 
     // Adicionar o ID do usuário que interagiu
     file_put_contents($filename, $userId . "\n", FILE_APPEND);
+}
+
+// Função para registrar a ultima pergunta que o usuario interagiu
+function setUserLastAwnser($userId, $lastAwnser) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
+
+    // Adicionar o ID do usuário que interagiu
+    file_put_contents($filename, $userId.":".$lastAwnser. "\n", FILE_APPEND);
 }
 
 // Função para excluir a interação do usuário (quando terminar o atendimento ou voltar ao início)
