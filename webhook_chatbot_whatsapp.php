@@ -389,6 +389,7 @@ function responderMensagemWhats($to, $message) {
     } else {
         // Exibe a resposta da API para fins de debug
         echo "Resposta da API: $response\n";
+        file_put_contents('response_log.txt', $response, FILE_APPEND);
     }
 
     // Fecha a conexão cURL
