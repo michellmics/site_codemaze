@@ -237,7 +237,7 @@ function responderMensagem($to, $message) {
     curl_close($ch);
 
     // Log da resposta
- //   file_put_contents('response_log.txt', $response, FILE_APPEND);
+    file_put_contents('response_log.txt', $response, FILE_APPEND);
 }
 
 // Função para obter o tempo da última interação do usuário
