@@ -38,15 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         file_put_contents('webhook_log.txt', file_get_contents('php://input') . PHP_EOL, FILE_APPEND);
         file_put_contents('text_log.txt', $text . PHP_EOL, FILE_APPEND);
 
-        // Verificar se já passaram 10 minutos desde a última interação
-        $userLastInteractionTime = getUserLastInteractionTime($from);
-        if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
-            responderMensagem($from, "Entendi que você pode estar ocupado(a) agora. Sem problemas!\nEstamos à disposição, é só nos chamar quando puder. 😊");
-            deleteUserInteraction($from);
-            setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
-        }
-
-
         //Mensagens de perguntas------------------------
         $perguntaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze Soluções de MKT e Software.*😁";
         $perguntaGatilho[1] = "ID0";
@@ -76,6 +67,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Mensagens Afirmativas-------------------------
 
         //----------------------------------------------
+
+
+        // Verificar se já passaram 10 minutos desde a última interação
+        $userLastInteractionTime = getUserLastInteractionTime($from);
+        if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
+            responderMensagem($from, "Entendi que você pode estar ocupado(a) agora. Sem problemas!\nEstamos à disposição, é só nos chamar quando puder. 😊");
+            deleteUserInteraction($from);
+            setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+        }
+
+
 
         $lastUserLastAwnser = getUserLastAwnser($from); 
 
