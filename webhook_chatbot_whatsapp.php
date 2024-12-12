@@ -222,9 +222,25 @@ function getUserLastInteractionTime($userId) {
 // Função para registrar a ultima pergunta que o usuario interagiu
 function setUserLastAwnser($userId, $lastAwnser) {
     $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
+    
+    // Adicionar ou atualizar ultima pergunta que o usuario interagiu
+    $data = file_get_contents($filename);
+    $lines = explode("\n", $data);
+    $found = false;
+    
+    foreach ($lines as &$line) {
+        list($user, $oldTime) = explode(":", $line);
+        if ($user == $userId) {
+            $line = $userId . ":" . $lastAwnser;
+            $found = true;
+        }
+    }
+    
+    if (!$found) {
+        $lines[] = $userId . ":" . $lastAwnser;
+    }
 
-    // Adicionar o ID do usuário que interagiu
-    file_put_contents($filename, $userId.":".$lastAwnser. "\n", FILE_APPEND);
+    file_put_contents($filename, implode("\n", $lines) . "\n");
 }
 
 // Função para obter o ultimo menu que o usuario iterou
