@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar se já passaram 10 minutos desde a última interação
         $userLastInteractionTime = getUserLastInteractionTime($from);
         if ($userLastInteractionTime !== null && (time() - $userLastInteractionTime) > 30) {  // 30 segundos 
-            responderMensagem($from, "Parece que você demorou para responder. Estarei aguardando quando você tiver tempo.");
+            responderMensagem($from, "Entendi que você pode estar ocupado(a) agora. Sem problemas!\nEstamos à disposição, é só nos chamar quando puder. 😊");
             deleteUserInteraction($from);
             deleteUserLastAwnser($from);
         }
@@ -51,13 +51,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $perguntaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze Soluções de MKT e Software.*😁";
         $perguntaGatilho[1] = "ID0";
 
-        $perguntaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
+        $perguntaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro";
         $perguntaMenuPrincipal[1] = "ID1";
 
         $perguntaAjudarMaisAlgumaCoisa[0] = "Podemos ajudar em algo mais?\n\n*1* - Sim\n*2* - Não";
         $perguntaAjudarMaisAlgumaCoisa[1] = "ID2";
 
-        $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria";
+        $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria\n*5* - Voltar ao menu principal";
         $perguntaSuporteTecnico[1] = "ID3";
         //Mensagens de perguntas------------------------
         
@@ -91,19 +91,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             switch ($text) {
                 case "1":
                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;
                 case "2":
                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;
                 case "3":
                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;
                 case "4":
                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;  
                 case "5":
                     responderMensagem($from, $perguntaSuporteTecnico[0]);
@@ -111,42 +111,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     break; 
                 case "6":
                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
-                    break;  
-                case "7":
-                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    deleteUserLastAwnser($from);
-                    break; 
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;   
                 default: 
-                    responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
+                    responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊");            
             }
         }
 
-         //MENU SUPORTE TÉCNICO
-         if($lastUserLastAwnser == "ID3")
-         {
-             switch ($text) {
-                 case "1":
-                     responderMensagem($from, $respostaEquipamento);
-                     deleteUserLastAwnser($from);
-                     break;
-                 case "2":
-                     responderMensagem($from, $respostaSistemas);
-                     deleteUserLastAwnser($from);
-                     break;
-                 case "3":
-                     responderMensagem($from, $$respostaHosting);
-                     deleteUserLastAwnser($from);
-                     break;
-                 case "4":
-                     responderMensagem($from, $respostaConsultoria);
-                     deleteUserLastAwnser($from);
-                     break;  
-                 default: 
-                     responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie o número correspondente a opção desejada."); 
-                     responderMensagem($from, $perguntaSuporteTecnico[0]);           
-             }
-         }
+        //MENU SUPORTE TÉCNICO
+        if($lastUserLastAwnser == "ID3")
+        {
+            switch ($text) {
+                case "1":
+                    responderMensagem($from, $respostaEquipamento);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "2":
+                    responderMensagem($from, $respostaSistemas);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "3":
+                    responderMensagem($from, $$respostaHosting);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "4":
+                    responderMensagem($from, $respostaConsultoria);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;  
+                case "5":
+                    responderMensagem($from, $respostaConsultoria);
+                    setUserLastAwnser($from, $perguntaMenuPrincipal[1]); //direciona para o Menu principal
+                    break;  
+                default: 
+                    responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊"); 
+                    responderMensagem($from, $perguntaSuporteTecnico[0]);           
+            }
+        }
 
 
 
