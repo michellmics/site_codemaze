@@ -122,9 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 case "6":
                     responderMensagem($from, $perguntaFinanceiro[0]); 
                     setUserLastAwnser($from, $perguntaFinanceiro[1]); 
-                    $to = "5511982734350";
-                    $message = "Olá, esta é uma mensagem de teste!";
-                    responderMensagemWhats($to, $message);
+                    responderMensagem("5511982734350", "Olá, esta é uma mensagem de teste!"); 
                     break;   
                 default: 
                     responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊");            
@@ -346,54 +344,6 @@ function deleteUserInteraction($userId) {
     }
 }
 
-function responderMensagemWhats($to, $message) {
-
-    $config = parse_ini_file('../../config.cfg', true);
-
-    if (!$config) {
-        die("Erro ao carregar o arquivo de configuração.");
-    }
-    $token = $config['TOKEN_WHATSAPP']['Token'];
-    $phoneNumberId = $config['TOKEN_WHATSAPP']['TelId'];
-    $verifyToken = $config['TOKEN_WHATSAPP']['VerifyToken'];
-
-    // URL da API do WhatsApp (substitua pelo endpoint correto do seu provedor)
-    $url = "https://graph.facebook.com/v17.0/$phoneNumberId/messages";
-
-     // Parâmetros da mensagem
-    $data = [
-        'to' => $to,
-        'type' => 'text', // Define o tipo de mensagem
-        'text' => ['body' => $message] // Corpo da mensagem
-    ];
-
-    // Inicializa cURL
-    $ch = curl_init();
-
-    // Configurações do cURL
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        "Authorization: Bearer $token" // Adiciona o token de autenticação
-    ]);
-
-    // Executa a requisição e captura a resposta
-    $response = curl_exec($ch);
-
-    // Verifica se houve erro
-    if (curl_errno($ch)) {
-        echo "Erro ao enviar mensagem: " . curl_error($ch) . "\n";
-    } else {
-        // Exibe a resposta da API para fins de debug
-        echo "Resposta da API: $response\n";
-    }
-
-    // Fecha a conexão cURL
-    curl_close($ch);
-}
 
 
 
