@@ -134,8 +134,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if($lastUserLastAwnser == "ID3")
         {
             switch ($text) {
-                case "1":
-                    responderMensagem($from, $respostaEquipamento);
+                case "1":                    
+                    enviarMensagemComBotoes($from, $respostaEquipamento);
+                    //responderMensagem($from, $respostaEquipamento);
                     setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;
                 case "2":
@@ -344,6 +345,70 @@ function deleteUserInteraction($userId) {
         file_put_contents($filename, implode("\n", $lines) . "\n");
     }
 }
+
+// Função para enviar a mensagem com botões
+function enviarMensagemComBotoes($numero, $mensagem) {
+
+    $config = parse_ini_file('../../config.cfg', true);
+
+    if (!$config) {
+        die("Erro ao carregar o arquivo de configuração.");
+    }
+    $token = $config['TOKEN_WHATSAPP']['Token'];
+    $phoneNumberId = $config['TOKEN_WHATSAPP']['TelId'];
+
+    $url = "https://graph.facebook.com/v14.0/$phoneNumberId/messages";
+
+    $data = [
+        'messaging_product' => 'whatsapp',
+        'to' => $numero,
+        'type' => 'interactive',
+        'interactive' => [
+            'type' => 'button',
+            'body' => [
+                'text' => $mensagem
+            ],
+            'action' => [
+                'buttons' => [
+                    [
+                        'type' => 'reply',
+                        'reply' => [
+                            'id' => 'sim',
+                            'title' => 'Sim'
+                        ]
+                    ],
+                    [
+                        'type' => 'reply',
+                        'reply' => [
+                            'id' => 'nao',
+                            'title' => 'Não'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+    // Configuração do cabeçalho para a requisição
+    $options = [
+        'http' => [
+            'method'  => 'POST',
+            'header'  => "Content-Type: application/json\r\nAuthorization: Bearer $token\r\n",
+            'content' => json_encode($data),
+        ],
+    ];
+
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+
+    if ($result === FALSE) {
+        die('Erro ao enviar mensagem');
+    }
+
+    return $result;
+}
+
+
 
 
 
