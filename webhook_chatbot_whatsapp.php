@@ -362,6 +362,7 @@ function responderMensagemWhats($to, $message) {
 
      // Parâmetros da mensagem
     $data = [
+        "messaging_product" => "whatsapp",
         'to' => $to,
         'type' => 'text', // Define o tipo de mensagem
         'text' => ['body' => $message] // Corpo da mensagem
