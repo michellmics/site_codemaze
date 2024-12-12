@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         //Mensagens de perguntas------------------------
-        $perguntaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze - Soluções de MKT e Software.*😁";
+        $perguntaGatilho[0] = "Olá, bem-vindo(a) à *Codemaze Soluções de MKT e Software.*😁";
         $perguntaGatilho[1] = "ID0";
 
         $perguntaMenuPrincipal[0] = "Escolha uma das opções a seguir e envie o número correspondente a esta escolha:\n\n*1* - Mídias Sociais\n*2* - Desenvolvimento de Software\n*3* - Observabilidade\n*4* - Consultoria\n*5* - Suporte Técnico\n6 - Financeiro\n*7* - Voltar";
@@ -64,6 +64,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Mensagens Afirmativas-------------------------
         $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
         $respostaVamosRedirecionarAtendente = "Aguarde um momento.\nEstamos encaminhando sua solicitação para um atendente.";
+
+            //suporte
+            $respostaSistemas = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte sistêmico.";
+            $respostaEquipamento = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte em hardware.";
+            $respostaHosting = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte WEB.";
+            $respostaConsultoria = "*Certo!*\nVamos redirecionar seu atendimento ao nosso consultor.";
+            
+
         //Mensagens Afirmativas-------------------------
 
         //----------------------------------------------
@@ -119,23 +127,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          {
              switch ($text) {
                  case "1":
-                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     responderMensagem($from, $respostaEquipamento);
                      deleteUserLastAwnser($from);
                      break;
                  case "2":
-                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     responderMensagem($from, $respostaSistemas);
                      deleteUserLastAwnser($from);
                      break;
                  case "3":
-                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     responderMensagem($from, $$respostaHosting);
                      deleteUserLastAwnser($from);
                      break;
                  case "4":
-                     responderMensagem($from, $respostaVamosRedirecionarAtendente);
+                     responderMensagem($from, $respostaConsultoria);
                      deleteUserLastAwnser($from);
                      break;  
                  default: 
-                     responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie 'ajuda' para ver as opções.");            
+                     responderMensagem($from, "Desculpe, não entendi sua mensagem. Envie o número correspondente a opção desejada."); 
+                     responderMensagem($from, $perguntaSuporteTecnico[0]);           
              }
          }
 
