@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Mensagens Afirmativas-------------------------
         $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
         $respostaVamosRedirecionarAtendente = "Aguarde um momento.\nEstamos encaminhando sua solicitação para um atendente.";
+        $respostaRedirMenuPrincipal = "*Certo!\nEstamos te redirecionando ao menu principal.";
 
             //suporte
             $respostaSistemas = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte sistêmico.";
@@ -139,7 +140,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
                     break;  
                 case "5":
-                    responderMensagem($from, $respostaConsultoria);
+                    responderMensagem($from, $$respostaRedirMenuPrincipal);
+                    responderMensagem($from, $perguntaMenuPrincipal[0]);
                     setUserLastAwnser($from, $perguntaMenuPrincipal[1]); //direciona para o Menu principal
                     break;  
                 default: 
