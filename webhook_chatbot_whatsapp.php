@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 case "6":
                     responderMensagem($from, $perguntaFinanceiro[0]); 
                     setUserLastAwnser($from, $perguntaFinanceiro[1]); 
-                    $url = "https://wa.me/5511982734350?text=" . urlencode("Pediu suporte financeiro");
+                    $url = "https://wa.me/5511982734350?text=" . urlencode("Bom dia. Meu nome é Vanessa.\nEm que posso ajudar?");
                     responderMensagem("5511982734350", $url); 
                     break;   
                 default: 
