@@ -67,9 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-        $userHasInteracted = hasUserInteracted($from);
-
-
         // Respostas automáticas baseadas no texto
         if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
             responderMensagem($from, $respostaGatilho[0]);
@@ -174,25 +171,6 @@ function setUserLastInteractionTime($userId, $time) {
     }
 
     file_put_contents($filename, implode("\n", $lines) . "\n");
-}
-
-// Função para verificar se o usuário já interagiu com o menu
-function hasUserInteracted($userId) {
-    $filename = '../../chatbot_whatsapp/chatbot_user_interaction.dat';
-
-    // Verificar se o arquivo de interação existe
-    if (file_exists($filename)) {
-        $data = file_get_contents($filename);
-        $lines = explode("\n", $data);
-
-        foreach ($lines as $line) {
-            if ($line === $userId) {
-                return true; // O usuário já interagiu
-            }
-        }
-    }
-
-    return false; // O usuário ainda não interagiu
 }
 
 // Função para registrar a ultima pergunta que o usuario interagiu
