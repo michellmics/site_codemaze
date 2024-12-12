@@ -50,6 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $perguntaSuporteTecnico[0] = "Indique a opção abaixo:\n\n*1* - Equipamento de Informatica\n*2* - Sistemas\n*3* - Site / e-mail / Hosting\n*4* - Consultoria\n*5* - Checar o status dos servidores WEB\n*6* - Voltar ao menu principal";
         $perguntaSuporteTecnico[1] = "ID3";
+
+        $perguntaFinanceiro[0] = "Indique a opção abaixo:\n\n*1* - Solicitar Boleto\n*2* - Checar valores pendentes\n*3* - Falar com um atendente\n*4* - Voltar ao menu principal";
+        $perguntaFinanceiro[1] = "ID4";
         //Mensagens de perguntas------------------------
         
         //Mensagens Afirmativas-------------------------
@@ -62,6 +65,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $respostaEquipamento = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte em hardware.";
             $respostaHosting = "*Certo!*\nVamos redirecionar seu atendimento a nossa equipe de suporte WEB.";
             $respostaConsultoria = "*Certo!*\nVamos redirecionar seu atendimento ao nosso consultor.";
+
+            //financeiro
+            $respostaBoleto = "*Certo!*\nVou gerar o próximo boleto a vencer.";
+            $respostaValoresPend = "*Certo!*\nVou consultar os valores pendentes. Aguarde...";
             
 
         //Mensagens Afirmativas-------------------------
@@ -113,8 +120,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     setUserLastAwnser($from, $perguntaSuporteTecnico[1]); //direciona para o Menu de suporte
                     break; 
                 case "6":
-                    responderMensagem($from, $respostaVamosRedirecionarAtendente);
-                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    responderMensagem($from, $perguntaFinanceiro[0]); 
+                    responderMensagem($from, $perguntaFinanceiro[1]); 
                     break;   
                 default: 
                     responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊");            
@@ -156,6 +163,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
+        //MENU SUPORTE TÉCNICO
+        if($lastUserLastAwnser == "ID4")
+        {
+            switch ($text) {
+                case "1":
+                    responderMensagem($from, $$respostaBoleto);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "2":
+                    responderMensagem($from, $respostaValoresPend);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "3":
+                    responderMensagem($from, $$respostaVamosRedirecionarAtendente);
+                    setUserLastAwnser($from, $perguntaGatilho[1]); //direciona para o gatilho
+                    break;
+                case "4":
+                    responderMensagem($from, $$respostaRedirMenuPrincipal);
+                    responderMensagem($from, $perguntaMenuPrincipal[0]);
+                    setUserLastAwnser($from, $perguntaMenuPrincipal[1]); //direciona para o Menu principal
+                    break;  
+                default: 
+                    responderMensagem($from, "Ops! Acho que não entendi muito bem. 🤔\nPor favor, escolha uma das opções abaixo e me diga o número correspondente. 😊"); 
+                    responderMensagem($from, $perguntaFinanceiro[0]);           
+            }
+        }
 
 
         
