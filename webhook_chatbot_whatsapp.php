@@ -58,17 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $respostaObrigadoPorContatar = "Obrigado por nos contatar.\nA Codemaze agradece.\nTenha um ótimo dia.";
         //Mensagens Afirmativas-------------------------
 
-        $pergunta=0; //controla qual pergunta o usuario irá responder
-
-
         //----------------------------------------------
 
+        $lastUserLastAwnser = getUserLastAwnser($from);
 
-
-
-
-        // Respostas automáticas baseadas no texto
-        if (!$userHasInteracted && ($text === 'olá' || $text === 'oi')) {
+        // GATILHO - MENU PRINCIPAL
+        if ($text !== '' && $lastUserLastAwnser = "0") {
             responderMensagem($from, $respostaGatilho[0]);
             setUserLastAwnser($from, $respostaGatilho[1]); 
         } elseif ($text === 'ajuda') {
@@ -149,6 +144,31 @@ function getUserLastInteractionTime($userId) {
     return null; // Nenhuma interação anterior encontrada
 }
 
+// Função para registrar a ultima pergunta que o usuario interagiu
+function setUserLastAwnser($userId, $lastAwnser) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
+
+    // Adicionar o ID do usuário que interagiu
+    file_put_contents($filename, $userId.":".$lastAwnser. "\n", FILE_APPEND);
+}
+
+// Função para obter o ultimo menu que o usuario iterou
+function getUserLastAwnser($userId) {
+    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
+    if (file_exists($filename)) {
+        $data = file_get_contents($filename);
+        $lines = explode("\n", $data);
+        
+        foreach ($lines as $line) {
+            list($user, $menu) = explode(":", $line);
+            if ($user == $userId) {
+                return (int)$menu;
+            }
+        }
+    }
+    return "0"; // Nenhuma interação anterior encontrada
+}
+
 // Função para registrar o tempo da última interação
 function setUserLastInteractionTime($userId, $time) {
     $filename = '../../chatbot_whatsapp/chatbot_last_interaction_time.dat';
@@ -171,14 +191,6 @@ function setUserLastInteractionTime($userId, $time) {
     }
 
     file_put_contents($filename, implode("\n", $lines) . "\n");
-}
-
-// Função para registrar a ultima pergunta que o usuario interagiu
-function setUserLastAwnser($userId, $lastAwnser) {
-    $filename = '../../chatbot_whatsapp/chatbot_user_last_awnser.dat';
-
-    // Adicionar o ID do usuário que interagiu
-    file_put_contents($filename, $userId.":".$lastAwnser. "\n", FILE_APPEND);
 }
 
 // Função para excluir a interação do usuário (quando terminar o atendimento ou voltar ao início)
