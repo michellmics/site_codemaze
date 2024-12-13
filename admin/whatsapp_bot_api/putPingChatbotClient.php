@@ -23,7 +23,7 @@ if (!is_array($botAdmin->ARRAY_WHATSAPPBOTINFO) || count($botAdmin->ARRAY_WHATSA
 
 // Verificação do status do bot
 if (isset($botAdmin->ARRAY_WHATSAPPBOTINFO[0]["BOT_STSTATUS"]) &&
-    $botAdmin->ARRAY_WHATSAPPBOTINFO[0]["BOT_STSTATUS"] === "DESATIVADO") {
+    $botAdmin->ARRAY_WHATSAPPBOTINFO[0]["BOT_STSTATUS"] == "DESATIVADO") {
     echo "Este Whatsapp Bot está desativado.";
     die();
 }
