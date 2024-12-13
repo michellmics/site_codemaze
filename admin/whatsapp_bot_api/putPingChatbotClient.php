@@ -15,6 +15,8 @@ if (!$BOTID || !$EMPRESA) {
 $botAdmin = new SITE_ADMIN();
 $botAdmin->getWhatsappBotInfo($BOTID, $EMPRESA);
 
+var_dump($botAdmin->ARRAY_WHATSAPPBOTINFO);
+die();
 // Verificação dos resultados
 if (!is_array($botAdmin->ARRAY_WHATSAPPBOTINFO) || count($botAdmin->ARRAY_WHATSAPPBOTINFO) == 0) {
     echo "Empresa e Bot ID não encontrados.";
