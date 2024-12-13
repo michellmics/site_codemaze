@@ -1,5 +1,6 @@
 <?php
 include_once '../objetos.php'; 
+$botAdmin = new SITE_ADMIN();
 
 // Validação dos parâmetros
 $BOTID = filter_input(INPUT_GET, 'botid', FILTER_SANITIZE_STRING);
