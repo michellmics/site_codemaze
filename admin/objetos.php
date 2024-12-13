@@ -29,6 +29,7 @@
         public $ARRAY_AGENDAINFO;
         public $ARRAY_AGENDAATIVIDADES;
         public $ARRAY_PROSPEC_CLIENTESINFO;
+        public $ARRAY_WHATSAPPBOTINFO;
         public $configPath = '/home/codemaze/config.cfg';
 
 
@@ -2081,6 +2082,26 @@
                 // return ["error" => $e->getMessage()];
             }
         
+        }
+        public function getWhatsappBotInfo($BOT_IDBOT, $BOT_NMEMPRESA)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT * FROM BOT_WHATSAPP_DADOS 
+                        WHERE 
+                        BOT_IDBOT = :BOT_IDBOT 
+                        AND BOT_NMEMPRESA = :BOT_NMEMPRESA";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindParam(':BOT_IDBOT', $BOT_IDBOT, PDO::PARAM_STR);
+                $stmt->bindParam(':BOT_NMEMPRESA', $BOT_NMEMPRESA, PDO::PARAM_STR);
+                $stmt->execute();
+                $this->ARRAY_WHATSAPPBOTINFO = $stmt->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }       
         }
 
     }
