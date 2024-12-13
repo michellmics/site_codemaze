@@ -2103,5 +2103,28 @@
                 return ["error" => $e->getMessage()];
             }       
         }
+        public function updateWhatsappBotInfo($BOT_IDBOT)
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+
+            $now = new DateTime(); 
+            $DATA = $now->format('Y-m-d H:i:s');
+            
+            try{           
+                $sql = "UPDATE BOT_WHATSAPP_DADOS 
+                        SET
+                        BOT_DTPING = :BOT_DTPING
+                        WHERE 
+                        BOT_IDBOT = :BOT_IDBOT";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindParam(':BOT_IDBOT', $BOT_IDBOT, PDO::PARAM_STR);
+                $stmt->bindParam(':BOT_DTPING', $DATA, PDO::PARAM_STR);
+                $stmt->execute();
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }       
+        }
 
     }
