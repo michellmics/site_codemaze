@@ -4,12 +4,13 @@
   
   session_start(); 
   define('SESSION_TIMEOUT', 1800); // 30 minutos
- 
+ /*
   if (!isset($_SESSION['user_id'])) 
   {
     header("Location: index.php");
     exit();
   }
+    */
   if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
   {
     header("Location: noAuth.html");
