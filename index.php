@@ -217,8 +217,8 @@
 <div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
         <input id="domainInput" type="text" placeholder="Digite o domínio..." 
-            style="width: 300px; padding: 10px; font-size: 18px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-        <button id="checkButton" style="padding: 12px 25px; font-size: 18px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+            style="width: 200px; padding: 5px; font-size: 15px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        <button id="checkButton" style="padding: 12px 25px; font-size: 15px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
             Verificar
         </button>
     </div>
