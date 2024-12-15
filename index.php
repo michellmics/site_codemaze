@@ -77,6 +77,10 @@
         }
     </style> 
 
+    <!-- Adicione o SweetAlert2 via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VK4QL1B8G"></script>
@@ -208,7 +212,9 @@
 	</div>
 
 
-    <div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
+<!-- CHECAR REGISTRO -->
+
+<div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
         <input id="domainInput" type="text" placeholder="Digite o domínio..." 
             style="width: 300px; padding: 10px; font-size: 18px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
@@ -223,7 +229,11 @@
     document.getElementById('checkButton').addEventListener('click', function () {
         const domainInput = document.getElementById('domainInput').value.trim();
         if (!domainInput) {
-            alert('Por favor, digite um domínio!');
+            Swal.fire({
+                icon: 'warning',
+                title: 'Atenção!',
+                text: 'Por favor, digite um domínio!'
+            });
             return;
         }
 
@@ -239,16 +249,24 @@
                 return response.text();
             })
             .then(data => {
-                // Exibe o resultado em um popup
-                alert(data);
+                // Exibe o resultado com SweetAlert
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Resultado da Verificação',
+                    text: data
+                });
             })
             .catch(error => {
-                alert('Ocorreu um erro: ' + error.message);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro!',
+                    text: 'Ocorreu um erro: ' + error.message
+                });
             });
     });
 </script>
 
-
+<!-- CHECAR REGISTRO FIM -->
 
     <div id="about" class="section wb">
         <div class="container">
