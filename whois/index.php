@@ -46,6 +46,7 @@
   );
 
   $fqdn = "www.$DOMINIO";
+  $fqdn = strtoupper($fqdn);
   $domain_info = check_domain_availability($fqdn, $atrib);
   
   // Expressão regular para capturar o valor após "Response Status:"
