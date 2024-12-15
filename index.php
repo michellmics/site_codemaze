@@ -249,11 +249,21 @@
                 return response.text();
             })
             .then(data => {
-                // Exibe o resultado com SweetAlert
+                // Exibe o resultado com SweetAlert e dois botões
                 Swal.fire({
                     icon: 'info',
                     title: 'Resultado da Verificação',
-                    text: data
+                    text: data,
+                    showCancelButton: true,
+                    confirmButtonText: 'Registrar domínio',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonColor: '#28a745', // Verde para "Registrar domínio"
+                    cancelButtonColor: '#d33' // Vermelho para "Cancelar"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redireciona para a página de registro
+                        window.location.href = `https://registro.br/busca-dominio/${encodeURIComponent(fullDomain)}`;
+                    }
                 });
             })
             .catch(error => {
