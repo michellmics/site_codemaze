@@ -210,9 +210,9 @@
 
     <div style="background-color: orange; padding: 20px 0; width: 100%;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <input type="text" placeholder="Digite o domínio..." style="width: 300px; padding: 10px; font-size: 16px; border: none; border-radius: 5px; margin-right: 10px;">
+        <input type="text" placeholder="Digite o domínio..." style="width: 300px; padding: 10px; font-size: 16px; border: none; border-radius: 5px; margin-right: 10px;">.com.br
         <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #333; border: none; border-radius: 5px; cursor: pointer;">
-            Verificar
+            Verificar Disponibilidade
         </button>
     </div>
 </div>
