@@ -558,7 +558,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
 <!-- CHECAR REGISTRO -->
 
-<div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
+<div style="background-color:rgb(253, 104, 2); padding: 20px 0; width: 100%;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
         <input id="domainInput" oninput="restrictToLetters(event)" type="text" placeholder="Pesquisar domínio..." 
             style="width: 250px; padding: 5px; font-size: 15px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
