@@ -241,7 +241,7 @@
         const fullDomain = domainInput + '.com.br';
 
         // Faz a requisição para o script PHP
-        fetch(`verifica_disponibilidade.php?domain=${encodeURIComponent(fullDomain)}`)
+        fetch(`https://codemaze.com.br/site/whois/index.php?dominio=${encodeURIComponent(fullDomain)}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro ao verificar o domínio.');
