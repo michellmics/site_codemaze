@@ -213,7 +213,7 @@
         <input type="text" placeholder="Digite o domínio..." 
             style="width: 300px; padding: 10px; font-size: 18px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
         <span style="color: white; font-size: 20px; font-weight: bold; margin-right: 10px;">.com.br</span>
-        <button style="padding: 12px 25px; font-size: 18px; color: white; background-color: #333; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+        <button style="padding: 12px 25px; font-size: 18px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
             Verificar Disponibilidade
         </button>
     </div>
