@@ -43,7 +43,7 @@
     "suggest"     => 0,            # No domain suggestions
   );
 
-  $fqdn = "www.exemplo.com.br";
+  $fqdn = "www.kleehost.com.br";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
   echo "Status do dom&iacute;nio '{$fqdn}': <br /><br />";
