@@ -207,6 +207,13 @@
 		</div>
 	</div>
 
+
+    <div class="domain-checker" style="text-align: center; margin: 20px 0;">
+    <input type="text" id="domainInput" placeholder="Digite o domínio" style="padding: 10px; width: 300px; border: 1px solid #ccc; border-radius: 5px;">
+    <button onclick="checkDomain()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Verificar</button>
+</div>
+
+
     <div id="about" class="section wb">
         <div class="container">
             <div class="row">

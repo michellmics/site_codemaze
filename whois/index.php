@@ -46,7 +46,6 @@
   $fqdn = "www.kleehost.com.br";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
-  echo "Status do dom&iacute;nio '{$fqdn}': <br /><br />";
- // echo nl2br($domain_info);
+  echo nl2br($domain_info);
 
 ?>
