@@ -34,7 +34,7 @@
     return $response;
   }
 
-  $DOMINIO = $_GET('dominio');
+  $DOMINIO = $_GET['dominio'];
 
   $atrib = array(
     "lang"        => 0,            # EN (PT = 1)
