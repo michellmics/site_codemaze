@@ -48,6 +48,6 @@
   $fqdn = "www.$DOMINIO";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
-  echo nl2br($domain_info);
+  echo $domain_info;
 
 ?>
