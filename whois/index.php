@@ -45,7 +45,7 @@
     "suggest"     => 0,            # No domain suggestions
   );
 
-  $fqdn = "www.$DOMINIO.com.br";
+  $fqdn = "www.$DOMINIO";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
   echo nl2br($domain_info);
