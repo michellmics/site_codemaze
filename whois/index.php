@@ -49,9 +49,8 @@
   $domain_info = check_domain_availability($fqdn, $atrib);
   
   // Expressão regular para capturar o valor após "Response Status:"
-  if (preg_match('/Response Status:\s*(\d+)/', $string, $matches)) {
+  if (preg_match('/Response Status:\s*(\d+)/', $domain_info, $matches)) {
     $responseStatus = $matches[1]; // O número capturado estará no índice 1
-    echo $responseStatus;
     if($responseStatus == "2")
     {
       echo "Domínio indisponível.";
