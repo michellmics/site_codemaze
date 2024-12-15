@@ -53,11 +53,11 @@
     $responseStatus = $matches[1]; // O número capturado estará no índice 1
     if($responseStatus == "2")
     {
-      echo "O domínio <b>$fqdn<b> está <b>indisponível<b> para registro.";
+      echo "O domínio $fqdn está indisponível para registro.";
     }
     else
       {
-        echo "O domínio <b>$fqdn</b> está <b>disponível<b> para registro.";
+        echo "O domínio $fqdn está disponível para registro.";
       }
 
   } else {
