@@ -212,7 +212,74 @@
 	</div>
 
 
+<!-- CHECAR REGISTRO -->
 
+<div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
+        <input id="domainInput" oninput="restrictToLetters(event)" type="text" placeholder="Pesquisar domínio..." 
+            style="width: 250px; padding: 5px; font-size: 15px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        <button id="checkButton" style="padding: 5px 10px; font-size: 15px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+            Verificar
+        </button>
+    </div>
+</div>
+
+<script>
+    function restrictToLetters(event) {
+        // Remove qualquer caractere que não seja letra
+        event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+    }
+
+    document.getElementById('checkButton').addEventListener('click', function () {
+        const domainInput = document.getElementById('domainInput').value.trim();
+        if (!domainInput) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Atenção!',
+                text: 'Por favor, digite um domínio!'
+            });
+            return;
+        }
+
+        // Adiciona o .com.br ao domínio
+        const fullDomain = domainInput + '.com.br';
+
+        // Faz a requisição para o script PHP
+        fetch(`https://codemaze.com.br/site/whois/index.php?dominio=${encodeURIComponent(fullDomain)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar o domínio.');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Exibe o resultado com SweetAlert e dois botões
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Resultado da Verificação',
+                    text: data,
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#28a745', // Verde para "Registrar domínio"
+                    cancelButtonColor: '#d33' // Vermelho para "Cancelar"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redireciona para a página de registro
+                       // window.location.href = `https://codemaze.com.br/site/`;
+                    }
+                });
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro!',
+                    text: 'Ocorreu um erro: ' + error.message
+                });
+            });
+    });
+</script>
+
+<!-- CHECAR REGISTRO FIM -->
 
     <div id="about" class="section wb">
         <div class="container">
@@ -462,10 +529,6 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
     </div><!-- end section -->
     <!-- observabilidade section -->
 
-
-
-
-    
     <!-- ini hospedagem planos -->
 
     <div id="hosting" class="section wb">
@@ -474,75 +537,6 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                 <h3>Hospedagem de sites</h3>
                 <p class="lead">Escolha a Codemaze para uma hospedagem confiável e escalável. Nossos servidores otimizados proporcionam desempenho superior, enquanto nossa equipe está disponível 24/7 para garantir que seu site funcione sem interrupções.</p>
             </div><!-- end title -->
-
-            <!-- CHECAR REGISTRO -->
-
-<div style="background-color:rgb(255, 255, 255); padding: 20px 0; width: 100%;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
-        <input id="domainInput" oninput="restrictToLetters(event)" type="text" placeholder="Pesquisar domínio..." 
-            style="width: 250px; padding: 5px; font-size: 15px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-        <button id="checkButton" style="padding: 5px 10px; font-size: 15px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
-            Verificar
-        </button>
-    </div>
-</div>
-
-<script>
-    function restrictToLetters(event) {
-        // Remove qualquer caractere que não seja letra
-        event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
-    }
-
-    document.getElementById('checkButton').addEventListener('click', function () {
-        const domainInput = document.getElementById('domainInput').value.trim();
-        if (!domainInput) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Atenção!',
-                text: 'Por favor, digite um domínio!'
-            });
-            return;
-        }
-
-        // Adiciona o .com.br ao domínio
-        const fullDomain = domainInput + '.com.br';
-
-        // Faz a requisição para o script PHP
-        fetch(`https://codemaze.com.br/site/whois/index.php?dominio=${encodeURIComponent(fullDomain)}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao verificar o domínio.');
-                }
-                return response.text();
-            })
-            .then(data => {
-                // Exibe o resultado com SweetAlert e dois botões
-                Swal.fire({
-                    icon: 'info',
-                    title: 'Resultado da Verificação',
-                    text: data,
-                    showCancelButton: false,
-                    confirmButtonText: 'OK',
-                    confirmButtonColor: '#28a745', // Verde para "Registrar domínio"
-                    cancelButtonColor: '#d33' // Vermelho para "Cancelar"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // Redireciona para a página de registro
-                       // window.location.href = `https://codemaze.com.br/site/`;
-                    }
-                });
-            })
-            .catch(error => {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Erro!',
-                    text: 'Ocorreu um erro: ' + error.message
-                });
-            });
-    });
-</script>
-
-<!-- CHECAR REGISTRO FIM -->
 
               <div class="row">
                 <div class="col-md-4 col-sm-6">
