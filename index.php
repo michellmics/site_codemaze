@@ -209,9 +209,11 @@
 
 
     <div style="background-color: orange; padding: 20px 0; width: 100%;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <input type="text" placeholder="Digite o domínio..." style="width: 300px; padding: 10px; font-size: 16px; border: none; border-radius: 5px; margin-right: 10px;">.com.br
-        <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #333; border: none; border-radius: 5px; cursor: pointer;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
+        <input type="text" placeholder="Digite o domínio..." 
+            style="width: 300px; padding: 10px; font-size: 18px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        <span style="color: white; font-size: 20px; font-weight: bold; margin-right: 10px;">.com.br</span>
+        <button style="padding: 12px 25px; font-size: 18px; color: white; background-color: #333; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
             Verificar Disponibilidade
         </button>
     </div>
