@@ -48,6 +48,23 @@
   $fqdn = "www.$DOMINIO";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
-  echo $domain_info;
+  // Expressão regular para capturar o valor após "Response Status:"
+  if (preg_match('/Response Status:\s*(\d+)/', $string, $matches)) {
+    $responseStatus = $matches[1]; // O número capturado estará no índice 1
+    if($responseStatus == "2")
+    {
+      echo "Domínio indisponível."
+    }
+    else
+      {
+        echo "Domínio disponível para registro."
+      }
+
+  } else {
+    echo "Não foi possível checar o domínio.";
+  }
+
+
+
 
 ?>
