@@ -34,6 +34,8 @@
     return $response;
   }
 
+  $DOMINIO = $_GET('dominio');
+
   $atrib = array(
     "lang"        => 0,            # EN (PT = 1)
     "server"      => SERVER_ADDR,
@@ -43,7 +45,7 @@
     "suggest"     => 0,            # No domain suggestions
   );
 
-  $fqdn = "www.kleehost.com.br";
+  $fqdn = "www.$DOMINIO.com.br";
   $domain_info = check_domain_availability($fqdn, $atrib);
   
   echo nl2br($domain_info);
