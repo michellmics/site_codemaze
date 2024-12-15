@@ -210,14 +210,44 @@
 
     <div style="background-color:rgb(10, 10, 10); padding: 20px 0; width: 100%;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
-        <input type="text" placeholder="Digite o domínio..." 
+        <input id="domainInput" type="text" placeholder="Digite o domínio..." 
             style="width: 300px; padding: 10px; font-size: 18px; border: none; border-radius: 5px; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
         <span style="color: white; font-size: 20px; margin-right: 10px;">.com.br</span>
-        <button style="padding: 12px 25px; font-size: 18px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+        <button id="checkButton" style="padding: 12px 25px; font-size: 18px; color: white; background-color: rgb(248, 80, 2); border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
             Verificar Disponibilidade
         </button>
     </div>
 </div>
+
+<script>
+    document.getElementById('checkButton').addEventListener('click', function () {
+        const domainInput = document.getElementById('domainInput').value.trim();
+        if (!domainInput) {
+            alert('Por favor, digite um domínio!');
+            return;
+        }
+
+        // Adiciona o .com.br ao domínio
+        const fullDomain = domainInput + '.com.br';
+
+        // Faz a requisição para o script PHP
+        fetch(`verifica_disponibilidade.php?domain=${encodeURIComponent(fullDomain)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao verificar o domínio.');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Exibe o resultado em um popup
+                alert(data);
+            })
+            .catch(error => {
+                alert('Ocorreu um erro: ' + error.message);
+            });
+    });
+</script>
+
 
 
     <div id="about" class="section wb">
