@@ -258,14 +258,14 @@
                     icon: 'info',
                     title: 'Resultado da Verificação',
                     text: data,
-                    showCancelButton: true,
+                    showCancelButton: false,
                     confirmButtonText: 'OK',
                     confirmButtonColor: '#28a745', // Verde para "Registrar domínio"
                     cancelButtonColor: '#d33' // Vermelho para "Cancelar"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Redireciona para a página de registro
-                        window.location.href = `https://codemaze.com.br/site/`;
+                       // window.location.href = `https://codemaze.com.br/site/`;
                     }
                 });
             })
