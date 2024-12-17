@@ -130,10 +130,6 @@
             <i class="fa fa-low-vision"></i>
             SGCS
         </a>
-        <a href="https://accounts.mlabs.io/accounts/sign_in" target="_blank">
-            <i class="fas fa-info-circle"></i>
-            mLabs
-        </a>
         <a href="https://www.canva.com/" target="_blank">
             <i class="fas fa-info-circle"></i> 
             Canva
@@ -145,14 +141,6 @@
         <a href="https://conta.hostmidia.com.br/" target="_blank">
             <i class="fas fa-phone-alt"></i>
             WHM
-        </a>
-        <a href="https://analytics.google.com/analytics/web/?authuser=1#/p463662711/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank">
-            <i class="fas fa-chart-line"></i>
-            Google Analytics
-        </a>
-        <a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons%21o2&authuser=1" target="_blank">
-            <i class="fas fa-briefcase"></i>
-            Google Ads
         </a>
         <a href="logoff.php">
             <i class="fas fa-sign-out-alt"></i>
