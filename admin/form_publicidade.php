@@ -176,6 +176,27 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+
+    <script>
+    $(document).ready(function() {
+      $('#iniciopub').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+
+    $(document).ready(function() {
+      $('#fimpub').mask('00/00/0000', {
+        placeholder: "__/__/____"
+      });
+    });
+
+    $(document).ready(function() {
+      $('#telfaturamento').mask('00 00000-0000', {
+        placeholder: "00 00000-0000"
+      });
+    });
+
+  </script>
     
     <!-- ######################################################## --> 
     <!-- SWEETALERT 2 -->   
@@ -288,26 +309,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js" type="text/javascript"></script>
 
-  <script>
-    $(document).ready(function() {
-      $('#iniciopub').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
 
-    $(document).ready(function() {
-      $('#fimpub').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-    $(document).ready(function() {
-      $('#telfaturamento').mask('00 00000-0000', {
-        placeholder: "00 00000-0000"
-      });
-    });
-
-  </script>
 
   
  
