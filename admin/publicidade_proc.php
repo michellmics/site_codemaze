@@ -5,7 +5,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerPubli extends SITE_ADMIN
 {
-    public function insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem)
+    public function insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem,$status)
     {
         try {
             // Cria conexão com o banco de dados
@@ -13,7 +13,7 @@ class registerPubli extends SITE_ADMIN
                 $this->conexao();
             }
 
-            $result = $this->insertPubliInfo($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem);
+            $result = $this->insertPubliInfo($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem,$status);
 
             echo "Publicidade inserida com sucesso.";
         } catch (PDOException $e) {  
@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $nomecampanha = $_POST['nomecampanha'];
     $iniciopub = $_POST['iniciopub'];
     $fimpub = $_POST['fimpub'];   
+    $status = $_POST['status'];  
 
     // Verificação do arquivo de imagem 
     if (isset($_FILES['imagem'])) {
@@ -74,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         echo "Erro no upload ou nenhum arquivo foi enviado.<br>";
     }
         $registerPubli = new registerPubli();
-        $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
+        $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile,$status);
 
         echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
 }

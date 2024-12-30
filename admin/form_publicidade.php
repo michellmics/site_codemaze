@@ -146,6 +146,15 @@
 			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimpub" name="fimpub"   />
 			</div>
 
+      <div style="flex: 1; min-width: 50px;">
+			<label>STATUS</label>
+			<select required class="form-control" name="status" style="width: 100%;">
+                	<option value="" disabled selected>SELECIONE</option>
+                	<option value="ATIVA">ATIVA</option>
+                	<option value="INATIVA">INATIVA</option>
+      </select>
+      </div>
+
       <div style="flex: 1; min-width: 90px;">
 			<label>UPLOAD IMAGEM</label>
 			<input required type="file" accept="image/*" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
