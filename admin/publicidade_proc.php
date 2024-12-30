@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     // Verificação do arquivo de imagem 
     if (isset($_FILES['imagem'])) {
-        $descricao =  "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
+        echo "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
     }
 
     // Defina o limite de tamanho máximo de upload (em bytes)
