@@ -24,7 +24,7 @@ class registerPubli extends SITE_ADMIN
 
 // Processa a requisição POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-{
+{  
     $cliente = $_POST['cliente']; 
     //$descricao = $_POST['descricao'];
     $tipo = "Nem entrou";
