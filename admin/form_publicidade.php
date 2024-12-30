@@ -209,6 +209,7 @@
             denyButton: 'swal-deny-btn',
             htmlContainer: 'swal-text'
           }
+          console.log(new FormData($("#form-empresa")[0]));
         }).then((result) => {
           if (result.isConfirmed) {
             // Capturar os dados do formulário
