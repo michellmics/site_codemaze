@@ -76,6 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $registerPubli = new registerPubli();
         $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
 
-        echo "<a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
+        echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
 }
 ?>
