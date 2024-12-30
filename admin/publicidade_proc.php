@@ -33,11 +33,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $tipo = $_POST['tipo'];
     $nomecampanha = $_POST['nomecampanha'];
     $iniciopub = $_POST['iniciopub'];
-    $fimpub = $_POST['fimpub'];
-    $imagem = $_POST['imagem'];
+    $fimpub = $_POST['fimpub'];   
     
+    if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = "_img/publicidade/$cliente/"; // Diretório onde as imagens serão salvas
+        $timestamp = round(microtime(true) * 1000);
+        $nomeCampanhaFile = str_replace(' ', '', basename($_FILES['imagem']['name']));
+        $uploadFile = $uploadDir . $timestamp ."_".$nomeCampanhaFile;
+
+        // Verifica se o diretório existe, caso contrário, cria
+        if (!is_dir($uploadDir)) {
+            if (!mkdir($uploadDir, 0755, true)) {
+                echo "Erro: Não foi possível criar o diretório de upload.";
+                exit;
+            }
+        }
+
+        // Validação do tipo de arquivo (apenas imagens)
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        if (!in_array($_FILES['imagem']['type'], $allowedTypes)) {
+            echo "Erro: Tipo de arquivo não permitido.";
+            exit;
+        }
+    
+        // Move o arquivo para o diretório de upload
+        if (move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadFile)) {
+            echo "Imagem enviada com sucesso: " . $uploadFile;
+        }    
+    }
+
     $registerPubli = new registerPubli();
     
-    $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem);
+    $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
 }
 ?>
