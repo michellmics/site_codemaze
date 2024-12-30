@@ -37,6 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     if (isset($_FILES['imagem'])) {
         $descricao =  "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
     }
+
+    // Defina o limite de tamanho máximo de upload (em bytes)
+    $maxFileSize = 5 * 1024 * 1024; // 5MB
+    
+    if ($_FILES['imagem']['size'] > $maxFileSize) {
+        echo "O arquivo é muito grande. O tamanho máximo permitido é 5MB.";
+        exit();
+    }
     
     // Verifica se o arquivo foi enviado e se não ocorreu erro no upload
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
