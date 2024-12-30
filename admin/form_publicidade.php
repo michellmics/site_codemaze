@@ -110,7 +110,7 @@
       </select>
       </div>					
         
-      <div style="flex: 1; min-width: 130px;">
+      <div style="flex: 1; min-width: 50px;">
 			<label>TIPO</label>
 			<select required class="form-control" name="tipo" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
