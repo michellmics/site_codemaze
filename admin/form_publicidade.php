@@ -109,17 +109,7 @@
         <?php endforeach; ?>
       </select>
       </div>					
-			<div style="flex: 1; min-width: 240px;">
-			<label>PRODUTO OU SERVIÇO</label>
-			<select required name="produto" class="form-control" style="width: 100%; text-transform: uppercase;">
-        <option value="" disabled selected>Selecione o produto</option>
-        <?php foreach ($siteAdmin->ARRAY_PRODUCTINFO as $produto): ?>
-            <option value="<?php echo htmlspecialchars($produto['PRS_IDPRODUTO_SERVICO']); ?>">
-                <?php echo htmlspecialchars($produto['PRS_NMNOME']); ?>
-            </option>
-        <?php endforeach; ?>
-      </select>
-      </div>				
+			
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO</label>
 			<select required class="form-control" name="tipo" style="width: 100%;">
