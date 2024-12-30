@@ -89,7 +89,7 @@
                   <h3 class="box-title">PUBLICIDADE</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                 <form id="form-empresa" role="form" method="POST" enctype="multipart/form-data">
+                 <form id="form-empresa" role="form" method="POST" action="publicidade_proc.php" enctype="multipart/form-data">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -185,106 +185,8 @@
         Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#fimpub");
       });
   </script>
-<script>
-console.log(new FormData($("#form-empresa")[0]));
-</script>  
-    <!-- ######################################################## --> 
-    <!-- SWEETALERT 2 -->   
+
     
-    <script>
-      function confirmAndSubmit(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        Swal.fire({
-          title: 'Formulário de Publicidade',
-          text: "Têm certeza que deseja salvar?",
-          showDenyButton: true,
-          confirmButtonText: 'SALVAR',
-          denyButtonText: `CANCELAR`,
-          confirmButtonColor: "#4289a6",
-          denyButtonColor: "#ff8a33",
-          width: '600px', // Largura do alerta
-          icon: 'warning',
-          customClass: {
-            title: 'swal-title', // Classe para o título
-            content: 'swal-content', // Classe para o conteúdo (texto)
-            confirmButton: 'swal-confirm-btn',
-            denyButton: 'swal-deny-btn',
-            htmlContainer: 'swal-text'
-          }
-          
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Capturar os dados do formulário
-            var formData = $("#form-empresa").serialize();
-            // Fazer a requisição AJAX
-            $.ajax({
-              url: "publicidade_proc.php", // URL para processamento
-              type: "POST",
-              data: formData,
-              success: function (response) {
-                Swal.fire({
-              title: 'Salvo!',
-              text: `${response}`,
-              icon: 'success',
-              width: '600px', // Largura do alerta
-              confirmButtonColor: "#4289a6",
-              customClass: {
-                title: 'swal-title', // Aplicando a mesma classe do título
-                content: 'swal-content', // Aplicando a mesma classe do texto
-                htmlContainer: 'swal-text',
-                confirmButton: 'swal-confirm-btn'
-              }
-            }).then(() => {
-                  // Redirecionar ou atualizar a página, se necessário
-                  location.reload();
-                });
-              },
-              error: function (xhr, status, error) {
-                Swal.fire({
-              title: 'Erro!',
-              text: 'Erro ao inserir a publicidade.',
-              icon: 'error',
-              width: '600px', // Largura do alerta
-              confirmButtonColor: "#4289a6",
-              customClass: {
-                title: 'swal-title', // Aplicando a mesma classe do título
-                content: 'swal-content', // Aplicando a mesma classe do texto
-                htmlContainer: 'swal-text',
-                confirmButton: 'swal-confirm-btn'
-              }
-            });
-              },
-            });
-          } else if (result.dismiss === Swal.DismissReason.cancel) {
-            Swal.fire('Cancelado', 'Nenhuma alteração foi salva.', 'info');
-          }
-        });
-      }
-      // Associar a função ao botão de submit
-      $(document).ready(function () {
-        $("#salvar_empresa_1").on("click", confirmAndSubmit);
-      });
-</script> 
-<style>
-  /* Estilos para aumentar o tamanho da fonte */
-  .swal-title {
-    font-size: 36px !important; /* Tamanho maior para o título */
-  }
-
-  .swal-text {
-    font-size: 24px !important; /* Tamanho maior para o conteúdo */
-  }
-
-  /* Aumentar o tamanho dos textos dos botões */
-  .swal-confirm-btn,
-  .swal-deny-btn,
-  .swal-cancel-btn {
-    font-size: 20px !important; /* Tamanho maior para os textos dos botões */
-    padding: 12px 12px !important; /* Aumenta o espaço ao redor do texto */
-  }
-</style>
-<!-- ######################################################## --> 
-<!-- SWEETALERT 2 --> 
 
 <!-- ######################################################## --> 
 <!-- Main MENU content  INI --> 
