@@ -239,7 +239,7 @@
               error: function (xhr, status, error) {
                 Swal.fire({
               title: 'Erro!',
-              text: 'Erro ao atualizar o contrato.',
+              text: 'Erro ao inserir a publicidade.',
               icon: 'error',
               width: '600px', // Largura do alerta
               confirmButtonColor: "#4289a6",

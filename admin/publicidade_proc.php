@@ -6,7 +6,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerPubli extends SITE_ADMIN
 {
-    public function insertContrato($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem)
+    public function insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem)
     {
         try {
             // Cria conexão com o banco de dados
