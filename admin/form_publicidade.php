@@ -121,7 +121,6 @@
       </div>						
 			<div style="flex: 1; min-width: 130px;">
 			<label>NOME DA CAMPANHA</label>
-      <i class="fa fa-calendar"></i>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="dtcontrato" name="dtcontrato"   />
 			</div>
         
@@ -147,7 +146,6 @@
 
       <div style="flex: 1; min-width: 90px;">
 			<label>UPLOAD IMAGEM</label>
-      <i class="fa fa-calendar"></i>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
 			</div>
       
