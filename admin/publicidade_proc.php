@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $iniciopub = $_POST['iniciopub'];
     $fimpub = $_POST['fimpub'];   
 
-    // Verificação do arquivo de imagem
+    // Verificação do arquivo de imagem 
     if (isset($_FILES['imagem'])) {
         $descricao =  "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
     }
