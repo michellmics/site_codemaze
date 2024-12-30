@@ -120,7 +120,7 @@
       </select>
       </div>						
 			<div style="flex: 1; min-width: 130px;">
-			<label>NOME CAMPANHA</label>
+			<label>NOME DA CAMPANHA</label>
       <i class="fa fa-calendar"></i>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
@@ -151,92 +151,12 @@
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
 			</div>
       
-      <div style="flex: 1; min-width: 350px;">
-			<label>E-MAIL PARA FATURAMENTO</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um e-mail válido, como exemplo@dominio.com" class="form-control"  placeholder="Digite seu email"  name="emailfaturamento"  />
-			</div>
-			<div style="flex: 1; min-width: 150px;">
-			<label>TEL FATURAMENTO</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="11" maxlength="12" pattern="[0-9\- ]*" title="Apenas números, espaços e hífens são permitidos" class="form-control" id="telfaturamento" required name="telfaturamento" />
-			</div>
-
-      <div style="flex: 1; min-width: 40px;">
-			<label>STATUS</label>
-			<select required class="form-control" name="statuscontrato" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
-                	<option value="PUBLICADO">PUBLICADO</option>
-                	<option value="PENDENTE">PENDENTE</option>
-            		</select>
-			</div>
-
 			</div>
 		</div>
-    <!-- INICIO CONTRATO FIM CONTRATO DATA ENTREGA -->   
-
-    <!-- fORMA DE PAGAMENTO DATA VENCIMENTO PERÍODO DESCONTO -->         
-		<div style="width: 100%; margin-bottom: 20px;">
-			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-      
-      <div style="flex: 1; min-width: 50px;">
-			<label>DESCONTO (%)</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" value="0" maxlength="150" class="form-control" placeholder="EX.: 50"  name="desconto"   />
-			</div>
-
-      <div style="flex: 1; min-width: 40px;">
-			<label>PER. DESC. (DIAS)</label>
-			<input required type="text" pattern="\d*"  value="0" placeholder="Ex.: 60" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control" id="periododesconto" name="periododesconto"   />
-			</div>
-      
-      <div style="flex: 1; min-width: 50px;">
-			<label>CARÊNCIA (DIAS)</label>
-			<input required type="text" pattern="\d*" value="0" placeholder="Ex.: 15" title="Digite apenas números" style="width: 100%; text-transform: uppercase;" maxlength="2" class="form-control"  id="carencia"  name="carencia"   />
-			</div>
-
-      <div style="flex: 1; min-width: 110px;">
-			<label>PARCELAMENTO</label>
-			<select required class="form-control" name="parcelamento" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
-                	<option value="1">1X</option>
-                  <option value="2">2X</option>
-                  <option value="3">3X</option>
-                  <option value="4">4X</option>
-                  <option value="5">5X</option>
-                  <option value="6">6X</option>
-                  <option value="7">7X</option>
-                  <option value="8">8X</option>
-                  <option value="9">9X</option>
-                  <option value="10">10X</option>
-                  <option value="11">11X</option>
-                  <option value="12">12X</option>                	
-      </select>
-			</div>
-
-      <div style="flex: 1; min-width: 50px;">
-			<label>VALOR PARCELA</label>
-			<input required type="text" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" style="width: 100%; text-transform: uppercase;" maxlength="150" class="form-control" id="valor" name="valor"   />
-			</div>
-
-      <div style="flex: 1; min-width: 90px;">
-			<label>VENCIMENTO</label>
-      <i class="fa fa-calendar"></i>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtvencimento" name="dtvencimento"   />
-			</div>
-
-      <div style="flex: 1; min-width: 160px;">
-			<label>FORMA DE PAG.</label>
-			<select required class="form-control" name="formapagamento" style="width: 100%;">
-                	<option value="" disabled selected>SELECIONE</option>
-                	<option value="CARTAO DE CREDITO">C. DE CRÉDITO</option>
-                	<option value="PIX">PIX</option>
-                  <option value="BOLETO">BOLETO</option>
-                  <option value="TRANSF BANCARIA">TRANSF BANCÁRIA</option>
-            		</select>
-			</div>
 
 
-			</div>
-		</div>
-    <!-- fORMA DE PAGAMENTO DATA VENCIMENTO PERÍODO DESCONTO -->
+
+
 		<!-- DESCRIÇÃO-->
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
