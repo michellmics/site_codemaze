@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     // Verificação do arquivo de imagem
     if (isset($_FILES['imagem'])) {
-        echo "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
+        $descricao =  "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
     }
     
     // Verifica se o arquivo foi enviado e se não ocorreu erro no upload
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         if (!is_dir($uploadDir)) {
             echo "O diretório de upload não existe. Tentando criar...<br>";
             if (!mkdir($uploadDir, 0755, true)) {
-                echo "Erro: Não foi possível criar o diretório de upload.";
+                $descricao = "Erro: Não foi possível criar o diretório de upload.";
                 exit;
             } else {
                 echo "Diretório criado com sucesso.<br>";
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
         echo "Tipo do arquivo: " . $_FILES['imagem']['type'] . "<br>"; // Exibe o tipo de arquivo
         if (!in_array($_FILES['imagem']['type'], $allowedTypes)) {
-            echo "Erro: Tipo de arquivo não permitido.";
+            $descricao = "Erro: Tipo de arquivo não permitido.";
             exit;
         }
 
@@ -68,16 +68,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadFile)) {
             echo "Imagem enviada com sucesso: " . $uploadFile . "<br>";
         } else {
-            echo "Erro ao mover o arquivo para o diretório de upload.<br>";
+            $descricao = "Erro ao mover o arquivo para o diretório de upload.<br>";
         }
     } else {
-        echo "Erro no upload ou nenhum arquivo foi enviado.<br>";
+        $descricao = "Erro no upload ou nenhum arquivo foi enviado.<br>";
     }
 
-    // Realiza a inserção no banco de dados, se a imagem foi processada
-    if (isset($uploadFile) && !empty($uploadFile)) {
+
         $registerPubli = new registerPubli();
         $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
-    }
+   
 }
 ?>
