@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     } else {
         $descricao = "Erro no upload ou nenhum arquivo foi enviado.<br>";
     }
-
+    $descricao = "Nemss entrou";
 
         $registerPubli = new registerPubli();
         $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
