@@ -99,12 +99,12 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
     
       <div style="flex: 1; min-width: 400px;">
-			<label>CONDOMÍNIO DE DESTINO</label>
-			<select required name="condominio" class="form-control" style="width: 100%; text-transform: uppercase;">
-        <option value="" disabled selected>Selecione o condominio</option>
-        <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $condominio): ?>
-            <option value="<?php echo htmlspecialchars($condominio['CLI_IDCLIENT']); ?>">
-                <?php echo htmlspecialchars($condominio['CLI_NMNAME']); ?>
+			<label>CLIENTE DE DESTINO</label>
+			<select required name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
+        <option value="" disabled selected>Selecione o cliente</option>
+        <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
+            <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
+                <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
             </option>
         <?php endforeach; ?>
       </select>
@@ -122,7 +122,7 @@
 			<div style="flex: 1; min-width: 130px;">
 			<label>NOME DA CAMPANHA</label>
       <i class="fa fa-calendar"></i>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="dtcontrato" name="dtcontrato"   />
 			</div>
         
 		  </div>
@@ -148,7 +148,7 @@
       <div style="flex: 1; min-width: 90px;">
 			<label>UPLOAD IMAGEM</label>
       <i class="fa fa-calendar"></i>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="prazoentrega" name="prazoentrega"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
 			</div>
       
 			</div>
@@ -159,7 +159,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ SE ELEGIVEL)</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder="Escreva aqui a descrição do serviço contratado."></textarea>
+                      	<textarea class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
                     	</div>
 			</div>
 		</div>
