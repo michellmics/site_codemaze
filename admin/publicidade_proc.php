@@ -34,10 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $status = $_POST['status'];  
 
     // Verificação do arquivo de imagem 
+    /*
     if (isset($_FILES['imagem'])) {
         echo "Código de erro do arquivo: " . $_FILES['imagem']['error']; // Mostra o código de erro
     }
-
+    */
     // Defina o limite de tamanho máximo de upload (em bytes)
     $maxFileSize = 5 * 1024 * 1024; // 5MB
     
@@ -56,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
         // Verifica se o diretório existe, caso contrário, cria
         if (!is_dir($uploadDir)) {
-            echo "O diretório de upload não existe. Tentando criar...<br>";
+            //echo "O diretório de upload não existe. Tentando criar...<br>";
             if (!mkdir($uploadDir, 0755, true)) {
                 echo "Erro: Não foi possível criar o diretório de upload.";
                 exit;
             } else {
-                echo "Diretório criado com sucesso.<br>";
+                //echo "Diretório criado com sucesso.<br>";
             }
         }
 
