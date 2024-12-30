@@ -185,7 +185,9 @@
         Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#fimpub");
       });
   </script>
-    
+<script>
+console.log(new FormData($("#form-empresa")[0]));
+</script>  
     <!-- ######################################################## --> 
     <!-- SWEETALERT 2 -->   
     
@@ -209,7 +211,7 @@
             denyButton: 'swal-deny-btn',
             htmlContainer: 'swal-text'
           }
-          console.log(new FormData($("#form-empresa")[0]));
+          
         }).then((result) => {
           if (result.isConfirmed) {
             // Capturar os dados do formulário
