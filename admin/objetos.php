@@ -1587,6 +1587,39 @@
             }
         }
 
+        public function insertPubliInfo($CLI_IDCLIENT, $MKT_DCCAMPANHA, $MKT_DCTIPO, $MKT_NMCAMPANHA, $MKT_DTINI, $MKT_DTFIM, $MKT_DCIMG)
+        {       
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+
+            try {
+                $sql = "INSERT INTO MKT_MKTPUBLICIDADE 
+                        (CLI_IDCLIENT, MKT_DCCAMPANHA, MKT_DCTIPO, MKT_NMCAMPANHA, MKT_DTINI, MKT_DTFIM, MKT_DCIMG) 
+                        VALUES (:CLI_IDCLIENT, :MKT_DCCAMPANHA, :MKT_DCTIPO, :MKT_NMCAMPANHA, :MKT_DTINI, :MKT_DTFIM, :MKT_DCIMG)";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':CLI_IDCLIENT', $CLI_IDCLIENT, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_DCCAMPANHA', $MKT_DCCAMPANHA, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_DCTIPO', $MKT_DCTIPO, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_NMCAMPANHA', $MKT_NMCAMPANHA, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_DTINI', $MKT_DTINI, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_DTFIM', $MKT_DTFIM, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_DCIMG', $MKT_DCIMG, PDO::PARAM_STR);               
+                $stmt->execute();
+            
+                // Retorna uma mensagem de sucesso (opcional)
+                return "Publicidade cadastrada com sucesso.";
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função insertPubliInfo. $MKT_NMCAMPANHA","High");
+                return "ERRO: Não foi possível cadastrar a publicidade.";
+            }
+        }
+
         public function insertProductInfo($PRS_NMNOME, $PRS_DCTIPO, $PRS_DCINVESTIMENTO, $PRS_STSTATUS, $PRS_DCDESCRICAO)
         {          
             // Verifica se a conexão já foi estabelecida

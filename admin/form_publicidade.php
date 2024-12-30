@@ -156,16 +156,13 @@
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
-                      	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ SE ELEGIVEL)</label>
+                      	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ DO SITE SE ELEGIVEL)</label>
                       	<textarea class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
                     	</div>
 			</div>
 		</div>
 		<!-- DESCRIÇÃO-->
-			
 
-
-                  
                   <div class="box-footer">
                   <button type="button" name="voltar" class="btn btn-warning" onclick="window.history.back()">VOLTAR</button>
                   <button type="submit" id="salvar_empresa_1" name="salvar_empresa_1" class="btn btn-primary">SALVAR CADASTRO</button>
@@ -187,7 +184,7 @@
       function confirmAndSubmit(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
         Swal.fire({
-          title: 'Formulário de Contrato',
+          title: 'Formulário de Publicidade',
           text: "Têm certeza que deseja salvar?",
           showDenyButton: true,
           confirmButtonText: 'SALVAR',
@@ -209,7 +206,7 @@
             var formData = $("#form-empresa").serialize();
             // Fazer a requisição AJAX
             $.ajax({
-              url: "contrato_proc.php", // URL para processamento
+              url: "publicidade_proc.php", // URL para processamento
               type: "POST",
               data: formData,
               success: function (response) {
