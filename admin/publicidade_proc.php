@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $cliente = $_POST['cliente']; 
     //$descricao = $_POST['descricao'];
     $tipo = "Nem entrou";
-    //$tipo = $_POST['tipo'];
+    $tipo = $_POST['tipo'];
     $nomecampanha = $_POST['nomecampanha'];
     $iniciopub = $_POST['iniciopub'];
     $fimpub = $_POST['fimpub'];   
@@ -74,8 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     } else {
         $descricao = "Erro no upload ou nenhum arquivo foi enviado.<br>";
     }
-    $descricao = "Nemss entrou";
-
         $registerPubli = new registerPubli();
         $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
    
