@@ -121,7 +121,7 @@
       </div>						
 			<div style="flex: 1; min-width: 130px;">
 			<label>NOME DA CAMPANHA</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="dtcontrato" name="dtcontrato"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="nomecampanha" name="nomecampanha"   />
 			</div>
         
 		  </div>
@@ -290,31 +290,13 @@
 
   <script>
     $(document).ready(function() {
-      $('#dtcontrato').mask('00/00/0000', {
+      $('#iniciopub').mask('00/00/0000', {
         placeholder: "__/__/____"
       });
     });
 
     $(document).ready(function() {
-      $('#iniciocontrato').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-    $(document).ready(function() {
-      $('#fimcontrato').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-    $(document).ready(function() {
-      $('#prazoentrega').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-    $(document).ready(function() {
-      $('#dtvencimento').mask('00/00/0000', {
+      $('#fimpub').mask('00/00/0000', {
         placeholder: "__/__/____"
       });
     });
