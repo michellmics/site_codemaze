@@ -89,7 +89,7 @@
                   <h3 class="box-title">PUBLICIDADE</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                 <form id="form-empresa" role="form" method="POST">
+                 <form id="form-empresa" role="form" method="POST" enctype="multipart/form-data">
 
                   <!-- CAMPOS COMO VARIAVEIS -->
                   <input type="hidden" name="page" value="EMPRESA"/>
@@ -148,7 +148,7 @@
 
       <div style="flex: 1; min-width: 90px;">
 			<label>UPLOAD IMAGEM</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
+			<input required type="file" accept="image/*" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
 			</div>
       
 			</div>
