@@ -49,7 +49,7 @@
         <!-- jQuery 2.1.3 -->
     <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -179,24 +179,10 @@
     </section><!-- /.content -->
 
     <script>
-    $(document).ready(function() {
-      $('#iniciopub').mask('00/00/0000', {
-        placeholder: "__/__/____"
+      $(document).ready(function() {
+        Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#iniciopub");
+        Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#fimpub");
       });
-    });
-
-    $(document).ready(function() {
-      $('#fimpub').mask('00/00/0000', {
-        placeholder: "__/__/____"
-      });
-    });
-
-    $(document).ready(function() {
-      $('#telfaturamento').mask('00 00000-0000', {
-        placeholder: "00 00000-0000"
-      });
-    });
-
   </script>
     
     <!-- ######################################################## --> 
