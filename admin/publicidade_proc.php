@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $nomecampanha = $_POST['nomecampanha'];
     $iniciopub = $_POST['iniciopub'];
     $fimpub = $_POST['fimpub'];   
+    $imagem = $_FILES['imagem'];   
     
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         $uploadDir = "_img/publicidade/$cliente/"; // Diretório onde as imagens serão salvas
@@ -64,6 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     $registerPubli = new registerPubli();
     
-    $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
+    $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$imagem);
 }
 ?>
