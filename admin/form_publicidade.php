@@ -97,7 +97,7 @@
         	<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-			
+    
       <div style="flex: 1; min-width: 400px;">
 			<label>CONDOMÍNIO DE DESTINO</label>
 			<select required name="condominio" class="form-control" style="width: 100%; text-transform: uppercase;">
@@ -109,7 +109,7 @@
         <?php endforeach; ?>
       </select>
       </div>					
-			
+        
       <div style="flex: 1; min-width: 130px;">
 			<label>TIPO</label>
 			<select required class="form-control" name="tipo" style="width: 100%;">
@@ -124,12 +124,8 @@
       <i class="fa fa-calendar"></i>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="50" class="form-control" placeholder="DD/MM/YYYY" id="dtcontrato" name="dtcontrato"   />
 			</div>
-
-      <div style="flex: 1;">
-			<label>N. CONTRATO</label>
-			<input readonly  type="text" style="width: 100%; text-transform: uppercase;" maxlength="50" class="form-control"  name="numcontrato" value="<? echo $numeroContrato; ?>"/>
-			</div>
-		</div>
+        
+		  </div>
 		</div>
 		<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO --> 
 
