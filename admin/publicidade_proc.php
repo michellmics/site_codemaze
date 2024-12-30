@@ -26,8 +26,7 @@ class registerPubli extends SITE_ADMIN
 if ($_SERVER['REQUEST_METHOD'] === 'POST') 
 {  
     $cliente = $_POST['cliente']; 
-    //$descricao = $_POST['descricao'];
-    $tipo = "Nem entrou";
+    $descricao = $_POST['descricao'];
     $tipo = $_POST['tipo'];
     $nomecampanha = $_POST['nomecampanha'];
     $iniciopub = $_POST['iniciopub'];
@@ -41,16 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     // Verifica se o arquivo foi enviado e se não ocorreu erro no upload
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         echo "Arquivo recebido: " . $_FILES['imagem']['name']; // Verifica se o arquivo foi enviado
-        $uploadDir = "_img/publicidade/"; // Diretório onde as imagens serão salvas
+        $uploadDir = "_img/publicidade/$cliente/"; // Diretório onde as imagens serão salvas
         $timestamp = round(microtime(true) * 1000);
-        $nomeCampanhaFile = str_replace(' ', '', basename($_FILES['imagem']['name']));
+        $nomeCampanhaFile = strtolower(str_replace(' ', '', basename($_FILES['imagem']['name'])));
         $uploadFile = $uploadDir . $timestamp ."_".$nomeCampanhaFile;
 
         // Verifica se o diretório existe, caso contrário, cria
         if (!is_dir($uploadDir)) {
             echo "O diretório de upload não existe. Tentando criar...<br>";
             if (!mkdir($uploadDir, 0755, true)) {
-                $descricao = "Erro: Não foi possível criar o diretório de upload.";
+                echo "Erro: Não foi possível criar o diretório de upload.";
                 exit;
             } else {
                 echo "Diretório criado com sucesso.<br>";
@@ -61,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
         echo "Tipo do arquivo: " . $_FILES['imagem']['type'] . "<br>"; // Exibe o tipo de arquivo
         if (!in_array($_FILES['imagem']['type'], $allowedTypes)) {
-            $descricao = "Erro: Tipo de arquivo não permitido.";
+            echo "Erro: Tipo de arquivo não permitido.";
             exit;
         }
 
@@ -69,10 +68,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadFile)) {
             echo "Imagem enviada com sucesso: " . $uploadFile . "<br>";
         } else {
-            $descricao = "Erro ao mover o arquivo para o diretório de upload.<br>";
+            echo "Erro ao mover o arquivo para o diretório de upload.<br>";
         }
     } else {
-        $descricao = "Erro no upload ou nenhum arquivo foi enviado.<br>";
+        echo "Erro no upload ou nenhum arquivo foi enviado.<br>";
     }
         $registerPubli = new registerPubli();
         $result = $registerPubli->insertPubli($cliente,$descricao,$tipo,$nomecampanha,$iniciopub,$fimpub,$uploadFile);
