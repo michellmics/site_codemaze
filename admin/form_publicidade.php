@@ -159,7 +159,7 @@
 
       <div style="flex: 1; min-width: 30px;">
 			<label>STATUS</label>
-			<select required class="form-control" name="status" style="width: 80%;">
+			<select required class="form-control" name="status" style="width: 100%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="ATIVA">ATIVA</option>
                 	<option value="INATIVA">INATIVA</option>
