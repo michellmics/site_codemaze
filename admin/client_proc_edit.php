@@ -7,7 +7,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerClient extends SITE_ADMIN
 {
-    public function updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro)
+    public function updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro,$site)
     {
         try {
             // Cria conexão com o banco de dados
@@ -15,7 +15,7 @@ class registerClient extends SITE_ADMIN
                 $this->conexao();
             }
                 
-            $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
+            $result = $this->updateClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro,$site);
            // echo "Cliente atualizado com sucesso. <a href='table_cliente.php'>VOLTAR</a>";   
             echo $result;             
                      
@@ -43,7 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $status = $_POST['status'];
     $id = $_POST['id'];
     $cep = $_POST['cep'];
+    $site = $_POST['site'];
     $registerClient = new registerClient();
-    $result = $registerClient->updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro);
+    $result = $registerClient->updateClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$status,$id,$cep,$bairro,$site);
 }
 ?>

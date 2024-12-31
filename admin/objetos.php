@@ -1088,7 +1088,7 @@
             }
         }
 
-        public function updateClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $CLI_STSTATUS, $ID, $CLI_DCCEP, $CLI_DCBAIRRO)
+        public function updateClientInfo($CLI_NMNAME, $CLI_DCCPFCNPJ, $CLI_DCRSOCIAL, $CLI_DCEMAIL, $CLI_DCTEL1, $CLI_DCTEL2, $CLI_DCADDRESS, $CLI_DCSTATE, $CLI_DCCITY, $CLI_DCOBS, $CLI_STSTATUS, $ID, $CLI_DCCEP, $CLI_DCBAIRRO, $CLI_DCSITE)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -1109,7 +1109,8 @@
                         CLI_DCOBS = :CLI_DCOBS,
                         CLI_STSTATUS = :CLI_STSTATUS,
                         CLI_DCCEP = :CLI_DCCEP,
-                        CLI_DCBAIRRO = :CLI_DCBAIRRO
+                        CLI_DCBAIRRO = :CLI_DCBAIRRO,
+                        CLI_DCSITE = :CLI_DCSITE
                         WHERE CLI_IDCLIENT = :CLI_IDCLIENT";
                         
                 $stmt = $this->pdo->prepare($sql);
@@ -1128,7 +1129,8 @@
                 $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_IDCLIENT', $ID, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCCEP', $CLI_DCCEP, PDO::PARAM_STR);
-                $stmt->bindParam(':CLI_DCBAIRRO', $CLI_DCBAIRRO, PDO::PARAM_STR); 
+                $stmt->bindParam(':CLI_DCBAIRRO', $CLI_DCBAIRRO, PDO::PARAM_STR);  
+                $stmt->bindParam(':CLI_DCSITE', $CLI_DCBAIRRO, PDO::PARAM_STR);
                 
                 $stmt->execute();
             
