@@ -138,7 +138,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                       <th>CLIENTE ORIGEM</th>
                       <th>CLIENTE DESTINO</th>
                       <th>NOME CAMPANHA</th>
-                      <th>TIPO CAMPANHA</th>
+                      <th>TIPO</th>
                       <th>DATA INI</th> 
                       <th>DATA FINAL</th>
                       <th>SITE</th>
@@ -150,8 +150,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                     <tr>
                         <? 
                           $styleStatus = ($publicidade['CLI_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; 
-                          if($publicidade['CLI_STSTATUS']== ""){$icon = "label label-danger";}
-                          if($publicidade['CLI_STSTATUS'] != ""){$icon = "label label-success";}
+                          if($publicidade['MKT_DCIDRESPONSE'] != "OK"){$icon = "label label-danger"; $pb = "Pendente";}
+                          if($publicidade['MKT_DCIDRESPONSE'] == "OK"){$icon = "label label-success"; $pb = "Publicado";}
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($publicidade['MKT_IDMKTPUBLICIDADE']) ?></b></td>
