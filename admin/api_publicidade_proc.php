@@ -13,7 +13,7 @@ $postData = [
     'dataFim' => '2024-01-31',
     'clienteOrigin' => 'Cliente Teste',
     'status' => 'Ativo',
-    'mktId' => '12345',
+
 ];
 
 // Arquivo opcional (se necessário)
