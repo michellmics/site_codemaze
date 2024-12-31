@@ -1577,7 +1577,7 @@
                 $stmt->bindParam(':CLI_STSTATUS', $CLI_STSTATUS, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCCEP', $CLI_DCCEP, PDO::PARAM_STR);
                 $stmt->bindParam(':CLI_DCBAIRRO', $CLI_DCBAIRRO, PDO::PARAM_STR);  
-                $stmt->bindParam(':CLI_DCSITE', $CLI_DCBAIRRO, PDO::PARAM_STR);
+                $stmt->bindParam(':CLI_DCSITE', $CLI_DCSITE, PDO::PARAM_STR);
                 
                 $stmt->execute();
             
