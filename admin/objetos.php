@@ -342,7 +342,7 @@
             try{           
                 $sql = "SELECT *
                                 FROM VW_PUBLICIDADE
-                                ORDER BY 'CLIENTE ORIGEM' ASC";
+                                ORDER BY `CLIENTE ORIGEM` ASC";
 
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
