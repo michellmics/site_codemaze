@@ -14,7 +14,8 @@ $publiDesc = $_GET['publiDesc'] ?? null;
 $status = $_GET['status'] ?? null;
 $mktId = $_GET['mktId'] ?? null;
 $filePath = $_GET['filePath'] ?? null;
-$url = $_GET['endpoint'] ?? null;
+$url = $_GET['url'] ?? null;
+$endpoint = $url."/sistema/api_publicidade.php";
 
 // Dados a serem enviados
 $postData = [
@@ -33,7 +34,7 @@ if (file_exists($filePath)) {
 $ch = curl_init();
 
 // Configurações do cURL
-curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_URL, $endpoint);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Retorna a resposta como string
