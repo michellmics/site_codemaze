@@ -1621,10 +1621,14 @@
                 $dateObj = DateTime::createFromFormat('d/m/Y', $date);
                 return $dateObj ? $dateObj->format('Y-m-d') : null;  // Retorna null se a data for inválida
             }
+            function convertDateFinal($date) {
+                $dateObj = DateTime::createFromFormat('d/m/Y', $date);
+                return $dateObj ? $dateObj->format('Y-m-d 23:59:59') : null;  // Retorna null se a data for inválida
+            }
 
             // Converte as datas recebidas do formulário
             $MKT_DTINI = convertDate($MKT_DTINI);
-            $MKT_DTFIM = convertDate($MKT_DTFIM);
+            $MKT_DTFIM = convertDateFinal($MKT_DTFIM);
 
             try {
                 $sql = "INSERT INTO MKT_MKTPUBLICIDADE 
