@@ -17,7 +17,7 @@ $postData = [
 ];
 
 // Arquivo opcional (se necessário)
-$filePath = 'caminho/para/sua/imagem.jpg'; // Substitua pelo caminho real do arquivo
+$filePath = 'uploads/8b4da9aa7e16d820a1d88665301248d8.png'; // Substitua pelo caminho real do arquivo
 if (file_exists($filePath)) {
     $postData['file'] = new CURLFile($filePath);
 }
