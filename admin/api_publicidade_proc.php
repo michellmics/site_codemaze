@@ -9,8 +9,8 @@ $url = "https://www.prqdashortensias.com.br/sistema/api_publicidade.php";
 
 // Dados a serem enviados
 $postData = [
-    'dataInicio' => '2024-01-01',
-    'dataFim' => '2024-01-31',
+    'dataInicio' => '2024-01-01 00:00:00',
+    'dataFim' => '2024-01-31 23:59:59',
     'clienteOrigin' => 'Cliente Teste',
     'status' => 'Ativo',
     'mktId' => '12345',
