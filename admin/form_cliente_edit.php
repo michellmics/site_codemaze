@@ -207,7 +207,11 @@
       <div style="flex: 2;">
 			<label style="display: none;">ID</label>
 			<input type="text" style="width: 100%; text-transform: uppercase; display: none;" minlength="10" maxlength="50" class="form-control" placeholder="Enter ..." name="id" value="<? echo $siteAdmin->ARRAY_CLIENTINFO[0]["CLI_IDCLIENT"]; ?>" />
-			</div>			
+			</div>		
+      <div style="flex: 4; min-width: 150px;">
+			<label>URL SITE</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="80" class="form-control" placeholder="Enter ..." id="site" name="site" />
+			</div>	
 
 		</div>
 		<!-- OBSERVAÇÕES-->
