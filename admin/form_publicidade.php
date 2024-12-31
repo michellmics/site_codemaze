@@ -144,7 +144,7 @@
 			<label>NOME DA CAMPANHA</label>
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="nomecampanha" name="nomecampanha"   />
 			</div>
-      
+
       <div style="flex: 1; min-width: 80px;">
 			<label>INICIO PUB</label>
       <i class="fa fa-calendar"></i>
@@ -157,9 +157,9 @@
 			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimpub" name="fimpub"   />
 			</div>
 
-      <div style="flex: 1; min-width: 50px;">
+      <div style="flex: 1; min-width: 30px;">
 			<label>STATUS</label>
-			<select required class="form-control" name="status" style="width: 100%;">
+			<select required class="form-control" name="status" style="width: 80%;">
                 	<option value="" disabled selected>SELECIONE</option>
                 	<option value="ATIVA">ATIVA</option>
                 	<option value="INATIVA">INATIVA</option>
