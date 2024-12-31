@@ -142,7 +142,7 @@
       <div style="flex: 1; min-width: 90px;">
 			<label>FIM PUB</label>
       <i class="fa fa-calendar"></i>
-			<input type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimpub" name="fimpub"   />
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="DD/MM/YYYY" id="fimpub" name="fimpub"   />
 			</div>
 
       <div style="flex: 1; min-width: 50px;">
@@ -167,7 +167,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ DO SITE SE ELEGIVEL)</label>
-                      	<textarea class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
+                      	<textarea required class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
                     	</div>
 			</div>
 		</div>
