@@ -45,6 +45,7 @@ if ($response === false) {
     // Decodifica e exibe a resposta
     $responseDecoded = json_decode($response, true);
     print_r($responseDecoded);
+    echo "Funcionou";
 }
 
 // Fecha a conexão cURL
