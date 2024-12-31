@@ -6,7 +6,7 @@ session_start(); // Inicia a sessão para armazenar dados do usuário
 
 class registerClient extends SITE_ADMIN
 {
-    public function insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$bairro)
+    public function insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$bairro,$site)
     {
         try {
             // Cria conexão com o banco de dados
@@ -28,7 +28,7 @@ class registerClient extends SITE_ADMIN
                 exit();
             } else 
                 {
-                    $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$cep,$bairro);
+                    $result = $this->insertClientInfo($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$cep,$bairro,$site);
                     $SUBJECT = "Cadastro de novo cliente";
                     $MSG = "O cliente $nome com CPF/CNPJ $cpfcnpj foi cadastrado na intranet da Codemaze.";
                     
@@ -59,7 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $cidade = $_POST['cidade'];
     $observacoes = $_POST['observacoes'];
     $cep = $_POST['cep'];
+    $site = $_POST['site'];
     $registerClient = new registerClient();
-    $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$cep,$bairro);
+    $result = $registerClient->insertClient($nome,$cpfcnpj,$razaosocial,$email,$telefone1,$telefone2,$endereco,$estado,$cidade,$observacoes,$cep,$bairro,$site);
 }
 ?>
