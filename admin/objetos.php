@@ -1629,7 +1629,7 @@
             // Converte as datas recebidas do formulário
             $MKT_DTINI = convertDate($MKT_DTINI);
             $MKT_DTFIM = convertDateFinal($MKT_DTFIM);
-
+ 
             try {
                 $sql = "INSERT INTO MKT_MKTPUBLICIDADE 
                         (CLI_IDCLIENT, MKT_DCCAMPANHA, MKT_DCTIPO, MKT_NMCAMPANHA, MKT_DTINI, MKT_DTFIM, MKT_DCIMG, MKT_STSTATUS, CLI_IDCLIENT_DESTINO) 
