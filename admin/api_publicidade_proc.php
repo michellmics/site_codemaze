@@ -13,7 +13,7 @@ $postData = [
     'dataFim' => '2024-01-31',
     'clienteOrigin' => 'Cliente Teste',
     'status' => 'Ativo',
-
+    'mktId' => '12345',
 ];
 
 // Arquivo opcional (se necessário)
@@ -32,6 +32,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Retorna a resposta como strin
 
 // Executa a requisição
 $response = curl_exec($ch);
+
+var_dump($response);
 
 // Verifica erros
 if ($response === false) {
