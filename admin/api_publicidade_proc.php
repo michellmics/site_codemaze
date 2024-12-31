@@ -12,6 +12,7 @@ $postData = [
     'dataInicio' => '2024-01-01 00:00:00',
     'dataFim' => '2024-12-31 23:59:59',
     'clienteOrigin' => 'Cliente Teste',
+    'publiDesc' => 'Descrição vai aqui',
     'status' => 'Ativo',
     'mktId' => '12345',
 ];
