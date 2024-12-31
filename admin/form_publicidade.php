@@ -98,6 +98,18 @@
         	<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center;">
+
+      <div style="flex: 1; min-width: 400px;">
+			<label>CLIENTE DE ORIGEM</label>
+			<select required name="clienteorigem" class="form-control" style="width: 100%; text-transform: uppercase;">
+        <option value="" disabled selected>Selecione o cliente</option>
+        <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
+            <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
+                <?php echo htmlspecialchars($cliente['CLI_NMNAME']); ?>
+            </option>
+        <?php endforeach; ?>
+      </select>
+      </div>
     
       <div style="flex: 1; min-width: 400px;">
 			<label>CLIENTE DE DESTINO</label>
