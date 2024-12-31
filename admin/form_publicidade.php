@@ -187,12 +187,31 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
 
-    <script>
-      $(document).ready(function() {
-        Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#iniciopub");
-        Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#fimpub");
-      });
-  </script>
+<script>
+  $(document).ready(function() {
+    Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#iniciopub");
+    Inputmask("99/99/9999", { placeholder: "dd/mm/aaaa" }).mask("#fimpub");
+
+    // Validação de data ao enviar o formulário
+    $('#form-empresa').on('submit', function(event) {
+      // Obter as datas
+      var dataFim = $('#fimpub').val();
+      var dataAtual = new Date();
+      var partesDataFim = dataFim.split('/');
+      var dataFimFormatada = new Date(partesDataFim[2], partesDataFim[1] - 1, partesDataFim[0]);
+
+      // Comparar a data de fim com a data atual
+      if (dataFimFormatada <= dataAtual) {
+        event.preventDefault(); // Impede o envio do formulário
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro!',
+          text: 'A data de FIM PUB deve ser maior que a data atual!',
+        });
+      }
+    });
+  });
+</script>
 
     
 
