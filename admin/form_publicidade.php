@@ -101,7 +101,7 @@
 
       <div style="flex: 1; min-width: 400px;">
 			<label>CLIENTE DE ORIGEM</label>
-			<select required name="clienteorigem" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select required name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o cliente</option>
         <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
             <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
@@ -113,7 +113,7 @@
     
       <div style="flex: 1; min-width: 400px;">
 			<label>CLIENTE DE DESTINO</label>
-			<select required name="cliente" class="form-control" style="width: 100%; text-transform: uppercase;">
+			<select required name="clientedestino" class="form-control" style="width: 100%; text-transform: uppercase;">
         <option value="" disabled selected>Selecione o cliente</option>
         <?php foreach ($siteAdmin->ARRAY_CLIENTINFO as $cliente): ?>
             <option value="<?php echo htmlspecialchars($cliente['CLI_IDCLIENT']); ?>">
