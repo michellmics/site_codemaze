@@ -104,7 +104,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Lista de Contratos</h3>
+                  <h3 class="box-title">Lista de Publicidades</h3>
                   <div class="box-tools" style="margin-bottom: 20px;">
                     
                   <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
