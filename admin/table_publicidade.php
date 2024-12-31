@@ -156,12 +156,14 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                           $dataFim = $publicidade['MKT_DTFIM'];
                           $clienteOrigin = $publicidade['CLIENTE ORIGEM'];
                           $publiDesc = $publicidade['MKT_DCCAMPANHA'];
-                          $status = $publicidade['MKT_STSTATUS'];
+                          $status = "ATIVA";
+                          $statusSuprimir = "INATIVA";
                           $mktId = $publicidade['MKT_IDMKTPUBLICIDADE'];
                           $filePath = $publicidade['MKT_DCIMG'];
                           $url = $publicidade['CLI_DCSITE'];
 
                           $endpoint = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($status) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&url=" . urlencode($url);
+                          $endpointSuprimir = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($statusSuprimir) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&url=" . urlencode($url);
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($publicidade['MKT_IDMKTPUBLICIDADE']) ?></b></td>
@@ -174,8 +176,8 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTFIM']) ?></td>
                         <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($publicidade['CLI_STSTATUS']) ?></td>                        
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $publicidade['MKT_IDMKTPUBLICIDADE']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="<? echo $endpoint; ?>" target="_blank"><span class="label label-success">PUBLICAR</span></a></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $publicidade['MKT_IDMKTPUBLICIDADE']; ?>" target="_self"><span class="label label-danger">SUPRIMIR</span></a></td>                  
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="<? echo $endpoint; ?>" target="_self"><span class="label label-success">PUBLICAR</span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><a href="<? echo $endpointSuprimir; ?>" target="_self"><span class="label label-danger">SUPRIMIR</span></a></td>                  
                       </tr>
                     <?php endforeach; ?>   
                     </tr>
