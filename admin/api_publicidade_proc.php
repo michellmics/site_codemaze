@@ -3,10 +3,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-header('Content-Type: application/json');
-
-//$url = "https://www.prqdashortensias.com.br/sistema/api_publicidade.php";
-
 $dataInicio = $_GET['dataInicio'] ?? null;
 $dataFim = $_GET['dataFim'] ?? null;
 $clienteOrigin = $_GET['clienteOrigin'] ?? null;
@@ -41,8 +37,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Retorna a resposta como strin
 
 // Executa a requisição
 $response = curl_exec($ch);
-
-var_dump($response);
 
 // Verifica erros
 if ($response === false) {
