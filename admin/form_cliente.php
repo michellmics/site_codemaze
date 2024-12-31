@@ -219,6 +219,10 @@
                       	<label>OBSERVAÇÕES</label>
                       	<textarea class="form-control"  name="observacoes" style="width: 100%;" maxlength="200" rows="5" placeholder="Enter ..."></textarea>
                     	</div>
+      <div style="flex: 4; min-width: 150px;">
+			<label>URL SITE</label>
+			<input type="text" style="width: 100%; text-transform: uppercase;" maxlength="80" class="form-control" placeholder="Enter ..." id="site" name="site" />
+			</div>
 			</div>
 		</div>
 		<!-- OBSERVAÇÕES-->
