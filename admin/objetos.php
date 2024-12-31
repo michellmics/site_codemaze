@@ -1619,7 +1619,7 @@
             // Conversão das datas para o formato YYYY-MM-DD
             function convertDate($date) {
                 $dateObj = DateTime::createFromFormat('d/m/Y', $date);
-                return $dateObj ? $dateObj->format('Y-m-d') : null;  // Retorna null se a data for inválida
+                return $dateObj ? $dateObj->format('Y-m-d 00:00:00') : null;  // Retorna null se a data for inválida
             }
             function convertDateFinal($date) {
                 $dateObj = DateTime::createFromFormat('d/m/Y', $date);
