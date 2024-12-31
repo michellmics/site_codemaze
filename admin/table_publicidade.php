@@ -155,7 +155,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($publicidade['MKT_IDMKTPUBLICIDADE']) ?></b></td>
-                        <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/table_liquidacaoFinanceira.php?table_search=<?= htmlspecialchars($publicidade['GEC_IDGESTAO_CONTRATO']) ?>"><span class="<? echo $icon; ?>"><? echo $result; ?></span></a></td>
+                        <td style="text-transform: uppercase; font-size: 15px;"><span class="<? echo $icon; ?>"><? echo $result; ?></span></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['CLIENTE ORIGEM']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['CLIENTE DESTINO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_NMCAMPANHA']) ?></td>
