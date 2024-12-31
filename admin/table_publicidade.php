@@ -29,6 +29,8 @@ if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocad
 else 
     {
       $siteAdmin->getPublicidadeInfo();
+      var_dump($siteAdmin->ARRAY_PUBLICIDADEINFO);
+      die();
     }
 
 
