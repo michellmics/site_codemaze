@@ -29,6 +29,7 @@
         public $ARRAY_AGENDAINFO;
         public $ARRAY_AGENDAATIVIDADES;
         public $ARRAY_PROSPEC_CLIENTESINFO;
+        public $ARRAY_PUBLICIDADEINFO;
         public $ARRAY_WHATSAPPBOTINFO;
         public $configPath = '/home/codemaze/config.cfg';
 
@@ -328,6 +329,24 @@
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 $this->ARRAY_CONTRATOINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                return ["error" => $e->getMessage()];
+            }          
+        }
+
+        public function getPublicidadeInfo()
+        {          
+                // Verifica se a conexão já foi estabelecida
+                if(!$this->pdo){$this->conexao();}
+            
+            try{           
+                $sql = "SELECT *
+                                FROM VW_PUBLICIDADE
+                                ORDER BY CLIENTE ORIGEM ASC";
+
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                $this->ARRAY_PUBLICIDADEINFO = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 return ["error" => $e->getMessage()];
             }          
