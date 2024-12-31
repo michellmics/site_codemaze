@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
   include_once 'objetos.php'; 
   
   session_start(); 
@@ -20,7 +24,7 @@
 if(isset($_GET['table_search'])) //trazer os dados de acordo com o q foi colocado na busca
 {
   $search = $_GET['table_search'];
-  $result = $siteAdmin->getPublicidadeInfoBySearch($search);
+  //$result = $siteAdmin->getPublicidadeInfoBySearch($search);
 }
 else 
     {
