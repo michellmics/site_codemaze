@@ -131,12 +131,7 @@
                 	<option value="IMAGEM">IMAGEM</option>
                   <option value="TEXTO_IMAGEM">TEXTO E IMAGEM</option>
       </select>
-      </div>						
-			<div style="flex: 1; min-width: 130px;">
-			<label>NOME DA CAMPANHA</label>
-			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="nomecampanha" name="nomecampanha"   />
-			</div>
-        
+      </div>						      
 		  </div>
 		</div>
 		<!-- NOME DO CLIENTE PRODUTO OU SERVIÇO --> 
@@ -144,6 +139,11 @@
     <!-- INICIO CONTRATO FIM CONTRATO DATA ENTREGA -->          
 		<div style="width: 100%; margin-bottom: 20px;">
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+      
+      <div style="flex: 1; min-width: 130px;">
+			<label>NOME DA CAMPANHA</label>
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="5" maxlength="30" class="form-control" placeholder="" id="nomecampanha" name="nomecampanha"   />
+			</div>
       
       <div style="flex: 1; min-width: 80px;">
 			<label>INICIO PUB</label>
