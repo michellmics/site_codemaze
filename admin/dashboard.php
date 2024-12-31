@@ -324,7 +324,7 @@ if (isset($_GET['alerta'])) //reconheciento de alerta
                 <li><a href="#" onclick="loadInIframe('form_agenda.php')"><i class="fa fa-circle-o"></i> Registro de atividades</a></li>
                 <li><a href="#" onclick="loadInIframe('agenda.php')"><i class="fa fa-circle-o"></i> Agenda de atividades</a></li>
                 <li><a href="#" onclick="loadInIframe('report_dashboard.php')"><i class="fa fa-circle-o"></i> Desempenho Geral</a></li>
-                <li><a href="#" onclick="loadInIframe('form_publicidade.php')"><i class="fa fa-circle-o"></i> Cadastro de Publicidade</a></li>
+                <li><a href="#" onclick="loadInIframe('table_publicidade.php')"><i class="fa fa-circle-o"></i> Publicidade</a></li>
               </ul> 
             </li>
             <li class="treeview">
