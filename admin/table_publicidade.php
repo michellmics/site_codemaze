@@ -137,11 +137,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                       <th></th>
                       <th>CLIENTE ORIGEM</th>
                       <th>CLIENTE DESTINO</th>
-                      <th>NOME CAMPANHA</th>
+                      <th>CAMPANHA</th>
                       <th>TIPO</th>
                       <th>DATA INI</th> 
                       <th>DATA FINAL</th>
-                      <th>SITE</th>
                       <th>STATUS</th>   
                       <th></th>                    
                     </tr>
@@ -162,7 +161,6 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DCTIPO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTINI']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTFIM']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['CLI_DCSITE']) ?></td>   
                         <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($publicidade['CLI_STSTATUS']) ?></td>                        
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $publicidade['MKT_IDMKTPUBLICIDADE']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                                            
