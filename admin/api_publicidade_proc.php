@@ -5,20 +5,27 @@ ini_set('display_startup_errors', 1);
 
 header('Content-Type: application/json');
 
-$url = "https://www.prqdashortensias.com.br/sistema/api_publicidade.php";
+//$url = "https://www.prqdashortensias.com.br/sistema/api_publicidade.php";
+
+$dataInicio = $_GET['dataInicio'] ?? null;
+$dataFim = $_GET['dataFim'] ?? null;
+$clienteOrigin = $_GET['clienteOrigin'] ?? null;
+$publiDesc = $_GET['publiDesc'] ?? null;
+$status = $_GET['status'] ?? null;
+$mktId = $_GET['mktId'] ?? null;
+$filePath = $_GET['filePath'] ?? null;
+$url = $_GET['endpoint'] ?? null;
 
 // Dados a serem enviados
 $postData = [
-    'dataInicio' => '2024-01-01 00:00:00',
-    'dataFim' => '2024-12-31 23:59:59',
-    'clienteOrigin' => 'Cliente Teste',
-    'publiDesc' => 'Descrição vai aqui',
-    'status' => 'Ativo',
-    'mktId' => '12345',
+    'dataInicio' => $dataInicio,
+    'dataFim' => $dataFim,
+    'clienteOrigin' => $clienteOrigin,
+    'publiDesc' => $publiDesc,
+    'status' => $status,
+    'mktId' => $mktId,
 ];
 
-// Arquivo opcional (se necessário)
-$filePath = 'uploads/8b4da9aa7e16d820a1d88665301248d8.png'; // Substitua pelo caminho real do arquivo
 if (file_exists($filePath)) {
     $postData['file'] = new CURLFile($filePath);
 }
@@ -47,8 +54,6 @@ if ($response === false) {
 
 // Fecha a conexão cURL
 curl_close($ch);
-
-
 
 
 ?>
