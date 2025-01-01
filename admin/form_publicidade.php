@@ -65,8 +65,12 @@
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
   <!-- ######################################################## --> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/ui/trumbowyg.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/trumbowyg.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trumbowyg@2.27.3/dist/ui/trumbowyg.min.css">
+<script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.27.3/dist/trumbowyg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.27.3/dist/plugins/colors/trumbowyg.colors.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trumbowyg@2.27.3/dist/plugins/colors/ui/trumbowyg.colors.min.css">
+
 
 </head>
   
@@ -203,15 +207,21 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
-    <script>
-        $('#descricao').trumbowyg({
-            btns: [
-                ['bold', 'italic'],
-                ['foreColor'],
-                ['link']
-            ]
-        });
-    </script>
+
+<script>
+    $('#descricao').trumbowyg({
+        btns: [
+            ['bold', 'italic'],
+            ['foreColor'], // Adiciona a funcionalidade de cores
+            ['link']
+        ],
+        plugins: {
+            colors: {
+                displayAsList: false // Exibe as cores em uma lista compacta (opcional)
+            }
+        }
+    });
+</script>
 
 <script>
   $(document).ready(function() {
