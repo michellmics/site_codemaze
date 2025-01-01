@@ -140,8 +140,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                       <th>CAMPANHA</th>
                       <th>TIPO</th>
                       <th>DATA INI</th> 
-                      <th>DATA FINAL</th>
-                      <th>STATUS</th>   
+                      <th>DATA FINAL</th> 
                       <th></th>                    
                     </tr>
                     <tr>
@@ -174,8 +173,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_NMCAMPANHA']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DCTIPO']) ?></td>
                         <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTINI']) ?></td>
-                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTFIM']) ?></td>
-                        <td style="<? echo $styleStatus; ?>"><?= htmlspecialchars($publicidade['CLI_STSTATUS']) ?></td>                        
+                        <td style="text-transform: uppercase; font-size: 12px;"><?= htmlspecialchars($publicidade['MKT_DTFIM']) ?></td>        
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="https://www.codemaze.com.br/site/admin/form_contrato_edit.php?id=<? echo $publicidade['MKT_IDMKTPUBLICIDADE']; ?>" target="_self"><span class="label label-warning">EDITAR</span></a></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="<? echo $endpoint; ?>" target="_self"><span class="label label-success">PUBLICAR</span></a></td>
                         <td style="text-transform: uppercase; font-size: 15px;"><a href="<? echo $endpointSuprimir; ?>" target="_self"><span class="label label-danger">SUPRIMIR</span></a></td>                  
