@@ -59,7 +59,8 @@ if ($response === false) {
     echo $mktId;
 
     $siteAdmin = new SITE_ADMIN();
-    $siteAdmin->updatePublishResponse($mktId,$response);
+    $vai=$siteAdmin->updatePublishResponse($mktId,$response);
+    var_dump($vai);
     
 }
 
