@@ -7,6 +7,7 @@ $dataInicio = $_GET['dataInicio'] ?? null;
 $dataFim = $_GET['dataFim'] ?? null;
 $clienteOrigin = $_GET['clienteOrigin'] ?? null;
 $publiDesc = $_GET['publiDesc'] ?? null;
+$tipo = $_GET['tipo'] ?? null;
 $status = $_GET['status'] ?? null;
 $mktId = $_GET['mktId'] ?? null;
 $filePath = $_GET['filePath'] ?? null;
@@ -21,6 +22,7 @@ $postData = [
     'publiDesc' => $publiDesc,
     'status' => $status,
     'mktId' => $mktId,
+    'tipo' => $tipo,
 ];
 
 if (file_exists($filePath)) {
