@@ -65,7 +65,8 @@
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
   <!-- ######################################################## --> 
-  <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
   
   
@@ -202,12 +203,11 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
     <script>
-        CKEDITOR.replace('descricao', {
-            toolbar: [
-                { name: 'basicstyles', items: ['Bold', 'Italic'] },
-                { name: 'colors', items: ['TextColor'] },
-                { name: 'links', items: ['Link'] }
-            ],
+        tinymce.init({
+            selector: '#descricao',
+            toolbar: 'bold italic forecolor link',
+            plugins: 'link',
+            menubar: false,
             height: 300
         });
     </script>
