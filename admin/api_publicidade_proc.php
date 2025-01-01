@@ -55,6 +55,8 @@ if ($response === false) {
     echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
     echo "<br>";
     echo $response;
+    echo "<br>";
+    echo $mktId;
 
     $siteAdmin = new SITE_ADMIN();
     $siteAdmin->updaPublishResponse($mktId,$response);
