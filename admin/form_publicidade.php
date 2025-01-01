@@ -168,7 +168,7 @@
 
       <div style="flex: 1; min-width: 90px;">
 			<label>UPLOAD IMAGEM</label>
-			<input required type="file" accept="image/*" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
+			<input type="file" accept="image/*" style="width: 100%; text-transform: uppercase;" minlength="10" maxlength="10" class="form-control" placeholder="" id="imagem" name="imagem"   />
 			</div>
       
 			</div>
@@ -179,7 +179,7 @@
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
 			<div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ DO SITE SE ELEGIVEL)</label>
-                      	<textarea required class="form-control"  name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
+                      	<textarea required class="form-control" id="descricao" name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
                     	</div>
 			</div>
 		</div>
