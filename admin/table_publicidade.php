@@ -149,7 +149,7 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                     <tr>
                         <? 
                           $styleStatus = ($publicidade['CLI_STSTATUS'] == "ATIVO") ? "text-transform: uppercase; font-size: 12px; color: #00d40a;" : "text-transform: uppercase; font-size: 12px; color: #ff0202;"; 
-                          if($publicidade['MKT_DCIDRESPONSE'] != "OK"){$icon = "label label-danger"; $pb = "Pendente";}
+                          if($publicidade['MKT_DCIDRESPONSE'] != "OK"){$icon = "label label-danger"; $pb = $publicidade['MKT_DCIDRESPONSE'];}
                           if($publicidade['MKT_DCIDRESPONSE'] == "OK"){$icon = "label label-success"; $pb = "Publicado";}
 
                           $dataInicio = $publicidade['MKT_DTINI'];
