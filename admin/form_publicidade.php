@@ -65,18 +65,7 @@
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
   <!-- ######################################################## --> 
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: '#descricao', // ID do textarea
-            plugins: 'link textcolor', // Plugins necessários
-            toolbar: 'bold italic forecolor link', // Apenas as ferramentas necessárias
-            menubar: false, // Remove o menu
-            branding: false, // Remove a marca TinyMCE
-            height: 300, // Altura do editor
-            content_style: "body { font-family:Arial,Helvetica,sans-serif; font-size:14px }", // Estilo do conteúdo
-        });
-    </script>  
+  <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> 
 
 </head>
   
@@ -213,6 +202,16 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
+    <script>
+        CKEDITOR.replace('descricao', {
+            toolbar: [
+                { name: 'basicstyles', items: ['Bold', 'Italic'] },
+                { name: 'colors', items: ['TextColor'] },
+                { name: 'links', items: ['Link'] }
+            ],
+            height: 300
+        });
+    </script>
 
 <script>
   $(document).ready(function() {
