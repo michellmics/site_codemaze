@@ -53,10 +53,6 @@ if ($response === false) {
     $url = strtolower($url);
     echo "Atualização enviada ao site $url <br><br>";
     echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
-    echo "<br>";
-    echo $response;
-    echo "<br>";
-    echo $mktId;
 
     $siteAdmin = new SITE_ADMIN();
     $siteAdmin->updatePublishResponse($mktId,$response);    
