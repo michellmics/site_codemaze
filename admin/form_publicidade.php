@@ -207,7 +207,6 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
-    <textarea id="descricao"></textarea>
 <script>
     $('#descricao').trumbowyg({
         btns: [
@@ -217,7 +216,7 @@
         ],
         plugins: {
             colors: {
-                displayAsList: false // Exibe as cores em uma lista compacta (opcional)
+                displayAsList: true // Exibe as cores em uma lista compacta (opcional)
             }
         }
     });
