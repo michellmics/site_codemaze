@@ -65,7 +65,8 @@
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
   <!-- ######################################################## --> 
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/ui/trumbowyg.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/trumbowyg.min.js"></script>
 
 </head>
   
@@ -203,12 +204,12 @@
       </div>   <!-- /.row -->
     </section><!-- /.content -->
     <script>
-        tinymce.init({
-            selector: '#descricao',
-            toolbar: 'bold italic forecolor link',
-            plugins: 'link',
-            menubar: false,
-            height: 300
+        $('#descricao').trumbowyg({
+            btns: [
+                ['bold', 'italic'],
+                ['foreColor'],
+                ['link']
+            ]
         });
     </script>
 
