@@ -1725,6 +1725,33 @@
             }
         }
 
+        public function updaPublishResponse($MKT_IDMKTPUBLICIDADE,$MKT_DCIDRESPONSE)
+        {          
+            // Verifica se a conexão já foi estabelecida
+            if (!$this->pdo) {
+                $this->conexao();
+            }
+            
+            try {
+                $sql = "UPDATE AGE_AGENDA 
+                        SET MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE
+                        WHERE MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE";
+
+                $stmt = $this->pdo->prepare($sql);
+            
+                // Liga os parâmetros aos valores
+                $stmt->bindParam(':MKT_DCIDRESPONSE', $MKT_DCIDRESPONSE, PDO::PARAM_STR);
+                $stmt->bindParam(':MKT_IDMKTPUBLICIDADE', $MKT_IDMKTPUBLICIDADE, PDO::PARAM_STR);
+                $stmt->execute();
+
+                return ["success" => "Tarefa atualizada com sucesso."];
+            } catch (PDOException $e) {
+                // Captura e retorna o erro
+                $this->InsertAlarme("Erro na função updaPublishResponse. $MKT_DCIDRESPONSE","High");
+                return ["error" => $e->getMessage()];
+            }
+        }
+
         public function updateAgendaInfo($AGE_DCTITULO,$AGE_DTINI,$AGE_DTFIM,$AGE_STSTATUS,$AGE_DCDESC,$USA_IDUSERADMIN,$AGE_IDAGENDA)
         {          
             // Verifica se a conexão já foi estabelecida

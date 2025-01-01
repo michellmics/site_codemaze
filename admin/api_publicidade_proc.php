@@ -3,6 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
+include_once 'objetos.php'; // Carrega a classe de conexão e objetos
+
 $dataInicio = $_GET['dataInicio'] ?? null;
 $dataFim = $_GET['dataFim'] ?? null;
 $clienteOrigin = $_GET['clienteOrigin'] ?? null;
@@ -51,8 +53,9 @@ if ($response === false) {
     $url = strtolower($url);
     echo "Atualização enviada ao site $url <br><br>";
     echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
-    echo "<br>";
-    echo $response;
+
+    $siteAdmin = new SITE_ADMIN();
+    $siteAdmin->updaPublishResponse($mktId,$response);
     
 }
 
