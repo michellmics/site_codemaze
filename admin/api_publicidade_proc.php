@@ -52,7 +52,7 @@ if ($response === false) {
     echo "Atualização enviada ao site $url <br><br>";
     echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
     echo "<br>";
-    var_dump($response);
+    echo $response;
     
 }
 
