@@ -1725,7 +1725,7 @@
             }
         }
 
-        public function updaPublishResponse($MKT_IDMKTPUBLICIDADE,$MKT_DCIDRESPONSE)
+        public function updatePublishResponse($MKT_IDMKTPUBLICIDADE,$MKT_DCIDRESPONSE)
         {          
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -1733,7 +1733,7 @@
             }
             
             try {
-                $sql = "UPDATE AGE_AGENDA 
+                $sql = "UPDATE MKT_MKTPUBLICIDADE 
                         SET MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE
                         WHERE MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE";
 

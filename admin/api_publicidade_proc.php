@@ -59,7 +59,7 @@ if ($response === false) {
     echo $mktId;
 
     $siteAdmin = new SITE_ADMIN();
-    $siteAdmin->updaPublishResponse($mktId,$response);
+    $siteAdmin->updatePublishResponse($mktId,$response);
     
 }
 
