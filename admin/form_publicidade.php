@@ -207,7 +207,7 @@
         </div><!--/.col (right) -->
       </div>   <!-- /.row -->
     </section><!-- /.content -->
-
+    <textarea id="descricao"></textarea>
 <script>
     $('#descricao').trumbowyg({
         btns: [
