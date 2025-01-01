@@ -65,7 +65,20 @@
       <!-- SweetAlert2 JS -->
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
   <!-- ######################################################## --> 
-  </head>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#descricao', // ID do textarea
+            plugins: 'link textcolor', // Plugins necessários
+            toolbar: 'bold italic forecolor link', // Apenas as ferramentas necessárias
+            menubar: false, // Remove o menu
+            branding: false, // Remove a marca TinyMCE
+            height: 300, // Altura do editor
+            content_style: "body { font-family:Arial,Helvetica,sans-serif; font-size:14px }", // Estilo do conteúdo
+        });
+    </script>  
+
+</head>
   
   
 <!-- ######################################################## --> 
@@ -175,12 +188,14 @@
 		</div>
 
 		<!-- DESCRIÇÃO-->
-		<div style="width: 100%; margin-bottom: 20px;">
+		<div style="width: 100%; margin-bottom: 20px;">  
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-			<div class="form-group" style="flex: 0 0 100%;">
+
+      <div class="form-group" style="flex: 0 0 100%;">
                       	<label>DESCRIÇÃO DA CAMPANHA (SERÁ IMPRESSO NO RODAPÉ DO SITE SE ELEGIVEL)</label>
                       	<textarea required class="form-control" id="descricao" name="descricao" style="width: 50%;" maxlength="250" rows="3" placeholder=""></textarea>
                     	</div>
+
 			</div>
 		</div>
 		<!-- DESCRIÇÃO-->
