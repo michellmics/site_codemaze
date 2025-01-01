@@ -59,9 +59,7 @@ if ($response === false) {
     echo $mktId;
 
     $siteAdmin = new SITE_ADMIN();
-    $vai=$siteAdmin->updatePublishResponse($mktId,$response);
-    var_dump($vai);
-    
+    $siteAdmin->updatePublishResponse($mktId,$response);    
 }
 
 // Fecha a conexão cURL

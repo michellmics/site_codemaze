@@ -1735,7 +1735,7 @@
             try {
                 $sql = "UPDATE MKT_MKTPUBLICIDADE 
                         SET MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE
-                        WHERE MKT_DCIDRESPONSE = :MKT_DCIDRESPONSE";
+                        WHERE MKT_IDMKTPUBLICIDADE = :MKT_IDMKTPUBLICIDADE";                        
 
                 $stmt = $this->pdo->prepare($sql);
             
