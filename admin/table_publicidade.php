@@ -162,9 +162,10 @@ $dadosPagina = array_slice($siteAdmin->ARRAY_PUBLICIDADEINFO, $inicio, $registro
                           $mktId = $publicidade['MKT_IDMKTPUBLICIDADE'];
                           $filePath = $publicidade['MKT_DCIMG'];
                           $url = $publicidade['CLI_DCSITE'];
+                          $link = $publicidade['MKT_DCLINK'];
 
-                          $endpoint = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($status) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&tipo=" . urlencode($tipo) . "&url=" . urlencode($url);
-                          $endpointSuprimir = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($statusSuprimir) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&tipo=" . urlencode($tipo) . "&url=" . urlencode($url);
+                          $endpoint = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($status) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&link=" . urlencode($link) . "&tipo=" . urlencode($tipo) . "&url=" . urlencode($url);
+                          $endpointSuprimir = "https://www.codemaze.com.br/site/admin/api_publicidade_proc.php?" . "dataInicio=" . urlencode($dataInicio) . "&dataFim=" . urlencode($dataFim) . "&clienteOrigin=" . urlencode($clienteOrigin) . "&publiDesc=" . urlencode($publiDesc) . "&status=" . urlencode($statusSuprimir) . "&mktId=" . urlencode($mktId) . "&filePath=" . urlencode($filePath) . "&link=" . urlencode($link) . "&tipo=" . urlencode($tipo) . "&url=" . urlencode($url);
                         ?>
 
                         <td style="text-transform: uppercase; font-size: 14px;"><b><?= htmlspecialchars($publicidade['MKT_IDMKTPUBLICIDADE']) ?></b></td>
