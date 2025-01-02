@@ -181,6 +181,19 @@
 			</div>
 		</div>
 
+    <!-- LINK -->
+    <div style="width: 100%; margin-bottom: 20px;">  
+			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+
+      <div style="flex: 1; min-width: 130px;">
+			<label>HYPERLINK DA IMAGEM</label>
+			<input required type="text" style="width: 100%; text-transform: uppercase;" minlength="10" class="form-control" placeholder="" id="link" name="link"   />
+			</div>
+
+			</div>
+		</div>
+    <!-- LINK -->
+
 		<!-- DESCRIÇÃO-->
 		<div style="width: 100%; margin-bottom: 20px;">  
 			<div class="form-group" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
