@@ -1609,7 +1609,7 @@
             }
         }
 
-        public function insertPubliInfo($CLI_IDCLIENT, $MKT_DCCAMPANHA, $MKT_DCTIPO, $MKT_NMCAMPANHA, $MKT_DTINI, $MKT_DTFIM, $MKT_DCIMG, $MKT_STSTATUS, $CLI_IDCLIENT_DESTINO)
+        public function insertPubliInfo($CLI_IDCLIENT, $MKT_DCCAMPANHA, $MKT_DCTIPO, $MKT_NMCAMPANHA, $MKT_DTINI, $MKT_DTFIM, $MKT_DCIMG, $MKT_STSTATUS, $CLI_IDCLIENT_DESTINO, $MKT_DCLINK)
         {       
             // Verifica se a conexão já foi estabelecida
             if (!$this->pdo) {
@@ -1632,8 +1632,8 @@
  
             try {
                 $sql = "INSERT INTO MKT_MKTPUBLICIDADE 
-                        (CLI_IDCLIENT, MKT_DCCAMPANHA, MKT_DCTIPO, MKT_NMCAMPANHA, MKT_DTINI, MKT_DTFIM, MKT_DCIMG, MKT_STSTATUS, CLI_IDCLIENT_DESTINO) 
-                        VALUES (:CLI_IDCLIENT, :MKT_DCCAMPANHA, :MKT_DCTIPO, :MKT_NMCAMPANHA, :MKT_DTINI, :MKT_DTFIM, :MKT_DCIMG, :MKT_STSTATUS, :CLI_IDCLIENT_DESTINO)";
+                        (CLI_IDCLIENT, MKT_DCCAMPANHA, MKT_DCTIPO, MKT_NMCAMPANHA, MKT_DTINI, MKT_DTFIM, MKT_DCIMG, MKT_STSTATUS, CLI_IDCLIENT_DESTINO, MKT_DCLINK) 
+                        VALUES (:CLI_IDCLIENT, :MKT_DCCAMPANHA, :MKT_DCTIPO, :MKT_NMCAMPANHA, :MKT_DTINI, :MKT_DTFIM, :MKT_DCIMG, :MKT_STSTATUS, :CLI_IDCLIENT_DESTINO, :MKT_DCLINK)";
 
                 $stmt = $this->pdo->prepare($sql);
             
@@ -1645,8 +1645,9 @@
                 $stmt->bindParam(':MKT_DTINI', $MKT_DTINI, PDO::PARAM_STR);
                 $stmt->bindParam(':MKT_DTFIM', $MKT_DTFIM, PDO::PARAM_STR);
                 $stmt->bindParam(':MKT_DCIMG', $MKT_DCIMG, PDO::PARAM_STR);           
-                $stmt->bindParam(':MKT_STSTATUS', $MKT_STSTATUS, PDO::PARAM_STR);  
-                $stmt->bindParam(':CLI_IDCLIENT_DESTINO', $CLI_IDCLIENT_DESTINO, PDO::PARAM_STR);     
+                $stmt->bindParam(':MKT_STSTATUS', $MKT_STSTATUS, PDO::PARAM_STR);   
+                $stmt->bindParam(':CLI_IDCLIENT_DESTINO', $CLI_IDCLIENT_DESTINO, PDO::PARAM_STR);  
+                $stmt->bindParam(':MKT_DCLINK', $MKT_DCLINK, PDO::PARAM_STR);     
                 $stmt->execute();
             
                 // Retorna uma mensagem de sucesso (opcional)
