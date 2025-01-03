@@ -639,7 +639,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                                 <p class="lead">A parceria com a Codemaze têm sido fundamental para o nosso crescimento. Nossa rede de computadores está sempre estável, o que garante que os processos contábeis fluam sem interrupções. Além disso, o suporte técnico é sempre ágil e eficiente, atendendo prontamente a qualquer demanda que temos. É tranquilizador saber que podemos contar com uma equipe profissional e dedicada ao nosso negócio.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/nelci.JPG" alt="" class="img-responsive alignleft">
                                 <h4>Nelci Amorim<small>- CEO Serconeo Contabilidade</small></h4>
                             </div>
                             <!-- end testi-meta -->
