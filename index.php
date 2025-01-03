@@ -672,17 +672,6 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         </div>
                         <!-- end testimonial -->
 
-                        <!-- end testimonial -->
-
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                            </div>
                             <!-- end testi-meta -->
                         </div><!-- end testimonial -->
                     </div><!-- end carousel -->
