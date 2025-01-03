@@ -652,7 +652,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                                 <p class="lead">Com o aplicativo desenvolvido, o controle de convidados para o salão de festas ficou muito mais eficiente. Antes, enfrentávamos dificuldades com registros manuais, mas agora tudo é feito de forma digital e segura. Além disso, os gráficos financeiros e relatórios gerados são extremamente detalhados, permitindo uma gestão muito mais transparente e eficaz. O suporte técnico também é um diferencial, sempre ágil e disponível para solucionar qualquer dúvida ou problema.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/michelle.JPG" alt="" class="img-responsive alignleft">
                                 <h4>Michelle Silva <small>- Sindica</small></h4>
                             </div>
                             <!-- end testi-meta -->
