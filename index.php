@@ -625,7 +625,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
     <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Testimonials</h3>
+                <h3>Testemunho</h3>
                 <p class="lead">Somos gratos por todos os depoimentos incríveis que recebemos! São muitos clientes satisfeitos com nossos serviços.<br>
                 Confira o que estão dizendo sobre a Codemaze e como nossas soluções de marketing digital, desenvolvimento de software e consultoria em TI fazem a diferença!</p>
             </div><!-- end title -->
@@ -635,12 +635,12 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                     <div class="testi-carousel owl-carousel owl-theme">
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                                <h3><i class="fa fa-quote-left"></i> Consultoria e Suporte em TI</h3>
+                                <p class="lead">A parceria com a Codemaze têm sido fundamental para o nosso crescimento. Nossa rede de computadores está sempre estável, o que garante que os processos contábeis fluam sem interrupções. Além disso, o suporte técnico é sempre ágil e eficiente, atendendo prontamente a qualquer demanda que temos. É tranquilizador saber que podemos contar com uma equipe profissional e dedicada ao nosso negócio.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                                <h4>Nelci Amorim<small>- CEO Serconeo Contabilidade</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
@@ -648,12 +648,12 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                                <h3><i class="fa fa-quote-left"></i> Desenvolvimento de Software</h3>
+                                <p class="lead">Com o aplicativo desenvolvido, o controle de convidados para o salão de festas ficou muito mais eficiente. Antes, enfrentávamos dificuldades com registros manuais, mas agora tudo é feito de forma digital e segura. Além disso, os gráficos financeiros e relatórios gerados são extremamente detalhados, permitindo uma gestão muito mais transparente e eficaz. O suporte técnico também é um diferencial, sempre ágil e disponível para solucionar qualquer dúvida ou problema.</p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                                <h4>Jacques Philips <small>- Designer</small></h4>
+                                <h4>Michelle Silva <small>- Sindica</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
@@ -661,40 +661,17 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
 
                         <div class="testimonial clearfix">
                             <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                                <h3><i class="fa fa-quote-left"></i> Suporte Técnico e Consultoria em TI</h3>
+                                <p class="lead">O suporte técnico ágil transformaram nossa rotina. Agora, podemos nos concentrar nas estratégias de comércio exterior sem nos preocupar com questões técnicas. Isso é algo que valoriza demais o nosso trabalho. </p>
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
-                                <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft">
-                                <h4>James Fernando <small>- Manager of Racer</small></h4>
+                                <h4>Nelci AMorim <small>- CEO Linking World Comércio Exterior</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
                         <!-- end testimonial -->
 
-                        <div class="testimonial clearfix">
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                            </div>
-                            <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft">
-                                <h4>Jacques Philips <small>- Designer</small></h4>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div>
                         <!-- end testimonial -->
 
                         <div class="testimonial clearfix">
