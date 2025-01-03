@@ -626,7 +626,8 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
         <div class="container">
             <div class="section-title text-center">
                 <h3>Testimonials</h3>
-                <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers! <br>Let's see what others say about GoodWEB Solutions website template!</p>
+                <p class="lead">Somos gratos por todos os depoimentos incríveis que recebemos! São muitos clientes satisfeitos com nossos serviços.<br>
+                Confira o que estão dizendo sobre a Codemaze e como nossas soluções de marketing digital, desenvolvimento de software e consultoria em TI fazem a diferença!</p>
             </div><!-- end title -->
 
             <div class="row">
