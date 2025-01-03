@@ -151,7 +151,7 @@
                         <li><a href="#about" class="scroll-link">Sobre nós</a></li>
                         <li><a href="#services" class="scroll-link">Soluções & Consultoria</a></li>
                         <li><a href="#hosting" class="scroll-link">Hosting</a></li>
-                        <li><a href="#Testimonials" class="scroll-link">Testemunhos</a></li>                        
+                        <li><a href="#testimonials2" class="scroll-link">Testemunhos</a></li>                        
 						<li><a href="#contact" class="scroll-link">Contato</a></li>
                     </ul>
                 </div>
@@ -622,7 +622,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
     </div><!-- end section -->
     <!-- end hospedagem planos -->
 
-    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
+    <div id="testimonials2" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Testemunho</h3>
