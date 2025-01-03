@@ -665,10 +665,10 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                                 <p class="lead">O suporte técnico ágil transformaram nossa rotina. Agora, podemos nos concentrar nas estratégias de comércio exterior sem nos preocupar com questões técnicas. Isso é algo que valoriza demais o nosso trabalho. </p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft">
+                                <img src="uploads/nelci.JPG" alt="" class="img-responsive alignleft">
                                 <h4>Nelci AMorim <small>- CEO Linking World Comércio Exterior</small></h4>
                             </div>
-                            <!-- end testi-meta -->
+                            <!-- end testi-meta --> 
                         </div>
                         <!-- end testimonial -->
 
