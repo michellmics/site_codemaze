@@ -653,7 +653,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                             </div>
                             <div class="testi-meta">
                                 <img src="uploads/michelle.JPG" alt="" class="img-responsive alignleft">
-                                <h4>Michelle Silva <small>- Sindica</small></h4>
+                                <h4>Michelle Silva <small>- Sindica Condomínio Parque das Hortênsias</small></h4>
                             </div>
                             <!-- end testi-meta -->
                         </div>
