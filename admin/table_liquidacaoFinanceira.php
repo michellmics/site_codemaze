@@ -7,9 +7,8 @@
 
   if (!isset($_SESSION['user_id'])) 
   {
-    //header("Location: index.php"); 
-    //exit();
-    echo "SEM ID";
+    header("Location: index.php"); 
+    exit();
   }
 
   if ($_SESSION['user_nivelacesso'] != "FINANCEIRO" && $_SESSION['user_nivelacesso'] != "ADMINISTRADOR") 
