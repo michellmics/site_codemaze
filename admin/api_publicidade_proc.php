@@ -15,7 +15,7 @@ $mktId = $_GET['mktId'] ?? null;
 $filePath = $_GET['filePath'] ?? null;
 $url = $_GET['url'] ?? null;
 $link = $_GET['link'] ?? null;
-$endpoint = $url."/sistema/api_publicidade.php";
+$endpoint = $url."api_publicidade.php";
 
 // Dados a serem enviados
 $postData = [
