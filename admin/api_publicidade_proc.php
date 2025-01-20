@@ -51,7 +51,7 @@ if ($response === false) {
     // Decodifica e exibe a resposta
     $responseDecoded = json_decode($response, true);
     print_r($responseDecoded);
-
+    var_dump($response);
     $url = strtolower($url);
     echo "Atualização enviada ao site $url <br><br>";
     echo "<br><br><a href='javascript:window.history.back()' class='btn btn-warning'>VOLTAR</a>";
