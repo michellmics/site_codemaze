@@ -1,17 +1,17 @@
 <?php
 
-/*
+include_once 'objects.php'; 
 
-API do cliente disponível em:
-https://clientapi.mrrodz.com/
+$testeObject = new haruTest();
+$token = $testeObject->login();
 
-Utilizar as credenciais cadastradas no banco do cliente
-senha 123456
-enviar o clientId 1 no header
+var_dump($token);
 
-Documentação do Swagger:
-https://clientapi.mrrodz.com/api-docs
-*/
+
+
+
+
+
 
 
 ?>
