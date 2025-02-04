@@ -112,11 +112,11 @@
 				<div class="col-md-6 col-sm-6">
 					<div class="left-top">
 						<div class="email-box">
-							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> faleconosco@codemaze.com.br</a>
+							<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>faleconosco@codemaze.com.br</a>
 						</div>
 						<div class="phone-box">
-							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 19 99017-5759</a>
-                            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 19 99250-2546</a>
+							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i>19 99017-5759</a>
+                            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i>19 99250-2546</a>
                         </div>
 					</div>
 				</div>
