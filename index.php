@@ -116,7 +116,8 @@
 						</div>
 						<div class="phone-box">
 							<a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 19 99017-5759</a>
-						</div>
+                            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i> 19 99250-2546</a>
+                        </div>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
