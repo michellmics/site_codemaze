@@ -82,7 +82,7 @@
 	
 	$(".slider-wrapper").owlCarousel({
         items: 1,
-        nav: true,
+        //nav: true,
         dots: false,
         autoplay: true,
         autoplayTimeout: 8000, // Tempo entre slides (8 segundos)
