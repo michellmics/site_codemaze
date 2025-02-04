@@ -785,7 +785,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         </div>
                         <p>
                         <strong>Contato</strong><br>
-                        <spam>Whatsapp: +55 19 99017-5759</spam><br>
+                        <spam style="color: orange">>Whatsapp: +55 19 99017-5759</spam><br>
                         Whatsapp: +55 19 99250-2546<br>
                         Suporte Técnico: suporte@codemaze.com.br<br>
                         E-mail: faleconosco@codemaze.com.br<br>
