@@ -783,8 +783,14 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         <div class="widget-title">
                             <img src="images/logos/logocodemaze.png" alt="" />
                         </div>
-                        <p>Whatsapp: +55 19 99017-5759<br>
-                        Endereço: R. Estudantes, 505 - Hortolândia/SP<br>
+                        <p>
+                        <strong>Contato</strong><br>
+                        Whatsapp: +55 19 99017-5759<br>
+                        Whatsapp: +55 19 99250-2546<br>
+                        <br>
+                        <strong>Endereço</strong><br>
+                        R. Estudantes, 505 - Hortolândia/SP<br>
+                        <br>
                         Suporte Técnico: suporte@codemaze.com.br<br>
                         E-mail: faleconosco@codemaze.com.br<br>
                         </p>
