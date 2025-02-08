@@ -36,32 +36,11 @@
 
         function conexao()
         {
-            /*
-                load fiule config.cfg
 
-                [DATA DB]
-                host = localhost
-                dbname = dbname
-                user = dbuser
-                pass = dbpass
-            */
-
-            $this->configPath = '/home/codemaze/config.cfg';
-
-            if (!file_exists($this->configPath)) {
-                die("Erro: Arquivo de configuração não encontrado.");
-            }
-
-            $configContent = parse_ini_file($this->configPath, true);  // true para usar seções
-
-            if (!$configContent) {
-                die("Erro: Não foi possível ler o arquivo de configuração.");
-            }
-
-            $host = $configContent['DATA DB']['host'];
-            $dbname = $configContent['DATA DB']['dbname'];
-            $user = $configContent['DATA DB']['user'];
-            $pass = $configContent['DATA DB']['pass'];
+            $host = $_ENV['ENV_DB_HOST'];
+            $dbname = $_ENV['ENV_DB_NAME'];
+            $user = $_ENV['ENV_DB_USER'];
+            $pass = $_ENV['ENV_PASS_DB'];
 
             try {
                 $this->pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
@@ -73,13 +52,8 @@
 
         public function sendEmailPHPMailer($addAddress, $Subject, $Body, $anexo)
         {     
-            if (!file_exists($this->configPath)) {
-                die("Erro: Arquivo de configuração não encontrado.");
-            }
-                       
-            $configMail = parse_ini_file($this->configPath, true);  // true para usar seções
-            $user = $configMail['EMAIL']['Username'];
-            $pass = $configMail['EMAIL']['Password'];
+            $user = $_ENV['ENV_USER_MAIL'];
+            $pass = $_ENV['ENV_PASS_MAIL'];
 
             $mail = new PHPMailer(true);
 
@@ -104,12 +78,12 @@
             try {
                 //Configurações do servidor
                 $mail->isSMTP(); 
-                $mail->Host = $configMail['EMAIL']['Host'];
+                $mail->Host = $_ENV['ENV_HOST_MAIL'];
                 $mail->SMTPAuth = true; 
                 $mail->Username = $user;
                 $mail->Password = $pass;
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-                $mail->Port = $configMail['EMAIL']['Port'];
+                $mail->Port = $_ENV['ENV_PORT_MAIL'];
 
                 // Configurações de codificação
                 $mail->CharSet = 'UTF-8';
