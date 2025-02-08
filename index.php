@@ -820,7 +820,7 @@ Com nossa expertise, ajudamos sua empresa a integrar diferentes fontes de dados 
                         </div>
 
                         <ul class="footer-links hov">
-                            <li><a href="https://www.codemaze.com.br/site/admin" target="_blank">Intranet <span class="icon icon-arrow-right2"></span></a></li>
+                            <li><a href="https://www.codemaze.com.br/admin" target="_blank">Intranet <span class="icon icon-arrow-right2"></span></a></li>
 							<li><a href="https://www.codemaze.com.br/webmail" target="_blank">Webmail <span class="icon icon-arrow-right2"></span></a></li>
 							<li><a href="https://dashboard.agency/codemaze" target="_blank">Portal do Cliente <span class="icon icon-arrow-right2"></span></a></li>
                             <li><a href="https://www.codemaze.com.br/Codemaze_Suporte.exe" target="_blank">Suporte Técnico <span class="icon icon-arrow-right2"></span></a></li>
